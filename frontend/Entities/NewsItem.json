@@ -1,0 +1,57 @@
+{
+  "name": "NewsItem",
+  "type": "object",
+  "properties": {
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "EU",
+        "ASIA",
+        "GLOBAL"
+      ],
+      "description": "News region"
+    },
+    "title": {
+      "type": "string",
+      "description": "News headline"
+    },
+    "source": {
+      "type": "string",
+      "description": "News source"
+    },
+    "url": {
+      "type": "string",
+      "description": "Article URL"
+    },
+    "publishedDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Publication date"
+    },
+    "sentiment": {
+      "type": "string",
+      "enum": [
+        "positive",
+        "neutral",
+        "negative"
+      ],
+      "description": "Sentiment analysis"
+    },
+    "sentimentScore": {
+      "type": "number",
+      "description": "Sentiment score (-1 to 1)"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Extracted keywords"
+    }
+  },
+  "required": [
+    "region",
+    "title"
+  ]
+}

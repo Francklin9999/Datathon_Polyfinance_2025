@@ -1,0 +1,129 @@
+{
+  "name": "MarketSnapshot",
+  "type": "object",
+  "properties": {
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "EU",
+        "ASIA",
+        "GLOBAL"
+      ],
+      "description": "Market region"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "PREOPEN",
+        "CLOSED"
+      ],
+      "description": "Market status"
+    },
+    "localTime": {
+      "type": "string",
+      "description": "Local market time (ISO format)"
+    },
+    "indices": {
+      "type": "array",
+      "description": "Major market indices",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "chg1D": {
+            "type": "number"
+          },
+          "chg5D": {
+            "type": "number"
+          },
+          "ytd": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "fx": {
+      "type": "array",
+      "description": "Currency pairs",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "chg1D": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "commodities": {
+      "type": "array",
+      "description": "Commodity prices",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "chg1D": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "bonds": {
+      "type": "array",
+      "description": "Bond yields",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "yield": {
+            "type": "number"
+          },
+          "chg1D": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Data sources"
+    }
+  },
+  "required": [
+    "region"
+  ]
+}

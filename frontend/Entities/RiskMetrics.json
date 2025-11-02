@@ -1,0 +1,92 @@
+{
+  "name": "RiskMetrics",
+  "type": "object",
+  "properties": {
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "EU",
+        "ASIA",
+        "GLOBAL"
+      ],
+      "description": "Region"
+    },
+    "volatility20d": {
+      "type": "number",
+      "description": "20-day rolling volatility"
+    },
+    "drawdown": {
+      "type": "number",
+      "description": "Current drawdown percentage"
+    },
+    "maxDrawdown": {
+      "type": "number",
+      "description": "Maximum drawdown"
+    },
+    "correlation": {
+      "type": "object",
+      "description": "Correlation matrix data",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "matrix": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "yield2s": {
+      "type": "number",
+      "description": "2-year yield"
+    },
+    "yield10s": {
+      "type": "number",
+      "description": "10-year yield"
+    },
+    "slope2s10s": {
+      "type": "number",
+      "description": "2s10s yield curve slope"
+    },
+    "vix": {
+      "type": "number",
+      "description": "Volatility index"
+    },
+    "historicalData": {
+      "type": "array",
+      "description": "Time series for charts",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "volatility": {
+            "type": "number"
+          },
+          "drawdown": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "region"
+  ]
+}

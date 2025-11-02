@@ -1,0 +1,92 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "orderId": {
+      "type": "string",
+      "description": "Unique order ID"
+    },
+    "trader": {
+      "type": "string",
+      "description": "Trader name"
+    },
+    "desk": {
+      "type": "string",
+      "enum": [
+        "Equities",
+        "FixedIncome",
+        "FX",
+        "Commodities",
+        "Options",
+        "Credit"
+      ],
+      "description": "Trading desk"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Instrument symbol"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "BUY",
+        "SELL"
+      ],
+      "description": "Order side"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Order quantity"
+    },
+    "price": {
+      "type": "number",
+      "description": "Order price"
+    },
+    "orderType": {
+      "type": "string",
+      "enum": [
+        "MARKET",
+        "LIMIT",
+        "STOP",
+        "STOP_LIMIT"
+      ],
+      "description": "Order type"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "FILLED",
+        "PARTIAL",
+        "CANCELLED",
+        "REJECTED"
+      ],
+      "default": "PENDING",
+      "description": "Order status"
+    },
+    "filledQuantity": {
+      "type": "number",
+      "default": 0,
+      "description": "Filled quantity"
+    },
+    "avgFillPrice": {
+      "type": "number",
+      "description": "Average fill price"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Order timestamp"
+    },
+    "venue": {
+      "type": "string",
+      "description": "Execution venue"
+    }
+  },
+  "required": [
+    "symbol",
+    "side",
+    "quantity",
+    "orderType"
+  ]
+}

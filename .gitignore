@@ -1,0 +1,240 @@
+# ============================================
+# Environment Variables & Credentials
+# ============================================
+.env
+.env.*
+!.env.template
+*.env
+env
+ENV
+
+# ============================================
+# API Keys & Secrets
+# ============================================
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+*.p8
+*.secret
+credentials.json
+secrets.json
+api-keys.json
+*.credentials
+
+# ============================================
+# AWS Specific
+# ============================================
+.aws/
+aws-credentials
+*.aws-credentials
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+venv/
+env/
+ENV/
+.venv/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ============================================
+# Node.js / Frontend
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+dist/
+dist-ssr/
+*.local
+
+# ============================================
+# Terraform
+# ============================================
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+!terraform.tfvars.example
+*.tfvars.json
+.terraform/
+.terraform.lock.hcl
+terraform.rc
+.terraformrc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+crash.*.log
+*.backup
+terraform.tfplan
+
+# ============================================
+# Databases
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+*.log.*
+npm-debug.log*
+
+# ============================================
+# IDE & Editor Files
+# ============================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# Uploads & Temporary Files
+# ============================================
+uploads/
+temp/
+tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# ============================================
+# Certificates & Keys
+# ============================================
+*.pem
+*.key
+*.cert
+*.crt
+*.csr
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# ============================================
+# Configuration Files with Sensitive Data
+# ============================================
+config.json
+settings.json
+secrets.yaml
+secrets.yml
+*.secret.yaml
+*.secret.yml
+docker-compose.override.yml
+
+# ============================================
+# Documentation that may contain sensitive info
+# ============================================
+# Note: All .md files are handled separately if needed
+# Keeping this section for other doc formats
+*.docx
+*.pdf
+!Datathon-Case-Officiel-FR.pdf  # Keep specific PDFs if needed
+
+# ============================================
+# Build Artifacts
+# ============================================
+*.o
+*.a
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ============================================
+# Coverage Reports
+# ============================================
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.hypothesis/
+
+# ============================================
+# Jupyter Notebooks (if any)
+# ============================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================
+# Package Manager Files
+# ============================================
+package-lock.json  # Optional - some teams commit this
+yarn.lock  # Optional - some teams commit this
+pip-selfcheck.json
+
+# ============================================
+# Cloud Provider Specific
+# ============================================
+.aws-sam/
+.serverless/
+.gcp/
+.azure/
+
+# ============================================
+# Misc
+# ============================================
+*.zip
+*.tar.gz
+*.rar
+.vercel
+.netlify
+.now
+

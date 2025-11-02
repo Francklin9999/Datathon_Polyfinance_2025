@@ -1,0 +1,98 @@
+{
+  "name": "Position",
+  "type": "object",
+  "properties": {
+    "trader": {
+      "type": "string",
+      "description": "Trader name or ID"
+    },
+    "desk": {
+      "type": "string",
+      "enum": [
+        "Equities",
+        "FixedIncome",
+        "FX",
+        "Commodities",
+        "Options",
+        "Credit"
+      ],
+      "description": "Trading desk"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Instrument symbol"
+    },
+    "name": {
+      "type": "string",
+      "description": "Instrument name"
+    },
+    "assetClass": {
+      "type": "string",
+      "enum": [
+        "Equity",
+        "Bond",
+        "FX",
+        "Commodity",
+        "Option",
+        "Credit"
+      ],
+      "description": "Asset class"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Position size"
+    },
+    "avgPrice": {
+      "type": "number",
+      "description": "Average entry price"
+    },
+    "currentPrice": {
+      "type": "number",
+      "description": "Current market price"
+    },
+    "marketValue": {
+      "type": "number",
+      "description": "Current market value"
+    },
+    "unrealizedPnL": {
+      "type": "number",
+      "description": "Unrealized profit/loss"
+    },
+    "realizedPnL": {
+      "type": "number",
+      "description": "Realized profit/loss today"
+    },
+    "dayPnL": {
+      "type": "number",
+      "description": "Day P&L"
+    },
+    "exposure": {
+      "type": "number",
+      "description": "Total exposure"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "LONG",
+        "SHORT"
+      ],
+      "description": "Position side"
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "EU",
+        "ASIA",
+        "GLOBAL"
+      ],
+      "description": "Geographic region"
+    }
+  },
+  "required": [
+    "symbol",
+    "desk",
+    "quantity",
+    "avgPrice"
+  ]
+}

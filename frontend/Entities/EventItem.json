@@ -1,0 +1,44 @@
+{
+  "name": "EventItem",
+  "type": "object",
+  "properties": {
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "EU",
+        "ASIA",
+        "GLOBAL"
+      ],
+      "description": "Event region"
+    },
+    "label": {
+      "type": "string",
+      "description": "Event name"
+    },
+    "eventDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event date and time"
+    },
+    "importance": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "description": "Event importance"
+    },
+    "description": {
+      "type": "string",
+      "description": "Event details"
+    }
+  },
+  "required": [
+    "region",
+    "label",
+    "eventDate"
+  ]
+}

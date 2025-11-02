@@ -274,6 +274,53 @@ Provide a clear, concise explanation (2-3 sentences) that an investor could unde
         return response.get("text", "")
     
     @staticmethod
+    def analyze_10k_filing(filing_text: str, ticker: str, company_name: str) -> Dict:
+        """
+        Analyze 10-K filing using LLM for deeper insights and analysis
+        Extracts business model, risks, opportunities, and strategic insights
+        """
+        system_prompt = """You are an expert financial analyst specializing in SEC 10-K filing analysis.
+Analyze 10-K filings to extract key business insights, risk factors, strategic positioning, and competitive advantages.
+Provide structured, actionable analysis for investors."""
+        
+        # Limit filing text to avoid token limits (keep most important sections)
+        limited_text = filing_text[:20000] if len(filing_text) > 20000 else filing_text
+        
+        user_prompt = f"""Analyze the following 10-K filing for {company_name} ({ticker}):
+
+{filing_text[:20000]}
+
+Please provide a comprehensive analysis covering:
+
+1. **Business Model Summary**: Core business model and revenue streams in 2-3 sentences
+2. **Key Strengths**: Main competitive advantages and strengths (3-5 points)
+3. **Major Risks**: Top 5 most significant risk factors and their potential impact
+4. **Strategic Opportunities**: Growth opportunities and strategic initiatives mentioned
+5. **Financial Highlights**: Key financial metrics or trends mentioned
+6. **Market Position**: Competitive positioning and market share indicators
+7. **Regulatory Concerns**: Regulatory risks or compliance issues mentioned
+8. **Supply Chain Insights**: Key suppliers, dependencies, or supply chain risks
+9. **Geographic Exposure**: Regional revenue breakdown and geographic risks
+10. **Forward-Looking Statements**: Summary of forward-looking guidance or projections
+
+Provide the analysis in a structured format that's easy to understand."""
+        
+        response = BedrockService.invoke_model(
+            prompt=user_prompt,
+            system_prompt=system_prompt,
+            max_tokens=3000,
+            temperature=0.3  # Lower temperature for more factual analysis
+        )
+        
+        return {
+            "analysis": response.get("text", ""),
+            "method": "aws_bedrock_llm",
+            "model": response.get("model", ""),
+            "ticker": ticker,
+            "company_name": company_name
+        }
+    
+    @staticmethod
     def compare_with_10k(regulation_text: str, company_10k_summary: str) -> Dict:
         """Compare regulatory requirements with company 10-K filing to assess impact"""
         prompt = f"""Compare the following regulation with a company's 10-K filing to assess potential impact:

@@ -14,6 +14,10 @@ router = APIRouter()
 # Go up from app/routers/stocks.py -> app/routers -> app -> backend -> polyfinance2025 -> jeu_de_donnees
 DATASET_DIR = Path(__file__).parent.parent.parent.parent / "jeu_de_donnees"
 
+# Path to fillings folder at project root
+# Go up from app/routers/stocks.py -> app/routers -> app -> backend -> polyfinance2025 -> fillings
+FILLINGS_DIR = Path(__file__).parent.parent.parent.parent / "fillings"
+
 # Supported filing file extensions
 FILING_EXTENSIONS = ['.pdf', '.txt', '.html', '.htm', '.xml', '.docx']
 
@@ -359,20 +363,39 @@ def format_number(num_str: str) -> str:
 
 def find_filings_for_ticker(ticker: str) -> List[Dict[str, str]]:
     """
-    Find filing documents for a given ticker in jeu_de_donnees directory
+    Find filing documents for a given ticker
+    First checks fillings/ directory, then jeu_de_donnees directory
     Returns list of filing info dicts with path, filename, and type
     """
     ticker = ticker.upper()
     filings = []
     
-    # Look for filings in various possible locations
+    # Primary location: fillings directory at project root
+    # Format: fillings/{TICKER}/{DATE}-10k-{TICKER}.html
+    fillings_ticker_dir = FILLINGS_DIR / ticker
+    if fillings_ticker_dir.exists() and fillings_ticker_dir.is_dir():
+        for file_path in fillings_ticker_dir.iterdir():
+            if file_path.is_file():
+                file_ext = file_path.suffix.lower()
+                if file_ext in FILING_EXTENSIONS:
+                    # Files in fillings directory are already ticker-specific
+                    # Match files with 10-k pattern or containing ticker
+                    filename_lower = file_path.name.lower()
+                    if ('10-k' in filename_lower or '10k' in filename_lower or
+                        ticker.lower() in filename_lower):
+                        filings.append({
+                            'path': str(file_path),
+                            'filename': file_path.name,
+                            'type': file_ext[1:],  # Remove the dot
+                            'size': file_path.stat().st_size
+                        })
+    
+    # Secondary locations: jeu_de_donnees directory (for backwards compatibility)
     possible_paths = [
         DATASET_DIR / "directives" / ticker,
         DATASET_DIR / "filings" / ticker,
         DATASET_DIR / "10-K" / ticker,
         DATASET_DIR / ticker,
-        DATASET_DIR / "directives",
-        DATASET_DIR,
     ]
     
     for base_path in possible_paths:
@@ -392,12 +415,18 @@ def find_filings_for_ticker(ticker: str) -> List[Dict[str, str]]:
                         'filing' in filename_lower or
                         'annual' in filename_lower or
                         'report' in filename_lower):
-                        filings.append({
-                            'path': str(file_path),
-                            'filename': file_path.name,
-                            'type': file_ext[1:],  # Remove the dot
-                            'size': file_path.stat().st_size
-                        })
+                        # Avoid duplicates
+                        existing_paths = {f['path'] for f in filings}
+                        if str(file_path) not in existing_paths:
+                            filings.append({
+                                'path': str(file_path),
+                                'filename': file_path.name,
+                                'type': file_ext[1:],  # Remove the dot
+                                'size': file_path.stat().st_size
+                            })
+    
+    # Sort by filename (newer files typically have later dates)
+    filings.sort(key=lambda x: x['filename'], reverse=True)
     
     return filings
 

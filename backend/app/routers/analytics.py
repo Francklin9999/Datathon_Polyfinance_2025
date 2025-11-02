@@ -6,12 +6,19 @@ from fastapi import APIRouter, HTTPException
 from typing import Optional
 import random
 import os
+from pathlib import Path
 
 from app.services.tenk_parser import TenKParser
 from app.services.document_parser import DocumentParser
 from app.services.nlp_quant_strategy import NLPQuantStrategy
+from app.services.aws_bedrock_service import BedrockService
+from app.services.aws_config import is_aws_configured
 
 router = APIRouter()
+
+# Path to fillings folder at project root
+# Go up from app/routers/analytics.py -> app/routers -> app -> backend -> polyfinance2025 -> fillings
+FILLINGS_DIR = Path(__file__).parent.parent.parent.parent / "fillings"
 
 
 @router.get("/")
@@ -92,26 +99,13 @@ async def analyze_tenk(request: dict):
     elif file_path or file_url:
         # Try to find and parse file from provided path
         path_to_try = file_path or file_url
-        
-        # Common locations for 10-K files
-        possible_paths = [
-            path_to_try,
-            os.path.join("fillings", ticker, "10-K.txt"),
-            os.path.join("fillings", ticker, "10-K.html"),
-            os.path.join("fillings", ticker, "10-K.pdf"),
-            os.path.join("fillings", ticker, f"{ticker}_10K.txt"),
-            os.path.join("fillings", ticker, f"{ticker}_10K.html"),
-        ]
-        
-        for path in possible_paths:
-            if os.path.exists(path):
-                try:
-                    text, file_format = DocumentParser.parse_file(path)
-                    break
-                except Exception as e:
-                    continue
+        if os.path.exists(path_to_try):
+            try:
+                text, file_format = DocumentParser.parse_file(path_to_try)
+            except Exception as e:
+                pass
     
-    # If no text yet, try to find files in jeu_de_donnees directory
+    # If no text yet, try to find files from disk using find_filings_for_ticker
     if not text:
         from app.routers.stocks import find_filings_for_ticker, get_filing_content
         
@@ -120,7 +114,7 @@ async def analyze_tenk(request: dict):
             # Try to get content from the first 10-K filing found
             for filing in filings:
                 if '10-k' in filing.get('filename', '').lower() or '10k' in filing.get('filename', '').lower():
-                    filing_content = get_filing_content(filing['path'])
+                    filing_content = get_filing_content(filing['path'], max_length=None)
                     if filing_content:
                         text = filing_content
                         break
@@ -139,10 +133,32 @@ async def analyze_tenk(request: dict):
             "note": "Using placeholder data. Upload 10-K file for full analysis."
         }
     
-    # Parse 10-K using TenKParser
+    # Parse 10-K using TenKParser (regex-based extraction)
     try:
         analysis = TenKParser.parse_tenk(text, ticker)
         analysis["company_name"] = request.get("companyName", f"{ticker} Inc.")
+        
+        # Optionally enhance with LLM analysis if AWS is configured
+        use_llm = request.get("useLLM", True)  # Default to True
+        if use_llm and is_aws_configured():
+            try:
+                # Use LLM for deeper analysis and insights
+                llm_analysis = BedrockService.analyze_10k_filing(
+                    filing_text=text[:20000],  # Limit to 20k chars for LLM context
+                    ticker=ticker,
+                    company_name=analysis.get("company_name", f"{ticker} Inc.")
+                )
+                analysis["llm_analysis"] = llm_analysis
+                analysis["analysis_method"] = "regex_and_llm"
+            except Exception as llm_error:
+                # If LLM fails, still return regex-based analysis
+                analysis["llm_analysis"] = {"error": f"LLM analysis failed: {str(llm_error)}"}
+                analysis["analysis_method"] = "regex_only"
+        else:
+            analysis["analysis_method"] = "regex_only"
+            if not is_aws_configured():
+                analysis["llm_note"] = "AWS Bedrock not configured - using regex-based extraction only"
+        
         return analysis
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error parsing 10-K: {str(e)}")
@@ -187,28 +203,13 @@ async def nlp_quant_strategy(request: dict):
     elif file_path or file_url:
         # Try to find and parse file from provided path
         path_to_try = file_path or file_url
-        
-        possible_paths = [
-            path_to_try,
-            os.path.join("fillings", ticker, "10-K.txt"),
-            os.path.join("fillings", ticker, "10-Q.txt"),
-            os.path.join("fillings", ticker, "10-K.html"),
-            os.path.join("fillings", ticker, "10-Q.html"),
-            os.path.join("fillings", ticker, "10-K.pdf"),
-            os.path.join("fillings", ticker, "10-Q.pdf"),
-            os.path.join("fillings", ticker, f"{ticker}_10K.txt"),
-            os.path.join("fillings", ticker, f"{ticker}_10Q.txt"),
-        ]
-        
-        for path in possible_paths:
-            if os.path.exists(path):
-                try:
-                    text, file_format = DocumentParser.parse_file(path)
-                    break
-                except Exception as e:
-                    continue
+        if os.path.exists(path_to_try):
+            try:
+                text, file_format = DocumentParser.parse_file(path_to_try)
+            except Exception as e:
+                pass
     
-    # If no text yet, try to find files in jeu_de_donnees directory
+    # If no text yet, try to find files from disk using find_filings_for_ticker
     if not text:
         from app.routers.stocks import find_filings_for_ticker, get_filing_content
         
@@ -250,37 +251,6 @@ async def nlp_quant_strategy(request: dict):
         except Exception as e:
             # Continue to fallback if filing lookup fails
             pass
-    
-    # If still no text, try additional paths
-    if not text:
-        additional_paths = [
-            os.path.join("jeu_de_donnees", ticker, "10-K.txt"),
-            os.path.join("jeu_de_donnees", ticker, "10-Q.txt"),
-            os.path.join("jeu_de_donnees", "10-K", ticker, "10-K.txt"),
-            os.path.join("jeu_de_donnees", "directives", ticker),
-        ]
-        
-        for base_path in additional_paths:
-            if os.path.isdir(base_path):
-                # Look for files in directory
-                for filename in os.listdir(base_path):
-                    file_path = os.path.join(base_path, filename)
-                    if os.path.isfile(file_path):
-                        try:
-                            text, file_format = DocumentParser.parse_file(file_path)
-                            if text and len(text) > 500:
-                                break
-                        except:
-                            continue
-                if text:
-                    break
-            elif os.path.isfile(base_path):
-                try:
-                    text, file_format = DocumentParser.parse_file(base_path)
-                    if text and len(text) > 500:
-                        break
-                except:
-                    continue
     
     if not text:
         raise HTTPException(

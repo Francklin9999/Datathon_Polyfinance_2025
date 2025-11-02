@@ -10,7 +10,7 @@ import FixedIncomeDurationAnalytics from '../Components/fixedincome/DurationAnal
 import FixedIncomeCurveTrading from '../Components/fixedincome/CurveTrading';
 import FixedIncomeIssuanceCalendar from '../Components/fixedincome/IssuanceCalendar';
 import FixedIncomeFlowMonitor from '../Components/fixedincome/FlowMonitor';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 const tabs = [
   { name: 'Yield Curve', icon: TrendingUp, description: 'Curve shape & dynamics' },

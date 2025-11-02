@@ -10,7 +10,7 @@ import OptionsVolSurface from '../Components/options/VolSurface';
 import OptionsGreeks from '../Components/options/Greeks';
 import OptionsFlowMonitor from '../Components/options/FlowMonitor';
 import OptionsStrategies from '../Components/options/Strategies';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 const tabs = [
   { name: 'Pricing Calculator', icon: Calculator, description: 'Black-Scholes & binomial' },

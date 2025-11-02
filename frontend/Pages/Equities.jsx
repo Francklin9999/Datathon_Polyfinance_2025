@@ -12,7 +12,7 @@ import EquitiesTopHoldings from '../Components/equities/TopHoldings';
 import EquitiesFlowMonitor from '../Components/equities/FlowMonitor';
 import EquitiesTechnicalAnalysis from '../Components/equities/TechnicalAnalysis';
 import QuantStrategySidebar from '../Components/quant/QuantStrategySidebar';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 const tabs = [
   { name: 'Index Overview', icon: BarChart3, description: 'Major indices & benchmarks' },

@@ -8,7 +8,7 @@ import NewsList from '../Components/atlas/NewsList';
 import RiskPanelChart from '../Components/atlas/RiskPanelChart';
 import EventsStrip from '../Components/atlas/EventsStrip';
 import SourcesFooter from '../Components/atlas/SourcesFooter';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 export default function USMarkets() {
   const [language, setLanguage] = useState('EN');

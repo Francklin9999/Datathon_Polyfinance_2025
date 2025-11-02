@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Shield, AlertTriangle, TrendingDown, Activity, Zap, Target } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, ScatterChart, Scatter } from 'recharts';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 export default function RiskAnalytics() {
   const [stressScenario, setStressScenario] = useState('baseline');

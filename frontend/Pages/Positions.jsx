@@ -19,7 +19,7 @@ import OrderFlow from '../Components/positions/OrderFlow';
 import RiskMetricsPanel from '../Components/positions/RiskMetricsPanel';
 import TradeBlotter from '../Components/positions/TradeBlotter';
 import PerformanceChart from '../Components/positions/PerformanceChart';
-import ErrorDisplay from '@/src/components/ErrorDisplay';
+import ErrorDisplay from '@/components/ErrorDisplay';
 
 export default function Positions() {
   const [selectedDesk, setSelectedDesk] = useState('ALL');

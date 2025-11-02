@@ -348,7 +348,7 @@ export default function PortfolioDashboard() {
                   Get Portfolio Adjustments
                 </Button>
               </Link>
-              <Button className="w-full bg-gray-700 hover:bg-gray-600 text-white" size="lg">
+              <Button className="w-full bg-red-600 hover:bg-red-700 text-white" size="lg">
                 Export Risk Report (PDF)
               </Button>
             </div>

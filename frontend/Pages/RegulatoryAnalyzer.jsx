@@ -176,24 +176,29 @@ export default function RegulatoryAnalyzer() {
               />
             </div>
 
-            <Button
-              onClick={handleAnalyze}
-              disabled={isAnalyzing || (!file && !documentText)}
-              className="w-full bg-blue-600 hover:bg-blue-700"
-              size="lg"
-            >
-              {isAnalyzing ? (
-                <>
-                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                  Analyzing with Generative AI...
-                </>
-              ) : (
-                <>
-                  <Brain className="w-5 h-5 mr-2" />
-                  Analyze Document with AI
-                </>
-              )}
-            </Button>
+            <div className="flex items-center justify-center">
+              <div className="relative inline-block">
+                <div className="absolute -inset-2 rounded-full border-2 border-blue-400/50 bg-gradient-to-r from-blue-900/20 to-purple-900/20 pointer-events-none"></div>
+                <Button
+                  onClick={handleAnalyze}
+                  disabled={isAnalyzing || (!file && !documentText)}
+                  className="relative w-full bg-blue-600 hover:bg-blue-700"
+                  size="lg"
+                >
+                  {isAnalyzing ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Analyzing with Generative AI...
+                    </>
+                  ) : (
+                    <>
+                      <Brain className="w-5 h-5 mr-2" />
+                      Analyze Document with AI
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
           </CardContent>
         </Card>
 

@@ -64,8 +64,18 @@ export default function CompanyImpactAssessment() {
 
       // Fetch stock data from jeu_de_donnees if available
       const stockDataText = await getStockDataForPrompt(tickerUpper);
-      const stockDataResponse = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000/api'}/stocks/stock/${tickerUpper}`);
-      const stockData = stockDataResponse.ok ? await stockDataResponse.json() : null;
+      
+      // Try to fetch stock data from API, but don't fail if endpoint doesn't exist
+      let stockData = null;
+      try {
+        const stockDataResponse = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000/api'}/stocks/stock/${tickerUpper}`);
+        if (stockDataResponse.ok) {
+          stockData = await stockDataResponse.json();
+        }
+      } catch (stockError) {
+        console.warn('Could not fetch stock data from API:', stockError);
+        // Continue without stock data - not critical
+      }
 
       // Fetch 10-K data if available
       let companyData = null;
@@ -133,19 +143,25 @@ export default function CompanyImpactAssessment() {
       };
 
       // Call backend company impact assessment endpoint
-      const impactResponse = await base44.regulatory.assessCompanyImpact({
-        regulation: regulationData,
-        companies: [tickerUpper],
-        companyData: {
-          [tickerUpper]: companyData
-        },
-        stockData: stockData?.data ? {
-          [tickerUpper]: stockData.data
-        } : {}
-      });
+      let impactResponse;
+      try {
+        impactResponse = await base44.regulatory.assessCompanyImpact({
+          regulation: regulationData,
+          companies: [tickerUpper],
+          companyData: {
+            [tickerUpper]: companyData
+          },
+          stockData: stockData?.data ? {
+            [tickerUpper]: stockData.data
+          } : {}
+        });
+      } catch (impactError) {
+        console.error('Error calling assessCompanyImpact:', impactError);
+        throw new Error(`Failed to assess company impact: ${impactError.message || 'Backend service unavailable'}`);
+      }
 
       if (!impactResponse || !impactResponse.companies || impactResponse.companies.length === 0) {
-        throw new Error('No impact assessment returned from backend');
+        throw new Error('No impact assessment returned from backend. The backend may not have processed the request correctly.');
       }
 
       const impact = impactResponse.companies[0];
@@ -230,32 +246,60 @@ Generate a detailed impact assessment with this JSON structure:
         }
       });
 
+      // Calculate revenue and margin impact (always calculate as fallback)
+      const revenueImpactPct = impact.revenue_impact_pct || (impact.risk_score * 0.5); // Fallback if missing
+      let revenueImpact;
+      
+      if (stockData?.data?.revenue) {
+        // Parse revenue (could be string like "150.5B" or number)
+        let revenueValue = 0;
+        const revenueStr = String(stockData.data.revenue || '');
+        if (revenueStr.includes('B') || revenueStr.includes('b')) {
+          revenueValue = parseFloat(revenueStr.replace(/[Bb]/g, '')) * 1000000000;
+        } else if (revenueStr.includes('M') || revenueStr.includes('m')) {
+          revenueValue = parseFloat(revenueStr.replace(/[Mm]/g, '')) * 1000000;
+        } else {
+          revenueValue = parseFloat(revenueStr) || 0;
+        }
+        
+        const impactAmount = (revenueValue * revenueImpactPct / 100) / 1000000000;
+        revenueImpact = `-$${Math.abs(impactAmount).toFixed(1)}B (-${revenueImpactPct.toFixed(1)}%)`;
+      } else {
+        revenueImpact = `-${revenueImpactPct.toFixed(1)}%`;
+      }
+      
+      const marginImpact = `-${(impact.risk_score * 0.03).toFixed(1)}%`;
+
       // Parse LLM result or use backend impact as fallback
       let parsedAnalysis = null;
       
-      if (llmResult && !llmResult.error && !llmResult.parse_error) {
-        // Use LLM result if available
+      if (llmResult && !llmResult.error && !llmResult.parse_error && llmResult.estimated_revenue_impact && llmResult.estimated_margin_impact) {
+        // Use LLM result if available and has required fields
         parsedAnalysis = llmResult;
+        // Ensure revenue and margin impact are always set
+        if (!parsedAnalysis.estimated_revenue_impact || parsedAnalysis.estimated_revenue_impact === 'N/A') {
+          parsedAnalysis.estimated_revenue_impact = revenueImpact;
+        }
+        if (!parsedAnalysis.estimated_margin_impact || parsedAnalysis.estimated_margin_impact === 'N/A') {
+          parsedAnalysis.estimated_margin_impact = marginImpact;
+        }
       } else if (llmResult && llmResult.raw_response) {
         // Try to extract JSON from raw response
         try {
           const jsonMatch = llmResult.raw_response.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
             parsedAnalysis = JSON.parse(jsonMatch[0]);
+            // Ensure required fields
+            if (!parsedAnalysis.estimated_revenue_impact) parsedAnalysis.estimated_revenue_impact = revenueImpact;
+            if (!parsedAnalysis.estimated_margin_impact) parsedAnalysis.estimated_margin_impact = marginImpact;
           }
         } catch (e) {
           console.warn('Failed to parse JSON from raw response');
         }
       }
 
-      // If LLM failed, use backend impact with formatted data
-      if (!parsedAnalysis) {
-        const revenueImpact = stockData?.data?.revenue ? 
-          `-$${((parseFloat(stockData.data.revenue) || 0) * impact.revenue_impact_pct / 100 / 1000000000).toFixed(1)}B (-${impact.revenue_impact_pct}%)` :
-          `-${impact.revenue_impact_pct}%`;
-        
-        const marginImpact = `-${(impact.risk_score * 0.03).toFixed(1)}%`;
-        
+      // If LLM failed or missing fields, use backend impact with formatted data
+      if (!parsedAnalysis || !parsedAnalysis.estimated_revenue_impact || !parsedAnalysis.estimated_margin_impact) {
         parsedAnalysis = {
           risk_score: impact.risk_score,
           risk_level: impact.risk_score >= 80 ? 'Critical' : impact.risk_score >= 60 ? 'High' : impact.risk_score >= 40 ? 'Medium' : 'Low',
@@ -269,7 +313,7 @@ Generate a detailed impact assessment with this JSON structure:
             mitigation_options: impact.mitigation_strategies || []
           },
           revenue_exposure: {
-            affected_revenue_percent: `${impact.revenue_impact_pct}%`,
+            affected_revenue_percent: `${revenueImpactPct.toFixed(1)}%`,
             affected_regions: (companyData.geographic_revenue || []).map(g => g.region || g).filter(Boolean).slice(0, 5),
             product_lines_at_risk: (companyData.product_lines || []).map(p => p.name || p).filter(Boolean).slice(0, 5)
           },
@@ -279,7 +323,8 @@ Generate a detailed impact assessment with this JSON structure:
             'Potential market share gains in compliant supply chains'
           ],
           recommendation: impact.risk_score >= 70 ? 'REDUCE' : impact.risk_score >= 40 ? 'HOLD' : 'INCREASE',
-          reasoning: impact.reasoning
+          reasoning: impact.reasoning,
+          ...(parsedAnalysis || {}) // Merge any valid LLM fields
         };
       }
 
@@ -296,7 +341,19 @@ Generate a detailed impact assessment with this JSON structure:
 
     } catch (error) {
       console.error('Analysis error:', error);
-      alert(`Error analyzing company: ${error.message}. Please try again.`);
+      
+      // Provide more helpful error messages
+      let errorMessage = 'Failed to analyze company';
+      
+      if (error.message && error.message.includes('fetch')) {
+        errorMessage = 'Failed to connect to backend server. Please ensure the backend is running on http://localhost:8000';
+      } else if (error.message && error.message.includes('Network')) {
+        errorMessage = 'Network error. Please check your connection and ensure the backend server is running.';
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      alert(`${errorMessage}. Please try again.`);
     } finally {
       setIsAnalyzing(false);
     }
@@ -357,6 +414,7 @@ Generate a detailed impact assessment with this JSON structure:
                   className="pl-10 bg-gray-900 border-gray-700 text-white"
                   onKeyPress={(e) => e.key === 'Enter' && handleAnalyze(searchTicker)}
                 />
+                
               </div>
               <Button 
                 onClick={() => handleAnalyze(searchTicker)}

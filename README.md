@@ -1,6 +1,9 @@
+
 # IntelliRisk
 
 A comprehensive financial analytics platform that combines regulatory analysis, portfolio optimization, risk assessment, and AI-powered insights. The platform enables financial institutions to assess regulatory impacts on portfolios, optimize allocations with regulatory constraints, and generate quantitative trading strategies using NLP analysis of SEC filings.
+
+**Developed by:** Franck Fongang and Yassine Yandouzi
 
 ## Table of Contents
 
@@ -1053,7 +1056,7 @@ intellirisk/
 
 ## License
 
-[Add your license information here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -1063,8 +1066,8 @@ intellirisk/
 
 ---
 
-**Document Version:** 2.1  
-**Last Updated:** January 2025
+**Document Version:** 2.2  
+**Last Updated:** November 1-2, 2025
 
 ### Recent Updates
 
@@ -1074,3 +1077,4 @@ intellirisk/
 - ✅ Updated to 16 API routers (added image and video routers)
 - ✅ Enhanced market research with real-time web search
 - ✅ Added `requests` package to requirements.txt
+- ✅ Added MIT License

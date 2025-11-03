@@ -479,7 +479,7 @@ async def aws_voice_websocket(websocket: WebSocket):
     
     conversation_id = str(uuid.uuid4())
     conversation_history = []
-    system_prompt = """You are a financial AI coworker and assistant for PolyFinance 2025. 
+    system_prompt = """You are a financial AI coworker and assistant for IntelliRisk. 
 You help users understand financial markets, analyze portfolios, interpret regulatory documents, 
 and provide insights on equities, fixed income, options, commodities, and FX markets.
 
@@ -642,7 +642,7 @@ async def transcribe_audio(request: dict):
             transcribe_client = AWSServices.get_transcribe_client()
             job_name = f"transcribe-{uuid.uuid4()}"
             s3_client = AWSServices.get_s3_client()
-            bucket_name = os.getenv("S3_BUCKET_NAME", "polyfinance-temp")
+            bucket_name = os.getenv("S3_BUCKET_NAME", "intellirisk-temp")
             
             # Upload to S3 (Transcribe requires S3 input)
             s3_key = f"transcribe-input/{job_name}.wav"

@@ -30,12 +30,7 @@ class PortfolioOptimizer:
         Optimize portfolio allocation
         Returns optimized allocation with metrics
         """
-        current = current_allocation or {
-            "Equities": 45,
-            "Fixed Income": 30,
-            "Alternatives": 15,
-            "Cash": 10
-        }
+        current = current_allocation or {}
         
         # Generate optimized allocation using ML-based optimization
         optimized = PortfolioOptimizer._optimize_with_ml(
@@ -174,12 +169,10 @@ class PortfolioOptimizer:
             "expectedReturn": round(optimized_return * 100, 1),
             "risk": round(optimized_risk * 100, 1),
             "sharpe": round(optimized_sharpe, 2),
-            "esgScore": 80,
             "currentMetrics": {
                 "expectedReturn": round(current_return * 100, 1),
                 "volatility": round(current_risk * 100, 1),
-                "sharpe": round(current_sharpe, 2),
-                "maxDrawdown": -15.3
+                "sharpe": round(current_sharpe, 2)
             }
         }
     

@@ -40,7 +40,7 @@ export default function Home() {
               <PortfolioPill />
             </div>
             <h1 className="text-6xl font-bold text-white mb-4">
-              PolyFinance 2025
+              IntelliRisk
             </h1>
             <p className="text-2xl text-gray-300 mb-4">
               Portfolio-First, Document-Driven Risk Analysis
@@ -355,7 +355,7 @@ export default function Home() {
       {/* Key Features */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Why PolyFinance 2025?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Why IntelliRisk?</h2>
           <p className="text-xl text-gray-400">Built for portfolio-first risk analysis with transparent, defensible scoring</p>
         </div>
 

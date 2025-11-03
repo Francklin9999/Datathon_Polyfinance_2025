@@ -32,7 +32,7 @@ class SECEnforcementService:
         """
         try:
             headers = {
-                "User-Agent": "PolyFinance/1.0 (Financial Analytics Platform)"
+                "User-Agent": "IntelliRisk/1.0 (Financial Analytics Platform)"
             }
             
             async with httpx.AsyncClient(timeout=15.0) as client:

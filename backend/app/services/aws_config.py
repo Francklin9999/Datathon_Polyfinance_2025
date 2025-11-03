@@ -172,7 +172,7 @@ class AWSServices:
 
 
 # S3 Bucket Configuration
-S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "polyfinance-regulatory-docs")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "intellirisk-regulatory-docs")
 S3_UPLOADS_PREFIX = "uploads/"
 S3_ANALYSIS_PREFIX = "analysis/"
 S3_TENK_PREFIX = "10k-filings/"

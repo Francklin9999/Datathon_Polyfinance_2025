@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Quick start script for PolyFinance 2025 Backend
+# Quick start script for IntelliRisk Backend
 
-echo "🚀 Starting PolyFinance 2025 Backend..."
+echo "🚀 Starting IntelliRisk Backend..."
 
 # Check if virtual environment exists
 if [ ! -d "venv" ]; then

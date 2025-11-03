@@ -13,14 +13,14 @@ variable "environment" {
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "polyfinance2025"
+  default     = "intellirisk"
 }
 
 # S3 Variables
 variable "s3_bucket_name" {
   description = "Name of the S3 bucket for document storage"
   type        = string
-  default     = "polyfinance-regulatory-docs"
+  default     = "intellirisk-regulatory-docs"
 }
 
 variable "enable_s3_versioning" {
@@ -39,7 +39,7 @@ variable "s3_lifecycle_days" {
 variable "opensearch_domain_name" {
   description = "Name of the OpenSearch domain"
   type        = string
-  default     = "polyfinance-regulatory-search"
+  default     = "intellirisk-regulatory-search"
 }
 
 variable "opensearch_instance_type" {

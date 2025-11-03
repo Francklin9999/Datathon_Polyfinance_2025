@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     # Configure backend in terraform.tfvars or use local backend
     # bucket = "your-terraform-state-bucket"
-    # key    = "polyfinance2025/terraform.tfstate"
+    # key    = "intellirisk/terraform.tfstate"
     # region = "us-east-1"
   }
 }
@@ -21,7 +21,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = "PolyFinance2025"
+      Project     = "IntelliRisk"
       Environment = var.environment
       ManagedBy   = "Terraform"
     }

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Terraform Deployment Script for PolyFinance 2025
+# Terraform Deployment Script for IntelliRisk
 # This script helps deploy AWS infrastructure using Terraform
 
 set -e
 
-echo "🚀 PolyFinance 2025 - Terraform Deployment Script"
+echo "🚀 IntelliRisk - Terraform Deployment Script"
 echo "=================================================="
 echo ""
 

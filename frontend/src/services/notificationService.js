@@ -138,7 +138,7 @@ class NotificationService {
    * Create notification event for in-app notifications
    */
   static createNotificationEvent(type, data) {
-    const event = new CustomEvent('polyfinance-notification', {
+    const event = new CustomEvent('intellirisk-notification', {
       detail: {
         type,
         data,

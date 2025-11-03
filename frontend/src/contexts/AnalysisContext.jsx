@@ -44,7 +44,7 @@ export function AnalysisProvider({ children }) {
       }, 10000);
     };
 
-    window.addEventListener('polyfinance-notification', handleNotification);
+    window.addEventListener('intellirisk-notification', handleNotification);
 
     // Poll for active jobs status
     const pollInterval = setInterval(() => {
@@ -55,7 +55,7 @@ export function AnalysisProvider({ children }) {
     NotificationService.requestPermission();
 
     return () => {
-      window.removeEventListener('polyfinance-notification', handleNotification);
+      window.removeEventListener('intellirisk-notification', handleNotification);
       if (pollInterval) {
         clearInterval(pollInterval);
       }

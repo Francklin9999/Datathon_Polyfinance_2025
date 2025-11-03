@@ -21,7 +21,7 @@ class RedditService:
     """Service for Reddit API operations with caching"""
     
     BASE_URL = "https://www.reddit.com"
-    USER_AGENT = "PolyFinance/1.0 by /u/polyfinance (Financial Analytics Platform)"
+    USER_AGENT = "IntelliRisk/1.0 by /u/intellirisk (Financial Analytics Platform)"
     
     # In-memory cache: {ticker: {data: Dict, timestamp: datetime}}
     _cache: Dict[str, Dict] = {}

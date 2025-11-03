@@ -17,7 +17,7 @@ from app.services.aws_config import is_aws_configured
 router = APIRouter()
 
 # Path to fillings folder at project root
-# Go up from app/routers/analytics.py -> app/routers -> app -> backend -> polyfinance2025 -> fillings
+# Go up from app/routers/analytics.py -> app/routers -> app -> backend -> intellirisk -> fillings
 FILLINGS_DIR = Path(__file__).parent.parent.parent.parent / "fillings"
 
 

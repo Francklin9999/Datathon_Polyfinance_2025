@@ -623,54 +623,320 @@ export default function NLPQuantStrategy() {
               </Card>
             )}
             
-            {/* Trading Signal */}
-            {analysis.trading_signal && (
-              <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-purple-500/30">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    {getSignalIcon(analysis.trading_signal.recommendation)}
-                    <span>Trading Signal: {analysis.trading_signal.recommendation}</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {descriptions?.trading_signal && (
-                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-purple-500/30">
-                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
-                        <Brain className="w-3 h-3 text-purple-400" />
-                        AI Explanation
+            {/* Trading Signal / Strategy */}
+            {(analysis.trading_signal || analysis.trading_signals) && (() => {
+              const tradingSignal = analysis.trading_signals || analysis.trading_signal;
+              const recommendation = tradingSignal?.recommendation || tradingSignal?.signal || analysis.recommendation;
+              const signalStrength = tradingSignal?.strength || tradingSignal?.signal_strength || analysis.signal_strength || analysis.strategy_score;
+              const confidence = tradingSignal?.confidence || analysis.confidence;
+              const overallScore = tradingSignal?.overall_score || analysis.strategy_score;
+              const rationale = tradingSignal?.rationale || [];
+              const reasoning = tradingSignal?.reasoning;
+              
+              return (
+                <>
+                  <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-purple-500/30">
+                    <CardHeader>
+                      <CardTitle className="text-white flex items-center gap-2">
+                        {getSignalIcon(recommendation)}
+                        <span>Trading Strategy: {recommendation}</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {descriptions?.trading_signal && (
+                        <div className="mb-4 p-3 bg-gray-900/50 rounded border border-purple-500/30">
+                          <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                            <Brain className="w-3 h-3 text-purple-400" />
+                            AI Explanation
+                          </div>
+                          <div className="text-sm text-gray-300">{descriptions.trading_signal}</div>
+                        </div>
+                      )}
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                        <div>
+                          <div className="text-sm text-gray-400">Signal Strength</div>
+                          <div className="text-2xl font-bold text-white">
+                            {signalStrength ? signalStrength.toFixed(2) : 'N/A'}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">Overall Score</div>
+                          <div className="text-2xl font-bold text-white">
+                            {overallScore ? overallScore.toFixed(2) : 'N/A'}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">Confidence</div>
+                          <div className="text-2xl font-bold text-white">
+                            {confidence ? (confidence * 100).toFixed(0) + '%' : 'N/A'}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-400">Risk Level</div>
+                          <div className="text-2xl font-bold text-white">
+                            {tradingSignal?.risk_level || 'N/A'}
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-300">{descriptions.trading_signal}</div>
-                    </div>
+                      
+                      {/* Strategy Rationale */}
+                      {rationale && rationale.length > 0 && (
+                        <div className="mt-4 p-4 bg-gray-900/50 rounded border border-purple-500/30">
+                          <div className="text-sm text-gray-400 mb-2 font-semibold">Strategy Rationale</div>
+                          <ul className="space-y-2">
+                            {rationale.map((r, i) => (
+                              <li key={i} className="text-white text-sm flex items-start gap-2">
+                                <span className="text-purple-400 mt-1">•</span>
+                                <span>{r}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      
+                      {reasoning && (
+                        <div className="mt-4 p-4 bg-gray-900/50 rounded border border-gray-700">
+                          <div className="text-sm text-gray-400 mb-1">Reasoning</div>
+                          <div className="text-white">{reasoning}</div>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+
+                  {/* Signal Components */}
+                  {tradingSignal?.components && (
+                    <Card className="bg-gray-800 border-gray-700">
+                      <CardHeader>
+                        <CardTitle className="text-white flex items-center gap-2">
+                          <BarChart3 className="w-5 h-5" />
+                          Signal Components
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        {descriptions?.signal_components && (
+                          <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                            <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                              <Brain className="w-3 h-3 text-purple-400" />
+                              AI Explanation
+                            </div>
+                            <div className="text-sm text-gray-300">{descriptions.signal_components}</div>
+                          </div>
+                        )}
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                          {Object.entries(tradingSignal.components).map(([key, value]) => (
+                            <div key={key} className="p-4 bg-gray-900 rounded border border-gray-700">
+                              <div className="text-sm text-gray-400 mb-2 capitalize">
+                                {key.replace('_', ' ')}
+                              </div>
+                              <div className="text-2xl font-bold text-white mb-2">
+                                {typeof value === 'number' ? value.toFixed(2) : value}
+                              </div>
+                              <div className="w-full bg-gray-700 rounded-full h-2">
+                                <div
+                                  className="bg-purple-500 h-2 rounded-full"
+                                  style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {/* Component Chart */}
+                        <div className="mt-6">
+                          <ResponsiveContainer width="100%" height={200}>
+                            <BarChart data={Object.entries(tradingSignal.components).map(([name, value]) => ({
+                              name: name.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                              value: typeof value === 'number' ? value : 0
+                            }))}>
+                              <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                              <XAxis dataKey="name" stroke="#9CA3AF" fontSize={12} />
+                              <YAxis stroke="#9CA3AF" fontSize={12} />
+                              <Tooltip
+                                contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #374151', borderRadius: '6px' }}
+                                labelStyle={{ color: '#9CA3AF' }}
+                              />
+                              <Bar dataKey="value" fill="#8B5CF6" radius={[4, 4, 0, 0]} />
+                            </BarChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </CardContent>
+                    </Card>
                   )}
-                  <div className="grid grid-cols-3 gap-4">
-                    <div>
-                      <div className="text-sm text-gray-400">Signal Strength</div>
-                      <div className="text-2xl font-bold text-white">
-                        {analysis.signal_strength?.toFixed(2) || 'N/A'}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-gray-400">Confidence</div>
-                      <div className="text-2xl font-bold text-white">
-                        {analysis.trading_signal.confidence ? (analysis.trading_signal.confidence * 100).toFixed(0) + '%' : 'N/A'}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-gray-400">Risk Level</div>
-                      <div className="text-2xl font-bold text-white">
-                        {analysis.trading_signal.risk_level || 'N/A'}
-                      </div>
-                    </div>
-                  </div>
-                  {analysis.trading_signal.reasoning && (
-                    <div className="mt-4 p-4 bg-gray-900/50 rounded border border-gray-700">
-                      <div className="text-sm text-gray-400 mb-1">Reasoning</div>
-                      <div className="text-white">{analysis.trading_signal.reasoning}</div>
-                    </div>
+
+                  {/* Quantitative Metrics */}
+                  {tradingSignal?.quant_metrics && (
+                    <Card className="bg-gray-800 border-gray-700">
+                      <CardHeader>
+                        <CardTitle className="text-white flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5" />
+                          Quantitative Metrics
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        {descriptions?.quantitative_metrics && (
+                          <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                            <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                              <Brain className="w-3 h-3 text-purple-400" />
+                              AI Explanation
+                            </div>
+                            <div className="text-sm text-gray-300">{descriptions.quantitative_metrics}</div>
+                          </div>
+                        )}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Composite Signal</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.quant_metrics.composite_signal?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Risk Adjusted Signal</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.quant_metrics.risk_adjusted_signal?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Expected Return (Annualized)</div>
+                            <div className="text-xl font-bold text-green-400">
+                              {tradingSignal.quant_metrics.expected_return_annualized 
+                                ? (tradingSignal.quant_metrics.expected_return_annualized * 100).toFixed(2) + '%' 
+                                : 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Signal Sharpe Ratio</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.quant_metrics.signal_sharpe_ratio?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Information Coefficient</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.quant_metrics.information_coefficient?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Statistically Significant</div>
+                            <div className="text-xl font-bold">
+                              <Badge 
+                                variant="outline" 
+                                className={
+                                  tradingSignal.quant_metrics.statistically_significant 
+                                    ? 'border-green-600 text-green-300' 
+                                    : 'border-red-600 text-red-300'
+                                }
+                              >
+                                {tradingSignal.quant_metrics.statistically_significant ? 'Yes' : 'No'}
+                              </Badge>
+                            </div>
+                          </div>
+                          {tradingSignal.quant_metrics.t_statistic !== undefined && (
+                            <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                              <div className="text-sm text-gray-400 mb-1">T-Statistic</div>
+                              <div className="text-xl font-bold text-white">
+                                {tradingSignal.quant_metrics.t_statistic?.toFixed(4) || 'N/A'}
+                              </div>
+                            </div>
+                          )}
+                          {tradingSignal.quant_metrics.p_value !== undefined && (
+                            <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                              <div className="text-sm text-gray-400 mb-1">P-Value</div>
+                              <div className="text-xl font-bold text-white">
+                                {tradingSignal.quant_metrics.p_value?.toFixed(4) || 'N/A'}
+                              </div>
+                            </div>
+                          )}
+                          {tradingSignal.quant_metrics.factor_portfolio_volatility !== undefined && (
+                            <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                              <div className="text-sm text-gray-400 mb-1">Factor Portfolio Volatility</div>
+                              <div className="text-xl font-bold text-white">
+                                {tradingSignal.quant_metrics.factor_portfolio_volatility?.toFixed(4) || 'N/A'}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
                   )}
-                </CardContent>
-              </Card>
-            )}
+
+                  {/* Statistical Significance */}
+                  {tradingSignal?.statistical_significance && (
+                    <Card className="bg-gray-800 border-gray-700">
+                      <CardHeader>
+                        <CardTitle className="text-white flex items-center gap-2">
+                          <Activity className="w-5 h-5" />
+                          Statistical Significance
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">T-Statistic</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.statistical_significance.t_statistic?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">P-Value</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.statistical_significance.p_value?.toFixed(4) || 'N/A'}
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Significant</div>
+                            <div className="text-xl font-bold">
+                              <Badge 
+                                variant="outline" 
+                                className={
+                                  tradingSignal.statistical_significance.significant 
+                                    ? 'border-green-600 text-green-300' 
+                                    : 'border-red-600 text-red-300'
+                                }
+                              >
+                                {tradingSignal.statistical_significance.significant ? 'Yes' : 'No'}
+                              </Badge>
+                            </div>
+                          </div>
+                          <div className="p-4 bg-gray-900 rounded border border-gray-700">
+                            <div className="text-sm text-gray-400 mb-1">Factor Count</div>
+                            <div className="text-xl font-bold text-white">
+                              {tradingSignal.statistical_significance.factor_count || 'N/A'}
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+
+                  {/* Factor Loadings */}
+                  {tradingSignal?.factor_loadings && Object.keys(tradingSignal.factor_loadings).length > 0 && (
+                    <Card className="bg-gray-800 border-gray-700">
+                      <CardHeader>
+                        <CardTitle className="text-white flex items-center gap-2">
+                          <BarChart3 className="w-5 h-5" />
+                          Factor Loadings
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                          {Object.entries(tradingSignal.factor_loadings).map(([key, value]) => (
+                            <div key={key} className="p-4 bg-gray-900 rounded border border-gray-700">
+                              <div className="text-sm text-gray-400 mb-2 capitalize">
+                                {key.replace('_', ' ')}
+                              </div>
+                              <div className={`text-2xl font-bold ${
+                                value > 0 ? 'text-green-400' : value < 0 ? 'text-red-400' : 'text-white'
+                              }`}>
+                                {typeof value === 'number' ? value.toFixed(3) : value}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
+              );
+            })()}
 
             {/* Sentiment Analysis */}
             {analysis.sentiment_scores && (

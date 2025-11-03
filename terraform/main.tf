@@ -1,4 +1,4 @@
-# Main Terraform configuration for PolyFinance 2025 AWS Infrastructure
+# Main Terraform configuration for IntelliRisk AWS Infrastructure
 
 # This file serves as the entry point and references other modules
 # All resources are defined in separate files:
@@ -20,6 +20,6 @@
 # Optional: Create a file terraform.tfvars with your values:
 # aws_region = "us-east-1"
 # environment = "dev"
-# s3_bucket_name = "polyfinance-regulatory-docs"
-# opensearch_domain_name = "polyfinance-regulatory-search"
+# s3_bucket_name = "intellirisk-regulatory-docs"
+# opensearch_domain_name = "intellirisk-regulatory-search"
 

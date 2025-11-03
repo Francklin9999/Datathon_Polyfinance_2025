@@ -11,11 +11,11 @@ from pathlib import Path
 router = APIRouter()
 
 # Path to jeu_de_donnees folder
-# Go up from app/routers/stocks.py -> app/routers -> app -> backend -> polyfinance2025 -> jeu_de_donnees
+# Go up from app/routers/stocks.py -> app/routers -> app -> backend -> intellirisk -> jeu_de_donnees
 DATASET_DIR = Path(__file__).parent.parent.parent.parent / "jeu_de_donnees"
 
 # Path to fillings folder at project root
-# Go up from app/routers/stocks.py -> app/routers -> app -> backend -> polyfinance2025 -> fillings
+# Go up from app/routers/stocks.py -> app/routers -> app -> backend -> intellirisk -> fillings
 FILLINGS_DIR = Path(__file__).parent.parent.parent.parent / "fillings"
 
 # Supported filing file extensions

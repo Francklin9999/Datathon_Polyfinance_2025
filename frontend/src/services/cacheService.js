@@ -4,12 +4,12 @@
  */
 
 const CACHE_KEYS = {
-  PORTFOLIO: 'polyfinance_portfolio',
-  ANALYSIS_RESULTS: 'polyfinance_analysis_results',
-  BACKGROUND_JOBS: 'polyfinance_background_jobs',
-  ANALYSIS_HISTORY: 'polyfinance_analysis_history',
-  NOTIFICATION_PREFERENCES: 'polyfinance_notification_prefs',
-  DOCUMENT_ADVICE: 'polyfinance_document_advice'
+  PORTFOLIO: 'intellirisk_portfolio',
+  ANALYSIS_RESULTS: 'intellirisk_analysis_results',
+  BACKGROUND_JOBS: 'intellirisk_background_jobs',
+  ANALYSIS_HISTORY: 'intellirisk_analysis_history',
+  NOTIFICATION_PREFERENCES: 'intellirisk_notification_prefs',
+  DOCUMENT_ADVICE: 'intellirisk_document_advice'
 };
 
 class CacheService {

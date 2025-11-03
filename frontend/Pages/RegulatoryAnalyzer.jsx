@@ -157,12 +157,6 @@ export default function RegulatoryAnalyzer() {
             <p className="text-gray-400 mt-1">AI-powered document extraction tool - Parse regulations, extract measures, and trace citations with full document analysis</p>
           </div>
           <div className="flex gap-3">
-            <Link to={createPageUrl('AdaptabilityDemo')}>
-              <Button variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
-                <Share2 className="w-4 h-4 mr-2" />
-                Adaptability Demo
-              </Button>
-            </Link>
             <Link to={createPageUrl('Home')}>
               <Button variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
                 Home
@@ -728,16 +722,6 @@ export default function RegulatoryAnalyzer() {
                     </div>
                   )}
 
-                  {/* Link to full search page */}
-                  <div className="pt-4 border-t border-gray-700">
-                    <Link to={createPageUrl('MissingElementsSearch')}>
-                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                        <Search className="w-4 h-4 mr-2" />
-                        View Full Missing Elements Search
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
-                  </div>
                 </CardContent>
               </Card>
             )}
@@ -750,13 +734,6 @@ export default function RegulatoryAnalyzer() {
                   Use the extracted regulation data to assess portfolio impact and generate investment recommendations.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <Link to={createPageUrl('RegulatoryImpact')} className="block">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white" size="lg">
-                      <AlertTriangle className="w-5 h-5 mr-2" />
-                      Detailed Impact Analysis
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </Link>
                   <Link to={createPageUrl('CompanyImpactAssessment')} className="block">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white" size="lg">
                       <Building2 className="w-5 h-5 mr-2" />

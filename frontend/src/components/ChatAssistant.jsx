@@ -188,7 +188,7 @@ const ChatAssistant = () => {
 
   const sendViaHTTP = async (messageText, currentMessages = []) => {
     try {
-      const systemPrompt = `You are a financial AI assistant for PolyFinance 2025. 
+      const systemPrompt = `You are a financial AI assistant for IntelliRisk. 
 You help users understand financial markets, analyze portfolios, interpret regulatory documents, 
 and provide insights on equities, fixed income, options, commodities, and FX markets.
 

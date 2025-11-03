@@ -1,5 +1,5 @@
 """
-Main FastAPI application for PolyFinance 2025
+Main FastAPI application for IntelliRisk
 Handles all dynamic features from the frontend
 """
 
@@ -26,10 +26,6 @@ from app.routers import (
     files,
     portfolio,
     regulatory,
-    risk,
-    options,
-    fixed_income,
-    equities,
     analytics,
     stocks,
     documents,
@@ -139,7 +135,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="PolyFinance 2025 API",
+    title="IntelliRisk API",
     description="Backend API for financial analytics platform",
     version="1.0.0",
     lifespan=lifespan
@@ -194,10 +190,6 @@ app.include_router(ai.router, prefix="/api/ai", tags=["ai"])
 app.include_router(files.router, prefix="/api/files", tags=["files"])
 app.include_router(portfolio.router, prefix="/api/portfolio", tags=["portfolio"])
 app.include_router(regulatory.router, prefix="/api/regulatory", tags=["regulatory"])
-app.include_router(risk.router, prefix="/api/risk", tags=["risk"])
-app.include_router(options.router, prefix="/api/options", tags=["options"])
-app.include_router(fixed_income.router, prefix="/api/fixed-income", tags=["fixed-income"])
-app.include_router(equities.router, prefix="/api/equities", tags=["equities"])
 app.include_router(analytics.router, prefix="/api/analytics", tags=["analytics"])
 app.include_router(stocks.router, prefix="/api/stocks", tags=["stocks"])
 app.include_router(documents.router, prefix="/api/documents", tags=["documents"])
@@ -213,7 +205,7 @@ app.include_router(stock_graphs.router, prefix="/api/stock-graphs", tags=["stock
 async def root():
     """Root endpoint"""
     return {
-        "message": "PolyFinance 2025 API",
+        "message": "IntelliRisk API",
         "version": "1.0.0",
         "status": "operational"
     }
@@ -234,7 +226,7 @@ async def aws_status():
 
 if __name__ == "__main__":
     # Parse command-line arguments when running directly
-    parser = argparse.ArgumentParser(description='PolyFinance 2025 Backend Server')
+    parser = argparse.ArgumentParser(description='IntelliRisk Backend Server')
     parser.add_argument('--new', action='store_true', help='Force re-analysis of all NLP data, ignoring cache')
     parsed_args = parser.parse_args()
     

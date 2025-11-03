@@ -1,0 +1,919 @@
+{
+  "ticker": "SRE",
+  "analysis": {
+    "ticker": "SRE",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 58.790991702884234,
+        "financial_sentiment": 0.0,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "ECTRIC COMPANY SOUTHERN CALIFORNIA GAS COMPANY TABLE OF CONTENTS PageGlossary5Information Regarding Forward-Looking Statements9Summary of Risk Factors11Item 1.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 275920
+        },
+        {
+          "statement": "2024 | 8Table of ContentsINFORMATION REGARDING FORWARD-LOOKING STATEMENTSThis report contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288252
+        },
+        {
+          "statement": "2024 | 8Table of ContentsINFORMATION REGARDING FORWARD-LOOKING STATEMENTSThis report contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288299
+        },
+        {
+          "statement": "Forward-looking statements are based on assumptions about the future, involve risks and uncertainties, and are not guarantees.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288402
+        },
+        {
+          "statement": "Future results may differ materially from those expressed or implied in any forward-looking statement.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 288529
+        },
+        {
+          "statement": "Future results may differ materially from those expressed or implied in any forward-looking statement.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288605
+        },
+        {
+          "statement": "sults may differ materially from those expressed or implied in any forward-looking statement.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288638
+        },
+        {
+          "statement": "We assume no obligation to update or revise any forward-looking statement as a result of new information, future events or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 288796
+        },
+        {
+          "statement": "ue,” “progress,” “advance,” “goal,” “aim,” “commit,” or similar expressions, or when we discuss our guidance, priorities, strategies, goals, vision, mission, projections, intentions or expectations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 289418
+        },
+        {
+          "statement": "me of which are difficult to predict and beyond our controlWe caution you not to rely unduly on any forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 293239
+        },
+        {
+          "statement": "Given the significant level and availability of natural gas-fired generation, we believe natural gas is a dispatchable fuel that can continue to help provide electric reliability in our California service territories.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 315052
+        },
+        {
+          "statement": "p Channel, which handles significant industrial shipping, including large oil and LNG tankers, that we believe is well positioned to supply the Atlantic and Pacific markets.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 328775
+        },
+        {
+          "statement": "We expect the ECA LNG Phase 1 project to commence commercial operations in the spring of 2026.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 331111
+        },
+        {
+          "statement": "We expect the first and second trains of the PA LNG Phase 1 project to commence commercial operations in 2027 and 2028, respectively.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 332041
+        },
+        {
+          "statement": "We expect the Port Arthur Pipeline Louisiana Connector to be ready for service ahead of the PA LNG Phase 1 project’s gas requirements.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 338601
+        },
+        {
+          "statement": "We expect Louisiana Storage to be ready for service in time to support the needs of the PA LNG Phase 1 project.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 341545
+        },
+        {
+          "statement": "We expect the Cimarrón Wind project to begin generating energy in late 2025 and commence commercial operations in the first half of 2026.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 345574
+        },
+        {
+          "statement": "se became effective in July 2021 and remains effective until the next rate case is finalized, which we expect could be in late 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 370084
+        },
+        {
+          "statement": "Changes in projected growth in ERCOT could materially impact Oncor’s capital expenditures and consequently our capital expenditures plan.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 396358
+        },
+        {
+          "statement": "The forward price that we expect to receive upon physical settlement of a forward sale agreement will be subject to adjustment on a daily basis based on a floating interest rate factor.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 399710
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue ServiceISFSIindependent spent fuel storage installationISOIndependent System OperatorITCinvestment tax creditJVjoint ventureKKR DenaliKKR Denali Holdco LLC,",
+            "position": 281153
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from selling electricity and resource adequacy to the California ISO for delivery to governmental,",
+            "position": 344893
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirements and provides for attrition, or annual increases in revenue requirements,",
+            "position": 362650
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirements beyond base rates from customers for certain operating and capital related costs (depreciation, taxes and return on rate base), including for: ▪costs to purchase natural gas and e",
+            "position": 366364
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 439678
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or cash flows▪We face risks from increased competition▪We may not be able to secure, maintain, extend or replace long-term supply, sales or capacity agreements▪Sempra Infrastructure’s busines",
+            "position": 296902
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings visibility, with the goals of delivering safe,",
+            "position": 298338
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and competitive position in “– Utility RegulationCaliforniaSDG&E and SoCalGas are principally regulated at the state level by the CPUC,",
+            "position": 347547
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings are owned by our subsidiaries or entities we do not control,",
+            "position": 390096
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and/or increase costs, including maintenance costs or restoration expenses, amounts associated with claims against us, and regulatory fines,",
+            "position": 408923
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS and may adversely affect the market price of our common stock,",
+            "position": 399528
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS:Earnings$4.44",
+            "position": 757807
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS:Earnings$4.42",
+            "position": 757911
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS(1)633,795 630,296 630,318 Dilutive effect of stock options and RSUs(2)2,112 2,341 2,439 Dilutive effect of common shares sold forward2,036 96 — Weighted-average common shares outstanding for dilut",
+            "position": 1041285
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for 2024, 2023 and 2022 excludes potentially dilutive shares related to stock options and RSUs of 747,724, 502,942 and 173,064, respectively,",
+            "position": 1042559
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE for participation in the California ISOCameron LNG JVCameron LNG Holdings, LLCCameron LNG Phase 1 facilityCameron LNG JV liquefaction facilityCameron LNG Phase 2 projectCameron LNG JV liquefaction",
+            "position": 279074
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE),",
+            "position": 363245
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE upward or downward by 20% of the difference between the CCM benchmark rate and the applicable Moody’s utility bond index during the measurement period,",
+            "position": 364512
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE and a formulaic rate whereby rates are determined using (i) a base period of historical costs and a forecast of capital investments, and (ii) a true-up period, similar to balancing account treatme",
+            "position": 365292
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE at 9.7",
+            "position": 371329
+          },
+          {
+            "metric": "margin",
+            "context": "margin▪$12 million higher AFUDC equity▪$11 million higher net regulatory interest income▪$9 million higher CPUC base operating margin authorized for 2024, net of operating expenses, including higher a",
+            "position": 539982
+          },
+          {
+            "metric": "margin",
+            "context": "margin authorized for 2024, net of operating expenses, including higher authorized cost of capital▪$12 million higher electric transmission margin▪$10 million lower Wildfire Fund amortization2024 | 77",
+            "position": 565450
+          },
+          {
+            "metric": "margin",
+            "context": "margin authorized for 2024, net of operating expenses, offset by higher authorized cost of capital▪$15 million impairment from disallowed capital costs in the 2024 GRC FD▪$5 million lower regulatory a",
+            "position": 572162
+          },
+          {
+            "metric": "margin",
+            "context": "margin posted, current and noncurrent$(1,142)Change in fixed-price contracts and other derivatives, current and noncurrent(432)$(127)$(305)Change in qualified pension liability(211)(83)(130)Change in ",
+            "position": 641910
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 13 to 20 bps,",
+            "position": 809556
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of Sempra’s adjusted EPS relative to the compound annual growth rate of S&P 500",
+            "position": 1045483
+          },
+          {
+            "metric": "net income",
+            "context": "net income, adjusted for noncash items included in earnings(45)78 40 Change in legal reserve, current and noncurrent82 82 Lower net decrease in Reserve for Aliso Canyon costs, current and noncurrent, ",
+            "position": 642275
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,081 $(219)$2,862 $638 $3,500 Other comprehensive income (loss): Foreign currency translation adjustments(30)— (30)(14)(44)Financial instruments14 (2)12 25 37 Pension and other postretirem",
+            "position": 758339
+          },
+          {
+            "metric": "net income",
+            "context": "net income to net cash provided by operating activities:Depreciation and amortization2,437 2,227 2,019 Deferred income taxes and investment tax credits(20)249 392 Equity earnings(1,609)(1,481)(1,498)S",
+            "position": 762946
+          },
+          {
+            "metric": "net income",
+            "context": "Net income/Earnings attributable to common shares$891 $936 $915",
+            "position": 769453
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$1,044 $(153)$891 Other comprehensive income (loss): Pension and other postretirement benefits(3)(1)(4)Total other comprehensive loss(3)(1)(4)Comprehensive income$1,041 $(154)$887 2023: Net ",
+            "position": 769781
+          },
+          {
+            "metric": "assets",
+            "context": "assets, and uncertainty related to emerging technologies▪weather, natural disasters, pandemics, accidents, equipment failures, explosions, terrorism, information system outages or other events, such a",
+            "position": 292065
+          },
+          {
+            "metric": "assets",
+            "context": "assets at December 31, 2024",
+            "position": 299155
+          },
+          {
+            "metric": "assets",
+            "context": "assets at December 31, 2024 covered the following territory: For a discussion of risks and uncertainties related to our equity method investments in Oncor Holdings and Sharyland Holdings, see “– Item ",
+            "position": 316109
+          },
+          {
+            "metric": "assets",
+            "context": "assets are located in over 120 counties and more than 400 incorporated municipalities, including the 2024 | 19Table of Contentscities of Dallas and Fort Worth and surrounding suburbs, as well as Waco,",
+            "position": 316754
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities due to limitations, exclusions, high deductibles,",
+            "position": 409739
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 416309
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, such as fire suppression, clean-up and evacuation costs, medical expenses, and personal injury, punitive and other damages,",
+            "position": 457912
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities may not be sufficient to cover all losses we may incur, or it may not be available to meet the $1.0",
+            "position": 458969
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities if EFH’s 2016",
+            "position": 494337
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of 1 billionSan Diego Gas & Electric Company$0Southern California Gas Company$0Common stock, without par value, outstanding as of February 19, 2025:Sempra651,457,249 shar",
+            "position": 274775
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities65Item 6",
+            "position": 276185
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Offering Sales Agreement, dated November 6, 2024,",
+            "position": 283864
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments▪Successfully completing our five-year capital expenditures plan is subject to certain risks▪The economic interest, voting rights and market value of our outstanding common an",
+            "position": 294221
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments in Oncor Holdings and Sharyland Holdings, see “– Item 1",
+            "position": 316229
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$25 ",
+            "position": 274106
+          },
+          {
+            "text": "$0",
+            "position": 274849
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 459076
+          },
+          {
+            "text": "$1.8 billion",
+            "position": 481087
+          },
+          {
+            "text": "$1.79 billion",
+            "position": 481200
+          },
+          {
+            "text": "$2 billion",
+            "position": 534037
+          },
+          {
+            "text": "$1.25 billion",
+            "position": 534246
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 535238
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 535534
+          },
+          {
+            "text": "$268 million",
+            "position": 535692
+          },
+          {
+            "text": "$2.9 billion",
+            "position": 536687
+          },
+          {
+            "text": "$520 million",
+            "position": 536742
+          },
+          {
+            "text": "$1,846 ",
+            "position": 538473
+          },
+          {
+            "text": "$1,747 ",
+            "position": 538480
+          },
+          {
+            "text": "$1,514 ",
+            "position": 538487
+          },
+          {
+            "text": "$2,817 ",
+            "position": 538694
+          },
+          {
+            "text": "$3,030 ",
+            "position": 538701
+          },
+          {
+            "text": "$2,094 ",
+            "position": 538708
+          },
+          {
+            "text": "$99 million",
+            "position": 539618
+          },
+          {
+            "text": "$217 million",
+            "position": 539673
+          },
+          {
+            "text": "$25 million",
+            "position": 539801
+          },
+          {
+            "text": "$12 million",
+            "position": 539941
+          },
+          {
+            "text": "$11 million",
+            "position": 540021
+          },
+          {
+            "text": "$9 million",
+            "position": 540071
+          },
+          {
+            "text": "$89 million",
+            "position": 540218
+          },
+          {
+            "text": "$60 million",
+            "position": 540520
+          },
+          {
+            "text": "$15 million",
+            "position": 540560
+          },
+          {
+            "text": "$87 million",
+            "position": 540707
+          },
+          {
+            "text": "$781 million",
+            "position": 540728
+          },
+          {
+            "text": "$34 million",
+            "position": 541422
+          },
+          {
+            "text": "$911 million",
+            "position": 541442
+          },
+          {
+            "text": "$499 million",
+            "position": 541477
+          },
+          {
+            "text": "$263 million",
+            "position": 541603
+          },
+          {
+            "text": "$236 million",
+            "position": 541655
+          },
+          {
+            "text": "$61 million",
+            "position": 541695
+          },
+          {
+            "text": "$19 million",
+            "position": 541729
+          },
+          {
+            "text": "$42 million",
+            "position": 541781
+          },
+          {
+            "text": "$47 million",
+            "position": 541922
+          },
+          {
+            "text": "$30 million",
+            "position": 541976
+          },
+          {
+            "text": "$17 million",
+            "position": 542025
+          },
+          {
+            "text": "$21 million",
+            "position": 542124
+          },
+          {
+            "text": "$20 million",
+            "position": 542158
+          },
+          {
+            "text": "$1 million",
+            "position": 542209
+          },
+          {
+            "text": "$463 million",
+            "position": 542334
+          },
+          {
+            "text": "$79 million",
+            "position": 542546
+          },
+          {
+            "text": "$14 million",
+            "position": 542923
+          },
+          {
+            "text": "$433 million",
+            "position": 543147
+          },
+          {
+            "text": "$721 million",
+            "position": 543163
+          },
+          {
+            "text": "$330 million",
+            "position": 543198
+          },
+          {
+            "text": "$32 million",
+            "position": 543391
+          }
+        ],
+        "percentages": [
+          {
+            "text": "5.75%",
+            "value": 5.75,
+            "position": 274064
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 274378
+          },
+          {
+            "text": "0.50%",
+            "value": 0.5,
+            "position": 279068
+          },
+          {
+            "text": "6.75%",
+            "value": 6.75,
+            "position": 285486
+          },
+          {
+            "text": "4.875%",
+            "value": 4.875,
+            "position": 285572
+          },
+          {
+            "text": "80.25%",
+            "value": 80.25,
+            "position": 297890
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 297919
+          },
+          {
+            "text": "24 %",
+            "value": 24.0,
+            "position": 301470
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 301624
+          },
+          {
+            "text": "63%",
+            "value": 63.0,
+            "position": 311051
+          },
+          {
+            "text": "19.75%",
+            "value": 19.75,
+            "position": 315959
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 316048
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 320867
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 324303
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 324308
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 324317
+          },
+          {
+            "text": "99.9%",
+            "value": 99.9,
+            "position": 324426
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 325262
+          },
+          {
+            "text": "50.2%",
+            "value": 50.2,
+            "position": 327881
+          },
+          {
+            "text": "35.1%",
+            "value": 35.1,
+            "position": 327951
+          },
+          {
+            "text": "16.6%",
+            "value": 16.6,
+            "position": 328172
+          },
+          {
+            "text": "83.4%",
+            "value": 83.4,
+            "position": 330688
+          },
+          {
+            "text": "58.4%",
+            "value": 58.4,
+            "position": 330768
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 331467
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 331472
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 331480
+          },
+          {
+            "text": "19.6%",
+            "value": 19.6,
+            "position": 331689
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 353810
+          },
+          {
+            "text": "1.00%",
+            "value": 1.0,
+            "position": 364352
+          },
+          {
+            "text": "9.7%",
+            "value": 9.7,
+            "position": 371336
+          },
+          {
+            "text": "9.8%",
+            "value": 9.8,
+            "position": 371391
+          },
+          {
+            "text": "57.5%",
+            "value": 57.5,
+            "position": 371463
+          },
+          {
+            "text": "42.5%",
+            "value": 42.5,
+            "position": 371477
+          },
+          {
+            "text": "9.38%",
+            "value": 9.38,
+            "position": 371534
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 371591
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 371603
+          },
+          {
+            "text": "95%",
+            "value": 95.0,
+            "position": 374951
+          },
+          {
+            "text": "6.77%",
+            "value": 6.77,
+            "position": 376496
+          },
+          {
+            "text": "49.26%",
+            "value": 49.26,
+            "position": 376506
+          },
+          {
+            "text": "7.60%",
+            "value": 7.6,
+            "position": 376552
+          },
+          {
+            "text": "52.02%",
+            "value": 52.02,
+            "position": 376562
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 418780
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 418793
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 418913
+          },
+          {
+            "text": "0%",
+            "value": 0.0,
+            "position": 418918
+          },
+          {
+            "text": "10.60%",
+            "value": 10.6,
+            "position": 476016
+          },
+          {
+            "text": "10.10%",
+            "value": 10.1,
+            "position": 476052
+          },
+          {
+            "text": "11.75%",
+            "value": 11.75,
+            "position": 476621
+          },
+          {
+            "text": "12.25%",
+            "value": 12.25,
+            "position": 476678
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 481106
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 305
+          },
+          {
+            "category": "operational_risk",
+            "count": 115
+          },
+          {
+            "category": "financial_risk",
+            "count": 1008
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 442
+          },
+          {
+            "category": "technology_risk",
+            "count": 185
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1160215,
+        "filtered_length": 1137816,
+        "removed_ratio": 1.93,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 45.45454545454546,
+      "confidence": 1.884174403537529,
+      "overall_score": 54.54545454545454,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 50.0,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.09090909090909083,
+        "risk_adjusted_signal": 0.49690399499995286,
+        "expected_return_annualized": 0.15123966942148748,
+        "signal_sharpe_ratio": 0.010082644628099165,
+        "information_coefficient": 0.1109090909090909,
+        "t_statistic": 0.49690399499995286,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.18295101634089186,
+        "signal_strength_zscore": 0.49690399499995286,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": 0.0,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.49690399499995286,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 2,
+        "composite_signal": 0.09090909090909083
+      },
+      "risk_adjusted_signal": 0.49690399499995286,
+      "expected_return": 0.0015123966942148747,
+      "signal_sharpe": 0.010082644628099165,
+      "information_coefficient": 0.1109090909090909
+    },
+    "strategy_score": 54.54545454545454,
+    "confidence": 1.884174403537529,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:32:36.219718",
+  "filing_date": "2025-02-25",
+  "filing_filename": "2025-02-25-10k-SRE.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

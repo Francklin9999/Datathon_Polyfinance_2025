@@ -1,0 +1,944 @@
+{
+  "ticker": "IPG",
+  "analysis": {
+    "ticker": "IPG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 38.10537519957424,
+        "financial_sentiment": -0.07692307692307693,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Summary151STATEMENT REGARDING FORWARD-LOOKING DISCLOSUREThis annual report on contains forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 24840
+        },
+        {
+          "statement": "Summary151STATEMENT REGARDING FORWARD-LOOKING DISCLOSUREThis annual report on contains forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 24897
+        },
+        {
+          "statement": "ing statements regarding goals, intentions, and expectations as to future plans, trends, events, or future results of operations or financial position, constitute forward-looking statements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 25088
+        },
+        {
+          "statement": "to future plans, trends, events, or future results of operations or financial position, constitute forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 25151
+        },
+        {
+          "statement": "uld,” “should,” “estimate,” “will likely result” or comparable terminology are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 25458
+        },
+        {
+          "statement": "Investors are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date they are made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 26444
+        },
+        {
+          "statement": "These include:•Investment in leading talent: We believe our continued ability to attract and develop top talent and to be an industry employer of choice for an increasingly diverse workforce have been key differentiators for IPG.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 37607
+        },
+        {
+          "statement": "We believe in the continued competitiveness of our offerings, the value of our long-term strategy, and the strength of our culture.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 39674
+        },
+        {
+          "statement": "We believe an ethical and conscious approach to data that respects consumer privacy will continue to be crucial as we navigate increased regulation in the digital media space.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 40133
+        },
+        {
+          "statement": "Going forward, we plan to continue to enhance the technology layer within our offerings and to build tech-enabled marketing solutions, informed by a holistic understanding of audiences.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 40309
+        },
+        {
+          "statement": "Going forward, we plan to continue to enhance the technology layer within our offerings and to build tech-enabled marketing solutions, informed by a holistic understanding of audiences.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 40324
+        },
+        {
+          "statement": "t of all human capital resources and activities, setting standards and providing support and policy guidance and sharing programs.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 46779
+        },
+        {
+          "statement": "We believe that such a workplace will enable us to provide cultural insights to help our clients make authentic and responsible connections with their customers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 48380
+        },
+        {
+          "statement": "oke content, research and tools, to foster awareness and action on an array of critical issues that we believe are vital for the recruitment, retention, advancement, well-being and belonging for all of our employees.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 48711
+        },
+        {
+          "statement": "A margin, as defined and discussed within the Non-GAAP Financial Measure section of the MD&A, which we expect will further strengthen our balance sheet and total liquidity and increase value to our shareholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 53438
+        },
+        {
+          "statement": "We believe that our strategy and execution position us to meet our financial goals and to deliver long-term value to all of our stakeholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 53839
+        },
+        {
+          "statement": "See also Statement Regarding Forward-Looking Disclosure.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 64973
+        },
+        {
+          "statement": "We expect the financial and operational costs of complying with ESG laws and regulations or achieving our ESG goals and related certification requirements will grow significantly in future years.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 85518
+        },
+        {
+          "statement": "We regularly undertake acquisitions and other investments that we believe will enhance our service offerings to our clients, such as our acquisitions of Acxiom in 2018 and RafterOne in 2022.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 87511
+        },
+        {
+          "statement": "structure our acquisitions to provide for future contingent purchase payments that are based on the future performance of the acquired entity, our forecasts of the investment’s future performance also factor into the initial consideration.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 88151
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue before billable expenses and expansion of Adjusted EBITA margin, as defined and discussed within the Non-GAAP Financial Measure section of the MD&A,",
+            "position": 53275
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from data and technology offerings and in negotiated fees from our public relations, sales promotion, experiential marketing, sports and entertainment marketing,",
+            "position": 56419
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue before billable expenses accounted for approximately 20% of revenue before billable expenses in 2024 and 2023",
+            "position": 57907
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue before billable expenses in 2024 and 2023",
+            "position": 58079
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue before billable expenses for the year ended December 31, 2024, our largest client sectors (in alphabetical order) were financial services, healthcare,",
+            "position": 58139
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share for both Omnicom and IPG and may not generate significant cash to return to stockholders via dividends,",
+            "position": 116968
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 130335
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per share available to IPG common stockholders:Basic 1$1.84",
+            "position": 147797
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings from various countries,",
+            "position": 162441
+          },
+          {
+            "metric": "earnings",
+            "context": "EARNINGS PER SHAREBasic earnings per share available to IPG common stockholders for the years ended December 31, 2024, 2023 and 2022 were $1.84",
+            "position": 165130
+          },
+          {
+            "metric": "profit",
+            "context": "profit margins, terminal value growth rates, capital expenditures projections, assumed tax rates,",
+            "position": 224668
+          },
+          {
+            "metric": "profit",
+            "context": "profit related to the business of Interpublic without proper prior written approval; (d) engages in fraud, material dishonesty, gross negligence, gross malfeasance or insubordination, or willful (i) f",
+            "position": 549602
+          },
+          {
+            "metric": "profit",
+            "context": "profit and charitable organizations, controlled by or in which any of the foregoing persons have a substantial beneficial ownership interest; or (iii) any person who is known to be, at the time of the",
+            "position": 571106
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, which is a non-GAAP financial measure, as well as the amounts shown in the table below, calculated as required by the Credit Agreement,",
+            "position": 200485
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Reconciliation 1December 31, 2024Leverage ratio (not greater than) 13.50",
+            "position": 201011
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA 1$1,754.0",
+            "position": 201339
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, as defined in the Credit Agreement,",
+            "position": 327211
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS equals net income available to IPG common stockholders divided by the weighted-average number of common shares outstanding,",
+            "position": 306943
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS) could be negatively impacted by that increase,",
+            "position": 308465
+          },
+          {
+            "metric": "margin",
+            "context": "margin, as defined and discussed within the Non-GAAP Financial Measure section of the MD&A,",
+            "position": 53340
+          },
+          {
+            "metric": "margin",
+            "context": "margin, as defined and discussed within the Non-GAAP Financial Measure section of this MD&A,",
+            "position": 138134
+          },
+          {
+            "metric": "margin",
+            "context": "margin on revenue before billable expenses 113.1",
+            "position": 147997
+          },
+          {
+            "metric": "margin",
+            "context": "margin on total revenue 111.3",
+            "position": 148069
+          },
+          {
+            "metric": "margin",
+            "context": "margin on revenue before billable expenses 1, 216.5",
+            "position": 148127
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate was 3.0",
+            "position": 232463
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate represents the expected long-term growth rate for our industry,",
+            "position": 232504
+          },
+          {
+            "metric": "operating income",
+            "context": "OPERATING INCOME 1$1,203.2",
+            "position": 147613
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and net income as well as the specific items that are excluded from Adjusted EBITA, but included in net income or operating income,",
+            "position": 243711
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income 1,21,203.2",
+            "position": 248234
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income would decrease or increase approximately 4%, assuming that all currencies are impacted in the same manner and our international revenue and expenses remain constant at 2024",
+            "position": 251727
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income or net interest expense, depending on the nature of the arrangement,",
+            "position": 335816
+          },
+          {
+            "metric": "net income",
+            "context": "NET INCOME AVAILABLE TO IPG COMMON STOCKHOLDERS$689.5",
+            "position": 147727
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to IPG common stockholder before provision for incomes taxes, total (expenses) and other income, equity in net income of unconsolidated affiliates, net income attributable to nonc",
+            "position": 148845
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $162.0",
+            "position": 187062
+          },
+          {
+            "metric": "net income",
+            "context": "net income of unconsolidated affiliates,",
+            "position": 201737
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Available to IPG Common Stockholders before Provision for Income Taxes, Total (Expenses) and Other Income, Equity in Net Income of Unconsolidated Affiliates, Net Income Attributable to Non-",
+            "position": 242173
+          },
+          {
+            "metric": "assets",
+            "context": "assets in data, creativity and production, technology and artificial intelligence,",
+            "position": 33103
+          },
+          {
+            "metric": "assets",
+            "context": "assets in data and technology, creativity and production, media, consulting, technology and artificial intelligence to connect brand marketing and performance marketing,",
+            "position": 36107
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 86490
+          },
+          {
+            "metric": "assets",
+            "context": "assets or systems into our organization,",
+            "position": 88479
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 89387
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and unforeseen expenses, delays,",
+            "position": 112677
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, consisting primarily of goodwill, accounts receivable and accounts payable, as held for sale within our MD&E, IA&C,",
+            "position": 160458
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities as held for sale included cash, net of proceeds, of $7.9",
+            "position": 161328
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities(131.0",
+            "position": 183800
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities23Item 6",
+            "position": 23874
+          },
+          {
+            "metric": "equity",
+            "context": "Equity,",
+            "position": 129103
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Compensation PlansSee Item 12",
+            "position": 130697
+          },
+          {
+            "metric": "equity",
+            "context": "Equity SecuritiesThe following table provides information regarding our purchases of our equity securities during the period from October 1, 2024 to December 31, 2024",
+            "position": 130848
+          },
+          {
+            "metric": "equity",
+            "context": "equity in net income of unconsolidated affiliates, net income attributable to noncontrolling interests,",
+            "position": 148963
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.10 ",
+            "position": 23277
+          },
+          {
+            "text": "$2,495.9 ",
+            "position": 57388
+          },
+          {
+            "text": "$2,521.0 ",
+            "position": 57402
+          },
+          {
+            "text": "$2,568.5 ",
+            "position": 57416
+          },
+          {
+            "text": "$10,691.7 ",
+            "position": 57577
+          },
+          {
+            "text": "$10,889.3 ",
+            "position": 57587
+          },
+          {
+            "text": "$10,927.8 ",
+            "position": 57597
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 90545
+          },
+          {
+            "text": "$232.1 million",
+            "position": 94051
+          },
+          {
+            "text": "$4.7 billion",
+            "position": 94235
+          },
+          {
+            "text": "$439 million",
+            "position": 100358
+          },
+          {
+            "text": "$25 million",
+            "position": 100677
+          },
+          {
+            "text": "$0.330 ",
+            "position": 129932
+          },
+          {
+            "text": "$29.67 ",
+            "position": 131320
+          },
+          {
+            "text": "$170,066,503 ",
+            "position": 131329
+          },
+          {
+            "text": "$30.76 ",
+            "position": 131363
+          },
+          {
+            "text": "$30.69 ",
+            "position": 131431
+          },
+          {
+            "text": "$320.0 million",
+            "position": 132411
+          },
+          {
+            "text": "$155.0 million",
+            "position": 132572
+          },
+          {
+            "text": "$325.0 million",
+            "position": 133186
+          },
+          {
+            "text": "$9,187.6 ",
+            "position": 147468
+          },
+          {
+            "text": "$9,400.6 ",
+            "position": 147477
+          },
+          {
+            "text": "$9,449.4 ",
+            "position": 147486
+          },
+          {
+            "text": "$1,203.2 ",
+            "position": 147631
+          },
+          {
+            "text": "$1,482.6 ",
+            "position": 147640
+          },
+          {
+            "text": "$1,381.2 ",
+            "position": 147649
+          },
+          {
+            "text": "$1,517.1 ",
+            "position": 147689
+          },
+          {
+            "text": "$1,566.6 ",
+            "position": 147698
+          },
+          {
+            "text": "$1,465.9 ",
+            "position": 147707
+          },
+          {
+            "text": "$689.5 ",
+            "position": 147774
+          },
+          {
+            "text": "$1,098.4 ",
+            "position": 147781
+          },
+          {
+            "text": "$938.0 ",
+            "position": 147790
+          },
+          {
+            "text": "$1.84 ",
+            "position": 147860
+          },
+          {
+            "text": "$2.86 ",
+            "position": 147866
+          },
+          {
+            "text": "$2.40 ",
+            "position": 147872
+          },
+          {
+            "text": "$1.83 ",
+            "position": 147887
+          },
+          {
+            "text": "$2.85 ",
+            "position": 147893
+          },
+          {
+            "text": "$2.37 ",
+            "position": 147899
+          },
+          {
+            "text": "$0.1 ",
+            "position": 148588
+          },
+          {
+            "text": "$102.4",
+            "position": 148597
+          },
+          {
+            "text": "$20.5 ",
+            "position": 151823
+          },
+          {
+            "text": "$9.0 ",
+            "position": 153056
+          },
+          {
+            "text": "$6,024.8 ",
+            "position": 154423
+          },
+          {
+            "text": "$6,243.9 ",
+            "position": 154432
+          },
+          {
+            "text": "$6,258.3 ",
+            "position": 154441
+          },
+          {
+            "text": "$1,343.1 ",
+            "position": 155779
+          },
+          {
+            "text": "$1,342.5 ",
+            "position": 155788
+          },
+          {
+            "text": "$1,346.4 ",
+            "position": 155797
+          },
+          {
+            "text": "$63.3 ",
+            "position": 157525
+          },
+          {
+            "text": "$130.5 ",
+            "position": 157534
+          }
+        ],
+        "percentages": [
+          {
+            "text": "60.6%",
+            "value": 60.6,
+            "position": 44137
+          },
+          {
+            "text": "39.4%",
+            "value": 39.4,
+            "position": 44197
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 50450
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 52808
+          },
+          {
+            "text": "23.3%",
+            "value": 23.3,
+            "position": 57397
+          },
+          {
+            "text": "23.2%",
+            "value": 23.2,
+            "position": 57411
+          },
+          {
+            "text": "23.5%",
+            "value": 23.5,
+            "position": 57425
+          },
+          {
+            "text": "25.4%",
+            "value": 25.4,
+            "position": 57445
+          },
+          {
+            "text": "24.4%",
+            "value": 24.4,
+            "position": 57458
+          },
+          {
+            "text": "25.1%",
+            "value": 25.1,
+            "position": 57471
+          },
+          {
+            "text": "24.6%",
+            "value": 24.6,
+            "position": 57496
+          },
+          {
+            "text": "24.1%",
+            "value": 24.1,
+            "position": 57522
+          },
+          {
+            "text": "26.7%",
+            "value": 26.7,
+            "position": 57546
+          },
+          {
+            "text": "27.8%",
+            "value": 27.8,
+            "position": 57559
+          },
+          {
+            "text": "27.3%",
+            "value": 27.3,
+            "position": 57572
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 58073
+          },
+          {
+            "text": "65%",
+            "value": 65.0,
+            "position": 66242
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 81880
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 146054
+          },
+          {
+            "text": "202420232022%",
+            "value": 202420232022.0,
+            "position": 147374
+          },
+          {
+            "text": "1.0 %",
+            "value": 1.0,
+            "position": 147548
+          },
+          {
+            "text": "0.7 %",
+            "value": 0.7,
+            "position": 147553
+          },
+          {
+            "text": "7.3 %",
+            "value": 7.3,
+            "position": 147665
+          },
+          {
+            "text": "6.9 %",
+            "value": 6.9,
+            "position": 147722
+          },
+          {
+            "text": "0.2 %",
+            "value": 0.2,
+            "position": 147971
+          },
+          {
+            "text": "7.0 %",
+            "value": 7.0,
+            "position": 147982
+          },
+          {
+            "text": "113.1 %",
+            "value": 113.1,
+            "position": 148040
+          },
+          {
+            "text": "15.8 %",
+            "value": 15.8,
+            "position": 148047
+          },
+          {
+            "text": "14.6 %",
+            "value": 14.6,
+            "position": 148053
+          },
+          {
+            "text": "111.3 %",
+            "value": 111.3,
+            "position": 148093
+          },
+          {
+            "text": "13.6 %",
+            "value": 13.6,
+            "position": 148100
+          },
+          {
+            "text": "12.6 %",
+            "value": 12.6,
+            "position": 148106
+          },
+          {
+            "text": "216.5 %",
+            "value": 216.5,
+            "position": 148173
+          },
+          {
+            "text": "16.7 %",
+            "value": 16.7,
+            "position": 148180
+          },
+          {
+            "text": "15.5 %",
+            "value": 15.5,
+            "position": 148186
+          },
+          {
+            "text": "65.6 %",
+            "value": 65.6,
+            "position": 148273
+          },
+          {
+            "text": "66.4 %",
+            "value": 66.4,
+            "position": 148279
+          },
+          {
+            "text": "66.2 %",
+            "value": 66.2,
+            "position": 148285
+          },
+          {
+            "text": "14.3 %",
+            "value": 14.3,
+            "position": 148329
+          },
+          {
+            "text": "14.2 %",
+            "value": 14.2,
+            "position": 148335
+          },
+          {
+            "text": "1.4 %",
+            "value": 1.4,
+            "position": 148386
+          },
+          {
+            "text": "0.9 %",
+            "value": 0.9,
+            "position": 148396
+          },
+          {
+            "text": "2.8 %",
+            "value": 2.8,
+            "position": 148430
+          },
+          {
+            "text": "2.9 %",
+            "value": 2.9,
+            "position": 148440
+          },
+          {
+            "text": "0.0 %",
+            "value": 0.0,
+            "position": 148474
+          },
+          {
+            "text": "1.1 %",
+            "value": 1.1,
+            "position": 148479
+          },
+          {
+            "text": "0.2%",
+            "value": 0.2,
+            "position": 149435
+          },
+          {
+            "text": "16.5%",
+            "value": 16.5,
+            "position": 149828
+          },
+          {
+            "text": "16.7%",
+            "value": 16.7,
+            "position": 149839
+          },
+          {
+            "text": "15.5%",
+            "value": 15.5,
+            "position": 150853
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 195
+          },
+          {
+            "category": "operational_risk",
+            "count": 59
+          },
+          {
+            "category": "financial_risk",
+            "count": 598
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 74
+          },
+          {
+            "category": "technology_risk",
+            "count": 285
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 611283,
+        "filtered_length": 591509,
+        "removed_ratio": 3.23,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.856548856548855,
+      "confidence": 0.6662111525336576,
+      "overall_score": 51.143451143451145,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.15384615384615,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02286902286902287,
+        "risk_adjusted_signal": 0.15381437729849565,
+        "expected_return_annualized": 0.04348204753610158,
+        "signal_sharpe_ratio": 0.002898803169073439,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.15381437729849565,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.07692307692307693,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02286902286902287
+      },
+      "risk_adjusted_signal": 0.15381437729849565,
+      "expected_return": 0.00043482047536101584,
+      "signal_sharpe": 0.002898803169073439,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.143451143451145,
+    "confidence": 0.6662111525336576,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:26:37.778574",
+  "filing_date": "2025-02-20",
+  "filing_filename": "2025-02-20-10k-IPG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

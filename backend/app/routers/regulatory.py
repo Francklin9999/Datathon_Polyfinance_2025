@@ -14,6 +14,7 @@ from app.services.document_parser import DocumentParser
 from app.services.regulatory_analyzer import RegulatoryAnalyzer
 from app.services.impact_modeler import ImpactModeler
 from app.services.scenario_simulator import ScenarioSimulator
+from app.services.searxng_service import SearXNGService
 
 router = APIRouter()
 
@@ -107,20 +108,43 @@ async def assess_company_impact(request: dict):
     """
     Assess impact of regulation on companies using advanced impact modeling
     Calculate risk scores for S&P 500 companies based on supply chain, geography, and business model
+    Uses equal-weighted portfolio as base
     """
     regulation_data = request.get("regulation")
     companies = request.get("companies", [])
     company_data_map = request.get("companyData", {})  # Optional: pre-parsed 10-K data
+    use_equal_weight = request.get("useEqualWeight", True)  # Default to equal weight
     
     if not regulation_data:
         raise HTTPException(status_code=400, detail="Regulation data is required")
     
-    # If no companies specified, assess all if company_data_map provided
+    # If no companies specified, load S&P 500 portfolio with equal weights
     if not companies:
-        companies = list(company_data_map.keys()) if company_data_map else []
+        if company_data_map:
+            companies = list(company_data_map.keys())
+        else:
+            # Load S&P 500 portfolio with equal weights
+            portfolio = _load_sp500_portfolio(use_equal_weights=True)
+            companies = list(portfolio.keys())
+            # Populate company_data_map from portfolio
+            for ticker, data in portfolio.items():
+                if ticker not in company_data_map:
+                    company_data_map[ticker] = {
+                        "ticker": ticker,
+                        "company_name": data.get("company_name", f"{ticker} Inc."),
+                        "key_suppliers": [],
+                        "geographic_revenue": [],
+                        "product_lines": [],
+                        "business_description_full": "",
+                        "supply_chain_risk_score": 50.0,
+                        "geographic_concentration_score": 50.0
+                    }
     
     if not companies:
         raise HTTPException(status_code=400, detail="At least one company must be specified")
+    
+    # Calculate equal weight if using equal weight portfolio
+    equal_weight = 1.0 / len(companies) if use_equal_weight and companies else None
     
     company_impacts = []
     
@@ -144,10 +168,14 @@ async def assess_company_impact(request: dict):
                 company_data=company_data,
                 stock_data=request.get("stockData", {}).get(company_ticker)
             )
+            # Add equal weight if specified
+            if use_equal_weight and equal_weight:
+                impact["portfolio_weight"] = equal_weight
+                impact["weight_percentage"] = equal_weight * 100
             company_impacts.append(impact)
         except Exception as e:
             # Fallback to basic scoring if error
-            company_impacts.append({
+            fallback_impact = {
                 "ticker": company_ticker,
                 "company_name": company_data.get("company_name", f"{company_ticker} Inc."),
                 "risk_score": 50.0,
@@ -156,7 +184,11 @@ async def assess_company_impact(request: dict):
                 "supply_chain_risk": 50.0,
                 "revenue_impact_pct": 0.0,
                 "mitigation_strategies": ["Review manually"]
-            })
+            }
+            if use_equal_weight and equal_weight:
+                fallback_impact["portfolio_weight"] = equal_weight
+                fallback_impact["weight_percentage"] = equal_weight * 100
+            company_impacts.append(fallback_impact)
     
     # Sort by risk score (highest first)
     company_impacts.sort(key=lambda x: x.get("risk_score", 0), reverse=True)
@@ -167,7 +199,9 @@ async def assess_company_impact(request: dict):
         "high_risk_count": len([c for c in company_impacts if c.get("risk_score", 0) > 70]),
         "medium_risk_count": len([c for c in company_impacts if 40 < c.get("risk_score", 0) <= 70]),
         "low_risk_count": len([c for c in company_impacts if c.get("risk_score", 0) <= 40]),
-        "average_risk_score": round(sum(c.get("risk_score", 0) for c in company_impacts) / len(company_impacts), 2) if company_impacts else 0
+        "average_risk_score": round(sum(c.get("risk_score", 0) for c in company_impacts) / len(company_impacts), 2) if company_impacts else 0,
+        "is_equal_weight": use_equal_weight,
+        "equal_weight_percentage": round(equal_weight * 100, 4) if equal_weight else None
     }
 
 
@@ -175,11 +209,24 @@ async def assess_company_impact(request: dict):
 async def simulate_regulatory_scenarios(request: dict):
     """
     Simulate multiple regulatory scenarios and their portfolio impacts
+    Uses equal-weighted portfolio if portfolio not provided
     """
     portfolio = request.get("portfolio", {})  # {ticker: weight}
     company_impacts = request.get("companyImpacts", [])
     scenarios = request.get("scenarios", [])
     time_horizon_days = request.get("timeHorizonDays", 90)
+    use_equal_weight = request.get("useEqualWeight", True)  # Default to equal weight
+    
+    # If portfolio not provided, build equal-weighted from company_impacts
+    if not portfolio and company_impacts:
+        # Build equal-weighted portfolio from company impacts
+        num_companies = len(company_impacts)
+        equal_weight = 1.0 / num_companies if num_companies > 0 else 0.0
+        portfolio = {
+            impact.get("ticker", ""): equal_weight 
+            for impact in company_impacts 
+            if impact.get("ticker")
+        }
     
     if not portfolio:
         raise HTTPException(status_code=400, detail="Portfolio is required")
@@ -203,6 +250,11 @@ async def simulate_regulatory_scenarios(request: dict):
             scenarios=scenarios,
             time_horizon_days=time_horizon_days
         )
+        # Add equal weight info
+        results["is_equal_weight"] = use_equal_weight
+        if use_equal_weight and portfolio:
+            equal_weight_val = list(portfolio.values())[0] if portfolio else 0.0
+            results["equal_weight_percentage"] = round(equal_weight_val * 100, 4)
         return results
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error simulating scenarios: {str(e)}")
@@ -362,8 +414,17 @@ def _calculate_confidence_score(impact_result: dict) -> float:
     return min(confidence, 1.0)
 
 
-def _load_sp500_portfolio() -> dict:
-    """Load S&P 500 portfolio from CSV file"""
+def _load_sp500_portfolio(use_equal_weights: bool = True) -> dict:
+    """
+    Load S&P 500 portfolio from CSV file with equal weights
+    
+    Args:
+        use_equal_weights: If True, all stocks have equal weight (1/n)
+                          If False, uses weights from CSV file
+    
+    Returns:
+        Dictionary with ticker as key and portfolio info as value
+    """
     portfolio = {}
     sp500_file = DATASET_DIR / "2025-08-15_composition_sp500.csv"
     
@@ -373,27 +434,116 @@ def _load_sp500_portfolio() -> dict:
     try:
         with open(sp500_file, 'r', encoding='utf-8-sig') as f:
             reader = csv.DictReader(f)
+            stocks = []
             for row in reader:
                 symbol = row.get('Symbol', '').strip().upper()
                 if symbol:
-                    weight_str = row.get('Weight', '').replace(',', '.')
-                    try:
-                        weight = float(weight_str) if weight_str else 0.0
-                    except:
-                        weight = 0.0
-                    
-                    price_str = row.get('Price', '').replace(',', '.')
-                    try:
-                        price = float(price_str) if price_str else 0.0
-                    except:
-                        price = 0.0
-                    
-                    portfolio[symbol] = {
+                    stocks.append({
                         "ticker": symbol,
                         "company_name": row.get('Company', ''),
-                        "weight": weight,
-                        "price": price
-                    }
+                        "original_weight": row.get('Weight', '0.0'),
+                        "original_price": row.get('Price', '0.0')
+                    })
+        
+        # Get real-time prices using yfinance
+        try:
+            import yfinance as yf
+            tickers = [s["ticker"] for s in stocks]
+            
+            # Fetch prices in batches to avoid rate limits
+            # yfinance supports multiple tickers but can be slow with 500+
+            batch_size = 50
+            prices = {}
+            for i in range(0, len(tickers), batch_size):
+                batch = tickers[i:i+batch_size]
+                try:
+                    # Use Tickers class for batch fetching (space-separated tickers)
+                    ticker_string = ' '.join(batch)
+                    ticker_objects = yf.Tickers(ticker_string)
+                    
+                    for ticker in batch:
+                        try:
+                            stock_obj = ticker_objects.tickers.get(ticker)
+                            if not stock_obj:
+                                # Fallback: try individual Ticker
+                                stock_obj = yf.Ticker(ticker)
+                            
+                            # Try to get current price from history
+                            hist = stock_obj.history(period="1d")
+                            if not hist.empty:
+                                prices[ticker] = float(hist['Close'].iloc[-1])
+                            else:
+                                # Fallback: try info dict
+                                try:
+                                    info = stock_obj.info
+                                    if info and isinstance(info, dict):
+                                        if 'currentPrice' in info and info['currentPrice']:
+                                            prices[ticker] = float(info['currentPrice'])
+                                        elif 'regularMarketPrice' in info and info['regularMarketPrice']:
+                                            prices[ticker] = float(info['regularMarketPrice'])
+                                        elif 'previousClose' in info and info['previousClose']:
+                                            prices[ticker] = float(info['previousClose'])
+                                        else:
+                                            prices[ticker] = None
+                                    else:
+                                        prices[ticker] = None
+                                except Exception as e2:
+                                    print(f"Error getting info for {ticker}: {e2}")
+                                    prices[ticker] = None
+                        except Exception as e:
+                            print(f"Error fetching price for {ticker}: {e}")
+                            prices[ticker] = None
+                except Exception as e:
+                    print(f"Error fetching batch prices: {e}")
+                    # Set all batch prices to None on batch error
+                    for ticker in batch:
+                        prices[ticker] = None
+        except ImportError:
+            print("yfinance not available, using CSV prices")
+            prices = {}
+        except Exception as e:
+            print(f"Error fetching real-time prices: {e}")
+            prices = {}
+        
+        # Calculate equal weight if requested
+        num_stocks = len(stocks)
+        equal_weight = 1.0 / num_stocks if num_stocks > 0 else 0.0
+        
+        # Build portfolio
+        for stock in stocks:
+            ticker = stock["ticker"]
+            
+            # Get price (prefer real-time, fallback to CSV)
+            price = prices.get(ticker)
+            if price is None:
+                # Fallback to CSV price
+                try:
+                    price_str = stock["original_price"].replace(',', '.')
+                    price = float(price_str) if price_str else 0.0
+                except:
+                    price = 0.0
+            
+            # Use equal weight if requested
+            if use_equal_weights:
+                weight = equal_weight
+            else:
+                try:
+                    weight_str = stock["original_weight"].replace(',', '.')
+                    weight = float(weight_str) if weight_str else 0.0
+                except:
+                    weight = 0.0
+            
+            portfolio[ticker] = {
+                "ticker": ticker,
+                "company_name": stock["company_name"],
+                "weight": weight,
+                "weight_percentage": weight * 100,  # For display
+                "price": price,
+                "market_cap": None,  # Could fetch from yfinance if needed
+                "sector": None,  # Could fetch from yfinance if needed
+                "is_equal_weight": use_equal_weights
+            }
+    
     except Exception as e:
         print(f"Error loading S&P 500 portfolio: {e}")
         import traceback
@@ -403,18 +553,68 @@ def _load_sp500_portfolio() -> dict:
 
 
 @router.get("/sp500-portfolio")
-async def get_sp500_portfolio():
+async def get_sp500_portfolio(equal_weight: bool = True):
     """
-    Get S&P 500 portfolio composition
-    Returns list of all S&P 500 stocks with their weights
+    Get S&P 500 portfolio composition with equal weights
+    
+    Args:
+        equal_weight: If True, all stocks have equal weight (default: True)
+    
+    Returns:
+        Dictionary with portfolio data including equal weights and real-time prices
     """
-    portfolio = _load_sp500_portfolio()
+    portfolio = _load_sp500_portfolio(use_equal_weights=equal_weight)
     portfolio_list = list(portfolio.values())
+    
+    # Calculate total portfolio value using real-time prices
+    total_portfolio_value = sum(stock.get("price", 0) * stock.get("weight", 0) for stock in portfolio_list if stock.get("price"))
+    
+    # Calculate equal weight summary
+    equal_weight_pct = (1.0 / len(portfolio_list) * 100) if portfolio_list else 0.0
+    
+    # Try to get sector information from yfinance for sector breakdown
+    sector_breakdown = {}
+    try:
+        import yfinance as yf
+        # Sample stocks from each sector to get sector mapping
+        # In production, would fetch sector for all stocks
+        sectors = {}
+        sample_size = min(100, len(portfolio_list))  # Sample for speed
+        for stock in portfolio_list[:sample_size]:
+            ticker = stock.get("ticker")
+            if ticker:
+                try:
+                    stock_obj = yf.Ticker(ticker)
+                    info = stock_obj.info
+                    if info and 'sector' in info:
+                        sector = info['sector']
+                        if sector not in sectors:
+                            sectors[sector] = []
+                        sectors[sector].append(stock)
+                except:
+                    pass
+        
+        # Calculate sector weights for equal weight portfolio
+        for sector, stocks in sectors.items():
+            sector_weight = len(stocks) * equal_weight_pct
+            sector_breakdown[sector] = {
+                "weight": round(sector_weight, 2),
+                "stock_count": len(stocks),
+                "equal_weight_per_stock": round(equal_weight_pct, 4)
+            }
+    except:
+        pass
     
     return {
         "total_stocks": len(portfolio_list),
         "portfolio": portfolio_list,
-        "portfolio_weights": {k: v["weight"] for k, v in portfolio.items()}
+        "portfolio_weights": {k: v["weight"] for k, v in portfolio.items()},
+        "equal_weight_percentage": round(equal_weight_pct, 4),
+        "is_equal_weight": equal_weight,
+        "total_portfolio_value": total_portfolio_value,
+        "average_weight": equal_weight_pct if equal_weight else sum(v["weight"] * 100 for v in portfolio.values()) / len(portfolio) if portfolio else 0,
+        "sector_breakdown": sector_breakdown if sector_breakdown else None,
+        "portfolio_type": "Equal Weight" if equal_weight else "Market Cap Weighted"
     }
 
 
@@ -429,14 +629,17 @@ async def analyze_sp500_impact(request: dict):
     if not regulation_data:
         raise HTTPException(status_code=400, detail="Regulation data is required")
     
-    # Load S&P 500 portfolio
-    portfolio = _load_sp500_portfolio()
+    # Load S&P 500 portfolio with equal weights
+    portfolio = _load_sp500_portfolio(use_equal_weights=True)
     
     if not portfolio:
         raise HTTPException(status_code=404, detail="S&P 500 portfolio data not found")
     
     # Get all tickers
     companies = list(portfolio.keys())
+    
+    # Calculate equal weight for each stock
+    equal_weight = 1.0 / len(companies) if companies else 0.0
     
     # Build company data map (simplified - in production, would fetch from 10-K or other sources)
     company_data_map = {}
@@ -473,9 +676,12 @@ async def analyze_sp500_impact(request: dict):
                 company_data=company_data,
                 stock_data=request.get("stockData", {}).get(company_ticker)
             )
-            # Add portfolio weight to impact
-            impact["portfolio_weight"] = portfolio.get(company_ticker, {}).get("weight", 0.0)
-            impact["weighted_risk"] = impact.get("risk_score", 0) * portfolio.get(company_ticker, {}).get("weight", 0.0)
+            # Use equal weight for all stocks
+            impact["portfolio_weight"] = equal_weight
+            impact["weight_percentage"] = equal_weight * 100
+            impact["weighted_risk"] = impact.get("risk_score", 0) * equal_weight
+            # Add price info from portfolio
+            impact["price"] = portfolio.get(company_ticker, {}).get("price", 0.0)
             company_impacts.append(impact)
         except Exception as e:
             # Fallback to basic scoring
@@ -488,14 +694,16 @@ async def analyze_sp500_impact(request: dict):
                 "supply_chain_risk": 50.0,
                 "revenue_impact_pct": 0.0,
                 "mitigation_strategies": ["Review manually"],
-                "portfolio_weight": portfolio.get(company_ticker, {}).get("weight", 0.0),
-                "weighted_risk": 50.0 * portfolio.get(company_ticker, {}).get("weight", 0.0)
+                "portfolio_weight": equal_weight,
+                "weight_percentage": equal_weight * 100,
+                "weighted_risk": 50.0 * equal_weight,
+                "price": portfolio.get(company_ticker, {}).get("price", 0.0)
             })
     
     # Sort by risk score (highest first)
     company_impacts.sort(key=lambda x: x.get("risk_score", 0), reverse=True)
     
-    # Calculate portfolio-level metrics
+    # Calculate portfolio-level metrics using equal weights
     total_weighted_risk = sum(c.get("weighted_risk", 0) for c in company_impacts)
     avg_risk_score = sum(c.get("risk_score", 0) for c in company_impacts) / len(company_impacts) if company_impacts else 0
     
@@ -507,5 +715,221 @@ async def analyze_sp500_impact(request: dict):
         "low_risk_count": len([c for c in company_impacts if c.get("risk_score", 0) <= 40]),
         "average_risk_score": round(avg_risk_score, 2),
         "portfolio_weighted_risk": round(total_weighted_risk, 4),
-        "total_portfolio_weight": sum(portfolio.get(ticker, {}).get("weight", 0.0) for ticker in companies)
+        "total_portfolio_weight": len(companies) * equal_weight,  # Should be 1.0
+        "equal_weight": equal_weight,
+        "equal_weight_percentage": round(equal_weight * 100, 4),
+        "is_equal_weight": True
+    }
+
+
+@router.post("/search-missing-elements")
+async def search_missing_elements(request: dict):
+    """
+    Search for missing elements from reports using SearXNG
+    Identifies what should be in reports and searches for missing information across all pages
+    
+    Args:
+        request: Dict with:
+            - report_type: Type of report (regulatory, company_impact, portfolio, etc.)
+            - report_data: Current report data to analyze
+            - page_url: Optional page URL to check
+            - elements_to_check: Optional list of specific elements to check
+    
+    Returns:
+        Dict with:
+            - missing_elements: List of identified missing elements
+            - search_results: Search results from SearXNG for each missing element
+            - recommendations: Recommendations for filling missing elements
+    """
+    report_type = request.get("report_type", "regulatory")
+    report_data = request.get("report_data", {})
+    page_url = request.get("page_url")
+    elements_to_check = request.get("elements_to_check")
+    
+    # Define expected elements for different report types
+    expected_elements_map = {
+        "regulatory": {
+            "required": ["regulation_name", "regulation_type", "jurisdiction", "effective_date", "summary", "measures", "entities"],
+            "optional": ["issuing_body", "citations", "supply_chain_impact", "key_provisions", "geographic_choke_points"],
+            "descriptions": {
+                "regulation_name": "Name of the regulation or document",
+                "regulation_type": "Type of regulation (tax_credit, sanction, directive, etc.)",
+                "jurisdiction": "Country or region where regulation applies",
+                "effective_date": "Date when regulation becomes effective",
+                "summary": "Summary of the regulation",
+                "measures": "List of regulatory measures and provisions",
+                "entities": "Affected entities (companies, sectors, countries)",
+                "issuing_body": "Organization that issued the regulation",
+                "citations": "Document citations with paragraph references",
+                "supply_chain_impact": "Supply chain impact analysis",
+                "key_provisions": "Key regulatory provisions",
+                "geographic_choke_points": "Geographic supply chain choke points"
+            }
+        },
+        "company_impact": {
+            "required": ["ticker", "company_name", "risk_score", "exposure", "reasoning"],
+            "optional": ["supply_chain_exposure", "revenue_exposure", "compliance_requirements", "opportunities", "mitigation_strategies"],
+            "descriptions": {
+                "ticker": "Company stock ticker symbol",
+                "company_name": "Full company name",
+                "risk_score": "Numeric risk score (0-100)",
+                "exposure": "Exposure level (Low, Medium, High, Critical)",
+                "reasoning": "Explanation of impact assessment",
+                "supply_chain_exposure": "Supply chain exposure details",
+                "revenue_exposure": "Revenue exposure analysis",
+                "compliance_requirements": "Compliance requirements",
+                "opportunities": "Potential opportunities from regulation",
+                "mitigation_strategies": "Strategies to mitigate risk"
+            }
+        },
+        "portfolio": {
+            "required": ["total_assessed", "high_risk_count", "medium_risk_count", "low_risk_count", "average_risk_score"],
+            "optional": ["portfolio_weighted_risk", "companies", "scenario_analysis"],
+            "descriptions": {
+                "total_assessed": "Total number of companies assessed",
+                "high_risk_count": "Number of high-risk companies",
+                "medium_risk_count": "Number of medium-risk companies",
+                "low_risk_count": "Number of low-risk companies",
+                "average_risk_score": "Average risk score across portfolio",
+                "portfolio_weighted_risk": "Portfolio-weighted risk metric",
+                "companies": "List of company impact assessments",
+                "scenario_analysis": "Scenario analysis results"
+            }
+        }
+    }
+    
+    # Get expected elements for this report type
+    expected_elements = expected_elements_map.get(report_type, expected_elements_map["regulatory"])
+    required_elements = expected_elements.get("required", [])
+    optional_elements = expected_elements.get("optional", [])
+    element_descriptions = expected_elements.get("descriptions", {})
+    
+    # If specific elements to check are provided, use those
+    if elements_to_check:
+        elements_to_verify = elements_to_check
+    else:
+        elements_to_verify = required_elements + optional_elements
+    
+    # Identify missing elements
+    missing_elements = []
+    present_elements = []
+    
+    for element in elements_to_verify:
+        value = report_data.get(element)
+        
+        # Check if element is missing or empty
+        is_missing = False
+        if value is None:
+            is_missing = True
+        elif isinstance(value, (list, dict)):
+            if len(value) == 0:
+                is_missing = True
+        elif isinstance(value, str):
+            if not value.strip():
+                is_missing = True
+        
+        if is_missing:
+            missing_elements.append({
+                "element": element,
+                "description": element_descriptions.get(element, f"{element} information"),
+                "required": element in required_elements
+            })
+        else:
+            present_elements.append(element)
+    
+    # Search for missing elements using SearXNG
+    search_results = []
+    recommendations = []
+    
+    for missing_element in missing_elements:
+        element_name = missing_element["element"]
+        element_desc = missing_element["description"]
+        is_required = missing_element["required"]
+        
+        # Build search query based on report context
+        context_parts = []
+        
+        if report_type == "regulatory":
+            regulation_name = report_data.get("regulation_name", "")
+            jurisdiction = report_data.get("jurisdiction", "")
+            if regulation_name:
+                context_parts.append(regulation_name)
+            if jurisdiction:
+                context_parts.append(jurisdiction)
+            context_parts.append("regulation")
+        
+        elif report_type == "company_impact":
+            company_name = report_data.get("company_name", "")
+            ticker = report_data.get("ticker", "")
+            if company_name:
+                context_parts.append(company_name)
+            if ticker:
+                context_parts.append(ticker)
+            context_parts.append("regulatory impact")
+        
+        # Create search query
+        search_query = f"{' '.join(context_parts)} {element_desc} {element_name}"
+        
+        # Perform search using SearXNG
+        try:
+            search_result = SearXNGService.search(
+                query=search_query,
+                categories=["general", "news", "finance"] if report_type in ["company_impact", "portfolio"] else ["general", "news"],
+                max_results=5,
+                timeout=15.0
+            )
+            
+            if search_result.get("success") and search_result.get("results"):
+                search_results.append({
+                    "element": element_name,
+                    "query": search_query,
+                    "results": search_result["results"],
+                    "number_of_results": search_result.get("number_of_results", 0)
+                })
+                
+                # Generate recommendation based on search results
+                top_results = search_result["results"][:3]
+                recommendation = f"For {element_desc}: "
+                
+                if top_results:
+                    sources = [r.get("title", "") for r in top_results if r.get("title")]
+                    recommendation += f"Found {len(top_results)} potential sources. "
+                    if sources:
+                        recommendation += f"Top sources: {', '.join(sources[:2])}."
+                else:
+                    recommendation += f"Could not find specific information about {element_desc}."
+                
+                recommendations.append({
+                    "element": element_name,
+                    "recommendation": recommendation,
+                    "priority": "HIGH" if is_required else "MEDIUM",
+                    "sources": [{"title": r.get("title", ""), "url": r.get("url", "")} for r in top_results]
+                })
+            else:
+                recommendations.append({
+                    "element": element_name,
+                    "recommendation": f"Search unavailable for {element_desc}. Consider manual review.",
+                    "priority": "HIGH" if is_required else "MEDIUM",
+                    "sources": []
+                })
+        
+        except Exception as e:
+            recommendations.append({
+                "element": element_name,
+                "recommendation": f"Error searching for {element_desc}: {str(e)}",
+                "priority": "HIGH" if is_required else "MEDIUM",
+                "sources": []
+            })
+    
+    return {
+        "report_type": report_type,
+        "page_url": page_url,
+        "missing_elements": missing_elements,
+        "present_elements": present_elements,
+        "missing_count": len(missing_elements),
+        "present_count": len(present_elements),
+        "total_elements": len(elements_to_verify),
+        "search_results": search_results,
+        "recommendations": recommendations,
+        "completeness_percentage": round((len(present_elements) / len(elements_to_verify)) * 100, 2) if elements_to_verify else 0
     }

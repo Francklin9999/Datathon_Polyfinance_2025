@@ -1,0 +1,879 @@
+{
+  "ticker": "PCG",
+  "analysis": {
+    "ticker": "PCG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 45.14767932489451,
+        "financial_sentiment": 0.0,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "and Catastrophic EventsWMPwildfire mitigation planWMPMAWildfire Mitigation Plan Memorandum Account7FORWARD-LOOKING STATEMENTSThis report contains forward-looking statements that are necessarily subject to various risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 98726
+        },
+        {
+          "statement": "planWMPMAWildfire Mitigation Plan Memorandum Account7FORWARD-LOOKING STATEMENTSThis report contains forward-looking statements that are necessarily subject to various risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 98773
+        },
+        {
+          "statement": "PG&E Corporation and the Utility are not able to predict all the factors that may affect future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 100012
+        },
+        {
+          "statement": "ble to predict all the factors that may affect future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 100065
+        },
+        {
+          "statement": "For more information about the significant risks that could affect the outcome of the forward-looking statements and PG&E Corporation’s and the Utility’s future financial condition, results of operations, liquidity, and cash flows, see Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 110500
+        },
+        {
+          "statement": "Risk Factors and PG&E Corporation and the Utility do not undertake any obligation to update forward-looking statements, whether in response to new information, future events, or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 110751
+        },
+        {
+          "statement": "To build resilience to these hazards, the Utility is working to systematically integrate forward-looking climate data and tools into its decision-making.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 118899
+        },
+        {
+          "statement": "associated with the CPE function that were not incurred in compliance with the CPUC’s decisions and guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 167786
+        },
+        {
+          "statement": "The following table shows the percentage of the Utility’s estimated total net deliveries of electricity to retail customers in 2024 represented by each major electric resource, and further discussed below.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 182331
+        },
+        {
+          "statement": "Procurement from renewable energy sources was estimated to comprise 23% of total annual retail sales in 2024.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 185642
+        },
+        {
+          "statement": "tility’s financial condition, results of operations, liquidity, and cash flows, or that could cause future results to differ from historical results, see Item 1A.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 328174
+        },
+        {
+          "statement": "Risk Factors and “Forward-Looking Statements” above for a list of some of the factors that may cause Tax MattersPG&E Corporation had a U.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 328255
+        },
+        {
+          "statement": "y Factors Affecting Financial Results” above for further discussion about factors that could affect future results of operations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 331864
+        },
+        {
+          "statement": "Forward-Looking Rate CasesThe Utility routinely participates in forward-looking rate case applications before the CPUC and the FERC.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 385987
+        },
+        {
+          "statement": "Forward-Looking Rate CasesThe Utility routinely participates in forward-looking rate case applications before the CPUC and the FERC.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 386051
+        },
+        {
+          "statement": "epartment of the Treasury and the IRS have broad authority to issue and have issued regulations and guidance to implement its provisions.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 398586
+        },
+        {
+          "statement": "t Reporting (Topic 280): Improvements to Reportable Segment Disclosures, which amended the existing guidance to improve reportable segment disclosure requirements, primarily through enhanced disclosures about significant segment expenses.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 501633
+        },
+        {
+          "statement": "023-09, Income Taxes (Topic 740): Improvements to Income Tax Disclosures, which amends the existing guidance to enhance the transparency and decision usefulness of income tax disclosures.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 502276
+        },
+        {
+          "statement": "PG&E Corporation and the Utility do not expect the guidance to have a significant impact on their Consolidated Financial Statements and related disclosures.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 502665
+        },
+        {
+          "statement": "sclosures (Subtopic 220-40): Disaggregation of Income Statement Expenses, which amends the existing guidance to require disclosure, in the notes to the financial statements, of specified information about certain costs and expenses.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 503037
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue rightsDADirect AccessDCPPDiablo Canyon Power PlantDistrict CourtUnited States District Court for the Northern District of CaliforniaDOEUnited States Department of EnergyDOE Loan Guarantee Agre",
+            "position": 95181
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, as amendedIRSInternal Revenue ServiceLakeside Building300 Lakeside Drive, Oakland, California, 94612LSEsload serving entitiesLTIPLong-Term Incentive PlanMD&AManagement’s Discussi",
+            "position": 96179
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirements and rates, the siting, construction, operation, maintenance, and safety obligations of substantially all of the Utility’s hydroelectric generation facilities,",
+            "position": 140791
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirement is the sum of the following:•expenses;•depreciation;20",
+            "position": 155131
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirement, the CPUC authorizes the Utility to collect revenues to recover costs that the Utility is allowed to “pass through” to customers,",
+            "position": 155366
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings by 2028",
+            "position": 123102
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 259564
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, equity contributions from PG&E Corporation and long-term debt issuances to maintain its CPUC-authorized long-term capital structure consisting of 52% common equity, 47.5",
+            "position": 343971
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, cash flows,",
+            "position": 363584
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for 2024, 2023, and 2022",
+            "position": 553973
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE at 10.28",
+            "position": 373748
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE, cost of preferred stock, and cost of debt for the Utility’s electric generation, electric distribution, natural gas distribution, and natural gas transmission and storage rate base beginning on J",
+            "position": 390440
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE as well as a 0.5",
+            "position": 392322
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE adder for participation in the CAISO, which results in a forecast transmission revenue requirement of $2.78",
+            "position": 392755
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 1.375",
+            "position": 354896
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 0.375",
+            "position": 354965
+          },
+          {
+            "metric": "margin",
+            "context": "margin, and considered whether it had any decision-making rights associated with the activities that are most significant to the VIE’s performance,",
+            "position": 485759
+          },
+          {
+            "metric": "net income",
+            "context": "net income over the next 12 months would be $6 million and $57 million, respectively,",
+            "position": 402271
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Per Common Share, Diluted$1.15",
+            "position": 430981
+          },
+          {
+            "metric": "net income",
+            "context": "Net income $2,512 $2,256 $1,814 Adjustments to reconcile net income to net cash provided by operating activities:Depreciation, amortization, and decommissioning4,189 3,738 3,856 Bad debt expense341 63",
+            "position": 435509
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — — — 1,814 — 1,814 — 1,814 Other comprehensive income— — — — — — 15 15 — 15 Common stock issued, net— 2,384,408 (2,337)— — — — (2,337)— (2,337)Treasury stock disposition— — — (230,000,0",
+            "position": 439944
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$2,712 $2,544 $2,226 Adjustments to reconcile net income to net cash provided by operating activities:Depreciation, amortization, and decommissioning4,189 3,738 3,856 Bad debt expense341 636",
+            "position": 446817
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities, environmental remediation, litigation, third-party claims, the Wildfire Fund,",
+            "position": 99476
+          },
+          {
+            "metric": "assets",
+            "context": "assets, information or data, including customer, employee, financial, or operating system information, or intellectual property; corruption of data; or potential costs, lost revenues, litigation, or r",
+            "position": 103614
+          },
+          {
+            "metric": "assets",
+            "context": "assets can be found below in The principal executive offices of PG&E Corporation and the Utility are located at 300 Lakeside Drive, Oakland, California 94612",
+            "position": 114458
+          },
+          {
+            "metric": "assets",
+            "context": "assets, electric distribution capacity, hydroelectric facilities, energy storage, information technology,",
+            "position": 123724
+          },
+          {
+            "metric": "assets",
+            "context": "assets and facilities, energy purchases on behalf of the Utility’s electric and natural gas retail customers, rates of return, rates of depreciation, oversight of nuclear decommissioning,",
+            "position": 137174
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities arising from wildfires occurring after July 12, 2019 that are caused by the applicable electric utility company’s equipmentWMBAWildfire Mitigation Balancing AccountWMCEWildfire Mitigation ",
+            "position": 98427
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, environmental remediation, litigation, third-party claims, the Wildfire Fund,",
+            "position": 99487
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities in connection with fines or penalties that could be imposed on the Utility if the CPUC or any other enforcement agency were to bring an enforcement action in respect of any such fire; the ",
+            "position": 101435
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities associated with former MGP sites, power plant sites, gas gathering sites, sites where natural gas compressor stations are located, and sites used by the Utility for the storage, recycling,",
+            "position": 151131
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, see Note 15 of the Notes to the Consolidated Financial Statements in Item 8",
+            "position": 151740
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED SHAREHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIESMANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONSOVERVIEWRESULTS OF OPERATIONSLIQUIDITY",
+            "position": 93017
+          },
+          {
+            "metric": "equity",
+            "context": "equity financing in a timely manner on acceptable terms;•the risks and uncertainties associated with high rates for the Utility’s customers;•actions by credit rating agencies to downgrade PG&E Corpora",
+            "position": 109884
+          },
+          {
+            "metric": "equity",
+            "context": "equity base rate pursuant to AB 1054.14",
+            "position": 124988
+          },
+          {
+            "metric": "equity",
+            "context": "equity, and debt for ratemaking) and rates of return for its electric generation, electric and natural gas distribution,",
+            "position": 158926
+          },
+          {
+            "metric": "equity",
+            "context": "equity,",
+            "position": 159187
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$25 ",
+            "position": 91573
+          },
+          {
+            "text": "$200,000, ",
+            "position": 112318
+          },
+          {
+            "text": "$2 billion",
+            "position": 122781
+          },
+          {
+            "text": "$10.6 billion",
+            "position": 123324
+          },
+          {
+            "text": "$12.9 billion",
+            "position": 123422
+          },
+          {
+            "text": "$12.0 billion",
+            "position": 123446
+          },
+          {
+            "text": "$13.6 billion",
+            "position": 123470
+          },
+          {
+            "text": "$14.0 billion",
+            "position": 123498
+          },
+          {
+            "text": "$3.21 billion",
+            "position": 124892
+          },
+          {
+            "text": "$4.18 billion",
+            "position": 126652
+          },
+          {
+            "text": "$100,000 ",
+            "position": 137708
+          },
+          {
+            "text": "$8 million",
+            "position": 138672
+          },
+          {
+            "text": "$1 million",
+            "position": 141915
+          },
+          {
+            "text": "$50 million",
+            "position": 162906
+          },
+          {
+            "text": "$13 ",
+            "position": 163231
+          },
+          {
+            "text": "$7,504 ",
+            "position": 192747
+          },
+          {
+            "text": "$6,041 ",
+            "position": 192754
+          },
+          {
+            "text": "$6,130 ",
+            "position": 192761
+          },
+          {
+            "text": "$17,811 ",
+            "position": 193027
+          },
+          {
+            "text": "$17,424 ",
+            "position": 193035
+          },
+          {
+            "text": "$15,060 ",
+            "position": 193043
+          },
+          {
+            "text": "$0.2888 ",
+            "position": 193171
+          },
+          {
+            "text": "$0.2356 ",
+            "position": 193179
+          },
+          {
+            "text": "$0.2253 ",
+            "position": 193187
+          },
+          {
+            "text": "$11,460 ",
+            "position": 193323
+          },
+          {
+            "text": "$10,720 ",
+            "position": 193331
+          },
+          {
+            "text": "$9,967 ",
+            "position": 193339
+          },
+          {
+            "text": "$1.99 ",
+            "position": 199849
+          },
+          {
+            "text": "$6.91 ",
+            "position": 199855
+          },
+          {
+            "text": "$7.42 B",
+            "position": 199861
+          },
+          {
+            "text": "$3,089 ",
+            "position": 200060
+          },
+          {
+            "text": "$3,686 ",
+            "position": 200067
+          },
+          {
+            "text": "$3,353 ",
+            "position": 200074
+          },
+          {
+            "text": "$6,608 ",
+            "position": 200311
+          },
+          {
+            "text": "$7,004 ",
+            "position": 200318
+          },
+          {
+            "text": "$6,620 ",
+            "position": 200325
+          },
+          {
+            "text": "$20.74 ",
+            "position": 200462
+          },
+          {
+            "text": "$20.73 ",
+            "position": 200469
+          },
+          {
+            "text": "$20.22 ",
+            "position": 200476
+          },
+          {
+            "text": "$5,019 ",
+            "position": 200544
+          },
+          {
+            "text": "$4,749 ",
+            "position": 200551
+          },
+          {
+            "text": "$4,522 ",
+            "position": 200558
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 227469
+          },
+          {
+            "text": "$1.225 billion",
+            "position": 233881
+          },
+          {
+            "text": "$1.925 billion",
+            "position": 233900
+          },
+          {
+            "text": "$430 million",
+            "position": 233979
+          },
+          {
+            "text": "$527 million",
+            "position": 233996
+          },
+          {
+            "text": "$602 million",
+            "position": 234240
+          },
+          {
+            "text": "$60 million",
+            "position": 234257
+          },
+          {
+            "text": "$332 million",
+            "position": 253863
+          }
+        ],
+        "percentages": [
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 91488
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 91588
+          },
+          {
+            "text": "4.80%",
+            "value": 4.8,
+            "position": 91888
+          },
+          {
+            "text": "4.50%",
+            "value": 4.5,
+            "position": 91987
+          },
+          {
+            "text": "4.36%",
+            "value": 4.36,
+            "position": 92086
+          },
+          {
+            "text": "6.000%",
+            "value": 6.0,
+            "position": 92134
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 120109
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 120778
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 121610
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 123090
+          },
+          {
+            "text": "36.6%",
+            "value": 36.6,
+            "position": 126713
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 169634
+          },
+          {
+            "text": "102%",
+            "value": 102.0,
+            "position": 169641
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 169871
+          },
+          {
+            "text": "1.5%",
+            "value": 1.5,
+            "position": 170086
+          },
+          {
+            "text": "3.75%",
+            "value": 3.75,
+            "position": 174027
+          },
+          {
+            "text": "62%",
+            "value": 62.0,
+            "position": 174162
+          },
+          {
+            "text": "4.0%",
+            "value": 4.0,
+            "position": 174599
+          },
+          {
+            "text": "44%",
+            "value": 44.0,
+            "position": 174619
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 174760
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 180849
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 180863
+          },
+          {
+            "text": "49%",
+            "value": 49.0,
+            "position": 181012
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 181032
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 181051
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 183311
+          },
+          {
+            "text": "63 %",
+            "value": 63.0,
+            "position": 183331
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 183361
+          },
+          {
+            "text": "23 %",
+            "value": 23.0,
+            "position": 183393
+          },
+          {
+            "text": "99 %",
+            "value": 99.0,
+            "position": 183411
+          },
+          {
+            "text": "77 %",
+            "value": 77.0,
+            "position": 183420
+          },
+          {
+            "text": "22 %",
+            "value": 22.0,
+            "position": 183468
+          },
+          {
+            "text": "11 %",
+            "value": 11.0,
+            "position": 183500
+          },
+          {
+            "text": "33 %",
+            "value": 33.0,
+            "position": 183517
+          },
+          {
+            "text": "32 %",
+            "value": 32.0,
+            "position": 183553
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 183565
+          },
+          {
+            "text": "98 %",
+            "value": 98.0,
+            "position": 183647
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 185664
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 186114
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 186162
+          },
+          {
+            "text": "15 %",
+            "value": 15.0,
+            "position": 186170
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 191038
+          },
+          {
+            "text": "73%",
+            "value": 73.0,
+            "position": 191076
+          },
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 194595
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 194645
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 198377
+          },
+          {
+            "text": "93%",
+            "value": 93.0,
+            "position": 201331
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 211190
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 211327
+          },
+          {
+            "text": "95%",
+            "value": 95.0,
+            "position": 211525
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 116
+          },
+          {
+            "category": "operational_risk",
+            "count": 48
+          },
+          {
+            "category": "financial_risk",
+            "count": 730
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 360
+          },
+          {
+            "category": "technology_risk",
+            "count": 248
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 797299,
+        "filtered_length": 778033,
+        "removed_ratio": 2.42,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 45.45454545454546,
+      "confidence": 1.884174403537529,
+      "overall_score": 54.54545454545454,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 50.0,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.09090909090909083,
+        "risk_adjusted_signal": 0.49690399499995286,
+        "expected_return_annualized": 0.15123966942148748,
+        "signal_sharpe_ratio": 0.010082644628099165,
+        "information_coefficient": 0.1109090909090909,
+        "t_statistic": 0.49690399499995286,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.18295101634089186,
+        "signal_strength_zscore": 0.49690399499995286,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": 0.0,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.49690399499995286,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 2,
+        "composite_signal": 0.09090909090909083
+      },
+      "risk_adjusted_signal": 0.49690399499995286,
+      "expected_return": 0.0015123966942148747,
+      "signal_sharpe": 0.010082644628099165,
+      "information_coefficient": 0.1109090909090909
+    },
+    "strategy_score": 54.54545454545454,
+    "confidence": 1.884174403537529,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:30:28.196990",
+  "filing_date": "2025-02-13",
+  "filing_filename": "2025-02-13-10k-PCG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

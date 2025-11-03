@@ -1,0 +1,914 @@
+{
+  "ticker": "HWM",
+  "analysis": {
+    "ticker": "HWM",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 35.7630979498861,
+        "financial_sentiment": -0.08247422680412371,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "finitive proxy statement for its 2025 Annual Meeting of Shareholders (the “Proxy Statement”), which we expect to file with the Securities and Exchange Commission within 120 days after Howmet Aerospace Inc.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 51475
+        },
+        {
+          "statement": "Table of ContentsForward-Looking StatementsThis report contains (and oral communications made by Howmet Aerospace Inc.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 51826
+        },
+        {
+          "statement": "et”) may contain) statements that relate to future events and expectations and, as such, constitute forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 52034
+        },
+        {
+          "statement": "ing such words as “anticipates”, “believes”, “could”, “estimates”, “expects”, “forecasts”, “goal”, “guidance”, “intends”, “may”, “outlook”, “plans”, “projects”, “seeks”, “sees”, “should”, “targets”, “will”, “would”, or other words of similar meaning.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 52285
+        },
+        {
+          "statement": "Howmet disclaims any intention or obligation to update publicly any forward-looking statements, whether in response to new information, future events or otherwise, except as required by applicable law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 53900
+        },
+        {
+          "statement": "We believe providing employees with avenues to new skills contributes to increased motivation and engagement, resulting in higher employee retention.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 76399
+        },
+        {
+          "statement": "anges and uncertainties in the timing and level of future aircraft production by OEMs may cause our future results to differ from prior periods due to changes in the Company’s product mix.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 86970
+        },
+        {
+          "statement": "Howmet’s competitive position and future performance depend, in part, on the Company’s ability to develop and innovate products, deploy technology initiatives, and implement advanced manufacturing technologies.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 104657
+        },
+        {
+          "statement": "We expect our commercial aerospace wide body and narrow body demand, including engine spares, also to continue to grow.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 139404
+        },
+        {
+          "statement": "vel of future aircraft builds by OEMs are subject to changes and uncertainties, which may cause our future results to differ from prior periods due to changes in product mix in certain segments.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 140345
+        },
+        {
+          "statement": "In 2025, management projects sales to increase as we expect solid growth in the commercial aerospace market, and the Company’s strong position in that market is expected to continue, including engines spares.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 143427
+        },
+        {
+          "statement": "ements, tariffs, and fluctuations in foreign currency exchange rates and interest rates, may affect future results of operations and cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 144197
+        },
+        {
+          "statement": "ramework to have a material impact on its effective tax rate, we continue to monitor any additional guidance released by the OECD, along with the pending and adopted legislation in the countries where we operate.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 155889
+        },
+        {
+          "statement": "ements, tariffs, and fluctuations in foreign currency exchange rates and interest rates, may affect future results of operations and cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 165029
+        },
+        {
+          "statement": "ements, tariffs, and fluctuations in foreign currency exchange rates and interest rates, may affect future results of operations and cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 168046
+        },
+        {
+          "statement": "ements, tariffs, and fluctuations in foreign currency exchange rates and interest rates, may affect future results of operations and cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 171741
+        },
+        {
+          "statement": "ements, tariffs, and fluctuations in foreign currency exchange rates and interest rates, may affect future results of operations and cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 174329
+        },
+        {
+          "statement": "elop this assumption is one that relies on a combination of historical asset return information and forward-looking returns by asset class.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 205572
+        },
+        {
+          "statement": "Recently Adopted and Recently Issued Accounting Guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 212421
+        },
+        {
+          "statement": "ed and Recently Issued Accounting Guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 212487
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue in 2024",
+            "position": 59034
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from products sold to the aerospace industry,",
+            "position": 86322
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from products sold to the commercial aerospace market for the year ended December 31, 2024",
+            "position": 139160
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings; (ii) geopolitical risks such as political instability, civil unrest, expropriation, nationalization of properties by a government, imposition of sanctions, and renegotiation or nullification",
+            "position": 106740
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements, debt service obligations, covenants associated with certain of the Company’s debt obligations, industry practice, legal requirements, regulatory constraints,",
+            "position": 112080
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in countries with differing statutory tax rates, changes in the overall profitability of the Company, changes in tax legislation and rates, changes in generally accepted accounting principles",
+            "position": 118187
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, $15",
+            "position": 155035
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, $8 of charges related to nondeductible expenses, and $5",
+            "position": 157559
+          },
+          {
+            "metric": "profit",
+            "context": "Profit and loss:Segment Adjusted EBITDA$1,150 $406 $166 $287 $2,009 Restructuring and other charges1 5 12 1 19 Provision for depreciation and amortization139 47 42 42 270 Other:Capital expenditures$21",
+            "position": 264180
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA(1) increased 27% from 2023 primarily due to favorable sales in the commercial aerospace, defense aerospace,",
+            "position": 140883
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA(1) of $2,009, an increase of $422, or 27%, from 2023;•Cash on hand and restricted cash at the end of the year of $565;•Cash provided from operations of $1,298; cash used for financing activitie",
+            "position": 141896
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (Earnings before interest, taxes, depreciation,",
+            "position": 160529
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA for all reportable segments totaled $2,009 in 2024, $1,587 in 2023, and $1,352 in 2022",
+            "position": 161681
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, and Segment Adjusted EBITDA Margin for each reportable segment for each of the three years in the period ended December 31, 2024",
+            "position": 161931
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS”) amounts are computed by dividing earnings, after the deduction of preferred stock dividends declared,",
+            "position": 315008
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS attributable to Howmet common shareholders was as follows (shares in millions in the table below):For the year ended December 31,202420232022Net income attributable to common shareholders$1,155 $7",
+            "position": 315352
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS,",
+            "position": 316085
+          },
+          {
+            "metric": "margin",
+            "context": "margin is equivalent to Sales minus the following items: Cost of goods sold; Selling, general administrative,",
+            "position": 160672
+          },
+          {
+            "metric": "margin",
+            "context": "Margin for each reportable segment for each of the three years in the period ended December 31, 2024",
+            "position": 161967
+          },
+          {
+            "metric": "margin",
+            "context": "Margin for the Engine Products segment increased approximately 360 basis points in 2024 compared with 2023, primarily due to growth in the commercial aerospace, defense aerospace, oil and gas,",
+            "position": 164106
+          },
+          {
+            "metric": "margin",
+            "context": "Margin for the Engine Products segment increased approximately 20 basis points in 2023 compared with 2022, primarily due to higher volumes in the commercial aerospace, defense aerospace, industrial ga",
+            "position": 164358
+          },
+          {
+            "metric": "margin",
+            "context": "Margin for the Fastening Systems segment increased approximately 520 basis points in 2024 compared with 2023,",
+            "position": 167057
+          },
+          {
+            "metric": "market share",
+            "context": "market share, sales volumes and prices, costs and expenses,",
+            "position": 256750
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income$1,633 $1,203 $919 Segment provision for depreciation and amortization270 262 258 Unallocated amounts:Restructuring and other charges21 23 56 Corporate expense85 99 119 Total Segment A",
+            "position": 174595
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income$1,633 $1,203 $919 Loss on debt redemption(6)(2)(2)Interest expense, net(182)(218)(229)Other expense, net (F)(62)(8)(82)Income before income taxes$1,383 $975 $606 December 31,20242023A",
+            "position": 266775
+          },
+          {
+            "metric": "net income",
+            "context": "Net income of $1,155, or $2.81",
+            "position": 141745
+          },
+          {
+            "metric": "net income",
+            "context": "Net income was $1,155, or $2.81",
+            "position": 158671
+          },
+          {
+            "metric": "net income",
+            "context": "Net income was $765, or $1.83",
+            "position": 159236
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $17 (after-tax) was recorded in other comprehensive loss, primarily due to the increase in the discount rate,",
+            "position": 206827
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $146 (after-tax) was recorded in other comprehensive loss, primarily due to the increase in the discount rate and amortization of actuarial losses,",
+            "position": 207160
+          },
+          {
+            "metric": "assets",
+            "context": "assets or earnings; (ii) geopolitical risks such as political instability, civil unrest, expropriation, nationalization of properties by a government, imposition of sanctions, and renegotiation or nul",
+            "position": 106730
+          },
+          {
+            "metric": "assets",
+            "context": "Assets Control; (v) aggressive, selective or lax enforcement of laws and regulations by foreign governmental authorities; (vi) exposure to fluctuations in foreign currency exchange rates and interest ",
+            "position": 107508
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 109720
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities,",
+            "position": 110733
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities, the results of tax audits,",
+            "position": 118430
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 110744
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, the results of tax audits,",
+            "position": 118441
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities relating to injury, death,",
+            "position": 121463
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of $26, and lower pension contributions of $7, partially offset by higher working capital of $163",
+            "position": 178287
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities18Item 6",
+            "position": 50260
+          },
+          {
+            "metric": "equity",
+            "context": "Equity SecuritiesThe following table presents information with respect to the Company’s open-market repurchases of its common stock during the quarter ended December 31, 2024:PeriodTotal Number of Sha",
+            "position": 135588
+          },
+          {
+            "metric": "equity",
+            "context": "equity awards of $49, and debt issuance costs for the 2031 Notes of $5, partially offset by proceeds from the 2031 Notes debt issuance of $500 and the exercise of employee stock options of $8",
+            "position": 179134
+          },
+          {
+            "metric": "equity",
+            "context": "equity awards of $77, and dividends paid to shareholders of $73",
+            "position": 179685
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities in either the open market or through privately negotiated transactions,",
+            "position": 182663
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$1.00 ",
+            "position": 49169
+          },
+          {
+            "text": "$3.75 ",
+            "position": 49210
+          },
+          {
+            "text": "$100.00 ",
+            "position": 49254
+          },
+          {
+            "text": "$100 ",
+            "position": 133388
+          },
+          {
+            "text": "$121.11 ",
+            "position": 134044
+          },
+          {
+            "text": "$135.24 ",
+            "position": 134052
+          },
+          {
+            "text": "$167.93 ",
+            "position": 134060
+          },
+          {
+            "text": "$231.48 ",
+            "position": 134068
+          },
+          {
+            "text": "$469.20 ",
+            "position": 134076
+          },
+          {
+            "text": "$216.21 ",
+            "position": 135309
+          },
+          {
+            "text": "$241.44 ",
+            "position": 135317
+          },
+          {
+            "text": "$299.80 ",
+            "position": 135325
+          },
+          {
+            "text": "$413.25 ",
+            "position": 135333
+          },
+          {
+            "text": "$837.65 ",
+            "position": 135341
+          },
+          {
+            "text": "$103.15 ",
+            "position": 136052
+          },
+          {
+            "text": "$2,297 ",
+            "position": 136068
+          },
+          {
+            "text": "$116.46 ",
+            "position": 136113
+          },
+          {
+            "text": "$2,252 ",
+            "position": 136129
+          },
+          {
+            "text": "$116.45 ",
+            "position": 136174
+          },
+          {
+            "text": "$2,197 ",
+            "position": 136190
+          },
+          {
+            "text": "$109.75 ",
+            "position": 136248
+          },
+          {
+            "text": "$50 million",
+            "position": 136418
+          },
+          {
+            "text": "$116.39",
+            "position": 136502
+          },
+          {
+            "text": "$2,147 million",
+            "position": 136572
+          },
+          {
+            "text": "$1,500 million",
+            "position": 136764
+          },
+          {
+            "text": "$2,000 million",
+            "position": 136816
+          },
+          {
+            "text": "$7,430, ",
+            "position": 141528
+          },
+          {
+            "text": "$1,155, ",
+            "position": 141759
+          },
+          {
+            "text": "$2.81 ",
+            "position": 141770
+          },
+          {
+            "text": "$1,383, ",
+            "position": 141825
+          },
+          {
+            "text": "$408, ",
+            "position": 141848
+          },
+          {
+            "text": "$2,009, ",
+            "position": 141909
+          },
+          {
+            "text": "$422, ",
+            "position": 141932
+          },
+          {
+            "text": "$565",
+            "position": 142016
+          },
+          {
+            "text": "$1,298",
+            "position": 142055
+          },
+          {
+            "text": "$1,026",
+            "position": 142101
+          },
+          {
+            "text": "$316",
+            "position": 142151
+          },
+          {
+            "text": "$500",
+            "position": 142283
+          },
+          {
+            "text": "$3,315, ",
+            "position": 142322
+          },
+          {
+            "text": "$391 ",
+            "position": 142348
+          },
+          {
+            "text": "$600 ",
+            "position": 142405
+          },
+          {
+            "text": "$205 ",
+            "position": 142504
+          },
+          {
+            "text": "$60 ",
+            "position": 142621
+          },
+          {
+            "text": "$500 ",
+            "position": 142710
+          },
+          {
+            "text": "$109.37 ",
+            "position": 142977
+          },
+          {
+            "text": "$96.17 ",
+            "position": 143035
+          },
+          {
+            "text": "$7,430 ",
+            "position": 144304
+          },
+          {
+            "text": "$6,640 ",
+            "position": 144325
+          },
+          {
+            "text": "$790, ",
+            "position": 144356
+          },
+          {
+            "text": "$5,663 ",
+            "position": 144760
+          }
+        ],
+        "percentages": [
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 57426
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 57434
+          },
+          {
+            "text": "68%",
+            "value": 68.0,
+            "position": 59013
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 59465
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 59970
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 60655
+          },
+          {
+            "text": "59%",
+            "value": 59.0,
+            "position": 62943
+          },
+          {
+            "text": "52 %",
+            "value": 52.0,
+            "position": 63674
+          },
+          {
+            "text": "49 %",
+            "value": 49.0,
+            "position": 63678
+          },
+          {
+            "text": "46 %",
+            "value": 46.0,
+            "position": 63682
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 63705
+          },
+          {
+            "text": "15 %",
+            "value": 15.0,
+            "position": 63709
+          },
+          {
+            "text": "17 %",
+            "value": 17.0,
+            "position": 63742
+          },
+          {
+            "text": "21 %",
+            "value": 21.0,
+            "position": 63746
+          },
+          {
+            "text": "23 %",
+            "value": 23.0,
+            "position": 63750
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 63861
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 63901
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 63938
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 64255
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 139149
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 140464
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 140845
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 140903
+          },
+          {
+            "text": "6.875%",
+            "value": 6.875,
+            "position": 142444
+          },
+          {
+            "text": "5.125%",
+            "value": 5.125,
+            "position": 142543
+          },
+          {
+            "text": "4.850%",
+            "value": 4.85,
+            "position": 142749
+          },
+          {
+            "text": "729%",
+            "value": 729.0,
+            "position": 143056
+          },
+          {
+            "text": "138%",
+            "value": 138.0,
+            "position": 143153
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 143185
+          },
+          {
+            "text": "68.9%",
+            "value": 68.9,
+            "position": 145182
+          },
+          {
+            "text": "71.9%",
+            "value": 71.9,
+            "position": 145210
+          },
+          {
+            "text": "72.5%",
+            "value": 72.5,
+            "position": 146414
+          },
+          {
+            "text": "4.7%",
+            "value": 4.7,
+            "position": 147459
+          },
+          {
+            "text": "5.0%",
+            "value": 5.0,
+            "position": 147505
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 147561
+          },
+          {
+            "text": "5.1%",
+            "value": 5.1,
+            "position": 147684
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 147740
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 147947
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 148098
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 148340
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 148519
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 151115
+          },
+          {
+            "text": "200%",
+            "value": 200.0,
+            "position": 151890
+          },
+          {
+            "text": "16.5%",
+            "value": 16.5,
+            "position": 154177
+          },
+          {
+            "text": "20.5%",
+            "value": 20.5,
+            "position": 156073
+          },
+          {
+            "text": "21.5%",
+            "value": 21.5,
+            "position": 156083
+          },
+          {
+            "text": "22.6%",
+            "value": 22.6,
+            "position": 157225
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 158149
+          },
+          {
+            "text": "51%",
+            "value": 51.0,
+            "position": 158822
+          },
+          {
+            "text": "63%",
+            "value": 63.0,
+            "position": 159385
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 170
+          },
+          {
+            "category": "operational_risk",
+            "count": 108
+          },
+          {
+            "category": "financial_risk",
+            "count": 394
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 77
+          },
+          {
+            "category": "technology_risk",
+            "count": 129
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 408081,
+        "filtered_length": 398525,
+        "removed_ratio": 2.34,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.96907216494846,
+      "confidence": 0.6006023559181892,
+      "overall_score": 51.03092783505154,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.876288659793815,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02061855670103091,
+        "risk_adjusted_signal": 0.13867800464962762,
+        "expected_return_annualized": 0.03920312064641958,
+        "signal_sharpe_ratio": 0.0026135413764279717,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.13867800464962762,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.13867800464962762,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.08247422680412371,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.13867800464962762,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02061855670103091
+      },
+      "risk_adjusted_signal": 0.13867800464962762,
+      "expected_return": 0.00039203120646419577,
+      "signal_sharpe": 0.0026135413764279717,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.03092783505154,
+    "confidence": 0.6006023559181892,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:26:04.931027",
+  "filing_date": "2025-02-14",
+  "filing_filename": "2025-02-14-10k-HWM.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -112,7 +112,7 @@ Provide JSON analysis:
   "recommended_monitoring": ["What to monitor going forward"]
 }`;
 
-      const analysis = await base44.integrations.Core.InvokeLLM({
+      const analysis = await api.integrations.Core.InvokeLLM({
         prompt: sentimentPrompt,
         response_json_schema: {
           type: "object",

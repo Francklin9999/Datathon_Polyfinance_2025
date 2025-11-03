@@ -38,6 +38,7 @@ export function createPageUrl(pageName) {
     'TrendsAnalysis': '/trends-analysis',
     'SocialSentiment': '/social-sentiment',
     'RegulatoryImpact': '/regulatory-impact',
+    'MissingElementsSearch': '/missing-elements-search',
   };
   
   return routeMap[pageName] || '/';

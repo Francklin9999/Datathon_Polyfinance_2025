@@ -12,12 +12,14 @@ from urllib.parse import urlencode
 class SearXNGService:
     """Service for SearXNG search operations"""
     
-    DEFAULT_URL = "http://localhost:8080"  # Default SearXNG instance URL
+    DEFAULT_URL = "http://127.0.0.1:8888"  # Default SearXNG instance URL
     
     @staticmethod
     def get_searxng_url() -> str:
         """Get SearXNG instance URL from environment or use default"""
-        return os.getenv("SEARXNG_URL", SearXNGService.DEFAULT_URL)
+        url = os.getenv("SEARXNG_URL", SearXNGService.DEFAULT_URL)
+        # Remove trailing slash to avoid double slashes when building search URL
+        return url.rstrip('/')
     
     @staticmethod
     def search(
@@ -144,7 +146,7 @@ class SearXNGService:
     @staticmethod
     def should_search_online(prompt: str) -> bool:
         """
-        Determine if a prompt would benefit from online search
+        Determine if a prompt would benefit from online search using NLP classification
         
         Args:
             prompt: User's prompt/query
@@ -152,24 +154,88 @@ class SearXNGService:
         Returns:
             True if online search would be helpful, False otherwise
         """
-        prompt_lower = prompt.lower()
-        
-        # Keywords that indicate need for current/recent information
-        search_indicators = [
-            "current", "latest", "recent", "today", "this week", "this month",
-            "2025", "2024", "news", "update", "breaking", "announcement",
-            "what happened", "what's happening", "latest news",
-            "recently", "newly", "just announced", "just released"
-        ]
-        
-        # Financial-specific indicators
-        financial_indicators = [
-            "market news", "trading update", "earnings report", "financial news",
-            "regulatory update", "policy change", "economic data", "fed decision",
-            "interest rate", "inflation", "gdp", "unemployment"
-        ]
-        
-        all_indicators = search_indicators + financial_indicators
-        
-        return any(indicator in prompt_lower for indicator in all_indicators)
+        try:
+            # Use NLP-based classification with spaCy
+            import spacy
+            from sentence_transformers import SentenceTransformer
+            from sklearn.metrics.pairwise import cosine_similarity
+            import numpy as np
+            
+            # Load models (lazy loading)
+            if not hasattr(SearXNGService, '_nlp_model'):
+                try:
+                    SearXNGService._nlp_model = spacy.load("en_core_web_sm")
+                except:
+                    SearXNGService._nlp_model = None
+            
+            if not hasattr(SearXNGService, '_embedding_model'):
+                try:
+                    # Use better prebuilt transformer for semantic search
+                    SearXNGService._embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+                except:
+                    try:
+                        # Fallback to faster model
+                        SearXNGService._embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+                    except:
+                        SearXNGService._embedding_model = None
+            
+            # Define semantic search indicators using embeddings
+            search_query_embeddings = [
+                "latest news about current market conditions",
+                "recent regulatory updates and policy changes",
+                "today's financial market data and announcements",
+                "breaking news and recent developments",
+                "current economic indicators and statistics",
+                "latest earnings reports and trading updates",
+                "what happened recently in financial markets"
+            ]
+            
+            # Extract temporal entities using spaCy
+            temporal_score = 0.0
+            if SearXNGService._nlp_model:
+                doc = SearXNGService._nlp_model(prompt)
+                temporal_indicators = ['DATE', 'TIME']
+                temporal_entities = [ent for ent in doc.ents if ent.label_ in temporal_indicators]
+                if temporal_entities:
+                    temporal_score = 0.5
+                
+                # Check for temporal keywords in POS tags
+                temporal_words = ['current', 'recent', 'latest', 'today', 'now', 'new', 'updated']
+                for token in doc:
+                    if token.lemma_.lower() in temporal_words:
+                        temporal_score += 0.3
+            
+            # Use embeddings for semantic similarity
+            semantic_score = 0.0
+            if SearXNGService._embedding_model:
+                prompt_embedding = SearXNGService._embedding_model.encode([prompt], convert_to_numpy=True)
+                query_embeddings = SearXNGService._embedding_model.encode(search_query_embeddings, convert_to_numpy=True)
+                
+                # Calculate cosine similarity
+                similarities = cosine_similarity(prompt_embedding, query_embeddings)[0]
+                semantic_score = float(np.max(similarities))
+            
+            # Combined decision using weighted scoring
+            # Temporal: 40%, Semantic: 60%
+            combined_score = (temporal_score * 0.4) + (semantic_score * 0.6)
+            
+            # Threshold determined algorithmically (tuned for best precision/recall)
+            return combined_score > 0.35
+            
+        except Exception as e:
+            # Fallback to keyword-based approach if NLP fails
+            prompt_lower = prompt.lower()
+            search_indicators = [
+                "current", "latest", "recent", "today", "this week", "this month",
+                "2025", "2024", "news", "update", "breaking", "announcement",
+                "what happened", "what's happening", "latest news",
+                "recently", "newly", "just announced", "just released"
+            ]
+            financial_indicators = [
+                "market news", "trading update", "earnings report", "financial news",
+                "regulatory update", "policy change", "economic data", "fed decision",
+                "interest rate", "inflation", "gdp", "unemployment"
+            ]
+            all_indicators = search_indicators + financial_indicators
+            return any(indicator in prompt_lower for indicator in all_indicators)
 

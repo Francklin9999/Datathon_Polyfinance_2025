@@ -1,0 +1,859 @@
+{
+  "ticker": "ELV",
+  "analysis": {
+    "ticker": "ELV",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 36.701337295690934,
+        "financial_sentiment": -0.08163265306122448,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "FORWARD-LOOKING STATEMENTSThis document contains certain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 86136
+        },
+        {
+          "statement": "FORWARD-LOOKING STATEMENTSThis document contains certain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 86193
+        },
+        {
+          "statement": "Forward-looking statements reflect our views about future events and financial performance and are generally not historical facts.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 86296
+        },
+        {
+          "statement": "intend,” “estimate,” “project,” “forecast,” “plan” and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 86610
+        },
+        {
+          "statement": "and expectations with respect to future operations, products and services; and statements regarding future performance.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 86897
+        },
+        {
+          "statement": "nerally beyond our control, that could cause You are cautioned not to place undue reliance on these forward-looking statements that speak only as of the date hereof.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 87126
+        },
+        {
+          "statement": "Except to the extent required by law, we do not update or revise any forward-looking statements to reflect events or circumstances occurring after the date hereof.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 87536
+        },
+        {
+          "statement": "We believe healthcare is local and that we have the strong local presence required to understand and meet local customer needs with regard to any product customers are enrolled in with us.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 95333
+        },
+        {
+          "statement": "Ultimately, we believe that practical and sustainable improvements in healthcare must focus on improving healthcare quality while managing costs for total affordability.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 96075
+        },
+        {
+          "statement": "We believe focusing on quality of care rather than volume of care is the foundation for improving patient outcomes.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 96624
+        },
+        {
+          "statement": "We believe our market position and high business retention rates will enable us to realize the long-term benefits of investing in preventive and early detection programs.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 99059
+        },
+        {
+          "statement": "Our future results of operations will be impacted by certain external forces and resulting changes in our business model and strategy.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 99582
+        },
+        {
+          "statement": "We believe that one of the keys to our success has been our focus on these distinct customer types, which better enables us to develop benefit plans and services that meet our customers’ unique needs.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 106367
+        },
+        {
+          "statement": "We anticipate growth in our Public Exchange membership as former Medicaid members, no longer eligible for Medicaid coverage, continue to seek alternative coverage options.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 107585
+        },
+        {
+          "statement": "ly necessary for members and often providing professional care coordination services, with personal guidance and programs that help members maintain their health.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 116165
+        },
+        {
+          "statement": "We believe that our pricing and bid strategy, brand name and network quality will provide a strong foundation for membership growth opportunities in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 124735
+        },
+        {
+          "statement": "We believe that we have good relationships with our agents and brokers, and that our products, support services and commission structure compare favorably to those of our competitors in all of our markets.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 126093
+        },
+        {
+          "statement": ", network and clinical care program selection combined with administrative expense, risk and profit guidance to set market competitive pricing discounts and rebate projections.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 128955
+        },
+        {
+          "statement": "We establish “market-based” hospital reimbursement payments that we believe are fair, but aggressive, and among the most competitive in the market.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 129793
+        },
+        {
+          "statement": "We believe that we and our licensed affiliates are currently in compliance with these standards.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 147949
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue received from participation therein; a negative change in our healthcare product mix; costs and other liabilities associated with litigation, government investigations, audits or reviews; our ",
+            "position": 89266
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue seasonality for services covered,",
+            "position": 135096
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, as defined by the BCBSA, attributable to healthcare plans and related services within its service areas must be sold, marketed,",
+            "position": 146674
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and medical membership, respectively, were subject to the minimum MLR regulations as of and for the year ended December 31, 2024",
+            "position": 159973
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and medical membership, respectively, were subject to the minimum MLR regulations as of and for the year ended December 31, 2023",
+            "position": 160156
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, including through the increased sale of our pharmacy services, both integrated and external, other healthcare services and products, and specialty products, such as stop loss, dental, vision",
+            "position": 260941
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or cash flow, business opportunities, synergies, growth prospects or other anticipated benefits; •we may assume liabilities that were not disclosed to us, or which were underestimated, and wh",
+            "position": 263319
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share$25.68",
+            "position": 333725
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, taxes,",
+            "position": 357486
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and sales growth, inflation,",
+            "position": 391128
+          },
+          {
+            "metric": "profit",
+            "context": "profit amounts included in our payments to third-party administrative service providers are recorded as benefit expense in our consolidated GAAP financial statements,",
+            "position": 444681
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for the year ended December 31, 2024, was $25.68",
+            "position": 320780
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements within the bids,",
+            "position": 190190
+          },
+          {
+            "metric": "net income",
+            "context": "net income per share through various strategies such as contract diversification, operating expense efficiencies,",
+            "position": 161612
+          },
+          {
+            "metric": "net income",
+            "context": "net income per share resulting from this change through various strategies such as contract diversification, operating expense efficiencies,",
+            "position": 312506
+          },
+          {
+            "metric": "net income",
+            "context": "Net income for the year ended December 31, 2024, was $5,971, a decrease of $20, or 0.3",
+            "position": 320319
+          },
+          {
+            "metric": "net income",
+            "context": "net income was primarily due to a net decrease in our operating gain in our reportable segments and higher income tax expense, partially offset by increased net investment income,",
+            "position": 320463
+          },
+          {
+            "metric": "net income",
+            "context": "net income$5,980 $5,987 $5,894 $(7)(0.1",
+            "position": 333579
+          },
+          {
+            "metric": "assets",
+            "context": "Assets, Risks & Experiences, co-creating social action plans with our members, connecting members to related social support services,",
+            "position": 143483
+          },
+          {
+            "metric": "assets",
+            "context": "assets, guarantees and other transactions between the regulated companies and their affiliates,",
+            "position": 156218
+          },
+          {
+            "metric": "assets",
+            "context": "assets for purposes of measuring statutory surplus and risk-based capital, and in some instances,",
+            "position": 269925
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 270935
+          },
+          {
+            "metric": "assets",
+            "context": "assets, representing 34.5",
+            "position": 272930
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities associated with litigation, government investigations, audits or reviews; our ability to contract with providers on cost-effective and competitive terms; risks associated with providing he",
+            "position": 89376
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities that may result from these actions could have a material adverse effect on our cash flows,",
+            "position": 241309
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and damages may not be covered by the insurance we carry, insurers may dispute coverage,",
+            "position": 241863
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, or if such insurance is not available, the resulting costs could adversely affect our business, cash flows,",
+            "position": 243865
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and reputational harm related to clinical quality, patient safety, infusion center operations, and other risks inherent in the dispensing, packaging and distribution of drugs,",
+            "position": 246707
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of As of February 1, 2025, 227,351,871 shares of DOCUMENTS INCORPORATED BY REFERENCEof this Annual Report on incorporates by reference information from Elevance Health,",
+            "position": 84321
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES41ITEM 6",
+            "position": 84806
+          },
+          {
+            "metric": "equity",
+            "context": "equity,",
+            "position": 91721
+          },
+          {
+            "metric": "equity",
+            "context": "equity has been recognized by the National Committee for Quality Assurance (“NCQA”), the largest and most respected national accreditation program for managed care health plans, and our company was aw",
+            "position": 140472
+          },
+          {
+            "metric": "equity",
+            "context": "equity, partnering to design an annual pay equity action plan that includes a perpetual review of all positions,",
+            "position": 177506
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01",
+            "position": 83828
+          },
+          {
+            "text": "$183 million",
+            "position": 161471
+          },
+          {
+            "text": "$98.33 ",
+            "position": 252881
+          },
+          {
+            "text": "$3 billion",
+            "position": 253093
+          },
+          {
+            "text": "$40.4 billion",
+            "position": 272883
+          },
+          {
+            "text": "$0.01 ",
+            "position": 285857
+          },
+          {
+            "text": "$10,774 ",
+            "position": 286805
+          },
+          {
+            "text": "$2,900 ",
+            "position": 287619
+          },
+          {
+            "text": "$8,000 ",
+            "position": 287836
+          },
+          {
+            "text": "$100 ",
+            "position": 288538
+          },
+          {
+            "text": "$108 ",
+            "position": 289465
+          },
+          {
+            "text": "$157 ",
+            "position": 289470
+          },
+          {
+            "text": "$176 ",
+            "position": 289475
+          },
+          {
+            "text": "$164 ",
+            "position": 289480
+          },
+          {
+            "text": "$130 ",
+            "position": 289485
+          },
+          {
+            "text": "$2,580 ",
+            "position": 313989
+          },
+          {
+            "text": "$300 ",
+            "position": 314635
+          },
+          {
+            "text": "$201 ",
+            "position": 316304
+          },
+          {
+            "text": "$604, ",
+            "position": 317789
+          },
+          {
+            "text": "$666, ",
+            "position": 318693
+          },
+          {
+            "text": "$666 ",
+            "position": 319049
+          },
+          {
+            "text": "$175,204, ",
+            "position": 319922
+          },
+          {
+            "text": "$4,995, ",
+            "position": 319947
+          },
+          {
+            "text": "$5,971, ",
+            "position": 320372
+          },
+          {
+            "text": "$20, ",
+            "position": 320394
+          },
+          {
+            "text": "$25.68",
+            "position": 320826
+          },
+          {
+            "text": "$0.46",
+            "position": 320849
+          },
+          {
+            "text": "$5,808, ",
+            "position": 321176
+          },
+          {
+            "text": "$8,061, ",
+            "position": 321284
+          },
+          {
+            "text": "$175,204 ",
+            "position": 332725
+          },
+          {
+            "text": "$170,209 ",
+            "position": 332734
+          },
+          {
+            "text": "$155,660 ",
+            "position": 332743
+          },
+          {
+            "text": "$4,995 ",
+            "position": 332752
+          },
+          {
+            "text": "$14,549 ",
+            "position": 332764
+          },
+          {
+            "text": "$5,980 ",
+            "position": 333589
+          },
+          {
+            "text": "$5,987 ",
+            "position": 333596
+          },
+          {
+            "text": "$5,894 ",
+            "position": 333603
+          },
+          {
+            "text": "$93 ",
+            "position": 333620
+          },
+          {
+            "text": "$25.68 ",
+            "position": 333743
+          },
+          {
+            "text": "$25.22 ",
+            "position": 333750
+          },
+          {
+            "text": "$24.28 ",
+            "position": 333757
+          },
+          {
+            "text": "$0.46 ",
+            "position": 333764
+          },
+          {
+            "text": "$0.94 ",
+            "position": 333775
+          },
+          {
+            "text": "$144,166, ",
+            "position": 334493
+          },
+          {
+            "text": "$142,854 ",
+            "position": 334503
+          },
+          {
+            "text": "$133,229, ",
+            "position": 334516
+          },
+          {
+            "text": "$150,275",
+            "position": 337783
+          },
+          {
+            "text": "$148,571",
+            "position": 337791
+          },
+          {
+            "text": "$138,484",
+            "position": 337799
+          },
+          {
+            "text": "$1,704 ",
+            "position": 337807
+          }
+        ],
+        "percentages": [
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 101922
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 101927
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 101935
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 114175
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 146563
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 156738
+          },
+          {
+            "text": "54.2%",
+            "value": 54.2,
+            "position": 159942
+          },
+          {
+            "text": "18.4%",
+            "value": 18.4,
+            "position": 159952
+          },
+          {
+            "text": "52.3%",
+            "value": 52.3,
+            "position": 160125
+          },
+          {
+            "text": "18.0%",
+            "value": 18.0,
+            "position": 160135
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 160883
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 161038
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 161286
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 176022
+          },
+          {
+            "text": "99.2%",
+            "value": 99.2,
+            "position": 178195
+          },
+          {
+            "text": "99.8%",
+            "value": 99.8,
+            "position": 178240
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 255629
+          },
+          {
+            "text": "34.5%",
+            "value": 34.5,
+            "position": 272951
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 314062
+          },
+          {
+            "text": "2.3%",
+            "value": 2.3,
+            "position": 319485
+          },
+          {
+            "text": "2.9%",
+            "value": 2.9,
+            "position": 319958
+          },
+          {
+            "text": "0.3%",
+            "value": 0.3,
+            "position": 320402
+          },
+          {
+            "text": "1.8%",
+            "value": 1.8,
+            "position": 320859
+          },
+          {
+            "text": "1.9%",
+            "value": 1.9,
+            "position": 320994
+          },
+          {
+            "text": "2.8%",
+            "value": 2.8,
+            "position": 322875
+          },
+          {
+            "text": "2.2%",
+            "value": 2.2,
+            "position": 322881
+          },
+          {
+            "text": "1.7%",
+            "value": 1.7,
+            "position": 322890
+          },
+          {
+            "text": "8.1%",
+            "value": 8.1,
+            "position": 324179
+          },
+          {
+            "text": "8.0%",
+            "value": 8.0,
+            "position": 324185
+          },
+          {
+            "text": "8.4%",
+            "value": 8.4,
+            "position": 324194
+          },
+          {
+            "text": "45.0%",
+            "value": 45.0,
+            "position": 324800
+          },
+          {
+            "text": "43.2%",
+            "value": 43.2,
+            "position": 324807
+          },
+          {
+            "text": "42.4%",
+            "value": 42.4,
+            "position": 324817
+          },
+          {
+            "text": "14.5%",
+            "value": 14.5,
+            "position": 325917
+          },
+          {
+            "text": "14.3%",
+            "value": 14.3,
+            "position": 325924
+          },
+          {
+            "text": "13.8%",
+            "value": 13.8,
+            "position": 325934
+          },
+          {
+            "text": "6.5%",
+            "value": 6.5,
+            "position": 327952
+          },
+          {
+            "text": "6.3%",
+            "value": 6.3,
+            "position": 327958
+          },
+          {
+            "text": "6.1%",
+            "value": 6.1,
+            "position": 327967
+          },
+          {
+            "text": "19.5%",
+            "value": 19.5,
+            "position": 328634
+          },
+          {
+            "text": "22.4%",
+            "value": 22.4,
+            "position": 328641
+          },
+          {
+            "text": "24.3%",
+            "value": 24.3,
+            "position": 328651
+          },
+          {
+            "text": "3.6%",
+            "value": 3.6,
+            "position": 328903
+          },
+          {
+            "text": "3.5%",
+            "value": 3.5,
+            "position": 328909
+          },
+          {
+            "text": "3.4%",
+            "value": 3.4,
+            "position": 328918
+          },
+          {
+            "text": "25.6 %",
+            "value": 25.6,
+            "position": 329945
+          },
+          {
+            "text": "29.9 %",
+            "value": 29.9,
+            "position": 329955
+          },
+          {
+            "text": "4.6 %",
+            "value": 4.6,
+            "position": 330068
+          },
+          {
+            "text": "0.1 %",
+            "value": 0.1,
+            "position": 330075
+          },
+          {
+            "text": "2.3 %",
+            "value": 2.3,
+            "position": 330122
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 199
+          },
+          {
+            "category": "operational_risk",
+            "count": 18
+          },
+          {
+            "category": "financial_risk",
+            "count": 661
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 158
+          },
+          {
+            "category": "technology_risk",
+            "count": 288
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 659521,
+        "filtered_length": 651880,
+        "removed_ratio": 1.16,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.95201323772752,
+      "confidence": 0.6105484124950316,
+      "overall_score": 51.04798676227248,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.91836734693877,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02095973524544953,
+        "risk_adjusted_signal": 0.1409727316984357,
+        "expected_return_annualized": 0.039851820932902,
+        "signal_sharpe_ratio": 0.0026567880621934667,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.1409727316984357,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.1409727316984357,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.08163265306122448,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.1409727316984357,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02095973524544953
+      },
+      "risk_adjusted_signal": 0.1409727316984357,
+      "expected_return": 0.00039851820932902,
+      "signal_sharpe": 0.0026567880621934667,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.04798676227248,
+    "confidence": 0.6105484124950316,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:23:28.212979",
+  "filing_date": "2025-02-20",
+  "filing_filename": "2025-02-20-10k-ELV.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

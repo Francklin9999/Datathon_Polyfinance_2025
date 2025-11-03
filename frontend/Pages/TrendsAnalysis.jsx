@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -151,7 +151,7 @@ Provide JSON analysis:
   "recommended_actions": ["List 3-4 concrete actions"]
 }`;
 
-        const insights = await base44.integrations.Core.InvokeLLM({
+        const insights = await api.integrations.Core.InvokeLLM({
           prompt: insightsPrompt,
           response_json_schema: {
             type: "object",

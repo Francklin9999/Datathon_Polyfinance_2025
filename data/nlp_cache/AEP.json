@@ -1,0 +1,909 @@
+{
+  "ticker": "AEP",
+  "analysis": {
+    "ticker": "AEP",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 33.533293341331735,
+        "financial_sentiment": 0.020618556701030927,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "vFORWARD-LOOKING INFORMATIONThis report made by These matters are subject to risks and uncertainties that could cause Forward-looking statements in this document are presented as of the date of this document.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 533129
+        },
+        {
+          "statement": "NFORMATIONThis report made by These matters are subject to risks and uncertainties that could cause Forward-looking statements in this document are presented as of the date of this document.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 533246
+        },
+        {
+          "statement": "the extent required by applicable law, management undertakes no obligation to update or revise any forward-looking statement.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 533446
+        },
+        {
+          "statement": "The forward-looking statements of For a more detailed discussion of these factors, see “Risk Factors” in of this report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 539204
+        },
+        {
+          "statement": "AEP is unable to predict changes in regulations, regulatory guidance, legal interpretations, policy positions and implementation actions that may result from the change in Presidential administrations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 549110
+        },
+        {
+          "statement": "6Culture and InclusionAt AEP, we believe in doing the right thing every time for our customers and each other and that culture serves as the foundation for our success.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 561616
+        },
+        {
+          "statement": "Transmission Joint Ventures located outside of ERCOT establish transmission rates annually through forward-looking formula rate filings with the FERC pursuant to FERC-approved implementation protocols.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 605733
+        },
+        {
+          "statement": "ty may limit AEP’s ability to pursue improvements or acquisitions that it may otherwise rely on for future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 646757
+        },
+        {
+          "statement": "As a result, as those transactions are marked-to-market, they may impact future results of operations and cash flows and impact financial condition.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 660305
+        },
+        {
+          "statement": "e course or outcome of these or any future litigation or investigations or their impact, if any, on future results of operations, financial condition and cash flows.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 669854
+        },
+        {
+          "statement": "Past performance is no guarantee of future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 707430
+        },
+        {
+          "statement": "AEP is unable to predict changes in regulations, regulatory guidance, legal interpretations, policy positions and implementation actions that may result from the change in Presidential administrations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 757421
+        },
+        {
+          "statement": "retired generation facility and recognition of a regulatory asset in accordance with the accounting guidance for “Regulated Operations” is supported.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 775941
+        },
+        {
+          "statement": "ment or CCR management unit and recognition of a regulatory asset in accordance with the accounting guidance for “Regulated Operations” is not yet supported.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 776139
+        },
+        {
+          "statement": "long-lived assets in accordance with the requirements of “Property, Plant and Equipment” accounting guidance, the fair value of the asset can vary if different estimates and assumptions are used in the applied valuation techniques.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 847844
+        },
+        {
+          "statement": "urement date exceed the corridor in accordance with “Compensation – Retirement Benefits” accounting guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 852855
+        },
+        {
+          "statement": "These benefits are accounted for under “Compensation” and “Plan Accounting” accounting guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 855032
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 873087
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audits to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 904673
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 905820
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, including a reduction in the corporate federal income tax rate from 35% to 21% effective January 1, 2018",
+            "position": 531493
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from the following sources: Retail Revenues, Wholesale and Competitive Retail Revenues,",
+            "position": 546118
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirements, including prior year over/under-recovery of revenue and associated carrying charges were $1.9",
+            "position": 607980
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirements,",
+            "position": 622425
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue reductions, including refunds, in any future cases related to its formula rates,",
+            "position": 623701
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings exceed the returns established by the relevant commissions, retail electric rates may be subject to review and possible reduction by the commissions,",
+            "position": 616572
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows of their operating subsidiaries, primarily their regulated utilities,",
+            "position": 649274
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 673745
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Attributable to AEP Common Shareholders increased from $2.2",
+            "position": 714225
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (loss) attributable to AEP common shareholders for the year ended December 31, 2024 as compared to the year ended December 31, 2023",
+            "position": 783882
+          },
+          {
+            "metric": "profit",
+            "context": "profit levels, operating cash flow levels and capital requirements,",
+            "position": 823861
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss, (b) the amounts and a qualitative description of “other segment items”, defined as the difference between reported segment revenues less the significant segment expenses and each repor",
+            "position": 1122482
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS is calculated by adjusting the weighted-average outstanding common shares,",
+            "position": 1117445
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS calculations included on the statements of income:Years Ended December 31,202420232022(in millions, except per-share data)$/share$/share$/shareEarnings Attributable to AEP Common Shareholders$2,96",
+            "position": 1117638
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE, and may not include other, less significant,",
+            "position": 544962
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE to 9.85",
+            "position": 545249
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 10.02",
+            "position": 603289
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE for MISO Transmission Owners to 9.98",
+            "position": 603418
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE represents the weighted-average approved ROE based on the costs of two projects developed by Transource Missouri; the $64 million Iatan-Nashua project (10.3",
+            "position": 603521
+          },
+          {
+            "metric": "margin",
+            "context": "Margin Deposits(1.4",
+            "position": 960857
+          },
+          {
+            "metric": "margin",
+            "context": "Margin Sharing - Indiana2.0",
+            "position": 1218202
+          },
+          {
+            "metric": "margin",
+            "context": "margin resulting from generation sales within the Vertically Integrated Utilities segment are primarily subject to margin sharing agreements with customers and vary by state,",
+            "position": 1491382
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income for the May 2024",
+            "position": 1150696
+          },
+          {
+            "metric": "operating income",
+            "context": "OPERATING INCOME (LOSS)(39.7",
+            "position": 1516413
+          },
+          {
+            "metric": "net income",
+            "context": "net income and negatively impact financial condition, especially if emission limits, CCR waste discharge and/or discharge disposal obligations are tightened,",
+            "position": 675649
+          },
+          {
+            "metric": "net income",
+            "context": "net income in the first quarter of 2024 as shown in the table below:45CompanyIncrease in Pretax Income from the Recognition of Regulatory AssetsReduction in Income Tax Expense (a)Increase in Net Incom",
+            "position": 719615
+          },
+          {
+            "metric": "net income",
+            "context": "net income,",
+            "position": 776966
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Attributable to Noncontrolling Interests(1.0",
+            "position": 795567
+          },
+          {
+            "metric": "assets",
+            "context": "assets, subsidiaries and tax credits and anticipated securitizations do not materialize or do not materialize at the level anticipated,",
+            "position": 534379
+          },
+          {
+            "metric": "assets",
+            "context": "assets owned and operated by AEGCo, APCo, I&M, KGPCo, KPCo, PSO,",
+            "position": 566268
+          },
+          {
+            "metric": "assets",
+            "context": "assets of the AEP vertically integrated public utility subsidiaries are subject to the rules, principles, protocols and agreements in place with PJM and SPP,",
+            "position": 580648
+          },
+          {
+            "metric": "assets",
+            "context": "assets of the AEP transmission and distribution utility subsidiaries are subject to the rules, protocols and agreements in place with PJM and ERCOT,",
+            "position": 595595
+          },
+          {
+            "metric": "assets",
+            "context": "Assets of the State Transcos interconnect to transmission facilities owned by the aforementioned operating companies and nonaffiliated transmission owners within the footprints of PJM,",
+            "position": 600132
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, could increase pension and other postretirement expense,",
+            "position": 652343
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities may not be insurable or the amount of insurance carried may not be sufficient to meet potential losses and liabilities,",
+            "position": 705659
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and recorded favorable impacts to net income in the first quarter of 2024 as shown in the table below:45CompanyIncrease in Pretax Income from the Recognition of Regulatory AssetsReduction ",
+            "position": 719569
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities partially offset by $29",
+            "position": 719999
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities on the balance sheets,",
+            "position": 738888
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Held by Nonaffiliates of 46,757,322,914532,907,715 ($6.50",
+            "position": 515103
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Held by NonaffiliatesAmerican Electric Power Company,",
+            "position": 515639
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities406Reserved417Management’s Discussion and Analysis of Financial Condition and Results of Operations417AQuantitative and Qua",
+            "position": 517670
+          },
+          {
+            "metric": "equity",
+            "context": "Equity UnitsAEP’s Equity Units issued in August 2020 and March 2019",
+            "position": 523843
+          },
+          {
+            "metric": "equity",
+            "context": "Equity (a)ArkansasSWEPCo9.50",
+            "position": 544628
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$6.50 ",
+            "position": 513828
+          },
+          {
+            "text": "$0.01 ",
+            "position": 515201
+          },
+          {
+            "text": "$15 ",
+            "position": 515464
+          },
+          {
+            "text": "$18 ",
+            "position": 515524
+          },
+          {
+            "text": "$100 million",
+            "position": 547689
+          },
+          {
+            "text": "$674 million",
+            "position": 553606
+          },
+          {
+            "text": "$62.05 ",
+            "position": 569718
+          },
+          {
+            "text": "$64.31 ",
+            "position": 569725
+          },
+          {
+            "text": "$56.16 ",
+            "position": 569732
+          },
+          {
+            "text": "$3.05 ",
+            "position": 572091
+          },
+          {
+            "text": "$2.69 ",
+            "position": 572097
+          },
+          {
+            "text": "$6.94 ",
+            "position": 572103
+          },
+          {
+            "text": "$2.4 billion",
+            "position": 573451
+          },
+          {
+            "text": "$7 million",
+            "position": 573498
+          },
+          {
+            "text": "$45 million",
+            "position": 573582
+          },
+          {
+            "text": "$4 billion",
+            "position": 573774
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 573789
+          },
+          {
+            "text": "$16 million",
+            "position": 576314
+          },
+          {
+            "text": "$201 million",
+            "position": 576517
+          },
+          {
+            "text": "$1 billion",
+            "position": 579446
+          },
+          {
+            "text": "$15.4 billion",
+            "position": 601141
+          },
+          {
+            "text": "$4.7 billion",
+            "position": 601254
+          },
+          {
+            "text": "$2.82 billion",
+            "position": 601457
+          },
+          {
+            "text": "$5,000.0 ",
+            "position": 602279
+          },
+          {
+            "text": "$5.0 billion",
+            "position": 603147
+          },
+          {
+            "text": "$64 million",
+            "position": 603643
+          },
+          {
+            "text": "$246 million",
+            "position": 603692
+          },
+          {
+            "text": "$11.4 billion",
+            "position": 607866
+          },
+          {
+            "text": "$10.7 billion",
+            "position": 607881
+          },
+          {
+            "text": "$9.9 billion",
+            "position": 607899
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 608091
+          },
+          {
+            "text": "$1.8 billion",
+            "position": 608105
+          },
+          {
+            "text": "$1.7 billion",
+            "position": 608122
+          },
+          {
+            "text": "$156 million",
+            "position": 611572
+          },
+          {
+            "text": "$153 million",
+            "position": 611806
+          },
+          {
+            "text": "$997 million",
+            "position": 689238
+          },
+          {
+            "text": "$433 million",
+            "position": 689313
+          },
+          {
+            "text": "$11.5 billion",
+            "position": 705061
+          },
+          {
+            "text": "$100 ",
+            "position": 707294
+          },
+          {
+            "text": "$54 billion",
+            "position": 713639
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 714289
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 714313
+          },
+          {
+            "text": "$318 million",
+            "position": 717399
+          },
+          {
+            "text": "$20.2 ",
+            "position": 719832
+          },
+          {
+            "text": "$49.5 ",
+            "position": 719838
+          },
+          {
+            "text": "$69.7 ",
+            "position": 719844
+          },
+          {
+            "text": "$67.7 ",
+            "position": 719900
+          },
+          {
+            "text": "$195.3 ",
+            "position": 719906
+          },
+          {
+            "text": "$263.0 ",
+            "position": 719913
+          },
+          {
+            "text": "$224 million",
+            "position": 719946
+          }
+        ],
+        "percentages": [
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 515541
+          },
+          {
+            "text": "43.47%",
+            "value": 43.47,
+            "position": 528124
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 531583
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 531590
+          },
+          {
+            "text": "73%",
+            "value": 73.0,
+            "position": 532514
+          },
+          {
+            "text": "9.50 %",
+            "value": 9.5,
+            "position": 544652
+          },
+          {
+            "text": "10.35 %",
+            "value": 10.35,
+            "position": 544674
+          },
+          {
+            "text": "10.50 %",
+            "value": 10.5,
+            "position": 544696
+          },
+          {
+            "text": "9.85 %",
+            "value": 9.85,
+            "position": 544713
+          },
+          {
+            "text": "9.75 %",
+            "value": 9.75,
+            "position": 544731
+          },
+          {
+            "text": "9.86 %",
+            "value": 9.86,
+            "position": 544769
+          },
+          {
+            "text": "9.70 %",
+            "value": 9.7,
+            "position": 544783
+          },
+          {
+            "text": "9.76 %",
+            "value": 9.76,
+            "position": 544840
+          },
+          {
+            "text": "9.25 %",
+            "value": 9.25,
+            "position": 544852
+          },
+          {
+            "text": "9.85%",
+            "value": 9.85,
+            "position": 545256
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 559094
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 559151
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 559204
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 559257
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 559308
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 559402
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 559553
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 567087
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 567093
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 567103
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 567129
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 567142
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 567148
+          },
+          {
+            "text": "3.2%",
+            "value": 3.2,
+            "position": 567465
+          },
+          {
+            "text": "12.7%",
+            "value": 12.7,
+            "position": 567739
+          },
+          {
+            "text": "3.5%",
+            "value": 3.5,
+            "position": 568910
+          },
+          {
+            "text": "6.7%",
+            "value": 6.7,
+            "position": 570868
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 577906
+          },
+          {
+            "text": "39.17%",
+            "value": 39.17,
+            "position": 578483
+          },
+          {
+            "text": "4.3%",
+            "value": 4.3,
+            "position": 578504
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 588477
+          },
+          {
+            "text": "19.9%",
+            "value": 19.9,
+            "position": 601404
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 602275
+          },
+          {
+            "text": "9.6 %",
+            "value": 9.6,
+            "position": 602291
+          },
+          {
+            "text": "12.8 %",
+            "value": 12.8,
+            "position": 602362
+          },
+          {
+            "text": "10.48 %",
+            "value": 10.48,
+            "position": 602430
+          },
+          {
+            "text": "13.5%",
+            "value": 13.5,
+            "position": 602487
+          },
+          {
+            "text": "11.1 %",
+            "value": 11.1,
+            "position": 602503
+          },
+          {
+            "text": "86.5%",
+            "value": 86.5,
+            "position": 602526
+          },
+          {
+            "text": "10.5 %",
+            "value": 10.5,
+            "position": 602584
+          },
+          {
+            "text": "10.4 %",
+            "value": 10.4,
+            "position": 602680
+          },
+          {
+            "text": "10.3 %",
+            "value": 10.3,
+            "position": 602854
+          },
+          {
+            "text": "10.02%",
+            "value": 10.02,
+            "position": 603296
+          },
+          {
+            "text": "10.52%",
+            "value": 10.52,
+            "position": 603304
+          },
+          {
+            "text": "0.5%",
+            "value": 0.5,
+            "position": 603351
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 329
+          },
+          {
+            "category": "operational_risk",
+            "count": 88
+          },
+          {
+            "category": "financial_risk",
+            "count": 1123
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 956
+          },
+          {
+            "category": "technology_risk",
+            "count": 266
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1615009,
+        "filtered_length": 1566909,
+        "removed_ratio": 2.98,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 46.87935358038451,
+      "confidence": 1.819111797005433,
+      "overall_score": 53.12064641961549,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 51.03092783505154,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.06241292839230983,
+        "risk_adjusted_signal": 0.4197820681286029,
+        "expected_return_annualized": 0.11866890574051339,
+        "signal_sharpe_ratio": 0.007911260382700893,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.4197820681286029,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.4197820681286029,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": 0.020618556701030927,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.4197820681286029,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.06241292839230983
+      },
+      "risk_adjusted_signal": 0.4197820681286029,
+      "expected_return": 0.001186689057405134,
+      "signal_sharpe": 0.007911260382700893,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 53.12064641961549,
+    "confidence": 1.819111797005433,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:13:07.516267",
+  "filing_date": "2025-02-13",
+  "filing_filename": "2025-02-13-10k-AEP.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

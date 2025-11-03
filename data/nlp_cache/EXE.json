@@ -1,0 +1,864 @@
+{
+  "ticker": "EXE",
+  "analysis": {
+    "ticker": "EXE",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 55.98052851182197,
+        "financial_sentiment": -0.11538461538461539,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": ",\" \"plan,\" “ability,” \"believe,\" \"seek,\" \"see,\" \"will,\" \"would,\" “estimate,” “forecast,” \"target,\" “guidance,” “outlook,” “opportunity” or “strategy.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 55419
+        },
+        {
+          "statement": "”Although we believe the expectations and forecasts reflected in our forward-looking statements are reasonable, they are inherently subject to numerous risks and uncertainties, most of which are difficult to predict and many of which are beyond our control.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 55537
+        },
+        {
+          "statement": "No assurance can be given that such forward-looking statements will be correct or achieved or that the assumptions are accurate or will not change over time.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 55762
+        },
+        {
+          "statement": "We caution you not to place undue reliance on the forward-looking statements contained in this report, which speak only as of the filing date, and we undertake no obligation and have no intention to update this information, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 61250
+        },
+        {
+          "statement": "All forward-looking statements attributable to us are expressly qualified in their entirety by this cautionary statement.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 61662
+        },
+        {
+          "statement": "On October 1, 2024, we completed the Southwestern Merger, creating a premier energy company that we believe is underpinned by a leading natural gas portfolio adjacent to the highest demand markets, premium inventory, a resilient financial foundation and an investment grade balance sheet.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62836
+        },
+        {
+          "statement": "We believe that we are uniquely positioned to deliver affordable, lower-carbon energy to meet growing domestic and international demand while creating sustainable value for stakeholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 63028
+        },
+        {
+          "statement": "We expect to fulfill these commitments primarily with production from our proved developed reserves.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 84303
+        },
+        {
+          "statement": "We believe that our technological expertise, combined with our exploration, land, drilling and production capabilities and the experience of our management team, enables us to compete effectively.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 86196
+        },
+        {
+          "statement": "We anticipate that compliance with existing laws and regulations governing our current operations will not have a material adverse effect on our capital expenditures, earnings or competitive position.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 86904
+        },
+        {
+          "statement": "We believe we have satisfactory title to substantially all of our active properties in accordance with standards generally accepted in the natural gas and oil industry.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 106829
+        },
+        {
+          "statement": "While we believe these policies are customary in the industry, they do not provide complete coverage against all operating risks, and policy limits scale to our working interest percentage in certain situations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 108729
+        },
+        {
+          "statement": "We believe building a diverse workforce and an equitable, inclusive work culture are key drivers of our long-term success.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 114817
+        },
+        {
+          "statement": "The following is a description of factors that we consider to be material and that might cause our future results to differ materially from those currently expected.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 120369
+        },
+        {
+          "statement": "outhwestern or realize the anticipated benefits of the Southwestern Merger may adversely affect our future results and financial condition.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 125806
+        },
+        {
+          "statement": "We intend to fund our capital expenditures through cash flows from operations, and to the extent that is not sufficient, borrowings under our revolving credit facility.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 139073
+        },
+        {
+          "statement": "onal plans for 2025 and beyond, which could result in changes to projected capital expenditures and projected revenues from sales of natural gas, oil and NGLs.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 139822
+        },
+        {
+          "statement": "We have acquired undeveloped properties that we believe will enhance our growth potential and increase our earnings over time.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 144999
+        },
+        {
+          "statement": "We may choose not to enter into derivatives if we believe the pricing environment for certain time periods is unfavorable.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 149393
+        },
+        {
+          "statement": "As an energy company, we expect to continue to be a target for such attacks in the future from nation-state sponsored foreign actors and other attackers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 164349
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue to be generated from the production of proved reserves, net of estimated production and future development costs, using prices calculated as the average natural gas and oil price during the pr",
+            "position": 48767
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from proved reserves and the associated present value are based upon certain assumptions, including prices,",
+            "position": 60738
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 69203
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, PV-10 nor the standardized measure are intended to represent the current market value of the estimated natural gas,",
+            "position": 69361
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 130362
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and does not impact cash or cash flows from operating activities; however, it reflects our long-term ability to recover an investment,",
+            "position": 138556
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings estimates, or changes in recommendations by equity research analysts;41TABLE OF CONTENTS•failure to achieve the perceived benefits of the acquisitions, including financial results and anticip",
+            "position": 189391
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share may be diluted,",
+            "position": 194244
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing plan (“401(k) Plan”) is the Expand Energy Corporation 401(k) Plan,",
+            "position": 415676
+          },
+          {
+            "metric": "margin",
+            "context": "margin$(20)$1 Marketing revenues and expenses decreased in 2024 compared to 2023 as a result of decreased oil marketing activities, primarily as a result of the Eagle Ford divestitures in 2023",
+            "position": 274186
+          },
+          {
+            "metric": "margin",
+            "context": "margin ranging from 25 to 87.5",
+            "position": 366805
+          },
+          {
+            "metric": "margin",
+            "context": "margin under the Pre-IG Credit Agreement previously ranged from 75 to 175 basis 92TABLE OF CONTENTSEXPAND ENERGY CORPORATION AND SUBSIDIARIESNOTES TO CONSOLIDATED FINANCIAL STATEMENTS – (Continued)poi",
+            "position": 366928
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow” (a non-GAAP measure) means net cash provided by operating activities (GAAP) less cash capital expenditures and contributions to investments,",
+            "position": 42179
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow from the prior quarter less the base quarterly dividend, multiplied by 50",
+            "position": 239216
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow will be distributed as market conditions warrant,",
+            "position": 247883
+          },
+          {
+            "metric": "net income",
+            "context": "net income, excluding various non-cash items, such as depreciation, depletion and amortization, certain impairments, gains or losses on sales of assets,",
+            "position": 261939
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss)(714)2,4194,936Deemed dividend on warrants— — (67)Net income (loss) available to common stockholders$(714)$2,419 $4,869 Earnings (loss) per common share:Basic$(4.55",
+            "position": 308361
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss)$(714)$2,419 $4,936 Adjustments to reconcile net income (loss) to net cash provided by operating activities:Depreciation, depletion and amortization1,729 1,527 1,753 Deferred income t",
+            "position": 308972
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — 4,936 4,936 Dividends on common stock— — — (1,222)(1,222)Deemed dividend on warrants— — — (67)(67)Balance as of December 31, 2022134,715,094 $1 $5,724 $3,399 $9,124 Share-based compens",
+            "position": 311619
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) available to common stockholders$(607)$3,852 Earnings (loss) per common share:Basic$(2.65",
+            "position": 351775
+          },
+          {
+            "metric": "assets",
+            "context": "assets in Wyoming to Continental Resources,",
+            "position": 63484
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 81615
+          },
+          {
+            "metric": "assets",
+            "context": "assets or those of our midstream transportation providers, or file lawsuits or other actions designed to prevent,",
+            "position": 131293
+          },
+          {
+            "metric": "assets",
+            "context": "assets or business, residual liabilities or post-closing claims for indemnification;•any investment, acquisition or disposition will not divert management resources from the operation of our business;",
+            "position": 136571
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities;•our ability to generate profits or achieve targeted results in drilling and well operations;•leasehold terms expiring before production can be established;•risks from our commodity price ",
+            "position": 57008
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, administrative,",
+            "position": 96518
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities could suffer,",
+            "position": 120806
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities;•post-closing purchase price adjustments will be realized in our favor;•our assumptions about, among other things, reserves, estimated production, revenues, capital expenditures, operating",
+            "position": 136244
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities;•restrictions in access to, or disposal of, water used or produced in drilling and completion operations;•shortages or delays in the availability of services or delivery of equipment; and•",
+            "position": 152781
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities53Item 6",
+            "position": 40410
+          },
+          {
+            "metric": "equity",
+            "context": "equity research analysts;41TABLE OF CONTENTS•failure to achieve the perceived benefits of the acquisitions, including financial results and anticipated synergies, as rapidly as or to the extent antici",
+            "position": 189444
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity SecuritiesCommon StockSubsequent to the completion of the Southwestern Merger on October 1, 2024,",
+            "position": 238153
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities; Unregistered Sales of Equity Securities and Use of ProceedsOn October 22, 2024 our Board of Directors authorized repurchases of up to $1.0",
+            "position": 239856
+          },
+          {
+            "metric": "equity",
+            "context": "equity, not to exceed 65",
+            "position": 246046
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 39236
+          },
+          {
+            "text": "$27.63",
+            "position": 43683
+          },
+          {
+            "text": "$32.13",
+            "position": 44023
+          },
+          {
+            "text": "$36.18",
+            "position": 44338
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 63373
+          },
+          {
+            "text": "$2.14 ",
+            "position": 68371
+          },
+          {
+            "text": "$0.30 ",
+            "position": 68389
+          },
+          {
+            "text": "$0.58 ",
+            "position": 68395
+          },
+          {
+            "text": "$1.88 ",
+            "position": 68421
+          },
+          {
+            "text": "$0.15 ",
+            "position": 68439
+          },
+          {
+            "text": "$0.77 ",
+            "position": 68445
+          },
+          {
+            "text": "$2.42 ",
+            "position": 68471
+          },
+          {
+            "text": "$60.41 ",
+            "position": 68477
+          },
+          {
+            "text": "$27.44 ",
+            "position": 68484
+          },
+          {
+            "text": "$3.42 ",
+            "position": 68491
+          },
+          {
+            "text": "$0.32 ",
+            "position": 68497
+          },
+          {
+            "text": "$1.33 ",
+            "position": 68503
+          },
+          {
+            "text": "$2.03 ",
+            "position": 68514
+          },
+          {
+            "text": "$2.16 ",
+            "position": 68534
+          },
+          {
+            "text": "$0.23 ",
+            "position": 68540
+          },
+          {
+            "text": "$0.75 ",
+            "position": 68546
+          },
+          {
+            "text": "$2.30 ",
+            "position": 68567
+          },
+          {
+            "text": "$0.33 ",
+            "position": 68585
+          },
+          {
+            "text": "$0.46 ",
+            "position": 68591
+          },
+          {
+            "text": "$2.22 ",
+            "position": 68617
+          },
+          {
+            "text": "$0.12 ",
+            "position": 68635
+          },
+          {
+            "text": "$0.65 ",
+            "position": 68641
+          },
+          {
+            "text": "$2.25 ",
+            "position": 68657
+          },
+          {
+            "text": "$77.80 ",
+            "position": 68663
+          },
+          {
+            "text": "$25.62 ",
+            "position": 68670
+          },
+          {
+            "text": "$7.64 ",
+            "position": 68677
+          },
+          {
+            "text": "$0.91 ",
+            "position": 68683
+          },
+          {
+            "text": "$1.57 ",
+            "position": 68689
+          },
+          {
+            "text": "$2.66 ",
+            "position": 68720
+          },
+          {
+            "text": "$0.27 ",
+            "position": 68726
+          },
+          {
+            "text": "$0.64 ",
+            "position": 68732
+          },
+          {
+            "text": "$5.92 ",
+            "position": 68753
+          },
+          {
+            "text": "$0.26 ",
+            "position": 68771
+          },
+          {
+            "text": "$0.53 ",
+            "position": 68777
+          },
+          {
+            "text": "$6.03 ",
+            "position": 68803
+          },
+          {
+            "text": "$0.11 ",
+            "position": 68821
+          },
+          {
+            "text": "$0.57 ",
+            "position": 68827
+          },
+          {
+            "text": "$5.64 ",
+            "position": 68843
+          },
+          {
+            "text": "$96.10 ",
+            "position": 68849
+          },
+          {
+            "text": "$36.76 ",
+            "position": 68856
+          },
+          {
+            "text": "$11.76 ",
+            "position": 68863
+          },
+          {
+            "text": "$1.22 ",
+            "position": 68870
+          },
+          {
+            "text": "$1.78 ",
+            "position": 68876
+          },
+          {
+            "text": "$5.96 ",
+            "position": 68887
+          },
+          {
+            "text": "$96.07 ",
+            "position": 68893
+          }
+        ],
+        "percentages": [
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 49518
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 66402
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 70110
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 70115
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 70123
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 75131
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 84896
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 85061
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 96817
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 97145
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 142119
+          },
+          {
+            "text": "65%",
+            "value": 65.0,
+            "position": 182164
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 214658
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 226482
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 243505
+          },
+          {
+            "text": "5.70%",
+            "value": 5.7,
+            "position": 246386
+          },
+          {
+            "text": "91%",
+            "value": 91.0,
+            "position": 246607
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 247866
+          },
+          {
+            "text": "5.500%",
+            "value": 5.5,
+            "position": 255170
+          },
+          {
+            "text": "5.875%",
+            "value": 5.875,
+            "position": 255200
+          },
+          {
+            "text": "6.750%",
+            "value": 6.75,
+            "position": 255230
+          },
+          {
+            "text": "5.375%",
+            "value": 5.375,
+            "position": 255361
+          },
+          {
+            "text": "4.750%",
+            "value": 4.75,
+            "position": 255424
+          },
+          {
+            "text": "56%",
+            "value": 56.0,
+            "position": 294830
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 294838
+          },
+          {
+            "text": "4.95%",
+            "value": 4.95,
+            "position": 359466
+          },
+          {
+            "text": "5.50%",
+            "value": 5.5,
+            "position": 359508
+          },
+          {
+            "text": "6.75%",
+            "value": 6.75,
+            "position": 359636
+          },
+          {
+            "text": "4.75%",
+            "value": 4.75,
+            "position": 359726
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 362966
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 363117
+          },
+          {
+            "text": "4.950%",
+            "value": 4.95,
+            "position": 369326
+          },
+          {
+            "text": "8.375%",
+            "value": 8.375,
+            "position": 369427
+          },
+          {
+            "text": "5.99 %",
+            "value": 5.99,
+            "position": 389502
+          },
+          {
+            "text": "7.02 %",
+            "value": 7.02,
+            "position": 389508
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 392596
+          },
+          {
+            "text": "21.0 %",
+            "value": 21.0,
+            "position": 392605
+          },
+          {
+            "text": "0.6 %",
+            "value": 0.6,
+            "position": 392690
+          },
+          {
+            "text": "2.5 %",
+            "value": 2.5,
+            "position": 392698
+          },
+          {
+            "text": "1.2 %",
+            "value": 1.2,
+            "position": 392706
+          },
+          {
+            "text": "0.8 %",
+            "value": 0.8,
+            "position": 392781
+          },
+          {
+            "text": "0.5 %",
+            "value": 0.5,
+            "position": 392852
+          },
+          {
+            "text": "2.1 %",
+            "value": 2.1,
+            "position": 392923
+          },
+          {
+            "text": "3.7 %",
+            "value": 3.7,
+            "position": 392992
+          },
+          {
+            "text": "0.1 %",
+            "value": 0.1,
+            "position": 393049
+          },
+          {
+            "text": "0.7 %",
+            "value": 0.7,
+            "position": 393136
+          },
+          {
+            "text": "15.1 %",
+            "value": 15.1,
+            "position": 393160
+          },
+          {
+            "text": "22.4 %",
+            "value": 22.4,
+            "position": 393171
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 406318
+          },
+          {
+            "text": "0%",
+            "value": 0.0,
+            "position": 413509
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 194
+          },
+          {
+            "category": "operational_risk",
+            "count": 194
+          },
+          {
+            "category": "financial_risk",
+            "count": 556
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 125
+          },
+          {
+            "category": "technology_risk",
+            "count": 151
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 472732,
+        "filtered_length": 466535,
+        "removed_ratio": 1.31,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.63617463617464,
+      "confidence": 0.21183145423458402,
+      "overall_score": 50.36382536382536,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.23076923076923,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.007276507276507305,
+        "risk_adjusted_signal": 0.048940938231339715,
+        "expected_return_annualized": 0.013835196943305102,
+        "signal_sharpe_ratio": 0.0009223464628870068,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.048940938231339715,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.048940938231339715,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.11538461538461539,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.048940938231339715,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.007276507276507305
+      },
+      "risk_adjusted_signal": 0.048940938231339715,
+      "expected_return": 0.00013835196943305102,
+      "signal_sharpe": 0.0009223464628870068,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.36382536382536,
+    "confidence": 0.21183145423458402,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:19.005869",
+  "filing_date": "2025-02-26",
+  "filing_filename": "2025-02-26-10k-EXE.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

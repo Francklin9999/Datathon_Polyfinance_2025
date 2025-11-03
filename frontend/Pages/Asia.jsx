@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import HeaderBar from '../Components/atlas/HeaderBar';
 import SummaryCard from '../Components/atlas/SummaryCard';
@@ -17,25 +17,25 @@ export default function AsiaMarkets() {
 
   const { data: snapshots = [], error: snapshotsError, isLoading: isLoadingSnapshots, refetch: refetchSnapshots } = useQuery({
     queryKey: ['snapshots'],
-    queryFn: () => base44.entities.MarketSnapshot.filter({ region: 'ASIA' }),
+    queryFn: () => api.entities.MarketSnapshot.filter({ region: 'ASIA' }),
     initialData: [],
   });
 
   const { data: news = [], error: newsError, isLoading: isLoadingNews, refetch: refetchNews } = useQuery({
     queryKey: ['news-asia'],
-    queryFn: () => base44.entities.NewsItem.list('-publishedDate', 20),
+    queryFn: () => api.entities.NewsItem.list('-publishedDate', 20),
     initialData: [],
   });
 
   const { data: events = [], error: eventsError, isLoading: isLoadingEvents, refetch: refetchEvents } = useQuery({
     queryKey: ['events-asia'],
-    queryFn: () => base44.entities.EventItem.list('-eventDate', 10),
+    queryFn: () => api.entities.EventItem.list('-eventDate', 10),
     initialData: [],
   });
 
   const { data: riskMetrics = [], error: riskError, isLoading: isLoadingRisk, refetch: refetchRisk } = useQuery({
     queryKey: ['risk-asia'],
-    queryFn: () => base44.entities.RiskMetrics.filter({ region: 'ASIA' }),
+    queryFn: () => api.entities.RiskMetrics.filter({ region: 'ASIA' }),
     initialData: [],
   });
 
@@ -54,7 +54,7 @@ export default function AsiaMarkets() {
         language: language
       };
 
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a senior macro analyst. Provide a brief (3-5 sentences) ${language === 'FR' ? 'French' : 'English'} summary of Asian market conditions based on this data: ${JSON.stringify(context)}. Use neutral institutional tone, no trading advice, cite key drivers succinctly.`,
         response_json_schema: null
       });

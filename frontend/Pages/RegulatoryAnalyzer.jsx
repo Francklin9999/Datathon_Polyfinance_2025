@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -20,10 +20,12 @@ import {
   ArrowRight,
   Network,
   Share2,
-  Download
+  Download,
+  Search
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import RecommendationExplanation from '@/components/RecommendationExplanation';
 
 export default function RegulatoryAnalyzer() {
   const [file, setFile] = useState(null);
@@ -33,6 +35,8 @@ export default function RegulatoryAnalyzer() {
   const [portfolioImpact, setPortfolioImpact] = useState(null);
   const [documentText, setDocumentText] = useState('');
   const [showCitations, setShowCitations] = useState(false);
+  const [isSearchingMissing, setIsSearchingMissing] = useState(false);
+  const [missingElementsResult, setMissingElementsResult] = useState(null);
 
   const handleFileUpload = (e) => {
     const uploadedFile = e.target.files[0];
@@ -52,12 +56,12 @@ export default function RegulatoryAnalyzer() {
       let fileUrl = null;
       
       if (file) {
-        const uploadResult = await base44.integrations.Core.UploadFile({ file });
+        const uploadResult = await api.integrations.Core.UploadFile({ file });
         fileUrl = uploadResult.file_url;
       }
 
       // Use backend API to analyze document
-      const analysisResponse = await base44.regulatory.analyzeDocument({
+      const analysisResponse = await api.regulatory.analyzeDocument({
         documentText: documentText || undefined,
         fileUrl: fileUrl || undefined,
         docId: `DOC-${Date.now()}`
@@ -88,7 +92,7 @@ export default function RegulatoryAnalyzer() {
     setIsAnalyzingPortfolio(true);
 
     try {
-      const impactResponse = await base44.regulatory.analyzeSP500Impact({
+      const impactResponse = await api.regulatory.analyzeSP500Impact({
         regulation: regulationData
       });
 
@@ -113,6 +117,31 @@ export default function RegulatoryAnalyzer() {
         [{citation.paragraph}]
       </Badge>
     ) : null;
+  };
+
+  const handleSearchMissingElements = async () => {
+    if (!analysisResult) {
+      alert('Please analyze a document first');
+      return;
+    }
+
+    setIsSearchingMissing(true);
+    setMissingElementsResult(null);
+
+    try {
+      const result = await api.regulatory.searchMissingElements({
+        report_type: 'regulatory',
+        report_data: analysisResult,
+        page_url: 'http://127.0.0.1:8888/'
+      });
+
+      setMissingElementsResult(result);
+    } catch (error) {
+      console.error('Search error:', error);
+      alert('Error searching for missing elements. Please try again.');
+    } finally {
+      setIsSearchingMissing(false);
+    }
   };
 
   return (
@@ -216,6 +245,24 @@ export default function RegulatoryAnalyzer() {
                   <div className="flex gap-2">
                     <Button size="sm" variant="outline" onClick={() => setShowCitations(!showCitations)}>
                       {showCitations ? 'Hide' : 'Show'} Citations
+                    </Button>
+                    <Button 
+                      size="sm" 
+                      className="bg-purple-600 hover:bg-purple-700"
+                      onClick={handleSearchMissingElements}
+                      disabled={isSearchingMissing}
+                    >
+                      {isSearchingMissing ? (
+                        <>
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                          Searching...
+                        </>
+                      ) : (
+                        <>
+                          <Search className="w-4 h-4 mr-2" />
+                          Search Missing Elements
+                        </>
+                      )}
                     </Button>
                     <Button size="sm" className="bg-blue-600">
                       <Download className="w-4 h-4 mr-2" />
@@ -584,6 +631,112 @@ export default function RegulatoryAnalyzer() {
                         </>
                       )}
                     </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Missing Elements Search Results */}
+            {missingElementsResult && (
+              <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <Search className="w-6 h-6 text-purple-400" />
+                    Missing Elements Search Results (SearXNG)
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* Summary */}
+                  <div className="grid md:grid-cols-4 gap-4">
+                    <div className="text-center p-4 bg-gray-900/50 rounded-lg">
+                      <p className="text-3xl font-bold text-blue-400">{missingElementsResult.completeness_percentage}%</p>
+                      <p className="text-sm text-gray-400 mt-1">Completeness</p>
+                    </div>
+                    <div className="text-center p-4 bg-gray-900/50 rounded-lg">
+                      <p className="text-3xl font-bold text-green-400">{missingElementsResult.present_count}</p>
+                      <p className="text-sm text-gray-400 mt-1">Present</p>
+                    </div>
+                    <div className="text-center p-4 bg-gray-900/50 rounded-lg">
+                      <p className="text-3xl font-bold text-red-400">{missingElementsResult.missing_count}</p>
+                      <p className="text-sm text-gray-400 mt-1">Missing</p>
+                    </div>
+                    <div className="text-center p-4 bg-gray-900/50 rounded-lg">
+                      <p className="text-3xl font-bold text-purple-400">{missingElementsResult.total_elements}</p>
+                      <p className="text-sm text-gray-400 mt-1">Total</p>
+                    </div>
+                  </div>
+
+                  {/* Missing Elements */}
+                  {missingElementsResult.missing_elements && missingElementsResult.missing_elements.length > 0 && (
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4">Missing Elements ({missingElementsResult.missing_count})</h4>
+                      <div className="space-y-2">
+                        {missingElementsResult.missing_elements.map((element, idx) => (
+                          <div key={idx} className="p-3 bg-gray-900/50 rounded border border-gray-700">
+                            <div className="flex items-center gap-3 mb-1">
+                              <Badge className={element.required ? 'bg-red-600' : 'bg-yellow-600'}>
+                                {element.required ? 'Required' : 'Optional'}
+                              </Badge>
+                              <span className="font-bold text-white">{element.element}</span>
+                            </div>
+                            <p className="text-sm text-gray-300">{element.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Recommendations */}
+                  {missingElementsResult.recommendations && missingElementsResult.recommendations.length > 0 && (
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4">Recommendations</h4>
+                      <div className="space-y-2">
+                        {missingElementsResult.recommendations.map((rec, idx) => (
+                          <div key={idx} className="p-3 bg-gray-900/50 rounded border border-gray-700">
+                            <div className="flex items-center gap-3 mb-2">
+                              <Badge className={rec.priority === 'HIGH' ? 'bg-red-600' : 'bg-yellow-600'}>
+                                {rec.priority}
+                              </Badge>
+                              <span className="font-bold text-white">{rec.element}</span>
+                              <RecommendationExplanation
+                                tickers={null}
+                                type="general"
+                                context={{ element: rec.element, priority: rec.priority }}
+                                reason={rec.recommendation}
+                              />
+                            </div>
+                            <p className="text-sm text-gray-300">{rec.recommendation}</p>
+                            {rec.sources && rec.sources.length > 0 && (
+                              <div className="mt-2 pt-2 border-t border-gray-700">
+                                <p className="text-xs text-gray-400 mb-1">Sources:</p>
+                                {rec.sources.map((source, sourceIdx) => (
+                                  <a
+                                    key={sourceIdx}
+                                    href={source.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-blue-400 hover:text-blue-300 block"
+                                  >
+                                    • {source.title || source.url}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Link to full search page */}
+                  <div className="pt-4 border-t border-gray-700">
+                    <Link to={createPageUrl('MissingElementsSearch')}>
+                      <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                        <Search className="w-4 h-4 mr-2" />
+                        View Full Missing Elements Search
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

@@ -12,6 +12,7 @@ from app.models.requests import LLMRequest
 from app.services.aws_bedrock_service import BedrockService
 from app.services.aws_config import is_aws_configured, AWSServices
 from app.services.searxng_service import SearXNGService
+from app.services.web_scraper_service import WebScraperService
 from fastapi import WebSocket, WebSocketDisconnect
 import uuid
 import base64
@@ -179,8 +180,15 @@ Please answer the user's question using the above search results as additional c
             # Fallback to mock on error
             pass
     
+    # Use NLP classification to determine response type instead of hardcoded if/else
+    response_type = BedrockService._classify_prompt_type(prompt) if is_aws_configured() else None
+    
+    # If classification failed or AWS not configured, use fallback classification
+    if not response_type:
+        response_type = BedrockService._classify_prompt_type_fallback(prompt)
+    
     # Mock LLM response (fallback if AWS not configured)
-    if "regulatory document" in prompt.lower() or "regulation" in prompt.lower():
+    if response_type == "regulatory":
         # Regulatory document analysis
         try:
             # Parse document text if provided
@@ -234,7 +242,7 @@ Please answer the user's question using the above search results as additional c
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Error analyzing document: {str(e)}")
     
-    elif "10-k" in prompt.lower() or "filing" in prompt.lower():
+    elif response_type == "filing":
         # 10-K filing analysis
         response = {
             "ticker": "AAPL",
@@ -273,8 +281,7 @@ Please answer the user's question using the above search results as additional c
         else:
             return json.dumps(response)
     
-    elif ("portfolio manager" in prompt.lower() or "portfolio adjustments" in prompt.lower() or 
-          ("recommendations" in prompt.lower() and "sector_rotation" in prompt.lower())):
+    elif response_type == "portfolio":
         # Portfolio recommendations
         response = {
             "sector_rotation": [
@@ -720,3 +727,443 @@ async def synthesize_speech(request: dict):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error synthesizing speech: {str(e)}")
+
+
+@router.post("/tenk-rag-analysis")
+async def tenk_rag_analysis(request: dict):
+    """
+    Perform comprehensive 10-K analysis using RAG:
+    1. LLM generates search queries for the company
+    2. Use crew4ai (SerperDevTool) to search with those queries and scrape content
+       (Falls back to SearXNG + WebScraper if crew4ai not available)
+    3. LLM analyzes with scraped content as RAG context
+    """
+    ticker = request.get("ticker", "").upper()
+    if not ticker:
+        raise HTTPException(status_code=400, detail="Ticker is required")
+    
+    try:
+        # Step 1: LLM generates search queries about the company
+        query_generation_prompt = f"""Generate 5-7 comprehensive internet search queries to find information about {ticker} for 10-K filing analysis. 
+Focus on:
+- Company overview and business model
+- Suppliers and supply chain
+- Geographic revenue breakdown
+- Product lines and revenue segments
+- Risk factors and regulatory concerns
+- Trade dependencies and international operations
+- Recent financial news and performance
+
+Return ONLY a JSON array of search query strings, like: ["query 1", "query 2", "query 3"]
+No explanations, just the JSON array."""
+        
+        # Call LLM directly for query generation
+        query_request = LLMRequest(
+            prompt=query_generation_prompt,
+            add_context_from_internet=False,
+            response_json_schema={
+                "type": "array",
+                "items": {"type": "string"}
+            }
+        )
+        
+        # Use AWS Bedrock if configured
+        if is_aws_configured():
+            try:
+                query_result = BedrockService.invoke_model(
+                    prompt=query_generation_prompt,
+                    max_tokens=1000,
+                    temperature=0.7
+                )
+                # Try to parse JSON from response
+                response_text = query_result.get("text", "")
+                try:
+                    import re
+                    json_match = re.search(r'\[.*\]', response_text, re.DOTALL)
+                    if json_match:
+                        query_result = json.loads(json_match.group(0))
+                    else:
+                        # Try parsing entire response
+                        query_result = json.loads(response_text)
+                except:
+                    query_result = response_text
+            except Exception as e:
+                raise ValueError(f"Failed to generate search queries: {str(e)}")
+        else:
+            raise ValueError("AWS not configured - cannot generate search queries")
+        
+        # Ensure we have a list
+        if not isinstance(query_result, list):
+            if isinstance(query_result, str):
+                try:
+                    query_result = json.loads(query_result)
+                except:
+                    # Try to extract array from string
+                    import re
+                    json_match = re.search(r'\[.*\]', query_result, re.DOTALL)
+                    if json_match:
+                        query_result = json.loads(json_match.group(0))
+                    else:
+                        # Fallback to default queries
+                        query_result = [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers", f"{ticker} revenue", f"{ticker} risk factors"]
+            else:
+                query_result = [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers", f"{ticker} revenue", f"{ticker} risk factors"]
+        
+        search_queries = query_result if isinstance(query_result, list) and len(query_result) > 0 else [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers"]
+        
+        print(f"[DEBUG] Generated {len(search_queries)} search queries for {ticker}: {search_queries[:3]}...")
+        
+        # Step 2: Use crew4ai to search and scrape based on queries
+        scraped_content = ""
+        try:
+            # Try to use crew4ai if available
+            try:
+                from crewai_tools import WebsiteSearchTool, SerperDevTool
+                # Use SerperDevTool for Google searches via crew4ai
+                search_tool = SerperDevTool()
+                print(f"[DEBUG] Using crew4ai SerperDevTool for searches...")
+                
+                all_scraped_content = []
+                for query in search_queries[:7]:  # Limit to 7 queries
+                    try:
+                        print(f"[DEBUG] Searching with crew4ai for query: '{query}'")
+                        search_result = search_tool.run(query)
+                        if search_result:
+                            # SerperDevTool returns search results with URLs
+                            # We need to scrape those URLs
+                            if isinstance(search_result, dict) and "urls" in search_result:
+                                urls = search_result["urls"][:3]  # Get top 3 URLs per query
+                            elif isinstance(search_result, list):
+                                urls = [r.get("url", "") for r in search_result if isinstance(r, dict)][:3]
+                            else:
+                                # Try to extract URLs from the result
+                                import re
+                                urls = re.findall(r'https?://[^\s<>"{}|\\^`\[\]]+', str(search_result))[:3]
+                            
+                            # Scrape URLs found from search
+                            if urls:
+                                print(f"[DEBUG] Found {len(urls)} URLs from crew4ai search, scraping...")
+                                scrape_results = WebScraperService.scrape_urls(urls, max_urls=3, delay=0.5)
+                                for result in scrape_results:
+                                    if result.get("success") and result.get("content"):
+                                        all_scraped_content.append(result)
+                    except Exception as e:
+                        print(f"[DEBUG] crew4ai search failed for query '{query}': {e}")
+                        continue
+                
+                if all_scraped_content:
+                    scraped_content = WebScraperService.format_scraped_content_for_rag(all_scraped_content)
+                    print(f"[DEBUG] crew4ai scraped {len(all_scraped_content)} sources, content length: {len(scraped_content)} chars")
+                else:
+                    print(f"[DEBUG] crew4ai found no scrapable content")
+                    
+            except ImportError:
+                print(f"[DEBUG] crew4ai not available, falling back to SearXNG + WebScraper...")
+                # Fallback to SearXNG + WebScraper approach
+                all_urls = []
+                
+                for query in search_queries[:7]:  # Limit to 7 queries
+                    try:
+                        search_result = SearXNGService.search(query=query, max_results=5, categories=["general", "news", "finance"])
+                        if search_result.get("success") and search_result.get("results"):
+                            urls_found = 0
+                            for result in search_result["results"]:
+                                url = result.get("url", "")
+                                if url and url not in all_urls:
+                                    all_urls.append(url)
+                                    urls_found += 1
+                            print(f"[DEBUG] Query '{query}': found {urls_found} new URLs (total: {len(all_urls)})")
+                        else:
+                            print(f"[DEBUG] Query '{query}': no results (success={search_result.get('success')}, has_results={bool(search_result.get('results'))})")
+                    except Exception as e:
+                        print(f"[DEBUG] Search failed for query '{query}': {e}")
+                        continue
+                
+                # Generate fallback URLs if no URLs found
+                if len(all_urls) == 0:
+                    print(f"[DEBUG] No URLs found, generating fallback URLs for {ticker}...")
+                    fallback_urls = [
+                        f"https://www.sec.gov/cgi-bin/browse-edgar?CIK={ticker}&action=getcompany&type=10-K",
+                        f"https://finance.yahoo.com/quote/{ticker}",
+                        f"https://www.marketwatch.com/investing/stock/{ticker}",
+                        f"https://seekingalpha.com/symbol/{ticker}",
+                    ]
+                    all_urls.extend(fallback_urls)
+                
+                # Scrape URLs
+                if all_urls:
+                    try:
+                        scrape_results = WebScraperService.scrape_urls(all_urls, max_urls=15, delay=0.5)
+                        scraped_content = WebScraperService.format_scraped_content_for_rag(scrape_results)
+                        print(f"[DEBUG] Scraped {len(scrape_results)} URLs, content length: {len(scraped_content)} chars")
+                    except Exception as e:
+                        print(f"[DEBUG] Error scraping URLs: {e}")
+                        scraped_content = f"[Error scraping URLs: {str(e)}]"
+                else:
+                    print(f"[DEBUG] No URLs to scrape for {ticker}")
+                    
+        except Exception as e:
+            print(f"[DEBUG] Error in search/scrape step: {e}")
+            scraped_content = f"[Error during search/scrape: {str(e)}]"
+        
+        # Step 4: Build final analysis prompt with RAG context
+        rag_context = scraped_content if scraped_content else "[No web content available]"
+        
+        # Check if we actually have meaningful context
+        has_rag_context = scraped_content and len(scraped_content.strip()) > 50 and scraped_content != "[No web content available]"
+        
+        if has_rag_context:
+            analysis_prompt = f"""You are analyzing the 10-K filing for {ticker}.
+
+=== RAG CONTEXT FROM INTERNET SEARCHES ===
+{rag_context}
+=== END OF RAG CONTEXT ===
+
+Based on the internet search results and scraped web content above, extract and return the following JSON structure. Use the RAG context as the primary source, and supplement with your general knowledge when specific details are not found in the context.
+
+{{
+  "ticker": "{ticker}",
+  "company_name": "Full company name",
+  "fiscal_year": "2024",
+  "business_model": "2-3 sentence description",
+  "key_suppliers": [
+    {{
+      "name": "Supplier name",
+      "country": "Country",
+      "products": "What they supply",
+      "dependency": "High/Medium/Low"
+    }}
+  ],
+  "geographic_revenue": [
+    {{
+      "region": "Region name",
+      "revenue_percent": percentage as number,
+      "revenue_amount": "dollar amount as string"
+    }}
+  ],
+  "product_lines": [
+    {{
+      "name": "Product/service name",
+      "revenue_percent": percentage as number,
+      "description": "Brief description"
+    }}
+  ],
+  "risk_factors": ["List 5 key risk factors"],
+  "regulatory_mentions": ["List regulatory concerns mentioned"],
+  "trade_dependencies": "Description of trade dependencies"
+}}
+
+IMPORTANT: Even if some information is not available in the RAG context, you should still fill out the JSON structure using your general knowledge about the company or the industry. Use "Not available" or "Unknown" only when absolutely necessary. The goal is to provide the most complete analysis possible."""
+        else:
+            # Fallback prompt when no RAG context is available
+            analysis_prompt = f"""You are analyzing company information for {ticker}. 
+
+Internet searches did not return sufficient detailed information about this company. However, you should still provide an analysis using your general knowledge about the company, its industry, and typical company structures.
+
+Please provide the following JSON structure based on your knowledge of {ticker} or similar companies in the industry. If you don't know specific details, provide reasonable estimates or typical industry patterns, clearly marking them as estimates:
+
+{{
+  "ticker": "{ticker}",
+  "company_name": "Full company name (or estimated based on ticker)",
+  "fiscal_year": "2024",
+  "business_model": "Description based on what you know about the company or industry",
+  "key_suppliers": [
+    {{
+      "name": "Typical supplier name or 'Various'",
+      "country": "Country",
+      "products": "Typical supplies",
+      "dependency": "Medium"
+    }}
+  ],
+  "geographic_revenue": [
+    {{
+      "region": "Primary region",
+      "revenue_percent": estimated percentage as number,
+      "revenue_amount": "estimated amount"
+    }}
+  ],
+  "product_lines": [
+    {{
+      "name": "Primary product/service",
+      "revenue_percent": estimated percentage,
+      "description": "Description"
+    }}
+  ],
+  "risk_factors": ["Common industry risk factors"],
+  "regulatory_mentions": ["Common regulatory concerns for this industry"],
+  "trade_dependencies": "Description based on industry patterns"
+}}
+
+IMPORTANT: You MUST return valid JSON even if the information is limited or estimated. Use your general knowledge and industry expertise to fill out the structure as completely as possible."""
+
+        # Step 5: Final LLM analysis with RAG context
+        json_schema = {
+            "type": "object",
+            "properties": {
+                "ticker": {"type": "string"},
+                "company_name": {"type": "string"},
+                "fiscal_year": {"type": "string"},
+                "business_model": {"type": "string"},
+                "key_suppliers": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "country": {"type": "string"},
+                            "products": {"type": "string"},
+                            "dependency": {"type": "string"}
+                        }
+                    }
+                },
+                "geographic_revenue": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "region": {"type": "string"},
+                            "revenue_percent": {"type": "number"},
+                            "revenue_amount": {"type": "string"}
+                        }
+                    }
+                },
+                "product_lines": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "revenue_percent": {"type": "number"},
+                            "description": {"type": "string"}
+                        }
+                    }
+                },
+                "risk_factors": {"type": "array", "items": {"type": "string"}},
+                "regulatory_mentions": {"type": "array", "items": {"type": "string"}},
+                "trade_dependencies": {"type": "string"}
+            }
+        }
+        
+        # Call LLM for final analysis with improved prompt for JSON format
+        if is_aws_configured():
+            try:
+                # Enhance prompt to emphasize JSON-only response and handle missing data
+                enhanced_prompt = analysis_prompt + """
+
+CRITICAL INSTRUCTIONS:
+1. You MUST respond with ONLY valid JSON in the exact format specified above.
+2. Do not include any explanations, markdown formatting, or text outside the JSON object.
+3. Start your response with { and end with }.
+4. If you don't have specific information, use your general knowledge, reasonable estimates, or typical industry patterns to fill out the structure.
+5. Never refuse to provide the JSON structure - always return it, even if some fields use estimates or "Not available".
+6. If the RAG context above says "[No web content available]" or is very short, rely on your general knowledge about the company or industry."""
+                
+                llm_response = BedrockService.invoke_model(
+                    prompt=enhanced_prompt,
+                    max_tokens=4096,
+                    temperature=0.7
+                )
+                
+                response_text = llm_response.get("text", "")
+                
+                # Use the same comprehensive JSON parsing logic as invoke_llm
+                json_text = None
+                
+                # Method 1: Look for ```json code blocks
+                if "```json" in response_text:
+                    json_start = response_text.find("```json") + 7
+                    json_end = response_text.find("```", json_start)
+                    if json_end > json_start:
+                        json_text = response_text[json_start:json_end].strip()
+                
+                # Method 2: Look for JSON object in text (find first { and last })
+                if not json_text:
+                    first_brace = response_text.find('{')
+                    if first_brace != -1:
+                        brace_count = 0
+                        last_brace = first_brace
+                        for i in range(first_brace, len(response_text)):
+                            if response_text[i] == '{':
+                                brace_count += 1
+                            elif response_text[i] == '}':
+                                brace_count -= 1
+                                if brace_count == 0:
+                                    last_brace = i
+                                    break
+                        if last_brace > first_brace:
+                            json_text = response_text[first_brace:last_brace + 1].strip()
+                
+                # Method 3: Try regex to find JSON object
+                if not json_text:
+                    import re
+                    json_match = re.search(r'\{[\s\S]*\}', response_text, re.DOTALL)
+                    if json_match:
+                        json_text = json_match.group(0)
+                
+                # Parse JSON
+                if json_text:
+                    try:
+                        final_result = json.loads(json_text)
+                    except json.JSONDecodeError:
+                        # Try cleaning up
+                        cleaned = json_text
+                        if cleaned.startswith('json'):
+                            cleaned = cleaned[4:].strip()
+                        if cleaned.startswith('```'):
+                            cleaned = cleaned[3:].strip()
+                        if cleaned.endswith('```'):
+                            cleaned = cleaned[:-3].strip()
+                        try:
+                            final_result = json.loads(cleaned)
+                        except json.JSONDecodeError:
+                            # If still fails, check if the response indicates no RAG context
+                            if "no RAG context" in response_text.lower() or "don't see" in response_text.lower():
+                                final_result = {
+                                    "error": "Insufficient RAG context",
+                                    "raw_response": response_text[:500],  # First 500 chars
+                                    "suggestion": "The internet search did not return sufficient information. Try a different ticker or check if the company information is publicly available."
+                                }
+                            else:
+                                final_result = {
+                                    "error": "Failed to parse JSON response",
+                                    "raw_response": response_text[:500],  # First 500 chars
+                                    "parse_error": "Could not extract valid JSON from LLM response"
+                                }
+                elif response_text.strip().startswith('{'):
+                    try:
+                        final_result = json.loads(response_text.strip())
+                    except json.JSONDecodeError:
+                        final_result = {
+                            "error": "Failed to parse JSON response",
+                            "raw_response": response_text[:500],
+                            "parse_error": "Response starts with { but is not valid JSON"
+                        }
+                else:
+                    # No JSON found in response
+                    if "no RAG context" in response_text.lower() or "don't see" in response_text.lower():
+                        final_result = {
+                            "error": "Insufficient RAG context",
+                            "raw_response": response_text[:500],
+                            "suggestion": "The internet search did not return sufficient information. Try a different ticker or check if the company information is publicly available."
+                        }
+                    else:
+                        final_result = {
+                            "error": "No JSON response found",
+                            "raw_response": response_text[:500],
+                            "parse_error": "LLM did not return JSON format"
+                        }
+            except Exception as e:
+                raise ValueError(f"Failed to analyze with LLM: {str(e)}")
+        else:
+            raise ValueError("AWS not configured - cannot perform analysis")
+        
+        return {
+            "ticker": ticker,
+            "analysis": final_result,
+            "search_queries": search_queries,
+            "urls_searched": len(all_urls),
+            "rag_context_available": bool(scraped_content)
+        }
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error in RAG analysis: {str(e)}")

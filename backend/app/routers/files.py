@@ -24,7 +24,7 @@ async def upload_file(file: UploadFile = File(...)):
     Returns file URL for use in analysis
     """
     # Validate file type
-    allowed_extensions = {".pdf", ".html", ".xml", ".docx", ".txt"}
+    allowed_extensions = {".pdf", ".html", ".xml", ".docx", ".txt", ".csv"}
     file_ext = os.path.splitext(file.filename)[1].lower()
     
     if file_ext not in allowed_extensions:

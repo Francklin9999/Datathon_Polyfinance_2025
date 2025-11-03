@@ -1,0 +1,452 @@
+{
+  "ticker": "BK",
+  "analysis": {
+    "ticker": "BK",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 35.51401869158878,
+        "financial_sentiment": -0.18181818181818182,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": ",” “objective,” “aim,” “future,” “potentially,” “outlook” and words of similar meaning, may signify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 182128
+        },
+        {
+          "statement": "ds of similar meaning, may signify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 182193
+        },
+        {
+          "statement": "Investors should not place undue reliance on any forward-looking statement and should consider all risk factors discussed in the Annual Report and any subsequent reports filed with the SEC by BNY pursuant to the Exchange Act.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 189733
+        },
+        {
+          "statement": "obligation to update any statement to reflect events or circumstances after the date on which such forward-looking statement is made or to reflect the occurrence of unanticipated events.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 190123
+        },
+        {
+          "statement": "We believe that these policies and procedures are reasonably designed to promote compliance with insider trading laws, rules and regulations and applicable listing standards.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 209614
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue, net interest income, expenses, impacts of currency fluctuations, capital ratios and effective tax rate) and expectations (including those regarding products, nonperforming assets, legal proce",
+            "position": 183098
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and our fee-based revenues could be adversely affected by slowing market activity, weak financial markets, underperformance and/or negative trends in savings rates or in investment preferences",
+            "position": 185306
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,” “Review of business segments” and “International operations” sections in the MD&A section in the Annual Report and Notes 24 and 25 of the Notes to Consolidated Financial Statements in the An",
+            "position": 192197
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings;•the failure or perceived weakness of any of our significant clients or counterparties, many of whom are major financial institutions or sovereign entities, and our assumption of credit, coun",
+            "position": 185850
+          },
+          {
+            "metric": "net income",
+            "context": "net income, effective tax rate and our overall results of operations and financial condition; and•changes in accounting standards governing the preparation of our financial statements and future event",
+            "position": 189357
+          },
+          {
+            "metric": "assets",
+            "context": "assets, legal proceedings and other contingencies, impacts of trends on our businesses, regulatory, technology, market,",
+            "position": 183279
+          },
+          {
+            "metric": "assets",
+            "context": "assets under custody and/or administration and $2.0",
+            "position": 191441
+          },
+          {
+            "metric": "equity",
+            "context": "equity, related stockholder matters and issuer purchases of equity securities9Item 6",
+            "position": 190463
+          },
+          {
+            "metric": "equity",
+            "context": "equity grant that allows for eligible employees to become equity owners, or increase their equity holdings in the Company,",
+            "position": 197389
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities is provided in the “Capital – Issuer purchases of equity securities” section in the MD&A in the Annual Report and Note 15 of the Notes to Consolidated Financial Statements in the Ann",
+            "position": 203831
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 179018
+          },
+          {
+            "text": "$2.0 ",
+            "position": 191488
+          },
+          {
+            "text": "310001390777b",
+            "position": 1636
+          },
+          {
+            "text": "2024M",
+            "position": 5430
+          },
+          {
+            "text": "010001390777b",
+            "position": 5894
+          },
+          {
+            "text": "300001390777b",
+            "position": 30683
+          },
+          {
+            "text": "1M",
+            "position": 65050
+          },
+          {
+            "text": "2M",
+            "position": 65209
+          },
+          {
+            "text": "3M",
+            "position": 65368
+          },
+          {
+            "text": "2007M",
+            "position": 122035
+          },
+          {
+            "text": "2023M",
+            "position": 125897
+          },
+          {
+            "text": "280001390777b",
+            "position": 162291
+          },
+          {
+            "text": "170001390777b",
+            "position": 162908
+          },
+          {
+            "text": "200001390777b",
+            "position": 162974
+          },
+          {
+            "text": "070001390777b",
+            "position": 163040
+          },
+          {
+            "text": "240001390777b",
+            "position": 163106
+          },
+          {
+            "text": "210001390777b",
+            "position": 163162
+          },
+          {
+            "text": "090001390777b",
+            "position": 163228
+          },
+          {
+            "text": "12 m",
+            "position": 179377
+          },
+          {
+            "text": ", m",
+            "position": 182114
+          },
+          {
+            "text": ", b",
+            "position": 183820
+          },
+          {
+            "text": "2 B",
+            "position": 186346
+          },
+          {
+            "text": ", B",
+            "position": 187534
+          },
+          {
+            "text": "1B",
+            "position": 190301
+          },
+          {
+            "text": "9B",
+            "position": 190899
+          },
+          {
+            "text": ", M",
+            "position": 191684
+          },
+          {
+            "text": "2024, B",
+            "position": 198955
+          },
+          {
+            "text": "6 B",
+            "position": 199135
+          },
+          {
+            "text": "2 million ",
+            "position": 202551
+          },
+          {
+            "text": "4.4 million ",
+            "position": 202746
+          },
+          {
+            "text": "1.1 million ",
+            "position": 202858
+          },
+          {
+            "text": "1.8 million ",
+            "position": 202921
+          },
+          {
+            "text": "10b",
+            "position": 204283
+          },
+          {
+            "text": "10 B",
+            "position": 208287
+          },
+          {
+            "text": "54M",
+            "position": 210351
+          },
+          {
+            "text": "2018, M",
+            "position": 210836
+          },
+          {
+            "text": "44M",
+            "position": 210912
+          },
+          {
+            "text": "2022, M",
+            "position": 211207
+          },
+          {
+            "text": "59M",
+            "position": 211325
+          },
+          {
+            "text": "53M",
+            "position": 212130
+          },
+          {
+            "text": "2020, M",
+            "position": 212621
+          },
+          {
+            "text": "185.12 B",
+            "position": 213053
+          },
+          {
+            "text": "14 B",
+            "position": 217108
+          },
+          {
+            "text": "2020, b",
+            "position": 222029
+          },
+          {
+            "text": "16 B",
+            "position": 222940
+          },
+          {
+            "text": "2023, b",
+            "position": 223585
+          },
+          {
+            "text": "2024, b",
+            "position": 223877
+          },
+          {
+            "text": "18 B",
+            "position": 227221
+          },
+          {
+            "text": "20 B",
+            "position": 228102
+          }
+        ],
+        "percentages": [
+          {
+            "text": "6.244%",
+            "value": 6.244,
+            "position": 179058
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 196007
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 196041
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 196177
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 196291
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 196336
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 199179
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 208483
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 217631
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 23
+          },
+          {
+            "category": "operational_risk",
+            "count": 1
+          },
+          {
+            "category": "financial_risk",
+            "count": 74
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 12
+          },
+          {
+            "category": "technology_risk",
+            "count": 14
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 60,
+          "density": 10.526315789473683
+        }
+      ],
+      "deduplication": {
+        "original_length": 239318,
+        "filtered_length": 228108,
+        "removed_ratio": 4.68,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.01719901719902,
+      "confidence": 0.5711785479718197,
+      "overall_score": 49.01719901719902,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 40.90909090909091,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": -0.019656019656019652,
+        "risk_adjusted_signal": -0.1322040928846574,
+        "expected_return_annualized": -0.03737299953516168,
+        "signal_sharpe_ratio": -0.002491533302344112,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": -0.1322040928846574,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": -0.1322040928846574,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.18181818181818182,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": -0.1322040928846574,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": -0.019656019656019652
+      },
+      "risk_adjusted_signal": -0.1322040928846574,
+      "expected_return": -0.00037372999535161683,
+      "signal_sharpe": -0.002491533302344112,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 49.01719901719902,
+    "confidence": 0.5711785479718197,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:20:10.145950",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-BK.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

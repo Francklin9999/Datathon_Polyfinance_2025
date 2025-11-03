@@ -167,6 +167,15 @@ const base44 = {
     getMetrics: async () => {
       return fetchAPI('/portfolio/metrics');
     },
+    getRiskDashboard: async () => {
+      return fetchAPI('/portfolio/risk-dashboard');
+    },
+    getPortfolioAdjustments: async (params) => {
+      return fetchAPI('/portfolio/get-adjustments', {
+        method: 'POST',
+        body: JSON.stringify(params),
+      });
+    },
   },
   regulatory: {
     analyzeDocument: async (params) => {

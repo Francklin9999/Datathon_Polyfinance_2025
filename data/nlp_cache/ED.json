@@ -1,0 +1,879 @@
+{
+  "ticker": "ED",
+  "analysis": {
+    "ticker": "ED",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 27.839851024208567,
+        "financial_sentiment": -0.06451612903225806,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "visions of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Forward-looking statements are statements of future expectation and not facts.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 209649
+        },
+        {
+          "statement": "recasts,\" \"expects,\" \"estimates,\" \"anticipates,\" \"intends,\" \"believes,\" \"plans,\" \"will,\" \"target,\" \"guidance,\" \"potential,\" \"goal\", \"consider\" and similar expressions identify forward-looking statements.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 209845
+        },
+        {
+          "statement": "ns,\" \"will,\" \"target,\" \"guidance,\" \"potential,\" \"goal\", \"consider\" and similar expressions identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 209921
+        },
+        {
+          "statement": ",\" \"potential,\" \"goal\", \"consider\" and similar expressions identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 209953
+        },
+        {
+          "statement": "The Companies are unable to predict changes in regulations, regulatory guidance, legal interpretations, policy positions and implementation actions that may result from the Presidential Actions.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 232151
+        },
+        {
+          "statement": "122(a)CECONY’s capital expenditures for environmental protection facilities and related studies are estimated to be $605 million in 2025.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 275433
+        },
+        {
+          "statement": "5 percent) total customer bill impact (estimated to be $2.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 384277
+        },
+        {
+          "statement": "sess the impacts of the IRA on their financial statements and will update estimates based on future guidance to be issued by the Department of the Treasury.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 390086
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 469534
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 492949
+        },
+        {
+          "statement": "5 percent) total customer bill impact (estimated to be $2.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 571353
+        },
+        {
+          "statement": "5 percent) total customer bill impact (estimated to be $2.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 572191
+        },
+        {
+          "statement": "sess the impacts of the IRA on their financial statements and will update estimates based on future guidance to be issued by the Department of the Treasury.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 679016
+        },
+        {
+          "statement": "Note V – New Financial Accounting StandardsIn December 2023, the FASB issued amendments to the guidance on accounting for Income Taxes (Topic 740) through ASU 2023-09 to improve disclosures related to income taxes.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 746108
+        },
+        {
+          "statement": "The Companies do not expect the new guidance to have a material impact on their financial position, results of operations and liquidity.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 746615
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue ServiceNJBPUNew Jersey Board of Public UtilitiesNJDEPNew Jersey Department of Environmental ProtectionNYISONew York Independent System OperatorNYPANew York Power AuthorityNYSDECNew York State ",
+            "position": 198389
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue per kWh Sold (Cents)Residential$35.7",
+            "position": 244483
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue per Dt SoldResidential$25.93",
+            "position": 255058
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue per Mlb Sold$37.95",
+            "position": 259233
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Per kWh Sold (Cents)Residential$22.20",
+            "position": 263723
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (non-GAAP) were $1,868 million or $5.40",
+            "position": 203071
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and adjusted earnings per share exclude from net income for common stock and net income per share, respectively,",
+            "position": 210579
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (Non-GAAP)$1,868$1,762$1,620Reported earnings per share – GAAP basis (basic)$5.26",
+            "position": 212546
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share (Non-GAAP)$5.40",
+            "position": 213609
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings depend on the limits on rates authorized in, and the other provisions of,",
+            "position": 224471
+          },
+          {
+            "metric": "profit",
+            "context": "profit organization that controls and directs the operation of most of the electric transmission facilities in New York State, including those of the Utilities,",
+            "position": 233474
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS,",
+            "position": 533713
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for Con Edison are calculated as follows: For the Years Ended December 31,(Millions of Dollars, except per share amounts/Shares in Millions)202420232022Net income for common stock$1,820$2,519$1,66",
+            "position": 534953
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for the year ended December 31, 2024",
+            "position": 535514
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE) plusCommon Equity RatioTransmission Owner Transmission Solutions (TOTS) (a)45.7",
+            "position": 270629
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 10.9",
+            "position": 271209
+          },
+          {
+            "metric": "margin",
+            "context": "margin deposits for Con Edison and CECONY were classified as derivative assets and $(4) million and $(2) million, respectively were classified as derivative liabilities on the consolidated balance she",
+            "position": 713354
+          },
+          {
+            "metric": "margin",
+            "context": "margin deposits for Con Edison and CECONY of $7 million and $6 million were classified as derivative assets, and $(15) million and $(10) million, respectively were classified as derivative liabilities",
+            "position": 713611
+          },
+          {
+            "metric": "margin",
+            "context": "Margin is collateral, typically cash,",
+            "position": 713879
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income for each segment, see “Results of Operations” in Electric OperationsElectric FacilitiesCECONY’s capitalized costs for utility plant, net of accumulated depreciation, for distribution ",
+            "position": 240398
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$748$682$66CECONY’s gas sales and deliveries, excluding off-system sales, in 2024 compared with 2023 were: Thousands of Dt Delivered Revenues in Millions (a) For the Years Ended For th",
+            "position": 404968
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$13$(73)$86CECONY’s steam sales and deliveries in 2024 compared with 2023 were: Millions of Pounds DeliveredRevenues in Millions (a) For the Years Ended For the Years Ended Description",
+            "position": 407966
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$112$85$27O&R’s electric sales and deliveries in 2024 compared with 2023 were:CON EDISON ANNUAL REPORT 202465 Millions of kWh Delivered Revenues in Millions (a) For the Years Ended For",
+            "position": 413169
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$49$41$8O&R’s gas sales and deliveries, excluding off-system sales, in 2024 compared with 2023 were:66CON EDISON ANNUAL REPORT 2024 Thousands of Dt Delivered Revenues in Millions (a) F",
+            "position": 416501
+          },
+          {
+            "metric": "net income",
+            "context": "net income for common stock or net income per share, respectively,",
+            "position": 210412
+          },
+          {
+            "metric": "net income",
+            "context": "net income for common stock and net income per share, respectively,",
+            "position": 210633
+          },
+          {
+            "metric": "net income",
+            "context": "net income for common stock – GAAP basis$1,820$2,519$1,660Loss (gain) and other impacts related to the sale of the Clean Energy Businesses (pre-tax) (a) (b)63(887)(13)Income taxes (c)(13)113127Loss (g",
+            "position": 211565
+          },
+          {
+            "metric": "net income",
+            "context": "Net income for common stock for the year ended December 31, 2024 includes $(46",
+            "position": 388501
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income forCommon StockEarnings per Share 2024202320242023CECONY$1,748$1,606$5.05",
+            "position": 391786
+          },
+          {
+            "metric": "assets",
+            "context": "assets while seeking to develop electric transmission projects (Con Edison Transmission,",
+            "position": 202134
+          },
+          {
+            "metric": "assets",
+            "context": "assets ($(0.11",
+            "position": 214608
+          },
+          {
+            "metric": "assets",
+            "context": "assets ($(0.17",
+            "position": 215004
+          },
+          {
+            "metric": "assets",
+            "context": "assets ($0.34",
+            "position": 216081
+          },
+          {
+            "metric": "assets",
+            "context": "assets; 46 percent was produced by the company’s steam-electric generating assets, where steam and electricity are primarily cogenerated; and 21",
+            "position": 260651
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities\" in Note B to the financial statements in Item 8",
+            "position": 274351
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities Held For Sale on Con Edison's balance sheet, of $4 million in total for years ended December 31, 2025 through 2029, and $9 million for all years thereafter, and imputed interest of $6",
+            "position": 278686
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities reflected on their balance sheets, any funding obligations for their pension and other postretirement benefit plans, financial hedging activities,",
+            "position": 280377
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities arising from laws and regulations protecting the environment and other environmental matters, see “Environmental Matters” in Item 1, \"Air Quality,\" above and Note G to the financial statem",
+            "position": 337745
+          },
+          {
+            "metric": "equity",
+            "context": "equity of Con Edison held by non-affiliates of Con Edison, as of June 30, 2024, was approximately $30.8",
+            "position": 196333
+          },
+          {
+            "metric": "equity",
+            "context": "equity in 2025 which includes the physical settlement of the estimated $677 million available under its December 2024 equity forward transaction, in addition to equity issued under its dividend reinve",
+            "position": 204515
+          },
+          {
+            "metric": "equity",
+            "context": "equity investment in Mountain Valley Pipeline, LLC (pre-tax) (g)(6)——Income taxes (g)1——Accretion of the basis difference of Con Edison's equity investment in Mountain Valley Pipeline, LLC (net of tax",
+            "position": 212327
+          },
+          {
+            "metric": "equity",
+            "context": "equity investment in Mountain Valley Pipeline, LLC (pre-tax) (g)(0.01",
+            "position": 213384
+          },
+          {
+            "metric": "equity",
+            "context": "equity investment in Mountain Valley Pipeline, LLC (net of tax) (g)(0.01",
+            "position": 213525
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$30.8 billion",
+            "position": 196431
+          },
+          {
+            "text": "$2,519 million",
+            "position": 203021
+          },
+          {
+            "text": "$7.25 ",
+            "position": 203039
+          },
+          {
+            "text": "$1,868 million",
+            "position": 203096
+          },
+          {
+            "text": "$5.40 ",
+            "position": 203114
+          },
+          {
+            "text": "$1,762 million",
+            "position": 203150
+          },
+          {
+            "text": "$5.07 ",
+            "position": 203168
+          },
+          {
+            "text": "$4,699 million",
+            "position": 203302
+          },
+          {
+            "text": "$29 million",
+            "position": 203409
+          },
+          {
+            "text": "$5,079 million",
+            "position": 203525
+          },
+          {
+            "text": "$7,973 million",
+            "position": 203541
+          },
+          {
+            "text": "$8,161 million",
+            "position": 203557
+          },
+          {
+            "text": "$8,310 million",
+            "position": 203573
+          },
+          {
+            "text": "$7,665 million",
+            "position": 203592
+          },
+          {
+            "text": "$43 million",
+            "position": 203702
+          },
+          {
+            "text": "$94 million",
+            "position": 203715
+          },
+          {
+            "text": "$107 million",
+            "position": 203728
+          },
+          {
+            "text": "$113 million",
+            "position": 203742
+          },
+          {
+            "text": "$1,350 million",
+            "position": 204490
+          },
+          {
+            "text": "$677 million",
+            "position": 204586
+          },
+          {
+            "text": "$421 million",
+            "position": 206391
+          },
+          {
+            "text": "$510 million",
+            "position": 206518
+          },
+          {
+            "text": "$89 million",
+            "position": 206532
+          },
+          {
+            "text": "$51 million",
+            "position": 206641
+          },
+          {
+            "text": "$38 million",
+            "position": 206723
+          },
+          {
+            "text": "$1,820",
+            "position": 211605
+          },
+          {
+            "text": "$2,519",
+            "position": 211611
+          },
+          {
+            "text": "$1,660",
+            "position": 211617
+          },
+          {
+            "text": "$1,868",
+            "position": 212565
+          },
+          {
+            "text": "$1,762",
+            "position": 212571
+          },
+          {
+            "text": "$1,620",
+            "position": 212577
+          },
+          {
+            "text": "$5.26",
+            "position": 212631
+          },
+          {
+            "text": "$7.25",
+            "position": 212636
+          },
+          {
+            "text": "$4.68",
+            "position": 212641
+          },
+          {
+            "text": "$5.40",
+            "position": 213638
+          },
+          {
+            "text": "$5.07",
+            "position": 213643
+          },
+          {
+            "text": "$4.57",
+            "position": 213648
+          },
+          {
+            "text": "$0.18 ",
+            "position": 213977
+          },
+          {
+            "text": "$0.13 ",
+            "position": 213995
+          },
+          {
+            "text": "$62 million",
+            "position": 214023
+          },
+          {
+            "text": "$46 million",
+            "position": 214039
+          },
+          {
+            "text": "$0.05 ",
+            "position": 214414
+          },
+          {
+            "text": "$0.04 ",
+            "position": 214432
+          },
+          {
+            "text": "$19 million",
+            "position": 214460
+          },
+          {
+            "text": "$14 million",
+            "position": 214476
+          },
+          {
+            "text": "$0.14 ",
+            "position": 214810
+          },
+          {
+            "text": "$0.10 ",
+            "position": 214828
+          },
+          {
+            "text": "$48 million",
+            "position": 214856
+          },
+          {
+            "text": "$35 million",
+            "position": 214872
+          },
+          {
+            "text": "$0.01 ",
+            "position": 215230
+          }
+        ],
+        "percentages": [
+          {
+            "text": "45.7%",
+            "value": 45.7,
+            "position": 270709
+          },
+          {
+            "text": "20169.5%",
+            "value": 20169.5,
+            "position": 270714
+          },
+          {
+            "text": "0.50%",
+            "value": 0.5,
+            "position": 270728
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 270736
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 270739
+          },
+          {
+            "text": "20259.65%",
+            "value": 20259.65,
+            "position": 270787
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 270802
+          },
+          {
+            "text": "10.65%",
+            "value": 10.65,
+            "position": 270806
+          },
+          {
+            "text": "41.7%",
+            "value": 41.7,
+            "position": 270835
+          },
+          {
+            "text": "203010.3%",
+            "value": 203010.3,
+            "position": 270868
+          },
+          {
+            "text": "11.3%",
+            "value": 11.3,
+            "position": 270888
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 306051
+          },
+          {
+            "text": "6.0%",
+            "value": 6.0,
+            "position": 326365
+          },
+          {
+            "text": "100.0%",
+            "value": 100.0,
+            "position": 326410
+          },
+          {
+            "text": "1.0%",
+            "value": 1.0,
+            "position": 326460
+          },
+          {
+            "text": "0.4%",
+            "value": 0.4,
+            "position": 326500
+          },
+          {
+            "text": "0.7%",
+            "value": 0.7,
+            "position": 326540
+          },
+          {
+            "text": "4.6%",
+            "value": 4.6,
+            "position": 332968
+          },
+          {
+            "text": "2.3%",
+            "value": 2.3,
+            "position": 333008
+          },
+          {
+            "text": "0.2%",
+            "value": 0.2,
+            "position": 333045
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 401776
+          },
+          {
+            "text": "75721.7 %",
+            "value": 75721.7,
+            "position": 401792
+          },
+          {
+            "text": "0.3 %",
+            "value": 0.3,
+            "position": 402057
+          },
+          {
+            "text": "6396.3 %",
+            "value": 6396.3,
+            "position": 402080
+          },
+          {
+            "text": "50.2 %",
+            "value": 50.2,
+            "position": 405845
+          },
+          {
+            "text": "624.0 %",
+            "value": 624.0,
+            "position": 408309
+          },
+          {
+            "text": "91.6 %",
+            "value": 91.6,
+            "position": 408502
+          },
+          {
+            "text": "11.3 %",
+            "value": 11.3,
+            "position": 413557
+          },
+          {
+            "text": "5513.1 %",
+            "value": 5513.1,
+            "position": 413572
+          },
+          {
+            "text": "6.5 %",
+            "value": 6.5,
+            "position": 413789
+          },
+          {
+            "text": "9312.3 %",
+            "value": 9312.3,
+            "position": 413806
+          },
+          {
+            "text": "12.5 %",
+            "value": 12.5,
+            "position": 417142
+          },
+          {
+            "text": "76116.7 %",
+            "value": 76116.7,
+            "position": 417148
+          },
+          {
+            "text": "4.7 %",
+            "value": 4.7,
+            "position": 437129
+          },
+          {
+            "text": "5.4 %",
+            "value": 5.4,
+            "position": 437134
+          },
+          {
+            "text": "5.6 %",
+            "value": 5.6,
+            "position": 437139
+          },
+          {
+            "text": "5.3 %",
+            "value": 5.3,
+            "position": 437144
+          },
+          {
+            "text": "0.50 %",
+            "value": 0.5,
+            "position": 448615
+          },
+          {
+            "text": "1.00 %",
+            "value": 1.0,
+            "position": 448681
+          },
+          {
+            "text": "5.70 %",
+            "value": 5.7,
+            "position": 625657
+          },
+          {
+            "text": "5.15 %",
+            "value": 5.15,
+            "position": 625663
+          },
+          {
+            "text": "5.45 %",
+            "value": 5.45,
+            "position": 625669
+          },
+          {
+            "text": "4.30 %",
+            "value": 4.3,
+            "position": 625720
+          },
+          {
+            "text": "4.20 %",
+            "value": 4.2,
+            "position": 625726
+          },
+          {
+            "text": "4.00 %",
+            "value": 4.0,
+            "position": 625732
+          },
+          {
+            "text": "3.80 %",
+            "value": 3.8,
+            "position": 625773
+          },
+          {
+            "text": "3.20 %",
+            "value": 3.2,
+            "position": 625794
+          },
+          {
+            "text": "3.00 %",
+            "value": 3.0,
+            "position": 625942
+          },
+          {
+            "text": "3.50 %",
+            "value": 3.5,
+            "position": 626005
+          },
+          {
+            "text": "6.75 %",
+            "value": 6.75,
+            "position": 626041
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 181
+          },
+          {
+            "category": "operational_risk",
+            "count": 53
+          },
+          {
+            "category": "financial_risk",
+            "count": 655
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 299
+          },
+          {
+            "category": "technology_risk",
+            "count": 155
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 828048,
+        "filtered_length": 792463,
+        "removed_ratio": 4.3,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.6050566695728,
+      "confidence": 0.8128703895117119,
+      "overall_score": 51.3949433304272,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.774193548387096,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.027898866608544015,
+        "risk_adjusted_signal": 0.18764451893306205,
+        "expected_return_annualized": 0.053045547727326246,
+        "signal_sharpe_ratio": 0.0035363698484884164,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.18764451893306205,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.18764451893306205,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.06451612903225806,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.18764451893306205,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.027898866608544015
+      },
+      "risk_adjusted_signal": 0.18764451893306205,
+      "expected_return": 0.0005304554772732625,
+      "signal_sharpe": 0.0035363698484884164,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.3949433304272,
+    "confidence": 0.8128703895117119,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:23:27.920265",
+  "filing_date": "2025-02-20",
+  "filing_filename": "2025-02-20-10k-ED.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

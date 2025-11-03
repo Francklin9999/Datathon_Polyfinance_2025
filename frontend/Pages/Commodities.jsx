@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,7 +11,7 @@ export default function Commodities() {
 
   const { data: snapshots = [] } = useQuery({
     queryKey: ['snapshots'],
-    queryFn: () => base44.entities.MarketSnapshot.list(),
+    queryFn: () => api.entities.MarketSnapshot.list(),
     initialData: [],
   });
 
@@ -19,7 +19,7 @@ export default function Commodities() {
     setIsGenerating(true);
     try {
       const allCommodities = snapshots.flatMap(s => s.commodities || []);
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a commodities desk analyst. Provide a brief (3-5 sentences) summary of commodity market conditions: ${JSON.stringify(allCommodities)}. Focus on: energy complex, precious metals, supply/demand dynamics, geopolitical factors. Institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

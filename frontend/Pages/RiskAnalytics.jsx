@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +14,7 @@ export default function RiskAnalytics() {
   // Fetch stress test data from backend
   const { data: stressData, error: stressError, isLoading: isLoadingStress, refetch: refetchStress } = useQuery({
     queryKey: ['stress-test', stressScenario],
-    queryFn: () => base44.risk.stressTest({
+    queryFn: () => api.risk.stressTest({
       positions: [],
       stressScenario: stressScenario
     }),
@@ -24,7 +24,7 @@ export default function RiskAnalytics() {
   // Fetch correlation matrix
   const { data: correlationData, error: correlationError, isLoading: isLoadingCorrelation, refetch: refetchCorrelation } = useQuery({
     queryKey: ['correlation'],
-    queryFn: () => base44.risk.getCorrelation(),
+    queryFn: () => api.risk.getCorrelation(),
     initialData: [],
   });
 

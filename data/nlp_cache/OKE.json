@@ -1,0 +1,944 @@
+{
+  "ticker": "OKE",
+  "analysis": {
+    "ticker": "OKE",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 32.95292439372325,
+        "financial_sentiment": -0.058823529411764705,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "nd objectives of management for future operations, economic performance or related assumptions, are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 59770
+        },
+        {
+          "statement": "ch as “anticipates,” “believes,” “continues,” “could,” “estimates,” “expect,” “forecasts,” “goal,” “guidance,” “intends,” “may,” “might,” “outlook,” “plans,” “potential,” “projects,” “scheduled,” “should,” “target,” “will,” “would” and other words and terms of similar meaning.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 59945
+        },
+        {
+          "statement": "Although we believe that our expectations regarding future events are based on reasonable assumptions, we can give no assurance that such expectations or assumptions will be achieved.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 60132
+        },
+        {
+          "statement": "We expect to achieve significant synergies by combining our complementary asset positions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 68538
+        },
+        {
+          "statement": "We expect to invest approximately $1.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 71159
+        },
+        {
+          "statement": "We expect to add connections to our Houston-based assets beginning in mid-2025 through the end of 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 72128
+        },
+        {
+          "statement": "ital project to relocate a 150 MMcf/d processing plant to the Permian Basin from North Texas, which we expect to be in service in the first quarter of 2026.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 74762
+        },
+        {
+          "statement": "addition, we are in the process of expanding our storage injection capabilities in Oklahoma, which we expect to be complete in the second quarter of 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 76875
+        },
+        {
+          "statement": "We expect our internally generated cash flows will allow us to fund high-return capital projects in our existing operating regions, grow our dividend, reduce debt and fund our $2.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 79893
+        },
+        {
+          "statement": "•Maximizing total shareholder return - We plan to grow earnings through high-return capital projects that will allow us to increase our dividend and repurchase shares under our $2.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 80414
+        },
+        {
+          "statement": "We believe our natural gas gathering facilities, upstream of our natural gas processing plants, meet the criteria used by the FERC for non-jurisdictional natural gas gathering facility status.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 87743
+        },
+        {
+          "statement": "We believe our assets are located strategically, connecting diverse supply areas to market and demand centers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 121460
+        },
+        {
+          "statement": "In 2025, we intend to work towards further reductions in our emissions toward our target through improved methane management practices and system optimization that will not require material capital expenditures.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 127766
+        },
+        {
+          "statement": "e EPA and/or state regulators may issue additional regulations, responses, amendments and/or policy guidance, which could alter our present expectations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 131479
+        },
+        {
+          "statement": "place more comprehensive regulations governing underground hydrocarbon storage in salt caverns, and we believe we are in substantial compliance with these newer regulations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 141793
+        },
+        {
+          "statement": "•Inclusion & Diversity: we respect the uniqueness and worth of each individual, and we believe that an inclusive culture and diverse workforce are essential for a sense of belonging, engagement and performance.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 146682
+        },
+        {
+          "statement": "We expect that beginning on May 1, 2025, legacy EnLink employees will have access to these ONEOK health and welfare benefits.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 150927
+        },
+        {
+          "statement": "31, 2025, we expect legacy EnLink employees to have access to the ONE Trust Fund benefits and can begin making contributions to the fund beginning on May 1, 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 151654
+        },
+        {
+          "statement": "RA and a related rule that the EPA finalized in November 2024 to implement the Methane Fee program, we expect to begin paying Methane Fees in 2025 (for 2024 reported emissions) for applicable facilities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 206436
+        },
+        {
+          "statement": "Our future results of operations, financial position or cash flows could be affected adversely if such costs are not recovered or otherwise passed on to our customers.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 207636
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue from providing pipeline capacity and tank storage services, as well as providing services such as terminalling, ethanol and biodiesel unloading and loading, and additive injection,",
+            "position": 110004
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986,",
+            "position": 196483
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and cost of sales and fuel, and, therefore,",
+            "position": 261986
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Sources - Revenue sources are disaggregated in Note S and are derived from commodity sales and services revenues, as described below: Commodity Sales (all segments) - We contract to deliver re",
+            "position": 349864
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue is recorded based on the contracted selling price,",
+            "position": 350643
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings increased in 2024, compared with 2023, due primarily to a full year of earnings from the new Refined Products and Crude segment,",
+            "position": 72380
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings were approximately 90% fee-based in 2024",
+            "position": 73118
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings increased in 2024, compared with 2023, due to higher volumes in the Rocky Mountain region,",
+            "position": 74403
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings decreased in 2024, compared with 2023, due primarily to the insurance settlement gain in 2023 related to the Medford incident,",
+            "position": 74862
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings increased in 2024, compared with 2023, due primarily to the impact of the interstate pipeline divestiture and increased transportation services,",
+            "position": 76404
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing contributions under our 401",
+            "position": 154339
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing quarterly contributions increased to 6% from 1",
+            "position": 154404
+          },
+          {
+            "metric": "profit",
+            "context": "profit opportunities created by the volatility in prices of Refined Products,",
+            "position": 166489
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing contribution equal to 1",
+            "position": 470184
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA and our operating metrics,",
+            "position": 253439
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA is defined as net income adjusted for interest expense, depreciation and amortization, noncash impairment charges, income taxes,",
+            "position": 254125
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA and, beginning in 2023,",
+            "position": 254424
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA in 2023,",
+            "position": 254807
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA from our unconsolidated affiliates is calculated consistently with the definition above and excludes items such as interest expense, depreciation and amortization,",
+            "position": 254872
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS; and (4",
+            "position": 253356
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS$5.17",
+            "position": 257059
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS decreased due primarily to the impact of the insurance settlement gain in 2023",
+            "position": 259280
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (Note K)$5.19",
+            "position": 328900
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (Note K)$5.17",
+            "position": 328938
+          },
+          {
+            "metric": "margin",
+            "context": "margin contracts in the prior year and lower volumes in the Permian Basin,",
+            "position": 267936
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements with our counterparties with cash,",
+            "position": 290666
+          },
+          {
+            "metric": "margin",
+            "context": "margin growth rates, discount rates applied to estimated future cash flows,",
+            "position": 298645
+          },
+          {
+            "metric": "margin",
+            "context": "margin growth rates involved evaluating whether the assumptions used by management were reasonable considering (i) the current and past performance of EnLink and (ii) whether the assumptions were 65",
+            "position": 327065
+          },
+          {
+            "metric": "margin",
+            "context": "margin growth rates,",
+            "position": 327581
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income; (2) net income; (3) diluted EPS; and (4",
+            "position": 253310
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, net(305)(786)(105)(481)681 Operating income$4,989 $4,072 $2,807 917 1,265 Equity in net earnings from investments$439 $202 $148 237 54 Interest expense, net of capitalized interest$(",
+            "position": 256725
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income increased $917 million primarily as a result of the following:•Natural Gas Gathering and Processing - an increase of $181 million due primarily to the operating income of EnLink, high",
+            "position": 257593
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, net (Notes B and C)(305)(786)(105)Operating income4,989 4,072 2,807 Equity in net earnings from investments (Note O)439 202 148 Other income (expense), net53 89 (29)Interest expense ",
+            "position": 328290
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, net,",
+            "position": 397785
+          },
+          {
+            "metric": "net income",
+            "context": "net income; (3) diluted EPS; and (4",
+            "position": 253332
+          },
+          {
+            "metric": "net income",
+            "context": "net income adjusted for interest expense, depreciation and amortization, noncash impairment charges, income taxes,",
+            "position": 254146
+          },
+          {
+            "metric": "net income",
+            "context": "net income,",
+            "position": 255774
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,112 $2,659 $1,722 453 937 Net income attributable to ONEOK$3,035 $2,659 $1,722 376 937 Diluted EPS$5.17",
+            "position": 256951
+          },
+          {
+            "metric": "net income",
+            "context": "Net income increased due primarily to the items discussed above and higher equity in net earnings from investments, offset partially by higher interest expense due to higher debt balances resulting fr",
+            "position": 258846
+          },
+          {
+            "metric": "assets",
+            "context": "assets beginning in mid-2025 through the end of 2025",
+            "position": 72178
+          },
+          {
+            "metric": "assets",
+            "context": "assets are located in, and connected with, some of the most productive shale basins, as well as refineries and demand centers,",
+            "position": 72714
+          },
+          {
+            "metric": "assets",
+            "context": "assets, which are wholly owned, except where noted, and exclude EnLink, which is shown separately below:•13,500 miles of natural gas gathering pipelines; and•Natural gas processing plants with 1.9",
+            "position": 83890
+          },
+          {
+            "metric": "assets",
+            "context": "assets added as a result of the EnLink Acquisitions:•9,000 miles of natural gas gathering pipelines (includes gross mileage of a consolidated, partially owned subsidiary); and•Natural gas processing p",
+            "position": 84651
+          },
+          {
+            "metric": "assets",
+            "context": "assets, which are wholly owned, except where noted, and exclude EnLink, which is shown separately below:•9,300 miles of gathering pipelines; •4,800 miles of distribution pipelines; •NGL fractionators ",
+            "position": 90042
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities could affect adversely our business, results of operations,",
+            "position": 191916
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities in our business due to our handling of the products we gather, transport, process and store; air emissions related to our operations; past industry operations and waste disposal practices,",
+            "position": 210176
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities to the extent that the court determined either of the following were true at the time the guarantor issued the guarantee:•the guarantor incurred the guarantee with the intent to hinder, de",
+            "position": 219261
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, were greater than the fair saleable value of all of its assets at a fair valuation;•the present fair saleable value of its assets was less than the amount that would be required to pay it",
+            "position": 220396
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for which we are not indemnified, our indemnity is inadequate or our insurance policies may exclude from coverage;•an inability to hire,",
+            "position": 221943
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities45Item 6",
+            "position": 58011
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01",
+            "position": 56842
+          },
+          {
+            "text": "$47.3 billion",
+            "position": 57407
+          },
+          {
+            "text": "$2.5 Billion",
+            "position": 60471
+          },
+          {
+            "text": "$2.5 billion",
+            "position": 60508
+          },
+          {
+            "text": "$3.5 Billion",
+            "position": 60586
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 60652
+          },
+          {
+            "text": "$500 million",
+            "position": 61370
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 62510
+          },
+          {
+            "text": "$120 million",
+            "position": 63167
+          },
+          {
+            "text": "$0.01 ",
+            "position": 66075
+          },
+          {
+            "text": "$60 million",
+            "position": 66366
+          },
+          {
+            "text": "$14.90 ",
+            "position": 67920
+          },
+          {
+            "text": "$300 million",
+            "position": 68045
+          },
+          {
+            "text": "$3.3 billion",
+            "position": 68091
+          },
+          {
+            "text": "$7.0 billion",
+            "position": 68263
+          },
+          {
+            "text": "$4.0 billion",
+            "position": 69261
+          },
+          {
+            "text": "$2.6 billion",
+            "position": 69755
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 71193
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 71458
+          },
+          {
+            "text": "$227 million",
+            "position": 71529
+          },
+          {
+            "text": "$280 million",
+            "position": 71833
+          },
+          {
+            "text": "$1.03 ",
+            "position": 73346
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 73522
+          },
+          {
+            "text": "$172 million",
+            "position": 73593
+          },
+          {
+            "text": "$733 million",
+            "position": 73680
+          },
+          {
+            "text": "$10,000 ",
+            "position": 150509
+          },
+          {
+            "text": "$5,250 ",
+            "position": 152585
+          },
+          {
+            "text": "$33.2 billion",
+            "position": 213726
+          },
+          {
+            "text": "$15 million",
+            "position": 216810
+          },
+          {
+            "text": "$100 million",
+            "position": 216865
+          },
+          {
+            "text": "$2,000 ",
+            "position": 242055
+          },
+          {
+            "text": "$112.96 ",
+            "position": 242082
+          },
+          {
+            "text": "$1,993 ",
+            "position": 242097
+          },
+          {
+            "text": "$102.27 ",
+            "position": 242131
+          },
+          {
+            "text": "$1,841 ",
+            "position": 242149
+          },
+          {
+            "text": "$100 ",
+            "position": 242762
+          },
+          {
+            "text": "$56.64 ",
+            "position": 242964
+          },
+          {
+            "text": "$93.37 ",
+            "position": 242971
+          },
+          {
+            "text": "$111.01 ",
+            "position": 242978
+          },
+          {
+            "text": "$125.62 ",
+            "position": 242986
+          },
+          {
+            "text": "$188.65 ",
+            "position": 242994
+          },
+          {
+            "text": "$118.40 ",
+            "position": 243015
+          },
+          {
+            "text": "$152.39 ",
+            "position": 243023
+          },
+          {
+            "text": "$124.79 ",
+            "position": 243031
+          },
+          {
+            "text": "$157.59 ",
+            "position": 243039
+          },
+          {
+            "text": "$197.02 ",
+            "position": 243047
+          },
+          {
+            "text": "$66.32 ",
+            "position": 243079
+          },
+          {
+            "text": "$102.56 ",
+            "position": 243086
+          },
+          {
+            "text": "$169.96 ",
+            "position": 243094
+          },
+          {
+            "text": "$167.71 ",
+            "position": 243102
+          }
+        ],
+        "percentages": [
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 61025
+          },
+          {
+            "text": "50.1%",
+            "value": 50.1,
+            "position": 61122
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 61857
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 63773
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 64589
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 64740
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 65594
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 67948
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 71084
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 71098
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 73146
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 73378
+          },
+          {
+            "text": "84%",
+            "value": 84.0,
+            "position": 84199
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 84207
+          },
+          {
+            "text": "76%",
+            "value": 76.0,
+            "position": 85673
+          },
+          {
+            "text": "72%",
+            "value": 72.0,
+            "position": 85681
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 86150
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 86547
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 86554
+          },
+          {
+            "text": "92%",
+            "value": 92.0,
+            "position": 90467
+          },
+          {
+            "text": "98%",
+            "value": 98.0,
+            "position": 90475
+          },
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 100379
+          },
+          {
+            "text": "96%",
+            "value": 96.0,
+            "position": 100387
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 100563
+          },
+          {
+            "text": "93%",
+            "value": 93.0,
+            "position": 144920
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 153441
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 154464
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 154572
+          },
+          {
+            "text": "4.25%",
+            "value": 4.25,
+            "position": 250853
+          },
+          {
+            "text": "4.4%",
+            "value": 4.4,
+            "position": 250896
+          },
+          {
+            "text": "4.75%",
+            "value": 4.75,
+            "position": 250939
+          },
+          {
+            "text": "5.05%",
+            "value": 5.05,
+            "position": 250982
+          },
+          {
+            "text": "5.7%",
+            "value": 5.7,
+            "position": 251025
+          },
+          {
+            "text": "5.85%",
+            "value": 5.85,
+            "position": 251071
+          },
+          {
+            "text": "4.9%",
+            "value": 4.9,
+            "position": 251590
+          },
+          {
+            "text": "2.75%",
+            "value": 2.75,
+            "position": 251785
+          },
+          {
+            "text": "3.7%",
+            "value": 3.7,
+            "position": 252610
+          },
+          {
+            "text": "97 %",
+            "value": 97.0,
+            "position": 270941
+          },
+          {
+            "text": "96 %",
+            "value": 96.0,
+            "position": 270945
+          },
+          {
+            "text": "94 %",
+            "value": 94.0,
+            "position": 270949
+          },
+          {
+            "text": "4.85%",
+            "value": 4.85,
+            "position": 278822
+          },
+          {
+            "text": "0.25%",
+            "value": 0.25,
+            "position": 278941
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 308857
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 314022
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 316415
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 321077
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 321128
+          },
+          {
+            "text": "57%",
+            "value": 57.0,
+            "position": 341295
+          },
+          {
+            "text": "3.2%",
+            "value": 3.2,
+            "position": 426122
+          },
+          {
+            "text": "2.2%",
+            "value": 2.2,
+            "position": 426158
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 201
+          },
+          {
+            "category": "operational_risk",
+            "count": 109
+          },
+          {
+            "category": "financial_risk",
+            "count": 547
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 116
+          },
+          {
+            "category": "technology_risk",
+            "count": 122
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 559371,
+        "filtered_length": 547303,
+        "removed_ratio": 2.16,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.48966613672496,
+      "confidence": 0.8801686417854042,
+      "overall_score": 51.51033386327504,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.05882352941177,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.030206677265500803,
+        "risk_adjusted_signal": 0.20316658391833387,
+        "expected_return_annualized": 0.05743350663859408,
+        "signal_sharpe_ratio": 0.003828900442572939,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.20316658391833387,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.20316658391833387,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.058823529411764705,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.20316658391833387,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.030206677265500803
+      },
+      "risk_adjusted_signal": 0.20316658391833387,
+      "expected_return": 0.0005743350663859408,
+      "signal_sharpe": 0.003828900442572939,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.51033386327504,
+    "confidence": 0.8801686417854042,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:29:51.355131",
+  "filing_date": "2025-02-25",
+  "filing_filename": "2025-02-25-10k-OKE.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

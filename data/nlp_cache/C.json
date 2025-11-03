@@ -1,0 +1,944 @@
+{
+  "ticker": "C",
+  "analysis": {
+    "ticker": "C",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 27.821522309711288,
+        "financial_sentiment": -0.017543859649122806,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "For additional information about trends, uncertainties and risks related to Services’ future results, see “Executive Summary” above and “Managing Global Risk—Other Risks—Country Risk—Argentina” and “—Russia” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 408491
+        },
+        {
+          "statement": "For additional information about trends, uncertainties and risks related to Markets’ future results, see “Executive Summary” above and “Managing Global Risk—Other Risks—Country Risk—Argentina” and “—Russia” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 416920
+        },
+        {
+          "statement": "For additional information about trends, uncertainties and risks related to Banking’s future results, see “Executive Summary” above and “Managing Global Risk—Other Risks—Country Risk—Argentina” and “—Russia” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 424503
+        },
+        {
+          "statement": "For additional information about trends, uncertainties and risks related to Wealth’s future results, see “Executive Summary” above and “Risk Factors” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 430664
+        },
+        {
+          "statement": "For additional information about trends, uncertainties and risks related to USPB’s future results, see “Executive Summary” above and “Risk Factors” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 438179
+        },
+        {
+          "statement": "additional information about trends, uncertainties and risks related to All Other’s (managed basis) future results, see “Executive Summary” above and “Risk Factors” and “Managing Global Risk—Other Risks—Country Risk—Russia” below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 450848
+        },
+        {
+          "statement": "i, CCAR includes a qualitative evaluation of a firm’s abilities to determine its capital needs on a forward-looking basis.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 470361
+        },
+        {
+          "statement": "ue operations throughout times of economic and financial market stress and whether Citi has robust, forward-looking capital planning processes that account for its unique risks.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 471033
+        },
+        {
+          "statement": "DFAST is a forward-looking quantitative evaluation of the impact of stressful economic and financial market conditions on Citi’s regulatory capital.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 471472
+        },
+        {
+          "statement": "Both CCAR and DFAST include an estimate of projected revenues, losses, reserves, pro forma regulatory capital ratios and any other additional capital measures deemed relevant by Citi.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 472045
+        },
+        {
+          "statement": "The annual stress test consists of a forward-looking quantitative evaluation of the impact of stressful economic and financial market conditions under several scenarios on Citibank’s regulatory capital.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 472549
+        },
+        {
+          "statement": "These proposed revisions are estimated to decrease the TLAC percentage of Advanced Approaches RWA as well as the TLAC percentage of Total Leverage Exposure.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 504561
+        },
+        {
+          "statement": "outcomes, which can change significantly upon finalization, or upon implementation or interpretive guidance from numerous regulatory bodies worldwide, and such guidance can change.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 520529
+        },
+        {
+          "statement": "or upon implementation or interpretive guidance from numerous regulatory bodies worldwide, and such guidance can change.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 520590
+        },
+        {
+          "statement": "odifications or requirements resulting from these ongoing reviews, as well as any future changes or guidance provided by the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 574793
+        },
+        {
+          "statement": "tory or legislative requirement is occurring simultaneously with changing or conflicting regulatory guidance from multiple jurisdictions (including various U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 588839
+        },
+        {
+          "statement": "luding discretionary incentive awards to covered employees as defined in applicable bank regulatory guidance), in accordance with guidelines established by the Committee from time to time.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 633178
+        },
+        {
+          "statement": "The Committee also has broad oversight over compliance with bank regulatory guidance governing Citi’s incentive compensation.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 633343
+        },
+        {
+          "statement": "This strategy is translated into forward-looking plans (collectively Citi’s Strategic Plan) that are then cascaded across the organization.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 809957
+        },
+        {
+          "statement": "Going forward, Citi may record devaluations on its net ruble-denominated assets in earnings, without the benefit from a change in the fair value of derivative positions used to economically hedge the exposures.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 824138
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue growth of 3%, with record revenues in Services, Wealth and USPB, and disciplined expense management (down 4%),",
+            "position": 356115
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue (up 15%), including the benefit of a smaller impact from the Argentina currency devaluation ($(253) million in 2024 versus approximately $(1.9",
+            "position": 359368
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue was partially offset by a decline in net interest income (down 1",
+            "position": 359661
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and higher net interest income (up 1",
+            "position": 365481
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue increased 5",
+            "position": 365710
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (see Note 10",
+            "position": 359194
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per shareBasicIncome from continuing operations$6.03",
+            "position": 392604
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings may impact the ability of Citigroup to engage in return of capital to common shareholders in the form of dividends and share repurchases,",
+            "position": 455561
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings will depend upon various factors, including, among others,",
+            "position": 529949
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 532823
+          },
+          {
+            "metric": "profit",
+            "context": "profit and loss excludes realized trading revenue, net interest, fees and commissions,",
+            "position": 780223
+          },
+          {
+            "metric": "profit",
+            "context": "profit and loss associated with Citi’s covered positions compared to Citi’s one-day Regulatory VaR during 2024",
+            "position": 780896
+          },
+          {
+            "metric": "profit",
+            "context": "Profit and Loss(1)—12 Months Ended December 31, 2024In millions of dollars(1) Buy-and-hold profit and loss, as defined by the banking regulators under Basel III,",
+            "position": 781673
+          },
+          {
+            "metric": "profit",
+            "context": "profit and loss excludes realized trading revenue and net interest intra-day trading profit and loss on new and terminated trades,",
+            "position": 781983
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss, the title and position of the CODM, an explanation of how the CODM uses the reported measure(s) of segment profit or loss in assessing segment performance and deciding how to allocate ",
+            "position": 993598
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS incorporates the potential impact of contingently issuable shares, stock options and awards,",
+            "position": 991059
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS is calculated under both the two-class and treasury stock methods,",
+            "position": 991328
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS) computations:In millions of dollars, except per share amounts202420232022Earnings per common share Income from continuing operations before attribution of noncontrolling interests$12,835 $9,382 $",
+            "position": 1106203
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS$11,458 $7,850 $13,700 Add back: Dividends allocated to employee restricted and deferred shares with rights to dividends that are forfeitable74 57 41 Net income allocated to common shareholders for",
+            "position": 1107376
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (in millions)1,940.1",
+            "position": 1107853
+          },
+          {
+            "metric": "margin",
+            "context": "margin loans, $24 billion in personal, small business and other loans and $5",
+            "position": 425681
+          },
+          {
+            "metric": "margin",
+            "context": "Margin (NIM)106Additional Interest Rate Details110Market Risk of Trading Portfolios112Factor Sensitivities115Value at Risk (VaR)115Stress Testing118OPERATIONAL RISK116Cybersecurity Risk119COMPLIANCE R",
+            "position": 615002
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 639824
+          },
+          {
+            "metric": "margin",
+            "context": "Margin lending(5)29.4",
+            "position": 662758
+          },
+          {
+            "metric": "margin",
+            "context": "margin lending, credit cards and other lending products to customer segments that range from affluent to ultra-high net worth through the Private Bank,",
+            "position": 671767
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate in basis points (bps) of Total revenues,",
+            "position": 395328
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate used in determining the base macroeconomic forecast for Citi’s ACL at each quarterly reporting period from 4Q23 to 4Q24",
+            "position": 855283
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate(1",
+            "position": 855802
+          },
+          {
+            "metric": "market share",
+            "context": "market share,",
+            "position": 526402
+          },
+          {
+            "metric": "market share",
+            "context": "market share, and its businesses,",
+            "position": 549407
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $12.7",
+            "position": 358510
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $9.2",
+            "position": 358576
+          },
+          {
+            "metric": "net income",
+            "context": "Net income increased 37% versus the prior year, driven by the higher revenues, lower expenses and a lower effective tax rate,",
+            "position": 358908
+          },
+          {
+            "metric": "net income",
+            "context": "net income and a decrease in RWA, partially offset by the payment of common and preferred dividends,",
+            "position": 364288
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $6.5",
+            "position": 365257
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 370674
+          },
+          {
+            "metric": "assets",
+            "context": "assets, as well as an increase in net interest income (up 2",
+            "position": 371294
+          },
+          {
+            "metric": "assets",
+            "context": "Assets,",
+            "position": 374750
+          },
+          {
+            "metric": "assets",
+            "context": "assets$2,352,945 $2,411,834 $2,416,676 $2,291,413 $2,260,090 Total deposits 1,284,458 1,308,681 1,365,954 1,317,230 1,280,671 Long-term debt287,300 286,619 271,606 254,374 271,686 Citigroup common sto",
+            "position": 393333
+          },
+          {
+            "metric": "assets",
+            "context": "assets and $807",
+            "position": 401031
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities attributable to own creditworthiness, net of tax(910)(410)Less: Intangible assets:Goodwill, net of related DTLs(3)17,994 18,778 Identifiable intangible assets other than MSRs, net of relat",
+            "position": 478887
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities attributable to own creditworthiness, net of tax(1)49 89 Other Accumulated other comprehensive income (loss) (AOCI)9 4 Goodwill, net of related DTLs403 784 Identifiable intangible assets o",
+            "position": 483800
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 529278
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities; and the assessment of goodwill and other assets for 58",
+            "position": 566698
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities resulting from changes in market variables, such as interest rates, equity and commodity prices,",
+            "position": 620951
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities146–147, 179–181, 316–318 6",
+            "position": 343432
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Compensation Plan Information” in the Proxy Statement,",
+            "position": 345167
+          },
+          {
+            "metric": "equity",
+            "context": "equity (TCE), return on tangible common equity (RoTCE) and tangible book value per share (TBVPS)•Non-Markets net interest incomeFor more information on the Argentina currency devaluation and/or the FD",
+            "position": 350630
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Book Value Per Share,",
+            "position": 353407
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities,",
+            "position": 364627
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$120.8 billion",
+            "position": 342875
+          },
+          {
+            "text": "$6.7 billion",
+            "position": 357856
+          },
+          {
+            "text": "$4.2 billion",
+            "position": 357918
+          },
+          {
+            "text": "$2.5 billion",
+            "position": 357955
+          },
+          {
+            "text": "$20 billion",
+            "position": 358083
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 358156
+          },
+          {
+            "text": "$12.7 billion",
+            "position": 358524
+          },
+          {
+            "text": "$5.94 ",
+            "position": 358542
+          },
+          {
+            "text": "$9.2 billion",
+            "position": 358590
+          },
+          {
+            "text": "$4.04 ",
+            "position": 358607
+          },
+          {
+            "text": "$81.1 billion",
+            "position": 359240
+          },
+          {
+            "text": "$81.4 billion",
+            "position": 360117
+          },
+          {
+            "text": "$694 billion",
+            "position": 360217
+          },
+          {
+            "text": "$1.3 ",
+            "position": 360353
+          },
+          {
+            "text": "$54.0 billion",
+            "position": 360687
+          },
+          {
+            "text": "$203 million",
+            "position": 360774
+          },
+          {
+            "text": "$1.7 billion",
+            "position": 360816
+          },
+          {
+            "text": "$53.8 billion",
+            "position": 360861
+          },
+          {
+            "text": "$259 million",
+            "position": 361028
+          },
+          {
+            "text": "$781 million",
+            "position": 361056
+          },
+          {
+            "text": "$53.5 billion",
+            "position": 361524
+          },
+          {
+            "text": "$10.1 billion",
+            "position": 361645
+          },
+          {
+            "text": "$0.2 billion",
+            "position": 362446
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 362474
+          },
+          {
+            "text": "$9.0 billion",
+            "position": 362729
+          },
+          {
+            "text": "$8.6 billion",
+            "position": 362807
+          },
+          {
+            "text": "$397 million",
+            "position": 362977
+          },
+          {
+            "text": "$250 million",
+            "position": 362995
+          },
+          {
+            "text": "$6.5 billion",
+            "position": 365271
+          },
+          {
+            "text": "$19.6 billion",
+            "position": 365404
+          },
+          {
+            "text": "$14.5 billion",
+            "position": 365902
+          },
+          {
+            "text": "$5.1 billion",
+            "position": 366510
+          },
+          {
+            "text": "$10.6 billion",
+            "position": 366982
+          },
+          {
+            "text": "$276 million",
+            "position": 367309
+          },
+          {
+            "text": "$950 million",
+            "position": 367327
+          },
+          {
+            "text": "$4.9 billion",
+            "position": 367661
+          },
+          {
+            "text": "$19.8 billion",
+            "position": 367779
+          },
+          {
+            "text": "$13.2 billion",
+            "position": 368861
+          },
+          {
+            "text": "$463 million",
+            "position": 369030
+          },
+          {
+            "text": "$438 million",
+            "position": 369048
+          },
+          {
+            "text": "$35 million",
+            "position": 369508
+          },
+          {
+            "text": "$6.2 billion",
+            "position": 369643
+          },
+          {
+            "text": "$180 million",
+            "position": 369683
+          },
+          {
+            "text": "$443 million",
+            "position": 369733
+          },
+          {
+            "text": "$6.4 billion",
+            "position": 369842
+          },
+          {
+            "text": "$3.6 billion",
+            "position": 369970
+          },
+          {
+            "text": "$4.5 billion",
+            "position": 370361
+          },
+          {
+            "text": "$224 million",
+            "position": 370569
+          },
+          {
+            "text": "$143 million",
+            "position": 370608
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 370956
+          }
+        ],
+        "percentages": [
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 356133
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 356229
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 356452
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 358929
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 359112
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 359131
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 359380
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 359732
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 362752
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 362830
+          },
+          {
+            "text": "13.6%",
+            "value": 13.6,
+            "position": 364088
+          },
+          {
+            "text": "13.4%",
+            "value": 13.4,
+            "position": 364131
+          },
+          {
+            "text": "5.8%",
+            "value": 5.8,
+            "position": 365007
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 365428
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 365452
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 365728
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 365926
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 366533
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 366551
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 367819
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 368313
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 369666
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 369865
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 369993
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 370123
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 370384
+          },
+          {
+            "text": "139%",
+            "value": 139.0,
+            "position": 370979
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 371112
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 373573
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 374880
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 382561
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 382644
+          },
+          {
+            "text": "76%",
+            "value": 76.0,
+            "position": 382773
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 383748
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 384106
+          },
+          {
+            "text": "0.51 %",
+            "value": 0.51,
+            "position": 393820
+          },
+          {
+            "text": "0.38 %",
+            "value": 0.38,
+            "position": 393826
+          },
+          {
+            "text": "0.62 %",
+            "value": 0.62,
+            "position": 393832
+          },
+          {
+            "text": "0.94 %",
+            "value": 0.94,
+            "position": 393838
+          },
+          {
+            "text": "0.50 %",
+            "value": 0.5,
+            "position": 393844
+          },
+          {
+            "text": "13.63 %",
+            "value": 13.63,
+            "position": 394237
+          },
+          {
+            "text": "13.37 %",
+            "value": 13.37,
+            "position": 394244
+          },
+          {
+            "text": "13.03 %",
+            "value": 13.03,
+            "position": 394251
+          },
+          {
+            "text": "12.25 %",
+            "value": 12.25,
+            "position": 394258
+          },
+          {
+            "text": "11.51 %",
+            "value": 11.51,
+            "position": 394265
+          },
+          {
+            "text": "8.11 %",
+            "value": 8.11,
+            "position": 394465
+          },
+          {
+            "text": "7.79 %",
+            "value": 7.79,
+            "position": 394471
+          },
+          {
+            "text": "7.54 %",
+            "value": 7.54,
+            "position": 394477
+          },
+          {
+            "text": "7.99 %",
+            "value": 7.99,
+            "position": 394483
+          },
+          {
+            "text": "7.96 %",
+            "value": 7.96,
+            "position": 394489
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 467
+          },
+          {
+            "category": "operational_risk",
+            "count": 143
+          },
+          {
+            "category": "financial_risk",
+            "count": 2145
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 580
+          },
+          {
+            "category": "technology_risk",
+            "count": 448
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1560239,
+        "filtered_length": 1548481,
+        "removed_ratio": 0.75,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.652916073968704,
+      "confidence": 1.3681955023129644,
+      "overall_score": 52.347083926031296,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 49.12280701754386,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.04694167852062592,
+        "risk_adjusted_signal": 0.31572424813901756,
+        "expected_return_annualized": 0.08925262388989277,
+        "signal_sharpe_ratio": 0.005950174925992852,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.31572424813901756,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.31572424813901756,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.017543859649122806,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.31572424813901756,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.04694167852062592
+      },
+      "risk_adjusted_signal": 0.31572424813901756,
+      "expected_return": 0.0008925262388989277,
+      "signal_sharpe": 0.005950174925992852,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 52.347083926031296,
+    "confidence": 1.3681955023129644,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:20:56.970844",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-C.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

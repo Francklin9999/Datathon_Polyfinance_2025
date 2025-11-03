@@ -1,0 +1,924 @@
+{
+  "ticker": "NRG",
+  "analysis": {
+    "ticker": "NRG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 44.097763910556424,
+        "financial_sentiment": -0.01904761904761905,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "38 CAUTIONARY STATEMENT REGARDING FORWARD-LOOKING INFORMATIONThis Annual Report on of NRG Energy, Inc.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 267092
+        },
+        {
+          "statement": "s,\" \"intends,\" \"estimates,\" \"should,\" \"forecasts,\" and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 267516
+        },
+        {
+          "statement": "39 In addition, unlisted factors may present significant additional obstacles to the realization of forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 271615
+        },
+        {
+          "statement": "nly as of the date they were made and NRG undertakes no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events or otherwise except as otherwise required by applicable laws.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 271777
+        },
+        {
+          "statement": "escalated to the Board of Directors ensuring that they have comprehensive oversight and can provide guidance on critical cybersecurity issues.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 277427
+        },
+        {
+          "statement": "The following discussion and analysis also contains forward-looking statements, including, without limitation, statements relating to NRG’s plans, strategies, objectives, expectations, intentions, and resources.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 291030
+        },
+        {
+          "statement": "Such forward-looking statements should be read in conjunction with the disclosures under Item 1A — Risk Factors of this Annual Report on .",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 291195
+        },
+        {
+          "statement": "ures in compliance with GAAP requires the application of appropriate technical accounting rules and guidance as well as the use of estimates and judgments that affect the reported amounts of assets, liabilities, revenues and expenses, and related disclosures of contingent assets and liabilities.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 372810
+        },
+        {
+          "statement": "The application of appropriate technical accounting rules and guidance involves judgments regarding future events, including the likelihood of success of particular projects, legal and regulatory challenges, and the fair value of certain assets and liabilities.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 373069
+        },
+        {
+          "statement": "measures used in preparing the financial statements and related disclosures, even if the accounting guidance has not changed.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 373734
+        },
+        {
+          "statement": "Regulatory and political environments and requirementsDerivative InstrumentsThe Company follows the guidance of ASC 815, Derivatives and Hedging \"(ASC 815\"), to account for derivative instruments.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 376062
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 412910
+        },
+        {
+          "statement": "We believe that our audit provides a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 413487
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 423881
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 424619
+        },
+        {
+          "statement": "As such, NRG applies the guidance of ASC 810, Consolidations, or ASC 810, to determine when an entity that is insufficiently capitalized or not controlled through its voting interests, referred to as a VIE, should be consolidated.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 441102
+        },
+        {
+          "statement": "Recent Accounting Developments - Guidance Adopted in 2024ASU 2023-07 – In November 2023, the FASB issued ASU No.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 477971
+        },
+        {
+          "statement": "Recent Accounting Developments - Guidance Not Yet AdoptedASU 2023-09 – In December 2023, the FASB issued ASU No.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 478844
+        },
+        {
+          "statement": "The guidance in ASU 2024-03 requires more detailed information about specified categories of expenses included in certain captions presented on the face of the income statement.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 479884
+        },
+        {
+          "statement": "On September 12, 2024, Treasury and the IRS released proposed regulations that provide guidance on the application of the CAMT.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 624253
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue, energy revenue, capacity revenue and other revenue, less cost of fuels,",
+            "position": 101688
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue opportunities through its multiple brands and channels; (ii) offering a variety of energy products and smart home products and services that are differentiated by innovative features, premium ",
+            "position": 111371
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue or supply sources,",
+            "position": 118027
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue or Supply SourcesNRG's revenues and/or cash flows, primarily in the East and West, benefit from capacity/demand payments and other contracted revenue sources, originating from market clearing ",
+            "position": 121245
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue$27,149 $27,467 $(318)Energy revenue(a)500 553 (53)Capacity revenue(a)177 197 (20)Mark-to-market for economic hedging activities(3)144 (147)Contract amortization(29)(32)3 Other revenues(a)(b)33",
+            "position": 310283
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, taxes, depreciation and amortizationAESOAlberta Electric System OperatorAROAsset Retirement ObligationASCThe FASB Accounting Standards Codification, which the FASB establishe",
+            "position": 100451
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cost competitiveness,",
+            "position": 110972
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows,",
+            "position": 113753
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows could also be adversely affected in any period in which its customers' actual usage of electricity or gas significantly varies from the forecasted usage, which could occur due ",
+            "position": 186781
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flow from the Company's asset-based businesses could have a material adverse effect on the Company's results of operations,",
+            "position": 189825
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Entities- Revenue Recognition and the grant model within IAS 20, Accounting for Government Grants and Disclosure of Government Assistance, as a reduction to expenses in the consolidated stateme",
+            "position": 444073
+          },
+          {
+            "metric": "profit",
+            "context": "profit and loss,",
+            "position": 478411
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA is compared against the budget, latest forecast,",
+            "position": 619786
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 207751
+          },
+          {
+            "metric": "margin",
+            "context": "margin and collateral requirements, the Company may be exposed to significant losses, may miss significant opportunities,",
+            "position": 208330
+          },
+          {
+            "metric": "margin",
+            "context": "margin for derivatives, could negatively impact NRG’s ability to hedge its portfolio in an efficient, cost-effective manner by, among other things,",
+            "position": 240414
+          },
+          {
+            "metric": "margin",
+            "context": "margin in order to evaluate operating performance as revenues less cost of fuel, purchased energy and other costs of sales, mark-to-market for economic hedging activities,",
+            "position": 312100
+          },
+          {
+            "metric": "margin",
+            "context": "margin, the Company evaluates its operating performance using the measure of economic gross margin,",
+            "position": 312393
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of 7-9",
+            "position": 285165
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of 7%-9",
+            "position": 604420
+          },
+          {
+            "metric": "market share",
+            "context": "market share;•General economic conditions, changes in the wholesale power and gas markets and fluctuations in the cost of fuel;•Volatile power and gas supply costs and demand for power and gas, includ",
+            "position": 267705
+          },
+          {
+            "metric": "market share",
+            "context": "market share repurchases(b)Includes commissions paid in connection with the open market share repurchases44 Stock Performance GraphThe performance graph below compares the cumulative total stockholder",
+            "position": 287218
+          },
+          {
+            "metric": "market share",
+            "context": "market share repurchases at an average price of $87.57",
+            "position": 357569
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income adjusted for other non-cash items645 Increase in working capital primarily due to lower gas pricing coupled with lower gas sales volumes341 Decrease in working capital primarily drive",
+            "position": 361304
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income(b)2,382 Total other expense(635)Income before income taxes1,747 Net Income1,411 (a)Intercompany transactions with Non-Guarantors of $5 million during the year ended December 31, 2024(",
+            "position": 366791
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income/(loss)534 1,806 78 128 (122)— 2,424 Equity in earnings of unconsolidated affiliates— — 20 — — — 20 Impairment losses on investments— — (7)— — — (7)Other income, net— (1)6 (15)54 — 44 ",
+            "position": 620506
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income/(Loss)$1,125 $(202)$1,327 (a)Includes realized gains and losses from financially settled transactions(b)Includes trading gains and losses and ancillary revenues(c)Includes amortization of S",
+            "position": 311799
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income/(Loss)1,125 (202)1,221 Less: Cumulative dividends attributable to Series A Preferred Stock67 54 — Net Income/(Loss) Available for Common Stockholders$1,058 $(256)$1,221 Income/(Loss) Per Sh",
+            "position": 428880
+          },
+          {
+            "metric": "net income",
+            "context": "net income to net cash provided by operating activities:Equity in earnings of unconsolidated affiliates, net of distributions(13)(6)7 Depreciation of property, plant and equipment and amortization of ",
+            "position": 432638
+          },
+          {
+            "metric": "net income",
+            "context": "net income or losses of its Australian project,",
+            "position": 474153
+          },
+          {
+            "metric": "net income",
+            "context": "Net income/(loss)$1,125 $(202)$1,221 Less: Cumulative dividends attributable to Series A Preferred Stock67 54 — Income/(Loss) Available to Common Stockholders$1,058 $(256)$1,221 Weighted average numbe",
+            "position": 616552
+          },
+          {
+            "metric": "assets",
+            "context": "assets, which were for the Company's portion of the decommissioning of the STP, units 1 & 2 through the sale of STP on November 1, 2023NYISONew York Independent System OperatorNYMEXNew York Mercantile",
+            "position": 103994
+          },
+          {
+            "metric": "assets",
+            "context": "assets consisting of Bayou Cove, Big Cajun-I, Big Cajun-II, Cottonwood and Sterlington, was sold on February 4, 2019",
+            "position": 107681
+          },
+          {
+            "metric": "assets",
+            "context": "assets and activities: (i) all activity related to customer, plant and market operations in the West and Canada,",
+            "position": 113138
+          },
+          {
+            "metric": "assets",
+            "context": "assets, which reduces the need to sell electricity to, and buy electricity from, other institutions and intermediaries, resulting in more stable earnings and cash flows,",
+            "position": 113608
+          },
+          {
+            "metric": "assets",
+            "context": "assets in the portfolio, manage working capital requirements,",
+            "position": 118677
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and suffer reduced plant efficiency,",
+            "position": 201615
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities actually incurred or that insurance will continue to be available to the Company on economically reasonable terms, or at all,",
+            "position": 212176
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and actions, and any significant uninsured damages could have a material adverse effect on the Company’s business,",
+            "position": 212437
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, reputational damage, regulatory action, and disrupt business operations,",
+            "position": 217189
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities could adversely impact NRG's results of operations,",
+            "position": 243798
+          },
+          {
+            "metric": "equity",
+            "context": "equity owned investments and the Cottonwood leasePlant Operations is responsible for operating the Company's generation facilities at high standards of safety and regulatory compliance, and includes (",
+            "position": 123547
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investmentsYear Ended December 31, 2023Fossil and Nuclear Plants (a) Net OwnedCapacity (MW)Net Generation (In thousands of MWh) (a)Annual Equivalent Availability FactorAverage Net Heat R",
+            "position": 130698
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments12 The following are industry statistics for the Company's fossil and nuclear plants, as defined by the NERC:Annual Equivalent Availability Factor, or EAF — Measures the perce",
+            "position": 131059
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests in, operates,",
+            "position": 141071
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments,",
+            "position": 169602
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01",
+            "position": 99595
+          },
+          {
+            "text": "$0.01 ",
+            "position": 100318
+          },
+          {
+            "text": "$232 million",
+            "position": 101240
+          },
+          {
+            "text": "$2.3 billion",
+            "position": 104801
+          },
+          {
+            "text": "$150 million",
+            "position": 105637
+          },
+          {
+            "text": "$4.2 billion",
+            "position": 105804
+          },
+          {
+            "text": "$6.2 billion",
+            "position": 106400
+          },
+          {
+            "text": "$821 million",
+            "position": 106462
+          },
+          {
+            "text": "$733 million",
+            "position": 106508
+          },
+          {
+            "text": "$500 million",
+            "position": 106558
+          },
+          {
+            "text": "$798 million",
+            "position": 106608
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 106658
+          },
+          {
+            "text": "$480 million",
+            "position": 106708
+          },
+          {
+            "text": "$925 million",
+            "position": 106758
+          },
+          {
+            "text": "$950 million",
+            "position": 106811
+          },
+          {
+            "text": "$2.6 billion",
+            "position": 106921
+          },
+          {
+            "text": "$900 million",
+            "position": 107059
+          },
+          {
+            "text": "$740 million",
+            "position": 107200
+          },
+          {
+            "text": "$1,000 ",
+            "position": 107482
+          },
+          {
+            "text": "$120,000 ",
+            "position": 149344
+          },
+          {
+            "text": "$80,000 ",
+            "position": 149436
+          },
+          {
+            "text": "$112 million",
+            "position": 173170
+          },
+          {
+            "text": "$1 million",
+            "position": 218889
+          },
+          {
+            "text": "$1.63 ",
+            "position": 284850
+          },
+          {
+            "text": "$1.76 ",
+            "position": 285035
+          },
+          {
+            "text": "$2.7 billion",
+            "position": 285822
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 286069
+          },
+          {
+            "text": "$3.7 billion",
+            "position": 286113
+          },
+          {
+            "text": "$89.23 ",
+            "position": 286857
+          },
+          {
+            "text": "$2,006 M",
+            "position": 286874
+          },
+          {
+            "text": "$94.94 ",
+            "position": 286938
+          },
+          {
+            "text": "$1,853 M",
+            "position": 286955
+          },
+          {
+            "text": "$94.78 ",
+            "position": 287019
+          },
+          {
+            "text": "$1,625 ",
+            "position": 287036
+          },
+          {
+            "text": "$92.68 ",
+            "position": 287079
+          },
+          {
+            "text": "$100 ",
+            "position": 287753
+          },
+          {
+            "text": "$100.00 ",
+            "position": 288053
+          },
+          {
+            "text": "$99.16 ",
+            "position": 288061
+          },
+          {
+            "text": "$117.55 ",
+            "position": 288068
+          },
+          {
+            "text": "$89.97 ",
+            "position": 288076
+          },
+          {
+            "text": "$152.25 ",
+            "position": 288083
+          },
+          {
+            "text": "$271.99 ",
+            "position": 288091
+          },
+          {
+            "text": "$2.27 ",
+            "position": 292851
+          },
+          {
+            "text": "$2.74 ",
+            "position": 292879
+          },
+          {
+            "text": "$32.05 ",
+            "position": 294403
+          },
+          {
+            "text": "$74.32 ",
+            "position": 294410
+          },
+          {
+            "text": "$20 million",
+            "position": 301552
+          },
+          {
+            "text": "$204 million",
+            "position": 301651
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 301944
+          },
+          {
+            "text": "$1.51 ",
+            "position": 302098
+          }
+        ],
+        "percentages": [
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 100941
+          },
+          {
+            "text": "2.750%",
+            "value": 2.75,
+            "position": 101263
+          },
+          {
+            "text": "54.5%",
+            "value": 54.5,
+            "position": 102785
+          },
+          {
+            "text": "5.750%",
+            "value": 5.75,
+            "position": 106478
+          },
+          {
+            "text": "5.250%",
+            "value": 5.25,
+            "position": 106528
+          },
+          {
+            "text": "3.375%",
+            "value": 3.375,
+            "position": 106578
+          },
+          {
+            "text": "3.625%",
+            "value": 3.625,
+            "position": 106678
+          },
+          {
+            "text": "3.875%",
+            "value": 3.875,
+            "position": 106728
+          },
+          {
+            "text": "6.000%",
+            "value": 6.0,
+            "position": 106778
+          },
+          {
+            "text": "6.250%",
+            "value": 6.25,
+            "position": 106831
+          },
+          {
+            "text": "2.000%",
+            "value": 2.0,
+            "position": 107010
+          },
+          {
+            "text": "2.450%",
+            "value": 2.45,
+            "position": 107079
+          },
+          {
+            "text": "4.450%",
+            "value": 4.45,
+            "position": 107148
+          },
+          {
+            "text": "7.000%",
+            "value": 7.0,
+            "position": 107220
+          },
+          {
+            "text": "10.25%",
+            "value": 10.25,
+            "position": 107393
+          },
+          {
+            "text": "44%",
+            "value": 44.0,
+            "position": 107984
+          },
+          {
+            "text": "70.8 %",
+            "value": 70.8,
+            "position": 130583
+          },
+          {
+            "text": "30.1 %",
+            "value": 30.1,
+            "position": 130596
+          },
+          {
+            "text": "78.4 %",
+            "value": 78.4,
+            "position": 130618
+          },
+          {
+            "text": "10.9 %",
+            "value": 10.9,
+            "position": 130631
+          },
+          {
+            "text": "70.2 %",
+            "value": 70.2,
+            "position": 130668
+          },
+          {
+            "text": "57.6 %",
+            "value": 57.6,
+            "position": 130680
+          },
+          {
+            "text": "74.2 %",
+            "value": 74.2,
+            "position": 130945
+          },
+          {
+            "text": "35.4 %",
+            "value": 35.4,
+            "position": 130958
+          },
+          {
+            "text": "85.5 %",
+            "value": 85.5,
+            "position": 130980
+          },
+          {
+            "text": "6.6 %",
+            "value": 6.6,
+            "position": 130993
+          },
+          {
+            "text": "73.5 %",
+            "value": 73.5,
+            "position": 131029
+          },
+          {
+            "text": "56.8 %",
+            "value": 56.8,
+            "position": 131041
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 146835
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 148650
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 168118
+          },
+          {
+            "text": "57%",
+            "value": 57.0,
+            "position": 168977
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 169380
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 176777
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 282029
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 284562
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 284608
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 284883
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 285182
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 292931
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 294482
+          },
+          {
+            "text": "13 %",
+            "value": 13.0,
+            "position": 294507
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 294568
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 296891
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 297022
+          },
+          {
+            "text": "3.750%",
+            "value": 3.75,
+            "position": 303380
+          },
+          {
+            "text": "6.750%",
+            "value": 6.75,
+            "position": 305887
+          },
+          {
+            "text": "6.625%",
+            "value": 6.625,
+            "position": 306140
+          },
+          {
+            "text": "22.3%",
+            "value": 22.3,
+            "position": 337173
+          },
+          {
+            "text": "5.2%",
+            "value": 5.2,
+            "position": 337183
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 461
+          },
+          {
+            "category": "operational_risk",
+            "count": 128
+          },
+          {
+            "category": "financial_risk",
+            "count": 737
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 142
+          },
+          {
+            "category": "technology_risk",
+            "count": 232
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 706428,
+        "filtered_length": 694070,
+        "removed_ratio": 1.75,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.683397683397686,
+      "confidence": 1.3504198567966328,
+      "overall_score": 52.316602316602314,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 49.04761904761905,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.04633204633204635,
+        "risk_adjusted_signal": 0.31162393322812115,
+        "expected_return_annualized": 0.08809349890430973,
+        "signal_sharpe_ratio": 0.005872899926953982,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.31162393322812115,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.31162393322812115,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.01904761904761905,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.31162393322812115,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.04633204633204635
+      },
+      "risk_adjusted_signal": 0.31162393322812115,
+      "expected_return": 0.0008809349890430973,
+      "signal_sharpe": 0.005872899926953982,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 52.316602316602314,
+    "confidence": 1.3504198567966328,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:29:39.112111",
+  "filing_date": "2025-02-26",
+  "filing_filename": "2025-02-26-10k-NRG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

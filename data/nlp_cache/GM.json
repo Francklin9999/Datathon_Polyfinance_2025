@@ -1,0 +1,934 @@
+{
+  "ticker": "GM",
+  "analysis": {
+    "ticker": "GM",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 37.77070063694268,
+        "financial_sentiment": -0.10204081632653061,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Forward-looking statements in this Business section are not guarantees of future performance and may involve risks and uncertainties that could cause Refer to Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 61125
+        },
+        {
+          "statement": "Forward-looking statements in this Business section are not guarantees of future performance and may involve risks and uncertainties that could cause Refer to Item 1A.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 61199
+        },
+        {
+          "statement": "With our next-generation battery technology, we intend to expand to multiple chemistries, multiple form factors and multiple cell suppliers as we continue to deliver even more EV choices for our customers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62212
+        },
+        {
+          "statement": "We plan to convert Orion Assembly in Orion Township, Michigan to build electric pickups, with the plant slated to begin production in 2026.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62834
+        },
+        {
+          "statement": "icle sales data does not correlate directly to the revenue we recognize during a particular period, we believe it is indicative 2Table of ContentsGENERAL MOTORS COMPANY AND SUBSIDIARIESof the underlying demand for our vehicles.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 70429
+        },
+        {
+          "statement": "We believe we are materially in compliance with substantially all these requirements or expect to be materially in compliance by the required dates.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 105142
+        },
+        {
+          "statement": "We expect SGM will likely incur additional restructuring charges in 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 136374
+        },
+        {
+          "statement": "We are engaged in many strategic business relationships, and we expect that such arrangements will continue to be an important factor in the growth and success of our business, particularly in light of industry consolidation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 138712
+        },
+        {
+          "statement": "Our primary joint venture agreement for our China JVs expires in 2027, and we expect to shortly begin negotiations with our partner for a new agreement.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 140748
+        },
+        {
+          "statement": "crisis could have a material impact on our business, financial condition and results of operations going forward.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 151208
+        },
+        {
+          "statement": "D SUBSIDIARIESOur future funding requirements for our defined benefit pension plans depend upon the future performance of assets placed in trusts for these plans, the level of interest rates used to determine funding levels, the level of benefits provided for by the plans and any changes in laws and regulations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 175037
+        },
+        {
+          "statement": "cturing, Finance, Communications, Human Resources, Legal and Public Policy organizations to provide guidance and monitor overall company cybersecurity risk.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 177295
+        },
+        {
+          "statement": "We anticipate that we will continue to declare and pay dividends on our common stock quarterly.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 185030
+        },
+        {
+          "statement": "Forward-looking statements in this MD&A are not guarantees of future performance and may involve risks and uncertainties that could cause Refer to the \"Forward-Looking Statements\" section of this MD&A and , Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 189687
+        },
+        {
+          "statement": "Forward-looking statements in this MD&A are not guarantees of future performance and may involve risks and uncertainties that could cause Refer to the \"Forward-Looking Statements\" section of this MD&A and , Item 1A.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 189749
+        },
+        {
+          "statement": "antees of future performance and may involve risks and uncertainties that could cause Refer to the \"Forward-Looking Statements\" section of this MD&A and , Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 189839
+        },
+        {
+          "statement": "For the year ending December 31, 2025, we expect earnings per share (EPS)-diluted and EPS-diluted-adjusted of between $11.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 192153
+        },
+        {
+          "statement": "While we expect EV margins to improve in 2025, we may continue to recognize losses to adjust inventory to net realizable value.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 193963
+        },
+        {
+          "statement": "Our outlook is dependent on continued supply chain availability, EV-related cost reduction and the resiliency of the U.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 194089
+        },
+        {
+          "statement": "We expect additional restructuring charges are likely to be incurred in 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 196486
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue recognized from the sale of vehicles,",
+            "position": 69083
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue we recognize during a particular period, we believe it is indicative 2",
+            "position": 70380
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Service and other tax authorities,",
+            "position": 170210
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue consisted of leased vehicle income of 46%, retail finance charge income of 40% and commercial finance charge income of 8",
+            "position": 199191
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Years Ended December 31,Favorable/ (Unfavorable)Variance Due To20242023%VolumeMixPriceOther(Dollars in billions)GMNA$157,509 $141,445 $16,064 11.4",
+            "position": 201605
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Share98Note 22",
+            "position": 59252
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share (EPS)-diluted and EPS-diluted-adjusted of between $11.00",
+            "position": 192163
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest and taxes (EBIT)-adjusted of between $13.7",
+            "position": 192338
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings related to Ultium Cells Holdings LLC of $0.7",
+            "position": 204041
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and valuation allowance adjustments that occurred in the year ended December 31, 2023",
+            "position": 205988
+          },
+          {
+            "metric": "profit",
+            "context": "profit is defined as revenue less material cost, freight,",
+            "position": 203320
+          },
+          {
+            "metric": "profit",
+            "context": "profit of approximately 160%, 40% and 50",
+            "position": 207625
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS)-diluted and EPS-diluted-adjusted of between $11.00",
+            "position": 192183
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS-diluted-adjusted:Years Ended December 31,202420232022AmountPer ShareAmountPer ShareAmountPer ShareDiluted earnings per common share$7,189 $6.37",
+            "position": 262066
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS-diluted-adjusted$11,963 $10.60",
+            "position": 262468
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE (dollars in billions):Years Ended December 31,202420232022Net income attributable to stockholders$6.0",
+            "position": 265072
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA) increased to 6.5",
+            "position": 248980
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA+$99N/A+$23N/A25 basis point increase in expected rate of ROA-$99N/A-$23",
+            "position": 251469
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA increased from 6.3",
+            "position": 402900
+          },
+          {
+            "metric": "margin",
+            "context": "margin full-size pickup trucks and SUVs,",
+            "position": 190865
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate; passenger vehicle industry volumes of 23.3",
+            "position": 369091
+          },
+          {
+            "metric": "market share",
+            "context": "market share of 16.5",
+            "position": 193529
+          },
+          {
+            "metric": "market share",
+            "context": "market share of 6.9",
+            "position": 194597
+          },
+          {
+            "metric": "market share",
+            "context": "market share and prioritizing production volumes over profitability, with the ability to produce vehicles at costs well below foreign automakers,",
+            "position": 195209
+          },
+          {
+            "metric": "market share",
+            "context": "market share of 3.7",
+            "position": 197316
+          },
+          {
+            "metric": "market share",
+            "context": "market share and the relative mix of vehicles (trucks, crossovers,",
+            "position": 203171
+          },
+          {
+            "metric": "operating income",
+            "context": "operating Income, netYears Ended December 31,Year Ended 2024",
+            "position": 205351
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, net$1,257 $1,537 $1,432 $(280)(18.2",
+            "position": 205494
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income,",
+            "position": 205616
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, net in our consolidated income statements in each of the years ended December 31, 2024, 2023 and 2022",
+            "position": 212267
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to stockholders of between $11.2",
+            "position": 192251
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss)$(4,466)$1,122 $1,407 December 31, 2024December 31, 2023Cash and cash equivalents$6,389 $6,875 Debt$104 $202 32Table of ContentsGENERAL MOTORS COMPANY AND SUBSIDIARIESCruiseYears Ende",
+            "position": 211796
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to stockholders) EBIT-adjusted is presented net of noncontrolling interests and is used by management and can be used by investors to review our consolidated operating results ",
+            "position": 254969
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to noncontrolling interests for these adjustments is included in the years ended December 31, 2024, 2023 and 2022",
+            "position": 264324
+          },
+          {
+            "metric": "net income",
+            "context": "net income tax asset(22.7",
+            "position": 265835
+          },
+          {
+            "metric": "assets",
+            "context": "Assets of Nonconsolidated Affiliates72Note 9",
+            "position": 58745
+          },
+          {
+            "metric": "assets",
+            "context": "assets in Europe (the Opel/Vauxhall Business), GM’s vehicle presence in Europe is smaller,",
+            "position": 93838
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 151744
+          },
+          {
+            "metric": "assets",
+            "context": "assets placed in trusts for these plans, the level of interest rates used to determine funding levels,",
+            "position": 175059
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities,",
+            "position": 237310
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 170143
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are subject to other significant risks and uncertainties,",
+            "position": 170318
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and income taxes6.3",
+            "position": 226371
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities24Item 6",
+            "position": 57938
+          },
+          {
+            "metric": "equity",
+            "context": "Equity in Net Assets of Nonconsolidated Affiliates72Note 9",
+            "position": 58731
+          },
+          {
+            "metric": "equity",
+            "context": "Equity and Noncontrolling Interests95Note 21",
+            "position": 59207
+          },
+          {
+            "metric": "equity",
+            "context": "equity ownership stakes in entities that meet the demands of customers in other countries, primarily in China, with vehicles developed, manufactured and/or marketed under the Baojun, Buick, Cadillac,",
+            "position": 60527
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests in SAIC General Motors Corporation Limited (SGM),",
+            "position": 135826
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 57034
+          },
+          {
+            "text": "$112,500 ",
+            "position": 67439
+          },
+          {
+            "text": "$1.5 million",
+            "position": 67576
+          },
+          {
+            "text": "$500,000 m",
+            "position": 68034
+          },
+          {
+            "text": "$9.2 billion",
+            "position": 76786
+          },
+          {
+            "text": "$9.9 billion",
+            "position": 76800
+          },
+          {
+            "text": "$9.8 billion",
+            "position": 76817
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 101552
+          },
+          {
+            "text": "$0.5 billion",
+            "position": 101566
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 101583
+          },
+          {
+            "text": "$0.7 billion",
+            "position": 101705
+          },
+          {
+            "text": "$2.4 billion",
+            "position": 136067
+          },
+          {
+            "text": "$1 million",
+            "position": 183694
+          },
+          {
+            "text": "$14.6 million",
+            "position": 184345
+          },
+          {
+            "text": "$0.09 ",
+            "position": 184881
+          },
+          {
+            "text": "$0.12 ",
+            "position": 184975
+          },
+          {
+            "text": "$100 ",
+            "position": 185776
+          },
+          {
+            "text": "$121 ",
+            "position": 186002
+          },
+          {
+            "text": "$170 ",
+            "position": 186007
+          },
+          {
+            "text": "$98 ",
+            "position": 186012
+          },
+          {
+            "text": "$106 ",
+            "position": 186016
+          },
+          {
+            "text": "$159 ",
+            "position": 186021
+          },
+          {
+            "text": "$118 ",
+            "position": 186051
+          },
+          {
+            "text": "$152 ",
+            "position": 186056
+          },
+          {
+            "text": "$125 ",
+            "position": 186061
+          },
+          {
+            "text": "$158 ",
+            "position": 186066
+          },
+          {
+            "text": "$197 ",
+            "position": 186071
+          },
+          {
+            "text": "$151 ",
+            "position": 186126
+          },
+          {
+            "text": "$188 ",
+            "position": 186131
+          },
+          {
+            "text": "$128 ",
+            "position": 186136
+          },
+          {
+            "text": "$183 ",
+            "position": 186146
+          },
+          {
+            "text": "$48.77 ",
+            "position": 186700
+          },
+          {
+            "text": "$4.6 billion",
+            "position": 186717
+          },
+          {
+            "text": "$55.88 ",
+            "position": 186850
+          },
+          {
+            "text": "$2.1 billion",
+            "position": 186868
+          },
+          {
+            "text": "$52.51 ",
+            "position": 186933
+          },
+          {
+            "text": "$0.3 billion",
+            "position": 186951
+          },
+          {
+            "text": "$53.83 ",
+            "position": 186980
+          },
+          {
+            "text": "$10.0 billion",
+            "position": 187841
+          },
+          {
+            "text": "$31.60 ",
+            "position": 188054
+          },
+          {
+            "text": "$11.4 billion",
+            "position": 189128
+          },
+          {
+            "text": "$6.0 billion",
+            "position": 189303
+          },
+          {
+            "text": "$11.00 ",
+            "position": 192232
+          },
+          {
+            "text": "$12.00",
+            "position": 192243
+          },
+          {
+            "text": "$11.2 billion",
+            "position": 192302
+          },
+          {
+            "text": "$12.5 billion",
+            "position": 192320
+          },
+          {
+            "text": "$13.7 billion",
+            "position": 192400
+          },
+          {
+            "text": "$15.7 billion",
+            "position": 192418
+          },
+          {
+            "text": "$0.6 billion",
+            "position": 197756
+          },
+          {
+            "text": "$0.8 billion",
+            "position": 199479
+          }
+        ],
+        "percentages": [
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 66380
+          },
+          {
+            "text": "27.9%",
+            "value": 27.9,
+            "position": 69234
+          },
+          {
+            "text": "86.4 %",
+            "value": 86.4,
+            "position": 69457
+          },
+          {
+            "text": "83.5 %",
+            "value": 83.5,
+            "position": 69469
+          },
+          {
+            "text": "81.8 %",
+            "value": 81.8,
+            "position": 69481
+          },
+          {
+            "text": "13.6 %",
+            "value": 13.6,
+            "position": 69494
+          },
+          {
+            "text": "16.5 %",
+            "value": 16.5,
+            "position": 69504
+          },
+          {
+            "text": "18.2 %",
+            "value": 18.2,
+            "position": 69514
+          },
+          {
+            "text": "100.0 %",
+            "value": 100.0,
+            "position": 69531
+          },
+          {
+            "text": "16.2 %",
+            "value": 16.2,
+            "position": 71159
+          },
+          {
+            "text": "16.0 %",
+            "value": 16.0,
+            "position": 71178
+          },
+          {
+            "text": "13.1 %",
+            "value": 13.1,
+            "position": 71199
+          },
+          {
+            "text": "12.8 %",
+            "value": 12.8,
+            "position": 71215
+          },
+          {
+            "text": "13.2 %",
+            "value": 13.2,
+            "position": 71231
+          },
+          {
+            "text": "15.8 %",
+            "value": 15.8,
+            "position": 71269
+          },
+          {
+            "text": "15.6 %",
+            "value": 15.6,
+            "position": 71288
+          },
+          {
+            "text": "15.5 %",
+            "value": 15.5,
+            "position": 71307
+          },
+          {
+            "text": "6.9 %",
+            "value": 6.9,
+            "position": 71370
+          },
+          {
+            "text": "8.4 %",
+            "value": 8.4,
+            "position": 71388
+          },
+          {
+            "text": "9.8 %",
+            "value": 9.8,
+            "position": 71406
+          },
+          {
+            "text": "2.4 %",
+            "value": 2.4,
+            "position": 71427
+          },
+          {
+            "text": "2.6 %",
+            "value": 2.6,
+            "position": 71443
+          },
+          {
+            "text": "2.5 %",
+            "value": 2.5,
+            "position": 71459
+          },
+          {
+            "text": "4.9 %",
+            "value": 4.9,
+            "position": 71519
+          },
+          {
+            "text": "5.7 %",
+            "value": 5.7,
+            "position": 71537
+          },
+          {
+            "text": "6.4 %",
+            "value": 6.4,
+            "position": 71555
+          },
+          {
+            "text": "12.0 %",
+            "value": 12.0,
+            "position": 71589
+          },
+          {
+            "text": "14.2 %",
+            "value": 14.2,
+            "position": 71605
+          },
+          {
+            "text": "13.8 %",
+            "value": 13.8,
+            "position": 71621
+          },
+          {
+            "text": "8.1 %",
+            "value": 8.1,
+            "position": 71642
+          },
+          {
+            "text": "9.0 %",
+            "value": 9.0,
+            "position": 71657
+          },
+          {
+            "text": "10.3 %",
+            "value": 10.3,
+            "position": 71672
+          },
+          {
+            "text": "10.7 %",
+            "value": 10.7,
+            "position": 71707
+          },
+          {
+            "text": "12.2 %",
+            "value": 12.2,
+            "position": 71723
+          },
+          {
+            "text": "12.3 %",
+            "value": 12.3,
+            "position": 71739
+          },
+          {
+            "text": "8.3 %",
+            "value": 8.3,
+            "position": 71777
+          },
+          {
+            "text": "8.8 %",
+            "value": 8.8,
+            "position": 71795
+          },
+          {
+            "text": "9.2 %",
+            "value": 9.2,
+            "position": 71813
+          },
+          {
+            "text": "6.7 %",
+            "value": 6.7,
+            "position": 71900
+          },
+          {
+            "text": "7.1 %",
+            "value": 7.1,
+            "position": 71918
+          },
+          {
+            "text": "7.5 %",
+            "value": 7.5,
+            "position": 71936
+          },
+          {
+            "text": "6.0 %",
+            "value": 6.0,
+            "position": 71968
+          },
+          {
+            "text": "7.3 %",
+            "value": 7.3,
+            "position": 71983
+          },
+          {
+            "text": "7.6 %",
+            "value": 7.6,
+            "position": 71998
+          },
+          {
+            "text": "31.8 %",
+            "value": 31.8,
+            "position": 72021
+          },
+          {
+            "text": "30.7 %",
+            "value": 30.7,
+            "position": 72039
+          },
+          {
+            "text": "31.4 %",
+            "value": 31.4,
+            "position": 72057
+          },
+          {
+            "text": "12.6 %",
+            "value": 12.6,
+            "position": 72085
+          },
+          {
+            "text": "10.9 %",
+            "value": 10.9,
+            "position": 72119
+          },
+          {
+            "text": "16.9 %",
+            "value": 16.9,
+            "position": 73597
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 192
+          },
+          {
+            "category": "operational_risk",
+            "count": 152
+          },
+          {
+            "category": "financial_risk",
+            "count": 730
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 120
+          },
+          {
+            "category": "technology_risk",
+            "count": 170
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 501283,
+        "filtered_length": 492259,
+        "removed_ratio": 1.8,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.36569222283508,
+      "confidence": 0.36941447477203176,
+      "overall_score": 50.63430777716492,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.89795918367347,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.012686155543298383,
+        "risk_adjusted_signal": 0.08532560076484255,
+        "expected_return_annualized": 0.024120838985703816,
+        "signal_sharpe_ratio": 0.0016080559323802543,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.08532560076484255,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.08532560076484255,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10204081632653061,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.08532560076484255,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.012686155543298383
+      },
+      "risk_adjusted_signal": 0.08532560076484255,
+      "expected_return": 0.00024120838985703814,
+      "signal_sharpe": 0.0016080559323802543,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.63430777716492,
+    "confidence": 0.36941447477203176,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:25:30.659259",
+  "filing_date": "2025-01-28",
+  "filing_filename": "2025-01-28-10k-GM.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

@@ -31,6 +31,8 @@ class DocumentParser:
             return DocumentParser._parse_html(file_path), 'html'
         elif file_ext == '.xml':
             return DocumentParser._parse_xml(file_path), 'xml'
+        elif file_ext == '.csv':
+            return DocumentParser._parse_csv(file_path), 'csv'
         elif file_ext == '.pdf':
             return DocumentParser._parse_pdf(file_path), 'pdf'
         elif file_ext == '.docx':
@@ -87,6 +89,47 @@ class DocumentParser:
             # Final fallback: return raw content
             with open(file_path, 'r', encoding='utf-8') as f:
                 return f.read()
+    
+    @staticmethod
+    def _parse_csv(file_path: str) -> str:
+        """Parse CSV file and extract text content"""
+        try:
+            import csv
+            
+            text_parts = []
+            with open(file_path, 'r', encoding='utf-8') as f:
+                # Try to detect delimiter
+                sample = f.read(1024)
+                f.seek(0)
+                sniffer = csv.Sniffer()
+                delimiter = sniffer.sniff(sample).delimiter
+                
+                reader = csv.DictReader(f, delimiter=delimiter)
+                headers = reader.fieldnames or []
+                
+                # Add headers as text
+                if headers:
+                    text_parts.append("CSV Headers: " + ", ".join(headers))
+                
+                # Add rows as text
+                for row_num, row in enumerate(reader, 1):
+                    row_text = f"Row {row_num}: " + " | ".join([f"{k}: {v}" for k, v in row.items() if v])
+                    text_parts.append(row_text)
+                    
+                    # Limit to prevent memory issues with large CSVs
+                    if row_num > 1000:
+                        text_parts.append(f"... (CSV truncated at row 1000)")
+                        break
+            
+            return '\n'.join(text_parts)
+        except Exception as e:
+            # Fallback: try basic text parsing
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    return f.read()
+            except UnicodeDecodeError:
+                with open(file_path, 'r', encoding='latin-1') as f:
+                    return f.read()
     
     @staticmethod
     def _parse_xml(file_path: str) -> str:

@@ -1,0 +1,884 @@
+{
+  "ticker": "MTB",
+  "analysis": {
+    "ticker": "MTB",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 43.584305408271476,
+        "financial_sentiment": -0.07692307692307693,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Capital98 Segment Information100 Critical Accounting Estimates106 Recent Accounting Developments107 Forward-Looking Statements107 Quarterly Trends109 Reconciliation of Quarterly GAAP to Non-GAAP Measures110Item 7A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 123899
+        },
+        {
+          "statement": "4M&T Bank is also subject to Federal Reserve regulations and guidance, including with respect to capital levels.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 137324
+        },
+        {
+          "statement": "The process is intended to help ensure that these BHCs have robust, forward-looking capital planning processes that account for each company’s unique risks and that permit continued operations during times of economic and financial stress.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 153480
+        },
+        {
+          "statement": "The Company's total share of the FDIC's special assessment is estimated to be $231 million, of which $74 million was paid in 2024.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 168684
+        },
+        {
+          "statement": "The Federal Reserve issued Incentive Compensation Guidance intended to ensure that the incentive compensation policies of banking organizations do not undermine the safety and soundness of such organizations by encouraging excessive risk-taking.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 172014
+        },
+        {
+          "statement": "In October 2023, the Federal Reserve, the FDIC, and the OCC finalized interagency guidance on principles for climate-related financial risk management applicable to regulated financial institutions with more than $100 billion in total consolidated assets, including the Company.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 201443
+        },
+        {
+          "statement": "ion, several states in which the Company operates have enacted or proposed statutes, regulations or guidance addressing climate change and other sustainability issues.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 202433
+        },
+        {
+          "statement": "For example, in December 2023, the NYSDFS published guidance on climate-related financial risk management applicable to NYSDFS-regulated banking and mortgage organizations, including M&T Bank.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 202553
+        },
+        {
+          "statement": "The guidance addresses material financial risks related to climate change faced by these organizations in the context of risk assessment, risk management, and risk appetite setting.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 202698
+        },
+        {
+          "statement": "These regulations and supervisory guidance affect the Company’s sale and lending practices, capital structure, capital distributions and dividend policy, investment practices, growth and expansionary activity, among other things.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 231245
+        },
+        {
+          "statement": "79Allowance for credit lossesManagement determines the allowance for credit losses under accounting guidance that requires estimating the amount of current expected credit losses over the remaining contractual term of the loan and lease portfolio.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 392188
+        },
+        {
+          "statement": "Forward-looking estimates of certain macroeconomic variables are determined by the M&T Scenario Review Committee, which is comprised of senior management business leaders and economists.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 395767
+        },
+        {
+          "statement": "Forward-looking economic forecasts are subject to inherent imprecision and future outcomes may differ materially from forecasted events.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 397128
+        },
+        {
+          "statement": "Total uninsured deposits were estimated to be $73.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 423167
+        },
+        {
+          "statement": "information are highly subjective and, unlike financial accounting, are not based on authoritative guidance similar to GAAP.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 456334
+        },
+        {
+          "statement": "n and Analysis of Financial Condition and Results of Operations\" and other sections of this contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 472466
+        },
+        {
+          "statement": "Any statement that does not describe historical or current facts is a forward-looking statement, including statements based on current expectations, estimates and projections about the Company’s business, and management’s beliefs and assumptions.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 472639
+        },
+        {
+          "statement": "on the Company’s business, financial condition, liquidity and results of operations may constitute forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 473094
+        },
+        {
+          "statement": "o the risk that the actual effects may differ, possibly materially, from what is reflected in those forward-looking statements due to factors and future developments that are uncertain, unpredictable and in many cases beyond the Company’s control.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 473251
+        },
+        {
+          "statement": "These statements are not guarantees of future performance and involve certain risks, uncertainties and assumptions which are difficult to predict and may cause actual outcomes to differ materially from what is expressed or forecasted.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 473742
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue from contracts with customers155 11",
+            "position": 124983
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, and suffer reputational damage in the event of the theft, loss or misuse of information,",
+            "position": 216034
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue generation, products, services, transaction execution, innovation,",
+            "position": 254928
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue financings and preferred equity securities, is based on a composite income tax rate of approximately 25% in 2024 and 26% in each of 2023 and 2022",
+            "position": 326850
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per common share168 15",
+            "position": 125121
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, certain minority interests and, for certain firms,",
+            "position": 146252
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and financial condition of each such bank, and are subject to the limitations referred to in note 22 of Notes to Financial Statements filed herewith in , Item 8, \"Financial Statements and Sup",
+            "position": 154895
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of the Company are significantly affected by the monetary and fiscal policies of governmental authorities,",
+            "position": 199777
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share14.88",
+            "position": 331593
+          },
+          {
+            "metric": "margin",
+            "context": "margin to 3.58",
+            "position": 327309
+          },
+          {
+            "metric": "margin",
+            "context": "margin on earning assets$6,902 3.58",
+            "position": 339351
+          },
+          {
+            "metric": "margin",
+            "context": "margin was 1.01",
+            "position": 365708
+          },
+          {
+            "metric": "margin",
+            "context": "margin was 3.58",
+            "position": 366082
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income\" as defined by M&T is not a GAAP measure,",
+            "position": 331053
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$2,630 $2,789 $2,466 -6 %13 %Diluted net operating earnings per share14.88",
+            "position": 331526
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$2,630 $2,789 $2,466 Earnings per common shareDiluted earnings per common share$14.64",
+            "position": 332800
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income$691 $731 $665 $543 $494 $702 $879 $715 Diluted net operating income per common share3.92",
+            "position": 479089
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income appears in Table 49",
+            "position": 481498
+          },
+          {
+            "metric": "net income",
+            "context": "net income and shareholders’ equity at December 31, 2024",
+            "position": 132594
+          },
+          {
+            "metric": "net income",
+            "context": "net income for the four preceding quarters net of distributions 6",
+            "position": 145597
+          },
+          {
+            "metric": "net income",
+            "context": "net income in 2024 as compared with 2023 reflects the following:•Taxable-equivalent net interest income was $6.90",
+            "position": 327020
+          },
+          {
+            "metric": "net income",
+            "context": "net income in 2023 and 2022",
+            "position": 408754
+          },
+          {
+            "metric": "net income",
+            "context": "net income$2,588 $2,741 $1,992 $(153)-6 %$749 38 %Commercial BankTable 44COMMERCIAL BANK SEGMENT FINANCIAL SUMMARYChange from2023 to 20242022 to 2023(Dollars in millions)202420232022Amount%Amount%Inco",
+            "position": 457022
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 122436
+          },
+          {
+            "metric": "assets",
+            "context": "assets and interest‑bearing liabilities58",
+            "position": 122630
+          },
+          {
+            "metric": "assets",
+            "context": "Assets ControlOLAOrderly Liquidation AuthorityOLFOrderly Liquidation FundPCDPurchased credit deterioratedPeople’s UnitedPeople’s United Financial,",
+            "position": 128188
+          },
+          {
+            "metric": "assets",
+            "context": "assets of $208.1",
+            "position": 129725
+          },
+          {
+            "metric": "assets",
+            "context": "assets of $711 million at December 31, 2024",
+            "position": 132124
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities owed to affiliates of the institution, but is subordinate to claims of depositors,",
+            "position": 157655
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities in the Company's Consolidated Balance Sheet at December 31, 2024 was $157",
+            "position": 168866
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities to a new depository institution, including a newly formed \"bridge\" bank without the approval of the insolvent depository institution’s creditors or equity holders;•to enforce the terms of ",
+            "position": 178809
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and certain claims for administrative expenses against an IDI institution would be afforded a priority over other general unsecured claims against such an institution, including claims of ",
+            "position": 179547
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities that are in the form of interest-bearing or interest-related instruments, changes in interest rates, including in the shape of the yield curve or in spreads between different market intere",
+            "position": 223364
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities49Item 6",
+            "position": 123315
+          },
+          {
+            "metric": "equity",
+            "context": "Equity — Years ended December 31, 2024, 2023 and 2022120",
+            "position": 124626
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Tier 1CFPBConsumer Financial Protection BureauCISOChief Information Security OfficerCITCollective Investment TrustCommon SecuritiesCommon securities issued in connection with the issuance of Ju",
+            "position": 126752
+          },
+          {
+            "metric": "equity",
+            "context": "equity of $29.0",
+            "position": 129796
+          },
+          {
+            "metric": "equity",
+            "context": "equity at December 31, 2024",
+            "position": 132623
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.50 ",
+            "position": 121143
+          },
+          {
+            "text": "$250,00066, ",
+            "position": 123087
+          },
+          {
+            "text": "$100 billion",
+            "position": 128886
+          },
+          {
+            "text": "$208.1 billion",
+            "position": 129735
+          },
+          {
+            "text": "$161.1 billion",
+            "position": 129763
+          },
+          {
+            "text": "$29.0 billion",
+            "position": 129806
+          },
+          {
+            "text": "$711 million",
+            "position": 132134
+          },
+          {
+            "text": "$250 billion",
+            "position": 142139
+          },
+          {
+            "text": "$75 billion",
+            "position": 142256
+          },
+          {
+            "text": "$24.1 billion",
+            "position": 167329
+          },
+          {
+            "text": "$18.9 billion",
+            "position": 167353
+          },
+          {
+            "text": "$5 billion",
+            "position": 167603
+          },
+          {
+            "text": "$231 million",
+            "position": 168700
+          },
+          {
+            "text": "$74 million",
+            "position": 168723
+          },
+          {
+            "text": "$157 million",
+            "position": 168947
+          },
+          {
+            "text": "$10 billion",
+            "position": 169812
+          },
+          {
+            "text": "$1 billion",
+            "position": 173746
+          },
+          {
+            "text": "$50 billion",
+            "position": 175718
+          },
+          {
+            "text": "$5 ",
+            "position": 192253
+          },
+          {
+            "text": "$250,000 ",
+            "position": 246705
+          },
+          {
+            "text": "$147.53 ",
+            "position": 317030
+          },
+          {
+            "text": "$157.92 ",
+            "position": 317405
+          },
+          {
+            "text": "$157.03 ",
+            "position": 317508
+          },
+          {
+            "text": "$100 ",
+            "position": 318766
+          },
+          {
+            "text": "$197.08 ",
+            "position": 319738
+          },
+          {
+            "text": "$947 ",
+            "position": 319753
+          },
+          {
+            "text": "$208.77 ",
+            "position": 319880
+          },
+          {
+            "text": "$4.0 billion",
+            "position": 320614
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 320903
+          },
+          {
+            "text": "$207.6 billion",
+            "position": 321531
+          },
+          {
+            "text": "$64.2 billion",
+            "position": 323231
+          },
+          {
+            "text": "$35.8 billion",
+            "position": 323256
+          },
+          {
+            "text": "$11.6 billion",
+            "position": 323294
+          },
+          {
+            "text": "$55.5 billion",
+            "position": 323367
+          },
+          {
+            "text": "$53.0 billion",
+            "position": 323392
+          },
+          {
+            "text": "$8.4 billion",
+            "position": 323441
+          },
+          {
+            "text": "$261 million",
+            "position": 323495
+          },
+          {
+            "text": "$3.9 billion",
+            "position": 323585
+          },
+          {
+            "text": "$225 million",
+            "position": 325055
+          },
+          {
+            "text": "$197 million",
+            "position": 325379
+          },
+          {
+            "text": "$146 million",
+            "position": 325393
+          },
+          {
+            "text": "$34 million",
+            "position": 325428
+          },
+          {
+            "text": "$26 million",
+            "position": 325441
+          },
+          {
+            "text": "$6,852 ",
+            "position": 325795
+          },
+          {
+            "text": "$7,115 ",
+            "position": 325802
+          },
+          {
+            "text": "$5,822 ",
+            "position": 325809
+          },
+          {
+            "text": "$1,293 ",
+            "position": 325826
+          },
+          {
+            "text": "$6.90 billion",
+            "position": 327128
+          },
+          {
+            "text": "$267 million",
+            "position": 327164
+          },
+          {
+            "text": "$7.17 billion",
+            "position": 327189
+          }
+        ],
+        "percentages": [
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 132025
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 133847
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 133950
+          },
+          {
+            "text": "4.5%",
+            "value": 4.5,
+            "position": 144551
+          },
+          {
+            "text": "6.0%",
+            "value": 6.0,
+            "position": 144577
+          },
+          {
+            "text": "8.0%",
+            "value": 8.0,
+            "position": 144643
+          },
+          {
+            "text": "4.0%",
+            "value": 4.0,
+            "position": 144703
+          },
+          {
+            "text": "2.5%",
+            "value": 2.5,
+            "position": 146057
+          },
+          {
+            "text": "3.8%",
+            "value": 3.8,
+            "position": 152636
+          },
+          {
+            "text": "8.3%",
+            "value": 8.3,
+            "position": 152729
+          },
+          {
+            "text": "6.5%",
+            "value": 6.5,
+            "position": 160994
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 161040
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 161134
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 164041
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 178155
+          },
+          {
+            "text": "3.5%",
+            "value": 3.5,
+            "position": 178167
+          },
+          {
+            "text": "47%",
+            "value": 47.0,
+            "position": 205722
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 205804
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 205843
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 205862
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 207729
+          },
+          {
+            "text": "5.25%",
+            "value": 5.25,
+            "position": 223123
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 309870
+          },
+          {
+            "text": "1.00%",
+            "value": 1.0,
+            "position": 324623
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 325823
+          },
+          {
+            "text": "22 %",
+            "value": 22.0,
+            "position": 325833
+          },
+          {
+            "text": "1.23 %",
+            "value": 1.23,
+            "position": 326323
+          },
+          {
+            "text": "1.33 %",
+            "value": 1.33,
+            "position": 326329
+          },
+          {
+            "text": "1.05 %",
+            "value": 1.05,
+            "position": 326335
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 326959
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 326975
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 327181
+          },
+          {
+            "text": "3.58%",
+            "value": 3.58,
+            "position": 327319
+          },
+          {
+            "text": "3.83%",
+            "value": 3.83,
+            "position": 327338
+          },
+          {
+            "text": "21.8%",
+            "value": 21.8,
+            "position": 328772
+          },
+          {
+            "text": "24.3%",
+            "value": 24.3,
+            "position": 328801
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 331564
+          },
+          {
+            "text": "13 %",
+            "value": 13.0,
+            "position": 331567
+          },
+          {
+            "text": "1.30 %",
+            "value": 1.3,
+            "position": 331668
+          },
+          {
+            "text": "1.42 %",
+            "value": 1.42,
+            "position": 331674
+          },
+          {
+            "text": "1.35 %",
+            "value": 1.35,
+            "position": 331680
+          },
+          {
+            "text": "56.9 %",
+            "value": 56.9,
+            "position": 333872
+          },
+          {
+            "text": "54.9 %",
+            "value": 54.9,
+            "position": 333878
+          },
+          {
+            "text": "56.6 %",
+            "value": 56.6,
+            "position": 333884
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 336447
+          },
+          {
+            "text": "6.90 %",
+            "value": 6.9,
+            "position": 337338
+          },
+          {
+            "text": "6.71 %",
+            "value": 6.71,
+            "position": 337359
+          },
+          {
+            "text": "4.62 %",
+            "value": 4.62,
+            "position": 337380
+          },
+          {
+            "text": "2.57 %",
+            "value": 2.57,
+            "position": 338611
+          },
+          {
+            "text": "1.95 %",
+            "value": 1.95,
+            "position": 338632
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 211
+          },
+          {
+            "category": "operational_risk",
+            "count": 31
+          },
+          {
+            "category": "financial_risk",
+            "count": 1052
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 179
+          },
+          {
+            "category": "technology_risk",
+            "count": 278
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 718364,
+        "filtered_length": 710993,
+        "removed_ratio": 1.03,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.856548856548855,
+      "confidence": 0.6662111525336576,
+      "overall_score": 51.143451143451145,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.15384615384615,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02286902286902287,
+        "risk_adjusted_signal": 0.15381437729849565,
+        "expected_return_annualized": 0.04348204753610158,
+        "signal_sharpe_ratio": 0.002898803169073439,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.15381437729849565,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.07692307692307693,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02286902286902287
+      },
+      "risk_adjusted_signal": 0.15381437729849565,
+      "expected_return": 0.00043482047536101584,
+      "signal_sharpe": 0.002898803169073439,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.143451143451145,
+    "confidence": 0.6662111525336576,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:29:12.976493",
+  "filing_date": "2025-02-19",
+  "filing_filename": "2025-02-19-10k-MTB.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

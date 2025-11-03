@@ -1,0 +1,914 @@
+{
+  "ticker": "SOLV",
+  "analysis": {
+    "ticker": "SOLV",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 54.78073328540618,
+        "financial_sentiment": -0.16161616161616163,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "ing such words as “anticipates,” “believes,” “could,” “estimates,” “expects,” “forecasts,” “goal,” “guidance,” “intends,” “may,” “outlook,” “plans,” “projects,” “seeks,” “sees,” “should,” “targets,” “will,” “would,” or other words of similar meaning.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 56998
+        },
+        {
+          "statement": "Forward-looking statements are not guarantees of future performance and are subject to risks, uncertainties, and changes in circumstances that are difficult to predict.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 57683
+        },
+        {
+          "statement": "Forward-looking statements are not guarantees of future performance and are subject to risks, uncertainties, and changes in circumstances that are difficult to predict.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 57732
+        },
+        {
+          "statement": "tatements are based on certain assumptions and expectations of future events and trends, and actual future results and trends may differ materially from historical results or those reflected in any such forward-looking statements depending on a variety of factors.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 58285
+        },
+        {
+          "statement": "ure results and trends may differ materially from historical results or those reflected in any such forward-looking statements depending on a variety of factors.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 58388
+        },
+        {
+          "statement": "group of assets to be of material importance to any segment or to the business as a whole; rather, we believe understanding our customers’ needs, technology expertise, and manufacturing know-how are critical for our business.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 65708
+        },
+        {
+          "statement": "We believe we have advanced manufacturing and assembly production capabilities across our global manufacturing network.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 78982
+        },
+        {
+          "statement": "This Annual Report also contains forward-looking statements and estimates that involve risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 125950
+        },
+        {
+          "statement": "Our See “Special Note Regarding Forward-Looking Statements and Information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 126061
+        },
+        {
+          "statement": "other evolving business strategies, and possible further organizational restructuring, could affect future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 128262
+        },
+        {
+          "statement": "•Solventum’s future results are subject to vulnerability with respect to materials and availability of purchased components, compounds, raw materials, energy, production capacity and labor.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 129414
+        },
+        {
+          "statement": "uld have achieved as a separate, publicly traded company and may not be a reliable indicator of its future results or performance.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 132119
+        },
+        {
+          "statement": "We believe employees, consumers, customers and third-party partners value the reputation and status of our brands.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 167457
+        },
+        {
+          "statement": "other evolving business strategies, and possible further organizational restructuring, could affect future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 169474
+        },
+        {
+          "statement": "n currency exchange rates and fluctuations in those rates may affect Solventum’s ability to realize projected growth rates in its sales and earnings.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 173559
+        },
+        {
+          "statement": ", Solventum’s results of operations and its ability to realize projected growth rates in sales and earnings could be adversely affected if the value of the U.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 173819
+        },
+        {
+          "statement": "fficient production capacity to meet the demand for Solventum’s products and to support Solventum’s future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 188461
+        },
+        {
+          "statement": "the case, it could adversely affect Solventum’s operations and limit Solventum’s ability to support future growth or significantly impact its financial results and condition.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 188754
+        },
+        {
+          "statement": "e comparisons are based on historical data and are not indicative of, nor intended to forecast, the future performance of the Company's common stock.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 254217
+        },
+        {
+          "statement": "This discussion contains forward-looking statements that are based upon current expectations and are subject to uncertainty and changes in circumstances.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 255049
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue cycle waste, create more time for patient care,",
+            "position": 62144
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue or €20 million (or GBP 17.5",
+            "position": 103310
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 103960
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, as amended (the “Code,” such qualification,",
+            "position": 145597
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and profit margins, will be affected by, among other things, (i) the development and timing of the introduction of competitive products and services; (ii) Solventum’s pricing strategies; (iii)",
+            "position": 175734
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share growth and cash flows) and statements regarding Solventum’s strategy for growth, future product development, regulatory clearances and approvals,",
+            "position": 57479
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 221331
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements of its operating subsidiaries, covenants associated with certain of Solventum’s debt service obligations, legal requirements, regulatory constraints, industry practice, ",
+            "position": 242775
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, taxes,",
+            "position": 280523
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, comparable company information, and expected future cash flows, as well as underlying market and overall economic conditions, among other factors,",
+            "position": 280920
+          },
+          {
+            "metric": "profit",
+            "context": "profit margins, will be affected by, among other things, (i) the development and timing of the introduction of competitive products and services; (ii) Solventum’s pricing strategies; (iii) changes in ",
+            "position": 175746
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Shifting 2.0",
+            "position": 235709
+          },
+          {
+            "metric": "profit",
+            "context": "profit mark-ups on transition service arrangements with 3",
+            "position": 270018
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (earnings before interest, taxes,",
+            "position": 280515
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins, capital expenditures,",
+            "position": 280836
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (earnings before interest, taxes, depreciation and amortization) multiples or, in some cases,",
+            "position": 317252
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS are as follows:86Table of ContentsYear ended December 31,(Amounts in millions, except per share amounts)202420232022Numerator:Net income$479 $1,346 $1,343 Denominator:Weighted average common share",
+            "position": 410294
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased when compared to the same period last year driven by both price increases and lower spending,",
+            "position": 275116
+          },
+          {
+            "metric": "market share",
+            "context": "market share, and could result in operational disruptions or additional expense, all of which may have an adverse effect on Solventum’s business, financial condition,",
+            "position": 161460
+          },
+          {
+            "metric": "market share",
+            "context": "market share, negative publicity, reputational damage,",
+            "position": 203431
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income Year ended December 31,(Dollars in millions)202420232024 vs 2023 changeSegment Operating IncomeMedSurg$887 $1,107 (19.9",
+            "position": 260547
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (millions)$887$1,107$1,061Percent change(19.9",
+            "position": 270918
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (millions) $350 $442 $437 Percent change (20.8",
+            "position": 272517
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (millions) $431 $423 $359 Percent change 1.9",
+            "position": 274043
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income margin increased when compared to the same period last year driven by both price increases and lower spending,",
+            "position": 275099
+          },
+          {
+            "metric": "net income",
+            "context": "net income to net cash provided by operating activitiesDepreciation and amortization 555 561 578 Postretirement benefit plan expense34 41 64 Stock-based compensation expense 112 39 37 Gain on business",
+            "position": 286165
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$479 $1,346 $1,343 Earnings per share:Basic earnings per share $2.77",
+            "position": 302718
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — — 1,343 — 1,343 Other comprehensive income (loss), net of taxCumulative translation adjustment— — — — — (331)(331)Defined benefit pension— — — — — 34 34 Total other comprehensive incom",
+            "position": 305437
+          },
+          {
+            "metric": "net income",
+            "context": "net income to net cash provided by operating activitiesDepreciation and amortization 555 561 578 Pension and postretirement benefit expense34 41 64 Stock-based compensation expense 112 39 37 Gain on b",
+            "position": 307048
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$479 $1,346 $1,343 Denominator:Weighted average common shares outstanding – basic 173.2",
+            "position": 410424
+          },
+          {
+            "metric": "assets",
+            "context": "assets to be of material importance to any segment or to the business as a whole; rather, we believe understanding our customers’ needs, technology expertise,",
+            "position": 65618
+          },
+          {
+            "metric": "assets",
+            "context": "assets and rights may have required the consents or approvals of, or provide other rights to,",
+            "position": 127311
+          },
+          {
+            "metric": "assets",
+            "context": "assets or otherwise raise funds on acceptable terms, or at all,",
+            "position": 142382
+          },
+          {
+            "metric": "assets",
+            "context": "assets, whether by merger or otherwise (and regardless of whether Solventum participated in or otherwise facilitated the acquisition), (2) other actions or failures to act by Solventum or (3) certain ",
+            "position": 151863
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to PFAS,",
+            "position": 129925
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to the Bair Hugger patient warming system under the Separation and Distribution Agreement and certain other 3",
+            "position": 156151
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities relating to PFAS prior to Spin-Off may not be sufficient to protect Solventum against the full amount of such liabilities if, for example, 3",
+            "position": 156359
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities relating to,",
+            "position": 171212
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including exclusion from government contracting, and could disrupt its business, adversely affect its reputation and result in a material adverse effect on its business, results of operat",
+            "position": 196799
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities42Management’s Discussion and Analysis of Financial Condition and Results of Operations42Overview43Results of Operations46P",
+            "position": 55591
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities, strategic relationships or other arrangements in order to fund capital expenditures and investments, pay dividends and service debt,",
+            "position": 135022
+          },
+          {
+            "metric": "equity",
+            "context": "equity currency, enabling Solventum to use its own industry-focused stock to consummate future acquisitions or other transactions; and (6) enhanced recruitment and retention, including by aligning emp",
+            "position": 136850
+          },
+          {
+            "metric": "equity",
+            "context": "equity investors, including:•requiring a substantial portion of its cash flow from operations to make interest payments;•making it more difficult to satisfy debt service and other obligations;•increas",
+            "position": 140894
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities beyond certain thresholds; (3) repurchasing shares of Solventum stock other than in certain open-market transactions; and (4",
+            "position": 143347
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 54415
+          },
+          {
+            "text": "$7 billion",
+            "position": 112122
+          },
+          {
+            "text": "$8.0 billion",
+            "position": 140621
+          },
+          {
+            "text": "$3 billion",
+            "position": 189937
+          },
+          {
+            "text": "$2 billion",
+            "position": 190111
+          },
+          {
+            "text": "$100 ",
+            "position": 253982
+          },
+          {
+            "text": "$100.00 ",
+            "position": 254361
+          },
+          {
+            "text": "$76.53 ",
+            "position": 254369
+          },
+          {
+            "text": "$100.90 ",
+            "position": 254376
+          },
+          {
+            "text": "$95.60 ",
+            "position": 254384
+          },
+          {
+            "text": "$4,637 ",
+            "position": 259880
+          },
+          {
+            "text": "$4,632 ",
+            "position": 259887
+          },
+          {
+            "text": "$8,254 ",
+            "position": 260118
+          },
+          {
+            "text": "$8,197 ",
+            "position": 260125
+          },
+          {
+            "text": "$4,585 ",
+            "position": 260262
+          },
+          {
+            "text": "$8,130 ",
+            "position": 260492
+          },
+          {
+            "text": "$887 ",
+            "position": 260666
+          },
+          {
+            "text": "$1,107 ",
+            "position": 260671
+          },
+          {
+            "text": "$1,036 ",
+            "position": 260846
+          },
+          {
+            "text": "$1,692 ",
+            "position": 260853
+          },
+          {
+            "text": "$1,061 ",
+            "position": 260976
+          },
+          {
+            "text": "$1,693 ",
+            "position": 261155
+          },
+          {
+            "text": "$4,749 ",
+            "position": 261944
+          },
+          {
+            "text": "$3,505 ",
+            "position": 261951
+          },
+          {
+            "text": "$4,603 ",
+            "position": 262192
+          },
+          {
+            "text": "$3,594 ",
+            "position": 262199
+          },
+          {
+            "text": "$23 million",
+            "position": 263960
+          },
+          {
+            "text": "$367 ",
+            "position": 267332
+          },
+          {
+            "text": "$64 ",
+            "position": 267371
+          },
+          {
+            "text": "$25 ",
+            "position": 267375
+          },
+          {
+            "text": "$1 ",
+            "position": 267379
+          },
+          {
+            "text": "$4,637",
+            "position": 270776
+          },
+          {
+            "text": "$4,632",
+            "position": 270782
+          },
+          {
+            "text": "$4,585",
+            "position": 270788
+          },
+          {
+            "text": "$887",
+            "position": 270945
+          },
+          {
+            "text": "$1,107",
+            "position": 270949
+          },
+          {
+            "text": "$1,061",
+            "position": 270955
+          },
+          {
+            "text": "$1,295",
+            "position": 272367
+          },
+          {
+            "text": "$1,329",
+            "position": 272373
+          },
+          {
+            "text": "$1,327",
+            "position": 272379
+          },
+          {
+            "text": "$350 ",
+            "position": 272545
+          },
+          {
+            "text": "$442 ",
+            "position": 272550
+          },
+          {
+            "text": "$437 ",
+            "position": 272555
+          },
+          {
+            "text": "$1,306 ",
+            "position": 273912
+          },
+          {
+            "text": "$1,285 ",
+            "position": 273919
+          },
+          {
+            "text": "$1,227 ",
+            "position": 273926
+          },
+          {
+            "text": "$431 ",
+            "position": 274071
+          },
+          {
+            "text": "$423 ",
+            "position": 274076
+          },
+          {
+            "text": "$359 ",
+            "position": 274081
+          },
+          {
+            "text": "$956",
+            "position": 275492
+          }
+        ],
+        "percentages": [
+          {
+            "text": "56.2%",
+            "value": 56.2,
+            "position": 60886
+          },
+          {
+            "text": "15.7%",
+            "value": 15.7,
+            "position": 61503
+          },
+          {
+            "text": "15.8%",
+            "value": 15.8,
+            "position": 61856
+          },
+          {
+            "text": "11.6%",
+            "value": 11.6,
+            "position": 62382
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 68630
+          },
+          {
+            "text": "19.9%",
+            "value": 19.9,
+            "position": 159582
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 245581
+          },
+          {
+            "text": "0.1 %",
+            "value": 0.1,
+            "position": 259894
+          },
+          {
+            "text": "1.2 %",
+            "value": 1.2,
+            "position": 259911
+          },
+          {
+            "text": "0.7 %",
+            "value": 0.7,
+            "position": 260132
+          },
+          {
+            "text": "1.0 %",
+            "value": 1.0,
+            "position": 260269
+          },
+          {
+            "text": "1.6 %",
+            "value": 1.6,
+            "position": 260283
+          },
+          {
+            "text": "0.8 %",
+            "value": 0.8,
+            "position": 260499
+          },
+          {
+            "text": "1.4 %",
+            "value": 1.4,
+            "position": 260516
+          },
+          {
+            "text": "4.3 %",
+            "value": 4.3,
+            "position": 260983
+          },
+          {
+            "text": "8,254 %",
+            "value": 8254.0,
+            "position": 261959
+          },
+          {
+            "text": "57.5 %",
+            "value": 57.5,
+            "position": 261985
+          },
+          {
+            "text": "42.5 %",
+            "value": 42.5,
+            "position": 261991
+          },
+          {
+            "text": "100.0 %",
+            "value": 100.0,
+            "position": 261997
+          },
+          {
+            "text": "3.2 %",
+            "value": 3.2,
+            "position": 262028
+          },
+          {
+            "text": "1.7 %",
+            "value": 1.7,
+            "position": 262094
+          },
+          {
+            "text": "0.6 %",
+            "value": 0.6,
+            "position": 262099
+          },
+          {
+            "text": "8,197 %",
+            "value": 8197.0,
+            "position": 262207
+          },
+          {
+            "text": "56.2 %",
+            "value": 56.2,
+            "position": 262233
+          },
+          {
+            "text": "43.8 %",
+            "value": 43.8,
+            "position": 262239
+          },
+          {
+            "text": "3.4 %",
+            "value": 3.4,
+            "position": 262276
+          },
+          {
+            "text": "50.0 %",
+            "value": 50.0,
+            "position": 264443
+          },
+          {
+            "text": "48.0 %",
+            "value": 48.0,
+            "position": 264449
+          },
+          {
+            "text": "46.9 %",
+            "value": 46.9,
+            "position": 264455
+          },
+          {
+            "text": "2.0 %",
+            "value": 2.0,
+            "position": 264461
+          },
+          {
+            "text": "1.1 %",
+            "value": 1.1,
+            "position": 264466
+          },
+          {
+            "text": "0.7%",
+            "value": 0.7,
+            "position": 265164
+          },
+          {
+            "text": "1.4%",
+            "value": 1.4,
+            "position": 265229
+          },
+          {
+            "text": "33.7 %",
+            "value": 33.7,
+            "position": 266093
+          },
+          {
+            "text": "27.4 %",
+            "value": 27.4,
+            "position": 266099
+          },
+          {
+            "text": "27.5 %",
+            "value": 27.5,
+            "position": 266105
+          },
+          {
+            "text": "6.3 %",
+            "value": 6.3,
+            "position": 266111
+          },
+          {
+            "text": "0.5%",
+            "value": 0.5,
+            "position": 266822
+          },
+          {
+            "text": "20.9 %",
+            "value": 20.9,
+            "position": 268681
+          },
+          {
+            "text": "19.3 %",
+            "value": 19.3,
+            "position": 268687
+          },
+          {
+            "text": "20.6 %",
+            "value": 20.6,
+            "position": 268693
+          },
+          {
+            "text": "2.7 %",
+            "value": 2.7,
+            "position": 270830
+          },
+          {
+            "text": "13.5 %",
+            "value": 13.5,
+            "position": 270988
+          },
+          {
+            "text": "19.1 %",
+            "value": 19.1,
+            "position": 271011
+          },
+          {
+            "text": "23.9 %",
+            "value": 23.9,
+            "position": 271017
+          },
+          {
+            "text": "23.1 %",
+            "value": 23.1,
+            "position": 271023
+          },
+          {
+            "text": "0.1%",
+            "value": 0.1,
+            "position": 271072
+          },
+          {
+            "text": "1.2%",
+            "value": 1.2,
+            "position": 271102
+          },
+          {
+            "text": "0.6%",
+            "value": 0.6,
+            "position": 271542
+          },
+          {
+            "text": "1.0%",
+            "value": 1.0,
+            "position": 271790
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 175
+          },
+          {
+            "category": "operational_risk",
+            "count": 135
+          },
+          {
+            "category": "financial_risk",
+            "count": 343
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 219
+          },
+          {
+            "category": "technology_risk",
+            "count": 206
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 465309,
+        "filtered_length": 450659,
+        "removed_ratio": 3.15,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.42669942669943,
+      "confidence": 0.33340070068951816,
+      "overall_score": 49.42669942669943,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 41.91919191919192,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": -0.01146601146601145,
+        "risk_adjusted_signal": -0.07711905418271672,
+        "expected_return_annualized": -0.021800916395510957,
+        "signal_sharpe_ratio": -0.0014533944263673971,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": -0.07711905418271672,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": -0.07711905418271672,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.16161616161616163,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": -0.07711905418271672,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": -0.01146601146601145
+      },
+      "risk_adjusted_signal": -0.07711905418271672,
+      "expected_return": -0.00021800916395510957,
+      "signal_sharpe": -0.0014533944263673971,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 49.42669942669943,
+    "confidence": 0.33340070068951816,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:32:32.788220",
+  "filing_date": "2025-02-28",
+  "filing_filename": "2025-02-28-10k-SOLV.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

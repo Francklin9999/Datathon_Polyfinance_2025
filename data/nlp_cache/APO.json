@@ -1,0 +1,904 @@
+{
+  "ticker": "APO",
+  "analysis": {
+    "ticker": "APO",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 41.69930702018681,
+        "financial_sentiment": -0.125,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "These forward-looking statements are based on management’s beliefs, as well as assumptions made by, and information currently available to, management.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 178290
+        },
+        {
+          "statement": ",” “could,” or “may,” and variations of such words and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 178693
+        },
+        {
+          "statement": "y forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 178791
+        },
+        {
+          "statement": "We believe these factors include but are not limited to those described under the section entitled “Item 1A.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 179975
+        },
+        {
+          "statement": "We undertake no obligation to publicly update any forward-looking statements, whether as a result of new information, future developments or otherwise, except as required by applicable law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 180504
+        },
+        {
+          "statement": "We operate our asset management business in a highly integrated manner, which we believe distinguishes us from other alternative asset managers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 222496
+        },
+        {
+          "statement": "Our investment teams frequently collaborate across disciplines and we believe that this collaboration enables our clients to more successfully invest across a company’s capital structure.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 222630
+        },
+        {
+          "statement": "12Table of ContentsWe have applied this investment philosophy to identify what we believe are attractive investment opportunities, deploy capital across the balance sheet of industry leading, or “franchise,” businesses and create value throughout economic cycles.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 223735
+        },
+        {
+          "statement": "that are created at meaningful discounts to comparable market multiples, thereby resulting in what we believe are portfolios focused on capital preservation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 227949
+        },
+        {
+          "statement": "We believe these investments may translate into greater compounded annual growth of Fee Related Earnings.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 266890
+        },
+        {
+          "statement": "We believe our commitment to expanding opportunity across our ecosystem is central to the Apollo business model, an integrated platform which fosters strong collaboration across businesses and functions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 272952
+        },
+        {
+          "statement": "Talent DevelopmentWe believe that ongoing professional development is a critical part of our culture at Apollo and an important enabler of our investment process.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 273290
+        },
+        {
+          "statement": "ture, the breadth of our integrated platform, and our reputation for strong investment performance, we believe we can attract, develop and retain top talent.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 273569
+        },
+        {
+          "statement": "At the same time, we believe that a workforce of extraordinary people from a wide range of backgrounds and viewpoints helps us solve complex problems, drive innovation, and achieve great results over the long term.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 275461
+        },
+        {
+          "statement": "Sustainable Investing and Corporate ResponsibilityAt Apollo, we believe that taking all available factors into account can help drive value creation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 277354
+        },
+        {
+          "statement": "As a result of these identifications, we expect Athene to be subject to the relevant capital standard that the U.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 303590
+        },
+        {
+          "statement": "olicies and procedures, such as our code of ethics, compliance systems, communication of compliance guidance and employee education and training.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 309344
+        },
+        {
+          "statement": "Our future results will also be significantly dependent on the success of the larger funds we manage (e.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 325554
+        },
+        {
+          "statement": "We intend to grow our business in the future in part by acquisitions and joint ventures, each of which could require additional cash and equity, systems development and skilled personnel.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 328820
+        },
+        {
+          "statement": "sagree with the categorization methodologies we use, or new regulations, legislation, or regulatory guidance require a methodology of measuring or disclosing sustainability-related information that is diﬀerent from our current practice, it could have an adverse eﬀect on fundraising eﬀorts.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 373831
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Service; the Office of the Comptroller of the Currency; the Federal Communications Commission; banking and financial regulators in the European Union,",
+            "position": 281342
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 312145
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, net income and cash flow,",
+            "position": 341530
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue if we share with fund investors a larger portion, or all, of certain types of fees generated by funds’ investments, such as management consulting fees and merger and acquisition transaction ad",
+            "position": 365128
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue streams increase,",
+            "position": 367916
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flow, the accuracy of management’s assumptions and estimates, our dependence on certain key personnel, our use of leverage to finance our businesses and investments by the funds we m",
+            "position": 179461
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flow;•Our ability to expand into new investment strategies, geographic markets and businesses and new types of investors;•Our business initiatives to increase the number and type of ",
+            "position": 181300
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings,",
+            "position": 199027
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings, or SREComponent of Segment Income that is used to assess the performance of the Retirement Services segment, excluding certain market volatility, which consists of investment gains (losses),",
+            "position": 217400
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings on Athene’s net invested assets and (ii) management fees received on business managed for others, less (x) cost of funds, (y) operating expenses excluding equity-based compensation and (z) fi",
+            "position": 217880
+          },
+          {
+            "metric": "profit",
+            "context": "profit of such funds, partnerships and accounts is being allocated to, or earned by, the general partner in accordance with the applicable limited partnership agreements or other governing agreements;",
+            "position": 214220
+          },
+          {
+            "metric": "profit",
+            "context": "profit shifting (“BEPS”) project, which is focused on a number of issues, including the prevention of profit shifting among affiliated entities in different jurisdictions,",
+            "position": 451570
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing payable4/expense$1,684 $1,507 $118 $516 $634 $(54)$335 $281 $(17)$130 $113 1 As of December 31, 2024, certain funds had $213",
+            "position": 518890
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing,",
+            "position": 519794
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing payable of $1.8",
+            "position": 520267
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA is common and relevant for most companies and industries, however,",
+            "position": 974279
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins, revenue growth over certain time periods,",
+            "position": 974847
+          },
+          {
+            "metric": "margin",
+            "context": "margin loans or other derivative financing arrangements to fund operations and investments,",
+            "position": 356722
+          },
+          {
+            "metric": "margin",
+            "context": "margin on short notice or have inadequate cash on hand as of the repurchase date,",
+            "position": 402336
+          },
+          {
+            "metric": "margin",
+            "context": "margin is deducted from the discount rate to reflect the uncertainty in the projected cash flows, such as variations in policyholder behavior,",
+            "position": 707390
+          },
+          {
+            "metric": "margin",
+            "context": "margin involve significant unobservable inputs and may materially impact the estimated valuation of Market Risk Benefits and Interest Sensitive Contract Liabilities,",
+            "position": 768957
+          },
+          {
+            "metric": "margin",
+            "context": "margin is incorporated within the discount rate to reflect uncertainty in the projected cash flows such as variations in policyholder behavior, as well as a credit spread to reflect nonperformance ris",
+            "position": 1017958
+          },
+          {
+            "metric": "market share",
+            "context": "market share repurchases during the years ended December 31, 2024, 2023 and 2022,",
+            "position": 1057921
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Shares Outstanding, or ANI Shares OutstandingConsists of total shares of common stock outstanding, RSUs that participate in dividends, and shares of common stock assumed to be issuable upon",
+            "position": 185784
+          },
+          {
+            "metric": "net income",
+            "context": "net income and cash flow,",
+            "position": 341539
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss) includes the net income (loss) attributable to the non-controlling interest holders on the Company’s consolidated statements of operations, and (3",
+            "position": 543507
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income tax rate,",
+            "position": 545024
+          },
+          {
+            "metric": "assets",
+            "context": "assets;•Reliance by us and the funds we manage on the financing markets;•Artificial intelligence increasing competitive, operational, legal and regulatory risks;•Our reliance on our asset management b",
+            "position": 181900
+          },
+          {
+            "metric": "assets",
+            "context": "Assets Under Management, or AUMThe assets of the funds, partnerships and accounts to which Apollo provides investment management, advisory, or certain other investment-related services, including, wit",
+            "position": 188406
+          },
+          {
+            "metric": "assets",
+            "context": "assets plus capital commitments, of the credit and certain equity funds, partnerships and accounts for which we provide investment management or advisory services, other than certain CLOs, CDOs, and c",
+            "position": 188823
+          },
+          {
+            "metric": "assets",
+            "context": "assets Apollo manages or advises; and4",
+            "position": 189642
+          },
+          {
+            "metric": "assets",
+            "context": "assets that Apollo manages or advises for the funds, partnerships and accounts to which Apollo provides investment management, advisory, or certain other investment-related services, plus unused credi",
+            "position": 189710
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities platform that acquires or reinsures blocks of insurance business in the German and broader European life insurance market (collectively,",
+            "position": 192455
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities on products other than deferred annuities and institutional products,",
+            "position": 195509
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and non-controlling interest adjustments, (f) net investment payables and receivables,",
+            "position": 206017
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities include Athene’s (a) interest sensitive contract liabilities, (b) future policy benefits, (c) net market risk benefits, (d) long-term repurchase obligations, (e) dividends payable to polic",
+            "position": 210229
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are net of the ceded liabilities to third-party reinsurers as the costs of the liabilities are passed to such reinsurers and, therefore, Athene has no net economic exposure to such liabili",
+            "position": 210735
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities63Item 6",
+            "position": 176757
+          },
+          {
+            "metric": "equity",
+            "context": "Equity US Fund,",
+            "position": 186162
+          },
+          {
+            "metric": "equity",
+            "context": "Equity International Fund,",
+            "position": 186200
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities due to their underlying characteristics5Table of ContentsAMHApollo Management Holdings,",
+            "position": 186701
+          },
+          {
+            "metric": "equity",
+            "context": "equity funds, partnerships and accounts for which we provide investment management or advisory services, other than certain CLOs, CDOs, and certain perpetual capital vehicles, which have a fee-generat",
+            "position": 188882
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.00001 ",
+            "position": 182991
+          },
+          {
+            "text": "$3.66 m",
+            "position": 187536
+          },
+          {
+            "text": "$751.0 billion",
+            "position": 222188
+          },
+          {
+            "text": "$616.4 billion",
+            "position": 223978
+          },
+          {
+            "text": "$251.3 billion",
+            "position": 224739
+          },
+          {
+            "text": "$229.1 billion",
+            "position": 225278
+          },
+          {
+            "text": "$40.3 billion",
+            "position": 225684
+          },
+          {
+            "text": "$25.2 billion",
+            "position": 226128
+          },
+          {
+            "text": "$134.7 billion",
+            "position": 226552
+          },
+          {
+            "text": "$76.8 billion",
+            "position": 227524
+          },
+          {
+            "text": "$14.7 billion",
+            "position": 228523
+          },
+          {
+            "text": "$19.5 billion",
+            "position": 229094
+          },
+          {
+            "text": "$16.6 billion",
+            "position": 229609
+          },
+          {
+            "text": "$13.6 billion",
+            "position": 230043
+          },
+          {
+            "text": "$446.5 billion",
+            "position": 230731
+          },
+          {
+            "text": "$331.5 billion",
+            "position": 231690
+          },
+          {
+            "text": "$325.7 billion",
+            "position": 231722
+          },
+          {
+            "text": "$52.4 billion",
+            "position": 232269
+          },
+          {
+            "text": "$50.5 billion",
+            "position": 232294
+          },
+          {
+            "text": "$32.4 billion",
+            "position": 232791
+          },
+          {
+            "text": "$30.6 billion",
+            "position": 232839
+          },
+          {
+            "text": "$564 million",
+            "position": 238660
+          },
+          {
+            "text": "$8.8 billion",
+            "position": 261045
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 261118
+          },
+          {
+            "text": "$3.3 billion",
+            "position": 261157
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 261404
+          },
+          {
+            "text": "$640 million",
+            "position": 262365
+          },
+          {
+            "text": "$25,000 ",
+            "position": 296740
+          },
+          {
+            "text": "$500 ",
+            "position": 297662
+          },
+          {
+            "text": "$100,000 ",
+            "position": 297765
+          },
+          {
+            "text": "$50 ",
+            "position": 475327
+          },
+          {
+            "text": "$100 ",
+            "position": 489388
+          },
+          {
+            "text": "$0.4625 ",
+            "position": 490090
+          },
+          {
+            "text": "$2.04 ",
+            "position": 490332
+          },
+          {
+            "text": "$0.8438 ",
+            "position": 490431
+          },
+          {
+            "text": "$1,901,969,206 ",
+            "position": 494012
+          },
+          {
+            "text": "$163.67 ",
+            "position": 494160
+          },
+          {
+            "text": "$1,873,763,011 ",
+            "position": 494176
+          },
+          {
+            "text": "$176.24 ",
+            "position": 494324
+          },
+          {
+            "text": "$1,771,896,394 ",
+            "position": 494340
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 494675
+          },
+          {
+            "text": "$751 billion",
+            "position": 497910
+          },
+          {
+            "text": "$616 billion",
+            "position": 498817
+          },
+          {
+            "text": "$135 billion",
+            "position": 499568
+          },
+          {
+            "text": "$50.6 billion",
+            "position": 510418
+          },
+          {
+            "text": "$33.6 billion",
+            "position": 510538
+          },
+          {
+            "text": "$17.0 billion",
+            "position": 510642
+          },
+          {
+            "text": "$93 ",
+            "position": 517947
+          },
+          {
+            "text": "$59 ",
+            "position": 517951
+          },
+          {
+            "text": "$34 ",
+            "position": 517955
+          }
+        ],
+        "percentages": [
+          {
+            "text": "6.75%",
+            "value": 6.75,
+            "position": 175762
+          },
+          {
+            "text": "7.625%",
+            "value": 7.625,
+            "position": 175844
+          },
+          {
+            "text": "20.0%",
+            "value": 20.0,
+            "position": 208715
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 227317
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 227337
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 236793
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 236834
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 236890
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 248758
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 249006
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 249012
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 249463
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 249470
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 249666
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 261254
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 261628
+          },
+          {
+            "text": "63%",
+            "value": 63.0,
+            "position": 261720
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 262298
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 262588
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 262624
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 264025
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 290979
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 293274
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 452167
+          },
+          {
+            "text": "12.5%",
+            "value": 12.5,
+            "position": 459959
+          },
+          {
+            "text": "2.9%",
+            "value": 2.9,
+            "position": 505690
+          },
+          {
+            "text": "3.4%",
+            "value": 3.4,
+            "position": 505732
+          },
+          {
+            "text": "4.25%",
+            "value": 4.25,
+            "position": 505843
+          },
+          {
+            "text": "4.50%",
+            "value": 4.5,
+            "position": 505852
+          },
+          {
+            "text": "23.3%",
+            "value": 23.3,
+            "position": 506047
+          },
+          {
+            "text": "24.2%",
+            "value": 24.2,
+            "position": 506087
+          },
+          {
+            "text": "5.3%",
+            "value": 5.3,
+            "position": 506207
+          },
+          {
+            "text": "18.6%",
+            "value": 18.6,
+            "position": 506238
+          },
+          {
+            "text": "8.2%",
+            "value": 8.2,
+            "position": 506420
+          },
+          {
+            "text": "8.7%",
+            "value": 8.7,
+            "position": 506479
+          },
+          {
+            "text": "2.8%",
+            "value": 2.8,
+            "position": 506629
+          },
+          {
+            "text": "2.7%",
+            "value": 2.7,
+            "position": 506781
+          },
+          {
+            "text": "2.1%",
+            "value": 2.1,
+            "position": 506798
+          },
+          {
+            "text": "4.1%",
+            "value": 4.1,
+            "position": 506893
+          },
+          {
+            "text": "3.8%",
+            "value": 3.8,
+            "position": 506935
+          },
+          {
+            "text": "6.2%",
+            "value": 6.2,
+            "position": 507232
+          },
+          {
+            "text": "3.1%",
+            "value": 3.1,
+            "position": 507265
+          },
+          {
+            "text": "1.7%",
+            "value": 1.7,
+            "position": 507315
+          },
+          {
+            "text": "5.4%",
+            "value": 5.4,
+            "position": 507352
+          },
+          {
+            "text": "0.1%",
+            "value": 0.1,
+            "position": 507414
+          },
+          {
+            "text": "4.58%",
+            "value": 4.58,
+            "position": 508904
+          },
+          {
+            "text": "3.88%",
+            "value": 3.88,
+            "position": 508946
+          },
+          {
+            "text": "4.31%",
+            "value": 4.31,
+            "position": 509066
+          },
+          {
+            "text": "5.33%",
+            "value": 5.33,
+            "position": 509108
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 510597
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 520
+          },
+          {
+            "category": "operational_risk",
+            "count": 33
+          },
+          {
+            "category": "financial_risk",
+            "count": 1372
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 253
+          },
+          {
+            "category": "technology_risk",
+            "count": 376
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1201743,
+        "filtered_length": 1188804,
+        "removed_ratio": 1.08,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.83108108108108,
+      "confidence": 0.09832932627484076,
+      "overall_score": 50.16891891891892,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.75,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.0033783783783783994,
+        "risk_adjusted_signal": 0.022722578464550634,
+        "expected_return_annualized": 0.006423484295105955,
+        "signal_sharpe_ratio": 0.000428232286340397,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.022722578464550634,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.022722578464550634,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.125,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.022722578464550634,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.0033783783783783994
+      },
+      "risk_adjusted_signal": 0.022722578464550634,
+      "expected_return": 6.423484295105955e-05,
+      "signal_sharpe": 0.000428232286340397,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.16891891891892,
+    "confidence": 0.09832932627484076,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:19:30.811868",
+  "filing_date": "2025-02-24",
+  "filing_filename": "2025-02-24-10k-APO.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

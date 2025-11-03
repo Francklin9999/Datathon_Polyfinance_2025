@@ -1,0 +1,909 @@
+{
+  "ticker": "EIX",
+  "analysis": {
+    "ticker": "EIX",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 41.273699562469616,
+        "financial_sentiment": -0.10752688172043011,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "oolsey Firea wind-driven fire that originated in Ventura County in November 2018viiTable of ContentsFORWARD-LOOKING STATEMENTSThis Annual Report on contains \"forward-looking statements\" within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 109935
+        },
+        {
+          "statement": "ounty in November 2018viiTable of ContentsFORWARD-LOOKING STATEMENTSThis Annual Report on contains \"forward-looking statements\" within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 109993
+        },
+        {
+          "statement": "hat is incorporated in this report, or that refers to or incorporates this report, may also contain forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 110596
+        },
+        {
+          "statement": "f such words and similar expressions, or discussions of strategy or plans, are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 110929
+        },
+        {
+          "statement": "Forward-looking statements speak only as of the date they are made and neither Edison International nor SCE are obligated to publicly update or revise forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117729
+        },
+        {
+          "statement": "e they are made and neither Edison International nor SCE are obligated to publicly update or revise forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117880
+        },
+        {
+          "statement": "Accordingly, the direct expenditures of the project are estimated to be reduced from $486 million to $472 million.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 183616
+        },
+        {
+          "statement": "ioning cost estimate includes costs through the expected decommissioning completion date, currently estimated to be in 2056.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 197304
+        },
+        {
+          "statement": "d in the consolidated balance sheets unless subject to an exception under the applicable accounting guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 221909
+        },
+        {
+          "statement": "Edison International and SCE determine uncertain tax positions in accordance with the authoritative guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 240924
+        },
+        {
+          "statement": "tions and judgments by management underlying these estimates, could cause material revisions to the estimated total cost to decommission these facilities which could have a material effect on the recorded liability.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 246960
+        },
+        {
+          "statement": "with ratemaking methods and pension expense calculated in accordance with authoritative accounting guidance for pension is accumulated as a regulatory asset or liability, and is expected, over time, to be recovered from or returned to customers.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 250225
+        },
+        {
+          "statement": "hod has recognized less in expense than the accounting method since implementation of authoritative guidance for employers' accounting for pensions in 1987, which was offset by a regulatory liability for the current funding level of SCE's pension plan.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 250581
+        },
+        {
+          "statement": "he future be determined to be covered by the Wildfire Insurance Fund and have not been reflected or estimated at this time.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 258532
+        },
+        {
+          "statement": "NEW ACCOUNTING GUIDANCENew accounting guidance is discussed in \"Notes to Consolidated Financial Statements—Note 1.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 258911
+        },
+        {
+          "statement": "NEW ACCOUNTING GUIDANCENew accounting guidance is discussed in \"Notes to Consolidated Financial Statements—Note 1.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 258934
+        },
+        {
+          "statement": "Summary of Significant Accounting Policies—New Accounting Guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 259069
+        },
+        {
+          "statement": "As a result, Edison International's and SCE's future performance may be affected by events and economic factors unique to California or by regional regulation, legislation or judicial decisions.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 305126
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 309786
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audits to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 322325
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue requirement for 2024TrioEdison Energy, LLC, an indirect wholly-owned non-utility subsidiary of Edison International doing business as \"Trio\"Turnover Ratethe number of employees (other than int",
+            "position": 109086
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue authorized in Track 4 and an increase in the authorized rate of return resulting from the cost of capital adjustment mechanism,",
+            "position": 123877
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirement of approximately $10.3",
+            "position": 135174
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirement adopted in Track 4, prior to adjustments for updated operations and maintenance escalation rates, the CPUC's decisions to adopt SCE's 2023 - 2025 cost of capital,",
+            "position": 135316
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue requirement of approximately $9.3",
+            "position": 136032
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, such as write downs, asset impairments and other income and expense related to changes in law, outcomes in tax, regulatory or legal proceedings, and exit activities,",
+            "position": 120994
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (loss)SCE2,232 2,135 97 2,029 Edison International Parent and Other(332)(310)(22)(264)Edison International$1,900 $1,825 $75 $1,765 1Charges of $4 million and $6 million related to claims from",
+            "position": 122711
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in periods before the third quarter of 2023",
+            "position": 123020
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings increased $87 million, driven by an increase in SCE's earnings of $145 million, offset by an increase in Edison International Parent and Other loss of $58",
+            "position": 123387
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and $48",
+            "position": 123624
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS\") using the two-class method,",
+            "position": 393999
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS attributable to Edison International common shareholders was computed as follows:Years ended December 31,(in millions, except per-share amounts)202420232022Basic earnings per share:Net income avai",
+            "position": 394407
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE based on changes in Moody's utility bond rate index;•availability and creditworthiness of counterparties and the resulting effects on liquidity in the power and fuel markets and/or the ability of ",
+            "position": 116768
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE as discussed in \"—Cost of Capital,",
+            "position": 137838
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE from 10.05",
+            "position": 138239
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE was adjusted to 10.33",
+            "position": 138768
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 10.33",
+            "position": 581565
+          },
+          {
+            "metric": "margin",
+            "context": "Margin and Collateral DepositsCertain derivative instruments, power and energy procurement contracts,",
+            "position": 199294
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate from 2024 through 2028,",
+            "position": 132205
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income— 1 50 1 49 Total operating expenses14,551 13,635 15,659 (916)2,024 Operating income2,996 2,640 1,513 356 1,127 Interest expense(1,575)(1,356)(1,005)(219)(351)Other income, net493 497 ",
+            "position": 161613
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income— 1 49 Total operating expenses14,669 13,711 15,737 Operating income2,930 2,627 1,483 Interest expense(1,869)(1,612)(1,169)Other income, net502 500 348 Income before income taxes1,563 ",
+            "position": 333288
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income— 1 49 Deferred income taxes9 108 (177)Wildfire Insurance Fund amortization expense146 213 214 Other81 57 80 Nuclear decommissioning trusts(174)(180)(123)Contributions to Wildfire Insu",
+            "position": 338332
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income— 1 50 Total operating expenses14,551 13,635 15,659 Operating income2,996 2,640 1,513 Interest expense(1,575)(1,356)(1,005)Other income, net493 497 337 Income before income taxes1,914 ",
+            "position": 343394
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income— 1 50 Deferred income taxes69 179 (111)Wildfire Insurance Fund amortization expense146 213 214 Other56 33 59 Nuclear decommissioning trusts(174)(180)(123)Contributions to Wildfire Ins",
+            "position": 347549
+          },
+          {
+            "metric": "net income",
+            "context": "net income consisted of $97 million of higher core earnings and $48",
+            "position": 123573
+          },
+          {
+            "metric": "net income",
+            "context": "Net income available for common stock$1,619 $1,474 $847 $145 $627 2024 vs 2023Operating RevenueHigher operating revenue of $1,272 million is primarily due to:•An increase in CPUC-related revenues of $",
+            "position": 162021
+          },
+          {
+            "metric": "net income",
+            "context": "Net income and non-cash items increased in 2024 by $231 million primarily due to higher revenue authorized in Track 4 and an increase in the authorized rate of return resulting from the cost of capita",
+            "position": 210110
+          },
+          {
+            "metric": "net income",
+            "context": "Net income available to Edison International common shareholders1,284 1,197 612 Basic earnings per share:Weighted average shares of common stock outstanding386383381Basic earnings per common share ava",
+            "position": 333698
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$1,546 $1,407 $824 Adjustments to reconcile to net cash provided by operating activities:Depreciation and amortization2,939 2,721 2,633 Allowance for equity during construction(187)(157)(137",
+            "position": 338106
+          },
+          {
+            "metric": "assets",
+            "context": "Assets and Liabilities96Note 12",
+            "position": 100499
+          },
+          {
+            "metric": "assets",
+            "context": "assets and personnel; •risks associated with the operation and maintenance of electrical facilities, including worker, contractor, and public safety issues, the risk of utility assets causing or contr",
+            "position": 111787
+          },
+          {
+            "metric": "assets",
+            "context": "assets for expected recoveries through insurance and third parties of $434 million and through electric rates of $149",
+            "position": 158243
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities1,219 576 (51)643 Wildfire related claims3(397)(410)(56)13 Other noncurrent assets and liabilities470 (204)(461)274 Net cash provided by operating activities$5,383 $3,681 $3,319 ",
+            "position": 208563
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities,",
+            "position": 209160
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, effective tax rates and cash flows;•changes in rates of inflation (including whether inflation-related adjustments to SCE's authorized revenues allowed by the public utility regulators ar",
+            "position": 116458
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 209171
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including changes in net over or undercollections recorded in balancing accounts, was $1,219 million and $576 million in 2024 and 2023,",
+            "position": 210926
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of $11.5",
+            "position": 234462
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of 7 billion Southern California Edison Company Wholly owned by Edison InternationalIndicate the number of shares outstanding of each of the issuer's classes of common st",
+            "position": 96431
+          },
+          {
+            "metric": "equity",
+            "context": "Equity for Edison International54Consolidated Statements of Income for Southern California Edison Company56Consolidated Statements of Comprehensive Income for Southern California Edison Company56Conso",
+            "position": 99732
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES140, Item 5Edison International140Southern California Edison Company140Purchases of Equity Securities by Edison Internation",
+            "position": 102110
+          },
+          {
+            "metric": "equity",
+            "context": "equity portion of SCE's rate base as required under AB 1054AB 1054 Liability Capa cap on the aggregate requirement to reimburse the Wildfire Insurance Fund over a trailing three calendar year period w",
+            "position": 103507
+          },
+          {
+            "metric": "equity",
+            "context": "equity, the recoverability of wildfire-related and debris flow-related costs, issuance of SCE's wildfire safety certification, wildfire mitigation efforts, approval and implementation of electrificati",
+            "position": 114175
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$1.6 billion",
+            "position": 103414
+          },
+          {
+            "text": "$1,619 ",
+            "position": 121668
+          },
+          {
+            "text": "$1,474 ",
+            "position": 121675
+          },
+          {
+            "text": "$145 ",
+            "position": 121682
+          },
+          {
+            "text": "$847 ",
+            "position": 121687
+          },
+          {
+            "text": "$1,900 ",
+            "position": 122826
+          },
+          {
+            "text": "$1,825 ",
+            "position": 122833
+          },
+          {
+            "text": "$75 ",
+            "position": 122840
+          },
+          {
+            "text": "$1,765 ",
+            "position": 122844
+          },
+          {
+            "text": "$4 million",
+            "position": 122863
+          },
+          {
+            "text": "$6 million",
+            "position": 122878
+          },
+          {
+            "text": "$87 million",
+            "position": 123406
+          },
+          {
+            "text": "$145 million",
+            "position": 123462
+          },
+          {
+            "text": "$58 million",
+            "position": 123547
+          },
+          {
+            "text": "$97 million",
+            "position": 123597
+          },
+          {
+            "text": "$48 million",
+            "position": 123637
+          },
+          {
+            "text": "$22 million",
+            "position": 123738
+          },
+          {
+            "text": "$36 million",
+            "position": 123774
+          },
+          {
+            "text": "$493 million",
+            "position": 124279
+          },
+          {
+            "text": "$355 million",
+            "position": 124293
+          },
+          {
+            "text": "$634 million",
+            "position": 124338
+          },
+          {
+            "text": "$457 million",
+            "position": 124352
+          },
+          {
+            "text": "$162 million",
+            "position": 124624
+          },
+          {
+            "text": "$117 million",
+            "position": 124638
+          },
+          {
+            "text": "$34 million",
+            "position": 124683
+          },
+          {
+            "text": "$25 million",
+            "position": 124696
+          },
+          {
+            "text": "$146 million",
+            "position": 124999
+          },
+          {
+            "text": "$105 million",
+            "position": 125013
+          },
+          {
+            "text": "$213 million",
+            "position": 125058
+          },
+          {
+            "text": "$153 million",
+            "position": 125072
+          },
+          {
+            "text": "$50 million",
+            "position": 125334
+          },
+          {
+            "text": "$30 million",
+            "position": 125609
+          },
+          {
+            "text": "$21 million",
+            "position": 125622
+          },
+          {
+            "text": "$17 million",
+            "position": 125814
+          },
+          {
+            "text": "$12 million",
+            "position": 125827
+          },
+          {
+            "text": "$10 million",
+            "position": 125954
+          },
+          {
+            "text": "$7 million",
+            "position": 125967
+          },
+          {
+            "text": "$3 million",
+            "position": 126187
+          },
+          {
+            "text": "$42 million",
+            "position": 126261
+          },
+          {
+            "text": "$33 million",
+            "position": 126274
+          },
+          {
+            "text": "$13 billion",
+            "position": 133805
+          },
+          {
+            "text": "$10.3 billion",
+            "position": 135211
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 135244
+          },
+          {
+            "text": "$8.4 billion",
+            "position": 135298
+          },
+          {
+            "text": "$9.3 billion",
+            "position": 136069
+          },
+          {
+            "text": "$10.5 billion",
+            "position": 136673
+          },
+          {
+            "text": "$670 million",
+            "position": 136763
+          },
+          {
+            "text": "$750 million",
+            "position": 136777
+          },
+          {
+            "text": "$730 million",
+            "position": 136794
+          },
+          {
+            "text": "$220 million",
+            "position": 136894
+          }
+        ],
+        "percentages": [
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 103766
+          },
+          {
+            "text": "15.8%",
+            "value": 15.8,
+            "position": 107630
+          },
+          {
+            "text": "78.21%",
+            "value": 78.21,
+            "position": 108203
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 123246
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 123355
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 127916
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 127949
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 128147
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 128520
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 128626
+          },
+          {
+            "text": "95%",
+            "value": 95.0,
+            "position": 128726
+          },
+          {
+            "text": "46%",
+            "value": 46.0,
+            "position": 128762
+          },
+          {
+            "text": "54%",
+            "value": 54.0,
+            "position": 129895
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 129923
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 130635
+          },
+          {
+            "text": "2.6%",
+            "value": 2.6,
+            "position": 132184
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 133984
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 135261
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 136125
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 136446
+          },
+          {
+            "text": "10.05%",
+            "value": 10.05,
+            "position": 138248
+          },
+          {
+            "text": "10.75%",
+            "value": 10.75,
+            "position": 138258
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 138593
+          },
+          {
+            "text": "10.33%",
+            "value": 10.33,
+            "position": 138788
+          },
+          {
+            "text": "4.95%",
+            "value": 4.95,
+            "position": 176646
+          },
+          {
+            "text": "48%",
+            "value": 48.0,
+            "position": 187009
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 187119
+          },
+          {
+            "text": "4.86%",
+            "value": 4.86,
+            "position": 203241
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 204418
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 204424
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 206649
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 220562
+          },
+          {
+            "text": "99.8%",
+            "value": 99.8,
+            "position": 226427
+          },
+          {
+            "text": "2.1%",
+            "value": 2.1,
+            "position": 245342
+          },
+          {
+            "text": "7.5%",
+            "value": 7.5,
+            "position": 245350
+          },
+          {
+            "text": "15.04 %",
+            "value": 15.04,
+            "position": 250920
+          },
+          {
+            "text": "5.06 %",
+            "value": 5.06,
+            "position": 250927
+          },
+          {
+            "text": "26.75 %",
+            "value": 26.75,
+            "position": 250973
+          },
+          {
+            "text": "4.88 %",
+            "value": 4.88,
+            "position": 250980
+          },
+          {
+            "text": "6.50 %",
+            "value": 6.5,
+            "position": 251024
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 251834
+          },
+          {
+            "text": "5.6%",
+            "value": 5.6,
+            "position": 251983
+          },
+          {
+            "text": "5.2%",
+            "value": 5.2,
+            "position": 251989
+          },
+          {
+            "text": "6.6%",
+            "value": 6.6,
+            "position": 251998
+          },
+          {
+            "text": "3.5%",
+            "value": 3.5,
+            "position": 252161
+          },
+          {
+            "text": "1.8%",
+            "value": 1.8,
+            "position": 252167
+          },
+          {
+            "text": "4.3%",
+            "value": 4.3,
+            "position": 252176
+          },
+          {
+            "text": "5.00%",
+            "value": 5.0,
+            "position": 252404
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 254038
+          },
+          {
+            "text": "4.1%",
+            "value": 4.1,
+            "position": 362998
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 137
+          },
+          {
+            "category": "operational_risk",
+            "count": 53
+          },
+          {
+            "category": "financial_risk",
+            "count": 540
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 375
+          },
+          {
+            "category": "technology_risk",
+            "count": 218
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 692326,
+        "filtered_length": 686119,
+        "removed_ratio": 0.9,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.4768962510898,
+      "confidence": 0.3046180090604461,
+      "overall_score": 50.5231037489102,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.623655913978496,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.010462074978204006,
+        "risk_adjusted_signal": 0.07036669459989826,
+        "expected_return_annualized": 0.019892080397747345,
+        "signal_sharpe_ratio": 0.0013261386931831562,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.07036669459989826,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.07036669459989826,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10752688172043011,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.07036669459989826,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.010462074978204006
+      },
+      "risk_adjusted_signal": 0.07036669459989826,
+      "expected_return": 0.00019892080397747344,
+      "signal_sharpe": 0.0013261386931831562,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.5231037489102,
+    "confidence": 0.3046180090604461,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:23:28.093242",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-EIX.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

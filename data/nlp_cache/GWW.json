@@ -1,0 +1,846 @@
+{
+  "ticker": "GWW",
+  "analysis": {
+    "ticker": "GWW",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 40.22857142857143,
+        "financial_sentiment": -0.06593406593406594,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "below) makes forward-looking statements that are not historical in nature but concern forecasts of future results, business plans, analyses, prospects, strategies, objectives and other matters that may be deemed to be “forward-looking statements” under the federal securities laws.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 27292
+        },
+        {
+          "statement": "ness plans, analyses, prospects, strategies, objectives and other matters that may be deemed to be “forward-looking statements” under the federal securities laws.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 27412
+        },
+        {
+          "statement": "Grainger cannot guarantee that any forward-looking statement will be realized and achievement of future results is subject to risks and uncertainties, many of which are beyond Grainger's control, which could cause Grainger's results to differ materially from those that are presented.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 27859
+        },
+        {
+          "statement": "ng list is not intended to be an exhaustive list of all of the factors that could impact Grainger's forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 28192
+        },
+        {
+          "statement": "r's forward looking-statements and Grainger undertakes no obligation to update or revise any of its forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 28413
+        },
+        {
+          "statement": "ly affect its financial condition, results of operations and cash flows, along with the accuracy of forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 50957
+        },
+        {
+          "statement": "gful information to assist investors in understanding financial results and assessing prospects for future performance as they provide a better baseline for analyzing the ongoing performance of its businesses by excluding items that may not be indicative of core operating results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 126962
+        },
+        {
+          "statement": "The Company does not expect these actions to have a material effect on its future results of operations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 127760
+        },
+        {
+          "statement": "The Company does not expect this business exit to have a material effect on its future results of operations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 128057
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 145626
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 146312
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 214587
+        },
+        {
+          "statement": "We believe that our audit provides a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 215095
+        },
+        {
+          "statement": "34Compensation Continuation - Severance Policy Guidance, incorporated by reference to Exhibit 10.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 229080
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue or gross margin,",
+            "position": 65848
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, see Note 2 of the Notes to the Consolidated Financial Statements in , The following table is included as an aid to understanding the changes of Grainger's total net sales, daily net sales and",
+            "position": 119107
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue growth and operating expenditures,",
+            "position": 147893
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue originates from contracts with a single performance obligation to deliver products,",
+            "position": 158387
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue is not material and accounted for approximately 1% of the Company's revenue for the years ended December 31, 2024, 2023 and 2022",
+            "position": 158830
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in countries with differing statutory tax rates, changes in tax legislation, the results of the examination of previously filed tax returns,",
+            "position": 101686
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements,",
+            "position": 111090
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings for the twelve months ended December 31, 2024 and 2023",
+            "position": 118348
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share:$38.71",
+            "position": 119003
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of $2,637 million for the year ended December 31, 2024 increased $72 million, or 3",
+            "position": 121451
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $6,758 million for the year ended December 31, 2024 increased $262 million, or 4%, and gross profit margin of 39.4",
+            "position": 120734
+          },
+          {
+            "metric": "profit",
+            "context": "profit dollar expansion in 2024",
+            "position": 120941
+          },
+          {
+            "metric": "profit",
+            "context": "profit,",
+            "position": 121020
+          },
+          {
+            "metric": "profit",
+            "context": "profit dollars,",
+            "position": 121677
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $5,741 million for the year ended December 31, 2024 increased $195 million, or 4%, and gross profit margin of 41.8",
+            "position": 123547
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS exclude certain non-recurring items, including restructuring charges, asset impairments, gains and losses associated with business divestitures and other non-recurring,",
+            "position": 126478
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 65865
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 39.4",
+            "position": 120844
+          },
+          {
+            "metric": "margin",
+            "context": "margin and adjusted operating margin decreased 20 basis points in 2024",
+            "position": 121747
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 41.8",
+            "position": 123657
+          },
+          {
+            "metric": "assets",
+            "context": "assets to current liabilities was 2.9",
+            "position": 136086
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities,",
+            "position": 142023
+          },
+          {
+            "metric": "assets",
+            "context": "assets Cash and cash equivalents$1,036 $660 Accounts receivable (less allowance for credit losses of $32 and $35, respectively)2,232 2,192 Inventories – net2,306 2,266 Prepaid expenses and other curre",
+            "position": 151173
+          },
+          {
+            "metric": "assets",
+            "context": "assets and business divestitures— 17 (14) Stock-based compensation62 62 48 Change in operating assets and liabilities:Accounts receivable(110)(98)(436)Inventories(77)(16)(412)Prepaid expenses and othe",
+            "position": 153163
+          },
+          {
+            "metric": "assets",
+            "context": "assets or liabilities as of December 31, 2024 and 2023",
+            "position": 160167
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities was 2.9",
+            "position": 136104
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 142034
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities and shareholders' equityCurrent liabilitiesCurrent maturities499 34 Trade accounts payable952 954 Accrued compensation and benefits324 327 Operating lease liability78 71 Accrued expenses40",
+            "position": 151596
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and shareholders' equity$8,829 $8,147",
+            "position": 152569
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities:Accounts receivable(110)(98)(436)Inventories(77)(16)(412)Prepaid expenses and other assets(36)101 (158)Trade accounts payable20 (65)225 Operating lease liabilities(96)(88)(76)Accrued liabi",
+            "position": 153269
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED SHAREHOLDER25MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIESItem 6:RESERVED26Item 7:MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL27CONDITION AND RESULTS OF OPERATIONSItem 7A:QUAN",
+            "position": 26082
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities by the Issuer and Affiliated PurchasersThe following table provides information relating to Grainger's repurchase of common stock during the three months ended December 31, 2024",
+            "position": 111464
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities from time to time,",
+            "position": 132923
+          },
+          {
+            "metric": "equity",
+            "context": "equity and cash flows for each of the three years in the period ended December 31, 2024,",
+            "position": 144063
+          },
+          {
+            "metric": "equity",
+            "context": "equity Cumulative preferred stock – $5 par value – 12,000,000 shares authorized; none issued or outstanding— — Common Stock – $0.50",
+            "position": 152036
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$2.8 billion",
+            "position": 103181
+          },
+          {
+            "text": "$1,023.9711",
+            "position": 111911
+          },
+          {
+            "text": "$1,190.32148",
+            "position": 111956
+          },
+          {
+            "text": "$1,132.63241",
+            "position": 112002
+          },
+          {
+            "text": "$0.02 ",
+            "position": 112182
+          },
+          {
+            "text": "$100 ",
+            "position": 113616
+          },
+          {
+            "text": "$123 ",
+            "position": 113742
+          },
+          {
+            "text": "$158 ",
+            "position": 113747
+          },
+          {
+            "text": "$172 ",
+            "position": 113752
+          },
+          {
+            "text": "$259 ",
+            "position": 113757
+          },
+          {
+            "text": "$332 ",
+            "position": 113762
+          },
+          {
+            "text": "$17,168 ",
+            "position": 118520
+          },
+          {
+            "text": "$16,478 ",
+            "position": 118528
+          },
+          {
+            "text": "$1,909 ",
+            "position": 118965
+          },
+          {
+            "text": "$1,829 ",
+            "position": 118972
+          },
+          {
+            "text": "$38.71 ",
+            "position": 119022
+          },
+          {
+            "text": "$36.23 ",
+            "position": 119029
+          },
+          {
+            "text": "$66.5 ",
+            "position": 119559
+          },
+          {
+            "text": "$65.2 ",
+            "position": 119570
+          },
+          {
+            "text": "$67.4 ",
+            "position": 119626
+          },
+          {
+            "text": "$65.8 ",
+            "position": 119637
+          },
+          {
+            "text": "$17,168 million",
+            "position": 120369
+          },
+          {
+            "text": "$690 million",
+            "position": 120432
+          },
+          {
+            "text": "$6,758 million",
+            "position": 120744
+          },
+          {
+            "text": "$262 million",
+            "position": 120806
+          },
+          {
+            "text": "$4,121 million",
+            "position": 121123
+          },
+          {
+            "text": "$190 million",
+            "position": 121185
+          },
+          {
+            "text": "$4,105 million",
+            "position": 121223
+          },
+          {
+            "text": "$200 million",
+            "position": 121248
+          },
+          {
+            "text": "$2,637 million",
+            "position": 121463
+          },
+          {
+            "text": "$72 million",
+            "position": 121525
+          },
+          {
+            "text": "$2,653 million",
+            "position": 121576
+          },
+          {
+            "text": "$62 million",
+            "position": 121601
+          },
+          {
+            "text": "$595 million",
+            "position": 121843
+          },
+          {
+            "text": "$2 million",
+            "position": 121903
+          },
+          {
+            "text": "$599 million",
+            "position": 121977
+          },
+          {
+            "text": "$38.96 ",
+            "position": 122519
+          },
+          {
+            "text": "$36.67 ",
+            "position": 122594
+          },
+          {
+            "text": "$13,720 ",
+            "position": 123220
+          },
+          {
+            "text": "$13,267 ",
+            "position": 123228
+          },
+          {
+            "text": "$2,385 ",
+            "position": 123347
+          },
+          {
+            "text": "$2,334 ",
+            "position": 123354
+          },
+          {
+            "text": "$13,720 million",
+            "position": 123379
+          },
+          {
+            "text": "$453 million",
+            "position": 123442
+          },
+          {
+            "text": "$5,741 million",
+            "position": 123557
+          },
+          {
+            "text": "$195 million",
+            "position": 123619
+          },
+          {
+            "text": "$3,356 million",
+            "position": 123726
+          },
+          {
+            "text": "$144 million",
+            "position": 123788
+          },
+          {
+            "text": "$3,341 million",
+            "position": 123830
+          },
+          {
+            "text": "$155 million",
+            "position": 123855
+          }
+        ],
+        "percentages": [
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 31926
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 33991
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 35284
+          },
+          {
+            "text": "82%",
+            "value": 82.0,
+            "position": 38321
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 40022
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 40078
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 40093
+          },
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 43105
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 43120
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 43318
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 43399
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 43494
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 43543
+          },
+          {
+            "text": "31,%",
+            "value": 31.0,
+            "position": 118467
+          },
+          {
+            "text": "20242023%",
+            "value": 20242023.0,
+            "position": 118484
+          },
+          {
+            "text": "4.2 %",
+            "value": 4.2,
+            "position": 118536
+          },
+          {
+            "text": "100.0 %",
+            "value": 100.0,
+            "position": 118541
+          },
+          {
+            "text": "11.1 %",
+            "value": 11.1,
+            "position": 118983
+          },
+          {
+            "text": "6.8 %",
+            "value": 6.8,
+            "position": 119036
+          },
+          {
+            "text": "31,2024%",
+            "value": 312024.0,
+            "position": 119472
+          },
+          {
+            "text": "2023%",
+            "value": 2023.0,
+            "position": 119490
+          },
+          {
+            "text": "8.2 %",
+            "value": 8.2,
+            "position": 119536
+          },
+          {
+            "text": "3.4 %",
+            "value": 3.4,
+            "position": 119565
+          },
+          {
+            "text": "8.6 %",
+            "value": 8.6,
+            "position": 119576
+          },
+          {
+            "text": "4.7 %",
+            "value": 4.7,
+            "position": 119632
+          },
+          {
+            "text": "9.5 %",
+            "value": 9.5,
+            "position": 119643
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 120449
+          },
+          {
+            "text": "39.4%",
+            "value": 39.4,
+            "position": 120854
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 121541
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 121617
+          },
+          {
+            "text": "23.0%",
+            "value": 23.0,
+            "position": 122084
+          },
+          {
+            "text": "23.9%",
+            "value": 23.9,
+            "position": 122094
+          },
+          {
+            "text": "23.8%",
+            "value": 23.8,
+            "position": 122210
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 122428
+          },
+          {
+            "text": "31,20242023%",
+            "value": 3120242023.0,
+            "position": 123191
+          },
+          {
+            "text": "2.2 %",
+            "value": 2.2,
+            "position": 123361
+          },
+          {
+            "text": "41.8%",
+            "value": 41.8,
+            "position": 123667
+          },
+          {
+            "text": "7.5 %",
+            "value": 7.5,
+            "position": 124513
+          },
+          {
+            "text": "11.6 %",
+            "value": 11.6,
+            "position": 124626
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 124778
+          },
+          {
+            "text": "29.5%",
+            "value": 29.5,
+            "position": 125228
+          },
+          {
+            "text": "2024%",
+            "value": 2024.0,
+            "position": 128473
+          },
+          {
+            "text": "3.2 %",
+            "value": 3.2,
+            "position": 128807
+          },
+          {
+            "text": "8.9 %",
+            "value": 8.9,
+            "position": 128906
+          },
+          {
+            "text": "9.4 %",
+            "value": 9.4,
+            "position": 129151
+          },
+          {
+            "text": "10.4 %",
+            "value": 10.4,
+            "position": 129162
+          },
+          {
+            "text": "4.8%",
+            "value": 4.8,
+            "position": 130533
+          },
+          {
+            "text": "5.1%",
+            "value": 5.1,
+            "position": 130537
+          },
+          {
+            "text": "2.8%",
+            "value": 2.8,
+            "position": 130673
+          },
+          {
+            "text": "2.4%",
+            "value": 2.4,
+            "position": 130677
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 95
+          },
+          {
+            "category": "operational_risk",
+            "count": 37
+          },
+          {
+            "category": "financial_risk",
+            "count": 224
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 60
+          },
+          {
+            "category": "technology_risk",
+            "count": 100
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 9.383378016085791
+        },
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 60,
+          "density": 6.9565217391304355
+        }
+      ],
+      "deduplication": {
+        "original_length": 248410,
+        "filtered_length": 233266,
+        "removed_ratio": 6.1,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.633798633798634,
+      "confidence": 0.7961080720615403,
+      "overall_score": 51.366201366201366,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.7032967032967,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.027324027324027333,
+        "risk_adjusted_signal": 0.1837782170319689,
+        "expected_return_annualized": 0.051952576276900614,
+        "signal_sharpe_ratio": 0.0034635050851267077,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.1837782170319689,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.1837782170319689,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.06593406593406594,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.1837782170319689,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.027324027324027333
+      },
+      "risk_adjusted_signal": 0.1837782170319689,
+      "expected_return": 0.0005195257627690061,
+      "signal_sharpe": 0.0034635050851267077,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.366201366201366,
+    "confidence": 0.7961080720615403,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:25:33.306699",
+  "filing_date": "2025-02-20",
+  "filing_filename": "2025-02-20-10k-GWW.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

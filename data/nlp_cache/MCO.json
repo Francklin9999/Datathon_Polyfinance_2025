@@ -1,0 +1,938 @@
+{
+  "ticker": "MCO",
+  "analysis": {
+    "ticker": "MCO",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 45.48704200178731,
+        "financial_sentiment": -0.08080808080808081,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "et Risk56Liquidity and Capital Resources57Recently Issued Accounting Pronouncements61Contingencies61Forward-Looking Statements61Item 7A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 98014
+        },
+        {
+          "statement": "Provides background information for accounting guidance and the bases for conclusions on the changes in the ASC.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 100666
+        },
+        {
+          "statement": "” This accounting guidance significantly changed the accounting framework under U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 112386
+        },
+        {
+          "statement": "Our culture is one of continuous learning, which we believe is crucial for colleagues to thrive as part of our organization and to feel a sense of accomplishment and purpose, and our leaders are key in reinforcing this at Moody’s.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 126303
+        },
+        {
+          "statement": "Our trusted and curated data is key in an environment that is increasingly using Gen AI, and we expect that the integration of our platforms will enable effective cross-selling of models, data and applications.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 136239
+        },
+        {
+          "statement": "t in the Company’s securities risky and provide important information for the understanding of the “forward-looking” statements discussed in Item 7 of this and elsewhere.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 152281
+        },
+        {
+          "statement": "This guidance requires more rigorous oversight of third-party relationships that involve certain \"critical activities.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 166196
+        },
+        {
+          "statement": "\"–Regulators in Europe and other foreign markets in which MA is active have issued guidance similar to that issued in the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 166392
+        },
+        {
+          "statement": "In light of this, MA’s existing or potential bank and financial services customers subject to this guidance have sought to and may further revise their third-party risk management policies and processes and the terms on which they do business with MA.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 166989
+        },
+        {
+          "statement": "The Company’s Incident Response Plan provides governance and guidance in responding to information security incidents and is tested regularly for calibration against existing and emerging threats.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 230024
+        },
+        {
+          "statement": "response to disclosure requirements of the SEC and are not intended to forecast or be indicative of future performance of the Company’s common stock.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 240477
+        },
+        {
+          "statement": "This Management’s Discussion and Analysis of Financial Condition and Results of Operations contains Forward-Looking Statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 240663
+        },
+        {
+          "statement": "Analysis of Financial Condition and Results of Operations contains Forward-Looking Statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 240696
+        },
+        {
+          "statement": "cash flows utilized in the models are derived from historical experience and assumptions regarding future growth and profitability of each reporting unit.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 247892
+        },
+        {
+          "statement": "Forward-Looking StatementsCertain statements contained in this annual report on are forward-looking statements and are based on future expectations, plans and prospects for the Company's business and operations that involve a number of risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 307665
+        },
+        {
+          "statement": "tingencies or otherwise convey the prospective nature of events or outcomes generally indicative of forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 308677
+        },
+        {
+          "statement": "Stockholders and investors are cautioned not to place undue reliance on these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 308783
+        },
+        {
+          "statement": "rs and investors are cautioned not to place undue reliance on these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 308815
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 321556
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue; a supplemental performance metric to provide additional insight on the estimated value of MA's recurring revenue contracts at a given point in time, excluding the impact of FX and contracts r",
+            "position": 99937
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue ServiceISO 27001An international standard to manage information security JPYJapanese yenkompany360kompany AG; a platform for business verification and Know Your Customer (KYC) technology solut",
+            "position": 106401
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from programs such as commercial paper,",
+            "position": 111536
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue from Contracts with Customers (ASC Topic 606",
+            "position": 112314
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue recognition and to the accounting for the deferral of incremental costs of obtaining or fulfilling a contract with a customerRMBSResidential mortgage-backed securities; an asset class within S",
+            "position": 112470
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in countries or states with differing tax rates or other factors, including by increased earnings in jurisdictions where Moody’s faces higher tax rates, losses incurred in jurisdictions for w",
+            "position": 177554
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share attributable to Moody’s common shareholders$11.26",
+            "position": 303275
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per shareBasic$11.32",
+            "position": 327001
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings from non-consolidated affiliates, which are included within other non-operating income,",
+            "position": 414741
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings(20)(14)Gain on net investment hedges - OCI(82)(5)Other(11)(19)Total deferred tax liabilities(711)(682)Net deferred tax liabilities(131)(120)Valuation allowance(25)(24)Total net deferred tax l",
+            "position": 440572
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Shifting and the global minimum tax rate initiatives being led by the OECD, which requires companies to disclose more information to tax authorities on operations around the world, and the EU’s",
+            "position": 178106
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Participation Plan provides for an employee salary deferral and the Company matches employee contributions, equal to 50% of employee contribution up to a maximum of 3",
+            "position": 429519
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Participation Plan, as an Employee Stock Ownership Plan and, as a result,",
+            "position": 430713
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Participation Plan of Moody’s Corporation (amended and restated as of January 1, 2020) (incorporated by reference to Exhibit 10.11",
+            "position": 484624
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Participation Plan of Moody’s Corporation (effective January 1, 2020) (incorporated by reference to Exhibit 10.11",
+            "position": 484793
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Ratio of (i) not more than 4 to 1 at the end of any fiscal quarter or (ii) not more than 4.5",
+            "position": 449546
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS excluding the impact of certain items as detailed in the section entitled “Non-GAAP Financial Measures”Adjusted Net IncomeNet Income excluding the impact of certain items as detailed in the sectio",
+            "position": 99257
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS$11.26",
+            "position": 267033
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS(1)$12.47",
+            "position": 267329
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS attributable to Moody’s common shareholders$11.26",
+            "position": 268142
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (1)$12.47",
+            "position": 268223
+          },
+          {
+            "metric": "margin",
+            "context": "margin and Adjusted Operating Margin(1) expansion reflects strong revenue growth, particularly in MIS, outpacing operating and SG&A expense growthAdjusted Operating Margin(1)48.1",
+            "position": 266647
+          },
+          {
+            "metric": "margin",
+            "context": "Margin (1)48.1",
+            "position": 268294
+          },
+          {
+            "metric": "margin",
+            "context": "margin 40.6",
+            "position": 270722
+          },
+          {
+            "metric": "margin",
+            "context": "Margin 48.1",
+            "position": 270765
+          },
+          {
+            "metric": "margin",
+            "context": "margin and Adjusted Operating Margin(1) are due to strong revenue growth, particularly within MIS,",
+            "position": 270817
+          },
+          {
+            "metric": "market share",
+            "context": "market share has spurred more aggressive tactics by some competitors in areas such as pricing and services,",
+            "position": 197558
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow (1)$2,521 $1,880 $641 (1",
+            "position": 290424
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow is a useful metric in assessing the Company’s cash flows to service debt,",
+            "position": 304352
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow:Year ended December 31,20242023Net cash provided by operating activities$2,838 $2,151 Capital additions(317)(271)Free Cash Flow$2,521 $1,880 Net cash used in investing activities$(1,056",
+            "position": 304829
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income divided by revenueAIArtificial IntelligenceAmericasRepresents countries within North and South America,",
+            "position": 99676
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income, are included in , 10 MOODY'S 2024 10-KTable of ContentsMoody's Analytics OverviewMA empowers financial services, corporate and public sector customers to anticipate risks,",
+            "position": 117076
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income/Adjusted Operating Income(1) driven mainly by increases in MIS revenue, partially offset by:— a $0.76",
+            "position": 267083
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income (1)3,408 2,597 31 %Interest expense, net(237)(251)6 %Other non-operating income, net61 49 24 %Non-operating (expense) income, net(176)(202)13 %Net income attributable to Moody’s$2,058",
+            "position": 267864
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income ⇑ $12 millionThe decrease in interest expense is primarily due to:The most notable drivers of the increase in income are:— higher interest income of $39 million reflecting higher cash",
+            "position": 271019
+          },
+          {
+            "metric": "net income",
+            "context": "net income from consolidated noncontrolling interests belonging to the minority interest holderNet Zero AssessmentsAn independent assessment of an entity’s carbon transition plan relative to a global ",
+            "position": 108378
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Moody’s$2,058 $1,607 28 %Diluted weighted average shares outstanding182.7",
+            "position": 268024
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income$2,279 $1,822 Year ended December 31,20242023Diluted earnings per share attributable to Moody’s common shareholders$11.26",
+            "position": 303212
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to noncontrolling interests1 1 — Net income attributable to Moody’s$2,058 $1,607 $1,374 Earnings per shareBasic$11.32",
+            "position": 326889
+          },
+          {
+            "metric": "net income",
+            "context": "net income— — — — — — 20 — 20 Net gains (losses) on net investment hedges299 (77)222 (177)45 (132)219 (55)164 Cash Flow Hedges:Reclassification of losses included in net income3 (1)2 2 (1)1 2 — 2 Pens",
+            "position": 327831
+          },
+          {
+            "metric": "assets",
+            "context": "assets acquired by the Company from all business combination transactionsAdjusted Diluted EPSDiluted EPS excluding the impact of certain items as detailed in the section entitled “Non-GAAP Financial M",
+            "position": 99156
+          },
+          {
+            "metric": "assets",
+            "context": "assets acquired by Moody's in April 2002KYCKnow-your-customer 6 MOODY'S 2024 10-KTable of ContentsTERMDEFINITIONLLMLarge language model used in the context of Gen AILOBLine of businessMAMoody’s Analyt",
+            "position": 106779
+          },
+          {
+            "metric": "assets",
+            "context": "assets; diversion of management’s focus from other business operations; failure to implement or remediate controls, procedures and policies appropriate for a larger public company at acquired companie",
+            "position": 207925
+          },
+          {
+            "metric": "assets",
+            "context": "assets in the context of internal, external, deliberate and accidental threats,",
+            "position": 232365
+          },
+          {
+            "metric": "assets",
+            "context": "assets assigned to that unit, goodwill is not impaired,",
+            "position": 244558
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities or contingencies not disclosed to or otherwise known by the Company prior to closing a transaction; unexpected regulatory and operating difficulties and expenditures; scrutiny from competi",
+            "position": 207557
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including applicable corporate assets,",
+            "position": 246009
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to UTPs and associated interest and penalties requires significant estimates to be made by the Company, there can be no assurance that the Company will accurately predict the outco",
+            "position": 252941
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to Moody’s Retirement Plans,",
+            "position": 260005
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities that are denominated in currencies other than a subsidiary’s functional currency are charged to other non-operating income,",
+            "position": 284776
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 96097
+          },
+          {
+            "text": "$77 billion",
+            "position": 96857
+          },
+          {
+            "text": "$1 billion",
+            "position": 103068
+          },
+          {
+            "text": "$75.8",
+            "position": 120421
+          },
+          {
+            "text": "$5,994 million",
+            "position": 209342
+          },
+          {
+            "text": "$1,890 million",
+            "position": 209373
+          },
+          {
+            "text": "$471.64 ",
+            "position": 235471
+          },
+          {
+            "text": "$1,870 million",
+            "position": 235487
+          },
+          {
+            "text": "$474.26 ",
+            "position": 235523
+          },
+          {
+            "text": "$1,726 million",
+            "position": 235539
+          },
+          {
+            "text": "$486.13 ",
+            "position": 235575
+          },
+          {
+            "text": "$1,567 million",
+            "position": 235591
+          },
+          {
+            "text": "$477.15 ",
+            "position": 235620
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 236080
+          },
+          {
+            "text": "$1.6 billion",
+            "position": 236170
+          },
+          {
+            "text": "$267.64 ",
+            "position": 237368
+          },
+          {
+            "text": "$100.00 ",
+            "position": 239472
+          },
+          {
+            "text": "$123.28 ",
+            "position": 240131
+          },
+          {
+            "text": "$167.13 ",
+            "position": 240139
+          },
+          {
+            "text": "$120.32 ",
+            "position": 240147
+          },
+          {
+            "text": "$170.28 ",
+            "position": 240155
+          },
+          {
+            "text": "$208.01 ",
+            "position": 240163
+          },
+          {
+            "text": "$118.40 ",
+            "position": 240202
+          },
+          {
+            "text": "$152.39 ",
+            "position": 240210
+          },
+          {
+            "text": "$124.79 ",
+            "position": 240218
+          },
+          {
+            "text": "$157.59 ",
+            "position": 240226
+          },
+          {
+            "text": "$197.02 ",
+            "position": 240234
+          },
+          {
+            "text": "$98.99 ",
+            "position": 240287
+          },
+          {
+            "text": "$136.16 ",
+            "position": 240294
+          },
+          {
+            "text": "$116.49 ",
+            "position": 240302
+          },
+          {
+            "text": "$142.90 ",
+            "position": 240310
+          },
+          {
+            "text": "$184.70 ",
+            "position": 240318
+          },
+          {
+            "text": "$48 million",
+            "position": 258784
+          },
+          {
+            "text": "$68 million",
+            "position": 259551
+          },
+          {
+            "text": "$19 million",
+            "position": 259573
+          },
+          {
+            "text": "$1 ",
+            "position": 260342
+          },
+          {
+            "text": "$7,088 ",
+            "position": 264538
+          },
+          {
+            "text": "$5,916 ",
+            "position": 264545
+          },
+          {
+            "text": "$3,295 ",
+            "position": 264609
+          },
+          {
+            "text": "$3,056 ",
+            "position": 264616
+          },
+          {
+            "text": "$3,793 ",
+            "position": 264897
+          },
+          {
+            "text": "$2,860 ",
+            "position": 264904
+          },
+          {
+            "text": "$3,680 ",
+            "position": 265232
+          },
+          {
+            "text": "$3,319 ",
+            "position": 265239
+          },
+          {
+            "text": "$431 ",
+            "position": 265493
+          },
+          {
+            "text": "$373 ",
+            "position": 265498
+          },
+          {
+            "text": "$59 ",
+            "position": 265644
+          },
+          {
+            "text": "$87 ",
+            "position": 265648
+          },
+          {
+            "text": "$43 ",
+            "position": 265814
+          },
+          {
+            "text": "$39 million",
+            "position": 266136
+          }
+        ],
+        "percentages": [
+          {
+            "text": "1.75%",
+            "value": 1.75,
+            "position": 96138
+          },
+          {
+            "text": "0.950%",
+            "value": 0.95,
+            "position": 96194
+          },
+          {
+            "text": "49%",
+            "value": 49.0,
+            "position": 101480
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 101528
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 122294
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 129794
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 129814
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 129837
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 129858
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 131368
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 179573
+          },
+          {
+            "text": "94%",
+            "value": 94.0,
+            "position": 209445
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 209583
+          },
+          {
+            "text": "108%",
+            "value": 108.0,
+            "position": 239701
+          },
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 239794
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 239802
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 248465
+          },
+          {
+            "text": "10.0%",
+            "value": 10.0,
+            "position": 249474
+          },
+          {
+            "text": "10.5%",
+            "value": 10.5,
+            "position": 249483
+          },
+          {
+            "text": "5.43%",
+            "value": 5.43,
+            "position": 260273
+          },
+          {
+            "text": "5.40%",
+            "value": 5.4,
+            "position": 260279
+          },
+          {
+            "text": "3.60%",
+            "value": 3.6,
+            "position": 260337
+          },
+          {
+            "text": "6.60%",
+            "value": 6.6,
+            "position": 260395
+          },
+          {
+            "text": "20242023%",
+            "value": 20242023.0,
+            "position": 264421
+          },
+          {
+            "text": "20 %",
+            "value": 20.0,
+            "position": 264552
+          },
+          {
+            "text": "33 %",
+            "value": 33.0,
+            "position": 264911
+          },
+          {
+            "text": "11 %",
+            "value": 11.0,
+            "position": 265247
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 265504
+          },
+          {
+            "text": "32 %",
+            "value": 32.0,
+            "position": 265652
+          },
+          {
+            "text": "13 %",
+            "value": 13.0,
+            "position": 266096
+          },
+          {
+            "text": "40.6 %",
+            "value": 40.6,
+            "position": 266617
+          },
+          {
+            "text": "36.1 %",
+            "value": 36.1,
+            "position": 266623
+          },
+          {
+            "text": "48.1 %",
+            "value": 48.1,
+            "position": 266821
+          },
+          {
+            "text": "43.9 %",
+            "value": 43.9,
+            "position": 266827
+          },
+          {
+            "text": "23.7 %",
+            "value": 23.7,
+            "position": 266842
+          },
+          {
+            "text": "16.9 %",
+            "value": 16.9,
+            "position": 266848
+          },
+          {
+            "text": "29 %",
+            "value": 29.0,
+            "position": 267049
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 267348
+          },
+          {
+            "text": "31,%",
+            "value": 31.0,
+            "position": 267429
+          },
+          {
+            "text": "25 %",
+            "value": 25.0,
+            "position": 267506
+          },
+          {
+            "text": "15 %",
+            "value": 15.0,
+            "position": 267535
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 267559
+          },
+          {
+            "text": "14 %",
+            "value": 14.0,
+            "position": 267609
+          },
+          {
+            "text": "35 %",
+            "value": 35.0,
+            "position": 267851
+          },
+          {
+            "text": "31 %",
+            "value": 31.0,
+            "position": 267896
+          },
+          {
+            "text": "24 %",
+            "value": 24.0,
+            "position": 267971
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 268072
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 268131
+          },
+          {
+            "text": "40.6%",
+            "value": 40.6,
+            "position": 270729
+          },
+          {
+            "text": "48.1%",
+            "value": 48.1,
+            "position": 270772
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 169
+          },
+          {
+            "category": "operational_risk",
+            "count": 33
+          },
+          {
+            "category": "financial_risk",
+            "count": 535
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 153
+          },
+          {
+            "category": "technology_risk",
+            "count": 305
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 503915,
+        "filtered_length": 488604,
+        "removed_ratio": 3.04,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.93529893529893,
+      "confidence": 0.6202937061691763,
+      "overall_score": 51.06470106470107,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.95959595959596,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.021294021294021304,
+        "risk_adjusted_signal": 0.1432211006250456,
+        "expected_return_annualized": 0.04048741616309185,
+        "signal_sharpe_ratio": 0.002699161077539457,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.1432211006250456,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.1432211006250456,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.08080808080808081,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.1432211006250456,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.021294021294021304
+      },
+      "risk_adjusted_signal": 0.1432211006250456,
+      "expected_return": 0.0004048741616309185,
+      "signal_sharpe": 0.002699161077539457,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.06470106470107,
+    "confidence": 0.6202937061691763,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:28:30.711316",
+  "filing_date": "2025-02-14",
+  "filing_filename": "2025-02-14-10k-MCO.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

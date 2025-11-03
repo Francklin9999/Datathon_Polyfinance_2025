@@ -31,3 +31,9 @@ class RiskMetricsRequest(BaseModel):
     positions: List[dict]
     stressScenario: Optional[str] = "baseline"
 
+
+class PortfolioAdjustmentsRequest(BaseModel):
+    """Request model for portfolio adjustments based on document analysis"""
+    portfolio: dict  # Portfolio object with holdings
+    documentAnalysisResult: dict  # Full document analysis result from /documents/analyze
+

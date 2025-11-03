@@ -213,6 +213,99 @@ async def get_stock_filings(ticker: str):
     }
 
 
+@router.get("/stock/{ticker}/filings/{filename:path}/download")
+async def download_filing(ticker: str, filename: str):
+    """
+    Download a specific filing document for a ticker
+    """
+    from fastapi.responses import FileResponse
+    from urllib.parse import unquote
+    import os
+    
+    ticker = ticker.upper()
+    # Decode URL-encoded filename
+    filename = unquote(filename)
+    
+    filings = find_filings_for_ticker(ticker)
+    
+    # Log available filings for debugging
+    if not filings:
+        print(f"DEBUG: No filings found for ticker {ticker}")
+        raise HTTPException(
+            status_code=404,
+            detail=f"No filings found for ticker: {ticker}. Available filings: []"
+        )
+    
+    # Find the specific filing - try multiple matching strategies
+    filing = None
+    
+    # Strategy 1: Exact match (case-sensitive)
+    for f in filings:
+        if f['filename'] == filename:
+            filing = f
+            break
+    
+    # Strategy 2: Case-insensitive match
+    if not filing:
+        filename_lower = filename.lower()
+        for f in filings:
+            if f['filename'].lower() == filename_lower:
+                filing = f
+                break
+    
+    # Strategy 3: Path ends with filename
+    if not filing:
+        for f in filings:
+            if f['path'].endswith(filename) or f['path'].endswith(filename.replace('\\', '/')):
+                filing = f
+                break
+    
+    # Strategy 4: Filename contains the requested filename (partial match)
+    if not filing:
+        for f in filings:
+            if filename in f['filename'] or f['filename'] in filename:
+                filing = f
+                break
+    
+    if not filing:
+        # Log available filenames for debugging
+        available_filenames = [f['filename'] for f in filings]
+        print(f"DEBUG: Requested filename: {filename}")
+        print(f"DEBUG: Available filings for {ticker}: {available_filenames}")
+        raise HTTPException(
+            status_code=404,
+            detail=f"Filing '{filename}' not found for ticker: {ticker}. Available filings: {available_filenames[:5]}"
+        )
+    
+    filing_path = filing['path']
+    
+    # Verify file exists
+    if not os.path.exists(filing_path):
+        print(f"DEBUG: Filing path does not exist: {filing_path}")
+        raise HTTPException(
+            status_code=404,
+            detail=f"Filing file not found at path: {filing_path}"
+        )
+    
+    # Determine media type based on file extension
+    file_ext = filing.get('type', '').lower()
+    media_type_map = {
+        'html': 'text/html',
+        'htm': 'text/html',
+        'pdf': 'application/pdf',
+        'xml': 'application/xml',
+        'txt': 'text/plain',
+    }
+    media_type = media_type_map.get(file_ext, 'application/octet-stream')
+    
+    # Return the file
+    return FileResponse(
+        path=filing_path,
+        filename=filing['filename'],
+        media_type=media_type
+    )
+
+
 @router.get("/stock/{ticker}/filings/{filename:path}/analyze")
 async def analyze_filing_with_bedrock(ticker: str, filename: str):
     """

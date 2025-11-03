@@ -1,0 +1,899 @@
+{
+  "ticker": "CME",
+  "analysis": {
+    "ticker": "CME",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 32.5653798256538,
+        "financial_sentiment": -0.10101010101010101,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "FORWARD-LOOKING STATEMENTS From time to time, in this Annual Report on as well as in other written reports and verbal statements, we discuss our expectations regarding future performance.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 31629
+        },
+        {
+          "statement": "on as well as in other written reports and verbal statements, we discuss our expectations regarding future performance.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 31797
+        },
+        {
+          "statement": "These statements are not guarantees of future performance and involve risks, uncertainties and assumptions that are difficult to predict.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 32338
+        },
+        {
+          "statement": "erefore, actual outcomes and results may differ materially from what is expressed or implied in any forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32539
+        },
+        {
+          "statement": "mplied in any forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32625
+        },
+        {
+          "statement": "undue reliance on any forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32703
+        },
+        {
+          "statement": "Derivatives Exchange Business: Through our derivatives exchanges and clearing house, we believe our customers prefer CME Group's diversity of products, liquidity, price transparency and technological capabilities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 40928
+        },
+        {
+          "statement": "We believe the breadth and diversity of our products and services lines are beneficial to our customers and CME Group's overall performance.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 42580
+        },
+        {
+          "statement": "We believe we have a significant opportunity to expand the participation of our non-U.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 53820
+        },
+        {
+          "statement": ", and we believe that there is room for significant growth and development of these financial markets.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 53980
+        },
+        {
+          "statement": "We expect to continue to expand our analytics suite in the future as well.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 55625
+        },
+        {
+          "statement": "lternative Reference Rates Committee (ARRC) and the Federal Reserve Board has formally endorsed the forward-looking term rates based on SOFR.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 58366
+        },
+        {
+          "statement": "rope, along with global implementation of Basel III capital requirements on financial institutions, we expect centralized clearing and capital efficiencies to continue to be important for our global client base.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 60230
+        },
+        {
+          "statement": "10-year strategic partnership with Google Cloud to accelerate CME Group’s move to the cloud, which we expect will transform derivatives markets by expanding access and creating efficiencies for market participants.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 63499
+        },
+        {
+          "statement": "nal efficiencies and maximizing the value of various analytics, including clearing analytics, which we expect we will be able to offer more broadly.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 65120
+        },
+        {
+          "statement": "Additionally, CME Group is the distributor of CME Term SOFR, a daily set of forward-looking interest rate estimates, calculated and published for 1-month, 3-month, 6-month and 12-month tenors and administered by CME Group Benchmark Administration Limited, a U.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 68774
+        },
+        {
+          "statement": "We believe we compete favorably with respect to these factors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 71534
+        },
+        {
+          "statement": "nessIn recent years there has been increased competition in the provision of clearing services, and we expect competition to continue to increase in connection with compliance with Dodd-Frank, EMIR 3.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 73772
+        },
+        {
+          "statement": "In light of the implementation of new regulatory requirements and other financial services reforms, we believe other exchanges and infrastructure providers also may undertake to provide clearing and other related post-trade services in the U.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 74487
+        },
+        {
+          "statement": "In January 2025, the European Commission provided guidance clarifying that financial services provided by a financially regulated entity (including those regulated outside the EU), such as CME, CBOT, NYMEX and COMEX, are not ICT services under DORA.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 88845
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue from our market data as a result of decreased demand or changes to regulations in various jurisdictions;3Table of Contents•changes in our rate per contract due to shifts in the mix of the prod",
+            "position": 34906
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue for 2024",
+            "position": 47694
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue - Our acquisition of NEX strengthened our role in global financial markets infrastructure and information services, adding complementary cash, spot, and OTC businesses, and scale to our listed",
+            "position": 56956
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue is derived from clearing and transaction fees, which include electronic trading fees,",
+            "position": 180178
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 180956
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings on cash accounts and collateral that our clearing house holds for its clients;•impact of CME Group pricing/fee level and structure and incentive changes;•impact of aggregation services and in",
+            "position": 37872
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and the same dividend payments as our Class A shares, we expect that the market price of our Class B common stock, if reported separately from the associated trading rights,",
+            "position": 169732
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (losses) of unconsolidated subsidiaries includes income and losses from our investments in S&P Dow Jones Indices LLC, OSTTRA,",
+            "position": 192158
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per common share attributable to CME Group9.67",
+            "position": 202960
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (losses) of unconsolidated subsidiaries350.9",
+            "position": 217493
+          },
+          {
+            "metric": "profit",
+            "context": "profit that members derive from their trading, brokering and clearing activities and the value of their trading rights are, in part, dependent on the fees they are charged to trade, broker, clear and ",
+            "position": 157352
+          },
+          {
+            "metric": "margin",
+            "context": "margin and liquidity requirements associated with the BrokerTec matched principal business;•the ability of our compliance and risk management programs to effectively monitor and manage our risks, incl",
+            "position": 35501
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements on uncleared trades, and the need for greater efficiencies,",
+            "position": 59868
+          },
+          {
+            "metric": "margin",
+            "context": "margin framework, which provides enhanced risk management capabilities in a single, unified interface across futures and options,",
+            "position": 61188
+          },
+          {
+            "metric": "margin",
+            "context": "margin offsets between futures,",
+            "position": 62142
+          },
+          {
+            "metric": "margin",
+            "context": "margin efficiencies for offsetting positions between two clearing houses, including CME and Fixed Income Clearing Corporation (FICC) or CME and Options Clearing Corporation (OCC),",
+            "position": 62286
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (expense)$609.9",
+            "position": 202814
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income (Expense) Year-over-Year Change(dollars in millions)202420232024-2023Investment income$4,079.1",
+            "position": 217303
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income (Expense)Investment income4,079.1",
+            "position": 251158
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (expense)(3,659.2",
+            "position": 251370
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income (Expense)609.9",
+            "position": 251433
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to CME Group$3,525.8",
+            "position": 202896
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income$3,525.8",
+            "position": 251567
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Attributable to Common Shareholders of CME Group$3,481.5",
+            "position": 251604
+          },
+          {
+            "metric": "net income",
+            "context": "Net income 2,691.0",
+            "position": 253735
+          },
+          {
+            "metric": "net income",
+            "context": "Net income 3,525.8",
+            "position": 255634
+          },
+          {
+            "metric": "assets",
+            "context": "assets;•our dependence on third-party providers and exposure to risk through third parties, including risks related to the performance, reliability and security of technology used by our third-party p",
+            "position": 35859
+          },
+          {
+            "metric": "assets",
+            "context": "assets greater than $100",
+            "position": 86868
+          },
+          {
+            "metric": "assets",
+            "context": "assets under our customers' management; •volatile weather patterns, droughts, natural disasters and other catastrophes; 16",
+            "position": 102355
+          },
+          {
+            "metric": "assets",
+            "context": "assets, improper use and unauthorized disclosure of data or confidential information of the company or its customers or third parties, improper use of artificial intelligence or failure to provide eff",
+            "position": 146120
+          },
+          {
+            "metric": "assets",
+            "context": "assets, maintain client, third party and employee trust, support our pursuit of strategic objectives,",
+            "position": 159949
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities otherwise incurred in connection with, our agreements with third-party suppliers and service providers,",
+            "position": 133996
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities in active markets,",
+            "position": 194461
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, see note 2",
+            "position": 194769
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 246217
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, revenues and expenses denominated in British pounds,",
+            "position": 246496
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of 4",
+            "position": 28307
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Shareholder Matters and Issuer Purchases of Equity Securities29Item 6",
+            "position": 29221
+          },
+          {
+            "metric": "equity",
+            "context": "equity and fixed income prices, and price volatility of financial benchmarks and instruments such as interest rates, equity indices, fixed income instruments and foreign exchange rates; economic, soci",
+            "position": 36573
+          },
+          {
+            "metric": "equity",
+            "context": "equity indexes, foreign exchange (FX), and agricultural,",
+            "position": 40561
+          },
+          {
+            "metric": "equity",
+            "context": "equity ownership, changes in the value of foreign currency and changes in the prices of agricultural,",
+            "position": 41436
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 27569
+          },
+          {
+            "text": "$100 billion",
+            "position": 86888
+          },
+          {
+            "text": "$98.0 million",
+            "position": 135897
+          },
+          {
+            "text": "$3.4 billion",
+            "position": 152382
+          },
+          {
+            "text": "$2.3 billion",
+            "position": 152532
+          },
+          {
+            "text": "$100 ",
+            "position": 171196
+          },
+          {
+            "text": "$93.66 ",
+            "position": 171591
+          },
+          {
+            "text": "$121.26 ",
+            "position": 171598
+          },
+          {
+            "text": "$93.50 ",
+            "position": 171606
+          },
+          {
+            "text": "$122.76 ",
+            "position": 171613
+          },
+          {
+            "text": "$141.71 ",
+            "position": 171621
+          },
+          {
+            "text": "$6,130.1 ",
+            "position": 202728
+          },
+          {
+            "text": "$5,578.9 ",
+            "position": 202737
+          },
+          {
+            "text": "$609.9 ",
+            "position": 202840
+          },
+          {
+            "text": "$717.9 ",
+            "position": 202847
+          },
+          {
+            "text": "$3,525.8 ",
+            "position": 202932
+          },
+          {
+            "text": "$3,226.2 ",
+            "position": 202941
+          },
+          {
+            "text": "$4,988.2 ",
+            "position": 203193
+          },
+          {
+            "text": "$4,588.5 ",
+            "position": 203202
+          },
+          {
+            "text": "$4,623.3 ",
+            "position": 204179
+          },
+          {
+            "text": "$4,220.8 ",
+            "position": 204188
+          },
+          {
+            "text": "$405.7 ",
+            "position": 204518
+          },
+          {
+            "text": "$402.5 ",
+            "position": 204626
+          },
+          {
+            "text": "$276.7 million",
+            "position": 212446
+          },
+          {
+            "text": "$284.7 million",
+            "position": 212538
+          },
+          {
+            "text": "$145.1 ",
+            "position": 212779
+          },
+          {
+            "text": "$152.1 ",
+            "position": 212786
+          },
+          {
+            "text": "$328.4 ",
+            "position": 213058
+          },
+          {
+            "text": "$293.6 ",
+            "position": 213065
+          },
+          {
+            "text": "$850.3 ",
+            "position": 215154
+          },
+          {
+            "text": "$828.6 ",
+            "position": 215161
+          },
+          {
+            "text": "$2,198.6 ",
+            "position": 215428
+          },
+          {
+            "text": "$2,143.2 ",
+            "position": 215437
+          },
+          {
+            "text": "$55.4 million",
+            "position": 215522
+          },
+          {
+            "text": "$37.0 ",
+            "position": 215788
+          },
+          {
+            "text": "$55.4 ",
+            "position": 216026
+          },
+          {
+            "text": "$4,079.1 ",
+            "position": 217406
+          },
+          {
+            "text": "$5,275.3 ",
+            "position": 217415
+          },
+          {
+            "text": "$3,943.8 million",
+            "position": 217927
+          },
+          {
+            "text": "$5,073.9 million",
+            "position": 217948
+          },
+          {
+            "text": "$3,669.4 million",
+            "position": 218761
+          },
+          {
+            "text": "$4,717.5 million",
+            "position": 218782
+          },
+          {
+            "text": "$5.0 million",
+            "position": 220437
+          },
+          {
+            "text": "$176.5 ",
+            "position": 220585
+          },
+          {
+            "text": "$1,286.4 ",
+            "position": 220643
+          },
+          {
+            "text": "$90.0 million",
+            "position": 221130
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 221420
+          },
+          {
+            "text": "$1.25 ",
+            "position": 222306
+          },
+          {
+            "text": "$455.0 million",
+            "position": 222579
+          },
+          {
+            "text": "$5.80 ",
+            "position": 222675
+          }
+        ],
+        "percentages": [
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 45856
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 47653
+          },
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 54100
+          },
+          {
+            "text": "54%",
+            "value": 54.0,
+            "position": 54218
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 54300
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 54363
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 58591
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 67512
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 83680
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 89652
+          },
+          {
+            "text": "3.3%",
+            "value": 3.3,
+            "position": 91497
+          },
+          {
+            "text": "28.0%",
+            "value": 28.0,
+            "position": 91521
+          },
+          {
+            "text": "15.1%",
+            "value": 15.1,
+            "position": 91573
+          },
+          {
+            "text": "92%",
+            "value": 92.0,
+            "position": 124776
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 136581
+          },
+          {
+            "text": "101%",
+            "value": 101.0,
+            "position": 154957
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 202746
+          },
+          {
+            "text": "64.1 %",
+            "value": 64.1,
+            "position": 202798
+          },
+          {
+            "text": "61.6 %",
+            "value": 61.6,
+            "position": 202804
+          },
+          {
+            "text": "22.4 %",
+            "value": 22.4,
+            "position": 202884
+          },
+          {
+            "text": "22.3 %",
+            "value": 22.3,
+            "position": 202890
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 203211
+          },
+          {
+            "text": "13,71612,51710 %",
+            "value": 137161251710.0,
+            "position": 205390
+          },
+          {
+            "text": "92 %",
+            "value": 92.0,
+            "position": 205776
+          },
+          {
+            "text": "2582522 %",
+            "value": 2582522.0,
+            "position": 208948
+          },
+          {
+            "text": "51144415 %",
+            "value": 51144415.0,
+            "position": 209706
+          },
+          {
+            "text": "1,1671,0877 %",
+            "value": 116710877.0,
+            "position": 210507
+          },
+          {
+            "text": "43135621 %",
+            "value": 43135621.0,
+            "position": 211179
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 213072
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 214271
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 215168
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 215794
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 217270
+          },
+          {
+            "text": "3122.4 %",
+            "value": 3122.4,
+            "position": 218992
+          },
+          {
+            "text": "0.1 %",
+            "value": 0.1,
+            "position": 219006
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 221682
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 223396
+          },
+          {
+            "text": "3.00%",
+            "value": 3.0,
+            "position": 224474
+          },
+          {
+            "text": "3.75%",
+            "value": 3.75,
+            "position": 224537
+          },
+          {
+            "text": "2.65%",
+            "value": 2.65,
+            "position": 224596
+          },
+          {
+            "text": "5.30%",
+            "value": 5.3,
+            "position": 224659
+          },
+          {
+            "text": "4.15%",
+            "value": 4.15,
+            "position": 224721
+          },
+          {
+            "text": "3.11%",
+            "value": 3.11,
+            "position": 224958
+          },
+          {
+            "text": "4.73%",
+            "value": 4.73,
+            "position": 225162
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 231784
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 235720
+          },
+          {
+            "text": "275%",
+            "value": 275.0,
+            "position": 242207
+          },
+          {
+            "text": "550%",
+            "value": 550.0,
+            "position": 242314
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 277382
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 277399
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 272
+          },
+          {
+            "category": "operational_risk",
+            "count": 32
+          },
+          {
+            "category": "financial_risk",
+            "count": 411
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 130
+          },
+          {
+            "category": "technology_risk",
+            "count": 277
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 393188,
+        "filtered_length": 383123,
+        "removed_ratio": 2.56,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.34479934479935,
+      "confidence": 0.38158965558844815,
+      "overall_score": 50.65520065520065,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.94949494949495,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.013104013104013101,
+        "risk_adjusted_signal": 0.08813606192310493,
+        "expected_return_annualized": 0.024915333023441122,
+        "signal_sharpe_ratio": 0.0016610222015627416,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.08813606192310493,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.08813606192310493,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10101010101010101,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.08813606192310493,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.013104013104013101
+      },
+      "risk_adjusted_signal": 0.08813606192310493,
+      "expected_return": 0.0002491533302344112,
+      "signal_sharpe": 0.0016610222015627416,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.65520065520065,
+    "confidence": 0.38158965558844815,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:21:34.010525",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-CME.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

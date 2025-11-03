@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -80,7 +80,7 @@ export default function CompanyImpactAssessment() {
       // Fetch 10-K data if available
       let companyData = null;
       try {
-        const tenKResponse = await base44.analytics.analyzeTenK(tickerUpper);
+        const tenKResponse = await api.analytics.analyzeTenK(tickerUpper);
         if (tenKResponse && !tenKResponse.error) {
           // Map 10-K data to company data format
           companyData = {
@@ -145,7 +145,7 @@ export default function CompanyImpactAssessment() {
       // Call backend company impact assessment endpoint
       let impactResponse;
       try {
-        impactResponse = await base44.regulatory.assessCompanyImpact({
+        impactResponse = await api.regulatory.assessCompanyImpact({
           regulation: regulationData,
           companies: [tickerUpper],
           companyData: {
@@ -213,7 +213,7 @@ Generate a detailed impact assessment with this JSON structure:
   "reasoning": "${impact.reasoning}"
 }`;
 
-      const llmResult = await base44.integrations.Core.InvokeLLM({
+      const llmResult = await api.integrations.Core.InvokeLLM({
         prompt: analysisPrompt,
         response_json_schema: {
           type: "object",

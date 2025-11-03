@@ -1,0 +1,929 @@
+{
+  "ticker": "SO",
+  "analysis": {
+    "ticker": "SO",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 32.11240922008209,
+        "financial_sentiment": -0.12121212121212122,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Electric Company LLCv Table of Contents Index to Financial StatementsCAUTIONARY STATEMENT REGARDING FORWARD-LOOKING INFORMATIONThis Annual Report on contains forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 526081
+        },
+        {
+          "statement": "StatementsCAUTIONARY STATEMENT REGARDING FORWARD-LOOKING INFORMATIONThis Annual Report on contains forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 526139
+        },
+        {
+          "statement": "Projected revenues are expected to offset any increased administrative costs incurred by Alabama Power.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 567965
+        },
+        {
+          "statement": "The traditional electric operating companies recover certain costs through a variety of forward-looking, cost-based rate mechanisms.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 588513
+        },
+        {
+          "statement": "ted financial statement income, as defined in the law, and is subject to the issuance of additional guidance by the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 607954
+        },
+        {
+          "statement": "n general, the incident response process follows the National Institute of Standards and Technology guidance and focuses on four phases: preparation; detection and analysis; containment, eradication, and recovery; and post-incident remediation.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 685438
+        },
+        {
+          "statement": "The related fuel costs were charged to CWIP in accordance with FERC guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 752899
+        },
+        {
+          "statement": "The related fuel costs were charged to CWIP in accordance with FERC guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 795375
+        },
+        {
+          "statement": "These projected growth opportunities could be offset by energy efficiency trends in each market.",
+          "pattern": "projected\\s+(?:revenue|earnings|growth)",
+          "sentiment": 0.0,
+          "position": 840726
+        },
+        {
+          "statement": "ng entities replacing expired purchase contracts and/or retired generation, as well as planning for future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 881828
+        },
+        {
+          "statement": "he natural gas safe harbor tax accounting method change, based on interpretations of the early CAMT guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 890444
+        },
+        {
+          "statement": "related to existing nuclear generating facilities and CAMT is subject to the issuance of additional guidance by the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 891019
+        },
+        {
+          "statement": "On April 30, 2024, the IRS issued Revenue Procedure 2024-23, which gives additional implementation guidance on the natural gas safe harbor tax method of accounting for qualifying repair deductions.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 892340
+        },
+        {
+          "statement": "S&P revised its credit rating outlook for Southern Company and its subsidiaries to stable from positive.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 965440
+        },
+        {
+          "statement": "Moody's also revised the ratings outlook for Southern Company to stable from positive.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 965837
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 984595
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 1005711
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 1006810
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 1022552
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 1023651
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue CodeInternal Revenue Code of 1986, as amendedIPPIndependent power producerIRAInflation Reduction Act of 2022IRPIntegrated resource planIRSInternal Revenue ServiceITCInvestment tax creditKWKilo",
+            "position": 520784
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue for Southern Company Gas, see Item 7 herein and Note 1 to the financial statements under \"Revenues – Southern Company Gas\" and Note 4 to the financial statements in Item 8",
+            "position": 572969
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue contract, it may be required to sell the power produced by the facility at wholesale prices and be exposed to market fluctuations and risks, or the affected site may temporarily or permanently",
+            "position": 634098
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue normalization and straight-fixed-variable rate design,",
+            "position": 765751
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue increase was primarily due to an increase of 165.5",
+            "position": 776814
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings will depend on the parameters of the wholesale market and the efficient operation of its wholesale generating assets,",
+            "position": 542815
+          },
+          {
+            "metric": "earnings",
+            "context": "EARNINGS POTENTIAL – \"Construction Programs\" in Item 7",
+            "position": 550522
+          },
+          {
+            "metric": "earnings",
+            "context": "EARNINGS POTENTIAL – \"Environmental Matters\" and FINANCIAL CONDITION AND LIQUIDITY – \"Cash Requirements\" in Item 7",
+            "position": 553053
+          },
+          {
+            "metric": "earnings",
+            "context": "EARNINGS POTENTIAL – \"Environmental Matters\" in Item 7 herein for additional information with respect to certain existing and proposed environmental requirements and PROPERTIES – \"Electric – Jointly-O",
+            "position": 555444
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS) and net income, respectively,",
+            "position": 739565
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS was $4.02",
+            "position": 741731
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS, which factors in additional shares primarily related to stock-based compensation, was $3.99",
+            "position": 741780
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for 2024 and 2023 was negatively impacted by $0.01",
+            "position": 741904
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS) is attributable to awards outstanding under stock-based compensation plans, the Series 2024A Convertible Senior Notes, the Series 2023A Convertible Senior Notes,",
+            "position": 1351190
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE, equity ratios, additional generating capacity and transmission facilities, extension of retirement dates for fossil fuel plants, and fuel and other cost recovery mechanisms;vi Table of Contents I",
+            "position": 531014
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE used to determine the NCCR tariff and calculate AFUDC was reduced to zero effective April 1, 2024",
+            "position": 723457
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 10.35",
+            "position": 736486
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 10.45",
+            "position": 738674
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE is set at 10.50",
+            "position": 1190928
+          },
+          {
+            "metric": "margin",
+            "context": "margin for the traditional electric operating companies, Southern Power Company, and SEGCO in 2024 was 16",
+            "position": 700165
+          },
+          {
+            "metric": "margin",
+            "context": "margin accounts of $17 million, $62 million, and $41 million at December 31, 2024, 2023, and 2022, respectively,",
+            "position": 970795
+          },
+          {
+            "metric": "margin",
+            "context": "margin accounts of $17 million and $62 million at December 31, 2024 and 2023,",
+            "position": 1470550
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements,",
+            "position": 1478611
+          },
+          {
+            "metric": "margin",
+            "context": "margin accounts was $17",
+            "position": 1478770
+          },
+          {
+            "metric": "market share",
+            "context": "market share of the Subsidiary Registrants could be eroded,",
+            "position": 637344
+          },
+          {
+            "metric": "market share",
+            "context": "market share percent)Gas distribution operations4,387 4,374 Gas marketing servicesEnergy customers668 665 Market share of energy customers in Georgia29.8",
+            "position": 828826
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income (loss)(34)23 Earnings (loss) from equity method investments(16)(21)Interest expense1,030 167 Other income (expense), net(24)(8)Income taxes (benefit)(292)6 Net loss$(812)$(179)Operati",
+            "position": 770194
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income 296 36 Interest expense, net of amounts capitalized77 6 Other income (expense), net27 (8)Income taxes47 11 Net income $199 $11 Operating RevenuesOperating revenues for 2024 were $1.5",
+            "position": 804209
+          },
+          {
+            "metric": "net income",
+            "context": "net income of Southern Company and its subsidiaries use derivative instruments, such as swaps, options, futures, and forwards, to manage their commodity and interest rate exposures and, to a lesser ex",
+            "position": 672033
+          },
+          {
+            "metric": "net income",
+            "context": "net income, respectively,",
+            "position": 739574
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to Southern Company was $4.4",
+            "position": 741130
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income$4,401 $3,976",
+            "position": 742833
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Attributable to Southern Company$4,473 $479 II-8 Table of Contents Index to Financial Statements COMBINED MANAGEMENT'S DISCUSSION AND ANALYSISElectric Operating RevenuesElectric operating r",
+            "position": 743691
+          },
+          {
+            "metric": "assets",
+            "context": "assets or businesses,",
+            "position": 532312
+          },
+          {
+            "metric": "assets",
+            "context": "assets;•the effect of accounting pronouncements issued periodically by standard-setting bodies; and•other factors discussed elsewhere herein and in other reports filed by vii Table of Contents Index t",
+            "position": 533769
+          },
+          {
+            "metric": "assets",
+            "context": "assets, including renewable energy projects,",
+            "position": 534631
+          },
+          {
+            "metric": "assets",
+            "context": "assets of the traditional electric operating companies and certain utility assets of Southern Power Company are operated as a single integrated electric system, or Southern Company power pool,",
+            "position": 539664
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and suffer reduced plant efficiency, higher operating costs,",
+            "position": 645429
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, could increase pension and other postretirement expense,",
+            "position": 669392
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, may impact future electric generating unit retirement and replacement decisions (which are generally subject to approval from the traditional electric operating companies' respective stat",
+            "position": 848471
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for each CCR unit as additional information related to compliance monitoring, closure methodologies and strategies, schedules,",
+            "position": 867523
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, increased regulatory liabilities at Georgia Power and Southern Company Gas,",
+            "position": 891437
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity SecuritiesII-1Item 6ReservedII-1Item 7Management's Discussion and Analysis of Financial Condition and Results of OperationsII-2Item 7",
+            "position": 515274
+          },
+          {
+            "metric": "equity",
+            "context": "equity arrangementSRRMississippi Power's System Restoration Rider, a tariff for retail property damage cost recovery and reserveSubsidiary RegistrantsAlabama Power, Georgia Power, Mississippi Power, S",
+            "position": 525239
+          },
+          {
+            "metric": "equity",
+            "context": "equity ratios, current and proposed environmental regulations and related compliance plans and estimated expenditures, GHG emissions reduction goals, pending or potential litigation matters, access to",
+            "position": 526417
+          },
+          {
+            "metric": "equity",
+            "context": "equity ratios, additional generating capacity and transmission facilities, extension of retirement dates for fossil fuel plants, and fuel and other cost recovery mechanisms;vi Table of Contents Index ",
+            "position": 531019
+          },
+          {
+            "metric": "equity",
+            "context": "equity partnership arrangements where the tax equity I-2 Table of Contents Index to Financial Statementsinvestors receive substantially all of the tax benefits from the facilities,",
+            "position": 544527
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$5 ",
+            "position": 511716
+          },
+          {
+            "text": "$84.9 billion",
+            "position": 513171
+          },
+          {
+            "text": "$40 ",
+            "position": 513485
+          },
+          {
+            "text": "$0.01 ",
+            "position": 513641
+          },
+          {
+            "text": "$3.7 ",
+            "position": 551537
+          },
+          {
+            "text": "$0.7 ",
+            "position": 551542
+          },
+          {
+            "text": "$3.0 ",
+            "position": 551547
+          },
+          {
+            "text": "$14.8 ",
+            "position": 551838
+          },
+          {
+            "text": "$2.9 ",
+            "position": 551844
+          },
+          {
+            "text": "$8.6 ",
+            "position": 551849
+          },
+          {
+            "text": "$0.3 ",
+            "position": 551854
+          },
+          {
+            "text": "$640 million",
+            "position": 551979
+          },
+          {
+            "text": "$0.4 billion",
+            "position": 553306
+          },
+          {
+            "text": "$0.3 billion",
+            "position": 553367
+          },
+          {
+            "text": "$0.7 billion",
+            "position": 553455
+          },
+          {
+            "text": "$0.1 billion",
+            "position": 554214
+          },
+          {
+            "text": "$729 million",
+            "position": 554859
+          },
+          {
+            "text": "$364 million",
+            "position": 554918
+          },
+          {
+            "text": "$309 million",
+            "position": 554950
+          },
+          {
+            "text": "$30 million",
+            "position": 554986
+          },
+          {
+            "text": "$3 ",
+            "position": 560994
+          },
+          {
+            "text": "$320 million",
+            "position": 577005
+          },
+          {
+            "text": "$72 million",
+            "position": 577268
+          },
+          {
+            "text": "$0 ",
+            "position": 592474
+          },
+          {
+            "text": "$50 ",
+            "position": 592481
+          },
+          {
+            "text": "$870 million",
+            "position": 655684
+          },
+          {
+            "text": "$750 million",
+            "position": 655721
+          },
+          {
+            "text": "$90 million",
+            "position": 655803
+          },
+          {
+            "text": "$5.2 billion",
+            "position": 673822
+          },
+          {
+            "text": "$5.0 billion",
+            "position": 673839
+          },
+          {
+            "text": "$1 ",
+            "position": 699533
+          },
+          {
+            "text": "$35 million",
+            "position": 701483
+          },
+          {
+            "text": "$2.86 ",
+            "position": 713742
+          },
+          {
+            "text": "$2.78 ",
+            "position": 713760
+          },
+          {
+            "text": "$135 million",
+            "position": 719350
+          },
+          {
+            "text": "$218 million",
+            "position": 719542
+          },
+          {
+            "text": "$12 million",
+            "position": 719820
+          },
+          {
+            "text": "$622 million",
+            "position": 720157
+          },
+          {
+            "text": "$325 million",
+            "position": 720898
+          },
+          {
+            "text": "$21 million",
+            "position": 721876
+          },
+          {
+            "text": "$16 million",
+            "position": 722032
+          },
+          {
+            "text": "$69 million",
+            "position": 722351
+          },
+          {
+            "text": "$5.462 billion",
+            "position": 722874
+          },
+          {
+            "text": "$647 million",
+            "position": 722934
+          },
+          {
+            "text": "$730 million",
+            "position": 723145
+          },
+          {
+            "text": "$306 million",
+            "position": 723993
+          },
+          {
+            "text": "$14 billion",
+            "position": 724947
+          },
+          {
+            "text": "$38 million",
+            "position": 729400
+          },
+          {
+            "text": "$6 million",
+            "position": 730371
+          },
+          {
+            "text": "$8 million",
+            "position": 730497
+          }
+        ],
+        "percentages": [
+          {
+            "text": "5.25%",
+            "value": 5.25,
+            "position": 511792
+          },
+          {
+            "text": "4.95%",
+            "value": 4.95,
+            "position": 511873
+          },
+          {
+            "text": "4.20%",
+            "value": 4.2,
+            "position": 511954
+          },
+          {
+            "text": "1.875%",
+            "value": 1.875,
+            "position": 512035
+          },
+          {
+            "text": "6.50%",
+            "value": 6.5,
+            "position": 512144
+          },
+          {
+            "text": "5.00%",
+            "value": 5.0,
+            "position": 512226
+          },
+          {
+            "text": "1.850%",
+            "value": 1.85,
+            "position": 512309
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 518496
+          },
+          {
+            "text": "67%",
+            "value": 67.0,
+            "position": 525051
+          },
+          {
+            "text": "51%",
+            "value": 51.0,
+            "position": 544872
+          },
+          {
+            "text": "66%",
+            "value": 66.0,
+            "position": 544879
+          },
+          {
+            "text": "96%",
+            "value": 96.0,
+            "position": 545729
+          },
+          {
+            "text": "87%",
+            "value": 87.0,
+            "position": 545750
+          },
+          {
+            "text": "46%",
+            "value": 46.0,
+            "position": 545891
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 546036
+          },
+          {
+            "text": "8.16%",
+            "value": 8.16,
+            "position": 567171
+          },
+          {
+            "text": "13.9%",
+            "value": 13.9,
+            "position": 590198
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 598112
+          },
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 599324
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 599332
+          },
+          {
+            "text": "7.2%",
+            "value": 7.2,
+            "position": 601364
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 604282
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 607837
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 619493
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 619501
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 633110
+          },
+          {
+            "text": "95.92%",
+            "value": 95.92,
+            "position": 687973
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 688334
+          },
+          {
+            "text": "8.4%",
+            "value": 8.4,
+            "position": 689681
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 689707
+          },
+          {
+            "text": "50.1%",
+            "value": 50.1,
+            "position": 689772
+          },
+          {
+            "text": "45.7%",
+            "value": 45.7,
+            "position": 689822
+          },
+          {
+            "text": "25.4%",
+            "value": 25.4,
+            "position": 690156
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 691221
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 694803
+          },
+          {
+            "text": "90.1%",
+            "value": 90.1,
+            "position": 695272
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 700268
+          },
+          {
+            "text": "91.8 %",
+            "value": 91.8,
+            "position": 700705
+          },
+          {
+            "text": "8.2 %",
+            "value": 8.2,
+            "position": 700711
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 701542
+          },
+          {
+            "text": "4.87%",
+            "value": 4.87,
+            "position": 720888
+          },
+          {
+            "text": "6.15%",
+            "value": 6.15,
+            "position": 721172
+          },
+          {
+            "text": "2.5%",
+            "value": 2.5,
+            "position": 730902
+          },
+          {
+            "text": "10.35%",
+            "value": 10.35,
+            "position": 736493
+          },
+          {
+            "text": "54.6%",
+            "value": 54.6,
+            "position": 736524
+          },
+          {
+            "text": "10.45%",
+            "value": 10.45,
+            "position": 738681
+          },
+          {
+            "text": "54.92%",
+            "value": 54.92,
+            "position": 738712
+          },
+          {
+            "text": "10.7%",
+            "value": 10.7,
+            "position": 741232
+          },
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 742488
+          },
+          {
+            "text": "76%",
+            "value": 76.0,
+            "position": 742504
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 309
+          },
+          {
+            "category": "operational_risk",
+            "count": 98
+          },
+          {
+            "category": "financial_risk",
+            "count": 1436
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 550
+          },
+          {
+            "category": "technology_risk",
+            "count": 204
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1626763,
+        "filtered_length": 1565981,
+        "removed_ratio": 3.74,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.75429975429976,
+      "confidence": 0.14303679282669315,
+      "overall_score": 50.24570024570024,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.93939393939394,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.004914004914004899,
+        "risk_adjusted_signal": 0.03305102322116425,
+        "expected_return_annualized": 0.009343249883790395,
+        "signal_sharpe_ratio": 0.0006228833255860263,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.03305102322116425,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.03305102322116425,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.12121212121212122,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.03305102322116425,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.004914004914004899
+      },
+      "risk_adjusted_signal": 0.03305102322116425,
+      "expected_return": 9.343249883790395e-05,
+      "signal_sharpe": 0.0006228833255860263,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.24570024570024,
+    "confidence": 0.14303679282669315,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:32:32.662701",
+  "filing_date": "2025-02-20",
+  "filing_filename": "2025-02-20-10k-SO.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

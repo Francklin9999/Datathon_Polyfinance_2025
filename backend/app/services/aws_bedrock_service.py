@@ -9,6 +9,14 @@ from typing import Dict, Optional, List
 
 from app.services.aws_config import AWSServices, is_aws_configured, AWS_BEARER_TOKEN_BEDROCK, AWS_REGION
 
+try:
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
+    import numpy as np
+    TRANSFORMERS_AVAILABLE = True
+except ImportError:
+    TRANSFORMERS_AVAILABLE = False
+
 
 class BedrockService:
     """Service for AWS Bedrock operations"""
@@ -348,5 +356,232 @@ Provide an assessment:
             "assessment": response.get("text", ""),
             "method": "aws_bedrock",
             "model": response.get("model", "")
+        }
+    
+    @staticmethod
+    def _classify_prompt_type(prompt: str) -> Optional[str]:
+        """
+        Classify prompt type using NLP embeddings instead of hardcoded keyword matching
+        Returns: 'regulatory', 'filing', 'portfolio', or None
+        """
+        try:
+            if TRANSFORMERS_AVAILABLE:
+                if not hasattr(BedrockService, '_embedding_model'):
+                    try:
+                        # Use better prebuilt transformer for prompt classification
+                        BedrockService._embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+                    except:
+                        try:
+                            BedrockService._embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+                        except:
+                            BedrockService._embedding_model = None
+                
+                if BedrockService._embedding_model:
+                    # Define prompt type templates
+                    type_templates = {
+                        "regulatory": [
+                            "analyze regulatory document",
+                            "regulation analysis",
+                            "regulatory impact assessment",
+                            "government policy document",
+                            "legal regulation document"
+                        ],
+                        "filing": [
+                            "analyze 10-K filing",
+                            "company filing analysis",
+                            "SEC filing document",
+                            "10-Q filing analysis",
+                            "financial filing document"
+                        ],
+                        "portfolio": [
+                            "portfolio recommendations",
+                            "portfolio optimization",
+                            "sector rotation strategy",
+                            "portfolio allocation adjustments",
+                            "investment portfolio analysis"
+                        ],
+                        "general": [
+                            "market summary",
+                            "financial analysis",
+                            "market conditions",
+                            "general market update"
+                        ]
+                    }
+                    
+                    # Embed prompt
+                    prompt_embedding = BedrockService._embedding_model.encode(
+                        [prompt], convert_to_numpy=True
+                    )
+                    
+                    # Embed all templates
+                    best_match = None
+                    best_score = 0.0
+                    
+                    for prompt_type, templates in type_templates.items():
+                        template_embeddings = BedrockService._embedding_model.encode(
+                            templates, convert_to_numpy=True
+                        )
+                        
+                        # Calculate similarity
+                        similarities = cosine_similarity(prompt_embedding, template_embeddings)[0]
+                        max_similarity = float(np.max(similarities))
+                        
+                        if max_similarity > best_score:
+                            best_score = max_similarity
+                            best_match = prompt_type
+                    
+                    # Return type if similarity is above threshold (0.6)
+                    if best_score > 0.6 and best_match != "general":
+                        return best_match
+        except:
+            pass
+        
+        return None
+    
+    @staticmethod
+    def _classify_prompt_type_fallback(prompt: str) -> str:
+        """
+        Fallback classification using keyword matching when embeddings are unavailable
+        Returns: 'regulatory', 'filing', 'portfolio', or 'general'
+        """
+        prompt_lower = prompt.lower()
+        
+        # Regulatory indicators
+        regulatory_indicators = ["regulatory document", "regulation", "regulatory", "policy", "legal document"]
+        if any(indicator in prompt_lower for indicator in regulatory_indicators):
+            return "regulatory"
+        
+        # Filing indicators
+        filing_indicators = ["10-k", "10-q", "filing", "sec filing", "10k", "10q"]
+        if any(indicator in prompt_lower for indicator in filing_indicators):
+            return "filing"
+        
+        # Portfolio indicators
+        portfolio_indicators = ["portfolio manager", "portfolio adjustments", "sector rotation", 
+                               "portfolio recommendations", "portfolio optimization"]
+        if any(indicator in prompt_lower for indicator in portfolio_indicators):
+            return "portfolio"
+        
+        return "general"
+    
+    @staticmethod
+    def generate_nlp_section_descriptions(analysis_data: Dict, ticker: str) -> Dict:
+        """
+        Generate AI-powered descriptions for each section of NLP analysis
+        
+        Args:
+            analysis_data: Complete NLP analysis data
+            ticker: Stock ticker symbol
+            
+        Returns:
+            Dictionary with descriptions for each section
+        """
+        system_prompt = """You are an expert financial analyst specializing in NLP-based quantitative analysis of SEC filings.
+Your role is to provide clear, insightful descriptions that explain what each section of the analysis means for investors.
+Write in a professional but accessible tone, suitable for both technical and non-technical investors.
+Keep descriptions concise (2-4 sentences) but informative."""
+        
+        descriptions = {}
+        analysis = analysis_data.get("analysis", {})
+        
+        # Get trading signal data
+        trading_signals = analysis.get("trading_signals") or analysis.get("trading_signal") or {}
+        nlp_analysis = analysis.get("nlp_analysis", {})
+        
+        sections_to_describe = [
+            {
+                "name": "trading_signal",
+                "data": {
+                    "recommendation": trading_signals.get("recommendation") or analysis.get("recommendation"),
+                    "strength": trading_signals.get("strength") or analysis.get("signal_strength") or analysis.get("strategy_score"),
+                    "confidence": trading_signals.get("confidence") or analysis.get("confidence"),
+                    "components": trading_signals.get("components", {}),
+                    "quant_metrics": trading_signals.get("quant_metrics", {})
+                },
+                "prompt_template": "Trading Signal Analysis for {ticker}:\nRecommendation: {recommendation}\nSignal Strength: {strength}\nConfidence: {confidence}\n\nExplain what this trading signal means, what the recommendation suggests, and why the confidence level matters."
+            },
+            {
+                "name": "sentiment",
+                "data": nlp_analysis.get("sentiment_scores", {}),
+                "prompt_template": "Sentiment Analysis for {ticker}:\nOverall Sentiment: {overall_sentiment}\nFinancial Sentiment: {financial_sentiment}\nUncertainty Score: {uncertainty_score}\n\nExplain what these sentiment metrics indicate about the company's outlook and tone in their filing."
+            },
+            {
+                "name": "forward_looking",
+                "data": {
+                    "count": len(nlp_analysis.get("forward_looking_statements", [])),
+                    "sample": nlp_analysis.get("forward_looking_statements", [])[:3]
+                },
+                "prompt_template": "Forward-Looking Statements for {ticker}:\nFound {count} forward-looking statements in the filing.\n\nExplain what forward-looking statements are, why they matter, and what investors should pay attention to."
+            },
+            {
+                "name": "risk_analysis",
+                "data": nlp_analysis.get("risk_analysis", {}),
+                "prompt_template": "Risk Analysis for {ticker}:\nRisk Categories: {risk_categories}\nSeverity Score: {severity_score}\n\nExplain what this risk analysis reveals about the company's risk profile and what types of risks were identified."
+            },
+            {
+                "name": "tone_analysis",
+                "data": nlp_analysis.get("tone_analysis", {}),
+                "prompt_template": "Tone Analysis for {ticker}:\nCertainty: {certainty_score}\nFormality: {formality_score}\nReadability: {readability_score}\n\nExplain what these tone metrics reveal about the company's communication style and management's confidence."
+            },
+            {
+                "name": "entities",
+                "data": {
+                    "financial_metrics": nlp_analysis.get("entities", {}).get("financial_metrics", []),
+                    "metrics_summary": {}
+                },
+                "prompt_template": "Financial Metrics Extracted for {ticker}:\nKey metrics mentioned in the filing.\n\nExplain what these financial metrics indicate and why tracking them is important for investors."
+            },
+            {
+                "name": "quantitative_metrics",
+                "data": trading_signals.get("quant_metrics", {}),
+                "prompt_template": "Quantitative Metrics for {ticker}:\nComposite Signal: {composite_signal}\nExpected Return: {expected_return}\nSharpe Ratio: {signal_sharpe_ratio}\nInformation Coefficient: {information_coefficient}\n\nExplain what these quantitative metrics mean and how they inform the trading recommendation."
+            }
+        ]
+        
+        # Generate descriptions for each section
+        last_model = None
+        for section in sections_to_describe:
+            try:
+                # Prepare prompt
+                section_data = section["data"]
+                
+                # Format prompt with actual data - use safe formatting
+                try:
+                    prompt = section["prompt_template"].format(
+                        ticker=ticker,
+                        **{k: str(v) if v is not None else "N/A" for k, v in section_data.items()}
+                    )
+                except KeyError:
+                    # Fallback if template has missing keys
+                    prompt = f"Analysis section for {ticker}: {section['name']}\n\nExplain what this section means for investors."
+                
+                # Add data summary to prompt
+                if section_data:
+                    try:
+                        data_summary = json.dumps(section_data, indent=2, default=str)[:1000]
+                        prompt += f"\n\nAnalysis Data Summary:\n{data_summary}"
+                    except:
+                        pass
+                
+                # Generate description
+                response = BedrockService.invoke_model(
+                    prompt=prompt,
+                    system_prompt=system_prompt,
+                    max_tokens=500,
+                    temperature=0.5
+                )
+                
+                descriptions[section["name"]] = response.get("text", "").strip()
+                if response.get("model"):
+                    last_model = response.get("model")
+            except Exception as e:
+                # If generation fails, provide a basic description
+                descriptions[section["name"]] = f"Description unavailable for {section['name']} section: {str(e)}"
+        
+        return {
+            "descriptions": descriptions,
+            "ticker": ticker,
+            "method": "aws_bedrock",
+            "model": last_model or "unknown"
         }
 

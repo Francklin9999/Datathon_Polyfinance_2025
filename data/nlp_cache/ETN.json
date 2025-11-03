@@ -1,0 +1,875 @@
+{
+  "ticker": "ETN",
+  "analysis": {
+    "ticker": "ETN",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 29.98909487459106,
+        "financial_sentiment": -0.04597701149425287,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Despite these uncertainties, we believe Eaton is well positioned to capitalize on secular trends and market opportunities arising from these risks.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 77532
+        },
+        {
+          "statement": "In accordance with NIST guidance, Eaton maintains documented information security policies and standards to protect operations, assets, data and services and to defend against, respond to and recover from potential cyberattacks.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 87075
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 120921
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 121607
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 129588
+        },
+        {
+          "statement": "We believe that our audit provides a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 130095
+        },
+        {
+          "statement": "The model includes estimates of future cash flows, future growth rates, terminal value amounts, and the applicable weighted-average cost of capital used to discount those estimated cash flows.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 147279
+        },
+        {
+          "statement": "Returns are estimated at the time of the sale primarily based on historical experience and are recorded gross on the Consolidated Balance Sheets.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 165630
+        },
+        {
+          "statement": "Returns are estimated at the time of the sale primarily based on historical experience and recorded gross on the Consolidated Balance Sheet.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 319450
+        },
+        {
+          "statement": "The model includes estimates of future cash flows, future growth rates, terminal value amounts, and the applicable weighted-average cost of capital used to discount those estimated cash flows.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 322030
+        },
+        {
+          "statement": "A 1-percentage point change in the assumed rate of return on pension plan assets is estimated to have approximately a $49 million effect on pension expense.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 331372
+        },
+        {
+          "statement": "Likewise, a 1-percentage point change in the discount rate is estimated to have approximately a $15 million effect on pension expense.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 331507
+        },
+        {
+          "statement": "1-percentage point change in the assumed rate of return on other postretirement benefits assets is estimated to have less than $1 million effect on other postretirement benefits expense.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 331681
+        },
+        {
+          "statement": "A 1-percentage point change in the discount rate is estimated to have a $3 million effect on expense for other postretirement benefits plans.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 331821
+        },
+        {
+          "statement": "e accompanied by words such as “anticipate,” “believe,” “could,” “estimate,” “expect,” “forecast,” “guidance,” “intend,” “may,” “possible,” “potential,” “predict,” “project” or other similar words, phrases or expressions.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 336902
+        },
+        {
+          "statement": "The following factors could cause Eaton does not assume any obligation to update these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 337251
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue growth,",
+            "position": 147908
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue growth rates, future margins,",
+            "position": 159757
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue recognition, billings and cash collections results in billed accounts receivable, unbilled receivables (revenue recognized exceeds amount billed to the customer),",
+            "position": 171545
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue recognized and not yet billed from increased business activity in 2024",
+            "position": 172448
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue liabilities are as follows:(In millions)Deferred RevenueBalance at January 1, 2023$508 Customer deposits and billings2,368 Revenue recognized in the period(2,256)Translation6 Balance at Decemb",
+            "position": 172551
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in countries with differing statutory tax rates, changes in the valuation allowance of deferred tax assets, or changes in tax legislation, regulations,",
+            "position": 84710
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings model, or the lost income model,",
+            "position": 159596
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of foreign subsidiaries of approximately $33.1",
+            "position": 211181
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings(15)(15)(12)(12)— — (373)(370)241 235 (632)(647)Pensions and other postretirement benefitsPrior service credit (cost) arising during the year1 1 — — — — Net gain (loss) arising during the year",
+            "position": 232854
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and adjusted earnings per ordinary share,",
+            "position": 278321
+          },
+          {
+            "metric": "profit",
+            "context": "profit margins, discount rates, industry data,",
+            "position": 146766
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $21 million on sales of $158 million, from the date of acquisition through December 31, 2022",
+            "position": 160575
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) as an input to assess segment performance and determine appropriate resource allocations, including capital, financial,",
+            "position": 269876
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) results are regularly evaluated versus annual profit plan,",
+            "position": 270052
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss)Electrical Americas$3,455 $2,675 $1,913 Electrical Global1,149 1,176 1,134 Aerospace859 780 705 Vehicle502 482 453 eMobility(7)(21)(9)Total segment operating profit5,959 5,093 4,196 Corpo",
+            "position": 272234
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased from 36.4",
+            "position": 285515
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased from 33.2",
+            "position": 285903
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased from 26.5",
+            "position": 289597
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased from 22.5",
+            "position": 289982
+          },
+          {
+            "metric": "margin",
+            "context": "margin decreased from 19.3",
+            "position": 291153
+          },
+          {
+            "metric": "market share",
+            "context": "market share or otherwise increase the risk of customer disputes,",
+            "position": 83785
+          },
+          {
+            "metric": "net income",
+            "context": "net income for noncontrolling interests(4)(5)(4)Net income attributable to Eaton ordinary shareholders$3,794 $3,218 $2,462 Net income per share attributable to Eaton ordinary shareholdersDiluted$9.50",
+            "position": 133588
+          },
+          {
+            "metric": "net income",
+            "context": "net income for noncontrolling interests(4)(5)(4)Net income attributable to Eaton ordinary shareholders3,794 3,218 2,462 Other comprehensive income (loss), net of taxCurrency translation and related he",
+            "position": 134237
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,798 $3,223 $2,465 Adjustments to reconcile to net cash provided by operating activitiesDepreciation and amortization921 926 954 Deferred income taxes(154)(182)(128)Pension and other postr",
+            "position": 136693
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — 2,462 — — 2,462 4 2,465 Other comprehensive loss, net of tax(313)(313)(313)Cash dividends paid— — — (1,299)— — (1,299)(2)(1,301)Issuance of shares under equity-based compensation plans",
+            "position": 139071
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — 3,218 — — 3,218 5 3,223 Other comprehensive income, net of tax39 39 39 Cash dividends paid— — — (1,379)— — (1,379)(9)(1,388)Issuance of shares under equity-based compensation plans1.5",
+            "position": 139512
+          },
+          {
+            "metric": "assets",
+            "context": "assets, or changes in tax legislation, regulations,",
+            "position": 84819
+          },
+          {
+            "metric": "assets",
+            "context": "assets, data and services and to defend against,",
+            "position": 87179
+          },
+          {
+            "metric": "assets",
+            "context": "assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting princ",
+            "position": 130760
+          },
+          {
+            "metric": "assets",
+            "context": "assets Cash$555 $488 Short-term investments1,525 2,121 Accounts receivable - net4,619 4,475 Inventory4,227 3,739 Prepaid expenses and other current assets874 851 Total current assets11,801 11,675 Prop",
+            "position": 134931
+          },
+          {
+            "metric": "assets",
+            "context": "assets(79)(112)(179)Other current liabilities79 72 236 Other - net85 (76)40 Net cash provided by operating activities4,327 3,624 2,533 Investing activities Capital expenditures for property, plant and",
+            "position": 137274
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to environmental matters is presented in Note 11",
+            "position": 68118
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities and shareholders’ equity Current liabilities Short-term debt$— $8 Current portion of long-term debt674 1,017 Accounts payable3,678 3,365 Accrued compensation670 676 Other current liabiliti",
+            "position": 135542
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and equity$38,381 $38,432",
+            "position": 136425
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities such as inventory and property, plant and equipment and their related expenses are remeasured at historical exchange rates,",
+            "position": 143967
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for leases with a term of 12",
+            "position": 150183
+          },
+          {
+            "metric": "equity",
+            "context": "equity-based compensation,",
+            "position": 70722
+          },
+          {
+            "metric": "equity",
+            "context": "equity markets in this space may be volatile, and may not react rationally to newly introduced products,",
+            "position": 81233
+          },
+          {
+            "metric": "equity",
+            "context": "equity-based compensation plans required by Regulation S-K Item 201(d) is provided in Item 12",
+            "position": 95977
+          },
+          {
+            "metric": "equity",
+            "context": "Equity SecuritiesDuring the fourth quarter of 2024, 2.5",
+            "position": 96953
+          },
+          {
+            "metric": "equity",
+            "context": "equity-based compensation plans is set forth under the caption “Equity Compensation Plans” in the Company's definitive Proxy Statement to be filed on or about March 14, 2025,",
+            "position": 102266
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$25 billion",
+            "position": 62769
+          },
+          {
+            "text": "$6.5 billion",
+            "position": 70682
+          },
+          {
+            "text": "$50,683",
+            "position": 70980
+          },
+          {
+            "text": "$870 million",
+            "position": 97088
+          },
+          {
+            "text": "$336.19 ",
+            "position": 97547
+          },
+          {
+            "text": "$2,770 ",
+            "position": 97563
+          },
+          {
+            "text": "$351.99 ",
+            "position": 97586
+          },
+          {
+            "text": "$2,481 ",
+            "position": 97602
+          },
+          {
+            "text": "$356.63 ",
+            "position": 97625
+          },
+          {
+            "text": "$2,216 ",
+            "position": 97641
+          },
+          {
+            "text": "$347.44 ",
+            "position": 97663
+          },
+          {
+            "text": "$1,361 million",
+            "position": 122617
+          },
+          {
+            "text": "$24,878 ",
+            "position": 133224
+          },
+          {
+            "text": "$23,196 ",
+            "position": 133232
+          },
+          {
+            "text": "$20,752 ",
+            "position": 133240
+          },
+          {
+            "text": "$3,794 ",
+            "position": 133690
+          },
+          {
+            "text": "$3,218 ",
+            "position": 133697
+          },
+          {
+            "text": "$2,462 ",
+            "position": 133704
+          },
+          {
+            "text": "$9.50 ",
+            "position": 133782
+          },
+          {
+            "text": "$8.02 ",
+            "position": 133788
+          },
+          {
+            "text": "$6.14 B",
+            "position": 133794
+          },
+          {
+            "text": "$3.76 ",
+            "position": 133964
+          },
+          {
+            "text": "$3.44 ",
+            "position": 133970
+          },
+          {
+            "text": "$3.24 ",
+            "position": 133976
+          },
+          {
+            "text": "$3,798 ",
+            "position": 134211
+          },
+          {
+            "text": "$3,223 ",
+            "position": 134218
+          },
+          {
+            "text": "$2,465 ",
+            "position": 134225
+          },
+          {
+            "text": "$3,358 ",
+            "position": 134711
+          },
+          {
+            "text": "$3,257 ",
+            "position": 134718
+          },
+          {
+            "text": "$2,149 ",
+            "position": 134725
+          },
+          {
+            "text": "$555 ",
+            "position": 134942
+          },
+          {
+            "text": "$488 ",
+            "position": 134947
+          },
+          {
+            "text": "$38,381 ",
+            "position": 135526
+          },
+          {
+            "text": "$38,432 ",
+            "position": 135534
+          },
+          {
+            "text": "$8 ",
+            "position": 135617
+          },
+          {
+            "text": "$294 ",
+            "position": 138600
+          },
+          {
+            "text": "$4 ",
+            "position": 139021
+          },
+          {
+            "text": "$12,449 ",
+            "position": 139024
+          },
+          {
+            "text": "$7,594 ",
+            "position": 139032
+          },
+          {
+            "text": "$16,413 ",
+            "position": 139051
+          },
+          {
+            "text": "$38 ",
+            "position": 139059
+          },
+          {
+            "text": "$16,451 ",
+            "position": 139063
+          },
+          {
+            "text": "$12,731 ",
+            "position": 140305
+          },
+          {
+            "text": "$10,096 ",
+            "position": 140313
+          },
+          {
+            "text": "$18,488 ",
+            "position": 140333
+          },
+          {
+            "text": "$43 ",
+            "position": 140341
+          },
+          {
+            "text": "$18,531 ",
+            "position": 140345
+          },
+          {
+            "text": "$872 million",
+            "position": 142881
+          },
+          {
+            "text": "$860 million",
+            "position": 142898
+          },
+          {
+            "text": "$12 million",
+            "position": 143000
+          }
+        ],
+        "percentages": [
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 64125
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 64585
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 64873
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 65123
+          },
+          {
+            "text": "33.3 %",
+            "value": 33.3,
+            "position": 69541
+          },
+          {
+            "text": "50.0 %",
+            "value": 50.0,
+            "position": 69552
+          },
+          {
+            "text": "16.7 %",
+            "value": 16.7,
+            "position": 69585
+          },
+          {
+            "text": "40.9 %",
+            "value": 40.9,
+            "position": 69596
+          },
+          {
+            "text": "25.7 %",
+            "value": 25.7,
+            "position": 69620
+          },
+          {
+            "text": "22.0 %",
+            "value": 22.0,
+            "position": 69634
+          },
+          {
+            "text": "24.9 %",
+            "value": 24.9,
+            "position": 69660
+          },
+          {
+            "text": "22.8 %",
+            "value": 22.8,
+            "position": 69678
+          },
+          {
+            "text": "31.2 %",
+            "value": 31.2,
+            "position": 69717
+          },
+          {
+            "text": "36.0 %",
+            "value": 36.0,
+            "position": 69736
+          },
+          {
+            "text": "33.8 %",
+            "value": 33.8,
+            "position": 69769
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 71237
+          },
+          {
+            "text": "84%",
+            "value": 84.0,
+            "position": 72426
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 96291
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 142527
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 142534
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 152235
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 152241
+          },
+          {
+            "text": "49%",
+            "value": 49.0,
+            "position": 161496
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 163091
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 173663
+          },
+          {
+            "text": "4.4 %",
+            "value": 4.4,
+            "position": 181071
+          },
+          {
+            "text": "4.0 %",
+            "value": 4.0,
+            "position": 181076
+          },
+          {
+            "text": "3.7 %",
+            "value": 3.7,
+            "position": 181095
+          },
+          {
+            "text": "3.6 %",
+            "value": 3.6,
+            "position": 181100
+          },
+          {
+            "text": "202420230.75%",
+            "value": 202420230.75,
+            "position": 181536
+          },
+          {
+            "text": "6.50%",
+            "value": 6.5,
+            "position": 181616
+          },
+          {
+            "text": "0.70%",
+            "value": 0.7,
+            "position": 181649
+          },
+          {
+            "text": "0.128%",
+            "value": 0.128,
+            "position": 181682
+          },
+          {
+            "text": "3.10%",
+            "value": 3.1,
+            "position": 181716
+          },
+          {
+            "text": "4.35%",
+            "value": 4.35,
+            "position": 181751
+          },
+          {
+            "text": "7.65%",
+            "value": 7.65,
+            "position": 181786
+          },
+          {
+            "text": "0.577%",
+            "value": 0.577,
+            "position": 181819
+          },
+          {
+            "text": "3.601%",
+            "value": 3.601,
+            "position": 181853
+          },
+          {
+            "text": "4.00%",
+            "value": 4.0,
+            "position": 181885
+          },
+          {
+            "text": "4.15%",
+            "value": 4.15,
+            "position": 181920
+          },
+          {
+            "text": "5.45%",
+            "value": 5.45,
+            "position": 181981
+          },
+          {
+            "text": "3.802%",
+            "value": 3.802,
+            "position": 182014
+          },
+          {
+            "text": "5.80%",
+            "value": 5.8,
+            "position": 182046
+          },
+          {
+            "text": "3.92%",
+            "value": 3.92,
+            "position": 182113
+          },
+          {
+            "text": "4.70%",
+            "value": 4.7,
+            "position": 182148
+          },
+          {
+            "text": "5.25%",
+            "value": 5.25,
+            "position": 182183
+          },
+          {
+            "text": "7.875%",
+            "value": 7.875,
+            "position": 182192
+          },
+          {
+            "text": "101%",
+            "value": 101.0,
+            "position": 183902
+          },
+          {
+            "text": "5.61 %",
+            "value": 5.61,
+            "position": 191764
+          },
+          {
+            "text": "5.14 %",
+            "value": 5.14,
+            "position": 191770
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 89
+          },
+          {
+            "category": "operational_risk",
+            "count": 35
+          },
+          {
+            "category": "financial_risk",
+            "count": 332
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 33
+          },
+          {
+            "category": "technology_risk",
+            "count": 122
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 345424,
+        "filtered_length": 337280,
+        "removed_ratio": 2.36,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.229263746505126,
+      "confidence": 1.0320503287268012,
+      "overall_score": 51.770736253494874,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.701149425287355,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.03541472506989751,
+        "risk_adjusted_signal": 0.23819530528356397,
+        "expected_return_annualized": 0.0673358353693862,
+        "signal_sharpe_ratio": 0.0044890556912924135,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.23819530528356397,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.23819530528356397,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.04597701149425287,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.23819530528356397,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.03541472506989751
+      },
+      "risk_adjusted_signal": 0.23819530528356397,
+      "expected_return": 0.000673358353693862,
+      "signal_sharpe": 0.0044890556912924135,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.770736253494874,
+    "confidence": 1.0320503287268012,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:18.596543",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-ETN.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

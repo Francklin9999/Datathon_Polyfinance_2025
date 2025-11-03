@@ -1,0 +1,936 @@
+{
+  "ticker": "REG",
+  "analysis": {
+    "ticker": "REG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 44.782890473104345,
+        "financial_sentiment": -0.08333333333333333,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "to Regency's future events, developments, or financial or operational performance or results, are \"forward-looking statements\" made pursuant to the safe harbor provisions of the Private Securities Litigation Reform Act of 1995 and other federal securities laws.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 92545
+        },
+        {
+          "statement": "\" \"would,\" \"expect,\" \"estimate,\" \"believe,\" \"intend,\" \"forecast,\" \"project,\" \"plan,\" \"anticipate,\" \"guidance,\" and other similar language.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 92916
+        },
+        {
+          "statement": "However, the absence of these or similar words or expressions does not mean a statement is not forward-looking.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 93050
+        },
+        {
+          "statement": "While we believe these forward-looking statements are reasonable when made, forward-looking statements are not guarantees of future performance or events and undue reliance should not be placed on these statements.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 93073
+        },
+        {
+          "statement": "milar words or expressions does not mean a statement is not forward-looking.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 93090
+        },
+        {
+          "statement": "is not forward-looking.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 93143
+        },
+        {
+          "statement": "rward-looking statements are reasonable when made, forward-looking statements are not guarantees of future performance or events and undue reliance should not be placed on these statements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 93192
+        },
+        {
+          "statement": "Although we believe the expectations reflected in any forward-looking statements are based on reasonable assumptions, we can give no assurance these expectations will be attained, and it is possible Risk Factors\" of this Report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 93336
+        },
+        {
+          "statement": "king statements are only as of the date they are made, and Regency undertakes no duty to update its forward-looking statements, whether as a result of new information, future events or developments or otherwise, except as and to the extent required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 94161
+        },
+        {
+          "statement": "Our values: •We are our people: Our people are our greatest asset, and we believe that our highly skilled and talented team makes us better.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 96952
+        },
+        {
+          "statement": "We believe that this strategy will result in highly desirable and attractive centers with best-in-class retailers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 97875
+        },
+        {
+          "statement": "We believe that alignment of strategy and business sustainability is critical to the long-term success of our Company, our shareholders, the environment, and the communities in which we operate.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 101114
+        },
+        {
+          "statement": "our business strategy, and identify and focus on key corporate responsibility-related drivers that we expect to contribute to our future success.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 101882
+        },
+        {
+          "statement": "None of our employees are represented by a collective bargaining unit, and we believe our relationship with our employees is good.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 103674
+        },
+        {
+          "statement": "Culture - We believe that much of our success is rooted in our teams and our commitment to a vibrant and welcoming culture.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 104342
+        },
+        {
+          "statement": "on – Our core values place a strong importance on our people, which are our greatest asset and whom we believe make us an employer of choice.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 104970
+        },
+        {
+          "statement": "We believe philanthropy and charitable giving are important elements of our corporate responsibility commitment to the communities in which we operate.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 106786
+        },
+        {
+          "statement": "Environmental Stewardship – We believe sustainability of our assets, business, and the environment for the long term is in the best interest of our investors, tenants, employees, and the communities in which we operate.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 108058
+        },
+        {
+          "statement": "cepted Accounting Principles (\"GAAP\") presentations, we use and report certain non-GAAP measures as we believe these measures improve the understanding of our operational results.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 117783
+        },
+        {
+          "statement": "We believe these non-GAAP measures provide useful information to our Board of Directors, management and investors regarding certain trends relating to our financial condition and results of operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 117863
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Code (the \"Code\"), REITs are subject to numerous regulatory requirements, including the requirement to generally distribute at least 90% of taxable income each year,",
+            "position": 111625
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue in the form of base rent,",
+            "position": 137084
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, as amended,",
+            "position": 276553
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue 1,356,486 1,325,326 31,160 Operating and maintenance 226,489 224,837 1,652 Termination expense 5 — 5 Real estate taxes 175,975 171,737 4,238 Ground rent 14,169 13,710 459 Total real estate ope",
+            "position": 301751
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue increased by $31.2",
+            "position": 302251
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and dividends per share that generate total returns at or near the top of our shopping center peers; •Maintain an industry leading, disciplined development and redevelopment platform to creat",
+            "position": 98164
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings (\"COE\") for (i) capital expenditures necessary to maintain and lease our portfolio of properties,",
+            "position": 119688
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings excludes from Nareit FFO: (i) transaction related income or expenses, (ii) gains or losses from the early extinguishment of debt, (iii) certain non-cash components of earnings derived from st",
+            "position": 120114
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows,",
+            "position": 179866
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Information on Non-GAAP Measures We use certain non-GAAP measures, in addition to certain performance metrics determined under GAAP,",
+            "position": 299015
+          },
+          {
+            "metric": "profit",
+            "context": "profit,",
+            "position": 97317
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss allocations and distributions of cash flows according to the operating agreements,",
+            "position": 125005
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss arising from the lease at inception within Gain on sale of real estate, net of tax in the accompanying Consolidated Statement of Operations, as well as any initial direct costs recorded",
+            "position": 417013
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing contribution may be made,",
+            "position": 518783
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA to Fixed Charges, Ratio of Secured Indebtedness to TAV, Ratio of Unencumbered Net Operating Income to Unsecured Interest Expense,",
+            "position": 492596
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS 182,817 176,085 171,404 Weighted average common shares outstanding for diluted EPS (1) 183,040 176,371 171,791 Net income per common share – basic $ 2.12",
+            "position": 521654
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 0.715",
+            "position": 337059
+          },
+          {
+            "metric": "margin",
+            "context": "margin on the Line was dependent upon maintaining specific credit ratings or leverage targets,",
+            "position": 337143
+          },
+          {
+            "metric": "margin",
+            "context": "margin on the Line would increase,",
+            "position": 337433
+          },
+          {
+            "metric": "margin",
+            "context": "margin based on our credit rating ranged from Adjusted SOFR plus 0.640",
+            "position": 337562
+          },
+          {
+            "metric": "margin",
+            "context": "margin if the Company achieves, or fails to achieve, certain specified targets based on Scope 1 and Scope 2",
+            "position": 491771
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow and portfolio enhancement disposition proceeds into high-quality developments, redevelopments and acquisitions in a long term accretive manner; 2 •Maintain a conservative balance sheet ",
+            "position": 98956
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (\"NOI\"); •Create shareholder value by increasing earnings and dividends per share that generate total returns at or near the top of our shopping center peers; •Maintain an industry le",
+            "position": 98098
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income (\"NOI\") is the sum of base rent, percentage rent, termination fee income, tenant recoveries, other lease income, and other property income, less operating and maintenance expenses, re",
+            "position": 122024
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, trends and prospects, as well as the effects of demand, competition and other relevant criteria,",
+            "position": 150542
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income of the properties,",
+            "position": 173444
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income to Unsecured Interest Expense,",
+            "position": 492685
+          },
+          {
+            "metric": "net income",
+            "context": "net income, computed in accordance with GAAP, excluding gains on sales and impairments of real estate, net of tax, plus depreciation and amortization,",
+            "position": 120722
+          },
+          {
+            "metric": "net income",
+            "context": "net income and cash flow may be adversely affected by the loss of revenues and incurrence of additional costs in the event a significant Anchor Tenant: •becomes bankrupt or insolvent; •experiences a d",
+            "position": 142545
+          },
+          {
+            "metric": "net income",
+            "context": "net income may be adversely impacted if these tenants are not successful,",
+            "position": 145014
+          },
+          {
+            "metric": "net income",
+            "context": "net income because recording an impairment charge results in an immediate negative adjustment to net income,",
+            "position": 150877
+          },
+          {
+            "metric": "net income",
+            "context": "net income and 100",
+            "position": 191162
+          },
+          {
+            "metric": "assets",
+            "context": "assets, business, and the environment for the long term is in the best interest of our investors, tenants, employees,",
+            "position": 108091
+          },
+          {
+            "metric": "assets",
+            "context": "assets across periods and with those of other REIT peers in the industry, facilitating a clearer understanding of trends in occupancy, rental income,",
+            "position": 122940
+          },
+          {
+            "metric": "assets",
+            "context": "assets, liabilities, operating results, and other metrics, along with certain other non-GAAP measures,",
+            "position": 123995
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities and supplemental details of operations reflect our proportionate economic ownership of the assets, liabilities, and operating results of the properties in our portfolio The Pro-",
+            "position": 124322
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities, and revenues and 7",
+            "position": 124876
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, operating results, and other metrics, along with certain other non-GAAP measures,",
+            "position": 124003
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and supplemental details of operations reflect our proportionate economic ownership of the assets, liabilities, and operating results of the properties in our portfolio The Pro-rata inform",
+            "position": 124333
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, and revenues and 7",
+            "position": 124887
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, or the revenues and expenses; and oOther companies in our industry may calculate their Pro-rata interest differently,",
+            "position": 125648
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 149458
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates computed by reference to the price at which the common equity was last sold, or the average bid and asked price of such common equity, as of the last business day of Rege",
+            "position": 84661
+          },
+          {
+            "metric": "equity",
+            "context": "equity issuances by the Parent Company, which are contributed to the Operating Partnership in exchange for Common Units or Preferred Units,",
+            "position": 89192
+          },
+          {
+            "metric": "equity",
+            "context": "equity, partners' capital,",
+            "position": 89603
+          },
+          {
+            "metric": "equity",
+            "context": "equity and partners' capital differ as discussed above,",
+            "position": 91268
+          },
+          {
+            "metric": "equity",
+            "context": "equity ownership interests in 482 properties, primarily anchored by market leading grocery stores, encompassing 57.3",
+            "position": 95896
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 83344
+          },
+          {
+            "text": "$11.2 billion",
+            "position": 84885
+          },
+          {
+            "text": "$200 million",
+            "position": 88650
+          },
+          {
+            "text": "$25.56 ",
+            "position": 212788
+          },
+          {
+            "text": "$24.67 ",
+            "position": 212799
+          },
+          {
+            "text": "$24.51 ",
+            "position": 214478
+          },
+          {
+            "text": "$24.04 ",
+            "position": 214489
+          },
+          {
+            "text": "$26.24 ",
+            "position": 218021
+          },
+          {
+            "text": "$34.58 ",
+            "position": 218092
+          },
+          {
+            "text": "$250 million",
+            "position": 278597
+          },
+          {
+            "text": "$386.7 million",
+            "position": 280064
+          },
+          {
+            "text": "$359.5 million",
+            "position": 280094
+          },
+          {
+            "text": "$497.3 million",
+            "position": 281323
+          },
+          {
+            "text": "$468.1 million",
+            "position": 281350
+          },
+          {
+            "text": "$236.6 million",
+            "position": 281461
+          },
+          {
+            "text": "$400 million",
+            "position": 282205
+          },
+          {
+            "text": "$325 million",
+            "position": 282769
+          },
+          {
+            "text": "$101.6 million",
+            "position": 282944
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 283199
+          },
+          {
+            "text": "$74.66 ",
+            "position": 283643
+          },
+          {
+            "text": "$100 million",
+            "position": 283913
+          },
+          {
+            "text": "$38.92 ",
+            "position": 286142
+          },
+          {
+            "text": "$35.98 ",
+            "position": 286285
+          },
+          {
+            "text": "$127.4 million",
+            "position": 290632
+          },
+          {
+            "text": "$89.5 million",
+            "position": 290680
+          },
+          {
+            "text": "$63.0 million",
+            "position": 290750
+          },
+          {
+            "text": "$22.5 million",
+            "position": 290813
+          },
+          {
+            "text": "$15.1 million",
+            "position": 290880
+          },
+          {
+            "text": "$7.4 million",
+            "position": 291027
+          },
+          {
+            "text": "$6.5 million",
+            "position": 291115
+          },
+          {
+            "text": "$1.9 million",
+            "position": 291204
+          },
+          {
+            "text": "$4.4 million",
+            "position": 291308
+          },
+          {
+            "text": "$33.4 million",
+            "position": 291376
+          },
+          {
+            "text": "$23.5 million",
+            "position": 291662
+          },
+          {
+            "text": "$8.6 million",
+            "position": 291715
+          },
+          {
+            "text": "$2.3 million",
+            "position": 291863
+          },
+          {
+            "text": "$1.0 million",
+            "position": 292029
+          },
+          {
+            "text": "$2.8 million",
+            "position": 292095
+          },
+          {
+            "text": "$3.0 million",
+            "position": 292283
+          },
+          {
+            "text": "$5.1 million",
+            "position": 292346
+          },
+          {
+            "text": "$2.1 million",
+            "position": 292419
+          },
+          {
+            "text": "$9.5 million",
+            "position": 292523
+          },
+          {
+            "text": "$4.3 million",
+            "position": 292583
+          },
+          {
+            "text": "$3.4 million",
+            "position": 292700
+          },
+          {
+            "text": "$1.8 million",
+            "position": 292756
+          },
+          {
+            "text": "$6.0 million",
+            "position": 292881
+          },
+          {
+            "text": "$8.9 million",
+            "position": 292958
+          },
+          {
+            "text": "$2.9 million",
+            "position": 293121
+          },
+          {
+            "text": "$3.1 million",
+            "position": 293238
+          },
+          {
+            "text": "$42.4 million",
+            "position": 293841
+          }
+        ],
+        "percentages": [
+          {
+            "text": "6.250%",
+            "value": 6.25,
+            "position": 83392
+          },
+          {
+            "text": "5.875%",
+            "value": 5.875,
+            "position": 83507
+          },
+          {
+            "text": "99.4%",
+            "value": 99.4,
+            "position": 86460
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 109483
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 111766
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 112033
+          },
+          {
+            "text": "95%",
+            "value": 95.0,
+            "position": 126547
+          },
+          {
+            "text": "23.4%",
+            "value": 23.4,
+            "position": 141737
+          },
+          {
+            "text": "20.5%",
+            "value": 20.5,
+            "position": 141743
+          },
+          {
+            "text": "12.3%",
+            "value": 12.3,
+            "position": 141754
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 145262
+          },
+          {
+            "text": "18.9%",
+            "value": 18.9,
+            "position": 161008
+          },
+          {
+            "text": "22.1%",
+            "value": 22.1,
+            "position": 161176
+          },
+          {
+            "text": "7.9%",
+            "value": 7.9,
+            "position": 161186
+          },
+          {
+            "text": "1.0%",
+            "value": 1.0,
+            "position": 179391
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 190962
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 191110
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 194198
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 195683
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 196152
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 198150
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 199875
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 211355
+          },
+          {
+            "text": "96.5 %",
+            "value": 96.5,
+            "position": 211359
+          },
+          {
+            "text": "24.6 %",
+            "value": 24.6,
+            "position": 211376
+          },
+          {
+            "text": "95.1 %",
+            "value": 95.1,
+            "position": 211383
+          },
+          {
+            "text": "19.0 %",
+            "value": 19.0,
+            "position": 211410
+          },
+          {
+            "text": "96.0 %",
+            "value": 96.0,
+            "position": 211417
+          },
+          {
+            "text": "94.9 %",
+            "value": 94.9,
+            "position": 211440
+          },
+          {
+            "text": "8.9 %",
+            "value": 8.9,
+            "position": 211468
+          },
+          {
+            "text": "94.1 %",
+            "value": 94.1,
+            "position": 211474
+          },
+          {
+            "text": "8.5 %",
+            "value": 8.5,
+            "position": 211490
+          },
+          {
+            "text": "92.5 %",
+            "value": 92.5,
+            "position": 211496
+          },
+          {
+            "text": "8.0 %",
+            "value": 8.0,
+            "position": 211518
+          },
+          {
+            "text": "96.9 %",
+            "value": 96.9,
+            "position": 211524
+          },
+          {
+            "text": "7.5 %",
+            "value": 7.5,
+            "position": 211540
+          },
+          {
+            "text": "97.3 %",
+            "value": 97.3,
+            "position": 211546
+          },
+          {
+            "text": "7.6 %",
+            "value": 7.6,
+            "position": 211571
+          },
+          {
+            "text": "93.3 %",
+            "value": 93.3,
+            "position": 211577
+          },
+          {
+            "text": "7.8 %",
+            "value": 7.8,
+            "position": 211593
+          },
+          {
+            "text": "88.7 %",
+            "value": 88.7,
+            "position": 211599
+          },
+          {
+            "text": "4.8 %",
+            "value": 4.8,
+            "position": 211623
+          },
+          {
+            "text": "94.2 %",
+            "value": 94.2,
+            "position": 211651
+          },
+          {
+            "text": "3.6 %",
+            "value": 3.6,
+            "position": 211678
+          },
+          {
+            "text": "97.0 %",
+            "value": 97.0,
+            "position": 211684
+          },
+          {
+            "text": "2.8 %",
+            "value": 2.8,
+            "position": 211737
+          },
+          {
+            "text": "98.5 %",
+            "value": 98.5,
+            "position": 211743
+          },
+          {
+            "text": "98.1 %",
+            "value": 98.1,
+            "position": 211765
+          },
+          {
+            "text": "98.7 %",
+            "value": 98.7,
+            "position": 211791
+          },
+          {
+            "text": "98.8 %",
+            "value": 98.8,
+            "position": 211812
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 270
+          },
+          {
+            "category": "operational_risk",
+            "count": 27
+          },
+          {
+            "category": "financial_risk",
+            "count": 571
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 67
+          },
+          {
+            "category": "technology_risk",
+            "count": 136
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 40,
+          "density": 11.7096018735363
+        }
+      ],
+      "deduplication": {
+        "original_length": 601638,
+        "filtered_length": 590741,
+        "removed_ratio": 1.81,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.986486486486484,
+      "confidence": 0.5904492720200564,
+      "overall_score": 51.013513513513516,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.833333333333336,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.020270270270270285,
+        "risk_adjusted_signal": 0.13633547078730307,
+        "expected_return_annualized": 0.03854090577063552,
+        "signal_sharpe_ratio": 0.0025693937180423683,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.13633547078730307,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.13633547078730307,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.08333333333333333,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.13633547078730307,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.020270270270270285
+      },
+      "risk_adjusted_signal": 0.13633547078730307,
+      "expected_return": 0.00038540905770635523,
+      "signal_sharpe": 0.0025693937180423683,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.013513513513516,
+    "confidence": 0.5904492720200564,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:31:44.411158",
+  "filing_date": "2025-02-14",
+  "filing_filename": "2025-02-14-10k-REG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

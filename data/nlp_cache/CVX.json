@@ -1,0 +1,901 @@
+{
+  "ticker": "CVX",
+  "analysis": {
+    "ticker": "CVX",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 26.263256394260758,
+        "financial_sentiment": -0.02040816326530612,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "and similar expressions, and variations or negatives of these words, are intended to identify such forward-looking statements, but not all forward-looking statements include such words.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80467
+        },
+        {
+          "statement": "or negatives of these words, are intended to identify such forward-looking statements, but not all forward-looking statements include such words.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80507
+        },
+        {
+          "statement": "These statements are not guarantees of future performance and are subject to numerous risks, uncertainties and other factors, many of which are beyond the company’s control and are difficult to predict.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 80593
+        },
+        {
+          "statement": "ore, actual outcomes and results may differ materially from what is expressed or forecasted in such forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80863
+        },
+        {
+          "statement": "forecasted in such forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80943
+        },
+        {
+          "statement": "Unless legally required, Chevron undertakes no obligation to update publicly any forward-looking statements, whether as a result of new information, future events or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 81100
+        },
+        {
+          "statement": "ictable or unknown factors not discussed in this report could also have material adverse effects on forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 81902
+        },
+        {
+          "statement": "In early 2025, TCO started oil production at the Future Growth Project (FGP).",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 131354
+        },
+        {
+          "statement": "Chevron has set a number of lower carbon-related ambitions, which may include aspirations, targets, guidance, objectives, metrics, and/or goals.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 186784
+        },
+        {
+          "statement": "We expect these adopted changes may increase our reported emissions in future years, and therefore, increase our reported methane intensity.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 190224
+        },
+        {
+          "statement": "Although we do not currently expect that Pillar Two will have a material impact on our future results of operations, we are continuing to evaluate the impact of pending legislative adoption by individual countries.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 228735
+        },
+        {
+          "statement": "Refer to the Cautionary Statement Relevant to Forward-Looking Information on page 2 and to Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 231039
+        },
+        {
+          "statement": "In January 2025, TCO started oil production at its Future Growth Project, which is expected to contribute to higher free cash flow.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 236701
+        },
+        {
+          "statement": "Completed the Wellhead Pressure Management Project and, in January 2025, started production at the Future Growth Project, which is expected to ramp up total output to around one million barrels of oil equivalent per day at the company’s 50 percent-owned affiliate, Tengizchevroil LLP in Kazakhstan.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 247723
+        },
+        {
+          "statement": "Downstream Capex is estimated at $1.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 273552
+        },
+        {
+          "statement": "2023 mainly due to lower spend at Tengizchevroil’s Wellhead Pressure Management Project (WPMP) and Future Growth Project (FGP).",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 274808
+        },
+        {
+          "statement": "For 2025, total worldwide environmental capital expenditures are estimated at $0.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 292483
+        },
+        {
+          "statement": ", operating expenses, carbon costs, production profiles, the pace of the energy transition, and the outlook for global or regional market supply-and-demand conditions for crude oil, NGLs, natural gas, commodity chemicals and refined products.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 298463
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 318619
+        },
+        {
+          "statement": "ent is a loan to TCO to fund the development of the Wellhead Pressure Management Project (WPMP) and Future Growth Project (FGP) with a principal balance of $4,500.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 391415
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue and anticipated purchase transactions,",
+            "position": 284663
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Recognition The company accounts for each delivery order of crude oil, NGLs, natural gas,",
+            "position": 349081
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue is recognized when the performance obligation is satisfied,",
+            "position": 349249
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue elimination(29,662)(11,258)(9,745)(1,668)(52,333)(485)(52,818)Sales and Other Operating Revenues14,640 32,208 70,672 75,762 193,282 132 193,414 Income (loss) from equity affiliates(62)3,642 1,",
+            "position": 383620
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue elimination(26,307)(11,871)(8,793)(1,794)(48,765)(464)(49,229)Sales and Other Operating Revenues13,808 31,934 74,774 76,264 196,780 133 196,913 Income (loss) from equity affiliates(387)4,272 7",
+            "position": 385251
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, cash flows, and capital expenditure programs could be negatively affected,",
+            "position": 157497
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings by Major Operating Area Millions of dollars202420232022UpstreamUnited States$7,602$4,148$12,621International11,00013,29017,663Total Upstream18,60217,43830,284DownstreamUnited States5313,9045,",
+            "position": 214061
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings trends for the company’s major business areas are described as follows:Upstream Earnings for the upstream segment are closely aligned with industry prices for crude oil,",
+            "position": 235028
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings for the upstream segment is also a function of other factors, including the company’s ability to efficiently find, acquire and produce crude oil, natural gas and NGLs, changes in fiscal terms",
+            "position": 236078
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings for the downstream segment are closely tied to margins on the refining, manufacturing and marketing of products that include gasoline, diesel, jet fuel, lubricants, fuel oil, fuel and lubrica",
+            "position": 244333
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS includes the effects of these items as well as the dilutive effects of outstanding stock options awarded under the company’s stock option programs (refer to Note 22",
+            "position": 377944
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS: Year ended December 31202420232022Basic EPS CalculationEarnings available to common stockholders - Basic*$17,661 $21,369 $35,465 Weighted-average number of common shares outstanding1,810 1,873 1,",
+            "position": 378228
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS CalculationEarnings available to common stockholders - Diluted*$17,661 $21,369 $35,465 Weighted-average number of common shares outstanding1,810 1,873 1,931 Add: Deferred awards held as stock unit",
+            "position": 378624
+          },
+          {
+            "metric": "CAPEX",
+            "context": "Capex by business segment for 2024, 2023 and 2022 is as follows:Year ended December 31Capex202420232022",
+            "position": 272650
+          },
+          {
+            "metric": "CAPEX",
+            "context": "Capex$11,330 $5,118 $16,448 $11,729 $4,100 $15,829 $8,856 $3,118 $11,974 Capex for 2024 was $16.4",
+            "position": 272990
+          },
+          {
+            "metric": "CAPEX",
+            "context": "Capex will range from $14.5",
+            "position": 273198
+          },
+          {
+            "metric": "CAPEX",
+            "context": "Capex is projected at $13 billion,",
+            "position": 273253
+          },
+          {
+            "metric": "CAPEX",
+            "context": "Capex is estimated at $1.2",
+            "position": 273543
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow The cash provided by operating activities less capital expenditures,",
+            "position": 278273
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free Cash Flow$15,044 $19,780 $37,628 Debt Ratio Total debt as a percentage of total debt plus Chevron Corporation Stockholders’ Equity,",
+            "position": 278618
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income (Loss) Attributable to Chevron Corporation– Basic$9.76",
+            "position": 213794
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income (Loss) Attributable to Chevron Corporation1,2$17,661$21,369$35,4651 Includes foreign currency effects:$520 $(224)$669 2 Income net of tax,",
+            "position": 214353
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) $73,119 $12,190 49 Management’s Discussion and Analysis of Financial Condition and Results of OperationsFinancial Table of ContentsAt December 31,20242023 (Millions of dollars) (unau",
+            "position": 270743
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to noncontrolling interests,",
+            "position": 277672
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to noncontrolling interests88 42 143 Subtotal for calculation28,226 30,234 50,246 Total financing interest and debt costs$773 $617 $630 Interest Coverage Ratio36.5",
+            "position": 278075
+          },
+          {
+            "metric": "assets",
+            "context": "assets, and strategy that are based on management’s current expectations, estimates and projections about the petroleum,",
+            "position": 79739
+          },
+          {
+            "metric": "assets",
+            "context": "assets and customer relationships as we aim to lead in lower carbon intensity oil, products and natural gas,",
+            "position": 85234
+          },
+          {
+            "metric": "assets",
+            "context": "assets as of the end of 2024 and 2023 — for the United States and the company’s international geographic areas — are in Note 14",
+            "position": 93361
+          },
+          {
+            "metric": "assets",
+            "context": "assets in Canada,",
+            "position": 94966
+          },
+          {
+            "metric": "assets",
+            "context": "assets, new investments in downstream and chemicals capacity, investments in emerging and lower carbon activities,",
+            "position": 96361
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including for decommissioning of previously divested assets,",
+            "position": 158345
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, see Note 17 Taxes and Note 24",
+            "position": 175933
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including litigation reserves; estimates for decommissioning obligations,",
+            "position": 192669
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of Section 18 of the Exchange Act, nor shall it be deemed incorporated by reference into any filing under the Securities Act of 1933",
+            "position": 210729
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 231914
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates computed by reference to the price at which the common equity was last sold, or the average bid and asked price of such common equity, as of the last business day of 1 bi",
+            "position": 77839
+          },
+          {
+            "metric": "equity",
+            "context": "equity method (generally owned 50",
+            "position": 86606
+          },
+          {
+            "metric": "equity",
+            "context": "equity affiliates are widely dispersed geographically, with operations and projects2 in North America, South America, Europe, Africa,",
+            "position": 93045
+          },
+          {
+            "metric": "equity",
+            "context": "equity affiliates and property, plant and equipment are in Note 15 Investments and Advances and Note 18 Property,",
+            "position": 93644
+          },
+          {
+            "metric": "equity",
+            "context": "equity crude from the Permian Basin,",
+            "position": 140116
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$70 ",
+            "position": 98060
+          },
+          {
+            "text": "$1.0 million",
+            "position": 201548
+          },
+          {
+            "text": "$1.5 million",
+            "position": 202868
+          },
+          {
+            "text": "$150.02 ",
+            "position": 203885
+          },
+          {
+            "text": "$51.7",
+            "position": 203903
+          },
+          {
+            "text": "$158.89 ",
+            "position": 203948
+          },
+          {
+            "text": "$50.5",
+            "position": 203966
+          },
+          {
+            "text": "$151.37 ",
+            "position": 204012
+          },
+          {
+            "text": "$48.6",
+            "position": 204031
+          },
+          {
+            "text": "$152.74 ",
+            "position": 204082
+          },
+          {
+            "text": "$17,661",
+            "position": 213755
+          },
+          {
+            "text": "$21,369",
+            "position": 213762
+          },
+          {
+            "text": "$35,465",
+            "position": 213769
+          },
+          {
+            "text": "$9.76",
+            "position": 213854
+          },
+          {
+            "text": "$11.41",
+            "position": 213859
+          },
+          {
+            "text": "$18.36",
+            "position": 213865
+          },
+          {
+            "text": "$9.72",
+            "position": 213880
+          },
+          {
+            "text": "$11.36",
+            "position": 213885
+          },
+          {
+            "text": "$18.28",
+            "position": 213891
+          },
+          {
+            "text": "$6.52",
+            "position": 213906
+          },
+          {
+            "text": "$6.04",
+            "position": 213911
+          },
+          {
+            "text": "$5.68",
+            "position": 213916
+          },
+          {
+            "text": "$193,414",
+            "position": 213955
+          },
+          {
+            "text": "$196,913",
+            "position": 213963
+          },
+          {
+            "text": "$235,717",
+            "position": 213971
+          },
+          {
+            "text": "$7,602",
+            "position": 214146
+          },
+          {
+            "text": "$4,148",
+            "position": 214152
+          },
+          {
+            "text": "$12,621",
+            "position": 214158
+          },
+          {
+            "text": "$35,4651 ",
+            "position": 214423
+          },
+          {
+            "text": "$520 ",
+            "position": 214466
+          },
+          {
+            "text": "$669 ",
+            "position": 214477
+          },
+          {
+            "text": "$10 billion",
+            "position": 220057
+          },
+          {
+            "text": "$2 billion",
+            "position": 226874
+          },
+          {
+            "text": "$8 billion",
+            "position": 226964
+          },
+          {
+            "text": "$7.7 billion",
+            "position": 227315
+          },
+          {
+            "text": "$2.9 billion",
+            "position": 227367
+          },
+          {
+            "text": "$10",
+            "position": 231572
+          },
+          {
+            "text": "$235 million",
+            "position": 232310
+          },
+          {
+            "text": "$200",
+            "position": 232391
+          },
+          {
+            "text": "$6.5 billion",
+            "position": 233104
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 233173
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 233305
+          },
+          {
+            "text": "$590 million",
+            "position": 233345
+          },
+          {
+            "text": "$2",
+            "position": 234203
+          },
+          {
+            "text": "$715 million",
+            "position": 234559
+          },
+          {
+            "text": "$81 ",
+            "position": 239660
+          },
+          {
+            "text": "$83 ",
+            "position": 239711
+          },
+          {
+            "text": "$75 ",
+            "position": 239769
+          },
+          {
+            "text": "$76 ",
+            "position": 239808
+          },
+          {
+            "text": "$78 ",
+            "position": 239859
+          }
+        ],
+        "percentages": [
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 87964
+          },
+          {
+            "text": "74 %",
+            "value": 74.0,
+            "position": 87975
+          },
+          {
+            "text": "47 %",
+            "value": 47.0,
+            "position": 87992
+          },
+          {
+            "text": "30 %",
+            "value": 30.0,
+            "position": 88016
+          },
+          {
+            "text": "69 %",
+            "value": 69.0,
+            "position": 88026
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 88042
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 88055
+          },
+          {
+            "text": "84 %",
+            "value": 84.0,
+            "position": 88065
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 88080
+          },
+          {
+            "text": "36 %",
+            "value": 36.0,
+            "position": 88093
+          },
+          {
+            "text": "63 %",
+            "value": 63.0,
+            "position": 88103
+          },
+          {
+            "text": "5 %",
+            "value": 5.0,
+            "position": 88161
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 88174
+          },
+          {
+            "text": "71 %",
+            "value": 71.0,
+            "position": 88184
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 88191
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 88200
+          },
+          {
+            "text": "27 %",
+            "value": 27.0,
+            "position": 88245
+          },
+          {
+            "text": "72 %",
+            "value": 72.0,
+            "position": 88256
+          },
+          {
+            "text": "88 %",
+            "value": 88.0,
+            "position": 88273
+          },
+          {
+            "text": "46 %",
+            "value": 46.0,
+            "position": 88308
+          },
+          {
+            "text": "43 %",
+            "value": 43.0,
+            "position": 88318
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 88326
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 88391
+          },
+          {
+            "text": "10.1 %",
+            "value": 10.1,
+            "position": 214005
+          },
+          {
+            "text": "11.9 %",
+            "value": 11.9,
+            "position": 214011
+          },
+          {
+            "text": "20.3 %",
+            "value": 20.3,
+            "position": 214017
+          },
+          {
+            "text": "11.3 %",
+            "value": 11.3,
+            "position": 214043
+          },
+          {
+            "text": "13.3 %",
+            "value": 13.3,
+            "position": 214049
+          },
+          {
+            "text": "23.8 %",
+            "value": 23.8,
+            "position": 214055
+          },
+          {
+            "text": "13.9 %",
+            "value": 13.9,
+            "position": 279110
+          },
+          {
+            "text": "11.5 %",
+            "value": 11.5,
+            "position": 279116
+          },
+          {
+            "text": "12.8 %",
+            "value": 12.8,
+            "position": 279122
+          },
+          {
+            "text": "10.4 %",
+            "value": 10.4,
+            "position": 280034
+          },
+          {
+            "text": "7.3 %",
+            "value": 7.3,
+            "position": 280040
+          },
+          {
+            "text": "3.3 %",
+            "value": 3.3,
+            "position": 280045
+          },
+          {
+            "text": "3.7 %",
+            "value": 3.7,
+            "position": 361680
+          },
+          {
+            "text": "4.6 %",
+            "value": 4.6,
+            "position": 361685
+          },
+          {
+            "text": "4.5 %",
+            "value": 4.5,
+            "position": 361695
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 403269
+          },
+          {
+            "text": "335.5 %",
+            "value": 335.5,
+            "position": 403695
+          },
+          {
+            "text": "27.6 %",
+            "value": 27.6,
+            "position": 403702
+          },
+          {
+            "text": "28.3 %",
+            "value": 28.3,
+            "position": 403708
+          },
+          {
+            "text": "233.0 %",
+            "value": 233.0,
+            "position": 424865
+          },
+          {
+            "text": "32.5 %",
+            "value": 32.5,
+            "position": 424872
+          },
+          {
+            "text": "31.3 %",
+            "value": 31.3,
+            "position": 424878
+          },
+          {
+            "text": "3.98 %",
+            "value": 3.98,
+            "position": 424947
+          },
+          {
+            "text": "3.43 %",
+            "value": 3.43,
+            "position": 424953
+          },
+          {
+            "text": "1.79 %",
+            "value": 1.79,
+            "position": 424959
+          },
+          {
+            "text": "4.1 %",
+            "value": 4.1,
+            "position": 424979
+          },
+          {
+            "text": "3.5 %",
+            "value": 3.5,
+            "position": 424984
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 116
+          },
+          {
+            "category": "operational_risk",
+            "count": 265
+          },
+          {
+            "category": "financial_risk",
+            "count": 404
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 76
+          },
+          {
+            "category": "technology_risk",
+            "count": 169
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 9.615384615384617
+        }
+      ],
+      "deduplication": {
+        "original_length": 544410,
+        "filtered_length": 526692,
+        "removed_ratio": 3.25,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.71097628240486,
+      "confidence": 1.334336804864033,
+      "overall_score": 52.28902371759514,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 48.97959183673469,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.04578047435190291,
+        "risk_adjusted_signal": 0.3079141244992148,
+        "expected_return_annualized": 0.08704476677449646,
+        "signal_sharpe_ratio": 0.005802984451633098,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.3079141244992148,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.3079141244992148,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.02040816326530612,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.3079141244992148,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.04578047435190291
+      },
+      "risk_adjusted_signal": 0.3079141244992148,
+      "expected_return": 0.0008704476677449647,
+      "signal_sharpe": 0.005802984451633098,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 52.28902371759514,
+    "confidence": 1.334336804864033,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:22:10.042417",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-CVX.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

@@ -1,0 +1,864 @@
+{
+  "ticker": "L",
+  "analysis": {
+    "ticker": "L",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 56.40738668158926,
+        "financial_sentiment": -0.15841584158415842,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Comments431CCybersecurity432Properties443Legal Proceedings444Mine Safety Disclosures44 5Market for Forward-looking statements include any statement that does not directly relate to any historical or current fact.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 116363
+        },
+        {
+          "statement": "ing business strategies or prospects, and possible actions taken by us or our subsidiaries are also forward-looking statements as defined by the Act.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 116996
+        },
+        {
+          "statement": "Given these risks and uncertainties, investors should not place undue reliance on forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117711
+        },
+        {
+          "statement": "change in expectations or beliefs or any change in events, conditions or circumstances on which any forward-looking statement is based.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 118025
+        },
+        {
+          "statement": "In addition, in January 2023, the White House’s Council on Environmental Quality (“CEQ”) released guidance to assist federal agencies in assessing the GHG emissions and climate change effects of their proposed actions under the National Environmental Policy Act (“NEPA”).",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 163635
+        },
+        {
+          "statement": "We believe that by employing individuals with different backgrounds and experiences, we can better meet the diverse needs of our stakeholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 176382
+        },
+        {
+          "statement": "We and our subsidiaries offer compensation and benefits packages that we believe are appropriate to each of our businesses.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 176594
+        },
+        {
+          "statement": "e in the future, which would adversely affect, perhaps substantially, the revenues on that pipeline going forward.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 230233
+        },
+        {
+          "statement": "Boardwalk Pipelines’ credit exposure also includes receivables for services provided, future performance under firm agreements and volumes of gas owed by customers for imbalances or gas loaned by Boardwalk Pipelines to them under certain NNS and parking and lending (“PAL”) services.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 255818
+        },
+        {
+          "statement": "specialized industry and technical experience is important to our and our subsidiaries’ success and future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 314825
+        },
+        {
+          "statement": "We believe the presentation of CNA as one reportable segment is appropriate in accordance with applicable accounting standards on segment reporting.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 333166
+        },
+        {
+          "statement": "In the first quarter of 2025, we expect to receive cash dividends of $611 million from CNA and $75 million from Boardwalk Pipelines.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 369560
+        },
+        {
+          "statement": "on of current trends, information from third party professionals and various other assumptions that we believe are reasonable under the known facts and circumstances.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 425837
+        },
+        {
+          "statement": "These unobservable inputs are based on assumptions consistent with what we believe other market participants would use to price such securities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 430305
+        },
+        {
+          "statement": "We believe that the various rates of adverse market movements represent a measure of exposure to loss under hypothetically assumed adverse conditions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 432945
+        },
+        {
+          "statement": "the market value of our financial instruments to selected changes in market rates and prices which we believe are reasonably possible over a one year period.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 435561
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 447686
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 448372
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 455651
+        },
+        {
+          "statement": "We believe that our audit provides a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 456159
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue for the years ended December 31, 2024, 2023 and 2022",
+            "position": 128501
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from guests that typically stay at the hotel for only a few nights, which causes the room rate and occupancy levels at each hotel to change nearly every day,",
+            "position": 268671
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue increases and that, in the event of an economic slowdown or other circumstances negatively affecting revenues, a high proportion of fixed costs will make it difficult to reduce costs to the ex",
+            "position": 275650
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or growth rates), ongoing business strategies or prospects,",
+            "position": 116865
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings are derived from the operation of its owned hotels,",
+            "position": 171358
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in connection with a change in estimated insurance reserves, or the occurrence of a catastrophic event or otherwise, or if it incurs significant losses related to its investment portfolio, wh",
+            "position": 220471
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, income taxes,",
+            "position": 257086
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and funds in such subsidiaries, applicable state laws, including in the case of the insurance subsidiaries of CNA, laws and rules governing the payment of dividends by regulated insurance com",
+            "position": 313789
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations;•insurance products to serve the health care industry,",
+            "position": 130285
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (as defined in the credit agreement) of not more than 5.0",
+            "position": 256675
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA$1,086 $929 2024 Compared with 2023Net income attributable to Loews Corporation and EBITDA increased $130 million and $157 million in 2024 as compared with 2023,",
+            "position": 362136
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA The following table reconciles net income attributable to Loews Corporation to EBITDA for the years ended December 31, 2024 and 2023:Year Ended December 3120242023(In millions)Net income attrib",
+            "position": 364070
+          },
+          {
+            "metric": "margin",
+            "context": "margin increased to $1.4",
+            "position": 419381
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income to its debt service payments,",
+            "position": 470980
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss) attributable to Loews Corporation by segment and the basic and diluted net income per share attributable to Loews Corporation for the years ended December 31, 2024 and 2023:Year Ende",
+            "position": 328126
+          },
+          {
+            "metric": "net income",
+            "context": "net income per share$6.41",
+            "position": 328580
+          },
+          {
+            "metric": "net income",
+            "context": "net income per share, compared to net income attributable to Loews Corporation of $1.4",
+            "position": 328724
+          },
+          {
+            "metric": "net income",
+            "context": "net income per share, in 2023",
+            "position": 328837
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to Loews Corporation increased by 17% in 2024 compared to 2023 due to increases in net income at CNA and Boardwalk Pipelines and increased net investment income at the parent c",
+            "position": 329071
+          },
+          {
+            "metric": "assets",
+            "context": "assets and goodwill of our subsidiaries;•Pandemics or other outbreaks of contagious diseases and efforts to mitigate their spread have had, and could in the future have, widespread impacts on the way ",
+            "position": 126099
+          },
+          {
+            "metric": "assets",
+            "context": "assets or payments may be subject to prior notice or approval by insurance regulators,",
+            "position": 134795
+          },
+          {
+            "metric": "assets",
+            "context": "assets in South Texas and Louisiana serving end-use,",
+            "position": 143933
+          },
+          {
+            "metric": "assets",
+            "context": "assets owned and operated as of December 31, 2024:AssetsMiles ofPipelineAverageDailyThroughput(Bcf/d) (a)Peak-dayDeliveryCapacity(Bcf/d)WorkingGas StorageCapacity(Bcf)Gulf South7,1806.810",
+            "position": 144115
+          },
+          {
+            "metric": "assets",
+            "context": "assets have approximately 47.8",
+            "position": 146128
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and obligations in connection with the generation, handling, use, storage, transportation, treatment and disposal of various substances including hazardous substances and waste and in conn",
+            "position": 161584
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities were ceded to National Indemnity Company (“NICO”),",
+            "position": 194091
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and obligations in connection with the generation, handling, use, storage, transportation, treatment and disposal of various substances, including hazardous substances and waste and in con",
+            "position": 309535
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and the ability to align the duration of the portfolio to those liabilities and to meet future liquidity needs,",
+            "position": 391052
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities were ceded to NICO effective January 1, 2010",
+            "position": 395561
+          },
+          {
+            "metric": "equity",
+            "context": "equity and/or the business, results of operations, cash flows,",
+            "position": 118603
+          },
+          {
+            "metric": "equity",
+            "context": "equity method of accounting for Altium Packaging LLC,",
+            "position": 127708
+          },
+          {
+            "metric": "equity",
+            "context": "equity interest in the hotel; and•In 2025, Universal Terra Luna Resort, a 750 guestroom hotel, and Universal Helios Grand Hotel, a Loews Hotel, a 500 guestroom hotel,",
+            "position": 173929
+          },
+          {
+            "metric": "equity",
+            "context": "equity and/or the business, results of operations, cash flows, financial condition,",
+            "position": 179972
+          },
+          {
+            "metric": "equity",
+            "context": "equity prices and foreign currency,",
+            "position": 203620
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 115335
+          },
+          {
+            "text": "$245 million",
+            "position": 148973
+          },
+          {
+            "text": "$1.6 billion",
+            "position": 149260
+          },
+          {
+            "text": "$1.6 million",
+            "position": 153557
+          },
+          {
+            "text": "$4.0 billion",
+            "position": 194228
+          },
+          {
+            "text": "$3.7 billion",
+            "position": 194369
+          },
+          {
+            "text": "$900 ",
+            "position": 232118
+          },
+          {
+            "text": "$1,200 ",
+            "position": 232181
+          },
+          {
+            "text": "$1,500 ",
+            "position": 232200
+          },
+          {
+            "text": "$100.0 million",
+            "position": 256885
+          },
+          {
+            "text": "$3.3 billion",
+            "position": 258544
+          },
+          {
+            "text": "$100 ",
+            "position": 322635
+          },
+          {
+            "text": "$38.59 ",
+            "position": 324065
+          },
+          {
+            "text": "$79.39 ",
+            "position": 325443
+          },
+          {
+            "text": "$80.13 ",
+            "position": 325500
+          },
+          {
+            "text": "$84.33 ",
+            "position": 325559
+          },
+          {
+            "text": "$879 ",
+            "position": 328397
+          },
+          {
+            "text": "$1,094 B",
+            "position": 328402
+          },
+          {
+            "text": "$1,414 ",
+            "position": 328520
+          },
+          {
+            "text": "$1,434 B",
+            "position": 328527
+          },
+          {
+            "text": "$6.42 ",
+            "position": 328560
+          },
+          {
+            "text": "$6.30 ",
+            "position": 328566
+          },
+          {
+            "text": "$6.41 ",
+            "position": 328600
+          },
+          {
+            "text": "$6.29 ",
+            "position": 328606
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 328693
+          },
+          {
+            "text": "$265 million",
+            "position": 328952
+          },
+          {
+            "text": "$36 million",
+            "position": 330478
+          },
+          {
+            "text": "$10,211 ",
+            "position": 330918
+          },
+          {
+            "text": "$9,480 ",
+            "position": 330926
+          },
+          {
+            "text": "$1,094 ",
+            "position": 331495
+          },
+          {
+            "text": "$215 million",
+            "position": 331580
+          },
+          {
+            "text": "$608 ",
+            "position": 339496
+          },
+          {
+            "text": "$603 ",
+            "position": 339501
+          },
+          {
+            "text": "$140 ",
+            "position": 339506
+          },
+          {
+            "text": "$1,351 ",
+            "position": 339511
+          },
+          {
+            "text": "$694 ",
+            "position": 339666
+          },
+          {
+            "text": "$702 ",
+            "position": 339671
+          },
+          {
+            "text": "$153 ",
+            "position": 339676
+          },
+          {
+            "text": "$1,549 ",
+            "position": 339681
+          },
+          {
+            "text": "$1,316 ",
+            "position": 339694
+          },
+          {
+            "text": "$241 ",
+            "position": 340046
+          },
+          {
+            "text": "$489 ",
+            "position": 340051
+          },
+          {
+            "text": "$110 ",
+            "position": 340056
+          },
+          {
+            "text": "$840 ",
+            "position": 340061
+          },
+          {
+            "text": "$605 ",
+            "position": 340145
+          },
+          {
+            "text": "$539 ",
+            "position": 340150
+          },
+          {
+            "text": "$133 ",
+            "position": 340155
+          },
+          {
+            "text": "$1,277 ",
+            "position": 340160
+          },
+          {
+            "text": "$708 ",
+            "position": 340287
+          },
+          {
+            "text": "$652 ",
+            "position": 340292
+          }
+        ],
+        "percentages": [
+          {
+            "text": "92%",
+            "value": 92.0,
+            "position": 126983
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 127257
+          },
+          {
+            "text": "81.5%",
+            "value": 81.5,
+            "position": 128452
+          },
+          {
+            "text": "83.6%",
+            "value": 83.6,
+            "position": 128459
+          },
+          {
+            "text": "84.6%",
+            "value": 84.6,
+            "position": 128469
+          },
+          {
+            "text": "11.8%",
+            "value": 11.8,
+            "position": 140501
+          },
+          {
+            "text": "10.3%",
+            "value": 10.3,
+            "position": 140508
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 140720
+          },
+          {
+            "text": "5.3%",
+            "value": 5.3,
+            "position": 171574
+          },
+          {
+            "text": "5.4%",
+            "value": 5.4,
+            "position": 171580
+          },
+          {
+            "text": "5.1%",
+            "value": 5.1,
+            "position": 171589
+          },
+          {
+            "text": "95%",
+            "value": 95.0,
+            "position": 233234
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 234583
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 234587
+          },
+          {
+            "text": "54%",
+            "value": 54.0,
+            "position": 286973
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 287098
+          },
+          {
+            "text": "59%",
+            "value": 59.0,
+            "position": 287321
+          },
+          {
+            "text": "64%",
+            "value": 64.0,
+            "position": 287402
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 329129
+          },
+          {
+            "text": "59.5 %",
+            "value": 59.5,
+            "position": 341469
+          },
+          {
+            "text": "68.3 %",
+            "value": 68.3,
+            "position": 341475
+          },
+          {
+            "text": "60.9 %",
+            "value": 60.9,
+            "position": 341481
+          },
+          {
+            "text": "64.3 %",
+            "value": 64.3,
+            "position": 341487
+          },
+          {
+            "text": "92.6 %",
+            "value": 92.6,
+            "position": 341566
+          },
+          {
+            "text": "96.7 %",
+            "value": 96.7,
+            "position": 341572
+          },
+          {
+            "text": "94.0 %",
+            "value": 94.0,
+            "position": 341578
+          },
+          {
+            "text": "94.9 %",
+            "value": 94.9,
+            "position": 341584
+          },
+          {
+            "text": "92.9 %",
+            "value": 92.9,
+            "position": 341733
+          },
+          {
+            "text": "90.6 %",
+            "value": 90.6,
+            "position": 341739
+          },
+          {
+            "text": "91.2 %",
+            "value": 91.2,
+            "position": 341745
+          },
+          {
+            "text": "91.5 %",
+            "value": 91.5,
+            "position": 341751
+          },
+          {
+            "text": "59.8 %",
+            "value": 59.8,
+            "position": 341778
+          },
+          {
+            "text": "62.2 %",
+            "value": 62.2,
+            "position": 341784
+          },
+          {
+            "text": "58.1 %",
+            "value": 58.1,
+            "position": 341790
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 341807
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 341810
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 341817
+          },
+          {
+            "text": "58.2 %",
+            "value": 58.2,
+            "position": 342286
+          },
+          {
+            "text": "65.9 %",
+            "value": 65.9,
+            "position": 342292
+          },
+          {
+            "text": "61.4 %",
+            "value": 61.4,
+            "position": 342298
+          },
+          {
+            "text": "62.5 %",
+            "value": 62.5,
+            "position": 342304
+          },
+          {
+            "text": "90.4 %",
+            "value": 90.4,
+            "position": 342383
+          },
+          {
+            "text": "96.0 %",
+            "value": 96.0,
+            "position": 342389
+          },
+          {
+            "text": "93.5 %",
+            "value": 93.5,
+            "position": 342401
+          },
+          {
+            "text": "90.7 %",
+            "value": 90.7,
+            "position": 342559
+          },
+          {
+            "text": "91.6 %",
+            "value": 91.6,
+            "position": 342565
+          },
+          {
+            "text": "89.0 %",
+            "value": 89.0,
+            "position": 342571
+          },
+          {
+            "text": "90.9 %",
+            "value": 90.9,
+            "position": 342577
+          },
+          {
+            "text": "58.5 %",
+            "value": 58.5,
+            "position": 342604
+          },
+          {
+            "text": "61.5 %",
+            "value": 61.5,
+            "position": 342610
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 198
+          },
+          {
+            "category": "operational_risk",
+            "count": 71
+          },
+          {
+            "category": "financial_risk",
+            "count": 551
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 141
+          },
+          {
+            "category": "technology_risk",
+            "count": 299
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 683987,
+        "filtered_length": 673008,
+        "removed_ratio": 1.61,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.49157077869949,
+      "confidence": 0.2957029556673731,
+      "overall_score": 49.49157077869949,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 42.07920792079208,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": -0.010168584426010152,
+        "risk_adjusted_signal": -0.06839271141805287,
+        "expected_return_annualized": -0.019334051739724707,
+        "signal_sharpe_ratio": -0.0012889367826483136,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": -0.06839271141805287,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": -0.06839271141805287,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.15841584158415842,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": -0.06839271141805287,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": -0.010168584426010152
+      },
+      "risk_adjusted_signal": -0.06839271141805287,
+      "expected_return": -0.00019334051739724705,
+      "signal_sharpe": -0.0012889367826483136,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 49.49157077869949,
+    "confidence": 0.2957029556673731,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:27:24.782010",
+  "filing_date": "2025-02-11",
+  "filing_filename": "2025-02-11-10k-L.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

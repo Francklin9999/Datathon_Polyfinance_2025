@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,6 +28,7 @@ export default function TenKIntelligence() {
   const [isLoadingStocks, setIsLoadingStocks] = useState(true);
   const [selectedStock, setSelectedStock] = useState('');
   const [error, setError] = useState(null);
+  const [searchProgress, setSearchProgress] = useState({ current: 0, total: 0 });
 
   // Fetch available stocks on mount
   useEffect(() => {
@@ -46,120 +47,96 @@ export default function TenKIntelligence() {
   }, []);
 
   const handleAnalyze = async (ticker) => {
-    if (!ticker) return;
+    if (!ticker || !ticker.trim()) {
+      setError('Please provide a ticker symbol. A ticker is required to analyze the 10-K filing.');
+      setIsAnalyzing(false);
+      return;
+    }
     setIsAnalyzing(true);
     setError(null);
     setTenKAnalysis(null);
 
     try {
       const tickerUpper = ticker.toUpperCase();
-      // Fetch stock data from jeu_de_donnees if available
-      const stockData = await getStockDataForPrompt(tickerUpper);
       
-      const analysisPrompt = `You are analyzing the 10-K filing for ${ticker.toUpperCase()}.
-
-${stockData ? `${stockData}\n\nUse the above stock data from our dataset as reference for financial metrics when analyzing the 10-K filing.\n\n` : ''}Extract and return this JSON structure:
-
-{
-  "ticker": "${ticker.toUpperCase()}",
-  "company_name": "Full company name",
-  "fiscal_year": "2024",
-  "business_model": "2-3 sentence description",
-  "key_suppliers": [
-    {
-      "name": "Supplier name",
-      "country": "Country",
-      "products": "What they supply",
-      "dependency": "High/Medium/Low"
-    }
-  ],
-  "geographic_revenue": [
-    {
-      "region": "Region name",
-      "revenue_percent": percentage as number,
-      "revenue_amount": "dollar amount as string"
-    }
-  ],
-  "product_lines": [
-    {
-      "name": "Product/service name",
-      "revenue_percent": percentage as number,
-      "description": "Brief description"
-    }
-  ],
-  "risk_factors": ["List 5 key risk factors"],
-  "regulatory_mentions": ["List regulatory concerns mentioned"],
-  "trade_dependencies": "Description of trade dependencies"
-}`;
-
-      const result = await base44.integrations.Core.InvokeLLM({
-        prompt: analysisPrompt,
-        add_context_from_internet: true,
-        response_json_schema: {
-          type: "object",
-          properties: {
-            ticker: { type: "string" },
-            company_name: { type: "string" },
-            fiscal_year: { type: "string" },
-            business_model: { type: "string" },
-            key_suppliers: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  name: { type: "string" },
-                  country: { type: "string" },
-                  products: { type: "string" },
-                  dependency: { type: "string" }
-                }
-              }
-            },
-            geographic_revenue: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  region: { type: "string" },
-                  revenue_percent: { type: "number" },
-                  revenue_amount: { type: "string" }
-                }
-              }
-            },
-            product_lines: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  name: { type: "string" },
-                  revenue_percent: { type: "number" },
-                  description: { type: "string" }
-                }
-              }
-            },
-            risk_factors: { type: "array", items: { type: "string" } },
-            regulatory_mentions: { type: "array", items: { type: "string" } },
-            trade_dependencies: { type: "string" }
-          }
-        }
-      });
+      // Use the new RAG analysis endpoint which:
+      // 1. LLM generates search queries
+      // 2. SearXNG searches with those queries
+      // 3. Web scraper extracts content from URLs  
+      // 4. LLM analyzes with scraped content as RAG context
+      setSearchProgress({ current: 1, total: 4 });
+      
+      console.log(`Starting RAG analysis for ${tickerUpper}...`);
+      console.log('The backend will:');
+      console.log('1. LLM generates search queries');
+      console.log('2. SearXNG searches with those queries');
+      console.log('3. Web scraper extracts content from URLs');
+      console.log('4. LLM analyzes with scraped content as RAG context');
+      
+      const ragResult = await api.analytics.analyzeTenKRAG(tickerUpper);
+      
+      setSearchProgress({ current: 4, total: 4 });
+      console.log(`RAG analysis completed. URLs searched: ${ragResult.urls_searched || 0}, Search queries: ${ragResult.search_queries?.length || 0}`);
+      
+      // Extract analysis result
+      const result = ragResult.analysis;
 
       // Check if result has error fields
       if (result && (result.error || result.parse_error)) {
         console.error('Analysis error:', result);
+        
+        // Check for insufficient RAG context
+        if (result.error === 'Insufficient RAG context' || result.suggestion) {
+          setError(result.suggestion || `Insufficient information found about ${ticker.toUpperCase()}. The company data may not be publicly available or the search did not return enough information. Please try a different ticker.`);
+          setIsAnalyzing(false);
+          return;
+        }
+        
         // Try to extract JSON from raw_response if available
         if (result.raw_response) {
           try {
-            const jsonMatch = result.raw_response.match(/\{[\s\S]*\}/);
+            // Try multiple JSON extraction methods
+            let jsonMatch = result.raw_response.match(/\{[\s\S]*\}/);
             if (jsonMatch) {
-              const parsed = JSON.parse(jsonMatch[0]);
-              setTenKAnalysis(parsed);
-              setIsAnalyzing(false);
-              return;
+              try {
+                const parsed = JSON.parse(jsonMatch[0]);
+                // Validate it has expected structure
+                if (parsed.ticker || parsed.company_name || parsed.business_model) {
+                  setTenKAnalysis(parsed);
+                  setIsAnalyzing(false);
+                  return;
+                }
+              } catch (e) {
+                // Try finding nested JSON
+                const firstBrace = result.raw_response.indexOf('{');
+                const lastBrace = result.raw_response.lastIndexOf('}');
+                if (firstBrace !== -1 && lastBrace > firstBrace) {
+                  const jsonStr = result.raw_response.substring(firstBrace, lastBrace + 1);
+                  try {
+                    const parsed = JSON.parse(jsonStr);
+                    if (parsed.ticker || parsed.company_name || parsed.business_model) {
+                      setTenKAnalysis(parsed);
+                      setIsAnalyzing(false);
+                      return;
+                    }
+                  } catch (e2) {
+                    // Failed to parse
+                  }
+                }
+              }
             }
           } catch (e) {
             console.error('Failed to parse JSON from raw response:', e);
           }
         }
+        
+        // If we couldn't extract JSON, show user-friendly error
+        const errorMessage = result.suggestion || 
+          result.parse_error || 
+          `Failed to analyze 10-K filing: ${result.error || 'Unknown error'}. ${ragResult.rag_context_available ? 'RAG context was available but LLM response was invalid.' : 'Insufficient information found from internet search.'}`;
+        setError(errorMessage);
+        setIsAnalyzing(false);
+        return;
       }
       
       // Check if result has expected structure
@@ -167,14 +144,19 @@ ${stockData ? `${stockData}\n\nUse the above stock data from our dataset as refe
         setTenKAnalysis(result);
       } else {
         console.error('Unexpected result format:', result);
-        setError(`Failed to analyze 10-K filing for ${ticker.toUpperCase()}. The API returned an unexpected response format. Please try again.`);
+        const errorMsg = ragResult.rag_context_available 
+          ? `Failed to analyze 10-K filing for ${ticker.toUpperCase()}. The API returned an unexpected response format. URLs searched: ${ragResult.urls_searched || 0}. Please try again.`
+          : `Failed to analyze 10-K filing for ${ticker.toUpperCase()}. No information found from internet search (${ragResult.urls_searched || 0} URLs searched). Please try a different ticker.`;
+        setError(errorMsg);
       }
     } catch (error) {
       console.error('Analysis error:', error);
       setError(`Error analyzing 10-K filing for ${ticker.toUpperCase()}: ${error.message || 'Unknown error occurred'}. Please try again.`);
+      setSearchProgress({ current: 0, total: 0 });
     }
 
     setIsAnalyzing(false);
+    setSearchProgress({ current: 0, total: 0 });
   };
 
   const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
@@ -253,7 +235,13 @@ ${stockData ? `${stockData}\n\nUse the above stock data from our dataset as refe
                 {isAnalyzing ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Analyzing 10-K...
+                    {searchProgress.total > 0 
+                      ? (searchProgress.current === 1 ? 'Generating search queries...' :
+                         searchProgress.current === 2 ? 'Searching internet...' :
+                         searchProgress.current === 3 ? 'Scraping URLs...' :
+                         searchProgress.current === 4 ? 'Analyzing with RAG...' :
+                         `Processing... (${searchProgress.current}/${searchProgress.total})`)
+                      : 'Analyzing 10-K...'}
                   </>
                 ) : (
                   <>
@@ -265,6 +253,11 @@ ${stockData ? `${stockData}\n\nUse the above stock data from our dataset as refe
             </div>
             <p className="text-xs text-gray-500 mt-2">
               Select from {availableStocks.length} available stocks in jeu_de_donnees or type a ticker manually
+              {searchProgress.total > 0 && (
+                <span className="ml-2 text-indigo-400">
+                  • Performing comprehensive internet searches about the company...
+                </span>
+              )}
             </p>
           </CardContent>
         </Card>

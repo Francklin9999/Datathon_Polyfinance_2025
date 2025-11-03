@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,7 +11,7 @@ export default function FX() {
 
   const { data: snapshots = [] } = useQuery({
     queryKey: ['snapshots'],
-    queryFn: () => base44.entities.MarketSnapshot.list(),
+    queryFn: () => api.entities.MarketSnapshot.list(),
     initialData: [],
   });
 
@@ -19,7 +19,7 @@ export default function FX() {
     setIsGenerating(true);
     try {
       const allFx = snapshots.flatMap(s => s.fx || []);
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are an FX desk analyst. Provide a brief (3-5 sentences) summary of global FX market conditions: ${JSON.stringify(allFx)}. Focus on: major pair moves, USD strength/weakness, cross-currency dynamics, carry trade conditions. Institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

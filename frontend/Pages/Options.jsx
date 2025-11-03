@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
@@ -27,7 +27,7 @@ export default function Options() {
 
   const { data: riskMetrics = [], error: riskError, isLoading: isLoadingRisk, refetch: refetchRisk } = useQuery({
     queryKey: ['risk', region],
-    queryFn: () => base44.entities.RiskMetrics.filter({ region }),
+    queryFn: () => api.entities.RiskMetrics.filter({ region }),
     initialData: [],
   });
 

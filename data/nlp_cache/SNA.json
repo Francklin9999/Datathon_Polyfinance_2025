@@ -1,0 +1,866 @@
+{
+  "ticker": "SNA",
+  "analysis": {
+    "ticker": "SNA",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 36.016597510373444,
+        "financial_sentiment": -0.12371134020618557,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "t, (iii) are specifically identified as forward-looking, or (iv) describe Snap‑on’s or management’s future outlook, plans, estimates, objectives or goals, are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 80032
+        },
+        {
+          "statement": "(iv) describe Snap‑on’s or management’s future outlook, plans, estimates, objectives or goals, are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80091
+        },
+        {
+          "statement": "risks, uncertainties or other factors that could cause (and in some cases have caused) Accordingly, forward-looking statements should not be relied upon as a prediction of actual results or regarded as a representation by the company or its management that the projected results will be achieved.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 80492
+        },
+        {
+          "statement": "Snap-on disclaims any responsibility to update any forward-looking statement provided in this document, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 84506
+        },
+        {
+          "statement": "vehicle autonomy, may alter the nature of certain service and repair for particular vehicle types, we believe many of these new technologies provide opportunities to fulfill requirements for enhanced solutions or greater precision.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 103058
+        },
+        {
+          "statement": "We believe sales of many of our products are dependent on the general aging of vehicles, increases in vehicle complexity, changes in vehicle technologies and the number of vehicles on the road.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 127480
+        },
+        {
+          "statement": "We expect that the level of competition will remain high in the future, which, if not effectively matched or exceeded, could limit our ability to maintain or increase market share or profitability.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 133649
+        },
+        {
+          "statement": "Future growth rates and success of our business depends in large part on continued growth in our non-U.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 134110
+        },
+        {
+          "statement": "lternatives or obtain capital resources or other financing to support our receivables on terms that we believe are attractive, whether resulting from the state of the financial markets, our own operating performance, or other factors, would negatively affect our operating results and financial condition.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 147708
+        },
+        {
+          "statement": "focus on environmental and sustainability issues, including matters related to climate change, and we expect these trends to continue.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 160695
+        },
+        {
+          "statement": "22SNAP-ON INCORPORATEDThe Incident Response Team leads the materiality assessment with input and guidance from senior management, including the Chief Executive Officer, Chief Financial Officer, and Chief Accounting Officer.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 175745
+        },
+        {
+          "statement": "We expect to continue to deploy these processes in our existing operations as well as into our recently acquired businesses.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 187824
+        },
+        {
+          "statement": "tional finance subsidiaries, will continue to be a meaningful contributor to our operating earnings going forward.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 189065
+        },
+        {
+          "statement": "48SNAP-ON INCORPORATEDBased on forward-looking capital market expectations, Snap-on selected an expected return on plan assets assumption for its U.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 260583
+        },
+        {
+          "statement": "gement’s Discussion and Analysis of Financial Condition and Results of Operations (continued)OutlookWe believe that our markets and our operations possess and have demonstrated continuing and considerable resilience against the uncertainties of the current environment.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 265673
+        },
+        {
+          "statement": "In pursuit of these initiatives, we project that capital expenditures in 2025 will approximate $100 million.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 266296
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 280812
+        },
+        {
+          "statement": "We believe that our audit provides a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 281320
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 304180
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 304866
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue from various financing programs that include: (i) installment sales and lease contracts arising from franchisees’ customers and Snap-on customers who require financing for the purchase or leas",
+            "position": 99683
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue is recognized over the life of the underlying contracts,",
+            "position": 100614
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, including nominal, non-refundable initial and ongoing monthly fees (primarily for sales and business training, marketing and product promotion programs, and technology support),",
+            "position": 106150
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue totaled $19.4",
+            "position": 106389
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue) in 2024 were generated by the Snap-on Tools Group,",
+            "position": 129006
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings as a result of a slowdown in customer orders or order cancellations, impact the availability and/or pricing of raw materials and/or the supply chain,",
+            "position": 168273
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before financial services of $1,068.8",
+            "position": 192927
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before financial services were 22.7",
+            "position": 193234
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of $1,345.7",
+            "position": 193318
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings were 26.3",
+            "position": 193536
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $2,377.9",
+            "position": 203015
+          },
+          {
+            "metric": "profit",
+            "context": "profit as a percentage of net sales) improved 80 basis points (100 basis points (“bps”) equals 1.0",
+            "position": 203148
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $596.1",
+            "position": 217468
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Ratio not greater than 3.50",
+            "position": 239483
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Ratio to 4.00",
+            "position": 239773
+          },
+          {
+            "metric": "margin",
+            "context": "margin (gross profit as a percentage of net sales) improved 80 basis points (100 basis points (“bps”) equals 1.0",
+            "position": 203134
+          },
+          {
+            "metric": "margin",
+            "context": "margin businesses,",
+            "position": 203360
+          },
+          {
+            "metric": "margin",
+            "context": "margin in 2024 improved 210 bps from last year, primarily reflecting increased sales volumes in higher-gross-margin critical industry sectors, savings from the segment’s RCI initiatives, lower materia",
+            "position": 208703
+          },
+          {
+            "metric": "margin",
+            "context": "margin (segment operating earnings as a percentage of segment net sales) for the Commercial & Industrial Group of 16.4",
+            "position": 209445
+          },
+          {
+            "metric": "margin",
+            "context": "margin in 2024 improved 20",
+            "position": 210393
+          },
+          {
+            "metric": "assets",
+            "context": "assets consist of cash and cash equivalents (excluding cash held at Financial Services),",
+            "position": 91429
+          },
+          {
+            "metric": "assets",
+            "context": "assets;•Difficulties in implementing and maintaining consistent standards, controls, procedures, policies and information systems;•Failure to realize anticipated synergies, economies of scale or other",
+            "position": 145868
+          },
+          {
+            "metric": "assets",
+            "context": "assets, liabilities,",
+            "position": 150088
+          },
+          {
+            "metric": "assets",
+            "context": "assets, as well as changes in interest rates or plan demographics, could adversely impact our results of operations,",
+            "position": 151388
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are managed through the Snap-on Environmental, Health and Safety Management System (“EH & SMS”),",
+            "position": 117539
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities under anti-bribery and anti-corruption laws in various countries,",
+            "position": 134908
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of the acquired businesses;•Large write-offs or write-downs, or the impairment of goodwill or other intangible assets;•Difficulties in implementing and maintaining consistent standards, co",
+            "position": 145745
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 150096
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates (excludes 1,071,273 shares held by directors and executive officers) computed by reference to the price ($261.39",
+            "position": 77761
+          },
+          {
+            "metric": "equity",
+            "context": "equity was last sold as of the last business day of 5",
+            "position": 77921
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities25Item 6[Reserved]27Item 7Management’s Discussion and Analysis of Financial Condition and Results of Operations28Item 7AQua",
+            "position": 78581
+          },
+          {
+            "metric": "equity",
+            "context": "Equity SecuritiesThe following chart discloses information regarding the shares of Snap-on’s common stock repurchased by the company during the fourth quarter of fiscal 2024,",
+            "position": 181769
+          },
+          {
+            "metric": "equity",
+            "context": "equity plan issuances and for other corporate purposes,",
+            "position": 182141
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$1.00 ",
+            "position": 77260
+          },
+          {
+            "text": "$261.39",
+            "position": 77896
+          },
+          {
+            "text": "$2,546.2 ",
+            "position": 94464
+          },
+          {
+            "text": "$2,528.9 ",
+            "position": 94473
+          },
+          {
+            "text": "$2,399.4 ",
+            "position": 94482
+          },
+          {
+            "text": "$4,707.4 ",
+            "position": 94591
+          },
+          {
+            "text": "$4,730.2 ",
+            "position": 94600
+          },
+          {
+            "text": "$4,492.8 ",
+            "position": 94609
+          },
+          {
+            "text": "$19.4 million",
+            "position": 106405
+          },
+          {
+            "text": "$18.7 million",
+            "position": 106420
+          },
+          {
+            "text": "$18.4 million",
+            "position": 106438
+          },
+          {
+            "text": "$900 million",
+            "position": 157226
+          },
+          {
+            "text": "$450 million",
+            "position": 157414
+          },
+          {
+            "text": "$324.26 ",
+            "position": 182712
+          },
+          {
+            "text": "$493.6 ",
+            "position": 182727
+          },
+          {
+            "text": "$429.4 million",
+            "position": 183125
+          },
+          {
+            "text": "$500 million",
+            "position": 183976
+          },
+          {
+            "text": "$325.27 ",
+            "position": 185124
+          },
+          {
+            "text": "$100 ",
+            "position": 185390
+          },
+          {
+            "text": "$100.00 ",
+            "position": 185707
+          },
+          {
+            "text": "$3.0 million",
+            "position": 189368
+          },
+          {
+            "text": "$39.6 million",
+            "position": 189615
+          },
+          {
+            "text": "$4,707.4 million",
+            "position": 192646
+          },
+          {
+            "text": "$22.8 million",
+            "position": 192697
+          },
+          {
+            "text": "$40.6 million",
+            "position": 192752
+          },
+          {
+            "text": "$5.5 million",
+            "position": 192796
+          },
+          {
+            "text": "$23.3 million",
+            "position": 192874
+          },
+          {
+            "text": "$1,068.8 million",
+            "position": 192965
+          },
+          {
+            "text": "$22.5 million",
+            "position": 193003
+          },
+          {
+            "text": "$1,039.9 million",
+            "position": 193168
+          },
+          {
+            "text": "$1,345.7 million",
+            "position": 193330
+          },
+          {
+            "text": "$1,310.4 million",
+            "position": 193427
+          },
+          {
+            "text": "$1,043.9 million",
+            "position": 193624
+          },
+          {
+            "text": "$19.51 ",
+            "position": 193645
+          },
+          {
+            "text": "$17.5 million",
+            "position": 193692
+          },
+          {
+            "text": "$0.32 ",
+            "position": 193710
+          },
+          {
+            "text": "$1,011.1 million",
+            "position": 193790
+          },
+          {
+            "text": "$18.76 ",
+            "position": 193811
+          },
+          {
+            "text": "$32.8 million",
+            "position": 193861
+          },
+          {
+            "text": "$0.75 ",
+            "position": 193878
+          },
+          {
+            "text": "$1,476.8 million",
+            "position": 194454
+          },
+          {
+            "text": "$18.5 million",
+            "position": 194506
+          },
+          {
+            "text": "$1.5 million",
+            "position": 194561
+          },
+          {
+            "text": "$6.3 million",
+            "position": 194665
+          },
+          {
+            "text": "$242.1 million",
+            "position": 195011
+          },
+          {
+            "text": "$226.1 million",
+            "position": 195046
+          },
+          {
+            "text": "$16.0 million",
+            "position": 195085
+          },
+          {
+            "text": "$1,989.2 million",
+            "position": 196054
+          },
+          {
+            "text": "$99.6 million",
+            "position": 196105
+          },
+          {
+            "text": "$100.9 million",
+            "position": 196160
+          }
+        ],
+        "percentages": [
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 107345
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 128934
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 134037
+          },
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 177907
+          },
+          {
+            "text": "72%",
+            "value": 72.0,
+            "position": 178120
+          },
+          {
+            "text": "0.5%",
+            "value": 0.5,
+            "position": 192715
+          },
+          {
+            "text": "0.9%",
+            "value": 0.9,
+            "position": 192770
+          },
+          {
+            "text": "22.7%",
+            "value": 22.7,
+            "position": 193274
+          },
+          {
+            "text": "22.0%",
+            "value": 22.0,
+            "position": 193292
+          },
+          {
+            "text": "26.3%",
+            "value": 26.3,
+            "position": 193550
+          },
+          {
+            "text": "25.7%",
+            "value": 25.7,
+            "position": 193568
+          },
+          {
+            "text": "1.3%",
+            "value": 1.3,
+            "position": 194524
+          },
+          {
+            "text": "0.1%",
+            "value": 0.1,
+            "position": 194578
+          },
+          {
+            "text": "7.1%",
+            "value": 7.1,
+            "position": 195102
+          },
+          {
+            "text": "4.8%",
+            "value": 4.8,
+            "position": 196123
+          },
+          {
+            "text": "9.4%",
+            "value": 9.4,
+            "position": 196562
+          },
+          {
+            "text": "1.0%",
+            "value": 1.0,
+            "position": 197581
+          },
+          {
+            "text": "5.1%",
+            "value": 5.1,
+            "position": 197990
+          },
+          {
+            "text": "4.3%",
+            "value": 4.3,
+            "position": 198897
+          },
+          {
+            "text": "100.0 %",
+            "value": 100.0,
+            "position": 201528
+          },
+          {
+            "text": "2.2 %",
+            "value": 2.2,
+            "position": 201619
+          },
+          {
+            "text": "50.5 %",
+            "value": 50.5,
+            "position": 201644
+          },
+          {
+            "text": "49.7 %",
+            "value": 49.7,
+            "position": 201658
+          },
+          {
+            "text": "1.2 %",
+            "value": 1.2,
+            "position": 201669
+          },
+          {
+            "text": "22.7 %",
+            "value": 22.7,
+            "position": 201782
+          },
+          {
+            "text": "22.0 %",
+            "value": 22.0,
+            "position": 201796
+          },
+          {
+            "text": "2.8 %",
+            "value": 2.8,
+            "position": 201807
+          },
+          {
+            "text": "6.1 %",
+            "value": 6.1,
+            "position": 201869
+          },
+          {
+            "text": "69.1 %",
+            "value": 69.1,
+            "position": 201990
+          },
+          {
+            "text": "71.5 %",
+            "value": 71.5,
+            "position": 202002
+          },
+          {
+            "text": "2.4 %",
+            "value": 2.4,
+            "position": 202012
+          },
+          {
+            "text": "26.3 %",
+            "value": 26.3,
+            "position": 202043
+          },
+          {
+            "text": "25.7 %",
+            "value": 25.7,
+            "position": 202057
+          },
+          {
+            "text": "2.7 %",
+            "value": 2.7,
+            "position": 202068
+          },
+          {
+            "text": "0.6 %",
+            "value": 0.6,
+            "position": 202117
+          },
+          {
+            "text": "1.5 %",
+            "value": 1.5,
+            "position": 202155
+          },
+          {
+            "text": "1.3 %",
+            "value": 1.3,
+            "position": 202165
+          },
+          {
+            "text": "14.1 %",
+            "value": 14.1,
+            "position": 202174
+          },
+          {
+            "text": "26.9 %",
+            "value": 26.9,
+            "position": 202216
+          },
+          {
+            "text": "26.0 %",
+            "value": 26.0,
+            "position": 202230
+          },
+          {
+            "text": "3.4 %",
+            "value": 3.4,
+            "position": 202241
+          },
+          {
+            "text": "20.9 %",
+            "value": 20.9,
+            "position": 202322
+          },
+          {
+            "text": "20.3 %",
+            "value": 20.3,
+            "position": 202336
+          },
+          {
+            "text": "3.3 %",
+            "value": 3.3,
+            "position": 202347
+          },
+          {
+            "text": "20.4 %",
+            "value": 20.4,
+            "position": 202490
+          },
+          {
+            "text": "19.8 %",
+            "value": 19.8,
+            "position": 202505
+          },
+          {
+            "text": "3.2 %",
+            "value": 3.2,
+            "position": 202517
+          },
+          {
+            "text": "1.2%",
+            "value": 1.2,
+            "position": 203122
+          },
+          {
+            "text": "22.6%",
+            "value": 22.6,
+            "position": 205049
+          },
+          {
+            "text": "22.5%",
+            "value": 22.5,
+            "position": 205067
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 161
+          },
+          {
+            "category": "operational_risk",
+            "count": 93
+          },
+          {
+            "category": "financial_risk",
+            "count": 710
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 60
+          },
+          {
+            "category": "technology_risk",
+            "count": 166
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 6.189821182943604
+        }
+      ],
+      "deduplication": {
+        "original_length": 477295,
+        "filtered_length": 467809,
+        "removed_ratio": 1.99,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.80495959877403,
+      "confidence": 0.1135382524295667,
+      "overall_score": 50.19504040122597,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.81443298969072,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.0039008080245193644,
+        "risk_adjusted_signal": 0.026236379258037682,
+        "expected_return_annualized": 0.007416806608782087,
+        "signal_sharpe_ratio": 0.0004944537739188058,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.026236379258037682,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.026236379258037682,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.12371134020618557,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.026236379258037682,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.0039008080245193644
+      },
+      "risk_adjusted_signal": 0.026236379258037682,
+      "expected_return": 7.416806608782087e-05,
+      "signal_sharpe": 0.0004944537739188058,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.19504040122597,
+    "confidence": 0.1135382524295667,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:32:32.500159",
+  "filing_date": "2025-02-13",
+  "filing_filename": "2025-02-13-10k-SNA.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

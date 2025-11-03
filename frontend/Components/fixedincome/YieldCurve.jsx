@@ -11,10 +11,10 @@ export default function FixedIncomeYieldCurve({ snapshot, risk }) {
 
   const handleGenerateSummary = async () => {
     setIsGenerating(true);
-    const { base44 } = await import('@/api/base44Client');
+    const { api } = await import('@/api/apiClient');
     try {
       // Removed 'region' from the prompt as it's no longer a prop
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a fixed income desk analyst. Provide a brief (3-5 sentences) summary of bond market conditions: ${JSON.stringify({ bonds: snapshot?.bonds, risk })}. Focus on: yield curve shape (2s10s slope), rate moves, curve steepening/flattening, duration risk. Institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

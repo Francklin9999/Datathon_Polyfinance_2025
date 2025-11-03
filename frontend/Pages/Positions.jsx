@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -27,14 +27,14 @@ export default function Positions() {
 
   const { data: positions = [], error: positionsError, refetch: refetchPositions, isLoading: isLoadingPositions } = useQuery({
     queryKey: ['positions'],
-    queryFn: () => base44.entities.Position.list('-updated_date'),
+    queryFn: () => api.entities.Position.list('-updated_date'),
     initialData: [],
     refetchInterval: autoRefresh ? 5000 : false,
   });
 
   const { data: orders = [], error: ordersError, refetch: refetchOrders, isLoading: isLoadingOrders } = useQuery({
     queryKey: ['orders'],
-    queryFn: () => base44.entities.Order.list('-timestamp', 50),
+    queryFn: () => api.entities.Order.list('-timestamp', 50),
     initialData: [],
     refetchInterval: autoRefresh ? 3000 : false,
   });

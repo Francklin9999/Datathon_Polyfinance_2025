@@ -1,0 +1,929 @@
+{
+  "ticker": "FDX",
+  "analysis": {
+    "ticker": "FDX",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 37.52740026304252,
+        "financial_sentiment": -0.020618556701030927,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "As of July 17, 2025, 235,899,098 shares of DOCUMENTS INCORPORATED BY REFERENCE Portions of FORWARD-LOOKING STATEMENTS Certain statements in this Annual Report on (this “Annual Report”), including (but not limited to) those contained in “Risk Factors”; “Item 1C.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 47259
+        },
+        {
+          "statement": "1995 with respect to our financial condition, results of operations, cash flows, plans, objectives, future performance, and business.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 47995
+        },
+        {
+          "statement": "As a result of these and other factors, no assurance can be given as to our future results and achievements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 48372
+        },
+        {
+          "statement": "Accordingly, a forward-looking statement is neither a prediction nor a guarantee of future events or circumstances and those future events or circumstances may not occur.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 48420
+        },
+        {
+          "statement": "You should not place undue reliance on the forward-looking statements, which speak only as of the date of this report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 48619
+        },
+        {
+          "statement": "We are under no obligation, and we expressly disclaim any obligation, to update or alter any forward-looking statements, whether as a result of new information, future events, or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 48788
+        },
+        {
+          "statement": "We expect compliance with CORSIA and the ETS to increase FedEx operating expenses.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 114697
+        },
+        {
+          "statement": "at FedEx and constantly adapt our offerings to meet current company needs and prepare capabilities we anticipate needing in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 133433
+        },
+        {
+          "statement": "We believe the investments we make in our communities today, combined with team member engagement, set the stage for a brighter tomorrow.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 139554
+        },
+        {
+          "statement": "We plan to retire the entire Boeing MD-11 fleet by the end of -19-2032.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 149431
+        },
+        {
+          "statement": "We expect service mix to shift further toward deferred service offerings in 2026.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 157904
+        },
+        {
+          "statement": "0 and Tricolor, in the expected time frame and at the expected cost may adversely affect our future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 165635
+        },
+        {
+          "statement": "0 and Tricolor, in the expected time frame and at the expected cost may adversely affect our future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 191147
+        },
+        {
+          "statement": "See “We believe we compete effectively with these companies — for example, by providing more reliable service at compensatory prices.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 204103
+        },
+        {
+          "statement": "lly, changes to federal or state laws, regulations, rules, judicial or administrative precedent, or guidance governing employee classification could affect the status of service providers as independent employers of their drivers.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 211913
+        },
+        {
+          "statement": "We believe that suitable alternative facilities are available in each locale on satisfactory terms, if necessary.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 254112
+        },
+        {
+          "statement": "We expect to continue to pay regular quarterly cash dividends, though each quarterly dividend payment is subject to review and approval by our Board of Directors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 265830
+        },
+        {
+          "statement": "cussion of both historical operating results for our business segments during 2025 and 2024 and our outlook for 2026, as well as a financial summary and analysis for each of our transportation segments in place during 2025 and 2024.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 270736
+        },
+        {
+          "statement": "alysis of key elements of our liquidity and capital resources, financial commitments, and liquidity outlook for 2026.",
+          "pattern": "outlook\\s+(?:for|is)",
+          "sentiment": 0.0,
+          "position": 271018
+        },
+        {
+          "statement": "•Critical accounting estimates discusses those financial statement elements that we believe are most important to understanding the material judgments and assumptions incorporated in our financial results.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 271116
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue growth,",
+            "position": 191890
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and -28",
+            "position": 205030
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and volume levels,",
+            "position": 278110
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue$87,926 $87,693 — Operating income (loss):Federal Express segment4,885 4,819 1 FedEx Freight segment1,489 1,821 (18)Corporate, other, and eliminations(1,157)(1,081)7 Consolidated operating inco",
+            "position": 279078
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and operating results by reportable segment for 2025 compared to 2024 (in millions):Year-over-Year ChangesRevenueOperating Results(1)Federal Express segment$641 $66 FedEx Freight segment(537)(",
+            "position": 279555
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share$16.81",
+            "position": 279483
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 299139
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings for each of our companies can also be adversely affected by inclement weather,",
+            "position": 305338
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, financial condition,",
+            "position": 335345
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings generated in each jurisdiction,",
+            "position": 337376
+          },
+          {
+            "metric": "profit",
+            "context": "profit sensitivity,",
+            "position": 75425
+          },
+          {
+            "metric": "profit",
+            "context": "Profit philosophy—the belief that creating an environment where people are valued and have an opportunity to succeed leads to exceptional service,",
+            "position": 128500
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations working to solve social challenges relevant to our business, customers,",
+            "position": 137527
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss,",
+            "position": 431810
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA”) -90-FEDEX CORPORATIONNOTES TO CONSOLIDATED FINANCIAL STATEMENTS of not more than 3.5",
+            "position": 444952
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA was 1.9",
+            "position": 445999
+          },
+          {
+            "metric": "margin",
+            "context": "margin to gain market share, or they are owned, controlled, or subsidized by foreign governments,",
+            "position": 203096
+          },
+          {
+            "metric": "margin",
+            "context": "margin:Federal Express segment6.5",
+            "position": 279305
+          },
+          {
+            "metric": "margin",
+            "context": "margin, and operating expenses as a percent of revenue for the years ended May 31: 20252024",
+            "position": 310147
+          },
+          {
+            "metric": "margin",
+            "context": "margin, selected statistics, and operating expenses as a percent of revenue for the years ended May 31: Percent ChangePercent of Revenue2025202420252024Revenue$8,892$9,429(6)100.0",
+            "position": 317328
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of 4.0",
+            "position": 487502
+          },
+          {
+            "metric": "market share",
+            "context": "market share, or they are owned, controlled, or subsidized by foreign governments,",
+            "position": 203111
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income (loss):Federal Express segment4,885 4,819 1 FedEx Freight segment1,489 1,821 (18)Corporate, other, and eliminations(1,157)(1,081)7 Consolidated operating income5,217 5,559 (6)Operatin",
+            "position": 279103
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income:Business optimization costs$(756)$(582)Asset impairment charges(21)(157)International regulatory and legacy FedEx Ground legal matters(88)57 FedEx Freight spin-off costs(38)— $(903)$(",
+            "position": 279996
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income in 2025 and 2024 includes $756 million ($577 million, net of tax, or $2.37",
+            "position": 281261
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income in 2025 and 2024 includes $21 million ($16 million, net of tax, or $0.06",
+            "position": 281670
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income in 2025 includes $88 million of net expenses ($90 million, net of tax, or $0.37",
+            "position": 282079
+          },
+          {
+            "metric": "net income",
+            "context": "net income$4,092 $4,331 (6)Diluted earnings per share$16.81",
+            "position": 279448
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income:Mark-to-market (“MTM”) retirement plans accounting adjustments, net of tax$390 $426 FedEx Freight spin-off costs, net of tax(44)— Remeasurement of state deferred income taxes under one FedE",
+            "position": 280216
+          },
+          {
+            "metric": "net income",
+            "context": "Net income includes a pre-tax, noncash gain of $515 million in 2025 ($390 million, net of tax, or $1.60",
+            "position": 283073
+          },
+          {
+            "metric": "net income",
+            "context": "Net income in 2024 includes a $54 million ($0.21",
+            "position": 283502
+          },
+          {
+            "metric": "net income",
+            "context": "net income tax benefit of $46 million ($0.19",
+            "position": 297691
+          },
+          {
+            "metric": "assets",
+            "context": "assets continue to be a target of terrorist activities, governments around the world are adopting or are considering adopting stricter security requirements that will increase operating costs and pote",
+            "position": 184485
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities between FedEx and NewCo,",
+            "position": 196915
+          },
+          {
+            "metric": "assets",
+            "context": "assets, future salary increases, employee turnover, mortality,",
+            "position": 218492
+          },
+          {
+            "metric": "assets",
+            "context": "assets and team members distributed throughout the world, there are concentrations of key assets and team members within our networks that are exposed to adverse weather conditions or localized risks ",
+            "position": 227545
+          },
+          {
+            "metric": "assets",
+            "context": "assets, strives to ensure consistent risk remediation activities,",
+            "position": 241182
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 181430
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities;•costs and expenses related to the planned spin-off (which are expected to be significant), including costs related to commercial and operational dis-synergies; restructuring and other tra",
+            "position": 196039
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, could increase pension and other postretirement expense,",
+            "position": 218830
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities(4,700)(3,431)Cash provided by operating activities7,036 8,312 Investing activities:Capital expenditures(4,055)(5,176)Purchase of investments(262)(176)Proceeds from sale of investments110 3",
+            "position": 320007
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities$52,324 The following table presents the summarized statement of income information as of May 31, 2025 (in millions):Revenue$65,138 Intercompany Charges, net(3,091)Operating Income4,084 Int",
+            "position": 325874
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters, and Issuer Purchases of Equity Securities”; the “Trends Affecting Our Business,” “Business Optimization Costs,” “Income Taxes,” “Outlook,” “Reportable Segments,” “",
+            "position": 47478
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters, And Issuer Purchases Of Equity Securities42Management’s Discussion and Analysis of Results of Operations and Financial Condition43Item 7",
+            "position": 49031
+          },
+          {
+            "metric": "equity",
+            "context": "equity analyses to incorporate best practices, keep abreast of regulatory developments,",
+            "position": 132365
+          },
+          {
+            "metric": "equity",
+            "context": "equity could reduce demand for our services and/or create difficulties in retaining and recruiting employee talent and could materially and adversely affect our business, results of operations, cash f",
+            "position": 202442
+          },
+          {
+            "metric": "equity",
+            "context": "Equity SecuritiesIn February 2025, we acquired RouteSmart Technologies,",
+            "position": 266296
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.10 ",
+            "position": 46385
+          },
+          {
+            "text": "$2,832 ",
+            "position": 73316
+          },
+          {
+            "text": "$1 million",
+            "position": 122074
+          },
+          {
+            "text": "$378,000 ",
+            "position": 122111
+          },
+          {
+            "text": "$515 million",
+            "position": 219366
+          },
+          {
+            "text": "$390 million",
+            "position": 219388
+          },
+          {
+            "text": "$1.60 ",
+            "position": 219417
+          },
+          {
+            "text": "$590 million",
+            "position": 249231
+          },
+          {
+            "text": "$90 million",
+            "position": 266616
+          },
+          {
+            "text": "$500,000 ",
+            "position": 266824
+          },
+          {
+            "text": "$5.0 billion",
+            "position": 267527
+          },
+          {
+            "text": "$500 million",
+            "position": 267626
+          },
+          {
+            "text": "$1.6 billion",
+            "position": 267993
+          },
+          {
+            "text": "$242.43 ",
+            "position": 268678
+          },
+          {
+            "text": "$2,134 ",
+            "position": 268696
+          },
+          {
+            "text": "$242.78 ",
+            "position": 268726
+          },
+          {
+            "text": "$2,064 M",
+            "position": 268742
+          },
+          {
+            "text": "$2,064 ",
+            "position": 268770
+          },
+          {
+            "text": "$100.00 ",
+            "position": 269541
+          },
+          {
+            "text": "$244.20 ",
+            "position": 269549
+          },
+          {
+            "text": "$176.29 ",
+            "position": 269557
+          },
+          {
+            "text": "$175.00 ",
+            "position": 269565
+          },
+          {
+            "text": "$208.06 ",
+            "position": 269573
+          },
+          {
+            "text": "$182.43 ",
+            "position": 269581
+          },
+          {
+            "text": "$140.25 ",
+            "position": 269610
+          },
+          {
+            "text": "$139.83 ",
+            "position": 269618
+          },
+          {
+            "text": "$143.91 ",
+            "position": 269626
+          },
+          {
+            "text": "$184.48 ",
+            "position": 269634
+          },
+          {
+            "text": "$209.42 ",
+            "position": 269642
+          },
+          {
+            "text": "$178.01 ",
+            "position": 269696
+          },
+          {
+            "text": "$163.66 ",
+            "position": 269704
+          },
+          {
+            "text": "$159.29 ",
+            "position": 269712
+          },
+          {
+            "text": "$179.75 ",
+            "position": 269720
+          },
+          {
+            "text": "$176.03 ",
+            "position": 269728
+          },
+          {
+            "text": "$100 ",
+            "position": 269747
+          },
+          {
+            "text": "$87,926 ",
+            "position": 279085
+          },
+          {
+            "text": "$87,693 ",
+            "position": 279093
+          },
+          {
+            "text": "$4,092 ",
+            "position": 279458
+          },
+          {
+            "text": "$4,331 ",
+            "position": 279465
+          },
+          {
+            "text": "$16.81 ",
+            "position": 279501
+          },
+          {
+            "text": "$17.21 ",
+            "position": 279508
+          },
+          {
+            "text": "$641 ",
+            "position": 279719
+          },
+          {
+            "text": "$66 ",
+            "position": 279724
+          },
+          {
+            "text": "$233 ",
+            "position": 279801
+          },
+          {
+            "text": "$390 ",
+            "position": 280301
+          },
+          {
+            "text": "$426 ",
+            "position": 280306
+          },
+          {
+            "text": "$346 ",
+            "position": 280433
+          },
+          {
+            "text": "$372 ",
+            "position": 280438
+          },
+          {
+            "text": "$756 million",
+            "position": 281304
+          },
+          {
+            "text": "$577 million",
+            "position": 281318
+          }
+        ],
+        "percentages": [
+          {
+            "text": "0.450%",
+            "value": 0.45,
+            "position": 46426
+          },
+          {
+            "text": "1.625%",
+            "value": 1.625,
+            "position": 46477
+          },
+          {
+            "text": "1.300%",
+            "value": 1.3,
+            "position": 46578
+          },
+          {
+            "text": "0.950%",
+            "value": 0.95,
+            "position": 46628
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 59067
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 61287
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 61590
+          },
+          {
+            "text": "5.9%",
+            "value": 5.9,
+            "position": 70064
+          },
+          {
+            "text": "3.2 %",
+            "value": 3.2,
+            "position": 73323
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 89934
+          },
+          {
+            "text": "6.9%",
+            "value": 6.9,
+            "position": 91745
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 117805
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 136217
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 143550
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 145956
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 147741
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 152864
+          },
+          {
+            "text": "6.5 %",
+            "value": 6.5,
+            "position": 279335
+          },
+          {
+            "text": "16.7 %",
+            "value": 16.7,
+            "position": 279370
+          },
+          {
+            "text": "19.3 %",
+            "value": 19.3,
+            "position": 279376
+          },
+          {
+            "text": "5.9 %",
+            "value": 5.9,
+            "position": 279419
+          },
+          {
+            "text": "6.3 %",
+            "value": 6.3,
+            "position": 279424
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 286001
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 286327
+          },
+          {
+            "text": "35.5 %",
+            "value": 35.5,
+            "position": 286916
+          },
+          {
+            "text": "35.3 %",
+            "value": 35.3,
+            "position": 286922
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 288818
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 289145
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 291065
+          },
+          {
+            "text": "24.8%",
+            "value": 24.8,
+            "position": 297613
+          },
+          {
+            "text": "25.8%",
+            "value": 25.8,
+            "position": 297641
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 298280
+          },
+          {
+            "text": "100.0 %",
+            "value": 100.0,
+            "position": 310761
+          },
+          {
+            "text": "93.5 %",
+            "value": 93.5,
+            "position": 311277
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 313261
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 313824
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 314033
+          },
+          {
+            "text": "44%",
+            "value": 44.0,
+            "position": 314166
+          },
+          {
+            "text": "83.3 %",
+            "value": 83.3,
+            "position": 317853
+          },
+          {
+            "text": "80.7 %",
+            "value": 80.7,
+            "position": 317859
+          },
+          {
+            "text": "16.7%",
+            "value": 16.7,
+            "position": 317913
+          },
+          {
+            "text": "19.3%",
+            "value": 19.3,
+            "position": 317918
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 319004
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 319232
+          },
+          {
+            "text": "5.94 %",
+            "value": 5.94,
+            "position": 336004
+          },
+          {
+            "text": "5.58 %",
+            "value": 5.58,
+            "position": 336010
+          },
+          {
+            "text": "4.40 %",
+            "value": 4.4,
+            "position": 336016
+          },
+          {
+            "text": "4.29 %",
+            "value": 4.29,
+            "position": 336022
+          },
+          {
+            "text": "59%",
+            "value": 59.0,
+            "position": 342559
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 359734
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 175
+          },
+          {
+            "category": "operational_risk",
+            "count": 98
+          },
+          {
+            "category": "financial_risk",
+            "count": 425
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 156
+          },
+          {
+            "category": "technology_risk",
+            "count": 305
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 570253,
+        "filtered_length": 549242,
+        "removed_ratio": 3.68,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.715241014210086,
+      "confidence": 1.3318497085218353,
+      "overall_score": 52.284758985789914,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 48.96907216494846,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.045695179715798284,
+        "risk_adjusted_signal": 0.30734044273701294,
+        "expected_return_annualized": 0.08688259170287592,
+        "signal_sharpe_ratio": 0.005792172780191728,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.30734044273701294,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.30734044273701294,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.020618556701030927,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.30734044273701294,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.045695179715798284
+      },
+      "risk_adjusted_signal": 0.30734044273701294,
+      "expected_return": 0.0008688259170287592,
+      "signal_sharpe": 0.005792172780191728,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 52.284758985789914,
+    "confidence": 1.3318497085218353,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:48.665990",
+  "filing_date": "2025-07-21",
+  "filing_filename": "2025-07-21-10k-FDX.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

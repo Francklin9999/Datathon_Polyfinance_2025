@@ -1,0 +1,901 @@
+{
+  "ticker": "UAL",
+  "analysis": {
+    "ticker": "UAL",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 43.05468258956631,
+        "financial_sentiment": -0.037383177570093455,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "21E of the Securities Forward-looking statements represent our expectations and beliefs concerning future results or events, based on information available to us on the date of the filing of this , and are subject to various risks and uncertainties.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 44578
+        },
+        {
+          "statement": "uld cause Risk Factors and in , We disclaim any intent or obligation to update or revise any of the forward-looking statements, whether in response to new information, unforeseen events, changed circumstances or otherwise, except as required by applicable law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 44844
+        },
+        {
+          "statement": "time at United with the growth in our aircraft fleet and the increasing number of destinations that we plan to serve.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 65282
+        },
+        {
+          "statement": "•Adopting More Sustainable Alternatives to Conventional Jet Fuel: We believe that large-scale adoption of SAF in our operations is critical to helping mitigate our exposure to volatile fuel prices and achieving our climate goals.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 70699
+        },
+        {
+          "statement": "rporate best practices around GHG accounting protocols, including anticipated updates in accounting guidance from the Greenhouse Gas Protocol.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 75274
+        },
+        {
+          "statement": "People & Culture: We believe that our employees represent the brightest and highest-performing people in the aviation industry.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 78418
+        },
+        {
+          "statement": "As we strive to continue to be an employer of choice, we believe it is critical that our workforce is informed, engaged and can provide feedback.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 81899
+        },
+        {
+          "statement": "We invest heavily in our training programs, which we believe will better position us to meet our current and future business needs while also driving employee retention.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 82682
+        },
+        {
+          "statement": "A number of SAF mandates have recently been finalized in foreign jurisdictions that we expect will increase the Company's operating costs by causing aviation fuel suppliers to increase their prices.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 99965
+        },
+        {
+          "statement": "As part of our United Next growth plan, we expect to take delivery of over 660 new narrow- and widebody aircraft by the end of 2033.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 225484
+        },
+        {
+          "statement": "•Pre-tax margin: We believe that best-in-class margin performance will provide the cash flow needed to support our planned investments in growth.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 227230
+        },
+        {
+          "statement": "•Customer service: We believe that excellent customer service is part of de-commoditizing air travel.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 227377
+        },
+        {
+          "statement": "or unfavorable impacts of these and other factors on our business, operations, financial condition, future results of operations, liquidity and financial flexibility, which are dependent on future developments, including as a result of those factors discussed in , Item 1A.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 229485
+        },
+        {
+          "statement": "Our future results of operations may be subject to volatility and our growth plans may be delayed, particularly in the short term, due to the impact of the above factors and trends.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 229663
+        },
+        {
+          "statement": "erations, will be sufficient to satisfy our anticipated liquidity needs for the next 12 months, and we expect to meet our long-term liquidity needs with our anticipated access to the capital markets and projected cash from operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 242103
+        },
+        {
+          "statement": "d,\" \"on track\" and other words and terms of similar meaning and expression are intended to identify forward-looking statements, although not all forward-looking statements contain such terms.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265421
+        },
+        {
+          "statement": "imilar meaning and expression are intended to identify forward-looking statements, although not all forward-looking statements contain such terms.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265466
+        },
+        {
+          "statement": "All statements, other than those that relate solely to historical facts, are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265590
+        },
+        {
+          "statement": "her than those that relate solely to historical facts, are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265631
+        },
+        {
+          "statement": "All forward-looking statements in this report are based upon information available to us on the date of this report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265935
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue management,",
+            "position": 52182
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue synergies and delivering enhanced customer benefits, such as highly competitive flight schedules,",
+            "position": 54804
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue that includes maintenance services, frequent flyer award non-travel redemptions,",
+            "position": 58356
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue ton-kilometer (\"RTK\")Mainline RTKs (millions) (d)46,36139,526Metric tons CO2e/1,000 mainline and regional RTKs (e)1,0571,098Emissions Intensity per ASMASMs (millions) (f)291,333247,858Metric t",
+            "position": 76721
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Management (1998 to 2000); Vice President, Planning (1997 to 1998); and Senior Director, Scheduling and Planning (1995 to 1998",
+            "position": 110449
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or those of other companies in our industry; changes in our earnings or recommendations by research analysts who track our common stock or the stock of other airlines; the public's reaction t",
+            "position": 198682
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Share72Note 5 - Share-Based Compensation Plans72Note 6 - Accumulated Other Comprehensive Income (Loss) (\"AOCI\")74Note 7 - Income Taxes74Note 8 - Pension, Postretirement and Other Employee",
+            "position": 273092
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per share, basic$9.58",
+            "position": 286876
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per share, diluted$9.45",
+            "position": 286919
+          },
+          {
+            "metric": "earnings",
+            "context": "EARNINGS PER SHAREThe computations of UAL's basic and diluted earnings per share are set forth below for the years ended December 31 (in millions, except per share amounts):202420232022Earnings availa",
+            "position": 336838
+          },
+          {
+            "metric": "profit",
+            "context": "profit (which is calculated as pre-tax profit, excluding unusual, special or non-recurring charges, profit sharing expense and share-based compensation) exceeds a certain amount,",
+            "position": 361224
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing and related payroll tax expense of $713 million, $681 million and $133 million in 2024, 2023 and 2022,",
+            "position": 361502
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Sharing Plan (amended and restated effective January 1, 2024)†10.3",
+            "position": 422328
+          },
+          {
+            "metric": "margin",
+            "context": "margin and an overall discount rate,",
+            "position": 277957
+          },
+          {
+            "metric": "margin",
+            "context": "margin and cash flows, (2) terminal period growth rate, (3) an estimated weighted average cost of capital, (4) asset-specific risk factor and (5",
+            "position": 312698
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 0.64",
+            "position": 367635
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 2.00",
+            "position": 367777
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate, (3) an estimated weighted average cost of capital, (4) asset-specific risk factor and (5",
+            "position": 312741
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income from,",
+            "position": 120609
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and an approximately $0.9",
+            "position": 248278
+          },
+          {
+            "metric": "net income",
+            "context": "net income, operating performance, financial condition,",
+            "position": 219296
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,149 $2,618 $737 202420232022Passengers (thousands) (a)173,603164,927144,300Revenue passenger miles (\"RPMs\") (millions) (b)258,503244,435206,791Available seat miles (\"ASMs\") (millions) (c)",
+            "position": 232750
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,149 $2,618 $737 Earnings per share, basic$9.58",
+            "position": 286847
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$3,149 $2,618 $737 Adjustments to reconcile net income to net cash provided by (used in) operating activities -Deferred income tax935 756 248 Depreciation and amortization2,928 2,671 2,456 O",
+            "position": 289574
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — — 737 — 737 Other comprehensive income— — — — — 1,117 1,117 Stock-settled share-based compensation— — 86 — — — 86 Stock issued for share-based awards, net of shares withheld for tax3.1",
+            "position": 292214
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 45856
+          },
+          {
+            "metric": "assets",
+            "context": "assets, and losses on the divestiture of, or lost operating income from,",
+            "position": 120559
+          },
+          {
+            "metric": "assets",
+            "context": "assets as collateral for loans or other indebtedness may make it difficult for the Company to raise additional capital if needed to meet its liquidity needs on acceptable terms, or at all, and the Com",
+            "position": 190364
+          },
+          {
+            "metric": "assets",
+            "context": "assets of Mileage Plus Holdings, LLC in particular contain stringent covenants,",
+            "position": 193415
+          },
+          {
+            "metric": "assets",
+            "context": "assets for impairment on an annual basis, or more frequently where there is an indication of impairment,",
+            "position": 197327
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities at current and former locations at which the Company currently or historically used fire-fighting foam agents containing PFOA,",
+            "position": 104362
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, as well as undetected internal control, regulatory compliance or other issues, or additional costs not anticipated at the time the transaction was completed, and our due diligence efforts",
+            "position": 120182
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities related to inaccuracies or errors in the output of such AI applications and our business, reputation, financial condition,",
+            "position": 156406
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities associated with violations of any related laws or regulations could also have an adverse effect on our business, operating results, financial condition and liquidity,",
+            "position": 159198
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including $3.9",
+            "position": 244135
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities35Item 6",
+            "position": 43284
+          },
+          {
+            "metric": "equity",
+            "context": "equity,",
+            "position": 84408
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities as all or part of the consideration for business development activities, such as in connection with a joint venture,",
+            "position": 119604
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities by the Issuer and Affiliated Purchasers35Table of ContentsThe following table presents information with respect to the Company's repurchases of UAL common stock during the quarter en",
+            "position": 219450
+          },
+          {
+            "metric": "equity",
+            "context": "Equity and Preferred Securities 71Note 4 - Earnings Per Share72Note 5 - Share-Based Compensation Plans72Note 6 - Accumulated Other Comprehensive Income (Loss) (\"AOCI\")74Note 7 - Income Taxes74Note 8 -",
+            "position": 273049
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 40681
+          },
+          {
+            "text": "$15.9 billion",
+            "position": 41889
+          },
+          {
+            "text": "$48.66 ",
+            "position": 41958
+          },
+          {
+            "text": "$11,756 ",
+            "position": 58790
+          },
+          {
+            "text": "$2.65 ",
+            "position": 58798
+          },
+          {
+            "text": "$12,651 ",
+            "position": 58818
+          },
+          {
+            "text": "$3.01 ",
+            "position": 58826
+          },
+          {
+            "text": "$13,113 ",
+            "position": 58846
+          },
+          {
+            "text": "$3.63 ",
+            "position": 58854
+          },
+          {
+            "text": "$11.8 billion",
+            "position": 185484
+          },
+          {
+            "text": "$9.7 billion",
+            "position": 194654
+          },
+          {
+            "text": "$102.44 ",
+            "position": 198304
+          },
+          {
+            "text": "$37.88 ",
+            "position": 198325
+          },
+          {
+            "text": "$75.02 ",
+            "position": 220013
+          },
+          {
+            "text": "$1,457 ",
+            "position": 220028
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 220303
+          },
+          {
+            "text": "$500 million",
+            "position": 220401
+          },
+          {
+            "text": "$1.3 billion",
+            "position": 220562
+          },
+          {
+            "text": "$100 ",
+            "position": 221352
+          },
+          {
+            "text": "$57,063 ",
+            "position": 232538
+          },
+          {
+            "text": "$53,717 ",
+            "position": 232546
+          },
+          {
+            "text": "$44,955 ",
+            "position": 232554
+          },
+          {
+            "text": "$3,149 ",
+            "position": 232760
+          },
+          {
+            "text": "$2,618 ",
+            "position": 232767
+          },
+          {
+            "text": "$737 ",
+            "position": 232774
+          },
+          {
+            "text": "$2.65",
+            "position": 233402
+          },
+          {
+            "text": "$3.01",
+            "position": 233407
+          },
+          {
+            "text": "$3.63",
+            "position": 233412
+          },
+          {
+            "text": "$51,829 ",
+            "position": 234354
+          },
+          {
+            "text": "$49,046 ",
+            "position": 234362
+          },
+          {
+            "text": "$2,783 ",
+            "position": 234370
+          },
+          {
+            "text": "$3,346 ",
+            "position": 234489
+          },
+          {
+            "text": "$1,315 ",
+            "position": 234768
+          },
+          {
+            "text": "$197 ",
+            "position": 234775
+          },
+          {
+            "text": "$936 ",
+            "position": 234780
+          },
+          {
+            "text": "$335 ",
+            "position": 234785
+          },
+          {
+            "text": "$2.8 billion",
+            "position": 235141
+          },
+          {
+            "text": "$248 million",
+            "position": 235303
+          },
+          {
+            "text": "$315 million",
+            "position": 235456
+          },
+          {
+            "text": "$16,678 ",
+            "position": 236085
+          },
+          {
+            "text": "$14,787 ",
+            "position": 236093
+          },
+          {
+            "text": "$1,891 ",
+            "position": 236101
+          },
+          {
+            "text": "$51,967 ",
+            "position": 236534
+          },
+          {
+            "text": "$49,506 ",
+            "position": 236542
+          },
+          {
+            "text": "$2,461 ",
+            "position": 236550
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 236660
+          },
+          {
+            "text": "$895 million",
+            "position": 236899
+          },
+          {
+            "text": "$361 million",
+            "position": 237118
+          },
+          {
+            "text": "$327 million",
+            "position": 237428
+          },
+          {
+            "text": "$257 million",
+            "position": 237732
+          }
+        ],
+        "percentages": [
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 42239
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 50564
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 56444
+          },
+          {
+            "text": "93%",
+            "value": 93.0,
+            "position": 56616
+          },
+          {
+            "text": "23 %",
+            "value": 23.0,
+            "position": 58804
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 58832
+          },
+          {
+            "text": "31 %",
+            "value": 31.0,
+            "position": 58860
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 67095
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 71470
+          },
+          {
+            "text": "0.3%",
+            "value": 0.3,
+            "position": 71804
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 73913
+          },
+          {
+            "text": "82%",
+            "value": 82.0,
+            "position": 78229
+          },
+          {
+            "text": "69%",
+            "value": 69.0,
+            "position": 80096
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 96784
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 100431
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 100467
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 101115
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 195821
+          },
+          {
+            "text": "4.9%",
+            "value": 4.9,
+            "position": 196871
+          },
+          {
+            "text": "83.1 %",
+            "value": 83.1,
+            "position": 233049
+          },
+          {
+            "text": "83.9 %",
+            "value": 83.9,
+            "position": 233055
+          },
+          {
+            "text": "83.4 %",
+            "value": 83.4,
+            "position": 233061
+          },
+          {
+            "text": "4.4 %",
+            "value": 4.4,
+            "position": 234814
+          },
+          {
+            "text": "1.9 %",
+            "value": 1.9,
+            "position": 234819
+          },
+          {
+            "text": "20.1 %",
+            "value": 20.1,
+            "position": 234824
+          },
+          {
+            "text": "7.2 %",
+            "value": 7.2,
+            "position": 234830
+          },
+          {
+            "text": "5.7 %",
+            "value": 5.7,
+            "position": 234835
+          },
+          {
+            "text": "0.1 %",
+            "value": 0.1,
+            "position": 234866
+          },
+          {
+            "text": "3.9 %",
+            "value": 3.9,
+            "position": 234871
+          },
+          {
+            "text": "0.4 %",
+            "value": 0.4,
+            "position": 234888
+          },
+          {
+            "text": "5.3 %",
+            "value": 5.3,
+            "position": 234903
+          },
+          {
+            "text": "0.2 %",
+            "value": 0.2,
+            "position": 234931
+          },
+          {
+            "text": "25.5 %",
+            "value": 25.5,
+            "position": 234980
+          },
+          {
+            "text": "12.6 %",
+            "value": 12.6,
+            "position": 234986
+          },
+          {
+            "text": "4.3 %",
+            "value": 4.3,
+            "position": 235001
+          },
+          {
+            "text": "26.0 %",
+            "value": 26.0,
+            "position": 235012
+          },
+          {
+            "text": "12.0 %",
+            "value": 12.0,
+            "position": 235018
+          },
+          {
+            "text": "5.8 %",
+            "value": 5.8,
+            "position": 235024
+          },
+          {
+            "text": "31.1 %",
+            "value": 31.1,
+            "position": 235044
+          },
+          {
+            "text": "13.5 %",
+            "value": 13.5,
+            "position": 235050
+          },
+          {
+            "text": "6.8 %",
+            "value": 6.8,
+            "position": 235056
+          },
+          {
+            "text": "5.7%",
+            "value": 5.7,
+            "position": 235158
+          },
+          {
+            "text": "6.8%",
+            "value": 6.8,
+            "position": 235212
+          },
+          {
+            "text": "5.3%",
+            "value": 5.3,
+            "position": 235251
+          },
+          {
+            "text": "16.6%",
+            "value": 16.6,
+            "position": 235320
+          },
+          {
+            "text": "9.9%",
+            "value": 9.9,
+            "position": 235473
+          },
+          {
+            "text": "12.8%",
+            "value": 12.8,
+            "position": 236677
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 236801
+          },
+          {
+            "text": "7.1%",
+            "value": 7.1,
+            "position": 236916
+          },
+          {
+            "text": "11.7%",
+            "value": 11.7,
+            "position": 237135
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 170
+          },
+          {
+            "category": "operational_risk",
+            "count": 85
+          },
+          {
+            "category": "financial_risk",
+            "count": 518
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 111
+          },
+          {
+            "category": "technology_risk",
+            "count": 145
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 80,
+          "density": 11.061946902654867
+        }
+      ],
+      "deduplication": {
+        "original_length": 475278,
+        "filtered_length": 460316,
+        "removed_ratio": 3.15,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.0550644102046,
+      "confidence": 1.1336552215866877,
+      "overall_score": 51.9449355897954,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 48.13084112149533,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.038898711795908036,
+        "risk_adjusted_signal": 0.26162819316192704,
+        "expected_return_annualized": 0.07396011823897648,
+        "signal_sharpe_ratio": 0.004930674549265099,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.26162819316192704,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.26162819316192704,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.037383177570093455,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.26162819316192704,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.038898711795908036
+      },
+      "risk_adjusted_signal": 0.26162819316192704,
+      "expected_return": 0.0007396011823897649,
+      "signal_sharpe": 0.004930674549265099,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.9449355897954,
+    "confidence": 1.1336552215866877,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:33:45.980921",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-UAL.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

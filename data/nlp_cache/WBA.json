@@ -1,0 +1,921 @@
+{
+  "ticker": "WBA",
+  "analysis": {
+    "ticker": "WBA",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 39.95283018867924,
+        "financial_sentiment": -0.11764705882352941,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "This includes forward-looking statements made pursuant to the safe harbor provisions of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 72754
+        },
+        {
+          "statement": "See cautionary note regarding forward-looking statements in Management’s discussion and analysis of financial condition and results of operations in , Item 7.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 72912
+        },
+        {
+          "statement": "ESGA diverse, equitable and inclusive organization is a part of the Company’s business strategy, as we believe it positively impacts Company performance, growth and employee engagement.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 112996
+        },
+        {
+          "statement": "a prescription drug plan administered by one or more of the large PBMs is restricted or terminated, we expect that our sales would be adversely affected, at least in the short-term, and potentially in the long-term.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 143737
+        },
+        {
+          "statement": "ses in our operations and the timing and extent of realization of synergies and other benefits that we expected in connection with these investments.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 152092
+        },
+        {
+          "statement": "s (so-called limited distribution drugs), that serve a relatively limited universe of patients, the future growth of this business depends to a significant extent upon expanding our ability to access key drugs and successfully penetrate key treatment categories.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 161125
+        },
+        {
+          "statement": "and may in the future make changes to our strategic focus, operations, business plans or financial guidance and outlook, with corresponding changes in how we report our results of operations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 176252
+        },
+        {
+          "statement": "tionships with existing or new customers and suppliers, and difficulties in achieving the synergies we anticipated.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 183884
+        },
+        {
+          "statement": "s or services frequently are long-term in nature and may take longer to complete and cost more than we expect and may not deliver the benefits we project once they are complete.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 193869
+        },
+        {
+          "statement": "ature and may take longer to complete and cost more than we expect and may not deliver the benefits we project once they are complete.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 193912
+        },
+        {
+          "statement": "ity of currency exchange rates, we cannot predict the effect of exchange rate fluctuations upon our future results of operations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 212643
+        },
+        {
+          "statement": "We expect the healthcare industry to continue to change significantly in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 216535
+        },
+        {
+          "statement": "We expect continued governmental and private payor pressure to reduce pharmaceutical pricing, and these pressures could be further exacerbated if payor deficits or shortfalls increase.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 217009
+        },
+        {
+          "statement": "WBA Fiscal 2024 39Table of Contents This discussion contains forward-looking statements that involve risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 251933
+        },
+        {
+          "statement": "ause a difference include, but are not limited to, those discussed under “Cautionary note regarding forward-looking statements” below and in , Item 1A, Risk factors, of this.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 252122
+        },
+        {
+          "statement": "FACTORS, TRENDS AND UNCERTAINTIES AFFECTING OUR RESULTS AND COMPARABILITYThe Company has been, and we expect it to continue to be, affected by a number of factors that may cause actual results to differ from our historical results or current expectations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 253107
+        },
+        {
+          "statement": "As such, the Company is analyzing opportunities that may impact the future results of operations and cash flows, including the Company’s recently approved plan to implement a significant multi-year U.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 255989
+        },
+        {
+          "statement": "The Company’s current expectations are forward-looking statements and actual results may differ due to various factors, as discussed under “Cautionary note regarding forward-looking statements” below and in Item 1A, Risk factors.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 261205
+        },
+        {
+          "statement": "and actual results may differ due to various factors, as discussed under “Cautionary note regarding forward-looking statements” below and in Item 1A, Risk factors.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 261332
+        },
+        {
+          "statement": "See Item 1A, Risk factors and “Cautionary note regarding forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265900
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue from Medicare or Medicare Advantage plans,",
+            "position": 150787
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue our businesses record or receipt of overpayments,",
+            "position": 151255
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue streams for our healthcare businesses depend on reimbursements by third-party payors, as well as payments by individuals,",
+            "position": 155891
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 296102
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, is not affected by operations of any particular period unless an intangible asset becomes impaired,",
+            "position": 309819
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements, financial condition, and other debt obligations, fines and/or adverse rulings by courts or arbitrators in legal or regulatory matters, changes in federal, state or fore",
+            "position": 206623
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements, financial condition, credit facilities and other debt obligations, fines and/or adverse rulings by courts or arbitrators in legal or regulatory matters, changes in fede",
+            "position": 207216
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings within Selling,",
+            "position": 259951
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in Cencora213 252 418 Operating (loss) income (GAAP)(14,076)(6,882)1,387 Adjusted operating income (Non-GAAP measure) 12,624 3,871 5,133 (Loss) earnings before interest and income tax provisi",
+            "position": 272841
+          },
+          {
+            "metric": "profit",
+            "context": "profit dollars can be significant in the first several months after a generic version of a drug is first allowed to compete with the branded version,",
+            "position": 81726
+          },
+          {
+            "metric": "profit",
+            "context": "profit margin and gross profit are impacted by, among other things,",
+            "position": 92808
+          },
+          {
+            "metric": "profit",
+            "context": "profit dollars are impacted by governmental agencies and other third-party payors seeking to minimize increases in the costs of healthcare,",
+            "position": 99284
+          },
+          {
+            "metric": "profit",
+            "context": "profit margin and gross profit dollars are impacted by, among other things, the highly competitive nature of the health and beauty category, specifically the Company and its competitors’ pricing actio",
+            "position": 99722
+          },
+          {
+            "metric": "profit",
+            "context": "profit margin and gross profit dollars are impacted by, among other things, government actions, which typically seek to reduce the growth in prescription drug consumption,",
+            "position": 100046
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (Non-GAAP measure) 166 (376)(312)1",
+            "position": 295518
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (Non-GAAP measure) for fiscal 2024 compared to fiscal 2023Adjusted EBITDA was $66 million for fiscal 2024, compared to a loss of $376 million in fiscal 2023",
+            "position": 297470
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA (Non-GAAP measure)$66 $(376)$(312)1In the second quarter of fiscal 2024, the Company recorded $12.4",
+            "position": 306575
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins, the selection of discount rates, the selection of the valuation approaches, and the market multiples selected requires a high degree of auditor judgment and an increased extent of effo",
+            "position": 554096
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins), valuation methodologies,",
+            "position": 554819
+          },
+          {
+            "metric": "margin",
+            "context": "margin generics,",
+            "position": 80852
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 82337
+          },
+          {
+            "metric": "margin",
+            "context": "margin and gross profit are impacted by, among other things,",
+            "position": 92815
+          },
+          {
+            "metric": "margin",
+            "context": "margin than comparable 30-day prescriptions, but provides the Company with the opportunity to increase business with patients with chronic prescription needs while offering increased convenience, help",
+            "position": 94832
+          },
+          {
+            "metric": "margin",
+            "context": "margin pressures within the industry,",
+            "position": 95265
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and cash flows beginning in fiscal 2025",
+            "position": 271163
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (Non-GAAP measure) 12,624 3,871 5,133 (Loss) earnings before interest and income tax provision (benefit)(13,736)(4,839)4,385 Net (loss) earnings attributable to Walgreens Boots Allian",
+            "position": 272932
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (Non-GAAP measure) 1(32.2",
+            "position": 273655
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income 12,167 3,689 5,029 Number of prescriptions 2796.4",
+            "position": 280160
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income 1(41.3",
+            "position": 280545
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) attributable to Redeemable non-controlling interests1 (21)(73)Redemption price adjustments and other 36 460 159 Reclassifications to Accrued expenses and other liabilities 4— (1,314)",
+            "position": 396441
+          },
+          {
+            "metric": "assets",
+            "context": "assets and competencies in pharmacy, retail and consumer engagement,",
+            "position": 85224
+          },
+          {
+            "metric": "assets",
+            "context": "assets that have become impaired and could, in the future, become further impaired,",
+            "position": 132836
+          },
+          {
+            "metric": "assets",
+            "context": "assets, will be subject to global financial markets and market instability which may severely impact the ability to divest, divestiture terms,",
+            "position": 189609
+          },
+          {
+            "metric": "assets",
+            "context": "assets primarily consist of direct and indirect ownership interests in, and our business is conducted through,",
+            "position": 205921
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including medical liability claims related to the delivery of healthcare services, such as medical malpractice by staff at our affiliates’ facilities, or by healthcare practitioners who a",
+            "position": 147712
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, as well as undetected internal control, regulatory or other issues,",
+            "position": 185245
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities depends in part on assumptions,",
+            "position": 214067
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, changes in market expectations for long-term price inflation and other macroeconomic factors,",
+            "position": 214437
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities requires significant judgment,",
+            "position": 233168
+          },
+          {
+            "metric": "equity",
+            "context": "equity, related stockholder matters and issuer purchases of equity securities39Item 6",
+            "position": 71282
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investment in Cencora,",
+            "position": 86862
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments) has pharmacy-led health and beauty retail offerings in 50 states, the District of Columbia,",
+            "position": 87169
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests in VillageMD, WP CityMD TopCo (“Summit”),",
+            "position": 182975
+          },
+          {
+            "metric": "equity",
+            "context": "equity method of accounting, subject to a two-month reporting lag,",
+            "position": 186554
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 69665
+          },
+          {
+            "text": "$15.2 billion",
+            "position": 70491
+          },
+          {
+            "text": "$147.7 billion",
+            "position": 73823
+          },
+          {
+            "text": "$115.8 billion",
+            "position": 86312
+          },
+          {
+            "text": "$23.6 billion",
+            "position": 86342
+          },
+          {
+            "text": "$12.4 billion",
+            "position": 188991
+          },
+          {
+            "text": "$9.5 billion",
+            "position": 202532
+          },
+          {
+            "text": "$15.5 billion",
+            "position": 208393
+          },
+          {
+            "text": "$13.0 billion",
+            "position": 208423
+          },
+          {
+            "text": "$332 million",
+            "position": 209464
+          },
+          {
+            "text": "$2.3 billion",
+            "position": 234169
+          },
+          {
+            "text": "$2,003,419,960 ",
+            "position": 251467
+          },
+          {
+            "text": "$10.0 billion",
+            "position": 251681
+          },
+          {
+            "text": "$2.25 billion",
+            "position": 258144
+          },
+          {
+            "text": "$1.75 billion",
+            "position": 258240
+          },
+          {
+            "text": "$500 million",
+            "position": 258341
+          },
+          {
+            "text": "$6.6 billion",
+            "position": 259752
+          },
+          {
+            "text": "$424 million",
+            "position": 264522
+          },
+          {
+            "text": "$2.7 billion",
+            "position": 264720
+          },
+          {
+            "text": "$293 million",
+            "position": 265102
+          },
+          {
+            "text": "$750 million",
+            "position": 265115
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 266133
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 266451
+          },
+          {
+            "text": "$4.5 billion",
+            "position": 266467
+          },
+          {
+            "text": "$4.3 billion",
+            "position": 267989
+          },
+          {
+            "text": "$4.0 billion",
+            "position": 268066
+          },
+          {
+            "text": "$1,654 ",
+            "position": 268334
+          },
+          {
+            "text": "$3,964 ",
+            "position": 268530
+          },
+          {
+            "text": "$4,316 ",
+            "position": 268601
+          },
+          {
+            "text": "$770 ",
+            "position": 269378
+          },
+          {
+            "text": "$32 ",
+            "position": 269383
+          },
+          {
+            "text": "$26 ",
+            "position": 269387
+          },
+          {
+            "text": "$6 ",
+            "position": 269391
+          },
+          {
+            "text": "$835 ",
+            "position": 269394
+          },
+          {
+            "text": "$827 ",
+            "position": 269461
+          },
+          {
+            "text": "$891 ",
+            "position": 269477
+          },
+          {
+            "text": "$816 ",
+            "position": 269657
+          },
+          {
+            "text": "$213 ",
+            "position": 269662
+          },
+          {
+            "text": "$115 ",
+            "position": 269667
+          },
+          {
+            "text": "$14 ",
+            "position": 269672
+          },
+          {
+            "text": "$1,158 ",
+            "position": 269676
+          },
+          {
+            "text": "$830 ",
+            "position": 269745
+          },
+          {
+            "text": "$222 ",
+            "position": 269750
+          },
+          {
+            "text": "$1,181 ",
+            "position": 269764
+          },
+          {
+            "text": "$546 ",
+            "position": 269910
+          },
+          {
+            "text": "$118 ",
+            "position": 269915
+          },
+          {
+            "text": "$25 ",
+            "position": 269923
+          },
+          {
+            "text": "$690 ",
+            "position": 269927
+          },
+          {
+            "text": "$603 ",
+            "position": 269995
+          },
+          {
+            "text": "$134 ",
+            "position": 270000
+          }
+        ],
+        "percentages": [
+          {
+            "text": "3.600%",
+            "value": 3.6,
+            "position": 69710
+          },
+          {
+            "text": "2.125%",
+            "value": 2.125,
+            "position": 69794
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 81475
+          },
+          {
+            "text": "78%",
+            "value": 78.0,
+            "position": 87578
+          },
+          {
+            "text": "77 %",
+            "value": 77.0,
+            "position": 91303
+          },
+          {
+            "text": "74 %",
+            "value": 74.0,
+            "position": 91307
+          },
+          {
+            "text": "23 %",
+            "value": 23.0,
+            "position": 91321
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 91325
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 91338
+          },
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 91884
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 92128
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 92136
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 97488
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 98023
+          },
+          {
+            "text": "15 %",
+            "value": 15.0,
+            "position": 99160
+          },
+          {
+            "text": "17 %",
+            "value": 17.0,
+            "position": 99164
+          },
+          {
+            "text": "34 %",
+            "value": 34.0,
+            "position": 99178
+          },
+          {
+            "text": "33 %",
+            "value": 33.0,
+            "position": 99182
+          },
+          {
+            "text": "32 %",
+            "value": 32.0,
+            "position": 99186
+          },
+          {
+            "text": "51 %",
+            "value": 51.0,
+            "position": 99199
+          },
+          {
+            "text": "75 %",
+            "value": 75.0,
+            "position": 102017
+          },
+          {
+            "text": "70 %",
+            "value": 70.0,
+            "position": 102021
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 102032
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 104680
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 105090
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 113707
+          },
+          {
+            "text": "10.2%",
+            "value": 10.2,
+            "position": 186252
+          },
+          {
+            "text": "99.7%",
+            "value": 99.7,
+            "position": 218982
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 232459
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 235255
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 237747
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 248422
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 248429
+          },
+          {
+            "text": "8.125%",
+            "value": 8.125,
+            "position": 265233
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 268777
+          },
+          {
+            "text": "200%",
+            "value": 200.0,
+            "position": 274493
+          },
+          {
+            "text": "8.8%",
+            "value": 8.8,
+            "position": 277722
+          },
+          {
+            "text": "34.3%",
+            "value": 34.3,
+            "position": 277752
+          },
+          {
+            "text": "3.800%",
+            "value": 3.8,
+            "position": 328542
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 358642
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 393167
+          },
+          {
+            "text": "125%",
+            "value": 125.0,
+            "position": 393175
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 397434
+          },
+          {
+            "text": "5.5%",
+            "value": 5.5,
+            "position": 399275
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 425285
+          },
+          {
+            "text": "63%",
+            "value": 63.0,
+            "position": 430111
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 434053
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 434074
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 436744
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 439108
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 165
+          },
+          {
+            "category": "operational_risk",
+            "count": 45
+          },
+          {
+            "category": "financial_risk",
+            "count": 605
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 212
+          },
+          {
+            "category": "technology_risk",
+            "count": 226
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 40,
+          "density": 8.237232289950576
+        }
+      ],
+      "deduplication": {
+        "original_length": 615362,
+        "filtered_length": 603161,
+        "removed_ratio": 1.98,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.68203497615262,
+      "confidence": 0.18512099582554317,
+      "overall_score": 50.31796502384738,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.11764705882353,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.006359300476947549,
+        "risk_adjusted_signal": 0.042771912403859844,
+        "expected_return_annualized": 0.012091264555493515,
+        "signal_sharpe_ratio": 0.0008060843036995677,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.042771912403859844,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.042771912403859844,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.11764705882352941,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.042771912403859844,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.006359300476947549
+      },
+      "risk_adjusted_signal": 0.042771912403859844,
+      "expected_return": 0.00012091264555493515,
+      "signal_sharpe": 0.0008060843036995677,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.31796502384738,
+    "confidence": 0.18512099582554317,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:34:30.572517",
+  "filing_date": "2024-10-15",
+  "filing_filename": "2024-10-15-10k-WBA.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

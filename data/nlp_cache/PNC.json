@@ -1,0 +1,889 @@
+{
+  "ticker": "PNC",
+  "analysis": {
+    "ticker": "PNC",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 36.379251116454824,
+        "financial_sentiment": -0.125,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "4122Noninterest Income by Business Segment and Reconciliation to Consolidated Noninterest Income185 Forward-Looking Statements: From time to time, The PNC Financial Services Group, Inc.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 175256
+        },
+        {
+          "statement": "This Annual Report on (the “Report” or “”) includes such forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 175886
+        },
+        {
+          "statement": "l Report on (the “Report” or “”) includes such forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 175939
+        },
+        {
+          "statement": "ur Risk Management, Critical Accounting Estimates and Judgments, and Cautionary Statement Regarding Forward-Looking Information sections included in Item 7, and Note 20 Legal Proceedings.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 176126
+        },
+        {
+          "statement": "Given the new presidential administration, we anticipate new legislative and regulatory initiatives over the next several years, focused specifically on banking and other financial services in which we are engaged.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 184376
+        },
+        {
+          "statement": "e initiatives may include, for example, the rescission or re-proposal of regulations, policies, and guidance issued under the prior administration, and could also affect the agencies’ approach to ongoing federal court litigation involving regulations issued under the prior administration.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 184652
+        },
+        {
+          "statement": "In June 2025, we expect to receive PNC’s preliminary SCB for the four-quarter period beginning October 1, 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 205448
+        },
+        {
+          "statement": "Further, in providing guidance to the large BHCs participating in the CCAR exercise, such as PNC as discussed above, the Federal Reserve has expected capital plans to reflect conservative dividend payout ratios.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 212013
+        },
+        {
+          "statement": "If the final rule becomes effective, we expect the rule will increase PNC Bank’s obligations and compliance costs necessary to achieve a “Satisfactory” or “Outstanding” rating under the CRA.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 218083
+        },
+        {
+          "statement": "We expect the proposed rule, if finalized in its current form, would reduce PNC Bank’s interchange fee revenue.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 224663
+        },
+        {
+          "statement": "xecutives and other employees at banking organizations they regulate, both as general industry-wide guidance and guidance specific 8 The PNC Financial Services Group, Inc.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 224997
+        },
+        {
+          "statement": "other employees at banking organizations they regulate, both as general industry-wide guidance and guidance specific 8 The PNC Financial Services Group, Inc.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 225010
+        },
+        {
+          "statement": "This guidance is intended to ensure that the incentive compensation practices of covered banking organizations do not encourage excessive risk-taking.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 225124
+        },
+        {
+          "statement": "The FDIC has issued rules and guidance for determining whether deposits are considered “brokered.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 232734
+        },
+        {
+          "statement": "In August 2024, the Federal Reserve and FDIC finalized new guidance for holding company resolution plans submitted by domestic triennial full filers, such as PNC, under the Dodd-Frank Act.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 234617
+        },
+        {
+          "statement": "g—to the extent relevant to each resolution strategy—the expectations from the 2019 resolution plan guidance applicable to U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 235014
+        },
+        {
+          "statement": "ue October 1, 2025, per an extension provided by the Federal Reserve and FDIC in finalizing the new guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 235432
+        },
+        {
+          "statement": "By focusing on the growth and development of our talented team members, we believe we are best positioned to deliver results for our customers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 246565
+        },
+        {
+          "statement": "We believe when our employees deliver for our customers, they deliver for our communities and shareholders as well.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 246637
+        },
+        {
+          "statement": "We believe recruiting, developing and retaining talent starts with our leaders, and we measure our managers against our Leadership Standards.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 249803
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue from Contracts with Customers185Note 24 Subsequent Events189Glossary190Defined Terms190Acronyms194Item 9Changes in and Disagreements with Accountants on Accounting and Financial Disclosure194I",
+            "position": 168478
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 205955
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and improving profitability, while investing for the future and managing risk,",
+            "position": 384139
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue was stable at $21.6",
+            "position": 394880
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Share146Note 14 Fair Value147Note 15 Financial Derivatives160Note 16 Employee Benefit Plans166Note 17 Stock Based Compensation Plans172Note 18 Income Taxes173Note 19 Regulatory Matters175",
+            "position": 168179
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Common Share14686Fair Value Measurements – Recurring Basis Summary15187Reconciliation of Level 3 Assets and Liabilities15288Fair Value Measurements – Recurring Quantitative Information154",
+            "position": 173378
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, revenues, expenses, tax rates, capital and liquidity levels and ratios, asset levels, asset quality, financial position and other matters regarding or affecting us and our future business an",
+            "position": 175476
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings,",
+            "position": 180703
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss and assets currently required by ASC 280",
+            "position": 697275
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss in assessing segment performance and deciding how to allocate resources,",
+            "position": 697421
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS), Consolidated Statement of Comprehensive Income, Consolidated Balance Sheet,",
+            "position": 615649
+          },
+          {
+            "metric": "margin",
+            "context": "margin, and, unless offset by higher earning assets,",
+            "position": 324139
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 346397
+          },
+          {
+            "metric": "margin",
+            "context": "margin (non-GAAP) (b)2.66",
+            "position": 393247
+          },
+          {
+            "metric": "margin",
+            "context": "margin decreased to 2.66",
+            "position": 395116
+          },
+          {
+            "metric": "margin",
+            "context": "margin/income (non-GAAP)2.66",
+            "position": 406126
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of Visa Class A share price16.0",
+            "position": 824052
+          },
+          {
+            "metric": "market share",
+            "context": "market share and drive higher returns by delivering value-added solutions that help our clients better run their organizations,",
+            "position": 433523
+          },
+          {
+            "metric": "market share",
+            "context": "market share,",
+            "position": 587866
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common shareholders has been sufficient to fully fund the dividends and the prospective rate of earnings retention appears to be consistent with the corporation’s capital needs",
+            "position": 211742
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$5,953 $5,647 $6,113 Net income attributable to common shareholders$5,529 $5,153 $5,735 Per Common ShareDiluted earnings$13.74",
+            "position": 392942
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $5.6",
+            "position": 394661
+          },
+          {
+            "metric": "net income",
+            "context": "net income and an improvement in AOCI,",
+            "position": 399397
+          },
+          {
+            "metric": "net income",
+            "context": "Net income for 2024 was $6.0",
+            "position": 404940
+          },
+          {
+            "metric": "assets",
+            "context": "Assets by Type6422Change in Nonperforming Assets6523Accruing Loans Past Due6524Selected Loan Maturities and Interest Sensitivity6625Allowance for Credit Losses by Loan Class6826Loan Charge-Offs and Re",
+            "position": 170053
+          },
+          {
+            "metric": "assets",
+            "context": "Assets and Liabilities13972Operating Lease Term and Discount Rates of Lessee Arrangements13973Future Lease Payments for Operating Lease Liability Arrangements14074Premises, Equipment and Leasehold Imp",
+            "position": 172568
+          },
+          {
+            "metric": "assets",
+            "context": "Assets and Liabilities15288Fair Value Measurements – Recurring Quantitative Information15489Fair Value Measurements – Nonrecurring15690Fair Value Option – Fair Value and Principal Balances15791Fair Va",
+            "position": 173488
+          },
+          {
+            "metric": "assets",
+            "context": "assets, total deposits and total shareholders’ equity were $560.0",
+            "position": 177263
+          },
+          {
+            "metric": "assets",
+            "context": "assets or deposits,",
+            "position": 183167
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities Offsetting16599Credit-Risk Contingent Features 166100Reconciliation of Changes in Projected Benefit Obligation and Change in Plan Assets167101Asset Strategy Allocations168102Pension Plan V",
+            "position": 174089
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities) from CET1 capital to the extent such categories individually exceed 25% of the institution’s adjusted CET1",
+            "position": 190377
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of less than $20",
+            "position": 218947
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities would exceed 10",
+            "position": 227834
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities classified as higher risk by the FDIC,",
+            "position": 230147
+          },
+          {
+            "metric": "equity",
+            "context": "equity of Number of shares of registrant’s common stock outstanding at February 3, 2025: 395,749,583DOCUMENTS INCORPORATED BY REFERENCEPortions of the definitive Proxy Statement of The PNC Financial S",
+            "position": 165894
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities33Common Stock Performance Graph34Item 6Reserved35Item 7Management’s Discussion and Analysis of Financial Condition and Res",
+            "position": 166593
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Loan Statistics6320Auto Loan Statistics6421Nonperforming Assets by Type6422Change in Nonperforming Assets6523Accruing Loans Past Due6524Selected Loan Maturities and Interest Sensitivity6625Allo",
+            "position": 169989
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Loan Classes12452Credit Quality Indicators for Automobile, Credit Card, Education and Other Consumer Loan Classes12653Loan Modifications Granted to Borrowers Experiencing Financial Difficulty12",
+            "position": 171591
+          },
+          {
+            "metric": "equity",
+            "context": "equity were $560.0",
+            "position": 177310
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$5.00",
+            "position": 165294
+          },
+          {
+            "text": "$1.80 ",
+            "position": 165384
+          },
+          {
+            "text": "$1.00",
+            "position": 165451
+          },
+          {
+            "text": "$61.6 billion",
+            "position": 165849
+          },
+          {
+            "text": "$560.0 billion",
+            "position": 177322
+          },
+          {
+            "text": "$426.7 billion",
+            "position": 177338
+          },
+          {
+            "text": "$54.4 billion",
+            "position": 177357
+          },
+          {
+            "text": "$16.0 billion",
+            "position": 178276
+          },
+          {
+            "text": "$9.0 billion",
+            "position": 178336
+          },
+          {
+            "text": "$100 billion",
+            "position": 187986
+          },
+          {
+            "text": "$250 billion",
+            "position": 188439
+          },
+          {
+            "text": "$700 billion",
+            "position": 188467
+          },
+          {
+            "text": "$75 billion",
+            "position": 188569
+          },
+          {
+            "text": "$24.0 billion",
+            "position": 188895
+          },
+          {
+            "text": "$43.7 billion",
+            "position": 209160
+          },
+          {
+            "text": "$10 billion",
+            "position": 214811
+          },
+          {
+            "text": "$20 billion",
+            "position": 218972
+          },
+          {
+            "text": "$50 billion",
+            "position": 229461
+          },
+          {
+            "text": "$500 billion",
+            "position": 229517
+          },
+          {
+            "text": "$5 billion",
+            "position": 231336
+          },
+          {
+            "text": "$515 million",
+            "position": 231961
+          },
+          {
+            "text": "$130 million",
+            "position": 232104
+          },
+          {
+            "text": "$18 million",
+            "position": 232211
+          },
+          {
+            "text": "$179.94 ",
+            "position": 379514
+          },
+          {
+            "text": "$205.22 ",
+            "position": 379552
+          },
+          {
+            "text": "$198.89 ",
+            "position": 379590
+          },
+          {
+            "text": "$197.11 ",
+            "position": 379620
+          },
+          {
+            "text": "$100 ",
+            "position": 381355
+          },
+          {
+            "text": "$97.3 ",
+            "position": 382280
+          },
+          {
+            "text": "$134.4 ",
+            "position": 382286
+          },
+          {
+            "text": "$109.5 ",
+            "position": 382293
+          },
+          {
+            "text": "$112.4 ",
+            "position": 382300
+          },
+          {
+            "text": "$145.5 ",
+            "position": 382307
+          },
+          {
+            "text": "$118.4 ",
+            "position": 382337
+          },
+          {
+            "text": "$152.3 ",
+            "position": 382344
+          },
+          {
+            "text": "$124.7 ",
+            "position": 382351
+          },
+          {
+            "text": "$157.5 ",
+            "position": 382358
+          },
+          {
+            "text": "$196.8 ",
+            "position": 382365
+          },
+          {
+            "text": "$86.2 ",
+            "position": 382396
+          },
+          {
+            "text": "$116.8 ",
+            "position": 382402
+          },
+          {
+            "text": "$94.4 ",
+            "position": 382409
+          },
+          {
+            "text": "$104.7 ",
+            "position": 382415
+          },
+          {
+            "text": "$144.7 ",
+            "position": 382422
+          },
+          {
+            "text": "$89.7 ",
+            "position": 382453
+          },
+          {
+            "text": "$124.1 ",
+            "position": 382459
+          },
+          {
+            "text": "$97.5 ",
+            "position": 382466
+          },
+          {
+            "text": "$96.7 ",
+            "position": 382472
+          },
+          {
+            "text": "$132.6 ",
+            "position": 382478
+          },
+          {
+            "text": "$91.1 ",
+            "position": 382505
+          },
+          {
+            "text": "$126.3 ",
+            "position": 382511
+          }
+        ],
+        "percentages": [
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 190458
+          },
+          {
+            "text": "4.5%",
+            "value": 4.5,
+            "position": 193306
+          },
+          {
+            "text": "6.0%",
+            "value": 6.0,
+            "position": 193338
+          },
+          {
+            "text": "8.0%",
+            "value": 8.0,
+            "position": 193373
+          },
+          {
+            "text": "2.5%",
+            "value": 2.5,
+            "position": 193914
+          },
+          {
+            "text": "7.0%",
+            "value": 7.0,
+            "position": 194933
+          },
+          {
+            "text": "8.5%",
+            "value": 8.5,
+            "position": 194974
+          },
+          {
+            "text": "10.5%",
+            "value": 10.5,
+            "position": 195018
+          },
+          {
+            "text": "4.0%",
+            "value": 4.0,
+            "position": 197011
+          },
+          {
+            "text": "3.0%",
+            "value": 3.0,
+            "position": 197112
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 201154
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 201233
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 207646
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 221761
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 226302
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 250287
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 380347
+          },
+          {
+            "text": "7.8 %",
+            "value": 7.8,
+            "position": 382314
+          },
+          {
+            "text": "14.5 %",
+            "value": 14.5,
+            "position": 382372
+          },
+          {
+            "text": "7.7 %",
+            "value": 7.7,
+            "position": 382429
+          },
+          {
+            "text": "5.8 %",
+            "value": 5.8,
+            "position": 382485
+          },
+          {
+            "text": "7.5 %",
+            "value": 7.5,
+            "position": 382538
+          },
+          {
+            "text": "2.66 %",
+            "value": 2.66,
+            "position": 393268
+          },
+          {
+            "text": "2.76 %",
+            "value": 2.76,
+            "position": 393274
+          },
+          {
+            "text": "2.65 %",
+            "value": 2.65,
+            "position": 393280
+          },
+          {
+            "text": "37 %",
+            "value": 37.0,
+            "position": 393321
+          },
+          {
+            "text": "35 %",
+            "value": 35.0,
+            "position": 393325
+          },
+          {
+            "text": "38 %",
+            "value": 38.0,
+            "position": 393329
+          },
+          {
+            "text": "63 %",
+            "value": 63.0,
+            "position": 393343
+          },
+          {
+            "text": "65 %",
+            "value": 65.0,
+            "position": 393347
+          },
+          {
+            "text": "62 %",
+            "value": 62.0,
+            "position": 393351
+          },
+          {
+            "text": "11.92 %",
+            "value": 11.92,
+            "position": 393401
+          },
+          {
+            "text": "12.35 %",
+            "value": 12.35,
+            "position": 393408
+          },
+          {
+            "text": "13.52 %",
+            "value": 13.52,
+            "position": 393415
+          },
+          {
+            "text": "1.05 %",
+            "value": 1.05,
+            "position": 393437
+          },
+          {
+            "text": "1.01 %",
+            "value": 1.01,
+            "position": 393443
+          },
+          {
+            "text": "1.11 %",
+            "value": 1.11,
+            "position": 393449
+          },
+          {
+            "text": "110.5 %",
+            "value": 110.5,
+            "position": 394284
+          },
+          {
+            "text": "9.9 %",
+            "value": 9.9,
+            "position": 394291
+          },
+          {
+            "text": "45.9 %",
+            "value": 45.9,
+            "position": 394311
+          },
+          {
+            "text": "47.8 %",
+            "value": 47.8,
+            "position": 394317
+          },
+          {
+            "text": "74 %",
+            "value": 74.0,
+            "position": 394340
+          },
+          {
+            "text": "76 %",
+            "value": 76.0,
+            "position": 394344
+          },
+          {
+            "text": "8.7 %",
+            "value": 8.7,
+            "position": 394391
+          },
+          {
+            "text": "8.0 %",
+            "value": 8.0,
+            "position": 394396
+          },
+          {
+            "text": "8.2 %",
+            "value": 8.2,
+            "position": 394454
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 394964
+          },
+          {
+            "text": "2.66%",
+            "value": 2.66,
+            "position": 395136
+          },
+          {
+            "text": "2.76%",
+            "value": 2.76,
+            "position": 395163
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 395225
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 384
+          },
+          {
+            "category": "operational_risk",
+            "count": 48
+          },
+          {
+            "category": "financial_risk",
+            "count": 1630
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 356
+          },
+          {
+            "category": "technology_risk",
+            "count": 367
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1005983,
+        "filtered_length": 996283,
+        "removed_ratio": 0.96,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.83108108108108,
+      "confidence": 0.09832932627484076,
+      "overall_score": 50.16891891891892,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.75,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.0033783783783783994,
+        "risk_adjusted_signal": 0.022722578464550634,
+        "expected_return_annualized": 0.006423484295105955,
+        "signal_sharpe_ratio": 0.000428232286340397,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.022722578464550634,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.022722578464550634,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.125,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.022722578464550634,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.0033783783783783994
+      },
+      "risk_adjusted_signal": 0.022722578464550634,
+      "expected_return": 6.423484295105955e-05,
+      "signal_sharpe": 0.000428232286340397,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.16891891891892,
+    "confidence": 0.09832932627484076,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:31:10.483880",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-PNC.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

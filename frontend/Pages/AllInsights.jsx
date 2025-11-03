@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { getStockDataForQuery } from '@/utils/stockData';
 import { Sparkles, Brain, TrendingUp, AlertCircle, FileText, BarChart3, Loader2 } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export default function AIInsights() {
       // Fetch stock data from jeu_de_donnees if query mentions any tickers
       const stockData = await getStockDataForQuery(queryText);
       
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are an institutional investment analyst working for CDPQ (La Caisse). Analyze this query with deep financial expertise: "${queryText}". 
 
 ${stockData ? `${stockData}\n\nUse the above stock data from our dataset as reference for financial metrics when analyzing the query.\n\n` : ''}Provide:

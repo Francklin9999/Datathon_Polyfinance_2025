@@ -1,0 +1,941 @@
+{
+  "ticker": "KKR",
+  "analysis": {
+    "ticker": "KKR",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 54.69365818702974,
+        "financial_sentiment": -0.05357142857142857,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Forward-looking statements are subject to various risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 230062
+        },
+        {
+          "statement": "We believe these factors include those described in the section entitled \"Risk Factors\" in this Annual Report on for the year ended December 31, 2024 (our \"Annual Report\").",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 230381
+        },
+        {
+          "statement": "We do not undertake any obligation to publicly update or revise any forward-looking statement, whether as a result of new information, future developments or otherwise, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 230819
+        },
+        {
+          "statement": "We believe that providing these performance measures on a supplemental basis to our GAAP results is helpful to stockholders in assessing the overall performance of KKR's businesses.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 238912
+        },
+        {
+          "statement": "trategy, our objective is to acquire and manage controlling interests in operating companies, which we intend to hold over a longer period of time and that we believe have a lower anticipated risk profile than our investments in businesses acquired through our traditional private equity strategy.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 250420
+        },
+        {
+          "statement": "ing interests in operating companies, which we intend to hold over a longer period of time and that we believe have a lower anticipated risk profile than our investments in businesses acquired through our traditional private equity strategy.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 250476
+        },
+        {
+          "statement": "ollaboratively across business lines, departments, and geographies, as appropriate, to achieve what we believe are the best investment results for our clients and the firm.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 250924
+        },
+        {
+          "statement": "We believe that these aspects of our business help us continue to grow our asset management business and deliver strong investment performance in a variety of economic and financial conditions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 255379
+        },
+        {
+          "statement": "We believe that the combination of our industry knowledge, investment experience, and operational expertise provides KKR with the ability to identify and create value in investment opportunities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 258164
+        },
+        {
+          "statement": "Our core private equity investments are made in companies that, among other things, we believe are more stable and less cyclical, and typically have lower average leverage over our holding period, than those in our traditional private equity funds.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 258934
+        },
+        {
+          "statement": "franchises with global operations, strong management teams, and attractive growth prospects, which we believe will provide benefits through a broad range of business conditions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 265753
+        },
+        {
+          "statement": "We augment these resources with operational guidance from operating professionals at KKR Capstone, senior advisors, other advisors and investment teams, and with \"100-Day Plans\" that focus the firm's efforts and drive our strategies.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 270375
+        },
+        {
+          "statement": "We believe that the global infrastructure market provides an opportunity for the firm's private investment, operational improvement capabilities and stakeholder engagement.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 280811
+        },
+        {
+          "statement": "tative of performance in any period other than the period discussed above and is not a guarantee of future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 293419
+        },
+        {
+          "statement": "ormance of certain of our Private Equity and Real Assets investment vehicles since inception, which we believe illustrates the benefits of our investment approach.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 293765
+        },
+        {
+          "statement": "The information presented below is not intended to be representative of any past or future performance for any particular period other than the period presented below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 294110
+        },
+        {
+          "statement": "Past performance is no guarantee of future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 294230
+        },
+        {
+          "statement": "For more information, see \"Risk Factors—Risks Related to Our Investment Activities—Future results of our investments may be different than, and may not achieve the levels of, any of our historical returns.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 302290
+        },
+        {
+          "statement": "The information presented below is not intended to be representative of any past or future performance for any particular period other than the period presented below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 312102
+        },
+        {
+          "statement": "The information presented below is not intended to be representative of any past or future performance for any particular period other than the period presented below.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 316820
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue enhancements with respect to a targeted portfolio company,",
+            "position": 365231
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986,",
+            "position": 537277
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, as amended (the \"Code\"), as in effect prior to 2018), partnership representative (as defined in the Code), officer, director, employee, agent, fiduciary or trustee of any of KKR ",
+            "position": 847003
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and expenses are based are intended to represent an estimation of the benefits that are expected to be payable to, and fees or premiums that are expected to be collectible from,",
+            "position": 946050
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and expenses, and the assumptions underlying those items at least annually, usually in the third quarter,",
+            "position": 946332
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings, Total Segment Earnings, Fee Related Earnings (\"FRE\"), Insurance Operating Earnings, Strategic Holdings Operating Earnings, Total Investing Earnings,",
+            "position": 228009
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings over a longer period of time from such segment, and the belief that such segment is an unconstrained business line); KKR’s ability to grow its AUM, to deploy capital, to realize unrealized in",
+            "position": 228682
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings, Total Investing Earnings, Total Operating Earnings, FRE,",
+            "position": 238802
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flow;•“clawback” provisions in our governing agreements;•inability to raise additional or successor funds successfully;•intense competition in the investment management and insurance",
+            "position": 241928
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings are highly variable from quarter to quarter due to volatility of investment valuations, the investment returns by our funds and other investment vehicles,",
+            "position": 421601
+          },
+          {
+            "metric": "profit",
+            "context": "profit shifting (\"BEPS\") project, which is focused on a number of issues, including profit shifting among affiliated entities in different jurisdictions,",
+            "position": 466143
+          },
+          {
+            "metric": "profit",
+            "context": "profit participating equity interests of their subsidiaries or merge, consolidate or sell,",
+            "position": 1549360
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing arrangements in accordance with Accounting Standard Codification 710, Compensation – General (\"ASC 710",
+            "position": 1617858
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing plan under ASC 710, as well as other components within scope of ASC 718,",
+            "position": 1619531
+          },
+          {
+            "metric": "profit",
+            "context": "profit educational and cultural institutions, including co-founding and serving on the board of The Asian American Foundation, as a member of Harvard University’s Global Advisory Council,",
+            "position": 1694809
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA$5,559,515 $4,202,071 $4,731,432 (1)Represents equity-based compensation expense in connection with the allocation of KKR Holdings Units,",
+            "position": 1088551
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Multiple18.9",
+            "position": 1492837
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Multiple17.1",
+            "position": 1492903
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Exit Multiple14.8",
+            "position": 1493040
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Multiple5.2",
+            "position": 1494233
+          },
+          {
+            "metric": "margin",
+            "context": "margin stability,",
+            "position": 325889
+          },
+          {
+            "metric": "margin",
+            "context": "margin practices and procedures, approval standards for individuals, anti-money laundering, periodic reporting,",
+            "position": 392326
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements,",
+            "position": 572543
+          },
+          {
+            "metric": "margin",
+            "context": "margin, capital requirements, and position limits,",
+            "position": 572793
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements for all categories of financing,",
+            "position": 659945
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate and considering an adjustment to reflect the risk of nonperformance on our obligation and inputs such as projected withdrawal and surrender activity,",
+            "position": 1286661
+          },
+          {
+            "metric": "market share",
+            "context": "market share,",
+            "position": 366708
+          },
+          {
+            "metric": "market share",
+            "context": "market share or breadth of distribution, assume a greater level of risk while maintaining financial strength ratings, or have higher financial strength, claims-paying or credit ratings than Global Atl",
+            "position": 445821
+          },
+          {
+            "metric": "market share",
+            "context": "market share or increase assets under management;•with respect to our insurance business, technological advancements and innovation are occurring at a rapid pace in distribution, underwriting, recordk",
+            "position": 446859
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow, future capital structures of such companies, future capital investments by us in such companies, future market and economic conditions, including interest rates,",
+            "position": 522396
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income, Total Operating Earnings, Total Segment Earnings, Fee Related Earnings (\"FRE\"), Insurance Operating Earnings, Strategic Holdings Operating Earnings, Total Investing Earnings,",
+            "position": 227981
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income, Total Asset Management Segment Revenues, Total Segment Earnings, Total Investing Earnings, Total Operating Earnings, FRE,",
+            "position": 238735
+          },
+          {
+            "metric": "net income",
+            "context": "net income under GAAP;•reinsurance assets held in trust, which limit Global Atlantic’s ability to invest those assets;•triggering a recapture event under reinsurance agreements where Global Atlantic’s",
+            "position": 245435
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income (\"ANI\") is a performance measure of KKR’s earnings,",
+            "position": 903331
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income (Loss)4,906,037 5,357,086 (451,049)Net Income (Loss) Attributable to Redeemable Noncontrolling Interests73,149 (5,405)78,554 Net Income (Loss) Attributable to Noncontrolling Interests1,756,",
+            "position": 922242
+          },
+          {
+            "metric": "assets",
+            "context": "assets under management (“AUM”), fee paying assets under management (“FPAUM”), Adjusted Net Income, Total Operating Earnings, Total Segment Earnings, Fee Related Earnings (\"FRE\"), Insurance Operating ",
+            "position": 227893
+          },
+          {
+            "metric": "assets",
+            "context": "assets we refer to as “perpetual capital” being subject to material reduction;•high variability in earnings and cash flow;•“clawback” provisions in our governing agreements;•inability to raise additio",
+            "position": 241829
+          },
+          {
+            "metric": "assets",
+            "context": "assets can be subjective;•the impact on valuations by market and economic conditions;•changes in debt or equity markets;•dependence on significant leverage in our investments;•exposures to, and invest",
+            "position": 243241
+          },
+          {
+            "metric": "assets",
+            "context": "assets held in trust, which limit Global Atlantic’s ability to invest those assets;•triggering a recapture event under reinsurance agreements where Global Atlantic’s clients may recapture some or all ",
+            "position": 245470
+          },
+          {
+            "metric": "assets",
+            "context": "assets and revenues of our investment vehicles not being directly available to us or our common stockholders;•declining common stock price due to the large number of shares eligible for future sale an",
+            "position": 246838
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities by business and product type as of December 31, 2024,",
+            "position": 348758
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and penalties,",
+            "position": 378344
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities has added, and is expected to add,",
+            "position": 429155
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters, and Issuer Purchases of Equity Securities130 Item 6",
+            "position": 225758
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests in KKR’s business, or to percentage interests in KKR’s business, reflect the aggregate equity interests in KKR Group Partnership,",
+            "position": 232436
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Incentive Plan (the \"2019 Equity Incentive Plan\"),",
+            "position": 233723
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Incentive Plan and are currently held by certain Global Atlantic employees who received 2.6",
+            "position": 233911
+          },
+          {
+            "metric": "equity",
+            "context": "equity awards actually granted pursuant to the 2019 Equity Incentive Plan, and (iv) shares of common stock issuable from exchangeable securities,",
+            "position": 238004
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$790 billion",
+            "position": 248380
+          },
+          {
+            "text": "$28.6 billion",
+            "position": 255935
+          },
+          {
+            "text": "$12.2 billion",
+            "position": 256026
+          },
+          {
+            "text": "$11.0 billion",
+            "position": 256082
+          },
+          {
+            "text": "$4.2 billion",
+            "position": 256204
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 256255
+          },
+          {
+            "text": "$195.4 billion",
+            "position": 257239
+          },
+          {
+            "text": "$139.9 billion",
+            "position": 257276
+          },
+          {
+            "text": "$37.4 billion",
+            "position": 257322
+          },
+          {
+            "text": "$18.1 billion",
+            "position": 257364
+          },
+          {
+            "text": "$18,400 ",
+            "position": 261614
+          },
+          {
+            "text": "$6,271 ",
+            "position": 261622
+          },
+          {
+            "text": "$12,431 ",
+            "position": 261629
+          },
+          {
+            "text": "$327 ",
+            "position": 261637
+          },
+          {
+            "text": "$12,132 ",
+            "position": 261642
+          },
+          {
+            "text": "$15,441 ",
+            "position": 261650
+          },
+          {
+            "text": "$487 ",
+            "position": 261658
+          },
+          {
+            "text": "$207,651 ",
+            "position": 263480
+          },
+          {
+            "text": "$54,799 ",
+            "position": 263489
+          },
+          {
+            "text": "$160,284 ",
+            "position": 263497
+          },
+          {
+            "text": "$158,852 ",
+            "position": 263506
+          },
+          {
+            "text": "$90,483 ",
+            "position": 263515
+          },
+          {
+            "text": "$132,641 ",
+            "position": 263523
+          },
+          {
+            "text": "$6,310 ",
+            "position": 263532
+          },
+          {
+            "text": "$345 billion",
+            "position": 265413
+          },
+          {
+            "text": "$208.1 billion",
+            "position": 271162
+          },
+          {
+            "text": "$166.0 billion",
+            "position": 279934
+          },
+          {
+            "text": "$79.9 billion",
+            "position": 279971
+          },
+          {
+            "text": "$79.5 billion",
+            "position": 280004
+          },
+          {
+            "text": "$42.5 billion",
+            "position": 280043
+          },
+          {
+            "text": "$37.0 billion",
+            "position": 280083
+          },
+          {
+            "text": "$5.2 billion",
+            "position": 280121
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 280149
+          },
+          {
+            "text": "$10,788 ",
+            "position": 285786
+          },
+          {
+            "text": "$97,957 ",
+            "position": 287442
+          },
+          {
+            "text": "$32,537 ",
+            "position": 287450
+          },
+          {
+            "text": "$67,675 ",
+            "position": 287458
+          },
+          {
+            "text": "$26,013 ",
+            "position": 287466
+          },
+          {
+            "text": "$52,994 ",
+            "position": 287474
+          },
+          {
+            "text": "$61,650 ",
+            "position": 287482
+          },
+          {
+            "text": "$1,343 ",
+            "position": 287490
+          },
+          {
+            "text": "$203.4 billion",
+            "position": 292606
+          },
+          {
+            "text": "$381.9 billion",
+            "position": 292652
+          },
+          {
+            "text": "$31 ",
+            "position": 294564
+          },
+          {
+            "text": "$537 ",
+            "position": 294572
+          },
+          {
+            "text": "$262,448 ",
+            "position": 298540
+          },
+          {
+            "text": "$203,388 ",
+            "position": 298549
+          },
+          {
+            "text": "$230,847 ",
+            "position": 298558
+          },
+          {
+            "text": "$151,022 ",
+            "position": 298567
+          },
+          {
+            "text": "$381,869 ",
+            "position": 298576
+          }
+        ],
+        "percentages": [
+          {
+            "text": "4.625%",
+            "value": 4.625,
+            "position": 224926
+          },
+          {
+            "text": "100.0%",
+            "value": 100.0,
+            "position": 236234
+          },
+          {
+            "text": "93%",
+            "value": 93.0,
+            "position": 254926
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 273311
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 273498
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 276111
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 276117
+          },
+          {
+            "text": "0.75%",
+            "value": 0.75,
+            "position": 276195
+          },
+          {
+            "text": "1.50%",
+            "value": 1.5,
+            "position": 276204
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 277714
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 279106
+          },
+          {
+            "text": "1.5%",
+            "value": 1.5,
+            "position": 290691
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 290943
+          },
+          {
+            "text": "0.5%",
+            "value": 0.5,
+            "position": 291389
+          },
+          {
+            "text": "1.2%",
+            "value": 1.2,
+            "position": 291397
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 291548
+          },
+          {
+            "text": "1.25%",
+            "value": 1.25,
+            "position": 291943
+          },
+          {
+            "text": "25.5%",
+            "value": 25.5,
+            "position": 292889
+          },
+          {
+            "text": "12.2%",
+            "value": 12.2,
+            "position": 292912
+          },
+          {
+            "text": "9.5%",
+            "value": 9.5,
+            "position": 292922
+          },
+          {
+            "text": "39.5 %",
+            "value": 39.5,
+            "position": 294585
+          },
+          {
+            "text": "35.5 %",
+            "value": 35.5,
+            "position": 294591
+          },
+          {
+            "text": "29.0 %",
+            "value": 29.0,
+            "position": 294633
+          },
+          {
+            "text": "25.8 %",
+            "value": 25.8,
+            "position": 294639
+          },
+          {
+            "text": "48.1 %",
+            "value": 48.1,
+            "position": 294680
+          },
+          {
+            "text": "39.2 %",
+            "value": 39.2,
+            "position": 294686
+          },
+          {
+            "text": "34.5 %",
+            "value": 34.5,
+            "position": 294731
+          },
+          {
+            "text": "28.9 %",
+            "value": 28.9,
+            "position": 294737
+          },
+          {
+            "text": "34.4 %",
+            "value": 34.4,
+            "position": 294778
+          },
+          {
+            "text": "12.1 %",
+            "value": 12.1,
+            "position": 294832
+          },
+          {
+            "text": "8.9 %",
+            "value": 8.9,
+            "position": 294838
+          },
+          {
+            "text": "23.6 %",
+            "value": 23.6,
+            "position": 294882
+          },
+          {
+            "text": "16.8 %",
+            "value": 16.8,
+            "position": 294888
+          },
+          {
+            "text": "18.0 %",
+            "value": 18.0,
+            "position": 294935
+          },
+          {
+            "text": "13.3 %",
+            "value": 13.3,
+            "position": 294941
+          },
+          {
+            "text": "26.1 %",
+            "value": 26.1,
+            "position": 295004
+          },
+          {
+            "text": "19.9 %",
+            "value": 19.9,
+            "position": 295010
+          },
+          {
+            "text": "26.9 %",
+            "value": 26.9,
+            "position": 295081
+          },
+          {
+            "text": "20.2 %",
+            "value": 20.2,
+            "position": 295087
+          },
+          {
+            "text": "22.0 %",
+            "value": 22.0,
+            "position": 295147
+          },
+          {
+            "text": "16.1 %",
+            "value": 16.1,
+            "position": 295153
+          },
+          {
+            "text": "6.1 %",
+            "value": 6.1,
+            "position": 295212
+          },
+          {
+            "text": "4.5 %",
+            "value": 4.5,
+            "position": 295217
+          },
+          {
+            "text": "11.9 %",
+            "value": 11.9,
+            "position": 295272
+          },
+          {
+            "text": "9.3 %",
+            "value": 9.3,
+            "position": 295278
+          },
+          {
+            "text": "18.9 %",
+            "value": 18.9,
+            "position": 295330
+          },
+          {
+            "text": "13.7 %",
+            "value": 13.7,
+            "position": 295336
+          },
+          {
+            "text": "16.4 %",
+            "value": 16.4,
+            "position": 295399
+          },
+          {
+            "text": "11.2 %",
+            "value": 11.2,
+            "position": 295405
+          },
+          {
+            "text": "0.6 %",
+            "value": 0.6,
+            "position": 295465
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 726
+          },
+          {
+            "category": "operational_risk",
+            "count": 78
+          },
+          {
+            "category": "financial_risk",
+            "count": 1740
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 533
+          },
+          {
+            "category": "technology_risk",
+            "count": 591
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 10.101010101010102
+        }
+      ],
+      "deduplication": {
+        "original_length": 1869839,
+        "filtered_length": 1853090,
+        "removed_ratio": 0.9,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.383204633204635,
+      "confidence": 0.9422620336204434,
+      "overall_score": 51.616795366795365,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.32142857142857,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.032335907335907355,
+        "risk_adjusted_signal": 0.21748753673212629,
+        "expected_return_annualized": 0.061481921110299514,
+        "signal_sharpe_ratio": 0.004098794740686635,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.21748753673212629,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.21748753673212629,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.05357142857142857,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.21748753673212629,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.032335907335907355
+      },
+      "risk_adjusted_signal": 0.21748753673212629,
+      "expected_return": 0.0006148192111029952,
+      "signal_sharpe": 0.004098794740686635,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.616795366795365,
+    "confidence": 0.9422620336204434,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:27:23.713612",
+  "filing_date": "2025-02-28",
+  "filing_filename": "2025-02-28-10k-KKR.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

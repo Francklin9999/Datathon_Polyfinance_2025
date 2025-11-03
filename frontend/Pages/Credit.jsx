@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -13,7 +13,7 @@ export default function Credit() {
 
   const { data: riskMetrics = [] } = useQuery({
     queryKey: ['risk', region],
-    queryFn: () => base44.entities.RiskMetrics.filter({ region }),
+    queryFn: () => api.entities.RiskMetrics.filter({ region }),
     initialData: [],
   });
 
@@ -22,7 +22,7 @@ export default function Credit() {
   const handleGenerateSummary = async () => {
     setIsGenerating(true);
     try {
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a credit desk analyst. Provide a brief (3-5 sentences) summary of ${region} credit market conditions based on: yield levels ${risk?.yield10s}, volatility ${risk?.volatility20d}, spreads dynamics. Focus on: credit spreads, default risk, corporate vs sovereign, high yield trends. Institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import React, { useState, useEffect } from 'react';
+import { api } from '@/api/apiClient';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,52 +15,109 @@ import {
   CheckCircle,
   Zap,
   Sparkles,
-  Activity
+  Activity,
+  RefreshCw,
+  Info,
+  BarChart3,
+  Share2,
+  Download,
+  Copy,
+  FileText
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, RadarChart, 
   PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar 
 } from 'recharts';
+import { usePortfolio } from '@/contexts/PortfolioContext';
+import PortfolioPill from '@/components/PortfolioPill';
 
 export default function NLPQuantStrategy() {
-  const [ticker, setTicker] = useState('');
-  const [documentText, setDocumentText] = useState('');
-  const [previousFiling, setPreviousFiling] = useState('');
-  const [benchmarkTickers, setBenchmarkTickers] = useState('');
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysis, setAnalysis] = useState(null);
+  const { portfolio, getPortfolioStats } = usePortfolio();
+  const [selectedTicker, setSelectedTicker] = useState('');
+  const [nlpAnalysis, setNlpAnalysis] = useState(null);
+  const [topSignals, setTopSignals] = useState([]);
+  const [cacheMetadata, setCacheMetadata] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [descriptions, setDescriptions] = useState(null);
+  const [loadingDescriptions, setLoadingDescriptions] = useState(false);
 
-  const handleAnalyze = async () => {
-    if (!ticker) {
-      setError('Ticker symbol is required');
-      return;
+  const stats = getPortfolioStats();
+  const tickers = stats?.tickers || [];
+
+  // Load cache metadata and top signals on mount
+  useEffect(() => {
+    loadCacheMetadata();
+    loadTopSignals();
+  }, []);
+
+  const loadCacheMetadata = async () => {
+    try {
+      const metadata = await api.nlpCache.getMetadata();
+      setCacheMetadata(metadata);
+    } catch (err) {
+      console.error('Error loading cache metadata:', err);
     }
+  };
 
-    setIsAnalyzing(true);
+  const loadTopSignals = async () => {
+    try {
+      const result = await api.nlpCache.getTopSignals(20);
+      setTopSignals(result.signals || []);
+    } catch (err) {
+      console.error('Error loading top signals:', err);
+    }
+  };
+
+  const loadTickerAnalysis = async (ticker) => {
+    if (!ticker) return;
+
+    setLoading(true);
     setError(null);
+    setNlpAnalysis(null);
+    setDescriptions(null);
 
     try {
-      const benchmarkList = benchmarkTickers 
-        ? benchmarkTickers.split(',').map(t => t.trim().toUpperCase()).filter(Boolean)
-        : [];
-
-      const result = await base44.analytics.nlpQuantStrategy(
-        ticker.toUpperCase(),
-        documentText || undefined, // Document text is optional - will auto-find from disk
-        previousFiling || undefined,
-        benchmarkList.length > 0 ? benchmarkList : undefined
-      );
-
-      setAnalysis(result);
+      const result = await api.nlpCache.getTicker(ticker.toUpperCase());
+      setNlpAnalysis(result);
+      
+      // Generate descriptions in the background
+      loadDescriptions(ticker.toUpperCase());
     } catch (err) {
-      console.error('NLP analysis error:', err);
-      setError(err.message || 'Failed to perform NLP analysis');
+      console.error('Error loading NLP analysis:', err);
+      setError(err.message || 'Failed to load NLP analysis for this ticker');
     } finally {
-      setIsAnalyzing(false);
+      setLoading(false);
+    }
+  };
+
+  const loadDescriptions = async (ticker) => {
+    if (!ticker) return;
+    
+    setLoadingDescriptions(true);
+    try {
+      const result = await api.nlpCache.generateDescriptions(ticker);
+      setDescriptions(result.descriptions || {});
+    } catch (err) {
+      console.error('Error loading descriptions:', err);
+      // Don't set error state - descriptions are optional
+    } finally {
+      setLoadingDescriptions(false);
+    }
+  };
+
+  const handleTickerSelect = (ticker) => {
+    setSelectedTicker(ticker);
+    loadTickerAnalysis(ticker);
+  };
+
+  const handleRefresh = () => {
+    loadCacheMetadata();
+    loadTopSignals();
+    if (selectedTicker) {
+      loadTickerAnalysis(selectedTicker);
     }
   };
 
@@ -78,6 +135,256 @@ export default function NLPQuantStrategy() {
 
   const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899'];
 
+  const analysis = nlpAnalysis?.analysis;
+
+  // Export/Share functions
+  const exportAsJSON = () => {
+    if (!nlpAnalysis) return;
+    
+    const dataStr = JSON.stringify(nlpAnalysis, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `NLP_Analysis_${nlpAnalysis.ticker}_${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  const exportAsText = () => {
+    if (!nlpAnalysis || !analysis) return;
+
+    let text = `NLP QUANTITATIVE STRATEGY ANALYSIS REPORT\n`;
+    text += `=============================================\n\n`;
+    text += `Ticker: ${nlpAnalysis.ticker}\n`;
+    text += `Filing Date: ${nlpAnalysis.filing_date || 'N/A'}\n`;
+    text += `Cached At: ${new Date(nlpAnalysis.cached_at).toLocaleString()}\n`;
+    text += `File: ${nlpAnalysis.filing_filename || 'N/A'}\n\n`;
+
+    // Add overall description if available
+    if (descriptions?.overview) {
+      text += `OVERVIEW\n`;
+      text += `--------\n`;
+      text += `${descriptions.overview}\n\n`;
+    }
+
+    // Trading Signal - check both structures
+    const tradingSignal = analysis.trading_signals || analysis.trading_signal;
+    if (tradingSignal) {
+      text += `TRADING SIGNAL\n`;
+      text += `--------------\n`;
+      
+      // Add description if available
+      if (descriptions?.trading_signal) {
+        text += `${descriptions.trading_signal}\n\n`;
+      }
+      
+      text += `Recommendation: ${tradingSignal.recommendation || analysis.recommendation || 'N/A'}\n`;
+      text += `Signal Strength: ${tradingSignal.strength || analysis.signal_strength || analysis.strategy_score ? (tradingSignal.strength || analysis.signal_strength || analysis.strategy_score).toFixed(2) : 'N/A'}\n`;
+      text += `Confidence: ${tradingSignal.confidence ? (tradingSignal.confidence * 100).toFixed(1) + '%' : (analysis.confidence ? (analysis.confidence * 100).toFixed(1) + '%' : 'N/A')}\n`;
+      text += `Overall Score: ${analysis.strategy_score?.toFixed(2) || 'N/A'}\n`;
+      if (tradingSignal.rationale && tradingSignal.rationale.length > 0) {
+        text += `Rationale:\n`;
+        tradingSignal.rationale.forEach((r, i) => {
+          text += `  ${i + 1}. ${r}\n`;
+        });
+      } else if (tradingSignal.reasoning) {
+        text += `Reasoning: ${tradingSignal.reasoning}\n`;
+      }
+      text += `\n`;
+    }
+
+    // Sentiment Analysis - check both structures
+    const sentimentScores = analysis.sentiment_scores || analysis.nlp_analysis?.sentiment_scores;
+    if (sentimentScores) {
+      text += `SENTIMENT ANALYSIS\n`;
+      text += `------------------\n`;
+      
+      // Add description if available
+      if (descriptions?.sentiment) {
+        text += `${descriptions.sentiment}\n\n`;
+      }
+      
+      text += `Overall Sentiment: ${sentimentScores.overall_sentiment?.toFixed(3) || sentimentScores.compound?.toFixed(3) || 'N/A'}\n`;
+      text += `Financial Sentiment: ${sentimentScores.financial_sentiment?.toFixed(3) || 'N/A'}\n`;
+      text += `Positive Score: ${sentimentScores.positive_score?.toFixed(3) || sentimentScores.pos?.toFixed(3) || 'N/A'}\n`;
+      text += `Negative Score: ${sentimentScores.negative_score?.toFixed(3) || sentimentScores.neg?.toFixed(3) || 'N/A'}\n`;
+      text += `Neutral Score: ${sentimentScores.neu?.toFixed(3) || 'N/A'}\n`;
+      text += `Uncertainty Score: ${sentimentScores.uncertainty_score?.toFixed(2) || 'N/A'}\n`;
+      text += `\n`;
+    }
+
+    // Forward-Looking Statements - check both structures
+    const forwardLooking = analysis.forward_looking_statements || analysis.nlp_analysis?.forward_looking_statements;
+    if (forwardLooking && forwardLooking.length > 0) {
+      text += `FORWARD-LOOKING STATEMENTS\n`;
+      text += `--------------------------\n`;
+      
+      // Add description if available
+      if (descriptions?.forward_looking) {
+        text += `${descriptions.forward_looking}\n\n`;
+      }
+      
+      forwardLooking.slice(0, 10).forEach((stmt, i) => {
+        const statementText = typeof stmt === 'string' ? stmt : (stmt.statement || stmt);
+        text += `${i + 1}. ${statementText}\n\n`;
+      });
+      text += `\n`;
+    }
+
+    // Risk Analysis
+    const riskAnalysis = analysis.risk_analysis || analysis.nlp_analysis?.risk_analysis;
+    if (riskAnalysis) {
+      text += `RISK ANALYSIS\n`;
+      text += `--------------\n`;
+      
+      // Add description if available
+      if (descriptions?.risk_analysis) {
+        text += `${descriptions.risk_analysis}\n\n`;
+      }
+      
+      if (typeof riskAnalysis === 'object' && !Array.isArray(riskAnalysis)) {
+        text += `Risk Count: ${riskAnalysis.risk_count || 0}\n`;
+        text += `Severity Score: ${riskAnalysis.severity_score?.toFixed(2) || 'N/A'}\n`;
+        if (riskAnalysis.risk_categories && riskAnalysis.risk_categories.length > 0) {
+          text += `Risk Categories:\n`;
+          riskAnalysis.risk_categories.forEach(cat => {
+            text += `  - ${cat.category}: ${cat.count} mentions\n`;
+          });
+        }
+      }
+      text += `\n`;
+    } else if (analysis.risk_factors && analysis.risk_factors.length > 0) {
+      text += `RISK FACTORS\n`;
+      text += `------------\n`;
+      
+      // Add description if available
+      if (descriptions?.risk_analysis) {
+        text += `${descriptions.risk_analysis}\n\n`;
+      }
+      
+      analysis.risk_factors.slice(0, 10).forEach((risk, i) => {
+        const riskText = typeof risk === 'string' ? risk : (risk.factor || risk);
+        text += `${i + 1}. ${riskText}\n`;
+        if (risk.severity) {
+          text += `   Severity: ${risk.severity}\n`;
+        }
+        text += `\n`;
+      });
+      text += `\n`;
+    }
+
+    // Tone Analysis - check both structures
+    const toneAnalysis = analysis.tone_analysis || analysis.nlp_analysis?.tone_analysis;
+    if (toneAnalysis) {
+      text += `TONE ANALYSIS\n`;
+      text += `-------------\n`;
+      
+      // Add description if available
+      if (descriptions?.tone_analysis) {
+        text += `${descriptions.tone_analysis}\n\n`;
+      }
+      
+      text += `Formality Score: ${toneAnalysis.formality_score?.toFixed(2) || toneAnalysis.formality?.toFixed(2) || 'N/A'}\n`;
+      text += `Certainty Score: ${toneAnalysis.certainty_score?.toFixed(2) || toneAnalysis.certainty?.toFixed(2) || 'N/A'}\n`;
+      text += `Readability Score: ${toneAnalysis.readability_score?.toFixed(2) || toneAnalysis.readability?.toFixed(2) || 'N/A'}\n`;
+      text += `Uncertainty Score: ${toneAnalysis.uncertainty_score?.toFixed(2) || 'N/A'}\n`;
+      text += `\n`;
+    }
+
+    // Key Metrics
+    if (analysis.nlp_analysis?.entities?.financial_metrics && analysis.nlp_analysis.entities.financial_metrics.length > 0) {
+      text += `KEY FINANCIAL METRICS MENTIONED\n`;
+      text += `------------------------------\n`;
+      const metrics = {};
+      analysis.nlp_analysis.entities.financial_metrics.forEach(metric => {
+        const name = metric.metric || 'unknown';
+        metrics[name] = (metrics[name] || 0) + 1;
+      });
+      Object.entries(metrics).sort((a, b) => b[1] - a[1]).forEach(([metric, count]) => {
+        text += `  - ${metric}: ${count} mentions\n`;
+      });
+      text += `\n`;
+    }
+
+    // Trading Signals Components
+    const tradingSignals = analysis.trading_signals || analysis.trading_signal;
+    if (tradingSignals?.components) {
+      text += `SIGNAL COMPONENTS\n`;
+      text += `-----------------\n`;
+      const comp = tradingSignals.components;
+      text += `Sentiment: ${comp.sentiment?.toFixed(2) || 'N/A'}\n`;
+      text += `Forward Looking: ${comp.forward_looking?.toFixed(2) || 'N/A'}\n`;
+      text += `Risk: ${comp.risk?.toFixed(2) || 'N/A'}\n`;
+      text += `Certainty: ${comp.certainty?.toFixed(2) || 'N/A'}\n`;
+      text += `Momentum: ${comp.momentum?.toFixed(2) || 'N/A'}\n`;
+      text += `\n`;
+    }
+
+    // Quant Metrics
+    if (tradingSignals?.quant_metrics) {
+      text += `QUANTITATIVE METRICS\n`;
+      text += `-------------------\n`;
+      
+      // Add description if available
+      if (descriptions?.quantitative_metrics) {
+        text += `${descriptions.quantitative_metrics}\n\n`;
+      }
+      
+      const quant = tradingSignals.quant_metrics;
+      text += `Composite Signal: ${quant.composite_signal?.toFixed(4) || 'N/A'}\n`;
+      text += `Risk Adjusted Signal: ${quant.risk_adjusted_signal?.toFixed(4) || 'N/A'}\n`;
+      text += `Expected Return (Annualized): ${quant.expected_return_annualized ? (quant.expected_return_annualized * 100).toFixed(2) + '%' : 'N/A'}\n`;
+      text += `Signal Sharpe Ratio: ${quant.signal_sharpe_ratio?.toFixed(4) || 'N/A'}\n`;
+      text += `Information Coefficient: ${quant.information_coefficient?.toFixed(4) || 'N/A'}\n`;
+      text += `Statistically Significant: ${quant.statistically_significant ? 'Yes' : 'No'}\n`;
+      text += `\n`;
+    }
+
+    text += `=============================================\n`;
+    text += `Generated: ${new Date().toLocaleString()}\n`;
+
+    const dataBlob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `NLP_Analysis_${nlpAnalysis.ticker}_${new Date().toISOString().split('T')[0]}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  const copyToClipboard = async () => {
+    if (!nlpAnalysis || !analysis) return;
+
+    const tradingSignal = analysis.trading_signals || analysis.trading_signal;
+    const sentimentScores = analysis.sentiment_scores || analysis.nlp_analysis?.sentiment_scores;
+
+    let text = `NLP Analysis Report for ${nlpAnalysis.ticker}\n\n`;
+    text += `Trading Signal: ${tradingSignal?.recommendation || analysis.recommendation || 'N/A'}\n`;
+    text += `Signal Strength: ${tradingSignal?.strength || analysis.signal_strength || analysis.strategy_score ? (tradingSignal?.strength || analysis.signal_strength || analysis.strategy_score).toFixed(2) : 'N/A'}\n`;
+    text += `Confidence: ${tradingSignal?.confidence ? (tradingSignal.confidence * 100).toFixed(1) + '%' : (analysis.confidence ? (analysis.confidence * 100).toFixed(1) + '%' : 'N/A')}\n\n`;
+    
+    if (sentimentScores) {
+      text += `Sentiment: ${sentimentScores.financial_sentiment?.toFixed(3) || sentimentScores.compound?.toFixed(3) || 'N/A'}\n`;
+      text += `Uncertainty: ${sentimentScores.uncertainty_score?.toFixed(2) || 'N/A'}\n\n`;
+    }
+
+    text += `Filing Date: ${nlpAnalysis.filing_date || 'N/A'}\n`;
+    text += `Analysis Date: ${new Date(nlpAnalysis.cached_at).toLocaleString()}\n`;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('Analysis summary copied to clipboard!');
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy to clipboard');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
@@ -89,541 +396,516 @@ export default function NLPQuantStrategy() {
               NLP Quantitative Strategy
             </h1>
             <p className="text-gray-400 mt-1">
-              Advanced NLP analysis using spaCy, NLTK, and HuggingFace embeddings
+              Pre-computed NLP analysis results from 10-K/10-Q filings
             </p>
-          </div>
-          <Link to={createPageUrl('Home')}>
-            <Button variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
-              Back to Home
-            </Button>
-          </Link>
-        </div>
-
-        {/* Input Section */}
-        <Card className="bg-gray-800/50 border-gray-700">
-          <CardHeader>
-            <CardTitle className="text-white">10K/10Q Filing Analysis</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium text-gray-300 mb-2 block">
-                  Ticker Symbol *
-                </label>
-                <Input
-                  value={ticker}
-                  onChange={(e) => setTicker(e.target.value)}
-                  placeholder="e.g., AAPL"
-                  className="bg-gray-900 border-gray-700 text-white"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-gray-300 mb-2 block">
-                  Benchmark Tickers (comma-separated)
-                </label>
-                <Input
-                  value={benchmarkTickers}
-                  onChange={(e) => setBenchmarkTickers(e.target.value)}
-                  placeholder="e.g., MSFT, GOOGL, AMZN"
-                  className="bg-gray-900 border-gray-700 text-white"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-gray-300 mb-2 block">
-                Document Text (10K/10Q) - Optional
-              </label>
-              <p className="text-xs text-gray-500 mb-2">
-                If not provided, the system will automatically search for 10K/10Q files on disk for the specified ticker.
-              </p>
-              <Textarea
-                value={documentText}
-                onChange={(e) => setDocumentText(e.target.value)}
-                placeholder="Paste 10K or 10Q filing text here (optional - will auto-find from disk if blank)..."
-                className="bg-gray-900 border-gray-700 text-white min-h-[200px] font-mono text-sm"
-              />
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-gray-300 mb-2 block">
-                Previous Filing Text (Optional - for comparison)
-              </label>
-              <Textarea
-                value={previousFiling}
-                onChange={(e) => setPreviousFiling(e.target.value)}
-                placeholder="Paste previous year's filing for comparison..."
-                className="bg-gray-900 border-gray-700 text-white min-h-[150px] font-mono text-sm"
-              />
-            </div>
-
-            <Button
-              onClick={handleAnalyze}
-              disabled={isAnalyzing || !ticker}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white"
-            >
-              {isAnalyzing ? (
-                <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Analyzing with NLP...
-                </>
-              ) : (
-                <>
-                  <Brain className="w-4 h-4 mr-2" />
-                  Run NLP Strategy Analysis
-                </>
-              )}
-            </Button>
-
-            {error && (
-              <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400">
-                <AlertCircle className="w-5 h-5 inline mr-2" />
-                {error}
+            {cacheMetadata && (
+              <div className="flex items-center gap-2 mt-2">
+                <Badge 
+                  variant="outline" 
+                  className={
+                    cacheMetadata.status === 'completed' ? 'border-green-600 text-green-300' :
+                    cacheMetadata.status === 'running' ? 'border-yellow-600 text-yellow-300' :
+                    'border-red-600 text-red-300'
+                  }
+                >
+                  {cacheMetadata.status === 'completed' ? '✓' : cacheMetadata.status === 'running' ? '~' : '⚠'} 
+                  {' '}
+                  {cacheMetadata.status === 'completed' ? 'Cache Ready' : 
+                   cacheMetadata.status === 'running' ? 'Analyzing...' : 
+                   'Cache Error'}
+                </Badge>
+                {cacheMetadata.cache_size !== undefined && (
+                  <Badge variant="outline" className="border-gray-600 text-gray-300">
+                    {cacheMetadata.cache_size} tickers analyzed
+                  </Badge>
+                )}
               </div>
             )}
+          </div>
+          <div className="flex items-center gap-4">
+            <PortfolioPill />
+            <Button
+              variant="outline"
+              onClick={handleRefresh}
+              className="border-gray-700 text-white hover:bg-gray-800"
+            >
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Refresh
+            </Button>
+            <Link to="/">
+              <Button variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Cache Status */}
+        {cacheMetadata && (
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Info className="w-5 h-5" />
+                Cache Status
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-4 gap-4 text-sm">
+                <div>
+                  <div className="text-gray-400">Status</div>
+                  <div className="text-white font-semibold capitalize">{cacheMetadata.status}</div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Total Analyzed</div>
+                  <div className="text-white font-semibold">{cacheMetadata.total_analyzed || 0}</div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Cache Size</div>
+                  <div className="text-white font-semibold">{cacheMetadata.cache_size || 0}</div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Last Updated</div>
+                  <div className="text-white font-semibold text-xs">
+                    {cacheMetadata.last_updated ? new Date(cacheMetadata.last_updated).toLocaleString() : 'N/A'}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Top Trading Signals */}
+        {topSignals.length > 0 && (
+          <Card className="bg-gray-800 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-yellow-400" />
+                Top Trading Signals
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="text-left text-gray-300 p-2">Rank</th>
+                      <th className="text-left text-gray-300 p-2">Ticker</th>
+                      <th className="text-left text-gray-300 p-2">Signal</th>
+                      <th className="text-left text-gray-300 p-2">Strength</th>
+                      <th className="text-left text-gray-300 p-2">Confidence</th>
+                      <th className="text-left text-gray-300 p-2">Sentiment</th>
+                      <th className="text-left text-gray-300 p-2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {topSignals.map((signal, index) => (
+                      <tr 
+                        key={index} 
+                        className="border-b border-gray-700 hover:bg-gray-900 cursor-pointer"
+                        onClick={() => handleTickerSelect(signal.ticker)}
+                      >
+                        <td className="text-white p-2">
+                          <Badge variant="outline" className="border-gray-600 text-gray-300">
+                            #{index + 1}
+                          </Badge>
+                        </td>
+                        <td className="text-white font-mono font-semibold p-2">{signal.ticker}</td>
+                        <td className="p-2">
+                          <Badge className={getSignalColor(signal.signal)}>
+                            {getSignalIcon(signal.signal)}
+                            <span className="ml-1">{signal.signal}</span>
+                          </Badge>
+                        </td>
+                        <td className="text-white p-2">{signal.strength?.toFixed(2) || 'N/A'}</td>
+                        <td className="text-white p-2">{signal.confidence ? (signal.confidence * 100).toFixed(0) + '%' : 'N/A'}</td>
+                        <td className="p-2">
+                          <Badge 
+                            variant="outline" 
+                            className={signal.sentiment_score > 0 ? 'border-green-600 text-green-300' : 'border-red-600 text-red-300'}
+                          >
+                            {signal.sentiment_score?.toFixed(2) || 'N/A'}
+                          </Badge>
+                        </td>
+                        <td className="p-2">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleTickerSelect(signal.ticker);
+                            }}
+                            className="text-white hover:bg-gray-700"
+                          >
+                            View Analysis
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Ticker Selector */}
+        <Card className="bg-gray-800 border-gray-700">
+          <CardHeader>
+            <CardTitle className="text-white flex items-center gap-2">
+              <Zap className="w-5 h-5" />
+              Select Ticker to View Analysis
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex gap-4 items-end">
+              <div className="flex-1">
+                <label className="text-sm text-gray-400 mb-2 block">Ticker Symbol</label>
+                <Input
+                  placeholder="Enter ticker (e.g., AAPL)"
+                  value={selectedTicker}
+                  onChange={(e) => setSelectedTicker(e.target.value.toUpperCase())}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      loadTickerAnalysis(selectedTicker);
+                    }
+                  }}
+                  className="bg-gray-900 border-gray-700 text-white"
+                  list="ticker-list"
+                />
+                <datalist id="ticker-list">
+                  {tickers.slice(0, 100).map(ticker => (
+                    <option key={ticker} value={ticker} />
+                  ))}
+                </datalist>
+              </div>
+              <Button
+                onClick={() => loadTickerAnalysis(selectedTicker)}
+                disabled={!selectedTicker || loading}
+                className="bg-purple-600 hover:bg-purple-700 text-white"
+              >
+                {loading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Loading...
+                  </>
+                ) : (
+                  <>
+                    <Brain className="w-4 h-4 mr-2" />
+                    Load Analysis
+                  </>
+                )}
+              </Button>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Results */}
-        {analysis && (
-          <Tabs defaultValue="signals" className="space-y-4">
-            <TabsList className="bg-gray-800 border-gray-700">
-              <TabsTrigger value="signals" className="text-gray-300 data-[state=active]:text-white">
-                Trading Signals
-              </TabsTrigger>
-              <TabsTrigger value="sentiment" className="text-gray-300 data-[state=active]:text-white">
-                Sentiment Analysis
-              </TabsTrigger>
-              <TabsTrigger value="entities" className="text-gray-300 data-[state=active]:text-white">
-                Entity Extraction
-              </TabsTrigger>
-              <TabsTrigger value="risk" className="text-gray-300 data-[state=active]:text-white">
-                Risk Analysis
-              </TabsTrigger>
-              <TabsTrigger value="methodology" className="text-gray-300 data-[state=active]:text-white">
-                Methodology
-              </TabsTrigger>
-            </TabsList>
+        {/* Error Display */}
+        {error && (
+          <Card className="bg-red-900/20 border-red-700">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-2 text-red-400">
+                <AlertCircle className="w-5 h-5" />
+                <span>{error}</span>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
-            {/* Trading Signals Tab */}
-            <TabsContent value="signals" className="space-y-4">
-              <Card className="bg-gray-800/50 border-gray-700">
+        {/* Analysis Results */}
+        {nlpAnalysis && analysis && (
+          <div className="space-y-6">
+            {loadingDescriptions && (
+              <Card className="bg-gray-800 border-gray-700">
+                <CardContent className="pt-6 pb-6 text-center">
+                  <Loader2 className="w-5 h-5 animate-spin text-purple-400 mx-auto mb-2" />
+                  <p className="text-sm text-gray-400">Generating AI-powered descriptions...</p>
+                </CardContent>
+              </Card>
+            )}
+            
+            {/* Trading Signal */}
+            {analysis.trading_signal && (
+              <Card className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border-purple-500/30">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-purple-400" />
-                    Trading Signals
+                    {getSignalIcon(analysis.trading_signal.recommendation)}
+                    <span>Trading Signal: {analysis.trading_signal.recommendation}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {analysis.trading_signals && (
-                    <div className="space-y-6">
-                      {/* Signal Card */}
-                      <div className={`p-6 rounded-lg border-2 ${getSignalColor(analysis.trading_signals.signal)}`}>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            {getSignalIcon(analysis.trading_signals.signal)}
-                            <div>
-                              <h3 className="text-2xl font-bold">
-                                {analysis.trading_signals.signal}
-                              </h3>
-                              <p className="text-sm opacity-80">
-                                {analysis.trading_signals.recommendation}
-                              </p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-3xl font-bold">
-                              {analysis.strategy_score?.toFixed(1) || '0.0'}
-                            </div>
-                            <div className="text-sm opacity-80">Strategy Score</div>
-                            <div className="text-sm opacity-60 mt-1">
-                              Confidence: {analysis.confidence?.toFixed(1) || '0'}%
-                            </div>
-                          </div>
-                        </div>
+                  {descriptions?.trading_signal && (
+                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-purple-500/30">
+                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                        <Brain className="w-3 h-3 text-purple-400" />
+                        AI Explanation
                       </div>
-
-                      {/* Component Scores */}
-                      <div>
-                        <h4 className="text-white font-semibold mb-4">Component Scores</h4>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                          {Object.entries(analysis.trading_signals.components || {}).map(([key, value]) => (
-                            <Card key={key} className="bg-gray-900 border-gray-700">
-                              <CardContent className="p-4">
-                                <div className="text-sm text-gray-400 capitalize mb-2">
-                                  {key.replace('_', ' ')}
-                                </div>
-                                <div className="text-2xl font-bold text-white">
-                                  {typeof value === 'number' ? value.toFixed(1) : value}
-                                </div>
-                                <div className="mt-2">
-                                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                                    <div 
-                                      className="h-full bg-purple-500 transition-all"
-                                      style={{ width: `${Math.max(0, Math.min(100, typeof value === 'number' ? value : 0))}%` }}
-                                    />
-                                  </div>
-                                </div>
-                              </CardContent>
-                            </Card>
-                          ))}
-                        </div>
+                      <div className="text-sm text-gray-300">{descriptions.trading_signal}</div>
+                    </div>
+                  )}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div>
+                      <div className="text-sm text-gray-400">Signal Strength</div>
+                      <div className="text-2xl font-bold text-white">
+                        {analysis.signal_strength?.toFixed(2) || 'N/A'}
                       </div>
-
-                      {/* Rationale */}
-                      {analysis.trading_signals.rationale && analysis.trading_signals.rationale.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">Rationale</h4>
-                          <div className="space-y-2">
-                            {analysis.trading_signals.rationale.map((rationale, idx) => (
-                              <div key={idx} className="flex items-start gap-2 p-3 bg-gray-900 rounded-lg">
-                                <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                                <span className="text-gray-300">{rationale}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Confidence</div>
+                      <div className="text-2xl font-bold text-white">
+                        {analysis.trading_signal.confidence ? (analysis.trading_signal.confidence * 100).toFixed(0) + '%' : 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Risk Level</div>
+                      <div className="text-2xl font-bold text-white">
+                        {analysis.trading_signal.risk_level || 'N/A'}
+                      </div>
+                    </div>
+                  </div>
+                  {analysis.trading_signal.reasoning && (
+                    <div className="mt-4 p-4 bg-gray-900/50 rounded border border-gray-700">
+                      <div className="text-sm text-gray-400 mb-1">Reasoning</div>
+                      <div className="text-white">{analysis.trading_signal.reasoning}</div>
                     </div>
                   )}
                 </CardContent>
               </Card>
-            </TabsContent>
+            )}
 
-            {/* Sentiment Analysis Tab */}
-            <TabsContent value="sentiment" className="space-y-4">
-              <Card className="bg-gray-800/50 border-gray-700">
+            {/* Sentiment Analysis */}
+            {analysis.sentiment_scores && (
+              <Card className="bg-gray-800 border-gray-700">
                 <CardHeader>
                   <CardTitle className="text-white">Sentiment Analysis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {analysis.nlp_analysis?.sentiment_scores && (
-                    <div className="space-y-6">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Overall Sentiment</div>
-                            <div className={`text-2xl font-bold ${
-                              analysis.nlp_analysis.sentiment_scores.overall_sentiment > 0 
-                                ? 'text-green-400' 
-                                : analysis.nlp_analysis.sentiment_scores.overall_sentiment < 0 
-                                  ? 'text-red-400' 
-                                  : 'text-yellow-400'
-                            }`}>
-                              {analysis.nlp_analysis.sentiment_scores.overall_sentiment?.toFixed(3) || '0.000'}
-                            </div>
-                          </CardContent>
-                        </Card>
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Financial Sentiment</div>
-                            <div className={`text-2xl font-bold ${
-                              analysis.nlp_analysis.sentiment_scores.financial_sentiment > 0 
-                                ? 'text-green-400' 
-                                : 'text-red-400'
-                            }`}>
-                              {analysis.nlp_analysis.sentiment_scores.financial_sentiment?.toFixed(3) || '0.000'}
-                            </div>
-                          </CardContent>
-                        </Card>
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Uncertainty Score</div>
-                            <div className="text-2xl font-bold text-yellow-400">
-                              {analysis.nlp_analysis.sentiment_scores.uncertainty_score?.toFixed(1) || '0.0'}
-                            </div>
-                          </CardContent>
-                        </Card>
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Sentiment Volatility</div>
-                            <div className="text-2xl font-bold text-purple-400">
-                              {analysis.nlp_analysis.sentiment_scores.sentiment_volatility?.toFixed(3) || '0.000'}
-                            </div>
-                          </CardContent>
-                        </Card>
+                  {descriptions?.sentiment && (
+                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                        <Brain className="w-3 h-3 text-purple-400" />
+                        AI Explanation
                       </div>
-
-                      {/* VADER Scores */}
-                      {analysis.nlp_analysis.sentiment_scores.vader_scores && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">VADER Sentiment Scores</h4>
-                          <div className="grid grid-cols-4 gap-4">
-                            {Object.entries(analysis.nlp_analysis.sentiment_scores.vader_scores).map(([key, value]) => (
-                              <Card key={key} className="bg-gray-900 border-gray-700">
-                                <CardContent className="p-4">
-                                  <div className="text-sm text-gray-400 capitalize mb-1">{key}</div>
-                                  <div className="text-xl font-bold text-white">
-                                    {typeof value === 'number' ? value.toFixed(3) : value}
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Forward-Looking Statements */}
-                      {analysis.nlp_analysis.forward_looking_statements && 
-                       analysis.nlp_analysis.forward_looking_statements.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">
-                            Forward-Looking Statements ({analysis.nlp_analysis.forward_looking_statements.length})
-                          </h4>
-                          <div className="space-y-3 max-h-[400px] overflow-y-auto">
-                            {analysis.nlp_analysis.forward_looking_statements.map((stmt, idx) => (
-                              <Card key={idx} className="bg-gray-900 border-gray-700">
-                                <CardContent className="p-4">
-                                  <div className="flex items-start justify-between gap-4">
-                                    <p className="text-gray-300 text-sm flex-1">{stmt.statement}</p>
-                                    <Badge className={
-                                      stmt.sentiment > 0 ? 'bg-green-500' : 
-                                      stmt.sentiment < 0 ? 'bg-red-500' : 
-                                      'bg-yellow-500'
-                                    }>
-                                      {stmt.sentiment?.toFixed(2) || '0.00'}
-                                    </Badge>
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      <div className="text-sm text-gray-300">{descriptions.sentiment}</div>
                     </div>
                   )}
+                  <div className="grid grid-cols-4 gap-4">
+                    <div>
+                      <div className="text-sm text-gray-400">Compound</div>
+                      <div className={`text-2xl font-bold ${analysis.sentiment_scores.compound > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {analysis.sentiment_scores.compound?.toFixed(3) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Positive</div>
+                      <div className="text-2xl font-bold text-green-400">
+                        {analysis.sentiment_scores.pos?.toFixed(3) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Neutral</div>
+                      <div className="text-2xl font-bold text-yellow-400">
+                        {analysis.sentiment_scores.neu?.toFixed(3) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Negative</div>
+                      <div className="text-2xl font-bold text-red-400">
+                        {analysis.sentiment_scores.neg?.toFixed(3) || 'N/A'}
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-            </TabsContent>
+            )}
 
-            {/* Entity Extraction Tab */}
-            <TabsContent value="entities" className="space-y-4">
-              <Card className="bg-gray-800/50 border-gray-700">
+            {/* Forward-Looking Statements */}
+            {analysis.forward_looking_statements && analysis.forward_looking_statements.length > 0 && (
+              <Card className="bg-gray-800 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-white">Entity Extraction</CardTitle>
+                  <CardTitle className="text-white">Forward-Looking Statements</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {analysis.nlp_analysis?.entities && (
-                    <div className="space-y-6">
-                      {/* Companies */}
-                      {analysis.nlp_analysis.entities.companies && 
-                       analysis.nlp_analysis.entities.companies.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">
-                            Companies/Organizations ({analysis.nlp_analysis.entities.companies.length})
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {analysis.nlp_analysis.entities.companies.slice(0, 20).map((ent, idx) => (
-                              <Badge key={idx} className="bg-blue-500/20 text-blue-300 border-blue-500/50">
-                                {ent.text}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Financial Metrics */}
-                      {analysis.nlp_analysis.entities.financial_metrics && 
-                       analysis.nlp_analysis.entities.financial_metrics.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">
-                            Financial Metrics ({analysis.nlp_analysis.entities.financial_metrics.length})
-                          </h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            {analysis.nlp_analysis.entities.financial_metrics.slice(0, 10).map((metric, idx) => (
-                              <Card key={idx} className="bg-gray-900 border-gray-700">
-                                <CardContent className="p-3">
-                                  <div className="text-sm font-semibold text-purple-400 capitalize mb-1">
-                                    {metric.metric}
-                                  </div>
-                                  <div className="text-xs text-gray-400">{metric.context}</div>
-                                </CardContent>
-                              </Card>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Amounts */}
-                      {analysis.nlp_analysis.entities.amounts && 
-                       analysis.nlp_analysis.entities.amounts.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">
-                            Financial Amounts ({analysis.nlp_analysis.entities.amounts.length})
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {analysis.nlp_analysis.entities.amounts.slice(0, 30).map((amt, idx) => (
-                              <Badge key={idx} className="bg-green-500/20 text-green-300 border-green-500/50">
-                                {amt.text}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                  {descriptions?.forward_looking && (
+                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                        <Brain className="w-3 h-3 text-purple-400" />
+                        AI Explanation
+                      </div>
+                      <div className="text-sm text-gray-300">{descriptions.forward_looking}</div>
                     </div>
                   )}
+                  <div className="space-y-2 max-h-64 overflow-y-auto">
+                    {analysis.forward_looking_statements.slice(0, 10).map((statement, index) => (
+                      <div key={index} className="p-3 bg-gray-900 rounded border border-gray-700">
+                        <p className="text-sm text-gray-300">{statement}</p>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
-            </TabsContent>
+            )}
 
-            {/* Risk Analysis Tab */}
-            <TabsContent value="risk" className="space-y-4">
-              <Card className="bg-gray-800/50 border-gray-700">
+            {/* Risk Factors */}
+            {analysis.risk_factors && analysis.risk_factors.length > 0 && (
+              <Card className="bg-gray-800 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-white">Risk Analysis</CardTitle>
+                  <CardTitle className="text-white">Risk Factors</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {analysis.nlp_analysis?.risk_analysis && (
-                    <div className="space-y-6">
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Risk Count</div>
-                            <div className="text-3xl font-bold text-red-400">
-                              {analysis.nlp_analysis.risk_analysis.risk_count || 0}
-                            </div>
-                          </CardContent>
-                        </Card>
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Severity Score</div>
-                            <div className="text-3xl font-bold text-orange-400">
-                              {analysis.nlp_analysis.risk_analysis.severity_score?.toFixed(1) || '0.0'}
-                            </div>
-                          </CardContent>
-                        </Card>
-                        <Card className="bg-gray-900 border-gray-700">
-                          <CardContent className="p-4 text-center">
-                            <div className="text-sm text-gray-400 mb-2">Key Risks</div>
-                            <div className="text-3xl font-bold text-yellow-400">
-                              {analysis.nlp_analysis.risk_analysis.key_risks?.length || 0}
-                            </div>
-                          </CardContent>
-                        </Card>
+                  {descriptions?.risk_analysis && (
+                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                        <Brain className="w-3 h-3 text-purple-400" />
+                        AI Explanation
                       </div>
-
-                      {/* Risk Categories */}
-                      {analysis.nlp_analysis.risk_analysis.risk_categories && 
-                       analysis.nlp_analysis.risk_analysis.risk_categories.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">Risk Categories</h4>
-                          <div className="space-y-2">
-                            {analysis.nlp_analysis.risk_analysis.risk_categories.map((cat, idx) => (
-                              <div key={idx} className="flex items-center justify-between p-3 bg-gray-900 rounded-lg">
-                                <span className="text-gray-300 capitalize">{cat.category.replace('_', ' ')}</span>
-                                <Badge className="bg-red-500/20 text-red-300 border-red-500/50">
-                                  {cat.count} mentions
-                                </Badge>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Key Risks */}
-                      {analysis.nlp_analysis.risk_analysis.key_risks && 
-                       analysis.nlp_analysis.risk_analysis.key_risks.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">Key Risk Factors</h4>
-                          <div className="space-y-3">
-                            {analysis.nlp_analysis.risk_analysis.key_risks.map((risk, idx) => (
-                              <Card key={idx} className="bg-gray-900 border-gray-700">
-                                <CardContent className="p-4">
-                                  <div className="flex items-start gap-3">
-                                    <AlertCircle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
-                                    <p className="text-gray-300 text-sm">{risk}</p>
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Anomalies */}
-                      {analysis.nlp_analysis.anomalies && 
-                       analysis.nlp_analysis.anomalies.length > 0 && (
-                        <div>
-                          <h4 className="text-white font-semibold mb-3">
-                            Detected Anomalies ({analysis.nlp_analysis.anomalies.length})
-                          </h4>
-                          <div className="space-y-3">
-                            {analysis.nlp_analysis.anomalies.map((anomaly, idx) => (
-                              <Card key={idx} className="bg-yellow-500/10 border-yellow-500/50">
-                                <CardContent className="p-4">
-                                  <div className="flex items-start justify-between gap-3">
-                                    <div className="flex-1">
-                                      <div className="flex items-center gap-2 mb-2">
-                                        <AlertCircle className="w-5 h-5 text-yellow-400" />
-                                        <span className="font-semibold text-yellow-300 capitalize">
-                                          {anomaly.type?.replace('_', ' ')}
-                                        </span>
-                                        <Badge className={
-                                          anomaly.severity === 'high' ? 'bg-red-500' : 'bg-yellow-500'
-                                        }>
-                                          {anomaly.severity}
-                                        </Badge>
-                                      </div>
-                                      {anomaly.context && (
-                                        <p className="text-gray-300 text-sm mt-2">{anomaly.context}</p>
-                                      )}
-                                    </div>
-                                  </div>
-                                </CardContent>
-                              </Card>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      <div className="text-sm text-gray-300">{descriptions.risk_analysis}</div>
                     </div>
                   )}
+                  <div className="grid grid-cols-2 gap-4">
+                    {analysis.risk_factors.slice(0, 10).map((risk, index) => (
+                      <div key={index} className="p-3 bg-gray-900 rounded border border-gray-700">
+                        <div className="text-sm text-white font-semibold mb-1">{risk.factor || risk}</div>
+                        {risk.severity && (
+                          <Badge 
+                            variant="outline" 
+                            className={risk.severity === 'High' ? 'border-red-600 text-red-300' : 
+                                       risk.severity === 'Medium' ? 'border-yellow-600 text-yellow-300' : 
+                                       'border-green-600 text-green-300'}
+                          >
+                            {risk.severity}
+                          </Badge>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
-            </TabsContent>
+            )}
 
-            {/* Methodology Tab */}
-            <TabsContent value="methodology" className="space-y-4">
-              <Card className="bg-gray-800/50 border-gray-700">
+            {/* Tone Analysis */}
+            {analysis.tone_analysis && (
+              <Card className="bg-gray-800 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-white">NLP Methodology</CardTitle>
+                  <CardTitle className="text-white">Tone Analysis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {analysis.methodology && (
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="text-white font-semibold mb-3">NLP Libraries Used</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          {Object.entries(analysis.methodology.nlp_libraries || {}).map(([lib, desc]) => (
-                            <Card key={lib} className="bg-gray-900 border-gray-700">
-                              <CardContent className="p-4">
-                                <div className="text-lg font-bold text-purple-400 mb-2 capitalize">{lib}</div>
-                                <div className="text-sm text-gray-400">{desc}</div>
-                              </CardContent>
-                            </Card>
-                          ))}
-                        </div>
+                  {descriptions?.tone_analysis && (
+                    <div className="mb-4 p-3 bg-gray-900/50 rounded border border-gray-700">
+                      <div className="text-xs text-gray-400 mb-1 flex items-center gap-1">
+                        <Brain className="w-3 h-3 text-purple-400" />
+                        AI Explanation
                       </div>
-
-                      <div>
-                        <h4 className="text-white font-semibold mb-3">Techniques Applied</h4>
-                        <div className="space-y-2">
-                          {(analysis.methodology.techniques || []).map((technique, idx) => (
-                            <div key={idx} className="flex items-start gap-3 p-3 bg-gray-900 rounded-lg">
-                              <Sparkles className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-300">{technique}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      <div className="text-sm text-gray-300">{descriptions.tone_analysis}</div>
                     </div>
                   )}
+                  <div className="grid grid-cols-4 gap-4">
+                    <div>
+                      <div className="text-sm text-gray-400">Certainty</div>
+                      <div className="text-xl font-bold text-white">
+                        {analysis.tone_analysis.certainty?.toFixed(2) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Formality</div>
+                      <div className="text-xl font-bold text-white">
+                        {analysis.tone_analysis.formality?.toFixed(2) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Readability</div>
+                      <div className="text-xl font-bold text-white">
+                        {analysis.tone_analysis.readability?.toFixed(2) || 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Uncertainty</div>
+                      <div className="text-xl font-bold text-white">
+                        {analysis.tone_analysis.uncertainty_score?.toFixed(2) || 'N/A'}
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-          </Tabs>
+            )}
+
+            {/* Cached Info */}
+            <Card className="bg-gray-800 border-gray-700">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-white text-sm">Analysis Information</CardTitle>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={copyToClipboard}
+                      className="border-gray-700 text-white hover:bg-gray-700"
+                      title="Copy summary to clipboard"
+                    >
+                      <Copy className="w-4 h-4 mr-1" />
+                      Copy Summary
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={exportAsText}
+                      className="border-gray-700 text-white hover:bg-gray-700"
+                      title="Export as text file"
+                    >
+                      <FileText className="w-4 h-4 mr-1" />
+                      Export Text
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={exportAsJSON}
+                      className="border-gray-700 text-white hover:bg-gray-700"
+                      title="Export as JSON file"
+                    >
+                      <Download className="w-4 h-4 mr-1" />
+                      Export JSON
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="text-sm text-gray-400 space-y-1">
+                  <div>Ticker: <span className="text-white font-mono">{nlpAnalysis.ticker}</span></div>
+                  <div>Cached at: <span className="text-white">{new Date(nlpAnalysis.cached_at).toLocaleString()}</span></div>
+                  {nlpAnalysis.filing_date && nlpAnalysis.filing_date !== 'unknown' && (
+                    <div>Filing Date: <span className="text-white font-semibold">{nlpAnalysis.filing_date}</span></div>
+                  )}
+                  {nlpAnalysis.previous_filing_date ? (
+                    <div>
+                      <div>Previous Filing: <span className="text-white">{nlpAnalysis.previous_filing_date}</span></div>
+                      <Badge variant="outline" className="border-green-600 text-green-300 mt-2">
+                        ✓ Has Comparison
+                      </Badge>
+                    </div>
+                  ) : null}
+                  {nlpAnalysis.filing_filename && (
+                    <div className="text-xs text-gray-500 mt-2">
+                      File: {nlpAnalysis.filing_filename}
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {/* Empty State */}
+        {!nlpAnalysis && !loading && !error && (
+          <Card className="bg-gray-800 border-gray-700">
+            <CardContent className="pt-12 pb-12 text-center">
+              <Brain className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Select a Ticker</h3>
+              <p className="text-gray-400">
+                Choose a ticker from the portfolio or enter a ticker symbol above to view pre-computed NLP analysis results.
+              </p>
+            </CardContent>
+          </Card>
         )}
       </div>
     </div>
   );
 }
-

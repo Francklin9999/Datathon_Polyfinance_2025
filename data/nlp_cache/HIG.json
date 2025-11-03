@@ -1,0 +1,909 @@
+{
+  "ticker": "HIG",
+  "analysis": {
+    "ticker": "HIG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 39.84470780547609,
+        "financial_sentiment": -0.10909090909090909,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "3Forward-looking Statements Certain of the statements contained herein are forward-looking statements made pursuant to the safe harbor provisions of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 248231
+        },
+        {
+          "statement": "3Forward-looking Statements Certain of the statements contained herein are forward-looking statements made pursuant to the safe harbor provisions of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 248305
+        },
+        {
+          "statement": "Forward-looking statements can be identified by words such as “anticipates,” “intends,” “plans,” “seeks,” “believes,” “estimates,” “expects,” “projects,” and similar references to future periods.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 248433
+        },
+        {
+          "statement": "Because forward-looking statements relate to the future, they are subject to inherent uncertainties, risks and changes in circumstances that are difficult to predict.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 248938
+        },
+        {
+          "statement": "Any forward-looking statement made by the Company in this document speaks only as of the date of the filing of this.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 256148
+        },
+        {
+          "statement": "The Company undertakes no obligation to publicly update any forward-looking statement, whether as a result of new information, future developments or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 256488
+        },
+        {
+          "statement": "Additionally, as employers continue to focus on reducing the cost of employee benefits, we expect more companies to offer voluntary products paid for by employees.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 288477
+        },
+        {
+          "statement": "cus on opioid usage, vocational rehabilitation, behavioral health and medical case management which we believe provides the Company with a competitive advantage for managing medical costs.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 299175
+        },
+        {
+          "statement": "ng and development opportunities to sustain the skills needed for the roles we have today and those we anticipate in the future; and•Holding leaders accountable for their progress against human capital goals that include development, engagement, mobility, succession, and retention.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 309147
+        },
+        {
+          "statement": "We believe that creating a work environment centered on trust enables us to attract, retain and leverage top talent to meet our business goals.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 310563
+        },
+        {
+          "statement": "itional risks to which we are subject include, but are not limited to, the factors mentioned under “Forward-Looking Statements” above and the risks of our businesses described elsewhere in this Annual Report on.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 316876
+        },
+        {
+          "statement": "Generally Accepted Accounting Principles (\"GAAP\") guidance requires that we update reserves for future policy benefits for changes in discount rates quarterly which could cause volatility in our stockholders' equity.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 323823
+        },
+        {
+          "statement": "pair costs or other claim settlement expenses, which can result in higher claim costs than what was estimated at the time the policy was written.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 324504
+        },
+        {
+          "statement": "Loss reserves are estimates of what we expect the ultimate settlement and administration of claims will cost, less what has been paid to date.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 332244
+        },
+        {
+          "statement": "erred tax assets; •changes to the regulatory capital formulas; and•regulatory changes to accounting guidance for determining capital adequacy.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 358226
+        },
+        {
+          "statement": "We may not achieve all of the benefits we expect to derive from these plans.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 376106
+        },
+        {
+          "statement": "tegrating an acquired business may also result in the acquired business performing differently than we expected including through the loss of customers or in our failure to realize anticipated increased premium growth or expense-related efficiencies.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 377526
+        },
+        {
+          "statement": "s at the federal, state and international levels are enacting laws and promulgating regulations and guidance related to climate change, with conflicts from jurisdiction to jurisdiction possible, which may impose additional costs on the Company, or expose us to new or additional risks.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 385702
+        },
+        {
+          "statement": "We anticipate some states will do so in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 387834
+        },
+        {
+          "statement": "State insurance regulators may adopt their own guidelines for insurers independent of the NAIC guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 387981
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue of $70 for Property & Casualty Other Operations and $147",
+            "position": 261211
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 372676
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue RecognitionPremium Revenue from Direct Insurance and Assumed ReinsuranceProperty and casualty premiums are earned on a pro rata basis over the policy period and include accruals for policies t",
+            "position": 709480
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue [1]1 1 (1)Total Business Insurance14,406 13,059 11,639 Personal Insurance Personal automobile2,425 2,156 2,047 Homeowners1,061 961 932 Personal Insurance earned premium and fee income [2]3,486",
+            "position": 756429
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings:•Certain realized gains and losses - Generally realized gains and losses are primarily driven by investment decisions and external economic developments,",
+            "position": 412207
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings because they relate to non-core components of before tax income,",
+            "position": 414611
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, preferred stock dividends declared, which are excluded from net income,",
+            "position": 415085
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Margin- The Hartford uses the non-GAAP measure core earnings margin to evaluate, and believes it is an important measure of,",
+            "position": 415961
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings margin is calculated by dividing core earnings by revenues,",
+            "position": 416155
+          },
+          {
+            "metric": "profit",
+            "context": "profit; a combined ratio above 100",
+            "position": 411670
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss,",
+            "position": 706616
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Liability17 20 19 Other74 78 86 Total$448 $484 $502 192|Index to Consolidated Financial Statements and SchedulesTable of ContentsNote 11 - Reserve for Future Policy BenefitsTHE HARTFORD INSURAN",
+            "position": 920890
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE\") fluctuates from year to year based on changes in the expected investment yield over the claim settlement period,",
+            "position": 420035
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA\"), Core Earnings-The Company uses this non-GAAP financial measure to evaluate, and believes is an important measure of,",
+            "position": 429376
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA,",
+            "position": 429552
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA, core earnings,",
+            "position": 429713
+          },
+          {
+            "metric": "ROA",
+            "context": "ROA, and ROA,",
+            "position": 430184
+          },
+          {
+            "metric": "margin",
+            "context": "Margin- The Hartford uses the non-GAAP measure core earnings margin to evaluate, and believes it is an important measure of,",
+            "position": 415970
+          },
+          {
+            "metric": "margin",
+            "context": "margin is calculated by dividing core earnings by revenues,",
+            "position": 416164
+          },
+          {
+            "metric": "margin",
+            "context": "margin, calculated by dividing net income by revenues,",
+            "position": 416282
+          },
+          {
+            "metric": "margin",
+            "context": "margin to core earnings margin:Net realized losses, before tax0.4",
+            "position": 545831
+          },
+          {
+            "metric": "margin",
+            "context": "margin outlook for this business to be approximately 6% to 7",
+            "position": 548069
+          },
+          {
+            "metric": "market share",
+            "context": "market share;•Optimizing organizational efficiency with a focus on continuous improvement; •Balancing use of excess capital for growth initiatives, investments in the business,",
+            "position": 259946
+          },
+          {
+            "metric": "market share",
+            "context": "market share, demand for our products,",
+            "position": 346112
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss), and assets for each reportable segment, see Note 3",
+            "position": 261017
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common stockholders that are excluded from core earnings, preferred stock dividends declared, which are excluded from net income,",
+            "position": 415013
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss), net income (loss) available to common stockholders,",
+            "position": 415790
+          },
+          {
+            "metric": "net income",
+            "context": "Net income margin, calculated by dividing net income by revenues,",
+            "position": 416271
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common stockholders+Net income in excess of common stockholder dividends+Higher net investment income+Reduction in outstanding shares due to share repurchases-Dilutive effect o",
+            "position": 440276
+          },
+          {
+            "metric": "assets",
+            "context": "assets and total stockholders’ equity of The Hartford were $80.9",
+            "position": 257823
+          },
+          {
+            "metric": "assets",
+            "context": "assets for each reportable segment, see Note 3",
+            "position": 261040
+          },
+          {
+            "metric": "assets",
+            "context": "Assets Under Management (\"AUM\") of $139,598 as of December 31, 2024Mutual Fund AUM of $123,571 as of December 31, 202413",
+            "position": 289690
+          },
+          {
+            "metric": "assets",
+            "context": "assets of the life and annuity business sold in May 2018",
+            "position": 290341
+          },
+          {
+            "metric": "assets",
+            "context": "assets under management was approximately $112.0",
+            "position": 300257
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, restructuring costs, transaction expenses incurred in connection with an acquisition, certain M&A costs,",
+            "position": 292230
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 300828
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities within our Employee Benefits operations, particularly for long-term disability,",
+            "position": 323156
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, transaction-related charges, downgrades by third-party rating agencies, diversion of management time and resources to integration challenges, loss of key employees, regulatory requirement",
+            "position": 377802
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES366RESERVEDNone7MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS387",
+            "position": 246246
+          },
+          {
+            "metric": "equity",
+            "context": "equity prices, interest rates, inflation rate, foreign currency exchange rates and market volatility;◦the impact on our investment portfolio if our investment portfolio is concentrated in any particul",
+            "position": 249826
+          },
+          {
+            "metric": "equity",
+            "context": "equity of The Hartford were $80.9",
+            "position": 257854
+          },
+          {
+            "metric": "equity",
+            "context": "equity financing, debt financing and related interest expense), purchase accounting adjustments related to goodwill, reserves for run-off structured settlement and terminal funding agreement liabiliti",
+            "position": 292039
+          },
+          {
+            "metric": "equity",
+            "context": "equity market disruptions•rising inflation•changes in foreign currency exchange rates•a weak real estate market•lower business investment •lower consumer spendingIn an economic downturn, these factors",
+            "position": 317956
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 244869
+          },
+          {
+            "text": "$80.9 billion",
+            "position": 257882
+          },
+          {
+            "text": "$16.4 billion",
+            "position": 257900
+          },
+          {
+            "text": "$26,535 b",
+            "position": 261172
+          },
+          {
+            "text": "$70 ",
+            "position": 261222
+          },
+          {
+            "text": "$147 ",
+            "position": 261271
+          },
+          {
+            "text": "$12,721 b",
+            "position": 261333
+          },
+          {
+            "text": "$20, ",
+            "position": 265685
+          },
+          {
+            "text": "$50 ",
+            "position": 265705
+          },
+          {
+            "text": "$20 ",
+            "position": 265739
+          },
+          {
+            "text": "$3,453 b",
+            "position": 275203
+          },
+          {
+            "text": "$3.2 billion",
+            "position": 276881
+          },
+          {
+            "text": "$2.9 billion",
+            "position": 276895
+          },
+          {
+            "text": "$2.7 billion",
+            "position": 276912
+          },
+          {
+            "text": "$139,598 ",
+            "position": 289725
+          },
+          {
+            "text": "$123,571 ",
+            "position": 289776
+          },
+          {
+            "text": "$183 ",
+            "position": 293730
+          },
+          {
+            "text": "$39 ",
+            "position": 293765
+          },
+          {
+            "text": "$204 ",
+            "position": 293852
+          },
+          {
+            "text": "$67 ",
+            "position": 293920
+          },
+          {
+            "text": "$19 ",
+            "position": 293975
+          },
+          {
+            "text": "$112.0 billion",
+            "position": 300299
+          },
+          {
+            "text": "$108.5 billion",
+            "position": 300318
+          },
+          {
+            "text": "$50.9 billion",
+            "position": 300358
+          },
+          {
+            "text": "$50.3 billion",
+            "position": 300376
+          },
+          {
+            "text": "$3.6 billion",
+            "position": 300462
+          },
+          {
+            "text": "$3.8 billion",
+            "position": 300479
+          },
+          {
+            "text": "$59.2 billion",
+            "position": 300620
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 334811
+          },
+          {
+            "text": "$248",
+            "position": 406098
+          },
+          {
+            "text": "$117.71 ",
+            "position": 406482
+          },
+          {
+            "text": "$3,373 ",
+            "position": 406500
+          },
+          {
+            "text": "$117.75 ",
+            "position": 406551
+          },
+          {
+            "text": "$3,285 ",
+            "position": 406567
+          },
+          {
+            "text": "$117.26 ",
+            "position": 406620
+          },
+          {
+            "text": "$3,148 ",
+            "position": 406638
+          },
+          {
+            "text": "$117.57 ",
+            "position": 406660
+          },
+          {
+            "text": "$113.44 ",
+            "position": 406952
+          },
+          {
+            "text": "$3.0 billion",
+            "position": 407173
+          },
+          {
+            "text": "$3.3 billion",
+            "position": 407426
+          },
+          {
+            "text": "$100 ",
+            "position": 407938
+          },
+          {
+            "text": "$83.08 ",
+            "position": 407943
+          },
+          {
+            "text": "$119.85 ",
+            "position": 407950
+          },
+          {
+            "text": "$134.61 ",
+            "position": 407958
+          },
+          {
+            "text": "$146.09 ",
+            "position": 407966
+          },
+          {
+            "text": "$202.42 ",
+            "position": 407974
+          },
+          {
+            "text": "$118.40 ",
+            "position": 408000
+          },
+          {
+            "text": "$152.39 ",
+            "position": 408008
+          },
+          {
+            "text": "$124.79 ",
+            "position": 408016
+          },
+          {
+            "text": "$157.59 ",
+            "position": 408024
+          }
+        ],
+        "percentages": [
+          {
+            "text": "6.10%",
+            "value": 6.1,
+            "position": 244914
+          },
+          {
+            "text": "6.000%",
+            "value": 6.0,
+            "position": 245057
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 271398
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 297459
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 297462
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 297468
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 297480
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 297483
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 297486
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 297489
+          },
+          {
+            "text": "5 %",
+            "value": 5.0,
+            "position": 297498
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 297507
+          },
+          {
+            "text": "35 %",
+            "value": 35.0,
+            "position": 297542
+          },
+          {
+            "text": "19 %",
+            "value": 19.0,
+            "position": 297549
+          },
+          {
+            "text": "63 %",
+            "value": 63.0,
+            "position": 297553
+          },
+          {
+            "text": "57 %",
+            "value": 57.0,
+            "position": 297562
+          },
+          {
+            "text": "15 %",
+            "value": 15.0,
+            "position": 297566
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 297570
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 297574
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 297629
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 311552
+          },
+          {
+            "text": "200%",
+            "value": 200.0,
+            "position": 409052
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 440171
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 440194
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 441683
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 441721
+          },
+          {
+            "text": "11 %",
+            "value": 11.0,
+            "position": 441764
+          },
+          {
+            "text": "68 %",
+            "value": 68.0,
+            "position": 441804
+          },
+          {
+            "text": "70 %",
+            "value": 70.0,
+            "position": 441808
+          },
+          {
+            "text": "67 %",
+            "value": 67.0,
+            "position": 442234
+          },
+          {
+            "text": "54 %",
+            "value": 54.0,
+            "position": 442240
+          },
+          {
+            "text": "25 %",
+            "value": 25.0,
+            "position": 442351
+          },
+          {
+            "text": "37 %",
+            "value": 37.0,
+            "position": 442355
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 442390
+          },
+          {
+            "text": "32 %",
+            "value": 32.0,
+            "position": 442394
+          },
+          {
+            "text": "24 %",
+            "value": 24.0,
+            "position": 442426
+          },
+          {
+            "text": "38 %",
+            "value": 38.0,
+            "position": 442430
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 444169
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 444277
+          },
+          {
+            "text": "71.9 %",
+            "value": 71.9,
+            "position": 448839
+          },
+          {
+            "text": "71.2 %",
+            "value": 71.2,
+            "position": 448853
+          },
+          {
+            "text": "0.5 %",
+            "value": 0.5,
+            "position": 448941
+          },
+          {
+            "text": "0.6 %",
+            "value": 0.6,
+            "position": 448950
+          },
+          {
+            "text": "1.0 %",
+            "value": 1.0,
+            "position": 448991
+          },
+          {
+            "text": "1.5 %",
+            "value": 1.5,
+            "position": 449000
+          },
+          {
+            "text": "10.8 %",
+            "value": 10.8,
+            "position": 449085
+          },
+          {
+            "text": "10.9 %",
+            "value": 10.9,
+            "position": 449097
+          },
+          {
+            "text": "8.5 %",
+            "value": 8.5,
+            "position": 449163
+          },
+          {
+            "text": "8.6 %",
+            "value": 8.6,
+            "position": 449174
+          },
+          {
+            "text": "0.4 %",
+            "value": 0.4,
+            "position": 449204
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 302
+          },
+          {
+            "category": "operational_risk",
+            "count": 28
+          },
+          {
+            "category": "financial_risk",
+            "count": 1102
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 188
+          },
+          {
+            "category": "technology_risk",
+            "count": 302
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1083486,
+        "filtered_length": 1033360,
+        "removed_ratio": 4.63,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.50859950859951,
+      "confidence": 0.2861473556691849,
+      "overall_score": 50.49140049140049,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.54545454545455,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.009828009828009854,
+        "risk_adjusted_signal": 0.06610204644232888,
+        "expected_return_annualized": 0.018686499767580893,
+        "signal_sharpe_ratio": 0.0012457666511720596,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.06610204644232888,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.06610204644232888,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10909090909090909,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.06610204644232888,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.009828009828009854
+      },
+      "risk_adjusted_signal": 0.06610204644232888,
+      "expected_return": 0.00018686499767580893,
+      "signal_sharpe": 0.0012457666511720596,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.49140049140049,
+    "confidence": 0.2861473556691849,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:25:59.739781",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-HIG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

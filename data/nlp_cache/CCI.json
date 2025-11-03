@@ -1,0 +1,939 @@
+{
+  "ticker": "CCI",
+  "analysis": {
+    "ticker": "CCI",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 58.141263940520446,
+        "financial_sentiment": -0.10638297872340426,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "111Cautionary Language Regarding Forward-Looking StatementsThis Annual Report on (\"2024 \") contains forward-looking statements that are based on our management's expectations as of the filing date of this report with the Securities and Exchange Commission (\"SEC\").",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29947
+        },
+        {
+          "statement": "Statements that are not historical facts are hereby identified as forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30178
+        },
+        {
+          "statement": "\"seek,\" \"focus\" and any variations of these words and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30467
+        },
+        {
+          "statement": "these words and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30506
+        },
+        {
+          "statement": "Such forward-looking statements should, therefore, be considered in light of various risks, uncertainties and assumptions, including prevailing market conditions, risk factors described under \"Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 33233
+        },
+        {
+          "statement": "Upon classification as held for sale, we expect to recognize a loss of between $700 and $800 million, inclusive of estimated transaction fees.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 36663
+        },
+        {
+          "statement": "our site rental revenues by adding more tenants on our shared communications infrastructure, which we expect to result in significant incremental cash flows due to our low incremental operating costs.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 37134
+        },
+        {
+          "statement": "nerated from providing our tenants with long-term access to our shared infrastructure assets, which we believe is the core driver of value for our stockholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 41708
+        },
+        {
+          "statement": "Additionally, we believe our ability to share our fiber assets across multiple tenants to both deploy small cells and offer fiber solutions allows us to generate cash flows and increase stockholder return.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 42257
+        },
+        {
+          "statement": "We believe this decision reflects the translation of the high-quality, long-term contractual cash flows of our business into stable capital returns to common stockholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 42865
+        },
+        {
+          "statement": "These investments include constructing and acquiring new communications infrastructure that we expect will generate future cash flow growth and attractive long-term returns by adding tenants to those assets over time.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 43502
+        },
+        {
+          "statement": "We believe our communications infrastructure is integral to our tenants' networks and organizations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 50001
+        },
+        {
+          "statement": "We believe towers are the most efficient and cost-effective solution for providing coverage and capacity for wireless carrier network deployments.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 50102
+        },
+        {
+          "statement": "We believe that our tenants base their decisions on the outsourcing of services on criteria such as a company's experience, record of accomplishment, reputation, price and time for completion of a project.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 61278
+        },
+        {
+          "statement": "We plan to continue investing in projects that are both good for our business and good for the environment.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62253
+        },
+        {
+          "statement": "We believe attracting, developing and retaining talented employees is paramount to serving our customers and our communities and creating value for our stockholders.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 63465
+        },
+        {
+          "statement": "n to our three largest tenants, we also derive a meaningful portion of our revenues and anticipated future growth from DISH Network Corporate (\"DISH\").",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 85763
+        },
+        {
+          "statement": "200 million in Towers non-renewals in 2025, with additional non-renewals from this agreement, which we expect to fall within our historical non-renewal range of 1% to 2% of Towers annual site rental revenues, to occur each year through 2034.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 87765
+        },
+        {
+          "statement": "We expect an additional impact of approximately $45 million in aggregate Fiber non-renewals to occur in 2025 and in subsequent years.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 87907
+        },
+        {
+          "statement": "at which tenants adopt or prioritize small cells and fiber solutions has been lower or slower than we anticipated, and may continue to be lower or slower, or may cease to exist altogether.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 92653
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue or under contract and (3) approximately 90,000",
+            "position": 34943
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Code of 1986, as amended (\"Code\"),",
+            "position": 45629
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue or margin targets, operational synergies or other benefits contemplated; •increase operational risk or volatility in our business; •temporarily decrease the volume of our business;•not result ",
+            "position": 89137
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue or under contract and (2",
+            "position": 168465
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and Towers Adjusted Site Rental Gross Margin, respectively, was primarily due to a decrease in prepaid rent amortization,",
+            "position": 188431
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings and cash flows generated by CCI's subsidiaries are first applied by such subsidiaries to conduct their operations, including servicing their respective debt obligations, after which any exces",
+            "position": 142283
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, net cash generated by operating activities, capital requirements, financial condition, our relative market capitalization, our existing federal NOLs of approximately $1.5",
+            "position": 157341
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, net cash generated by operating activities, capital requirements, financial condition, our relative market capitalization, our existing NOLs,",
+            "position": 172047
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, taxes, depreciation, amortization and accretion, as adjusted (\"Adjusted EBITDA\") as net income (loss) plus restructuring charges (credits), asset write-down charges, goodwill",
+            "position": 252589
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings(18,525)(11,889)Total equity (deficit)(133)6,381 Total liabilities and equity (deficit)$32,736 $38,527",
+            "position": 278704
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss)(b):Towers operating profit (loss)3,322 3,393 3,527 (2)%(4)%Fiber operating profit (loss)1,188 1,355 1,130 (12)%20 %Net income (loss)(3,903)1,502 1,675 (360)%(10)%Adjusted EBITDA(c)4,161 ",
+            "position": 186559
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) for 2024 decreased by $71 million, or 2%, from 2023",
+            "position": 191003
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) was primarily related to the previously-mentioned decreases in both Towers Adjusted Site Rental Gross Margin and Towers Adjusted Services and Other Gross Margin, which were partially off",
+            "position": 191103
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) for 2024 decreased by $167 million, or 12%, from 2023",
+            "position": 191435
+          },
+          {
+            "metric": "profit",
+            "context": "profit (loss) was primarily related to the previously-mentioned decreases in both Fiber Adjusted Site Rental Gross Margin and Fiber Adjusted Services and Other Gross Margin, which were partially offse",
+            "position": 191536
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA(c)4,161 4,415 4,340 (6)%2 % (a)See reconciliations of these non-GAAP financial measures to segment operating profit (loss) and definitions included in \"(b)See \"(c)See reconciliation of this non",
+            "position": 186744
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA decreased by $254 million, or 6%, from 2023 to 2024,",
+            "position": 194188
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA\") as net income (loss) plus restructuring charges (credits), asset write-down charges, goodwill impairment, acquisition and integration costs, depreciation, amortization and accretion, amortiza",
+            "position": 252687
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, which is a non-GAAP financial measure,",
+            "position": 253545
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA may not be comparable to similarly titled measures of other companies, including companies in the communications infrastructure sector or other REITs,",
+            "position": 253671
+          },
+          {
+            "metric": "margin",
+            "context": "margin from towers located on land that we own, including through fee interests and perpetual easements, and we derive approximately 60% of our towers site rental gross margin from towers located on l",
+            "position": 38148
+          },
+          {
+            "metric": "margin",
+            "context": "margin targets, operational synergies or other benefits contemplated; •increase operational risk or volatility in our business; •temporarily decrease the volume of our business;•not result in the bene",
+            "position": 89148
+          },
+          {
+            "metric": "margin",
+            "context": "margin for the year ended December 31, 2024 was derived from towers where the leases for the land under such towers had final expiration dates of less than 10",
+            "position": 100398
+          },
+          {
+            "metric": "margin",
+            "context": "margin and approximately 80% of our towers site rental gross margin was derived from towers located on land that we own or control for greater than 10 and 20 years,",
+            "position": 178114
+          },
+          {
+            "metric": "margin",
+            "context": "Margin(a):Towers Adjusted Site Rental Gross Margin3,307 3,370 3,404 (2)%(1)%Fiber Adjusted Site Rental Gross Margin1,358 1,533 1,317 (11)%16 %Adjusted Services and Other Gross Margin(a):Towers Adjuste",
+            "position": 186224
+          },
+          {
+            "metric": "market share",
+            "context": "market share; and•changes in the size, scope,",
+            "position": 106967
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow generation and financial flexibility, which we currently expect to result in a reduction to our dividend, beginning with our expected second quarter 2025",
+            "position": 151244
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (loss), net income (loss), net cash provided by (used for) operating,",
+            "position": 253978
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income (loss)(2,938)2,369 2,425 Interest expense and amortization of deferred financing costs, net(932)(850)(699)Gains (losses) on retirement of long-term obligations— — (28)Interest income1",
+            "position": 279560
+          },
+          {
+            "metric": "net income",
+            "context": "net income of our TRSs is not required to be distributed to us,",
+            "position": 155949
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss)(3,903)1,502 1,675 (360)%(10)%Adjusted EBITDA(c)4,161 4,415 4,340 (6)%2 % (a)See reconciliations of these non-GAAP financial measures to segment operating profit (loss) and definition",
+            "position": 186688
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) was $(3.9",
+            "position": 193735
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss) plus restructuring charges (credits), asset write-down charges, goodwill impairment, acquisition and integration costs, depreciation, amortization and accretion, amortization of prep",
+            "position": 252699
+          },
+          {
+            "metric": "net income",
+            "context": "net income (loss), net cash provided by (used for) operating,",
+            "position": 254003
+          },
+          {
+            "metric": "assets",
+            "context": "assets collectively as \"communications infrastructure,\" and, at times,",
+            "position": 35119
+          },
+          {
+            "metric": "assets",
+            "context": "assets and personnel (\"Fiber Business\"),",
+            "position": 35521
+          },
+          {
+            "metric": "assets",
+            "context": "assets held for sale as of December 31, 2024,",
+            "position": 36051
+          },
+          {
+            "metric": "assets",
+            "context": "assets are located in major metropolitan areas,",
+            "position": 38653
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 41694
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities under applicable laws and regulations,",
+            "position": 150374
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities is determined by using either:(1)discounted cash flow valuation methods (for estimating identifiable intangibles such as site rental contracts and tenant relationships or operating lease r",
+            "position": 228703
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities acquired are (1) present value of our future lease payments, including whether renewals or extensions should be measured, and (2",
+            "position": 229772
+          },
+          {
+            "metric": "liabilities",
+            "context": "LIABILITIES AND EQUITY (DEFICIT)Current liabilities:Accounts payable$192 $252 Accrued interest244 219 Deferred revenues476 605 Other accrued liabilities359 342 Current maturities of debt and other obl",
+            "position": 277894
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and equity (deficit)$32,736 $38,527",
+            "position": 278767
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of 4 billion as of June 30, 2024, the last business day of 70",
+            "position": 28362
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities32Item 6",
+            "position": 28986
+          },
+          {
+            "metric": "equity",
+            "context": "Equity•Our substantial level of indebtedness could adversely affect our ability to react to changes in our business,",
+            "position": 78235
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities or securities convertible into equity securities, or sell some of our assets, possibly on unfavorable terms,",
+            "position": 78775
+          },
+          {
+            "metric": "equity",
+            "context": "equity market conditions will impact the availability or cost of such financing,",
+            "position": 80095
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 27820
+          },
+          {
+            "text": "$8.5 billion",
+            "position": 35792
+          },
+          {
+            "text": "$700 ",
+            "position": 36704
+          },
+          {
+            "text": "$800 million",
+            "position": 36713
+          },
+          {
+            "text": "$35.9 billion",
+            "position": 39692
+          },
+          {
+            "text": "$106 million",
+            "position": 84466
+          },
+          {
+            "text": "$200 million",
+            "position": 87664
+          },
+          {
+            "text": "$45 million",
+            "position": 87955
+          },
+          {
+            "text": "$4.2 billion",
+            "position": 102454
+          },
+          {
+            "text": "$2.3 billion",
+            "position": 102974
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 103271
+          },
+          {
+            "text": "$385 million",
+            "position": 103698
+          },
+          {
+            "text": "$12 million",
+            "position": 103795
+          },
+          {
+            "text": "$85 million",
+            "position": 122622
+          },
+          {
+            "text": "$9 million",
+            "position": 122638
+          },
+          {
+            "text": "$100 million",
+            "position": 123446
+          },
+          {
+            "text": "$23.8 billion",
+            "position": 137675
+          },
+          {
+            "text": "$7.0 billion",
+            "position": 144309
+          },
+          {
+            "text": "$1.1 billion",
+            "position": 144692
+          },
+          {
+            "text": "$750 million",
+            "position": 146298
+          },
+          {
+            "text": "$1.565 ",
+            "position": 151123
+          },
+          {
+            "text": "$2.7 billion",
+            "position": 151164
+          },
+          {
+            "text": "$1.5 billion",
+            "position": 157517
+          },
+          {
+            "text": "$100.00 ",
+            "position": 172945
+          },
+          {
+            "text": "$115.61 ",
+            "position": 173257
+          },
+          {
+            "text": "$156.16 ",
+            "position": 173265
+          },
+          {
+            "text": "$105.39 ",
+            "position": 173273
+          },
+          {
+            "text": "$94.54 ",
+            "position": 173281
+          },
+          {
+            "text": "$79.04 ",
+            "position": 173288
+          },
+          {
+            "text": "$165 million",
+            "position": 180224
+          },
+          {
+            "text": "$59 million",
+            "position": 180296
+          },
+          {
+            "text": "$5.0 billion",
+            "position": 182485
+          },
+          {
+            "text": "$65 million",
+            "position": 184336
+          },
+          {
+            "text": "$35 million",
+            "position": 184409
+          },
+          {
+            "text": "$30 million",
+            "position": 184463
+          },
+          {
+            "text": "$5 million",
+            "position": 184527
+          },
+          {
+            "text": "$4,266 ",
+            "position": 186066
+          },
+          {
+            "text": "$4,313 ",
+            "position": 186073
+          },
+          {
+            "text": "$4,322 ",
+            "position": 186080
+          },
+          {
+            "text": "$174 million",
+            "position": 187083
+          },
+          {
+            "text": "$170 million",
+            "position": 187622
+          },
+          {
+            "text": "$4.3 billion",
+            "position": 188252
+          },
+          {
+            "text": "$3.3 billion",
+            "position": 188269
+          },
+          {
+            "text": "$3.4 billion",
+            "position": 188326
+          },
+          {
+            "text": "$47 million",
+            "position": 188381
+          },
+          {
+            "text": "$63 million",
+            "position": 188397
+          },
+          {
+            "text": "$2.1 billion",
+            "position": 188796
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 188813
+          },
+          {
+            "text": "$127 million",
+            "position": 188858
+          },
+          {
+            "text": "$175 million",
+            "position": 188875
+          }
+        ],
+        "percentages": [
+          {
+            "text": "56%",
+            "value": 56.0,
+            "position": 37907
+          },
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 37915
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 38112
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 38281
+          },
+          {
+            "text": "97%",
+            "value": 97.0,
+            "position": 39126
+          },
+          {
+            "text": "67%",
+            "value": 67.0,
+            "position": 39178
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 39186
+          },
+          {
+            "text": "66%",
+            "value": 66.0,
+            "position": 39278
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 39286
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 46055
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 47008
+          },
+          {
+            "text": "98%",
+            "value": 98.0,
+            "position": 51430
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 51438
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 55898
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 55905
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 100362
+          },
+          {
+            "text": "54%",
+            "value": 54.0,
+            "position": 100747
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 102042
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 102549
+          },
+          {
+            "text": "36%",
+            "value": 36.0,
+            "position": 107235
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 107243
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 122469
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 139505
+          },
+          {
+            "text": "5.2%",
+            "value": 5.2,
+            "position": 139637
+          },
+          {
+            "text": "6.5%",
+            "value": 6.5,
+            "position": 139676
+          },
+          {
+            "text": "5.4%",
+            "value": 5.4,
+            "position": 139682
+          },
+          {
+            "text": "1.1%",
+            "value": 1.1,
+            "position": 139691
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 141495
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 143533
+          },
+          {
+            "text": "3.8%",
+            "value": 3.8,
+            "position": 143602
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 157971
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 161233
+          },
+          {
+            "text": "9.8%",
+            "value": 9.8,
+            "position": 161875
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 178139
+          },
+          {
+            "text": "3.9%",
+            "value": 3.9,
+            "position": 179154
+          },
+          {
+            "text": "13 %",
+            "value": 13.0,
+            "position": 186142
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 186194
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 186362
+          },
+          {
+            "text": "433 %",
+            "value": 433.0,
+            "position": 186536
+          },
+          {
+            "text": "20 %",
+            "value": 20.0,
+            "position": 186684
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 186775
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 187100
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 190313
+          },
+          {
+            "text": "348%",
+            "value": 348.0,
+            "position": 190744
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 191488
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 192238
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 194225
+          },
+          {
+            "text": "1.350%",
+            "value": 1.35,
+            "position": 196966
+          },
+          {
+            "text": "3.200%",
+            "value": 3.2,
+            "position": 206248
+          },
+          {
+            "text": "4.900%",
+            "value": 4.9,
+            "position": 206385
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 180
+          },
+          {
+            "category": "operational_risk",
+            "count": 27
+          },
+          {
+            "category": "financial_risk",
+            "count": 524
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 52
+          },
+          {
+            "category": "technology_risk",
+            "count": 133
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 469366,
+        "filtered_length": 453478,
+        "removed_ratio": 3.38,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.45370902817711,
+      "confidence": 0.3181277716125868,
+      "overall_score": 50.54629097182289,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.680851063829785,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.010925819436457762,
+        "risk_adjusted_signal": 0.07348578567258901,
+        "expected_return_annualized": 0.02077382155012982,
+        "signal_sharpe_ratio": 0.0013849214366753214,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.07348578567258901,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.07348578567258901,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10638297872340426,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.07348578567258901,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.010925819436457762
+      },
+      "risk_adjusted_signal": 0.07348578567258901,
+      "expected_return": 0.0002077382155012982,
+      "signal_sharpe": 0.0013849214366753214,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.54629097182289,
+    "confidence": 0.3181277716125868,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:20:58.021451",
+  "filing_date": "2025-03-14",
+  "filing_filename": "2025-03-14-10k-CCI.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

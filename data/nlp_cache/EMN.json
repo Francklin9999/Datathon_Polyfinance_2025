@@ -1,0 +1,917 @@
+{
+  "ticker": "EMN",
+  "analysis": {
+    "ticker": "EMN",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 32.03963666391412,
+        "financial_sentiment": -0.0425531914893617,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "eform Act (Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Forward-looking statements are all statements, other than statements of historical fact, that may be made by Eastman Chemical Company (\"Eastman\" or the \"Company\") from time to time.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 85537
+        },
+        {
+          "statement": "Forward-looking statements are based upon certain underlying assumptions as of the date such statements were made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 88081
+        },
+        {
+          "statement": "Forward-looking statements and the assumptions underlying them are necessarily subject to risks and uncertainties inherent in projecting future conditions and results.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 88395
+        },
+        {
+          "statement": "resently deems immaterial, could also cause The Company cautions you not to place undue reliance on forward-looking statements, which speak only as of the date of this Annual Report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 88810
+        },
+        {
+          "statement": "Except as may be required by law, the Company undertakes no obligation to update or alter these forward-looking statements, whether as a result of new information, future events, or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 88989
+        },
+        {
+          "statement": "pertise in applications development, management believes that the AM segment is well positioned for future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 111609
+        },
+        {
+          "statement": "Future results are expected to fluctuate due to both general economic conditions and industry supply and demand.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 120513
+        },
+        {
+          "statement": "eport, the following are the material known factors, risks, and uncertainties that could cause See \"Forward-Looking Statements\".",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 154317
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 286863
+        },
+        {
+          "statement": "Additionally, this guidance necessitates the disclosure of the title and position of the Chief Operating Decision Maker (\"CODM\").",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 301031
+        },
+        {
+          "statement": "The new guidance does not modify how a public entity identifies its operating segments, aggregates them, or applies the quantitative thresholds to determine its reportable segments.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 301150
+        },
+        {
+          "statement": "The guidance is intended to reduce diversity in practice and provide users of joint venture financial statements with more decision-useful information.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 302188
+        },
+        {
+          "statement": "ption is permitted, and joint ventures formed prior to the adoption date may elect to apply the new guidance retrospectively back to their original formation date.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 302598
+        },
+        {
+          "statement": "The guidance further requires disclosure of income tax payments to various jurisdictions.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 303354
+        },
+        {
+          "statement": "This guidance is intended to improve transparency around the nature of expenses and their impact on financial performance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 304184
+        },
+        {
+          "statement": "s received from government agencies, the Company applied by analogy the recognition and measurement guidance under International Accounting Standard 20, Accounting for Government Grants and Disclosure of Government Assistance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 330171
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue of $9.4",
+            "position": 94501
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue by end-use market, see Exhibit 99.01",
+            "position": 95217
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and earnings and segment product lines revenues, see Note 20, \"Segment and Regional Sales Information\", to the Company's consolidated financial statements in , Item 8 and \"Management's Discuss",
+            "position": 107108
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, and include multinational as well as regional cigarette producers, fabric manufacturers,",
+            "position": 124964
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue during 2024",
+            "position": 146658
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before income taxes (\"EBT\"):Other adjusted EBIT (2)(211)Non-core items impacting EBITCost of sales impact from restructuring activities (3)(7)Asset impairments, restructuring, and other charg",
+            "position": 4033
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, cash flow, dividends, stock repurchases and other expected financial results, events, decisions, and conditions; expectations, strategies, and plans for individual assets and products, busin",
+            "position": 87046
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest and taxes (\"EBIT\") of $1.3",
+            "position": 94526
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings attributable to Eastman of $905",
+            "position": 94595
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share were $7.67",
+            "position": 94653
+          },
+          {
+            "metric": "profit",
+            "context": "profit,•Other components of post-employment (benefit) cost, net,•Other (income) charges, net,•EBIT,•Provision for income taxes,•Net earnings attributable to Eastman,•Diluted EPS,",
+            "position": 231322
+          },
+          {
+            "metric": "profit",
+            "context": "Profit(Dollars in millions)20242023ChangeGross profit$2,290 $2,061 11 %Costs of sales impact from restructuring activities7 23 Steam line incident (insurance proceeds) costs, net— (8)Gross profit excl",
+            "position": 241827
+          },
+          {
+            "metric": "profit",
+            "context": "profit in 2023 included insurance proceeds from the steam line incident,",
+            "position": 242262
+          },
+          {
+            "metric": "profit",
+            "context": "profit increased as a result of increases in the AM, AFP, and Fibers segments,",
+            "position": 242494
+          },
+          {
+            "metric": "profit",
+            "context": "profit or loss on retirement or other disposition in \"Cost of sales\" in the Consolidated Statements of Earnings,",
+            "position": 318254
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA\", \"Adjusted EBITDA Margin\", \"Return on Invested Capital\" (or \"ROIC\"),",
+            "position": 235954
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA is EBITDA (net earnings before interest, taxes, depreciation and amortization) adjusted to exclude the same non-core, unusual,",
+            "position": 236446
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA Margin is Adjusted EBITDA divided by the GAAP measure sales revenue in the Company's Consolidated Statement of Earnings,",
+            "position": 236702
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, Adjusted EBITDA Margin, ROIC, and Adjusted ROIC are useful as supplemental measures in evaluating the performance of and returns from Eastman's operating businesses,",
+            "position": 237422
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, Adjusted EBITDA Margin, ROIC, and Adjusted ROIC to compare the results, returns,",
+            "position": 237807
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS,",
+            "position": 231496
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS and adjusted net earnings and EPS were as follows: 20242023(Dollars in millions, except diluted EPS) $EPS $EPSNet earnings attributable to Eastman$905 $7.67",
+            "position": 240728
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS $EPSNet earnings and diluted earnings per share attributable to Eastman$905 $7.67",
+            "position": 247593
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS: For years ended December 31,(In millions, except per share amounts)202420232022NumeratorNet earnings attributable to Eastman$905 $894 $793 DenominatorWeighted average shares used for basic EPS116",
+            "position": 411700
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (1)Basic$7.75",
+            "position": 412043
+          },
+          {
+            "metric": "margin",
+            "context": "margin and sales; pending and future legal proceedings; earnings, cash flow, dividends, stock repurchases and other expected financial results, events, decisions, and conditions; expectations, strateg",
+            "position": 86990
+          },
+          {
+            "metric": "margin",
+            "context": "Margin\", \"Adjusted EBITDA\", \"Adjusted EBITDA Margin\", \"Return on Invested Capital\" (or \"ROIC\"),",
+            "position": 235935
+          },
+          {
+            "metric": "margin",
+            "context": "Margin as the GAAP measure EBIT adjusted to exclude the same non-core, unusual, or non-recurring items as are excluded from the Company's other non-GAAP earnings measures for the same periods divided ",
+            "position": 236085
+          },
+          {
+            "metric": "margin",
+            "context": "Margin is Adjusted EBITDA divided by the GAAP measure sales revenue in the Company's Consolidated Statement of Earnings,",
+            "position": 236709
+          },
+          {
+            "metric": "margin",
+            "context": "Margin, Adjusted EBITDA, Adjusted EBITDA Margin, ROIC, and Adjusted ROIC are useful as supplemental measures in evaluating the performance of and returns from Eastman's operating businesses,",
+            "position": 237405
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow\", which management defines as net cash provided by or used in operating activities less the amount of net capital expenditures (typically the GAAP measure additions to properties and eq",
+            "position": 234942
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow yield\", which management defines as annual free cash flow divided by the Company's market capitalization, and \"free cash flow conversion\",",
+            "position": 235289
+          },
+          {
+            "metric": "net income",
+            "context": "net income, net15 1 (56)Total other comprehensive income (loss), net of tax5 (114)(23)Comprehensive income including noncontrolling interest913 782 773 Less: Comprehensive income attributable to nonco",
+            "position": 294371
+          },
+          {
+            "metric": "net income",
+            "context": "net income, net20 15 1 1 (75)(56)Total other comprehensive income (loss)$32 $5 $(118)$(114)$(31)$(23)For additional information regarding the impact of reclassifications into earnings, refer to Note 1",
+            "position": 414624
+          },
+          {
+            "metric": "assets",
+            "context": "Assets (6)5,735 4,608 1,586 1,075 13,004 2,209 15,213 (1)Other segment items for each reportable segment includes research and development expenses, other components of post-employment (benefit) cost,",
+            "position": 6453
+          },
+          {
+            "metric": "assets",
+            "context": "assets include accounts receivable, inventory, fixed assets, goodwill,",
+            "position": 7402
+          },
+          {
+            "metric": "assets",
+            "context": "Assets (8)5,423 4,691 1,600 1,081 12,795 1,838 14,633 (1)Other segment items for each reportable segment includes research and development expenses, other components of post-employment (benefit) cost,",
+            "position": 7758
+          },
+          {
+            "metric": "assets",
+            "context": "assets and products, businesses, and operating segments, as well as for the whole of Eastman; cash sources and requirements and uses of available cash; financing plans and activities; pension expenses",
+            "position": 87220
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities expected to be paid out within approximately 30 years as well as the Company's assumptions about remediation requirements at the contaminated site, the nature of the remedy, the outcome of",
+            "position": 150510
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities in the form of transition costs and retained liabilities from the operations divested,",
+            "position": 172264
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities that may arise,",
+            "position": 174963
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities or otherwise affect its business,",
+            "position": 181938
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 182680
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates as of December 31, 2024 was $11,210,921,360 using beneficial ownership rules adopted pursuant to Section 13 of the Securities A total of 115,168,382 shares of common stoc",
+            "position": 84993
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities326",
+            "position": 89620
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests in three manufacturing joint ventures in 12",
+            "position": 90722
+          },
+          {
+            "metric": "equity",
+            "context": "equity investment, reported in \"Other (income) charges, net\" in the Consolidated Statements of Earnings, Comprehensive Income and Retained Earnings in , Item 8",
+            "position": 128073
+          },
+          {
+            "metric": "equity",
+            "context": "equity each year by comparing pay for people in the same jobs, job levels,",
+            "position": 145945
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$3,050 ",
+            "position": 3761
+          },
+          {
+            "text": "$2,862 ",
+            "position": 3768
+          },
+          {
+            "text": "$2,134 ",
+            "position": 3775
+          },
+          {
+            "text": "$1,318 ",
+            "position": 3782
+          },
+          {
+            "text": "$9,364 ",
+            "position": 3789
+          },
+          {
+            "text": "$6,998 ",
+            "position": 3831
+          },
+          {
+            "text": "$682 ",
+            "position": 3897
+          },
+          {
+            "text": "$175 ",
+            "position": 3937
+          },
+          {
+            "text": "$1,078 ",
+            "position": 4406
+          },
+          {
+            "text": "$2,932 ",
+            "position": 4572
+          },
+          {
+            "text": "$2,834 ",
+            "position": 4579
+          },
+          {
+            "text": "$2,143 ",
+            "position": 4586
+          },
+          {
+            "text": "$1,295 ",
+            "position": 4593
+          },
+          {
+            "text": "$9,204 ",
+            "position": 4600
+          },
+          {
+            "text": "$7,045 ",
+            "position": 4642
+          },
+          {
+            "text": "$686 ",
+            "position": 4708
+          },
+          {
+            "text": "$161 ",
+            "position": 4748
+          },
+          {
+            "text": "$1,087 ",
+            "position": 5295
+          },
+          {
+            "text": "$3,207 ",
+            "position": 5461
+          },
+          {
+            "text": "$3,475 ",
+            "position": 5468
+          },
+          {
+            "text": "$2,716 ",
+            "position": 5475
+          },
+          {
+            "text": "$1,022 ",
+            "position": 5482
+          },
+          {
+            "text": "$10,420 ",
+            "position": 5489
+          },
+          {
+            "text": "$977 ",
+            "position": 6187
+          },
+          {
+            "text": "$0.01 ",
+            "position": 84359
+          },
+          {
+            "text": "$97.97 ",
+            "position": 84887
+          },
+          {
+            "text": "$11,210,921,360 ",
+            "position": 85051
+          },
+          {
+            "text": "$9.4 billion",
+            "position": 94512
+          },
+          {
+            "text": "$1.3 billion",
+            "position": 94573
+          },
+          {
+            "text": "$905 million",
+            "position": 94631
+          },
+          {
+            "text": "$7.67",
+            "position": 94677
+          },
+          {
+            "text": "$7.89",
+            "position": 94858
+          },
+          {
+            "text": "$375 million",
+            "position": 105671
+          },
+          {
+            "text": "$307 million",
+            "position": 151908
+          },
+          {
+            "text": "$314 million",
+            "position": 151922
+          },
+          {
+            "text": "$300 million",
+            "position": 151940
+          },
+          {
+            "text": "$70 million",
+            "position": 152214
+          },
+          {
+            "text": "$65 million",
+            "position": 152227
+          },
+          {
+            "text": "$60 million",
+            "position": 152244
+          },
+          {
+            "text": "$1 million",
+            "position": 202224
+          },
+          {
+            "text": "$2.5 billion",
+            "position": 204469
+          },
+          {
+            "text": "$1.1 billion",
+            "position": 204803
+          },
+          {
+            "text": "$1.515 billion",
+            "position": 205490
+          },
+          {
+            "text": "$102.39 ",
+            "position": 205531
+          },
+          {
+            "text": "$1.458 billion",
+            "position": 205547
+          },
+          {
+            "text": "$100.98 ",
+            "position": 205588
+          },
+          {
+            "text": "$1.415 billion",
+            "position": 205604
+          },
+          {
+            "text": "$101.72 ",
+            "position": 205631
+          },
+          {
+            "text": "$3.6 billion",
+            "position": 211257
+          },
+          {
+            "text": "$349 million",
+            "position": 212631
+          }
+        ],
+        "percentages": [
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 2264
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 2267
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 2270
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 2290
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 2293
+          },
+          {
+            "text": "47%",
+            "value": 47.0,
+            "position": 2317
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 2320
+          },
+          {
+            "text": "51%",
+            "value": 51.0,
+            "position": 2323
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 2331
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 2415
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 2421
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 2442
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 2445
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 2448
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 2468
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 2471
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 2493
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 2590
+          },
+          {
+            "text": "78%",
+            "value": 78.0,
+            "position": 2593
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 2596
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 2611
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 2614
+          },
+          {
+            "text": "23%",
+            "value": 23.0,
+            "position": 2617
+          },
+          {
+            "text": "69%",
+            "value": 69.0,
+            "position": 2706
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 2709
+          },
+          {
+            "text": "64%",
+            "value": 64.0,
+            "position": 2712
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 2727
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 2730
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 2733
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 2778
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 2782
+          },
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 2896
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 2899
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 2920
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 3097
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 3100
+          },
+          {
+            "text": "41%",
+            "value": 41.0,
+            "position": 3103
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 3158
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 3184
+          },
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 3301
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 3321
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 3359
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 3380
+          },
+          {
+            "text": "36%",
+            "value": 36.0,
+            "position": 3517
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 3579
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 3583
+          },
+          {
+            "text": "1.875%",
+            "value": 1.875,
+            "position": 84401
+          },
+          {
+            "text": "73 %",
+            "value": 73.0,
+            "position": 144273
+          },
+          {
+            "text": "14 %",
+            "value": 14.0,
+            "position": 144308
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 144324
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 174
+          },
+          {
+            "category": "operational_risk",
+            "count": 144
+          },
+          {
+            "category": "financial_risk",
+            "count": 484
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 72
+          },
+          {
+            "category": "technology_risk",
+            "count": 158
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 5.325443786982248
+        }
+      ],
+      "deduplication": {
+        "original_length": 477314,
+        "filtered_length": 468176,
+        "removed_ratio": 1.91,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.15986198964922,
+      "confidence": 1.0725302926649476,
+      "overall_score": 51.84013801035078,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.87234042553192,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.036802760207015506,
+        "risk_adjusted_signal": 0.24753106752872012,
+        "expected_return_annualized": 0.06997497785306867,
+        "signal_sharpe_ratio": 0.004664998523537911,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.24753106752872012,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.24753106752872012,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.0425531914893617,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.24753106752872012,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.036802760207015506
+      },
+      "risk_adjusted_signal": 0.24753106752872012,
+      "expected_return": 0.0006997497785306866,
+      "signal_sharpe": 0.004664998523537911,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.84013801035078,
+    "confidence": 1.0725302926649476,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:23:32.140028",
+  "filing_date": "2025-02-14",
+  "filing_filename": "2025-02-14-10k-EMN.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

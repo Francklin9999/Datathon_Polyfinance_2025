@@ -1,0 +1,921 @@
+{
+  "ticker": "PEG",
+  "analysis": {
+    "ticker": "PEG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 34.589448631495436,
+        "financial_sentiment": -0.05825242718446602,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Table of Contents TABLE OF CONTENTS Page FORWARD-LOOKING STATEMENTS iii FILING FORMAT 1 WHERE TO FIND MORE INFORMATION 1 Risk Factors 19 Item 1B.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 110284
+        },
+        {
+          "statement": "ion and Analysis of Financial Condition and Results of Operations 40 Executive Overview of 2024 and Future Outlook 40 Results of Operations 46 Liquidity and Capital Resources 51 Capital Requirements 55 Critical Accounting Estimates 57 Item 7A.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 110697
+        },
+        {
+          "statement": "tegies, prospects, consequences and all other statements that are not purely historical constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 112696
+        },
+        {
+          "statement": ",” “forecast,” “project,” variations of such words and similar expressions are intended to identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 113251
+        },
+        {
+          "statement": "Factors that may cause actual results to differ are often presented with the forward-looking statements themselves.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 113356
+        },
+        {
+          "statement": "Readers are cautioned not to place undue reliance on these forward-looking statements in making any investment decision.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117751
+        },
+        {
+          "statement": "Forward-looking statements made in this report apply only as of the date of this report.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117813
+        },
+        {
+          "statement": "While we may elect to update forward-looking statements from time to time, we specifically disclaim any obligation to do so, even in light of new information or future events, unless otherwise required by applicable securities laws.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 117931
+        },
+        {
+          "statement": "Until additional guidance is issued by the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 134864
+        },
+        {
+          "statement": "We expect to be able to meet the nuclear fuel supply demands of our operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 137866
+        },
+        {
+          "statement": "ZEC revenue will be adjusted based upon the actual amount of the PTCs when guidance is issued on how to calculate gross receipts and that adjustment could be material.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 139428
+        },
+        {
+          "statement": "In PJM the market design for capacity payments provides for a forward-looking, capacity pricing mechanism through the Reliability Pricing Model (RPM).",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 139966
+        },
+        {
+          "statement": "Treasury has yet to issue guidance regarding the definition of gross receipts.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 141449
+        },
+        {
+          "statement": "We continue to analyze the impact of the IRA on our nuclear units, including potential future guidance from the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 141596
+        },
+        {
+          "statement": "As of December 31, 2024, we expect that our hedged position for 2025 in conjunction with the PTC and market price variability will result in the realized value of our nuclear generation output being at, or above, the PTC phase out.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 142116
+        },
+        {
+          "statement": "Our strategy will continue to evolve given PTC guidance uncertainty, and potential incremental changes upon final U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 142370
+        },
+        {
+          "statement": "In October 2024, the BPU released an Order that provided program guidance and minimum filing requirements for electric utility operated medium- and heavy-duty charging incentive programs.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 174791
+        },
+        {
+          "statement": "The CSB’s cybersecurity-related responsibilities include developing rules and guidance, reviewing licensing actions, developing policy enhancements, and overseeing NRC-licensed facilities.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 178169
+        },
+        {
+          "statement": "Additionally, there are on-site storage facilities for Salem, Hope Creek and Peach Bottom, which we believe have the capacity for at least five years of temporary storage for each facility.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 186700
+        },
+        {
+          "statement": "r at all, which could materially adversely impact our financial position, results of operations and future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 206253
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue requirements through a fixed formula that provides for a recovery of our operating costs and a return of and on our capital investments in the system,",
+            "position": 125124
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue has been derived primarily from energy,",
+            "position": 134026
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from the electric distribution companies (EDCs) in New Jersey, which is equivalent to approximately $10",
+            "position": 139060
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue recorded is reduced by the 6 Table of Contents estimated production tax credits (PTCs) generated from PSEG Power’s Salem 1, Salem 2,",
+            "position": 139181
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue as compared to revenue thresholds established in our most recent 8",
+            "position": 147753
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Share (EPS) and Dividends 154 i Table of Contents TABLE OF CONTENTS (continued) Note 23",
+            "position": 111873
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, strategies, prospects, consequences and all other statements that are not purely historical constitute “forward-looking statements” within the meaning of the Private Securities Litigation Re",
+            "position": 112582
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and costs to decommission nuclear generating stations requires significant judgment,",
+            "position": 254559
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, capital requirements of our businesses, alternate investment opportunities, legal requirements, regulatory constraints,",
+            "position": 279158
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings volatility through the PTC mechanism and hedging,",
+            "position": 288787
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS) and Dividends 154 i Table of Contents TABLE OF CONTENTS (continued) Note 23",
+            "position": 111893
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS is calculated by dividing Net Income (Loss) by the weighted average number of shares of common stock outstanding,",
+            "position": 617421
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS: Years Ended December 31, 2024 2023 2022 Basic Diluted Basic Diluted Basic Diluted EPS Numerator: (Millions) Net Income $ 1,772 $ 1,772 $ 2,563 $ 2,563 $ 1,031 $ 1,031 EPS Denominator: (Millions) ",
+            "position": 617842
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 9.90",
+            "position": 125823
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE—From time to time, various matters are pending before FERC relating to, among other things, transmission planning and transmission rates and returns,",
+            "position": 156368
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE) Under current FERC rules, PSE&G continues to earn a 50",
+            "position": 294997
+          },
+          {
+            "metric": "margin",
+            "context": "margin, specifically Contract, Non-Firm Transportation,",
+            "position": 127544
+          },
+          {
+            "metric": "margin",
+            "context": "margin and over 90",
+            "position": 128036
+          },
+          {
+            "metric": "margin",
+            "context": "margin variances against changes in customer usage of gas and electricity,",
+            "position": 193530
+          },
+          {
+            "metric": "margin",
+            "context": "margin for derivatives and increased investigations by the CFTC, could negatively impact PSEG Power’s ability to hedge its portfolio in an efficient, cost-effective manner by, among other things,",
+            "position": 245849
+          },
+          {
+            "metric": "margin",
+            "context": "margin deposit with brokers,",
+            "position": 530070
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate in our regulated rate base in a range of 6% to 7.5",
+            "position": 285106
+          },
+          {
+            "metric": "operating income",
+            "context": "OPERATING INCOME 2,353 3,685 1,381 Income from Equity Method Investments 1 1 14 Net Gains (Losses) on Trust Investments 127 189 (265 ) Net Other Income (Deductions) 153 172 124 Net Non-Operating Pensi",
+            "position": 379931
+          },
+          {
+            "metric": "operating income",
+            "context": "OPERATING INCOME 2,286 1,974 1,892 Net Gains (Losses) on Trust Investments — — (2 ) Net Other Income (Deductions) 64 80 88 Net Non-Operating Pension and OPEB Credits 77 114 281 Interest Expense (582 )",
+            "position": 388986
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income: Current Expense (Benefit): Federal $ (225 ) $ 144 $ 262 State 15 19 (30 ) Total Current (210 ) 163 232 Deferred Expense (Benefit): Federal 129 109 (335 ) State 140 253 80 Total Defer",
+            "position": 599800
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating Income: Current Expense (Benefit): Federal $ (67 ) $ 127 $ 130 State — 4 — Total Current (67 ) 131 130 Deferred Expense (Benefit): Federal 209 (113 ) (17 ) State 162 149 159 Total Deferred 3",
+            "position": 602147
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income and annual cash inflows by approximately $40",
+            "position": 156945
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income $ 1,772 $ 2,563 PSEG Net Income Per Share (Diluted) $ 3.54",
+            "position": 294638
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income $ 1,772 $ 2,563 $ 1,031 PSEG Net Income Per Share (Diluted) $ 3.54",
+            "position": 306981
+          },
+          {
+            "metric": "assets",
+            "context": "Assets and Liabilities 93 Note 7",
+            "position": 111261
+          },
+          {
+            "metric": "assets",
+            "context": "assets; •disruptions or cost increases in our supply chain, including labor shortages; •any inability to maintain sufficient liquidity or access sufficient capital on commercially reasonable terms; •t",
+            "position": 114453
+          },
+          {
+            "metric": "assets",
+            "context": "assets, its natural gas supply operations, the Operating Services Agreement (OSA) of PSEG LI with LIPA,",
+            "position": 133649
+          },
+          {
+            "metric": "assets",
+            "context": "assets represent approximately 73% and 80% of the total assets of PSEG and PSE&G, respectively, as of December 31, 2024",
+            "position": 202298
+          },
+          {
+            "metric": "assets",
+            "context": "assets for impairment whenever events or changes in circumstances, such as significant adverse changes in regulation, including a disallowance of certain costs, a potential sale or disposition of an a",
+            "position": 202451
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities 93 Note 7",
+            "position": 111272
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities 122 Note 14",
+            "position": 111517
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities, and other filings we make with the (SEC), including our subsequent reports on Form 10-Q and Form 8",
+            "position": 113520
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and fuel and waste disposal costs, see Item 1",
+            "position": 181122
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities excluded from the sale of its fossil generation portfolio,",
+            "position": 296892
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 38 Management’s Discussion and Analysis of Financial Condition and Results of Operations 40 Executive Overview of 2024 and",
+            "position": 110496
+          },
+          {
+            "metric": "equity",
+            "context": "equity for PSE&G’s distribution business and a 55",
+            "position": 126337
+          },
+          {
+            "metric": "equity",
+            "context": "equity firms,",
+            "position": 148927
+          },
+          {
+            "metric": "equity",
+            "context": "equity compensation plans as of December 31, 2024: Plan Category Number of Securitiesto be Issued uponExercise ofOutstanding Options,Warrants and Rights(a) Weighted-AverageExercise Price ofOutstanding",
+            "position": 279443
+          },
+          {
+            "metric": "equity",
+            "context": "equity-based compensation,",
+            "position": 280653
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$36,632,552,572 b",
+            "position": 108987
+          },
+          {
+            "text": "$17.8 billion",
+            "position": 126295
+          },
+          {
+            "text": "$1 billion",
+            "position": 128784
+          },
+          {
+            "text": "$280 million",
+            "position": 128834
+          },
+          {
+            "text": "$300 million",
+            "position": 128886
+          },
+          {
+            "text": "$2.9 billion",
+            "position": 128928
+          },
+          {
+            "text": "$166 million",
+            "position": 128966
+          },
+          {
+            "text": "$842 million",
+            "position": 129023
+          },
+          {
+            "text": "$902 million",
+            "position": 129114
+          },
+          {
+            "text": "$511 million",
+            "position": 129190
+          },
+          {
+            "text": "$15 ",
+            "position": 134632
+          },
+          {
+            "text": "$10",
+            "position": 139168
+          },
+          {
+            "text": "$15",
+            "position": 141288
+          },
+          {
+            "text": "$424 million",
+            "position": 144330
+          },
+          {
+            "text": "$40 million",
+            "position": 156997
+          },
+          {
+            "text": "$175 ",
+            "position": 164178
+          },
+          {
+            "text": "$325 ",
+            "position": 164204
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 173566
+          },
+          {
+            "text": "$30 million",
+            "position": 174959
+          },
+          {
+            "text": "$100 ",
+            "position": 278166
+          },
+          {
+            "text": "$0.63 ",
+            "position": 278724
+          },
+          {
+            "text": "$2.52 ",
+            "position": 278845
+          },
+          {
+            "text": "$30 billion",
+            "position": 284460
+          },
+          {
+            "text": "$34 billion",
+            "position": 284513
+          },
+          {
+            "text": "$21 billion",
+            "position": 285011
+          },
+          {
+            "text": "$24 billion",
+            "position": 285026
+          },
+          {
+            "text": "$22.5 billion",
+            "position": 285310
+          },
+          {
+            "text": "$26 billion",
+            "position": 285327
+          },
+          {
+            "text": "$109 million",
+            "position": 287393
+          },
+          {
+            "text": "$900 million",
+            "position": 287833
+          },
+          {
+            "text": "$750 million",
+            "position": 287882
+          },
+          {
+            "text": "$10 ",
+            "position": 297763
+          },
+          {
+            "text": "$0.004 ",
+            "position": 298037
+          },
+          {
+            "text": "$1.25 billion",
+            "position": 300094
+          },
+          {
+            "text": "$400 million",
+            "position": 300311
+          },
+          {
+            "text": "$239 million",
+            "position": 307121
+          },
+          {
+            "text": "$92 million",
+            "position": 307294
+          },
+          {
+            "text": "$97 million",
+            "position": 308813
+          },
+          {
+            "text": "$59 million",
+            "position": 308928
+          },
+          {
+            "text": "$178 million",
+            "position": 308960
+          },
+          {
+            "text": "$125 million",
+            "position": 310730
+          },
+          {
+            "text": "$82 million",
+            "position": 310744
+          },
+          {
+            "text": "$48 million",
+            "position": 310760
+          },
+          {
+            "text": "$592 million",
+            "position": 310945
+          },
+          {
+            "text": "$533 million",
+            "position": 310959
+          },
+          {
+            "text": "$516 million",
+            "position": 310976
+          },
+          {
+            "text": "$642 million",
+            "position": 312340
+          },
+          {
+            "text": "$321 million",
+            "position": 313052
+          },
+          {
+            "text": "$170 million",
+            "position": 313082
+          },
+          {
+            "text": "$99 million",
+            "position": 313211
+          }
+        ],
+        "percentages": [
+          {
+            "text": "8.00%",
+            "value": 8.0,
+            "position": 108056
+          },
+          {
+            "text": "5.00%",
+            "value": 5.0,
+            "position": 108138
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 122969
+          },
+          {
+            "text": "9.90%",
+            "value": 9.9,
+            "position": 125830
+          },
+          {
+            "text": "9.6%",
+            "value": 9.6,
+            "position": 126322
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 126384
+          },
+          {
+            "text": "57 %",
+            "value": 57.0,
+            "position": 126949
+          },
+          {
+            "text": "38 %",
+            "value": 38.0,
+            "position": 126954
+          },
+          {
+            "text": "34 %",
+            "value": 34.0,
+            "position": 126971
+          },
+          {
+            "text": "58 %",
+            "value": 58.0,
+            "position": 126976
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 126992
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 126996
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 127006
+          },
+          {
+            "text": "0.9%",
+            "value": 0.9,
+            "position": 127407
+          },
+          {
+            "text": "0.7%",
+            "value": 0.7,
+            "position": 127452
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 128052
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 129261
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 133085
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 143260
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 145020
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 151419
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 151460
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 151557
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 151598
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 169980
+          },
+          {
+            "text": "0.75%",
+            "value": 0.75,
+            "position": 169987
+          },
+          {
+            "text": "2.15%",
+            "value": 2.15,
+            "position": 170117
+          },
+          {
+            "text": "1.10%",
+            "value": 1.1,
+            "position": 170140
+          },
+          {
+            "text": "73%",
+            "value": 73.0,
+            "position": 202329
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 260539
+          },
+          {
+            "text": "64%",
+            "value": 64.0,
+            "position": 276141
+          },
+          {
+            "text": "50 %",
+            "value": 50.0,
+            "position": 277770
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 285159
+          },
+          {
+            "text": "7.5%",
+            "value": 7.5,
+            "position": 285165
+          },
+          {
+            "text": "85%",
+            "value": 85.0,
+            "position": 292185
+          },
+          {
+            "text": "57%",
+            "value": 57.0,
+            "position": 320526
+          },
+          {
+            "text": "0.80%",
+            "value": 0.8,
+            "position": 328948
+          },
+          {
+            "text": "3.00%",
+            "value": 3.0,
+            "position": 329019
+          },
+          {
+            "text": "5.68 %",
+            "value": 5.68,
+            "position": 342318
+          },
+          {
+            "text": "5.02 %",
+            "value": 5.02,
+            "position": 342325
+          },
+          {
+            "text": "5.20 %",
+            "value": 5.2,
+            "position": 342332
+          },
+          {
+            "text": "8.10 %",
+            "value": 8.1,
+            "position": 342378
+          },
+          {
+            "text": "7.20 %",
+            "value": 7.2,
+            "position": 342392
+          },
+          {
+            "text": "5.59 %",
+            "value": 5.59,
+            "position": 342418
+          },
+          {
+            "text": "4.96 %",
+            "value": 4.96,
+            "position": 342425
+          },
+          {
+            "text": "5.16 %",
+            "value": 5.16,
+            "position": 342432
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 343556
+          },
+          {
+            "text": "8.10%",
+            "value": 8.1,
+            "position": 344127
+          },
+          {
+            "text": "5.68%",
+            "value": 5.68,
+            "position": 344163
+          },
+          {
+            "text": "5.59%",
+            "value": 5.59,
+            "position": 344220
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 250
+          },
+          {
+            "category": "operational_risk",
+            "count": 103
+          },
+          {
+            "category": "financial_risk",
+            "count": 740
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 296
+          },
+          {
+            "category": "technology_risk",
+            "count": 247
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 20,
+          "density": 18.9873417721519
+        }
+      ],
+      "deduplication": {
+        "original_length": 684088,
+        "filtered_length": 668639,
+        "removed_ratio": 2.26,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.47808974022566,
+      "confidence": 0.8869204353420108,
+      "overall_score": 51.52191025977434,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.0873786407767,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.030438205195486734,
+        "risk_adjusted_signal": 0.2047238137388626,
+        "expected_return_annualized": 0.05787372258114842,
+        "signal_sharpe_ratio": 0.0038582481720765612,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.2047238137388626,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.2047238137388626,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.05825242718446602,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.2047238137388626,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.030438205195486734
+      },
+      "risk_adjusted_signal": 0.2047238137388626,
+      "expected_return": 0.0005787372258114842,
+      "signal_sharpe": 0.0038582481720765612,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.52191025977434,
+    "confidence": 0.8869204353420108,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:30:28.436795",
+  "filing_date": "2025-02-25",
+  "filing_filename": "2025-02-25-10k-PEG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

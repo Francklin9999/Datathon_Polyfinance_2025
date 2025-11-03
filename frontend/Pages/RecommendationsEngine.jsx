@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import React, { useState, useEffect } from 'react';
+import { api } from '@/api/apiClient';
+import { usePortfolio } from '@/contexts/PortfolioContext';
+import CacheService from '@/services/cacheService';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -10,26 +12,64 @@ import {
   Download,
   Check,
   ArrowRight,
-  Loader2
+  Loader2,
+  FileText
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import RecommendationExplanation from '@/components/RecommendationExplanation';
+import jsPDF from 'jspdf';
 
 export default function RecommendationsEngine() {
+  const { portfolio } = usePortfolio();
   const [isGenerating, setIsGenerating] = useState(false);
   const [recommendations, setRecommendations] = useState(null);
   const [error, setError] = useState(null);
+  const [documentAdvice, setDocumentAdvice] = useState(null);
+
+  useEffect(() => {
+    // Load document advice from cache if available
+    const advice = CacheService.getDocumentAdvice();
+    if (advice) {
+      setDocumentAdvice(advice);
+    }
+  }, []);
 
   const handleGenerate = async () => {
     setIsGenerating(true);
     setError(null);
 
     try {
-      const prompt = `You are a portfolio manager providing concrete portfolio adjustments based on regulatory risk analysis.
+      // Build prompt with document interpretation if available
+      let documentContext = '';
+      if (documentAdvice && documentAdvice.interpretation) {
+        const interp = documentAdvice.interpretation;
+        documentContext = `
+DOCUMENT ANALYSIS CONTEXT:
+The following document has been analyzed and provides the context for these recommendations:
 
-Current Portfolio: S&P 500 with weighted risk score of 62 (threshold: 60)
-High Risk Sectors: Technology (68), Healthcare (72), Communication (75)
-High Risk Geographic Exposure: China (82 risk score, 18% exposure)
+Summary: ${interp.summary || 'N/A'}
+Key Themes: ${interp.key_themes ? interp.key_themes.join(', ') : 'N/A'}
+Portfolio Implications: ${interp.portfolio_implications || 'N/A'}
+Risk Assessment: ${interp.risk_assessment || 'N/A'}
+Sectors Mentioned: ${interp.sectors_mentioned ? interp.sectors_mentioned.join(', ') : 'N/A'}
+Geographic Impact: ${interp.geographic_impact || 'N/A'}
+Market Trends: ${interp.market_trends || 'N/A'}
+
+IMPORTANT: Base your recommendations on this document analysis. Consider the sectors, themes, and risk assessment mentioned above.
+`;
+      } else {
+        documentContext = `
+Note: No document analysis available. Generating general recommendations based on portfolio risk.
+`;
+      }
+
+      const portfolioInfo = portfolio ? `Portfolio size: ${Object.keys(portfolio.holdings || {}).length} stocks` : 'Portfolio not available';
+      
+      const prompt = `You are a portfolio manager providing concrete portfolio adjustments based on regulatory risk analysis.${documentContext}
+
+Current Portfolio: ${portfolioInfo}
+${documentAdvice ? '' : 'General Risk Context: S&P 500 with weighted risk score of 62 (threshold: 60)\nHigh Risk Sectors: Technology (68), Healthcare (72), Communication (75)\nHigh Risk Geographic Exposure: China (82 risk score, 18% exposure)'}
 
 Generate specific, actionable recommendations with this JSON structure:
 
@@ -74,7 +114,7 @@ Generate specific, actionable recommendations with this JSON structure:
 
 Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`;
 
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt,
         response_json_schema: {
           type: "object",
@@ -304,6 +344,166 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
     setIsGenerating(false);
   };
 
+  const exportToPDF = () => {
+    if (!recommendations) return;
+
+    const doc = new jsPDF();
+    let yPos = 20;
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 20;
+    const lineHeight = 7;
+    const sectionSpacing = 10;
+
+    // Helper function to add a new page if needed
+    const checkPageBreak = (requiredSpace = 20) => {
+      if (yPos + requiredSpace > pageHeight - margin) {
+        doc.addPage();
+        yPos = margin;
+      }
+    };
+
+    // Helper function to add text with word wrap
+    const addText = (text, x, y, maxWidth, fontSize = 10, fontStyle = 'normal') => {
+      doc.setFontSize(fontSize);
+      doc.setFont('helvetica', fontStyle);
+      const lines = doc.splitTextToSize(text, maxWidth);
+      doc.text(lines, x, y);
+      return lines.length * lineHeight;
+    };
+
+    // Title
+    doc.setFontSize(20);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Portfolio Recommendations Report', margin, yPos);
+    yPos += 15;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.text(`Generated: ${new Date().toLocaleString()}`, margin, yPos);
+    yPos += sectionSpacing + 5;
+
+    // Expected Outcomes
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Expected Outcomes', margin, yPos);
+    yPos += 10;
+
+    if (recommendations.expected_outcomes) {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      const outcomes = recommendations.expected_outcomes;
+      
+      yPos += addText(`Risk Score Reduction: ${outcomes.risk_score_reduction || 'N/A'}`, margin, yPos, pageWidth - 2 * margin);
+      yPos += 5;
+      yPos += addText(`Estimated Return Impact: ${outcomes.estimated_return_impact || 'N/A'}`, margin, yPos, pageWidth - 2 * margin);
+      yPos += 5;
+      yPos += addText(`Diversification Improvement: ${outcomes.diversification_improvement || 'N/A'}`, margin, yPos, pageWidth - 2 * margin);
+      yPos += sectionSpacing;
+    }
+
+    // Sector Rotation
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Sector Rotation Strategy', margin, yPos);
+    yPos += 10;
+
+    if (recommendations.sector_rotation && recommendations.sector_rotation.length > 0) {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      
+      recommendations.sector_rotation.forEach((rotation, idx) => {
+        checkPageBreak(40);
+        if (idx > 0) yPos += 5;
+        
+        const actionColor = rotation.action === 'REDUCE' ? [255, 0, 0] : [0, 255, 0];
+        doc.setTextColor(actionColor[0], actionColor[1], actionColor[2]);
+        doc.setFont('helvetica', 'bold');
+        yPos += addText(`${rotation.action}: ${rotation.sector}`, margin, yPos, pageWidth - 2 * margin);
+        
+        doc.setTextColor(0, 0, 0);
+        doc.setFont('helvetica', 'normal');
+        yPos += 5;
+        yPos += addText(`Current Weight: ${rotation.current_weight} → Target Weight: ${rotation.target_weight} (Change: ${rotation.change})`, margin, yPos, pageWidth - 2 * margin);
+        yPos += 5;
+        yPos += addText(`Reason: ${rotation.reason}`, margin, yPos, pageWidth - 2 * margin);
+      });
+      yPos += sectionSpacing;
+    }
+
+    // Stock Replacements
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Recommended Stock Replacements', margin, yPos);
+    yPos += 10;
+
+    if (recommendations.stock_replacements && recommendations.stock_replacements.length > 0) {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      
+      recommendations.stock_replacements.forEach((replacement, idx) => {
+        checkPageBreak(45);
+        if (idx > 0) yPos += 5;
+        
+        doc.setFont('helvetica', 'bold');
+        yPos += addText(`Replacement ${idx + 1}: ${replacement.sector}`, margin, yPos, pageWidth - 2 * margin);
+        
+        doc.setFont('helvetica', 'normal');
+        yPos += 5;
+        
+        doc.setTextColor(255, 0, 0);
+        yPos += addText(`SELL: ${replacement.sell} (${replacement.sell_name}) - Risk Score: ${replacement.sell_risk_score}`, margin, yPos, pageWidth - 2 * margin);
+        
+        doc.setTextColor(0, 0, 0);
+        yPos += 5;
+        
+        doc.setTextColor(0, 150, 0);
+        yPos += addText(`BUY: ${replacement.buy} (${replacement.buy_name}) - Risk Score: ${replacement.buy_risk_score}`, margin, yPos, pageWidth - 2 * margin);
+        
+        doc.setTextColor(0, 0, 0);
+        yPos += 5;
+        yPos += addText(`Reason: ${replacement.reason}`, margin, yPos, pageWidth - 2 * margin);
+      });
+      yPos += sectionSpacing;
+    }
+
+    // Geographic Reallocation
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text('Geographic Reallocation', margin, yPos);
+    yPos += 10;
+
+    if (recommendations.geographic_reallocation && recommendations.geographic_reallocation.length > 0) {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      
+      recommendations.geographic_reallocation.forEach((geo, idx) => {
+        checkPageBreak(40);
+        if (idx > 0) yPos += 5;
+        
+        doc.setFont('helvetica', 'bold');
+        const changeColor = geo.change.startsWith('-') ? [255, 0, 0] : [0, 150, 0];
+        doc.setTextColor(changeColor[0], changeColor[1], changeColor[2]);
+        yPos += addText(`${geo.region}: ${geo.change}`, margin, yPos, pageWidth - 2 * margin);
+        
+        doc.setTextColor(0, 0, 0);
+        doc.setFont('helvetica', 'normal');
+        yPos += 5;
+        yPos += addText(`Current Exposure: ${geo.current_exposure} → Target Exposure: ${geo.target_exposure}`, margin, yPos, pageWidth - 2 * margin);
+        yPos += 5;
+        yPos += addText(`Reason: ${geo.reason}`, margin, yPos, pageWidth - 2 * margin);
+      });
+    }
+
+    // Save the PDF
+    const fileName = `Portfolio_Recommendations_${new Date().toISOString().split('T')[0]}.pdf`;
+    doc.save(fileName);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
@@ -314,7 +514,9 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
               <Target className="w-8 h-8 text-yellow-400" />
               Portfolio Recommendations Engine
             </h1>
-            <p className="text-gray-400 mt-1">AI-generated concrete portfolio adjustments based on regulatory risk analysis</p>
+            <p className="text-gray-400 mt-1">
+              AI-generated concrete portfolio adjustments{documentAdvice ? ' based on uploaded document' : ' based on regulatory risk analysis'}
+            </p>
           </div>
           <Link to={createPageUrl('Home')}>
             <Button variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
@@ -322,6 +524,23 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
             </Button>
           </Link>
         </div>
+
+        {/* Document Analysis Indicator */}
+        {documentAdvice && documentAdvice.interpretation && (
+          <Card className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border-blue-500/30">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <FileText className="w-5 h-5 text-blue-400" />
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-white">Using Document Analysis</p>
+                  <p className="text-xs text-gray-300">
+                    Recommendations will be based on the uploaded document: {documentAdvice.interpretation.summary?.substring(0, 100)}...
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Generate Button */}
         <Card className="bg-gray-800/50 border-gray-700">
@@ -340,10 +559,15 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
               ) : (
                 <>
                   <Target className="w-5 h-5 mr-2" />
-                  Generate Portfolio Adjustments
+                  Generate Portfolio Adjustments{documentAdvice ? ' (Based on Document)' : ''}
                 </>
               )}
             </Button>
+            {!documentAdvice && (
+              <p className="text-xs text-gray-400 mt-3 text-center">
+                Upload a document in Document Analyzer to get recommendations based on document analysis
+              </p>
+            )}
           </CardContent>
         </Card>
 
@@ -421,6 +645,12 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
                             {rotation.action}
                           </Badge>
                           <h4 className="font-bold text-white">{rotation.sector}</h4>
+                          <RecommendationExplanation
+                            tickers={null}
+                            type="sector_rotation"
+                            context={{ sector: rotation.sector, action: rotation.action }}
+                            reason={rotation.reason}
+                          />
                         </div>
                         <div className="text-right">
                           <p className="text-xs text-gray-400">Change</p>
@@ -474,7 +704,15 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
                             <Badge className="bg-green-600 mt-1 text-xs">Risk: {replacement.buy_risk_score}</Badge>
                           </div>
                         </div>
-                        <Badge variant="outline" className="text-white">{replacement.sector}</Badge>
+                        <div className="flex items-center gap-2">
+                          <Badge variant="outline" className="text-white">{replacement.sector}</Badge>
+                          <RecommendationExplanation
+                            tickers={[replacement.sell, replacement.buy]}
+                            type="stock_replacement"
+                            context={{ sector: replacement.sector }}
+                            reason={replacement.reason}
+                          />
+                        </div>
                       </div>
                       <p className="text-sm text-gray-300">{replacement.reason}</p>
                     </div>
@@ -493,7 +731,15 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
                   {(recommendations?.geographic_reallocation || []).map((geo, idx) => (
                     <div key={idx} className="p-4 bg-gray-900/50 rounded-lg border border-gray-700">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-bold text-white">{geo.region}</h4>
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-bold text-white">{geo.region}</h4>
+                          <RecommendationExplanation
+                            tickers={null}
+                            type="geographic_reallocation"
+                            context={{ region: geo.region }}
+                            reason={geo.reason}
+                          />
+                        </div>
                         <div className="text-right">
                           <p className="text-xs text-gray-400">Change</p>
                           <p className={`text-xl font-bold ${geo.change.startsWith('-') ? 'text-red-400' : 'text-green-400'}`}>
@@ -526,7 +772,12 @@ Provide 3-4 sector rotations, 5 stock replacements, 3 geographic reallocations.`
                     <h3 className="text-xl font-bold text-white mb-2">Export Recommendations</h3>
                     <p className="text-gray-400">Download complete portfolio adjustment report</p>
                   </div>
-                  <Button className="bg-blue-600 hover:bg-blue-700" size="lg">
+                  <Button 
+                    className="bg-blue-600 hover:bg-blue-700" 
+                    size="lg"
+                    onClick={exportToPDF}
+                    disabled={!recommendations}
+                  >
                     <Download className="w-5 h-5 mr-2" />
                     Export PDF Report
                   </Button>

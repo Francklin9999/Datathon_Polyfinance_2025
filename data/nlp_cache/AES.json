@@ -1,0 +1,944 @@
+{
+  "ticker": "AES",
+  "analysis": {
+    "ticker": "AES",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 33.17567567567568,
+        "financial_sentiment": -0.0196078431372549,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Forward-Looking Information and Risk Factor SummaryIn this filing we make statements concerning our expectations, beliefs, plans, objectives, goals, strategies, and future events or performance.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 142596
+        },
+        {
+          "statement": "Such statements are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 142812
+        },
+        {
+          "statement": "Although we believe that these forward-looking statements and the underlying assumptions are reasonable, we cannot assure you that they will prove to be correct.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 142925
+        },
+        {
+          "statement": "Although we believe that these forward-looking statements and the underlying assumptions are reasonable, we cannot assure you that they will prove to be correct.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 142947
+        },
+        {
+          "statement": "ld not be construed as a comprehensive listing of factors that could cause results to vary from our forward-looking information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 149426
+        },
+        {
+          "statement": "ry from our forward-looking information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 149514
+        },
+        {
+          "statement": "If one or more forward-looking statements are updated, no inference should be drawn that additional updates will be made with respect to those or other forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 149626
+        },
+        {
+          "statement": "d, no inference should be drawn that additional updates will be made with respect to those or other forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 149763
+        },
+        {
+          "statement": "Our backlog serves as the core component of future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 151557
+        },
+        {
+          "statement": "23 | 2024 Annual ReportUtilitiesOur Utilities SBU is the second largest contributor to our future growth, particularly in the U.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 199142
+        },
+        {
+          "statement": "An evidentiary hearing was held on October 29, 2024, and we expect an order from PUCO by the second quarter of 2025, prior to the end of Smart Grid Phase 1.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 221386
+        },
+        {
+          "statement": "e cannot at this time determine the impact on our operations or consolidated financial results, but we believe the cost to comply with a new Section 111(d) Rule, should it be implemented in a prior or a substantially similar form, could be material.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 300374
+        },
+        {
+          "statement": "On November 27, 2023, the EPA issued a draft guidance addressing how the Supreme Court decision would be applied to the NPDES permit program as it relates to functional equivalent discharge.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 307299
+        },
+        {
+          "statement": "generated regulations in connection with licenses, such as the biotic compensation methodology and guidance for presentation of environmental studies in 2018, and the regulation of minor changes to environmental licenses in 2022.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 318321
+        },
+        {
+          "statement": "rporation is led and managed by our Chief Executive Officer and the Global Leadership Team with the guidance and oversight of our Board of Directors.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 320496
+        },
+        {
+          "statement": "Talent We believe AES’ success depends on its ability to attract, develop, and retain key personnel.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 323045
+        },
+        {
+          "statement": "We routinely encounter and address risks, some of which may cause our future results to be materially different than we presently anticipate.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 335059
+        },
+        {
+          "statement": "We believe that capitalized costs for projects under development are recoverable; however, there can be no assurance that any individual project will reach commercial operation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 347074
+        },
+        {
+          "statement": "A significant amount of our revenue is generated in developing countries and we intend to expand our business in certain developing countries in which AES or its customers have an existing presence.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 347705
+        },
+        {
+          "statement": "ience significant volatility in our markets which could impact our operations and opportunities for future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 352469
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue and expenses,",
+            "position": 157394
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue through the sale of excess generation,",
+            "position": 189759
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue per the terms of an October 2018",
+            "position": 193840
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue of $71",
+            "position": 209758
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue caps, (ii) recovery of approximately $66 million related to past expenditures by AES Ohio plus future carrying costs and the recovery of incremental vegetation management expenses up to certai",
+            "position": 222299
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest income and expense, taxes, depreciation and amortization, a non-GAAP measure of operating performanceAdjusted EBITDA with Tax AttributesAdjusted earnings before interest incom",
+            "position": 132586
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings TestSENSistema Electrico Nacional in ChileSINNational Interconnected System in ColombiaSIPState Implementation PlanSO2Sulfur DioxideSWRCBCalifornia State Water Resources BoardTCJATax Cuts and",
+            "position": 137212
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings releases,",
+            "position": 139999
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share from continuing operations increased $2.03",
+            "position": 457762
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings from Mesa La Paz, primarily due to the prior year termination of derivative positions due to a contract amendment; lower earnings from sPower of $7 million, mainly due to lower earnings from ",
+            "position": 475334
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing arrangements where the allocation of earnings and losses, cash distributions,",
+            "position": 631878
+          },
+          {
+            "metric": "profit",
+            "context": "profit-sharing arrangements where cash distributions to noncontrolling interest holders are based on a stated internal rate of return,",
+            "position": 633681
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA with Tax AttributesAdjusted earnings before interest income and expense, taxes, depreciation and amortization, adding back the pre-tax effect of Production Tax Credits, Investment Tax Credits a",
+            "position": 132721
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA,",
+            "position": 172055
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA by SBU for the year ended December 31, 2024",
+            "position": 172096
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA are the contribution by each SBU to the gross metric,",
+            "position": 172192
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA by SBU,",
+            "position": 172278
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS, a non-GAAP measure, increased $0.38",
+            "position": 458285
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS are non-GAAP supplemental measures that are used by management and external users of our Consolidated Financial Statements such as investors, industry analysts,",
+            "position": 479195
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS add-back (a) unrealized gains or losses related to derivative transactions and equity securities to include financial assets and liabilities measured using the fair value option, and updated add-b",
+            "position": 480185
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS to remove the adjustment for tax benefit or expense related to the enactment effects of 2017",
+            "position": 481153
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS We define Adjusted EPS as diluted earnings per share from continuing operations excluding gains or losses of both consolidated entities and entities accounted for under the equity method due to (a",
+            "position": 490442
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 9.9",
+            "position": 153732
+          },
+          {
+            "metric": "margin",
+            "context": "margin caused by regulatory and economic difficulties, political instability and currency devaluations,",
+            "position": 350026
+          },
+          {
+            "metric": "margin",
+            "context": "Margin:Renewables SBU359 492 (133)-27 %Utilities SBU543 433 110 25 %Energy Infrastructure SBU1,273 1,418 (145)-10 %New Energy Technologies SBU(7)(9)2 -22 %Corporate and Other267 239 28 12 %Elimination",
+            "position": 459027
+          },
+          {
+            "metric": "margin",
+            "context": "Margin(in millions)Consolidated Operating Margin — Operating margin decreased $190 million, or 8%, in 2024 compared to 2023, driven by:84 | 2024 Annual Report•$145 million at Energy Infrastructure mai",
+            "position": 463270
+          },
+          {
+            "metric": "margin",
+            "context": "margin from the Utilities SBU impacting net income attributable to AES by $77 million,",
+            "position": 477483
+          },
+          {
+            "metric": "margin",
+            "context": "margin from the Energy Infrastructure SBU impacting net income attributable to AES by $147 million, mainly driven by selldowns, higher energy margin from our hedged merchant Southland facilities in th",
+            "position": 477783
+          },
+          {
+            "metric": "market share",
+            "context": "market share in the Mexican National Energy System,",
+            "position": 193441
+          },
+          {
+            "metric": "market share",
+            "context": "market share of approximately 10% as of December 31, 2024",
+            "position": 233680
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income or the rates it charges customers are too high,",
+            "position": 389095
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income (loss)141 (28)(361)(1)(1)(1)Net loss(107)(182)(527)(1)(1)— Net loss attributable to affiliates(12)(157)(405)(1)(1)— December 31,20242023 20242023 Current assets$2,493 $1,759 $132 $117",
+            "position": 735263
+          },
+          {
+            "metric": "net income",
+            "context": "net income increased $984 million, from a net loss of $182 million in 2023 to net income of $802 million in 2024",
+            "position": 456387
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) attributable to The AES CorporationNet income attributable to The AES Corporation increased $1,430 million to $1,679 million in 2024, compared to $249 million in 2023",
+            "position": 476671
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to AES by $77 million,",
+            "position": 477523
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to AES by $147 million, mainly driven by selldowns, higher energy margin from our hedged merchant Southland facilities in the prior year that are contracted primarily for capac",
+            "position": 477835
+          },
+          {
+            "metric": "net income",
+            "context": "Net income,",
+            "position": 485114
+          },
+          {
+            "metric": "assets",
+            "context": "assets of AES Brasil, which was used in the calculation of impairment expense after AES Brasil was classified as held-for-sale in Q2 2024",
+            "position": 138499
+          },
+          {
+            "metric": "assets",
+            "context": "assets at attractive prices and on other attractive terms;•our ability to compete in markets where we do business;•our ability to operate power generation, distribution and transmission facilities, in",
+            "position": 145329
+          },
+          {
+            "metric": "assets",
+            "context": "assets, increases in pension plan expenses, and our ability to fund defined benefit pension and other postretirement plans at our subsidiaries;•losses on the sale or write-down of assets due to impair",
+            "position": 148476
+          },
+          {
+            "metric": "assets",
+            "context": "assets, determined by the regulator based on the utility's allowed regulatory asset base,",
+            "position": 165763
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 169802
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities; •require extensive repair and restoration costs for additional security measures to avert future attacks;•impair our reputation and limit our competitiveness for future opportunities; and",
+            "position": 366189
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities on a timely basis; •delays or inability to complete asset sales on anticipated terms or to redeploy capital as set forth in our capital allocation plans;•increased volatility in foreign ex",
+            "position": 370799
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for the joint venture, we may be responsible for meeting certain obligations of the joint ventures to the extent provided for in our governing documents or applicable law,",
+            "position": 378669
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 417510
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and its insurance coverage,",
+            "position": 432699
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates on June 28, 2024, the last business day of 57 of 49",
+            "position": 130775
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY, RELATED STOCKHOLDER MATTERS AND ISSUER PURCHASES OF EQUITY SECURITIES79MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS81Executive Summary81Review of Conso",
+            "position": 131371
+          },
+          {
+            "metric": "equity",
+            "context": "equity investors, a non-GAAP measureAdjusted EPSAdjusted Earnings Per Share, a non-GAAP measureAdjusted PTCAdjusted Pre-tax Contribution,",
+            "position": 132969
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 130269
+          },
+          {
+            "text": "$71 million",
+            "position": 132505
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 153955
+          },
+          {
+            "text": "$546 million",
+            "position": 154174
+          },
+          {
+            "text": "$630 million",
+            "position": 154275
+          },
+          {
+            "text": "$1.3 billion",
+            "position": 184166
+          },
+          {
+            "text": "$20 million",
+            "position": 184325
+          },
+          {
+            "text": "$9 billion",
+            "position": 186809
+          },
+          {
+            "text": "$861 million",
+            "position": 197886
+          },
+          {
+            "text": "$322 million",
+            "position": 197948
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 211939
+          },
+          {
+            "text": "$138 million",
+            "position": 212430
+          },
+          {
+            "text": "$341 million",
+            "position": 212459
+          },
+          {
+            "text": "$2.8 billion",
+            "position": 213731
+          },
+          {
+            "text": "$225 million",
+            "position": 214053
+          },
+          {
+            "text": "$253 million",
+            "position": 214070
+          },
+          {
+            "text": "$79 million",
+            "position": 219408
+          },
+          {
+            "text": "$241 million",
+            "position": 221029
+          },
+          {
+            "text": "$19 million",
+            "position": 221057
+          },
+          {
+            "text": "$66 million",
+            "position": 222344
+          },
+          {
+            "text": "$76 million",
+            "position": 223268
+          },
+          {
+            "text": "$783 million",
+            "position": 223446
+          },
+          {
+            "text": "$235 million",
+            "position": 224015
+          },
+          {
+            "text": "$5 ",
+            "position": 312043
+          },
+          {
+            "text": "$29 billion",
+            "position": 412534
+          },
+          {
+            "text": "$5.7 billion",
+            "position": 417147
+          },
+          {
+            "text": "$22.7 billion",
+            "position": 417218
+          },
+          {
+            "text": "$540 million",
+            "position": 418199
+          },
+          {
+            "text": "$1 million",
+            "position": 433411
+          },
+          {
+            "text": "$189 million",
+            "position": 434172
+          },
+          {
+            "text": "$6 million",
+            "position": 436095
+          },
+          {
+            "text": "$15 million",
+            "position": 436585
+          },
+          {
+            "text": "$60 million",
+            "position": 436601
+          },
+          {
+            "text": "$2 million",
+            "position": 436614
+          },
+          {
+            "text": "$10 million",
+            "position": 436628
+          },
+          {
+            "text": "$1.5 million",
+            "position": 440676
+          },
+          {
+            "text": "$5 million",
+            "position": 440692
+          },
+          {
+            "text": "$0.3 million",
+            "position": 440853
+          },
+          {
+            "text": "$476 million",
+            "position": 441455
+          },
+          {
+            "text": "$900 million",
+            "position": 442720
+          },
+          {
+            "text": "$10.8 million",
+            "position": 445059
+          },
+          {
+            "text": "$180,515",
+            "position": 445556
+          },
+          {
+            "text": "$200 million",
+            "position": 446209
+          },
+          {
+            "text": "$480 million",
+            "position": 446292
+          },
+          {
+            "text": "$27,615,140 ",
+            "position": 447970
+          },
+          {
+            "text": "$1.3 million",
+            "position": 448003
+          },
+          {
+            "text": "$600 million",
+            "position": 449321
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 453256
+          },
+          {
+            "text": "$12.12 ",
+            "position": 453303
+          },
+          {
+            "text": "$264 million",
+            "position": 453380
+          }
+        ],
+        "percentages": [
+          {
+            "text": "4.9%",
+            "value": 4.9,
+            "position": 136649
+          },
+          {
+            "text": "9.9%",
+            "value": 9.9,
+            "position": 153739
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 154126
+          },
+          {
+            "text": "47.3%",
+            "value": 47.3,
+            "position": 154228
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 161719
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 161893
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 162134
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 162540
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 174056
+          },
+          {
+            "text": "99 %",
+            "value": 99.0,
+            "position": 174090
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 174143
+          },
+          {
+            "text": "75 %",
+            "value": 75.0,
+            "position": 174219
+          },
+          {
+            "text": "300100 %",
+            "value": 300100.0,
+            "position": 174378
+          },
+          {
+            "text": "50 %",
+            "value": 50.0,
+            "position": 174712
+          },
+          {
+            "text": "49 %",
+            "value": 49.0,
+            "position": 174881
+          },
+          {
+            "text": "90 %",
+            "value": 90.0,
+            "position": 175045
+          },
+          {
+            "text": "89 %",
+            "value": 89.0,
+            "position": 175512
+          },
+          {
+            "text": "65 %",
+            "value": 65.0,
+            "position": 176641
+          },
+          {
+            "text": "36 %",
+            "value": 36.0,
+            "position": 178207
+          },
+          {
+            "text": "13100 %",
+            "value": 13100.0,
+            "position": 178528
+          },
+          {
+            "text": "70 %",
+            "value": 70.0,
+            "position": 181794
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 187216
+          },
+          {
+            "text": "76%",
+            "value": 76.0,
+            "position": 187528
+          },
+          {
+            "text": "24%",
+            "value": 24.0,
+            "position": 187630
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 188819
+          },
+          {
+            "text": "72%",
+            "value": 72.0,
+            "position": 192783
+          },
+          {
+            "text": "89%",
+            "value": 89.0,
+            "position": 193630
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 194809
+          },
+          {
+            "text": "65%",
+            "value": 65.0,
+            "position": 195160
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 195547
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 195684
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 197243
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 197671
+          },
+          {
+            "text": "36%",
+            "value": 36.0,
+            "position": 198120
+          },
+          {
+            "text": "80 %",
+            "value": 80.0,
+            "position": 200609
+          },
+          {
+            "text": "74 %",
+            "value": 74.0,
+            "position": 200660
+          },
+          {
+            "text": "82.35%",
+            "value": 82.35,
+            "position": 201910
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 211208
+          },
+          {
+            "text": "9.999%",
+            "value": 9.999,
+            "position": 222263
+          },
+          {
+            "text": "4.4%",
+            "value": 4.4,
+            "position": 223423
+          },
+          {
+            "text": "53.87%",
+            "value": 53.87,
+            "position": 223495
+          },
+          {
+            "text": "46.13%",
+            "value": 46.13,
+            "position": 223513
+          },
+          {
+            "text": "10.95%",
+            "value": 10.95,
+            "position": 224167
+          },
+          {
+            "text": "4.49%",
+            "value": 4.49,
+            "position": 224206
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 225557
+          },
+          {
+            "text": "51 %",
+            "value": 51.0,
+            "position": 228837
+          },
+          {
+            "text": "24 %",
+            "value": 24.0,
+            "position": 229289
+          },
+          {
+            "text": "57 %",
+            "value": 57.0,
+            "position": 229482
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 229746
+          },
+          {
+            "text": "99.5%",
+            "value": 99.5,
+            "position": 233329
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 440
+          },
+          {
+            "category": "operational_risk",
+            "count": 120
+          },
+          {
+            "category": "financial_risk",
+            "count": 986
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 273
+          },
+          {
+            "category": "technology_risk",
+            "count": 301
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 983278,
+        "filtered_length": 971364,
+        "removed_ratio": 1.21,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.69475357710652,
+      "confidence": 1.3437974600319198,
+      "overall_score": 52.30524642289348,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 49.01960784313726,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.04610492845786962,
+        "risk_adjusted_signal": 0.3100963649279831,
+        "expected_return_annualized": 0.08766166802732776,
+        "signal_sharpe_ratio": 0.005844111201821851,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.3100963649279831,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.3100963649279831,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.0196078431372549,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.3100963649279831,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.04610492845786962
+      },
+      "risk_adjusted_signal": 0.3100963649279831,
+      "expected_return": 0.0008766166802732776,
+      "signal_sharpe": 0.005844111201821851,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 52.30524642289348,
+    "confidence": 1.3437974600319198,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:13:07.563966",
+  "filing_date": "2025-03-11",
+  "filing_filename": "2025-03-11-10k-AES.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

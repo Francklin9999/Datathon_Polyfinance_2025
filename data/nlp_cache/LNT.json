@@ -1,0 +1,884 @@
+{
+  "ticker": "LNT",
+  "analysis": {
+    "ticker": "LNT",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 50.45871559633027,
+        "financial_sentiment": -0.09090909090909091,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Table of Contents TABLE OF CONTENTSPage NumberDefinitions1Forward-looking Statements1Website Access to Reports3.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 115599
+        },
+        {
+          "statement": "erFORWARD-LOOKING STATEMENTSStatements contained in this report that are not of historical fact are forward-looking statements intended to qualify for the safe harbors from liability established by the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 118467
+        },
+        {
+          "statement": "Similarly, statements that describe future financial performance or plans or strategies are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 118945
+        },
+        {
+          "statement": "t describe future financial performance or plans or strategies are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 118978
+        },
+        {
+          "statement": "Alliant Energy, IPL and WPL each assume no obligation, and disclaim any duty, to update the forward-looking statements in this report, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 130092
+        },
+        {
+          "statement": "l gas and electric public safety presentations, and free online resources and training programs and guidance to assist local emergency responders.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 138260
+        },
+        {
+          "statement": "c requests with the IUC for retail rate changes and may base those requests on either historical or forward-looking test periods.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 146262
+        },
+        {
+          "statement": "The IUC has rules that establish minimum filing requirements for rate reviews using a forward-looking test period, and a related subsequent proceeding review after the close of the forward-looking test period.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 146749
+        },
+        {
+          "statement": "ng a forward-looking test period, and a related subsequent proceeding review after the close of the forward-looking test period.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 146844
+        },
+        {
+          "statement": "review, a utility’s actual costs and revenues will be presumed to be reasonably consistent with the forward-looking test period if the utility’s actual return on common equity falls within a standard of reasonableness of 50 basis points above to 50 basis points below the authorized return on common equity.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 147025
+        },
+        {
+          "statement": "Base Rates - WPL files periodic requests with the PSCW for retail rate changes, which are based on forward-looking test periods.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 152342
+        },
+        {
+          "statement": "ement a Direct Loss of Load methodology to determine capacity accreditation, which will incorporate forward-looking analysis, and historical resource-specific performance during periods of high system risk over the previous three years.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 169464
+        },
+        {
+          "statement": "t process supports periodic purchases, staggering of contract terms, stair-stepped levels of supply going forward and different suppliers.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 172885
+        },
+        {
+          "statement": "We plan to utilize all of these tax credit carryforwards in the future to reduce our income tax obligations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 200741
+        },
+        {
+          "statement": "ts for the first 12 months through a tax benefit rider, for the October 2024 through September 2025 forward-looking Test Period.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 267534
+        },
+        {
+          "statement": "an annual base rate increase of $49 million for WPL’s retail electric customers, covering the 2024 forward-looking Test Period, which reflects revenue requirement impacts of increasing electric rate base and lower forecasted fuel-related expenses.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 268312
+        },
+        {
+          "statement": "increase of $10 million for IPL’s retail gas customers, for the October 2024 through September 2025 forward-looking Test Period.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 270353
+        },
+        {
+          "statement": "izing an annual base rate increase of $13 million for WPL’s retail gas customers, covering the 2024 forward-looking Test Period, which reflects revenue requirement impacts of increasing gas rate base.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 270649
+        },
+        {
+          "statement": "an order for IPL’s retail electric and gas rate reviews for the October 2024 through September 2025 forward-looking Test Period with rate changes effective October 1, 2024.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 290654
+        },
+        {
+          "statement": "for WPL’s retail electric and gas customers, respectively, effective January 1, 2024, for the 2024 forward-looking Test Period.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 293986
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue ServiceAROAsset retirement obligationITCITC Midwest LLCATCAmerican Transmission Company LLCIUCIowa Utilities CommissionATC HoldingsInterest in American Transmission Company LLC and ATC Holdco ",
+            "position": 116776
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Rights - In areas of constrained transmission capacity,",
+            "position": 176641
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue rights to IPL and WPL annually based on a fiscal year from June 1 through May 31",
+            "position": 176909
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue per KWh sold to retail customers (cents)$12.25",
+            "position": 179047
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue per KWh sold to retail customers (cents)$12.20",
+            "position": 181291
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows; and•other factors listed in MDA and Item 1",
+            "position": 129918
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings above certain thresholds may be required to be refunded, recovery of capital expenditures, including those for electric distribution systems, above certain thresholds may be capped or not be ",
+            "position": 188698
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, cash flows,",
+            "position": 227337
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings expectations, capital requirements, and general financial business conditions,",
+            "position": 249313
+          },
+          {
+            "metric": "profit",
+            "context": "profit,",
+            "position": 134058
+          },
+          {
+            "metric": "profit",
+            "context": "profit, transmission-only companies and are transmission-owning members of the MISO Regional Transmission Organization,",
+            "position": 173593
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS for Utilities and Corporate Services, ATC Holdings, and Non-utility and Parent,",
+            "position": 259831
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS attributable to Alliant Energy common shareowners were as follows (dollars in millions, except per share amounts):20242023Income (Loss)EPSIncome (Loss)EPSUtilities and Corporate Services$722$2.81",
+            "position": 260321
+          },
+          {
+            "metric": "margin",
+            "context": "margin and capacity accreditation requirements that may impact how and when new and existing generating facilities, including IPL’s and WPL’s additional solar generation, may be accredited with energy",
+            "position": 125548
+          },
+          {
+            "metric": "margin",
+            "context": "margin and capacity accreditation requirements, as well as additional changes to capacity accreditation, such as the direct loss of load methodology, impact how and when existing and new generating fa",
+            "position": 190452
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income;•the impact that price changes may have on IPL’s and WPL’s customers’ demand for electric, gas and steam services and their ability to pay their bills;•changes in the price of deliver",
+            "position": 121212
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income(57)(89)25Other income and deductions:Changes in interest expense (Higher primarily due to financings completed in 2024 and 2023)(55)(22)(16)Changes in AFUDC (Primarily due to changes ",
+            "position": 262679
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income from the impacts of temperatures were as follows (in millions):ElectricGas20242023Change20242023ChangeIPL($14)($1)($13)($12)($8)($4)WPL(15)(5)(10)(10)(6)(4)Total Alliant Energy($29)($",
+            "position": 264745
+          },
+          {
+            "metric": "net income",
+            "context": "net income and EPS attributable to Alliant Energy common shareowners were as follows (dollars in millions, except per share amounts):20242023Income (Loss)EPSIncome (Loss)EPSUtilities and Corporate Ser",
+            "position": 260306
+          },
+          {
+            "metric": "net income",
+            "context": "net income decreased by $2 million in 2024 compared to 2023",
+            "position": 260690
+          },
+          {
+            "metric": "net income",
+            "context": "net income decreased by $16 million in 2024 compared to 2023,",
+            "position": 261301
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Variances - The following items contributed to increased (decreased) net income for 2024 compared to 2023 (in millions):Alliant EnergyIPLWPLRevenues:Changes in electric utility (Refer to de",
+            "position": 261425
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Alliant Energy common shareowners$690 $703 $686 Weighted average number of common shares outstanding:Basic256.5",
+            "position": 350851
+          },
+          {
+            "metric": "assets",
+            "context": "assets, tax expense, interest expense, capital expenditures, marginal costs to service new customers, and remaining costs related to EGUs that have been or may be permanently closed and certain other ",
+            "position": 119539
+          },
+          {
+            "metric": "assets",
+            "context": "assets with values that exceed 3",
+            "position": 145853
+          },
+          {
+            "metric": "assets",
+            "context": "assets and currently receive transmission services from ITC and ATC,",
+            "position": 173477
+          },
+          {
+            "metric": "assets",
+            "context": "assets; MISO’s resource adequacy process establishing seasonal capacity planning reserve margin and capacity accreditation requirements, as well as additional changes to capacity accreditation, such a",
+            "position": 190363
+          },
+          {
+            "metric": "assets",
+            "context": "assets, or may cause a delay in construction of such projects such that we are not able to meet new demand growth,",
+            "position": 192735
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, and changes impacting the availability of and ability to transfer renewable tax credits;•the ability to utilize tax credits generated to date, and those that may be generated in the futur",
+            "position": 122826
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities relating to our previous ownership of, or the transactions pursuant to which we disposed of,",
+            "position": 228758
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 229007
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities included on the balance sheets that, due to the nature of the liabilities,",
+            "position": 323437
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are recognized in accordance with the rulings of applicable federal and state regulators,",
+            "position": 329543
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by nonaffiliates as of June 30, 2024:Alliant Energy Corporation - $13.0",
+            "position": 114576
+          },
+          {
+            "metric": "equity",
+            "context": "equity income from unconsolidated investments from changes in valuations of the assets held, as well as potential changes to ATC’s authorized return on equity;•impacts of IPL’s future tax benefits fro",
+            "position": 128946
+          },
+          {
+            "metric": "equity",
+            "context": "equity ownership interest in a 225",
+            "position": 134628
+          },
+          {
+            "metric": "equity",
+            "context": "equity falls within a standard of reasonableness of 50 basis points above to 50",
+            "position": 147094
+          },
+          {
+            "metric": "equity",
+            "context": "equity is outside of this range,",
+            "position": 147274
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 113238
+          },
+          {
+            "text": "$13.0 billion",
+            "position": 114654
+          },
+          {
+            "text": "$0",
+            "position": 114704
+          },
+          {
+            "text": "$2.50 ",
+            "position": 114965
+          },
+          {
+            "text": "$5 ",
+            "position": 115152
+          },
+          {
+            "text": "$3 million",
+            "position": 150794
+          },
+          {
+            "text": "$750",
+            "position": 153225
+          },
+          {
+            "text": "$16.3 million",
+            "position": 153554
+          },
+          {
+            "text": "$8.1 million",
+            "position": 154393
+          },
+          {
+            "text": "$2.49",
+            "position": 170651
+          },
+          {
+            "text": "$2.83",
+            "position": 170656
+          },
+          {
+            "text": "$4.37",
+            "position": 170661
+          },
+          {
+            "text": "$2.74",
+            "position": 170666
+          },
+          {
+            "text": "$3.09",
+            "position": 170671
+          },
+          {
+            "text": "$4.47",
+            "position": 170676
+          },
+          {
+            "text": "$1,236 ",
+            "position": 177955
+          },
+          {
+            "text": "$1,220 ",
+            "position": 177962
+          },
+          {
+            "text": "$1,233 ",
+            "position": 177969
+          },
+          {
+            "text": "$3,372 ",
+            "position": 178140
+          },
+          {
+            "text": "$3,345 ",
+            "position": 178147
+          },
+          {
+            "text": "$3,421 ",
+            "position": 178154
+          },
+          {
+            "text": "$12.25 ",
+            "position": 179095
+          },
+          {
+            "text": "$12.06 ",
+            "position": 179102
+          },
+          {
+            "text": "$11.88 ",
+            "position": 179109
+          },
+          {
+            "text": "$640 ",
+            "position": 179741
+          },
+          {
+            "text": "$641 ",
+            "position": 179746
+          },
+          {
+            "text": "$673 ",
+            "position": 179751
+          },
+          {
+            "text": "$596 ",
+            "position": 179756
+          },
+          {
+            "text": "$579 ",
+            "position": 179761
+          },
+          {
+            "text": "$560 ",
+            "position": 179766
+          },
+          {
+            "text": "$1,747 ",
+            "position": 180003
+          },
+          {
+            "text": "$1,761 ",
+            "position": 180010
+          },
+          {
+            "text": "$1,859 ",
+            "position": 180017
+          },
+          {
+            "text": "$1,625 ",
+            "position": 180024
+          },
+          {
+            "text": "$1,584 ",
+            "position": 180031
+          },
+          {
+            "text": "$1,562 ",
+            "position": 180038
+          },
+          {
+            "text": "$12.20 ",
+            "position": 181339
+          },
+          {
+            "text": "$11.94 ",
+            "position": 181346
+          },
+          {
+            "text": "$12.24 ",
+            "position": 181353
+          },
+          {
+            "text": "$12.30 ",
+            "position": 181360
+          },
+          {
+            "text": "$12.21 ",
+            "position": 181367
+          },
+          {
+            "text": "$11.42 ",
+            "position": 181374
+          },
+          {
+            "text": "$275 ",
+            "position": 184936
+          },
+          {
+            "text": "$316 ",
+            "position": 184941
+          },
+          {
+            "text": "$371 ",
+            "position": 184946
+          },
+          {
+            "text": "$465 ",
+            "position": 185053
+          },
+          {
+            "text": "$540 ",
+            "position": 185058
+          },
+          {
+            "text": "$642 ",
+            "position": 185063
+          },
+          {
+            "text": "$9.63 ",
+            "position": 185548
+          },
+          {
+            "text": "$10.67 ",
+            "position": 185554
+          }
+        ],
+        "percentages": [
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 133953
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 133989
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 134619
+          },
+          {
+            "text": "2,9981,73258%",
+            "value": 2998173258.0,
+            "position": 136032
+          },
+          {
+            "text": "1,04375973%",
+            "value": 104375973.0,
+            "position": 136048
+          },
+          {
+            "text": "1,00386086%",
+            "value": 100386086.0,
+            "position": 136062
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 145884
+          },
+          {
+            "text": "1.2%",
+            "value": 1.2,
+            "position": 152827
+          },
+          {
+            "text": "15.7%",
+            "value": 15.7,
+            "position": 170175
+          },
+          {
+            "text": "25.3%",
+            "value": 25.3,
+            "position": 170180
+          },
+          {
+            "text": "38.6%",
+            "value": 38.6,
+            "position": 170185
+          },
+          {
+            "text": "38.8%",
+            "value": 38.8,
+            "position": 170190
+          },
+          {
+            "text": "7.9%",
+            "value": 7.9,
+            "position": 170236
+          },
+          {
+            "text": "14.9%",
+            "value": 14.9,
+            "position": 170240
+          },
+          {
+            "text": "18.4%",
+            "value": 18.4,
+            "position": 170245
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 184721
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 184728
+          },
+          {
+            "text": "48%",
+            "value": 48.0,
+            "position": 242384
+          },
+          {
+            "text": "25.695%",
+            "value": 25.695,
+            "position": 242453
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 242549
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 242641
+          },
+          {
+            "text": "56.6%",
+            "value": 56.6,
+            "position": 242732
+          },
+          {
+            "text": "42.64%",
+            "value": 42.64,
+            "position": 242937
+          },
+          {
+            "text": "53.5%",
+            "value": 53.5,
+            "position": 243029
+          },
+          {
+            "text": "3.1%",
+            "value": 3.1,
+            "position": 254446
+          },
+          {
+            "text": "1.95%",
+            "value": 1.95,
+            "position": 254504
+          },
+          {
+            "text": "3.95%",
+            "value": 3.95,
+            "position": 254565
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 264406
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 264652
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 285443
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 285472
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 285645
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 285680
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 292154
+          },
+          {
+            "text": "9.95%",
+            "value": 9.95,
+            "position": 294638
+          },
+          {
+            "text": "10.55%",
+            "value": 10.55,
+            "position": 294738
+          },
+          {
+            "text": "48411.00%",
+            "value": 48411.0,
+            "position": 295799
+          },
+          {
+            "text": "51.0%",
+            "value": 51.0,
+            "position": 295808
+          },
+          {
+            "text": "9012.23%",
+            "value": 9012.23,
+            "position": 295830
+          },
+          {
+            "text": "12411.70%",
+            "value": 12411.7,
+            "position": 295879
+          },
+          {
+            "text": "1,21811.00%",
+            "value": 121811.0,
+            "position": 295909
+          },
+          {
+            "text": "51110.25%",
+            "value": 51110.25,
+            "position": 295942
+          },
+          {
+            "text": "4,8529.34%",
+            "value": 48529.34,
+            "position": 295977
+          },
+          {
+            "text": "6309.65%",
+            "value": 6309.65,
+            "position": 296064
+          },
+          {
+            "text": "17010.97%",
+            "value": 17010.97,
+            "position": 296112
+          },
+          {
+            "text": "50.0%",
+            "value": 50.0,
+            "position": 296121
+          },
+          {
+            "text": "5,7749.80%",
+            "value": 57749.8,
+            "position": 296196
+          },
+          {
+            "text": "53.7%",
+            "value": 53.7,
+            "position": 296206
+          },
+          {
+            "text": "5329.80%",
+            "value": 5329.8,
+            "position": 296249
+          },
+          {
+            "text": "51010.90%",
+            "value": 51010.9,
+            "position": 296296
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 172
+          },
+          {
+            "category": "operational_risk",
+            "count": 98
+          },
+          {
+            "category": "financial_risk",
+            "count": 484
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 355
+          },
+          {
+            "category": "technology_risk",
+            "count": 112
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 581274,
+        "filtered_length": 568918,
+        "removed_ratio": 2.13,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.14004914004914,
+      "confidence": 0.500926146569263,
+      "overall_score": 50.85995085995086,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.45454545454545,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.017199017199017175,
+        "risk_adjusted_signal": 0.11567858127407507,
+        "expected_return_annualized": 0.032701374593266434,
+        "signal_sharpe_ratio": 0.0021800916395510956,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.11567858127407507,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.11567858127407507,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.09090909090909091,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.11567858127407507,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.017199017199017175
+      },
+      "risk_adjusted_signal": 0.11567858127407507,
+      "expected_return": 0.00032701374593266435,
+      "signal_sharpe": 0.0021800916395510956,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.85995085995086,
+    "confidence": 0.500926146569263,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:27:55.870042",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-LNT.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

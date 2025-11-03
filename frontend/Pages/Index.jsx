@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
@@ -17,26 +17,26 @@ export default function Overview() {
 
   const { data: snapshots = [] } = useQuery({
     queryKey: ['snapshots'],
-    queryFn: () => base44.entities.MarketSnapshot.list(),
+    queryFn: () => api.entities.MarketSnapshot.list(),
     initialData: [],
   });
 
   const { data: riskMetrics = [] } = useQuery({
     queryKey: ['riskMetrics'],
-    queryFn: () => base44.entities.RiskMetrics.list(),
+    queryFn: () => api.entities.RiskMetrics.list(),
     initialData: [],
   });
 
   const { data: news = [] } = useQuery({
     queryKey: ['news'],
-    queryFn: () => base44.entities.NewsItem.list('-publishedDate', 10),
+    queryFn: () => api.entities.NewsItem.list('-publishedDate', 10),
     initialData: [],
   });
 
   const handleGenerateSummary = async () => {
     setIsGenerating(true);
     try {
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a senior trading floor analyst. Provide a brief (4-6 sentences) summary of global market conditions: ${JSON.stringify({ snapshots, riskMetrics, news: news.slice(0, 3) })}. Focus on: key moves across asset classes, risk sentiment, major drivers. Professional institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

@@ -1,0 +1,914 @@
+{
+  "ticker": "FICO",
+  "analysis": {
+    "ticker": "FICO",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 45.24400330851944,
+        "financial_sentiment": -0.12121212121212122,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Statements contained in this report that are not statements of historical fact should be considered forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995 (the “PSLRA”).",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30441
+        },
+        {
+          "statement": "en statements made by us or with our approval that are not statements of historical fact constitute forward-looking statements within the meaning of the PSLRA.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30805
+        },
+        {
+          "statement": "historical fact constitute forward-looking statements within the meaning of the PSLRA.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30877
+        },
+        {
+          "statement": "n,” “estimated,” “will,” variations of these terms and similar expressions are intended to identify forward-looking statements, but are not the exclusive means of identifying such statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32115
+        },
+        {
+          "statement": "inties that may cause Factors that could cause actual results to differ from those discussed in the forward-looking statements include, but are not limited to, those described in , Item 1A, “Risk Factors,” below.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32359
+        },
+        {
+          "statement": "Forward-looking statements are qualified by some or all of these risk factors.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 32658
+        },
+        {
+          "statement": "your own critical and independent conclusions about the likely effect of these risk factors on our future performance.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 32908
+        },
+        {
+          "statement": "peak only as of the date on which statements are made, and we undertake no obligation to update any forward-looking statement to reflect events or circumstances after the date on which such statement is made to reflect the occurrence of unanticipated events or circumstances.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 33061
+        },
+        {
+          "statement": "Certain Fraud Solutions capabilities are available on FICO® Platform today, and we plan to make additional Fraud Solutions capabilities available on FICO Platform in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 54316
+        },
+        {
+          "statement": "Certain Originations capabilities are available on FICO® Platform today, and we plan to make additional Originations capabilities available on FICO Platform in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 55045
+        },
+        {
+          "statement": "Certain Customer Communication capabilities are available on FICO® Platform today, and we plan to make additional Customer Communication capabilities available on FICO Platform in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 55935
+        },
+        {
+          "statement": "As more capabilities are made available on FICO® Platform, we expect our sales through indirect channels to grow.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 60040
+        },
+        {
+          "statement": "We believe we offer customers a unique mix of products, expertise and capabilities that allows us to compete effectively in our target markets.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 61455
+        },
+        {
+          "statement": "Although we believe our products and services compete favorably with respect to these factors, we may not be able to maintain our competitive position against current and future competitors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62257
+        },
+        {
+          "statement": "We believe that diverse teams can better relate to and deliver against the many and varied needs of our clients.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 85564
+        },
+        {
+          "statement": "sful, we may not be able to grow our Software segment’s business, growth may occur more slowly than we anticipate, or revenues and profits may decline.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 99699
+        },
+        {
+          "statement": "or enhanced products, we may not be able to grow our business or growth may occur more slowly than we anticipate.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 101767
+        },
+        {
+          "statement": "We believe much of the future growth of our business and the success of our business strategy will rest on our ability to continue to expand into newer markets for our products and services.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 103560
+        },
+        {
+          "statement": "We believe much of the future growth of our business and the success of our business strategy will rest on our ability to continue to expand into newer markets for our products and services.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 103583
+        },
+        {
+          "statement": "Products and services that we plan to market in the future are in various stages of development.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 103870
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue, income or loss, expenses, earnings or loss per share, the payment or nonpayment of dividends, share repurchases, capital structure and other statements concerning future financial performance",
+            "position": 30956
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue (“ARR”) from FICO® Platform based products was $227.0",
+            "position": 49970
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue,",
+            "position": 50260
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and reduce risk exposure and losses,",
+            "position": 56318
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue during fiscal 2024",
+            "position": 60261
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or loss per share, the payment or nonpayment of dividends, share repurchases, capital structure and other statements concerning future financial performance; (ii) statements of our plans and ",
+            "position": 30991
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share;•difficulties in the separation of operations, services, products and personnel;•failure to effectively transfer liabilities, contracts, facilities and employees to a purchaser;•div",
+            "position": 121926
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per share: Basic$20.78",
+            "position": 255141
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share: Basic24,676 24,986 26,042 Diluted25,079 25,367 26,347",
+            "position": 255246
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of $150.8",
+            "position": 313714
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS was $20.45",
+            "position": 187252
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS”) during fiscal 2024, 2023 and 2022: Year Ended September 30, 202420232022 (In thousands, except per share data)Numerator for diluted and basic earnings per share:Net income$512,811 $429,375 $373,",
+            "position": 331081
+          },
+          {
+            "metric": "margin",
+            "context": "margin, or (ii) an adjusted term SOFR plus an applicable margin (or, if such rate is no longer available,",
+            "position": 216387
+          },
+          {
+            "metric": "margin",
+            "context": "margin for base rate borrowings ranges from 0% to 0.75",
+            "position": 216847
+          },
+          {
+            "metric": "market share",
+            "context": "Market Share Unit Award Agreement (fiscal 2016 grants) under the 2012",
+            "position": 364080
+          },
+          {
+            "metric": "market share",
+            "context": "Market Share Unit Agreement (fiscal 2017 grants) under the 2012",
+            "position": 364304
+          },
+          {
+            "metric": "market share",
+            "context": "Market Share Unit Agreement (fiscal 2018 grants) under the 2012",
+            "position": 364523
+          },
+          {
+            "metric": "market share",
+            "context": "Market Share Unit Agreement under the 2012",
+            "position": 364741
+          },
+          {
+            "metric": "market share",
+            "context": "Market Share Unit Agreement under the 2021",
+            "position": 368197
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income was $733.6",
+            "position": 187072
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, and related financial information, including disaggregation of revenue, for the years ended September 30, 2024, 2023 and 2022 are set forth in Note 9 and Note 14",
+            "position": 195123
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income for fiscal 2024, 2023 and 2022: Year Ended September 30,Period-to-PeriodChangePeriod-to-PeriodPercentage ChangeSegment2024202320222024 to 20232023 to 20222024 to 20232023 to 2022 (In ",
+            "position": 207521
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income was the result of a $132.3",
+            "position": 209261
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and a $16.3",
+            "position": 209344
+          },
+          {
+            "metric": "net income",
+            "context": "Net income was $512.8",
+            "position": 187161
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$512,811 $429,375 $373,541 83,436 55,834 19 %15 %Number of employees at fiscal year-end3,586 3,455 3,404 131 51 4 %1 % 39Table of Contents Percentage of RevenuesYear Ended September 30, 2024",
+            "position": 199815
+          },
+          {
+            "metric": "net income",
+            "context": "net income, a $43.0",
+            "position": 212853
+          },
+          {
+            "metric": "net income",
+            "context": "Net income— — — — 373,541 — 373,541 Foreign currency translation adjustments— — — — — (48,848)(48,848)Balance at September 30, 202225,154 252 1,299,588 (4,935,769)2,958,684 (124,702)(801,947)Share-bas",
+            "position": 255927
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$512,811 $429,375 $373,541 Adjustments to reconcile net income to net cash provided by operating activities:Depreciation and amortization13,827 14,638 20,465 Share-based compensation149,439 ",
+            "position": 257084
+          },
+          {
+            "metric": "assets",
+            "context": "assets or liabilities be divested, managed or run off separately;•diversion of management's attention from our other businesses;•the potential loss of key personnel;•adverse effects on relationships w",
+            "position": 122214
+          },
+          {
+            "metric": "assets",
+            "context": "assets that we acquire; •a company that we acquire may have experienced a security incident that it has yet to discover, investigate and remediate which we might not be identify in a timely manner and",
+            "position": 124466
+          },
+          {
+            "metric": "assets",
+            "context": "assets related to our Siron compliance business during the quarter ended December 31, 2022, and the amount above excludes this product line for the year ended September 30, 2023",
+            "position": 190466
+          },
+          {
+            "metric": "assets",
+            "context": "assets related to our Siron compliance business during the quarter ended December 31, 2022, and the amounts and percentages above exclude this product line at December 31, 2022",
+            "position": 192985
+          },
+          {
+            "metric": "assets",
+            "context": "assets related to our Siron compliance business during the quarter ended December 31, 2022, and the percentages above exclude this product line at December 31, 2022",
+            "position": 194562
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, contracts, facilities and employees to a purchaser;•divestiture terms that contain potential future purchase price adjustments or require that assets or liabilities be divested, managed o",
+            "position": 122058
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities we assume in an acquisition or that are imposed on us as a result of an acquisition, including claims by government agencies or authorities, terminated employees, current or former custome",
+            "position": 124131
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities could have a material adverse effect on our business, results of operations,",
+            "position": 152244
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities within accounts payable or other accrued liabilities on our consolidated balance sheet,",
+            "position": 220854
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and the disclosure of contingent assets and liabilities as of the date of the financial statements,",
+            "position": 221571
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities33Item 6",
+            "position": 29345
+          },
+          {
+            "metric": "equity",
+            "context": "equity-based awards, expanded benefit programs including paid parental leave, well-being, family building, childcare reimbursement and company-funded transportation programs, enhanced incentive plan f",
+            "position": 84702
+          },
+          {
+            "metric": "equity",
+            "context": "equity,",
+            "position": 95362
+          },
+          {
+            "metric": "equity",
+            "context": "equity program from 7% to just over 33",
+            "position": 96321
+          },
+          {
+            "metric": "equity",
+            "context": "equity and foreign exchange markets,",
+            "position": 105650
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 28134
+          },
+          {
+            "text": "$227.0 million",
+            "position": 50025
+          },
+          {
+            "text": "$1,561.79 ",
+            "position": 180589
+          },
+          {
+            "text": "$1,000,000,000 ",
+            "position": 180606
+          },
+          {
+            "text": "$1,721.45 ",
+            "position": 180666
+          },
+          {
+            "text": "$880,324,741 ",
+            "position": 180683
+          },
+          {
+            "text": "$1,853.71 ",
+            "position": 180747
+          },
+          {
+            "text": "$760,475,383 ",
+            "position": 180764
+          },
+          {
+            "text": "$1,721.00 ",
+            "position": 180785
+          },
+          {
+            "text": "$500.0 million",
+            "position": 181389
+          },
+          {
+            "text": "$29.6 million",
+            "position": 181655
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 181864
+          },
+          {
+            "text": "$100 ",
+            "position": 182174
+          },
+          {
+            "text": "$833.3 million",
+            "position": 186611
+          },
+          {
+            "text": "$1.7 billion",
+            "position": 186674
+          },
+          {
+            "text": "$919.7 million",
+            "position": 186777
+          },
+          {
+            "text": "$721.2 million",
+            "position": 186924
+          },
+          {
+            "text": "$733.6 million",
+            "position": 187093
+          },
+          {
+            "text": "$512.8 million",
+            "position": 187176
+          },
+          {
+            "text": "$20.45 ",
+            "position": 187260
+          },
+          {
+            "text": "$633.0 million",
+            "position": 187360
+          },
+          {
+            "text": "$468.9 million",
+            "position": 187409
+          },
+          {
+            "text": "$150.7 million",
+            "position": 187494
+          },
+          {
+            "text": "$136.8 million",
+            "position": 187549
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 187613
+          },
+          {
+            "text": "$1.9 billion",
+            "position": 187666
+          },
+          {
+            "text": "$407.3 million",
+            "position": 187783
+          },
+          {
+            "text": "$22.1 ",
+            "position": 190422
+          },
+          {
+            "text": "$28.0 ",
+            "position": 190428
+          },
+          {
+            "text": "$84.7 ",
+            "position": 190434
+          },
+          {
+            "text": "$93.9 ",
+            "position": 190440
+          },
+          {
+            "text": "$132.8",
+            "position": 192545
+          },
+          {
+            "text": "$152.5",
+            "position": 192551
+          },
+          {
+            "text": "$164.1",
+            "position": 192557
+          },
+          {
+            "text": "$173.2",
+            "position": 192563
+          },
+          {
+            "text": "$190.3",
+            "position": 192569
+          },
+          {
+            "text": "$201.4",
+            "position": 192575
+          },
+          {
+            "text": "$215.1",
+            "position": 192581
+          },
+          {
+            "text": "$227.0",
+            "position": 192587
+          },
+          {
+            "text": "$582.9",
+            "position": 192651
+          },
+          {
+            "text": "$613.5",
+            "position": 192657
+          },
+          {
+            "text": "$645.9",
+            "position": 192663
+          },
+          {
+            "text": "$669.4",
+            "position": 192669
+          },
+          {
+            "text": "$687.7",
+            "position": 192675
+          },
+          {
+            "text": "$697.0",
+            "position": 192681
+          },
+          {
+            "text": "$709.6",
+            "position": 192687
+          },
+          {
+            "text": "$721.2",
+            "position": 192693
+          },
+          {
+            "text": "$919,650 ",
+            "position": 195701
+          },
+          {
+            "text": "$773,828 ",
+            "position": 195710
+          },
+          {
+            "text": "$706,643 ",
+            "position": 195719
+          }
+        ],
+        "percentages": [
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 50079
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 59287
+          },
+          {
+            "text": "41%",
+            "value": 41.0,
+            "position": 59292
+          },
+          {
+            "text": "39%",
+            "value": 39.0,
+            "position": 59300
+          },
+          {
+            "text": "92%",
+            "value": 92.0,
+            "position": 60244
+          },
+          {
+            "text": "84%",
+            "value": 84.0,
+            "position": 60349
+          },
+          {
+            "text": "36%",
+            "value": 36.0,
+            "position": 82530
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 82561
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 82590
+          },
+          {
+            "text": "67%",
+            "value": 67.0,
+            "position": 87854
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 87862
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 88834
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 92874
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 155214
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 186709
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 186814
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 186943
+          },
+          {
+            "text": "106%",
+            "value": 106.0,
+            "position": 187041
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 187130
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 187289
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 189509
+          },
+          {
+            "text": "23 %",
+            "value": 23.0,
+            "position": 192717
+          },
+          {
+            "text": "25 %",
+            "value": 25.0,
+            "position": 192721
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 192729
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 192733
+          },
+          {
+            "text": "29 %",
+            "value": 29.0,
+            "position": 192737
+          },
+          {
+            "text": "30 %",
+            "value": 30.0,
+            "position": 192741
+          },
+          {
+            "text": "31 %",
+            "value": 31.0,
+            "position": 192745
+          },
+          {
+            "text": "77 %",
+            "value": 77.0,
+            "position": 192761
+          },
+          {
+            "text": "75 %",
+            "value": 75.0,
+            "position": 192765
+          },
+          {
+            "text": "74 %",
+            "value": 74.0,
+            "position": 192773
+          },
+          {
+            "text": "72 %",
+            "value": 72.0,
+            "position": 192777
+          },
+          {
+            "text": "71 %",
+            "value": 71.0,
+            "position": 192781
+          },
+          {
+            "text": "70 %",
+            "value": 70.0,
+            "position": 192785
+          },
+          {
+            "text": "69 %",
+            "value": 69.0,
+            "position": 192789
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 192799
+          },
+          {
+            "text": "46 %",
+            "value": 46.0,
+            "position": 192857
+          },
+          {
+            "text": "60 %",
+            "value": 60.0,
+            "position": 192861
+          },
+          {
+            "text": "53 %",
+            "value": 53.0,
+            "position": 192865
+          },
+          {
+            "text": "43 %",
+            "value": 43.0,
+            "position": 192873
+          },
+          {
+            "text": "32 %",
+            "value": 32.0,
+            "position": 192877
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 192901
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 192904
+          },
+          {
+            "text": "11 %",
+            "value": 11.0,
+            "position": 192907
+          },
+          {
+            "text": "14 %",
+            "value": 14.0,
+            "position": 192911
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 192919
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 192922
+          },
+          {
+            "text": "17 %",
+            "value": 17.0,
+            "position": 192938
+          },
+          {
+            "text": "20 %",
+            "value": 20.0,
+            "position": 192942
+          },
+          {
+            "text": "22 %",
+            "value": 22.0,
+            "position": 192946
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 161
+          },
+          {
+            "category": "operational_risk",
+            "count": 13
+          },
+          {
+            "category": "financial_risk",
+            "count": 421
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 69
+          },
+          {
+            "category": "technology_risk",
+            "count": 305
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 381938,
+        "filtered_length": 373233,
+        "removed_ratio": 2.28,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.75429975429976,
+      "confidence": 0.14303679282669315,
+      "overall_score": 50.24570024570024,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.93939393939394,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.004914004914004899,
+        "risk_adjusted_signal": 0.03305102322116425,
+        "expected_return_annualized": 0.009343249883790395,
+        "signal_sharpe_ratio": 0.0006228833255860263,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.03305102322116425,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.03305102322116425,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.12121212121212122,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.03305102322116425,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.004914004914004899
+      },
+      "risk_adjusted_signal": 0.03305102322116425,
+      "expected_return": 9.343249883790395e-05,
+      "signal_sharpe": 0.0006228833255860263,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.24570024570024,
+    "confidence": 0.14303679282669315,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:52.346584",
+  "filing_date": "2024-11-06",
+  "filing_filename": "2024-11-06-10k-FICO.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

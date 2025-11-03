@@ -1,0 +1,887 @@
+{
+  "ticker": "LIN",
+  "analysis": {
+    "ticker": "LIN",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 28.421052631578945,
+        "financial_sentiment": -0.07692307692307693,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "91tem 15:Exhibits and Financial Statement Schedules92Item 16:Summary97Signatures982Table of ContentsFORWARD-LOOKING STATEMENTSThis document contains “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67027
+        },
+        {
+          "statement": "s92Item 16:Summary97Signatures982Table of ContentsFORWARD-LOOKING STATEMENTSThis document contains “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67077
+        },
+        {
+          "statement": "These risks and uncertainties may cause future results or circumstances to differ materially from adjusted projections, estimates or other forward-looking statements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 69012
+        },
+        {
+          "statement": "future results or circumstances to differ materially from adjusted projections, estimates or other forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 69111
+        },
+        {
+          "statement": "er forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 69208
+        },
+        {
+          "statement": "Please consider Linde plc’s forward-looking statements in light of those risks.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 69442
+        },
+        {
+          "statement": "not keep pace with competitors or if Linde does not create new technologies that benefit customers, future results of operations could be adversely affected.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 100930
+        },
+        {
+          "statement": "stment returns on pension assets, discount rates, or legislative or regulatory changes could impact future results of operations and required pension contributions.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 101885
+        },
+        {
+          "statement": "updates on operating results, material trends that may affect financial performance, and financial guidance via earnings releases and investor teleconferences.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 129185
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 207872
+        },
+        {
+          "statement": "emented in 2024 Improvements to Reportable Segments Disclosures - In November 2023, the FASB issued guidance requiring enhanced disclosure related to reportable segments.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 236535
+        },
+        {
+          "statement": "andards to be ImplementedImprovements to Income Tax Disclosures - In December 2023, the FASB issued guidance requiring enhanced disclosure related to income taxes.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 237252
+        },
+        {
+          "statement": "ithin the company's consolidated financial statements and the company is evaluating the impact this guidance will have on those disclosures.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 237761
+        },
+        {
+          "statement": "52Table of ContentsDisaggregation of Income Statement Expenses - In November 2024, the FASB issued guidance requiring disaggregated disclosure of income statement expenses.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 237900
+        },
+        {
+          "statement": "ithin the company's consolidated financial statements and the company is evaluating the impact this guidance will have on those disclosures.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 238310
+        },
+        {
+          "statement": "rates are adjusted to reflect the impact of current changes in the macroeconomic environment using forward-looking information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 263947
+        },
+        {
+          "statement": "For the fourth quarter 2024 test, the company applied the FASB's accounting guidance which allows the company to first assess qualitative factors to determine the extent of additional quantitative analysis, if any, that may be required to test goodwill for impairment.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 270621
+        },
+        {
+          "statement": "As a result of the contract terminations, Linde no longer has future performance obligations for these projects.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 337022
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue is denominated in currencies other than its reporting currency,",
+            "position": 95511
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 95655
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Recognition - Estimated Costs at CompletionAs described in Note 19 to the consolidated financial statements, $2,322 million of the Company’s total revenues for the year ended December 31, 2024",
+            "position": 210234
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue recognition - estimated costs at completion is a critical audit matter are (i) the significant judgment by management when developing the estimated costs at completion for sale of equipment co",
+            "position": 211482
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share of $13.62",
+            "position": 128232
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share of $15.51",
+            "position": 128396
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share$13.62",
+            "position": 130901
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share$15.51",
+            "position": 131147
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per shareReported diluted earnings per share increased $1.03",
+            "position": 137504
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $8,635 million was 8% above 2023 reported operating profit of $8,024",
+            "position": 127736
+          },
+          {
+            "metric": "profit",
+            "context": "profit of $9,720 million was 7% above 2023 adjusted operating profit of $9,070",
+            "position": 127843
+          },
+          {
+            "metric": "profit",
+            "context": "profit was primarily driven by higher pricing and savings from productivity initiatives in 2024",
+            "position": 127983
+          },
+          {
+            "metric": "profit",
+            "context": "profit$8,635 $8,024 8 %Operating margin26.2",
+            "position": 130579
+          },
+          {
+            "metric": "profit",
+            "context": "profit$9,720 $9,070 7 %Operating margin29.5",
+            "position": 131049
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA$12,585 $12,007 5 %As percent of sales38.1",
+            "position": 131206
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA$12,819 $12,133 6 %As percent of sales38.8",
+            "position": 131271
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA increased to $12,819 million for 2024 as compared to $12,133 million in 2023",
+            "position": 138131
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA and % of SalesNet Income - Linde plc$6,565 $6,199 Add: Noncontrolling interests172 142 Add: Net pension and OPEB cost (benefit), excluding service cost(190)(164)Add: Interest expense256 200 Add",
+            "position": 187493
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA as a % of Sales38.8",
+            "position": 188015
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS of $15.51",
+            "position": 137641
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (b)Reported diluted EPS$13.62",
+            "position": 187070
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS$15.51",
+            "position": 187409
+          },
+          {
+            "metric": "net income",
+            "context": "Net income - Linde plc of $6,565 million and diluted earnings per share of $13.62",
+            "position": 128179
+          },
+          {
+            "metric": "net income",
+            "context": "net income - Linde plc of $7,475 million and adjusted diluted earnings per share of $15.51",
+            "position": 128334
+          },
+          {
+            "metric": "net income",
+            "context": "net income, partially offset by higher net working capital requirements,",
+            "position": 128570
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income – Linde plc$6,565 $6,199 6 %Diluted earnings per share$13.62",
+            "position": 130854
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income – Linde plc$7,475 $6,989 7 %Diluted earnings per share$15.51",
+            "position": 131100
+          },
+          {
+            "metric": "assets",
+            "context": "assets such as property, plant and equipment, as well as intangible assets such as goodwill,",
+            "position": 92571
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 94971
+          },
+          {
+            "metric": "assets",
+            "context": "assets was approximately $26 billion and $2 billion, respectively, primarily as a result of the business combination and the related acquisition method of accounting applied to the 2018",
+            "position": 97171
+          },
+          {
+            "metric": "assets",
+            "context": "assets, discount rates,",
+            "position": 101811
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities; the impact of tax, environmental, healthcare and other legislation and government regulation in jurisdictions in which the company operates; the cost and outcomes of investigations, litig",
+            "position": 68276
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities or amortization expenses, or impairments of goodwill,",
+            "position": 106592
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities from engineering customer advance payments,",
+            "position": 161543
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and benefit costs, and to the Retirement Benefits section of the Consolidated Results and Other Information section of this MD&A for a further discussion of 2024",
+            "position": 174618
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of $6,520",
+            "position": 179235
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities14Item 6:Reserved15Item 7:Management’s Discussion and Analysis of Financial Condition and Results of Operations16Item 7A:Qu",
+            "position": 66060
+          },
+          {
+            "metric": "equity",
+            "context": "equity method investments operating in Europe, Asia,",
+            "position": 78444
+          },
+          {
+            "metric": "equity",
+            "context": "equity markets, from time to time,",
+            "position": 96419
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Securities – Certain information regarding purchases made by or on behalf of the company or any affiliated purchaser (as defined in Rule 10b-18(a)(3) under the Securities 37 354 $13,083 Novembe",
+            "position": 122755
+          },
+          {
+            "metric": "equity",
+            "context": "equity investments$170 $167 2 %Noncontrolling interests$(172)$(142)21 %Net Income – Linde plc$6,565 $6,199 6 %Diluted earnings per share$13.62",
+            "position": 130783
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$210 billion",
+            "position": 65258
+          },
+          {
+            "text": "$33,005 million",
+            "position": 70364
+          },
+          {
+            "text": "$32,854 million",
+            "position": 70381
+          },
+          {
+            "text": "$33,364 million",
+            "position": 70402
+          },
+          {
+            "text": "$26 billion",
+            "position": 97196
+          },
+          {
+            "text": "$2 billion",
+            "position": 97212
+          },
+          {
+            "text": "$13,083 ",
+            "position": 122940
+          },
+          {
+            "text": "$453.35 ",
+            "position": 122967
+          },
+          {
+            "text": "$12,269 ",
+            "position": 122981
+          },
+          {
+            "text": "$442.94 ",
+            "position": 123006
+          },
+          {
+            "text": "$11,907 ",
+            "position": 123018
+          },
+          {
+            "text": "$452.87 ",
+            "position": 123051
+          },
+          {
+            "text": "$15 billion",
+            "position": 123157
+          },
+          {
+            "text": "$3.1 billion",
+            "position": 123626
+          },
+          {
+            "text": "$11.9 billion",
+            "position": 123717
+          },
+          {
+            "text": "$100 ",
+            "position": 124095
+          },
+          {
+            "text": "$100",
+            "position": 124193
+          },
+          {
+            "text": "$126",
+            "position": 124197
+          },
+          {
+            "text": "$168",
+            "position": 124201
+          },
+          {
+            "text": "$161",
+            "position": 124205
+          },
+          {
+            "text": "$205",
+            "position": 124209
+          },
+          {
+            "text": "$211",
+            "position": 124213
+          },
+          {
+            "text": "$118",
+            "position": 124224
+          },
+          {
+            "text": "$152",
+            "position": 124228
+          },
+          {
+            "text": "$125",
+            "position": 124232
+          },
+          {
+            "text": "$158",
+            "position": 124236
+          },
+          {
+            "text": "$197",
+            "position": 124240
+          },
+          {
+            "text": "$121",
+            "position": 124254
+          },
+          {
+            "text": "$154",
+            "position": 124258
+          },
+          {
+            "text": "$135",
+            "position": 124262
+          },
+          {
+            "text": "$15215",
+            "position": 124270
+          },
+          {
+            "text": "$8,635 million",
+            "position": 127746
+          },
+          {
+            "text": "$8,024 million",
+            "position": 127808
+          },
+          {
+            "text": "$9,720 million",
+            "position": 127853
+          },
+          {
+            "text": "$9,070 million",
+            "position": 127915
+          },
+          {
+            "text": "$6,565 million",
+            "position": 128205
+          },
+          {
+            "text": "$13.62 ",
+            "position": 128254
+          },
+          {
+            "text": "$6,199 million",
+            "position": 128276
+          },
+          {
+            "text": "$12.59",
+            "position": 128295
+          },
+          {
+            "text": "$7,475 million",
+            "position": 128360
+          },
+          {
+            "text": "$15.51 ",
+            "position": 128418
+          },
+          {
+            "text": "$9,423 million",
+            "position": 128492
+          },
+          {
+            "text": "$118 million",
+            "position": 128511
+          },
+          {
+            "text": "$4,497 million",
+            "position": 128784
+          },
+          {
+            "text": "$2,655 million",
+            "position": 128820
+          },
+          {
+            "text": "$4,451 million",
+            "position": 128874
+          },
+          {
+            "text": "$3,167 million",
+            "position": 128920
+          },
+          {
+            "text": "$33,005 ",
+            "position": 130207
+          },
+          {
+            "text": "$32,854 ",
+            "position": 130215
+          },
+          {
+            "text": "$17,143 ",
+            "position": 130283
+          }
+        ],
+        "percentages": [
+          {
+            "text": "65%",
+            "value": 65.0,
+            "position": 77928
+          },
+          {
+            "text": "89%",
+            "value": 89.0,
+            "position": 125317
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 125426
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 127285
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 127594
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 127765
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 127872
+          },
+          {
+            "text": "51.9 %",
+            "value": 51.9,
+            "position": 130324
+          },
+          {
+            "text": "53.2 %",
+            "value": 53.2,
+            "position": 130330
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 130385
+          },
+          {
+            "text": "10.1 %",
+            "value": 10.1,
+            "position": 130409
+          },
+          {
+            "text": "10.0 %",
+            "value": 10.0,
+            "position": 130415
+          },
+          {
+            "text": "263 %",
+            "value": 263.0,
+            "position": 130521
+          },
+          {
+            "text": "551 %",
+            "value": 551.0,
+            "position": 130564
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 130599
+          },
+          {
+            "text": "26.2 %",
+            "value": 26.2,
+            "position": 130618
+          },
+          {
+            "text": "24.4 %",
+            "value": 24.4,
+            "position": 130624
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 130662
+          },
+          {
+            "text": "16 %",
+            "value": 16.0,
+            "position": 130737
+          },
+          {
+            "text": "23.4 %",
+            "value": 23.4,
+            "position": 130759
+          },
+          {
+            "text": "22.7 %",
+            "value": 22.7,
+            "position": 130765
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 130811
+          },
+          {
+            "text": "21 %",
+            "value": 21.0,
+            "position": 130850
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 130890
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 131069
+          },
+          {
+            "text": "29.5 %",
+            "value": 29.5,
+            "position": 131088
+          },
+          {
+            "text": "27.6 %",
+            "value": 27.6,
+            "position": 131094
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 131179
+          },
+          {
+            "text": "5 %",
+            "value": 5.0,
+            "position": 131228
+          },
+          {
+            "text": "38.1 %",
+            "value": 38.1,
+            "position": 131250
+          },
+          {
+            "text": "36.5 %",
+            "value": 36.5,
+            "position": 131256
+          },
+          {
+            "text": "38.8 %",
+            "value": 38.8,
+            "position": 131315
+          },
+          {
+            "text": "36.9 %",
+            "value": 36.9,
+            "position": 131321
+          },
+          {
+            "text": "2023 %",
+            "value": 2023.0,
+            "position": 131735
+          },
+          {
+            "text": "51.9%",
+            "value": 51.9,
+            "position": 132749
+          },
+          {
+            "text": "53.2%",
+            "value": 53.2,
+            "position": 132759
+          },
+          {
+            "text": "10.1%",
+            "value": 10.1,
+            "position": 133123
+          },
+          {
+            "text": "10.0%",
+            "value": 10.0,
+            "position": 133153
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 135535
+          },
+          {
+            "text": "23.4%",
+            "value": 23.4,
+            "position": 136231
+          },
+          {
+            "text": "22.7%",
+            "value": 22.7,
+            "position": 136244
+          },
+          {
+            "text": "23.6%",
+            "value": 23.6,
+            "position": 136447
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 137209
+          },
+          {
+            "text": "7.00%",
+            "value": 7.0,
+            "position": 147003
+          },
+          {
+            "text": "6.02%",
+            "value": 6.02,
+            "position": 147013
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 152673
+          },
+          {
+            "text": "44 %",
+            "value": 44.0,
+            "position": 152731
+          },
+          {
+            "text": "31.5 %",
+            "value": 31.5,
+            "position": 153127
+          },
+          {
+            "text": "29.7 %",
+            "value": 29.7,
+            "position": 153133
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 153217
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 94
+          },
+          {
+            "category": "operational_risk",
+            "count": 89
+          },
+          {
+            "category": "financial_risk",
+            "count": 358
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 52
+          },
+          {
+            "category": "technology_risk",
+            "count": 115
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 396734,
+        "filtered_length": 386188,
+        "removed_ratio": 2.66,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.856548856548855,
+      "confidence": 0.6662111525336576,
+      "overall_score": 51.143451143451145,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.15384615384615,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02286902286902287,
+        "risk_adjusted_signal": 0.15381437729849565,
+        "expected_return_annualized": 0.04348204753610158,
+        "signal_sharpe_ratio": 0.002898803169073439,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.15381437729849565,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.07692307692307693,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02286902286902287
+      },
+      "risk_adjusted_signal": 0.15381437729849565,
+      "expected_return": 0.00043482047536101584,
+      "signal_sharpe": 0.002898803169073439,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.143451143451145,
+    "confidence": 0.6662111525336576,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:27:53.440884",
+  "filing_date": "2025-02-26",
+  "filing_filename": "2025-02-26-10k-LIN.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

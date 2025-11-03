@@ -1,0 +1,866 @@
+{
+  "ticker": "ETR",
+  "analysis": {
+    "ticker": "ETR",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 36.31878557874762,
+        "financial_sentiment": -0.09090909090909091,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "ts(Page left blank intentionally)Table of ContentsTABLE OF CONTENTS SEC Reference NumberPage Number Forward-looking Information ivDefinitions viiiEntergy Corporation and Subsidiaries Management’s Financial Discussion and Analysis.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 256781
+        },
+        {
+          "statement": "ORMATIONIn this combined report and from time to time, Entergy Corporation and Such statements are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 264144
+        },
+        {
+          "statement": "al,” “plan,” “predict,” “forecast,” and other similar words or expressions are intended to identify forward-looking statements but are not the only means to identify these statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 264496
+        },
+        {
+          "statement": "Although each of these registrants believes that these forward-looking statements and the underlying assumptions are reasonable, it cannot provide assurance that they will prove correct.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 264635
+        },
+        {
+          "statement": "Any forward-looking statement is based on information current as of the date of this combined report and speaks only as of the date on which such statement is made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 264771
+        },
+        {
+          "statement": "federal securities laws, each registrant undertakes no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events, or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265068
+        },
+        {
+          "statement": "Forward-looking statements involve a number of risks and uncertainties.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 265164
+        },
+        {
+          "statement": "Entergy and Based on current IRS guidance and internal forecasts, Entergy and The U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 313610
+        },
+        {
+          "statement": "ent IRS guidance and internal forecasts, Entergy and The U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 313702
+        },
+        {
+          "statement": "This guidance will determine the amount of tax credits and incremental cash tax payments Entergy expects in the future as a result of the legislation.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 313817
+        },
+        {
+          "statement": "Prior to receiving this guidance, Entergy cannot adequately assess the expected future effects on its results of operations, financial position, and cash flows.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 313987
+        },
+        {
+          "statement": "Based on guidance provided by the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 315894
+        },
+        {
+          "statement": "Additional guidance is needed from the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 316388
+        },
+        {
+          "statement": "Depending on the specifics of the expected additional guidance from the U.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 316832
+        },
+        {
+          "statement": "The combined cost of the first two new combined cycle combustion turbine generation resources is estimated to be approximately $2,387 million, and these units are expected to achieve commercial operation in 2028.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 348524
+        },
+        {
+          "statement": "The cost of the new 500 kV transmission line is estimated to be $546 million.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 348877
+        },
+        {
+          "statement": "9 billion with cost recovery via a forward-looking rider with semi-annual true-ups.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 363469
+        },
+        {
+          "statement": "and adjusted appropriately each quarter, as necessary, in accordance with applicable authoritative guidance; however, the ultimate outcome of tax matters could result in favorable or unfavorable effects on the consolidated financial statements.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 399917
+        },
+        {
+          "statement": "Minimum required funding calculations as determined under Pension Protection Act guidance, as amended by the American Rescue Plan Act of 2021, are performed annually as of January 1 of each year and are based on measurements of the assets and funding liabilities as measured at that date.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 410879
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 420485
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue ServiceISOIndependent System OperatorkVKilovoltkWKilowatt, which equals one thousand wattskWhKilowatt-hour(s)LDEQLouisiana Department of Environmental QualityLPSCLouisiana Public Service Commi",
+            "position": 284985
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Procedure 2023-15, which provides a safe harbor method of accounting that taxpayers may use to determine whether expenses to repair, maintain, replace,",
+            "position": 314918
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Procedure 2023-15",
+            "position": 315423
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue or gains that have been deferred because it is probable such amounts will be credited to customers through future regulated rates or (2",
+            "position": 397303
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or in the timing of, requirements for, or cost to decommission Entergy’s nuclear plant sites and the implementation of decommissioning of such sites following shutdown;•the effectiveness of E",
+            "position": 279951
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share from the Utility segment and the Parent and Other portion of the business, financial strength,",
+            "position": 369622
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per average common share: Basic$2.47",
+            "position": 428987
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings and Losses in Relation to an Investor’s Ownership InterestEntergy Arkansas and Entergy Mississippi, as managing members,",
+            "position": 460758
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, and cash flows between Each Registrant Subsidiary has the option to purchase, at a future date specified in their respective partnership agreement, the tax equity investor’s interests at the",
+            "position": 461194
+          },
+          {
+            "metric": "profit",
+            "context": "profit to Entergy New Orleans, and distribution charges,",
+            "position": 1331569
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS results in the annual incentive program;473Table of Contents•Adjusting the design of the Safety measure in the annual incentive program to incorporate Total Recordable Incident Rate (“TRIR”) as a ",
+            "position": 1815160
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS•Adjusted FFO/Debt Ratio•Safety•Customer NPS•DIBMeasured over a one-year performance period2024–2026",
+            "position": 1821631
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS, Adjusted FFO/Debt Ratio, Safety, Customer NPS, and DIB, with ETR Adjusted EPS being the most heavily weighted at 60% and the remaining measures each weighted at 10",
+            "position": 1828027
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS as reflected in its financial plan, or $3.60",
+            "position": 1830128
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS and Adjusted FFO/Debt Ratio for 2024 as set forth in the Company’s financial plan, as well as factors driving the strong financial performance achieved in 2023",
+            "position": 1836430
+          },
+          {
+            "metric": "operating income",
+            "context": "OPERATING INCOME (LOSS)121,833 175,905 (327,157)OTHER INCOME (DEDUCTIONS) Allowance for equity funds used during construction7,647 7,531 8,312 Interest and investment income47,953 13,131 5,096 Miscell",
+            "position": 1774671
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income (Loss) Attributable to Entergy Corporation$2,507,127 ($150,591)$2,356,536 Operating revenues(217,142)(50,617)(267,759)Fuel, fuel-related expenses, and gas purchased for resale(541,322)(3,38",
+            "position": 289869
+          },
+          {
+            "metric": "net income",
+            "context": "net income(393)Retail one-time bill credit(92)Storm restoration carrying costs(36)Volume/weather87 Retail electric price217 2024 operating revenues$11,806 The Utility operating companies’ results incl",
+            "position": 294892
+          },
+          {
+            "metric": "net income",
+            "context": "net income because Entergy previously recorded a regulatory liability at the time of the global black box settlement reached between System Energy and the MPSC in June 2022",
+            "position": 295855
+          },
+          {
+            "metric": "net income",
+            "context": "net income or cash flows,",
+            "position": 384894
+          },
+          {
+            "metric": "net income",
+            "context": "NET INCOME ATTRIBUTABLE TO ENTERGY CORPORATION$1,055,590 $2,356,536 $1,103,166 Earnings per average common share: Basic$2.47",
+            "position": 428908
+          },
+          {
+            "metric": "assets",
+            "context": "assets and other potential stranded costs, including those capital investments associated with unrealized customer growth expectations, and the application of more stringent return on equity criteria,",
+            "position": 266930
+          },
+          {
+            "metric": "assets",
+            "context": "assets at attractive prices and on other attractive terms;•the economic climate, and particularly economic conditions in the Utility service area and events and circumstances that could influence econ",
+            "position": 273778
+          },
+          {
+            "metric": "assets",
+            "context": "assets and business operations of both Entergy Gulf States Louisiana and Entergy TexasEntergy Gulf States LouisianaEntergy Gulf States Louisiana,",
+            "position": 282208
+          },
+          {
+            "metric": "assets",
+            "context": "assets, rate of increase in future compensation levels, retirement rates, expected timing and form of payments,",
+            "position": 402075
+          },
+          {
+            "metric": "assets",
+            "context": "assets used in the calculation of benefit plan costs, Entergy reviews past performance, current and expected future asset allocations,",
+            "position": 403626
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities; (2) expenses of $151 million ($112 million net-of-tax), recorded at Utility in second quarter 2024, primarily consisting of regulatory charges to reflect the effects of an agreement in pr",
+            "position": 291057
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of $14.2",
+            "position": 315557
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities by approximately 8% to 15",
+            "position": 393099
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities represent (1) revenue or gains that have been deferred because it is probable such amounts will be credited to customers through future regulated rates or (2",
+            "position": 397277
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 411426
+          },
+          {
+            "metric": "equity",
+            "context": "Equity for the Years Ended December 31, 2024, 2023, and 2022",
+            "position": 257413
+          },
+          {
+            "metric": "equity",
+            "context": "Equity and Noncontrolling Interests144Note 7",
+            "position": 257696
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 253828
+          },
+          {
+            "text": "$25 ",
+            "position": 254466
+          },
+          {
+            "text": "$22.9 billion",
+            "position": 255654
+          },
+          {
+            "text": "$2,507,127 ",
+            "position": 289922
+          },
+          {
+            "text": "$150,591",
+            "position": 289934
+          },
+          {
+            "text": "$2,356,536 ",
+            "position": 289943
+          },
+          {
+            "text": "$1,826,704 ",
+            "position": 290708
+          },
+          {
+            "text": "$771,114",
+            "position": 290720
+          },
+          {
+            "text": "$1,055,590 ",
+            "position": 290729
+          },
+          {
+            "text": "$320 million",
+            "position": 290869
+          },
+          {
+            "text": "$253 million",
+            "position": 290883
+          },
+          {
+            "text": "$151 million",
+            "position": 291086
+          },
+          {
+            "text": "$112 million",
+            "position": 291100
+          },
+          {
+            "text": "$132 million",
+            "position": 291612
+          },
+          {
+            "text": "$97 million",
+            "position": 291626
+          },
+          {
+            "text": "$78 million",
+            "position": 291859
+          },
+          {
+            "text": "$57 million",
+            "position": 291872
+          },
+          {
+            "text": "$568 million",
+            "position": 292784
+          },
+          {
+            "text": "$275 million",
+            "position": 292835
+          },
+          {
+            "text": "$98 million",
+            "position": 292987
+          },
+          {
+            "text": "$72 million",
+            "position": 293000
+          },
+          {
+            "text": "$106 million",
+            "position": 293249
+          },
+          {
+            "text": "$129 million",
+            "position": 293524
+          },
+          {
+            "text": "$103 million",
+            "position": 293667
+          },
+          {
+            "text": "$76 million",
+            "position": 293681
+          },
+          {
+            "text": "$59 million",
+            "position": 293958
+          },
+          {
+            "text": "$12,023 ",
+            "position": 294819
+          },
+          {
+            "text": "$11,806 ",
+            "position": 295039
+          },
+          {
+            "text": "$31 million",
+            "position": 296318
+          },
+          {
+            "text": "$5 million",
+            "position": 296418
+          },
+          {
+            "text": "$2,838 million",
+            "position": 298984
+          },
+          {
+            "text": "$2,851 million",
+            "position": 299011
+          },
+          {
+            "text": "$38 million",
+            "position": 299068
+          },
+          {
+            "text": "$19 million",
+            "position": 299318
+          },
+          {
+            "text": "$15 million",
+            "position": 299431
+          },
+          {
+            "text": "$10 million",
+            "position": 299801
+          },
+          {
+            "text": "$8 million",
+            "position": 300068
+          },
+          {
+            "text": "$7 million",
+            "position": 300122
+          },
+          {
+            "text": "$54 million",
+            "position": 300342
+          },
+          {
+            "text": "$12 million",
+            "position": 300613
+          },
+          {
+            "text": "$9 million",
+            "position": 300933
+          },
+          {
+            "text": "$68.9 million",
+            "position": 301740
+          },
+          {
+            "text": "$9.5 million",
+            "position": 301787
+          },
+          {
+            "text": "$41 million",
+            "position": 302121
+          },
+          {
+            "text": "$28 million",
+            "position": 302474
+          },
+          {
+            "text": "$92 million",
+            "position": 303538
+          },
+          {
+            "text": "$16 million",
+            "position": 304093
+          },
+          {
+            "text": "$150 million",
+            "position": 305169
+          },
+          {
+            "text": "$60 million",
+            "position": 305822
+          },
+          {
+            "text": "$22 million",
+            "position": 306614
+          }
+        ],
+        "percentages": [
+          {
+            "text": "4.875%",
+            "value": 4.875,
+            "position": 253956
+          },
+          {
+            "text": "4.90%",
+            "value": 4.9,
+            "position": 254151
+          },
+          {
+            "text": "5.0%",
+            "value": 5.0,
+            "position": 254246
+          },
+          {
+            "text": "5.50%",
+            "value": 5.5,
+            "position": 254317
+          },
+          {
+            "text": "5.375%",
+            "value": 5.375,
+            "position": 254389
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 284240
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 284511
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 284536
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 284568
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 285579
+          },
+          {
+            "text": "57.5%",
+            "value": 57.5,
+            "position": 285626
+          },
+          {
+            "text": "42.5%",
+            "value": 42.5,
+            "position": 285652
+          },
+          {
+            "text": "10.9%",
+            "value": 10.9,
+            "position": 285663
+          },
+          {
+            "text": "57%",
+            "value": 57.0,
+            "position": 288650
+          },
+          {
+            "text": "20242023%",
+            "value": 20242023.0,
+            "position": 298592
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 308138
+          },
+          {
+            "text": "5.30%",
+            "value": 5.3,
+            "position": 308808
+          },
+          {
+            "text": "5.75%",
+            "value": 5.75,
+            "position": 308905
+          },
+          {
+            "text": "5.45%",
+            "value": 5.45,
+            "position": 308953
+          },
+          {
+            "text": "5.35%",
+            "value": 5.35,
+            "position": 309054
+          },
+          {
+            "text": "5.70%",
+            "value": 5.7,
+            "position": 309102
+          },
+          {
+            "text": "5.15%",
+            "value": 5.15,
+            "position": 309204
+          },
+          {
+            "text": "5.85%",
+            "value": 5.85,
+            "position": 309303
+          },
+          {
+            "text": "5.80%",
+            "value": 5.8,
+            "position": 309393
+          },
+          {
+            "text": "5.55%",
+            "value": 5.55,
+            "position": 309490
+          },
+          {
+            "text": "3.70%",
+            "value": 3.7,
+            "position": 309724
+          },
+          {
+            "text": "4.05%",
+            "value": 4.05,
+            "position": 309820
+          },
+          {
+            "text": "5.59%",
+            "value": 5.59,
+            "position": 309918
+          },
+          {
+            "text": "5.40%",
+            "value": 5.4,
+            "position": 310022
+          },
+          {
+            "text": "26.4%",
+            "value": 26.4,
+            "position": 312068
+          },
+          {
+            "text": "41.3%",
+            "value": 41.3,
+            "position": 312088
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 312198
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 313194
+          },
+          {
+            "text": "5.5%",
+            "value": 5.5,
+            "position": 318199
+          },
+          {
+            "text": "7.5%",
+            "value": 7.5,
+            "position": 318246
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 318441
+          },
+          {
+            "text": "4.75%",
+            "value": 4.75,
+            "position": 318522
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 319285
+          },
+          {
+            "text": "65.3%",
+            "value": 65.3,
+            "position": 321282
+          },
+          {
+            "text": "63.8%",
+            "value": 63.8,
+            "position": 321287
+          },
+          {
+            "text": "0.2%",
+            "value": 0.2,
+            "position": 321333
+          },
+          {
+            "text": "0.3%",
+            "value": 0.3,
+            "position": 321339
+          },
+          {
+            "text": "65.1%",
+            "value": 65.1,
+            "position": 321406
+          },
+          {
+            "text": "63.5%",
+            "value": 63.5,
+            "position": 321411
+          },
+          {
+            "text": "0.7%",
+            "value": 0.7,
+            "position": 321443
+          },
+          {
+            "text": "0.1%",
+            "value": 0.1,
+            "position": 321449
+          },
+          {
+            "text": "64.4%",
+            "value": 64.4,
+            "position": 321524
+          },
+          {
+            "text": "63.4%",
+            "value": 63.4,
+            "position": 321529
+          },
+          {
+            "text": "21.1%",
+            "value": 21.1,
+            "position": 321709
+          },
+          {
+            "text": "78.9%",
+            "value": 78.9,
+            "position": 321790
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 321
+          },
+          {
+            "category": "operational_risk",
+            "count": 134
+          },
+          {
+            "category": "financial_risk",
+            "count": 2192
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 1020
+          },
+          {
+            "category": "technology_risk",
+            "count": 472
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "high",
+          "position": 0,
+          "density": 7.6452599388379205
+        }
+      ],
+      "deduplication": {
+        "original_length": 2111025,
+        "filtered_length": 2030856,
+        "removed_ratio": 3.8,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.14004914004914,
+      "confidence": 0.500926146569263,
+      "overall_score": 50.85995085995086,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.45454545454545,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.017199017199017175,
+        "risk_adjusted_signal": 0.11567858127407507,
+        "expected_return_annualized": 0.032701374593266434,
+        "signal_sharpe_ratio": 0.0021800916395510956,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.11567858127407507,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.11567858127407507,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.09090909090909091,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.11567858127407507,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.017199017199017175
+      },
+      "risk_adjusted_signal": 0.11567858127407507,
+      "expected_return": 0.00032701374593266435,
+      "signal_sharpe": 0.0021800916395510956,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.85995085995086,
+    "confidence": 0.500926146569263,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:18.709277",
+  "filing_date": "2025-02-18",
+  "filing_filename": "2025-02-18-10k-ETR.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

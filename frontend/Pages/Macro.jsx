@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,26 +11,26 @@ export default function Macro() {
 
   const { data: snapshots = [] } = useQuery({
     queryKey: ['snapshots'],
-    queryFn: () => base44.entities.MarketSnapshot.list(),
+    queryFn: () => api.entities.MarketSnapshot.list(),
     initialData: [],
   });
 
   const { data: events = [] } = useQuery({
     queryKey: ['events'],
-    queryFn: () => base44.entities.EventItem.list('eventDate', 20),
+    queryFn: () => api.entities.EventItem.list('eventDate', 20),
     initialData: [],
   });
 
   const { data: riskMetrics = [] } = useQuery({
     queryKey: ['risk'],
-    queryFn: () => base44.entities.RiskMetrics.list(),
+    queryFn: () => api.entities.RiskMetrics.list(),
     initialData: [],
   });
 
   const handleGenerateSummary = async () => {
     setIsGenerating(true);
     try {
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are a macro strategist. Provide a comprehensive (5-7 sentences) summary of global macro conditions: ${JSON.stringify({ snapshots, events: events.slice(0, 5), riskMetrics })}. Focus on: central bank policy divergence, growth/inflation dynamics, geopolitical risks, cross-asset implications. Senior institutional tone.`,
       });
       setSummary({ text: result, timestamp: new Date() });

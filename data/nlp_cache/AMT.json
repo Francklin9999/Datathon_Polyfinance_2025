@@ -1,0 +1,934 @@
+{
+  "ticker": "AMT",
+  "analysis": {
+    "ticker": "AMT",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 40.67439409905163,
+        "financial_sentiment": -0.14,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "ORATIONTABLE OF CONTENTSANNUAL REPORTFISCAL YEAR ENDED DECEMBER 31, 2024 PageSpecial Note Regarding Forward-Looking StatementsiiiTEM 1.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 65242
+        },
+        {
+          "statement": "Signatures77Index to Consolidated Financial StatementsF-1iiTable of Contents SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report on (this “Annual Report”) contains statements about future events and expectations, or forward-looking statements, all of which are inherently uncertain.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67277
+        },
+        {
+          "statement": "nnual Report on (this “Annual Report”) contains statements about future events and expectations, or forward-looking statements, all of which are inherently uncertain.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67410
+        },
+        {
+          "statement": "ctations, or forward-looking statements, all of which are inherently uncertain.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67497
+        },
+        {
+          "statement": "We have based those forward-looking statements on our current expectations and projections about future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 67574
+        },
+        {
+          "statement": "ates,” “intends,” “plans,” “believes,” “estimates,” “expects” or similar expressions, we are making forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67724
+        },
+        {
+          "statement": "estimates,” “expects” or similar expressions, we are making forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 67764
+        },
+        {
+          "statement": "These forward-looking statements may be found under the captions “Business” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations,” as well as in this Annual Report generally.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 69499
+        },
+        {
+          "statement": "You should keep in mind that any forward-looking statement we make in this Annual Report or elsewhere speaks only as of the date on which we make it.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 69738
+        },
+        {
+          "statement": "r the caption “Risk Factors,” may cause We have no duty, and do not intend, to update or revise the forward-looking statements we make in this Annual Report, except as may be required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 70199
+        },
+        {
+          "statement": "and uncertainties, you should keep in mind that the future events or circumstances described in any forward-looking statement we make in this Annual Report or elsewhere might not occur.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 70415
+        },
+        {
+          "statement": "Based upon foreign currency exchange rates and the tenant leases in place as of December 31, 2024, we expect to generate nearly $54 billion of non-cancellable tenant lease revenue over future periods, before the impact of straight-line lease accounting.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 80722
+        },
+        {
+          "statement": "s services and the corresponding wireless industry capital spending trends in the markets we serve, we anticipate consistent demand for our communications sites.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 81080
+        },
+        {
+          "statement": "We believe that our global asset base positions us well to benefit from the increasing proliferation of advanced wireless devices and the increasing usage of high bandwidth applications on those devices.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 81142
+        },
+        {
+          "statement": "We expect that our churn rate in our U.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 82392
+        },
+        {
+          "statement": "We believe these efforts to meet our customers’ needs will support and enhance our ability to capitalize on the growth in demand for wireless infrastructure.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 92979
+        },
+        {
+          "statement": "We believe that our highest incremental returns will be achieved by leasing additional space on our existing communications sites.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 93552
+        },
+        {
+          "statement": "As a result, we anticipate growing demand for our communications sites because they are attractively located and typically have capacity available for additional tenants and equipment.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 93864
+        },
+        {
+          "statement": "t portion of our inorganic growth has been focused on properties with lower initial tenancy because we believe that over time we can significantly increase tenancy levels, and therefore, drive strong returns on those assets.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 95206
+        },
+        {
+          "statement": "ealty Corporation (“CoreSite,” and the acquisition, the “CoreSite Acquisition”) in late 2021, which we believe can drive strong, recurring growth and also meaningfully enhance the value of our existing communications tower real estate through emerging edge compute opportunities in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 95543
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue over future periods,",
+            "position": 80795
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue for the years ended December 31,: 202420232022",
+            "position": 83871
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue in our property segments was attributable to our communications sites, excluding DAS networks and fiber, for the years ended December 31, 2024, 2023 and 2022,",
+            "position": 84241
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from our tenants to cover certain costs,",
+            "position": 84703
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue for each property segment are as follows for the year ended December 31, 2024",
+            "position": 84819
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or other funds or otherwise limit distributions of capital;•changes in a specific country’s or region’s political or economic conditions, including inflation, currency devaluation, coup d’éta",
+            "position": 149165
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings before interest, taxes, depreciation, amortization and accretion, as adjusted (“Adjusted EBITDA”), Funds From Operations, as defined by the National Association of Real Estate Investment Trus",
+            "position": 226796
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in certain foreign jurisdictions, partially due to the impacts of the change in estimated useful lives on depreciation and amortization expense as described in Note 1 and withholding taxes on",
+            "position": 257227
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings(4,424.1",
+            "position": 399824
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in certain foreign jurisdictions, partially due to the impacts of the change in estimated useful lives on depreciation and amortization expense as described in note 1 and withholding taxes on",
+            "position": 545178
+          },
+          {
+            "metric": "profit",
+            "context": "profit (see note 20",
+            "position": 205652
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Year Ended December 31,Percent Change 2024 vs 2023Percent Change 2023 vs 2022 202420232022",
+            "position": 250313
+          },
+          {
+            "metric": "profit",
+            "context": "profit for our Data Centers segment was primarily attributable to an increase in our segment gross margin,",
+            "position": 251297
+          },
+          {
+            "metric": "profit",
+            "context": "profit for our Africa & APAC, Europe and Latin America property segments and our Data Centers segment were primarily attributable to increases in our segment gross margin,",
+            "position": 251690
+          },
+          {
+            "metric": "profit",
+            "context": "profit and (v) a decrease in goodwill impairment,",
+            "position": 271870
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA”), Funds From Operations, as defined by the National Association of Real Estate Investment Trusts (“Nareit FFO”) attributable to American Tower Corporation common stockholders,",
+            "position": 226894
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA as Net income before Income (loss) from equity method investments; Income (loss) from discontinued operations, net of taxes; Income tax benefit (provision); Other income (expense); Gain (loss) ",
+            "position": 227297
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, Nareit FFO (common stockholders),",
+            "position": 229616
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA, Nareit FFO (common stockholders), AFFO (common stockholders) or Segment gross margin represents cash flows from operating activities in accordance with GAAP and, therefore, these measures shou",
+            "position": 229836
+          },
+          {
+            "metric": "margin",
+            "context": "margin and segment operating profit (see note 20",
+            "position": 205623
+          },
+          {
+            "metric": "margin",
+            "context": "margin as segment revenue less segment operating expenses, excluding depreciation, amortization and accretion; selling, general,",
+            "position": 229409
+          },
+          {
+            "metric": "margin",
+            "context": "margin represents cash flows from operating activities in accordance with GAAP and, therefore, these measures should not be considered indicative of cash flows from operating activities, as a measure ",
+            "position": 229922
+          },
+          {
+            "metric": "margin",
+            "context": "margin provides valuable insight into the site-level profitability of our assets (6) each provides investors with a meaningful measure for evaluating our period-to-period operating performance by elim",
+            "position": 231448
+          },
+          {
+            "metric": "margin",
+            "context": "margin may not, however,",
+            "position": 231964
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate, management’s expectations of future operating results and cash requirements,",
+            "position": 327280
+          },
+          {
+            "metric": "market share",
+            "context": "market share, our plans to fund our future liquidity needs, the expected impacts of strategic partnerships on our business, our expectations for the closing of signed agreements and the expected impac",
+            "position": 68140
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (expense), including Goodwill impairment; Depreciation,",
+            "position": 227578
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income (expense); less cash payments related to capital improvements and cash payments related to corporate capital expenditures and including adjustments and distributions for unconsolidate",
+            "position": 228816
+          },
+          {
+            "metric": "net income",
+            "context": "Net income before Income (loss) from equity method investments; Income (loss) from discontinued operations, net of taxes; Income tax benefit (provision); Other income (expense); Gain (loss) on retirem",
+            "position": 227307
+          },
+          {
+            "metric": "net income",
+            "context": "net income before gains or losses from the sale or disposal of real estate, real estate related impairment charges, real estate related depreciation,",
+            "position": 227805
+          },
+          {
+            "metric": "net income",
+            "context": "net income and Segment gross margin to gross margin, the most directly comparable GAAP measures,",
+            "position": 232166
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income / Adjusted EBITDA and Net Income / Nareit FFO attributable to American Tower Corporation common stockholders / AFFO attributable to American Tower Corporation common stockholdersDuring the ",
+            "position": 264299
+          },
+          {
+            "metric": "net income",
+            "context": "net income from continuing operations was primarily due to (i) a decrease in depreciation, amortization and accretion expense, (ii) changes in other (income) expense, primarily due to foreign currency",
+            "position": 271558
+          },
+          {
+            "metric": "assets",
+            "context": "assets in the United States that we provide for the leasing of space primarily to enterprises, network operators,",
+            "position": 72639
+          },
+          {
+            "metric": "assets",
+            "context": "assets in Argentina, Brazil, Colombia, South Africa and Spain, (ii) other property interests in Canada and the United States and (iii) 29",
+            "position": 73152
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 73538
+          },
+          {
+            "metric": "assets",
+            "context": "assets and operations,",
+            "position": 77475
+          },
+          {
+            "metric": "assets",
+            "context": "assets in the United States and Canada, other than our data center facilities and related assets), Africa & APAC property, Europe property, Latin America property,",
+            "position": 78668
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities or costs,",
+            "position": 138247
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, or impact the terms of any new obligations,",
+            "position": 141231
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities will arise in the future in a manner that could have a material adverse effect on our business,",
+            "position": 165678
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, such as contamination, asbestos-containing building materials, lead or lead-based paint and mold or other air quality issues at some of our data centers,",
+            "position": 182226
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, revenues and expenses,",
+            "position": 203636
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities25Dividends25Performance Graph25ITEM 6",
+            "position": 65618
+          },
+          {
+            "metric": "equity",
+            "context": "equity sponsored firms, carrier-affiliated tower companies, independent wireless carriers, tower owners, broadcasters and owners of non-communications sites, including rooftops, utility towers,",
+            "position": 113270
+          },
+          {
+            "metric": "equity",
+            "context": "equity financing, thereby placing us at a possible competitive disadvantage to less leveraged competitors and competitors that may have better access to capital resources, including with respect to ac",
+            "position": 139581
+          },
+          {
+            "metric": "equity",
+            "context": "equity issuances, even if the then-prevailing market conditions are not favorable, to fund capital expenditures, future growth and expansion initiatives, required purchases of our partners’ interests ",
+            "position": 140021
+          },
+          {
+            "metric": "equity",
+            "context": "equity financing activities or our ability to repay or refinance maturing liabilities, or impact the terms of any new obligations,",
+            "position": 141157
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 63703
+          },
+          {
+            "text": "$2.5 billion",
+            "position": 74354
+          },
+          {
+            "text": "$354.1 million",
+            "position": 74954
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 75513
+          },
+          {
+            "text": "$6.0 billion",
+            "position": 75620
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 75913
+          },
+          {
+            "text": "$1.1 billion",
+            "position": 76050
+          },
+          {
+            "text": "$77.6 million",
+            "position": 76611
+          },
+          {
+            "text": "$8.5 million",
+            "position": 76698
+          },
+          {
+            "text": "$54 billion",
+            "position": 80751
+          },
+          {
+            "text": "$12.0 billion",
+            "position": 97102
+          },
+          {
+            "text": "$100 ",
+            "position": 202454
+          },
+          {
+            "text": "$100.00 ",
+            "position": 202903
+          },
+          {
+            "text": "$99.52 ",
+            "position": 202911
+          },
+          {
+            "text": "$132.26 ",
+            "position": 202918
+          },
+          {
+            "text": "$98.36 ",
+            "position": 202926
+          },
+          {
+            "text": "$103.63 ",
+            "position": 202933
+          },
+          {
+            "text": "$91.03 ",
+            "position": 202941
+          },
+          {
+            "text": "$30 billion",
+            "position": 215690
+          },
+          {
+            "text": "$5,248.1 ",
+            "position": 232527
+          },
+          {
+            "text": "$5,216.2 ",
+            "position": 232536
+          },
+          {
+            "text": "$5,006.3 ",
+            "position": 232545
+          },
+          {
+            "text": "$10,127.2 ",
+            "position": 232800
+          },
+          {
+            "text": "$10,012.2 ",
+            "position": 232810
+          },
+          {
+            "text": "$9,645.4 ",
+            "position": 232820
+          },
+          {
+            "text": "$31.9 million",
+            "position": 233058
+          },
+          {
+            "text": "$216.2 million",
+            "position": 233121
+          },
+          {
+            "text": "$180.3 million",
+            "position": 233158
+          },
+          {
+            "text": "$49.1 million",
+            "position": 233212
+          },
+          {
+            "text": "$13.2 million",
+            "position": 233314
+          },
+          {
+            "text": "$184.1 million",
+            "position": 233391
+          },
+          {
+            "text": "$162.7 million",
+            "position": 233441
+          },
+          {
+            "text": "$36.4 million",
+            "position": 233787
+          },
+          {
+            "text": "$157.3 million",
+            "position": 233837
+          },
+          {
+            "text": "$131.4 million",
+            "position": 233978
+          },
+          {
+            "text": "$29.3 million",
+            "position": 234044
+          },
+          {
+            "text": "$1.9 million",
+            "position": 234108
+          },
+          {
+            "text": "$5.0 million",
+            "position": 234206
+          },
+          {
+            "text": "$39.4 million",
+            "position": 234290
+          },
+          {
+            "text": "$154.2 million",
+            "position": 234421
+          },
+          {
+            "text": "$51.7 million",
+            "position": 234458
+          },
+          {
+            "text": "$49.3 million",
+            "position": 234508
+          },
+          {
+            "text": "$49.2 million",
+            "position": 234653
+          },
+          {
+            "text": "$4.0 million",
+            "position": 234725
+          },
+          {
+            "text": "$6.1 million",
+            "position": 234786
+          },
+          {
+            "text": "$59.1 million",
+            "position": 234858
+          },
+          {
+            "text": "$38.5 million",
+            "position": 234920
+          },
+          {
+            "text": "$20.4 million",
+            "position": 234957
+          },
+          {
+            "text": "$11.3 million",
+            "position": 235006
+          },
+          {
+            "text": "$8.0 million",
+            "position": 235078
+          }
+        ],
+        "percentages": [
+          {
+            "text": "1.375%",
+            "value": 1.375,
+            "position": 63745
+          },
+          {
+            "text": "1.950%",
+            "value": 1.95,
+            "position": 63803
+          },
+          {
+            "text": "0.450%",
+            "value": 0.45,
+            "position": 63861
+          },
+          {
+            "text": "0.400%",
+            "value": 0.4,
+            "position": 63919
+          },
+          {
+            "text": "4.125%",
+            "value": 4.125,
+            "position": 63977
+          },
+          {
+            "text": "0.500%",
+            "value": 0.5,
+            "position": 64035
+          },
+          {
+            "text": "0.875%",
+            "value": 0.875,
+            "position": 64093
+          },
+          {
+            "text": "0.950%",
+            "value": 0.95,
+            "position": 64151
+          },
+          {
+            "text": "3.900%",
+            "value": 3.9,
+            "position": 64209
+          },
+          {
+            "text": "4.625%",
+            "value": 4.625,
+            "position": 64267
+          },
+          {
+            "text": "1.000%",
+            "value": 1.0,
+            "position": 64325
+          },
+          {
+            "text": "1.250%",
+            "value": 1.25,
+            "position": 64382
+          },
+          {
+            "text": "4.100%",
+            "value": 4.1,
+            "position": 64439
+          },
+          {
+            "text": "98%",
+            "value": 98.0,
+            "position": 71301
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 74145
+          },
+          {
+            "text": "99%",
+            "value": 99.0,
+            "position": 79193
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 80509
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 82327
+          },
+          {
+            "text": "52 %",
+            "value": 52.0,
+            "position": 83938
+          },
+          {
+            "text": "53 %",
+            "value": 53.0,
+            "position": 83942
+          },
+          {
+            "text": "12 %",
+            "value": 12.0,
+            "position": 83967
+          },
+          {
+            "text": "8 %",
+            "value": 8.0,
+            "position": 83985
+          },
+          {
+            "text": "17 %",
+            "value": 17.0,
+            "position": 84007
+          },
+          {
+            "text": "18 %",
+            "value": 18.0,
+            "position": 84011
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 84031
+          },
+          {
+            "text": "87%",
+            "value": 87.0,
+            "position": 84221
+          },
+          {
+            "text": "88%",
+            "value": 88.0,
+            "position": 84226
+          },
+          {
+            "text": "86%",
+            "value": 86.0,
+            "position": 85014
+          },
+          {
+            "text": "81%",
+            "value": 81.0,
+            "position": 85171
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 85287
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 85421
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 90089
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 97670
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 154599
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 161341
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 161764
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 161875
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 198278
+          },
+          {
+            "text": "56%",
+            "value": 56.0,
+            "position": 198498
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 198797
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 198809
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 198836
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 199052
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 232554
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 232557
+          },
+          {
+            "text": "0 %",
+            "value": 0.0,
+            "position": 242538
+          },
+          {
+            "text": "5 %",
+            "value": 5.0,
+            "position": 242541
+          },
+          {
+            "text": "22 %",
+            "value": 22.0,
+            "position": 242758
+          },
+          {
+            "text": "6 %",
+            "value": 6.0,
+            "position": 250461
+          },
+          {
+            "text": "7 %",
+            "value": 7.0,
+            "position": 250654
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 132
+          },
+          {
+            "category": "operational_risk",
+            "count": 27
+          },
+          {
+            "category": "financial_risk",
+            "count": 621
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 71
+          },
+          {
+            "category": "technology_risk",
+            "count": 332
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 636122,
+        "filtered_length": 630017,
+        "removed_ratio": 0.96,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.86486486486486,
+      "confidence": 0.07863459868604582,
+      "overall_score": 49.86486486486486,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 43.0,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": -0.002702702702702675,
+        "risk_adjusted_signal": -0.01817806277164021,
+        "expected_return_annualized": -0.00513878743608468,
+        "signal_sharpe_ratio": -0.000342585829072312,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": -0.01817806277164021,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": -0.01817806277164021,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.14,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": -0.01817806277164021,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": -0.002702702702702675
+      },
+      "risk_adjusted_signal": -0.01817806277164021,
+      "expected_return": -5.13878743608468e-05,
+      "signal_sharpe": -0.000342585829072312,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 49.86486486486486,
+    "confidence": 0.07863459868604582,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:19:30.308338",
+  "filing_date": "2025-02-25",
+  "filing_filename": "2025-02-25-10k-AMT.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

@@ -1,0 +1,889 @@
+{
+  "ticker": "FCX",
+  "analysis": {
+    "ticker": "FCX",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 33.02134032197679,
+        "financial_sentiment": -0.07692307692307693,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "The following discussions include forward-looking statements that are not guarantees of future performance and “Risk Factors” and “Cautionary Statement” in MD&A for further discussion).",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 96302
+        },
+        {
+          "statement": "The following discussions include forward-looking statements that are not guarantees of future performance and “Risk Factors” and “Cautionary Statement” in MD&A for further discussion).",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 96356
+        },
+        {
+          "statement": "We believe that we have a high-quality portfolio of long-lived copper assets positioned to generate long-term value, and we remain focused on executing our operating and investment plans.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 97639
+        },
+        {
+          "statement": "ur leaching processes on a larger scale and are testing new innovative technology applications that we believe have the potential for significant increases in recoverable metal from leach stockpiles beyond the current run rate.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 99072
+        },
+        {
+          "statement": "We believe we benefit from significant copper reserves and resources with embedded growth options, an experienced team and exposure to markets with a favorable fundamental outlook.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 99200
+        },
+        {
+          "statement": "We believe our operations follow applicable laws and regulations in all material respects, and we have internal company policies that in some instances go beyond compliance with such laws and regulations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 116404
+        },
+        {
+          "statement": "4 billion in 2022, and we expect to incur approximately $0.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 117078
+        },
+        {
+          "statement": "used to calculate cleanup levels at state and federal remediation sites and may lead to regulatory guidance, rulemaking and other regulatory activities.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 122047
+        },
+        {
+          "statement": "We are working with state agencies to understand possible ramifications of this guidance to our projects.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 122181
+        },
+        {
+          "statement": "with state agencies to understand possible ramifications of this guidance to our projects.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 122216
+        },
+        {
+          "statement": "losures, other climate change regulatory programs or future legislative action that may be enacted, we anticipate that we will dedicate more resources and incur more costs to comply and remediate in response to legislative or regulatory changes.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 130252
+        },
+        {
+          "statement": "We take this obligation seriously in all aspects of our business, and we expect the same of our business partners.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 133087
+        },
+        {
+          "statement": "r 2024 estimates, we ranked third among those producers for the year 2024, with approximately 6% of estimated total worldwide mined copper production based on net equity ownership.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 133457
+        },
+        {
+          "statement": "We believe our competitive position is based on the size, quality and grade of our ore bodies and our ability to manage costs compared with other producers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 133538
+        },
+        {
+          "statement": "We believe we have the financial capacity to meet current estimated lifecycle costs, including estimated closure, post-closure and reclamation obligations associated with our tailings storage facilities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 136652
+        },
+        {
+          "statement": "We believe the Bagdad operation has sufficient water sources to support current operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 145783
+        },
+        {
+          "statement": "Subsequent sloughing of material into the pit has filled it back to an elevation estimated to be 900 meters above sea level.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 153172
+        },
+        {
+          "statement": "We believe the Miami operation has sufficient water sources to support current operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 153564
+        },
+        {
+          "statement": "We believe the Chino operation has sufficient water sources to support current operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 155612
+        },
+        {
+          "statement": "We believe the Tyrone operation has sufficient water sources to support current operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 157330
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Service (IRS) issued proposed regulations that provide guidance on the application of CAMT,",
+            "position": 284054
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue Service (IRS) issued proposed regulations that provide guidance on the application of the CAMT,",
+            "position": 430316
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue adjustments, primarily for pricing on prior period open sales— — — 0.01",
+            "position": 471781
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue adjustments, primarily for pricing onprior period open sales0.03",
+            "position": 478730
+          },
+          {
+            "metric": "revenue",
+            "context": "Revenue adjustments, primarily for pricing onprior period open sales0.01",
+            "position": 490433
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings; mineral reserve and mineral resource estimates; final resolution of settlements associated with ongoing legal and environmental proceedings; debt repurchases; and the ongoing implementation ",
+            "position": 257220
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings or capital;•Changes in and differing interpretations of the host country’s laws, regulations and policies (which may be applied retroactively), including, but not limited to, those relating t",
+            "position": 285837
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings each period, using the period-end forward prices,",
+            "position": 450596
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings from our foreign subsidiaries,",
+            "position": 507382
+          },
+          {
+            "metric": "profit",
+            "context": "Profit per Pound of Copper and MolybdenumThe following table summarizes unit net cash costs and gross profit per pound at our North America copper mines for the two years ended December 31, 2024",
+            "position": 470754
+          },
+          {
+            "metric": "profit",
+            "context": "profit per pound$0.65",
+            "position": 471874
+          },
+          {
+            "metric": "profit",
+            "context": "Profit per Pound of CopperThe following table summarizes unit net cash costs and gross profit per pound of copper at our South America operations for the two years ended December 31, 2024",
+            "position": 477619
+          },
+          {
+            "metric": "profit",
+            "context": "profit per pound$1.27",
+            "position": 478824
+          },
+          {
+            "metric": "profit",
+            "context": "Profit per Pound of Copper and per Ounce of GoldThe following table summarizes the unit net cash (credits) costs and gross profit per pound of copper and per ounce of gold at our Indonesia mining oper",
+            "position": 489268
+          },
+          {
+            "metric": "margin",
+            "context": "margin) and (ii) an additional ad valorem royalty tax based on 1",
+            "position": 651718
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income totaling $21 million ($(3) million to net income attributable to common stock or less than $0.01",
+            "position": 446259
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income of $0.8",
+            "position": 460175
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income totaling $21 million ($(3) million to net income attributable to common stock) in 2024 and $64 million ($37 million to net income attributable to common stock) in 2023",
+            "position": 499814
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income totaled $181 million ($60 million to net income attributable to common stock) at December 31, 2024",
+            "position": 500099
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income 6,864 6,225 7,037 Interest expense, net(319)(515)(560)Net gain on early extinguishment of debt— 10 31 Other income, net362 286 207 Income before income taxes and equity in affiliated ",
+            "position": 560737
+          },
+          {
+            "metric": "net income",
+            "context": "net income,",
+            "position": 283260
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to common stock totaled $1.9",
+            "position": 415044
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to common stock), and a 10% decrease in copper reserves would increase DD&A expense by approximately $137 million (approximately $53",
+            "position": 440858
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to common stockb,c$1,889 d$1,848 eDiluted net income per share attributable to common stockb,c$1.30",
+            "position": 445198
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to common stock or $0.01",
+            "position": 445855
+          },
+          {
+            "metric": "assets",
+            "context": "assets with significant proven and probable mineral reserves of copper,",
+            "position": 96643
+          },
+          {
+            "metric": "assets",
+            "context": "assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in North America and South America,",
+            "position": 96821
+          },
+          {
+            "metric": "assets",
+            "context": "assets positioned to generate long-term value,",
+            "position": 97709
+          },
+          {
+            "metric": "assets",
+            "context": "Assets Office, plus 151 acres of owned property, and 1,065",
+            "position": 165995
+          },
+          {
+            "metric": "assets",
+            "context": "assets, may depress the price of our common stock, and may have a material adverse effect on our ability to comply with financial and other covenants in our debt agreements, service our debt and meet ",
+            "position": 262823
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 282853
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, any of which may adversely affect our reputation, business, prospects,",
+            "position": 304607
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for contingencies be recorded when it is probable that obligations have been incurred,",
+            "position": 432775
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities attributed to the Comprehensive Environmental Response, Compensation, and Liability Act of 1980",
+            "position": 433073
+          },
+          {
+            "metric": "equity",
+            "context": "equity effective June 30, 2024, increasing PT-FI’s ownership in PT Smelting to 66% from 39.5",
+            "position": 185575
+          },
+          {
+            "metric": "equity",
+            "context": "equity,",
+            "position": 196947
+          },
+          {
+            "metric": "equity",
+            "context": "equity intereste70.2",
+            "position": 224652
+          },
+          {
+            "metric": "equity",
+            "context": "equity interest mineral reserves represent estimated consolidated metal quantities further reduced for noncontrolling interest ownership (refer to Note 2",
+            "position": 225797
+          },
+          {
+            "metric": "equity",
+            "context": "equity interestd8,207 3,708",
+            "position": 227865
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.10 ",
+            "position": 93865
+          },
+          {
+            "text": "$4.15 ",
+            "position": 99465
+          },
+          {
+            "text": "$3.67 ",
+            "position": 99504
+          },
+          {
+            "text": "$4.92 ",
+            "position": 99533
+          },
+          {
+            "text": "$3.95 ",
+            "position": 99564
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 116638
+          },
+          {
+            "text": "$3.7 billion",
+            "position": 116728
+          },
+          {
+            "text": "$0.6 billion",
+            "position": 117005
+          },
+          {
+            "text": "$0.5 billion",
+            "position": 117027
+          },
+          {
+            "text": "$0.4 billion",
+            "position": 117052
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 140260
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 143659
+          },
+          {
+            "text": "$3.5 billion",
+            "position": 144422
+          },
+          {
+            "text": "$3.50 ",
+            "position": 144651
+          },
+          {
+            "text": "$4.00 ",
+            "position": 144660
+          },
+          {
+            "text": "$1.7 billion",
+            "position": 147857
+          },
+          {
+            "text": "$0.9 billion",
+            "position": 150588
+          },
+          {
+            "text": "$13 million",
+            "position": 152736
+          },
+          {
+            "text": "$0.1 billion",
+            "position": 156677
+          },
+          {
+            "text": "$1.4 billion",
+            "position": 158562
+          },
+          {
+            "text": "$0.3 billion",
+            "position": 160859
+          },
+          {
+            "text": "$210 million",
+            "position": 162426
+          },
+          {
+            "text": "$5.8 billion",
+            "position": 165047
+          },
+          {
+            "text": "$0.8 billion",
+            "position": 168383
+          },
+          {
+            "text": "$21.1 billion",
+            "position": 175708
+          },
+          {
+            "text": "$1 billion",
+            "position": 177201
+          },
+          {
+            "text": "$4 billion",
+            "position": 181878
+          },
+          {
+            "text": "$100 million",
+            "position": 184922
+          },
+          {
+            "text": "$254 million",
+            "position": 185544
+          },
+          {
+            "text": "$435 million",
+            "position": 188822
+          },
+          {
+            "text": "$85 million",
+            "position": 190022
+          },
+          {
+            "text": "$4.8 billion",
+            "position": 191878
+          },
+          {
+            "text": "$2.1 billion",
+            "position": 191902
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 192032
+          },
+          {
+            "text": "$113 million",
+            "position": 193995
+          },
+          {
+            "text": "$185 million",
+            "position": 209013
+          },
+          {
+            "text": "$8 million",
+            "position": 210775
+          },
+          {
+            "text": "$7 million",
+            "position": 210812
+          },
+          {
+            "text": "$1 million",
+            "position": 211396
+          },
+          {
+            "text": "$141 million",
+            "position": 212919
+          },
+          {
+            "text": "$123 million",
+            "position": 212944
+          },
+          {
+            "text": "$49 million",
+            "position": 213661
+          },
+          {
+            "text": "$51 million",
+            "position": 213682
+          },
+          {
+            "text": "$50 million",
+            "position": 213706
+          },
+          {
+            "text": "$24 million",
+            "position": 215381
+          },
+          {
+            "text": "$25 million",
+            "position": 215405
+          },
+          {
+            "text": "$4.21 ",
+            "position": 216696
+          },
+          {
+            "text": "$3.85 ",
+            "position": 216702
+          },
+          {
+            "text": "$3.90 ",
+            "position": 216708
+          },
+          {
+            "text": "$2,418 ",
+            "position": 217037
+          }
+        ],
+        "percentages": [
+          {
+            "text": "72%",
+            "value": 72.0,
+            "position": 100213
+          },
+          {
+            "text": "55.08%",
+            "value": 55.08,
+            "position": 100358
+          },
+          {
+            "text": "53.56%",
+            "value": 53.56,
+            "position": 100398
+          },
+          {
+            "text": "43 %",
+            "value": 43.0,
+            "position": 100660
+          },
+          {
+            "text": "3 %",
+            "value": 3.0,
+            "position": 100664
+          },
+          {
+            "text": "79 %",
+            "value": 79.0,
+            "position": 100667
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 100710
+          },
+          {
+            "text": "61%",
+            "value": 61.0,
+            "position": 100766
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 100907
+          },
+          {
+            "text": "29 %",
+            "value": 29.0,
+            "position": 102035
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 102039
+          },
+          {
+            "text": "75 %",
+            "value": 75.0,
+            "position": 102042
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 102142
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 102244
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 102421
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 103529
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 103549
+          },
+          {
+            "text": "21%",
+            "value": 21.0,
+            "position": 103574
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 103596
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 103627
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 104205
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 105577
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 105589
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 105610
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 105698
+          },
+          {
+            "text": "66%",
+            "value": 66.0,
+            "position": 105838
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 106428
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 106477
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 106846
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 106853
+          },
+          {
+            "text": "99.99%",
+            "value": 99.99,
+            "position": 108117
+          },
+          {
+            "text": "99.5%",
+            "value": 99.5,
+            "position": 108554
+          },
+          {
+            "text": "26%",
+            "value": 26.0,
+            "position": 110070
+          },
+          {
+            "text": "56%",
+            "value": 56.0,
+            "position": 111808
+          },
+          {
+            "text": "44%",
+            "value": 44.0,
+            "position": 111856
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 133276
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 133451
+          },
+          {
+            "text": "28%",
+            "value": 28.0,
+            "position": 138330
+          },
+          {
+            "text": "44.92%",
+            "value": 44.92,
+            "position": 162526
+          },
+          {
+            "text": "21.0%",
+            "value": 21.0,
+            "position": 162612
+          },
+          {
+            "text": "19.58%",
+            "value": 19.58,
+            "position": 162659
+          },
+          {
+            "text": "4.34%",
+            "value": 4.34,
+            "position": 162763
+          },
+          {
+            "text": "51%",
+            "value": 51.0,
+            "position": 167105
+          },
+          {
+            "text": "49%",
+            "value": 49.0,
+            "position": 167158
+          },
+          {
+            "text": "48.76%",
+            "value": 48.76,
+            "position": 170782
+          },
+          {
+            "text": "51.24%",
+            "value": 51.24,
+            "position": 170832
+          },
+          {
+            "text": "7.5%",
+            "value": 7.5,
+            "position": 174650
+          },
+          {
+            "text": "39.5%",
+            "value": 39.5,
+            "position": 185663
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 187827
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 187862
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 206
+          },
+          {
+            "category": "operational_risk",
+            "count": 355
+          },
+          {
+            "category": "financial_risk",
+            "count": 458
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 157
+          },
+          {
+            "category": "technology_risk",
+            "count": 226
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 798778,
+        "filtered_length": 783500,
+        "removed_ratio": 1.91,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.856548856548855,
+      "confidence": 0.6662111525336576,
+      "overall_score": 51.143451143451145,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.15384615384615,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02286902286902287,
+        "risk_adjusted_signal": 0.15381437729849565,
+        "expected_return_annualized": 0.04348204753610158,
+        "signal_sharpe_ratio": 0.002898803169073439,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.15381437729849565,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.07692307692307693,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.15381437729849565,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02286902286902287
+      },
+      "risk_adjusted_signal": 0.15381437729849565,
+      "expected_return": 0.00043482047536101584,
+      "signal_sharpe": 0.002898803169073439,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.143451143451145,
+    "confidence": 0.6662111525336576,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:48.401056",
+  "filing_date": "2025-02-14",
+  "filing_filename": "2025-02-14-10k-FCX.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

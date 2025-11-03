@@ -8,9 +8,17 @@ const Slider = React.forwardRef(({ className = '', value, defaultValue, onValueC
 
   const handleChange = (e) => {
     const newValue = parseFloat(e.target.value);
-    setValue(newValue);
-    if (onValueChange) {
-      onValueChange(newValue);
+    if (isControlled) {
+      // For controlled components, only call onValueChange once
+      if (onValueChange) {
+        onValueChange(newValue);
+      }
+    } else {
+      // For uncontrolled components, update internal state
+      setInternalValue(newValue);
+      if (onValueChange) {
+        onValueChange(newValue);
+      }
     }
   };
 

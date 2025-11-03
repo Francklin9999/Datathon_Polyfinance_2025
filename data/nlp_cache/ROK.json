@@ -1,0 +1,939 @@
+{
+  "ticker": "ROK",
+  "analysis": {
+    "ticker": "ROK",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 28.453796889295518,
+        "financial_sentiment": -0.061855670103092786,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "ject”, “plan”, “expect”, “anticipate”, “will”, “intend”, and other similar expressions may identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 54624
+        },
+        {
+          "statement": "te”, “will”, “intend”, and other similar expressions may identify forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 54658
+        },
+        {
+          "statement": "We undertake no obligation to update or revise any forward-looking statement, whether as a result of new information, future events, or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 54794
+        },
+        {
+          "statement": "We believe that none of these claims or requests will have a material adverse effect on our financial condition.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 60481
+        },
+        {
+          "statement": "We believe that risk-taking is an inherent aspect of the pursuit of our strategy.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 62893
+        },
+        {
+          "statement": "sely affect us and cause our results to vary materially from recent results or from our anticipated future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 64035
+        },
+        {
+          "statement": "We expect the level of competition to remain high in the future, which could limit our ability to maintain or increase our market share or profitability.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 68752
+        },
+        {
+          "statement": "We believe these measures reduce, but cannot eliminate, the risk of a cybersecurity incident internally or externally.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 73074
+        },
+        {
+          "statement": "There is a risk that these initiatives will not result in the projected savings that we anticipate and could negatively impact our business and financial results.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 77540
+        },
+        {
+          "statement": "We estimate the future asbestos litigation-related costs that we expect to incur over the next several years.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 91343
+        },
+        {
+          "statement": "l Sales Information for a reconciliation of reported sales to organic sales and a discussion of why we believe this non-GAAP measure is useful to investors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 105579
+        },
+        {
+          "statement": "f Income before income taxes to total segment operating earnings and margin and a discussion of why we believe these non-GAAP measures are useful to investors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 105795
+        },
+        {
+          "statement": "justed income, adjusted EPS, and adjusted effective tax rate, respectively, and a discussion of why we believe these non-GAAP measures are useful to investors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 106150
+        },
+        {
+          "statement": "a reconciliation of Cash provided by operating activities to free cash flow and a discussion of why we believe this non-GAAP measure is useful to investors.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 106338
+        },
+        {
+          "statement": "With our focus on innovation and growth, we expect to continue to expand our addressed market over our long-term planning horizon.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 112495
+        },
+        {
+          "statement": "We believe that increased demand for consumer products in our addressed markets will lead to manufacturing investment and provide us with additional growth opportunities in the future.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 112914
+        },
+        {
+          "statement": "We believe these acquisitions and venture investments will help our served market and deliver value to our customers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 114753
+        },
+        {
+          "statement": "We believe that face to face interaction is critical for our culture, innovation, people development, and engagement, and that flexible, virtual work arrangements help employees be more productive and engaged.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 117696
+        },
+        {
+          "statement": "We believe this is consistent with market trends experienced broadly across labor markets in fiscal 2024.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 118551
+        },
+        {
+          "statement": "We believe total segment operating earnings and total segment operating margin are useful to investors as measures of operating performance.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 125624
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Officer since February 1, 2021; previously Executive Vice President of Worldwide Field Operations at Veritas (provider of information management services) (2017-2020)61",
+            "position": 100193
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue;•add 1",
+            "position": 109146
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue at September 30, 2024, grew approximately 16 percent compared to September 30, 2023",
+            "position": 126389
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue at September 30, 2024 grew approximately 14 percent compared to September 30, 2023",
+            "position": 126507
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue target on our Clearpath Robotics,",
+            "position": 133022
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (1) Intelligent Devices (e)$700.0",
+            "position": 123773
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings (2) (h)1,595.3",
+            "position": 123934
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in the Software & Control and Intelligent Devices operating segments and the fair value adjustments recognized in the prior year in connection with our previous investment in PTC,",
+            "position": 128384
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings decreased to $1,595.3",
+            "position": 128751
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings decreased 15",
+            "position": 132662
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Shifting (BEPS) Pillar Two, that, among other things, ensures that income earned in each jurisdiction that qualifying multinational enterprises operate in is subject to a minimum corporate inco",
+            "position": 87261
+          },
+          {
+            "metric": "profit",
+            "context": "profit margin after any rework that would be required before the asset could be directed for another use,",
+            "position": 217157
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA-to-interest ratio of at least 3.0",
+            "position": 151705
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins,",
+            "position": 317809
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA margins, and selection of the discount rate and market multiple for the Sensia reporting unit included the following, among others: •We tested the effectiveness of controls over management’s go",
+            "position": 318233
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS, and Adjusted Effective Tax Rate Reconciliation for a reconciliation of Net income attributable to Rockwell Automation, diluted EPS, and effective tax rate to adjusted income, adjusted EPS, and ad",
+            "position": 105885
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS$8.28",
+            "position": 124573
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (3)$9.71",
+            "position": 124604
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS,",
+            "position": 126075
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS and Adjusted EPSFiscal 2024 Net income attributable to Rockwell Automation was $952.5",
+            "position": 131167
+          },
+          {
+            "metric": "margin",
+            "context": "margin (i/d)13.3",
+            "position": 124699
+          },
+          {
+            "metric": "margin",
+            "context": "margin (e/a)18.4",
+            "position": 124767
+          },
+          {
+            "metric": "margin",
+            "context": "margin (f/b)24.2",
+            "position": 124834
+          },
+          {
+            "metric": "margin",
+            "context": "margin (g/c)16.1",
+            "position": 124901
+          },
+          {
+            "metric": "margin",
+            "context": "margin (2) (h/d)19.3",
+            "position": 124953
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow, which is a non-GAAP financial measure (in millions): Year Ended September 30, 202420232022Cash provided by operating activities$863.8",
+            "position": 143798
+          },
+          {
+            "metric": "free cash flow",
+            "context": "Free cash flow$639.1",
+            "position": 144005
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow excludes the operating cash flows and capital expenditures related to our discontinued operations,",
+            "position": 144374
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow provides useful information to investors regarding our ability to generate cash from business operations that is available for acquisitions and other investments, service of debt princi",
+            "position": 144669
+          },
+          {
+            "metric": "free cash flow",
+            "context": "free cash flow, as defined, as one measure to monitor and evaluate our performance,",
+            "position": 144915
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Rockwell Automation, diluted EPS, and effective tax rate to adjusted income, adjusted EPS, and adjusted effective tax rate, respectively,",
+            "position": 105961
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Rockwell Automation$952.5",
+            "position": 124496
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Rockwell Automation was $952.5",
+            "position": 131199
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Rockwell Automation, diluted EPS,",
+            "position": 138221
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Rockwell Automation, diluted EPS, and effective tax rate to Adjusted Income, Adjusted EPS, and Adjusted Effective Tax Rate, respectively (in millions, except per share amoun",
+            "position": 138361
+          },
+          {
+            "metric": "assets",
+            "context": "assets, mortality assumptions,",
+            "position": 83431
+          },
+          {
+            "metric": "assets",
+            "context": "assets of our Sensia joint venture and tax effects of the related goodwill impairment totaling $33.1",
+            "position": 129214
+          },
+          {
+            "metric": "assets",
+            "context": "assets, changes in discount rate assumptions,",
+            "position": 149436
+          },
+          {
+            "metric": "assets",
+            "context": "assets were valued using income approaches,",
+            "position": 166643
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities without offsetting foreign currency forward exchange contracts, a 10 percent adverse change in the underlying foreign currency exchange rates would reduce our pre-tax income by ",
+            "position": 170255
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 80997
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, increased interest expense, restructuring charges,",
+            "position": 86482
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities; however,",
+            "position": 93174
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities of Section 18 of the Exchange Act, and will not be deemed to be incorporated by reference into any filing of the Company under the Securities Act of 1933, as amended, or the Exchange Act,",
+            "position": 104134
+          },
+          {
+            "metric": "equity",
+            "context": "equity Common stock ($1.00",
+            "position": 174939
+          },
+          {
+            "metric": "equity",
+            "context": "equity attributable to Rockwell Automation,",
+            "position": 175242
+          },
+          {
+            "metric": "equity",
+            "context": "EQUITY(in millions, except per share amounts) Common stockAdditional paid-in capitalRetained earningsAccumulated other comprehensive lossCommon stock in treasury, at costTotal attributable to Rockwell",
+            "position": 179850
+          },
+          {
+            "metric": "equity",
+            "context": "Equity securities that do not have a readily determinable fair value,",
+            "position": 187056
+          },
+          {
+            "metric": "equity",
+            "context": "Equity securities (other)105.9",
+            "position": 244814
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$1.00 ",
+            "position": 53003
+          },
+          {
+            "text": "$33.2 billion",
+            "position": 53577
+          },
+          {
+            "text": "$1 ",
+            "position": 53651
+          },
+          {
+            "text": "$272.95 ",
+            "position": 103199
+          },
+          {
+            "text": "$455,330,732 ",
+            "position": 103214
+          },
+          {
+            "text": "$263.98 ",
+            "position": 103351
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 103689
+          },
+          {
+            "text": "$100 ",
+            "position": 104846
+          },
+          {
+            "text": "$100.00 ",
+            "position": 105148
+          },
+          {
+            "text": "$136.66 ",
+            "position": 105156
+          },
+          {
+            "text": "$185.04 ",
+            "position": 105164
+          },
+          {
+            "text": "$137.74 ",
+            "position": 105172
+          },
+          {
+            "text": "$186.12 ",
+            "position": 105180
+          },
+          {
+            "text": "$178.10 ",
+            "position": 105188
+          },
+          {
+            "text": "$130 billion",
+            "position": 112440
+          },
+          {
+            "text": "$736.8 ",
+            "position": 123102
+          },
+          {
+            "text": "$1,464.1 ",
+            "position": 123109
+          },
+          {
+            "text": "$3,090.6 ",
+            "position": 123195
+          },
+          {
+            "text": "$4,108.9 ",
+            "position": 123204
+          },
+          {
+            "text": "$3,804.1 ",
+            "position": 123594
+          },
+          {
+            "text": "$4,098.2 ",
+            "position": 123603
+          },
+          {
+            "text": "$3,544.6 ",
+            "position": 123612
+          },
+          {
+            "text": "$8,264.2 ",
+            "position": 123728
+          },
+          {
+            "text": "$9,058.0 ",
+            "position": 123737
+          },
+          {
+            "text": "$7,760.4 ",
+            "position": 123746
+          },
+          {
+            "text": "$700.0 ",
+            "position": 123809
+          },
+          {
+            "text": "$828.2 ",
+            "position": 123816
+          },
+          {
+            "text": "$717.6 ",
+            "position": 123823
+          },
+          {
+            "text": "$952.5 ",
+            "position": 124542
+          },
+          {
+            "text": "$1,387.4 ",
+            "position": 124549
+          },
+          {
+            "text": "$932.2 ",
+            "position": 124558
+          },
+          {
+            "text": "$8.28 ",
+            "position": 124576
+          },
+          {
+            "text": "$11.95 ",
+            "position": 124582
+          },
+          {
+            "text": "$7.97 ",
+            "position": 124589
+          },
+          {
+            "text": "$9.71 ",
+            "position": 124611
+          },
+          {
+            "text": "$12.12 ",
+            "position": 124617
+          },
+          {
+            "text": "$9.49 ",
+            "position": 124624
+          },
+          {
+            "text": "$5,052.8 ",
+            "position": 127396
+          },
+          {
+            "text": "$135.8 million",
+            "position": 127818
+          },
+          {
+            "text": "$127.9 million",
+            "position": 127860
+          },
+          {
+            "text": "$97.4 million",
+            "position": 127939
+          },
+          {
+            "text": "$1,099.1 million",
+            "position": 128270
+          },
+          {
+            "text": "$1,608.5 million",
+            "position": 128300
+          },
+          {
+            "text": "$157.5 million",
+            "position": 128607
+          },
+          {
+            "text": "$1,595.3 million",
+            "position": 128773
+          },
+          {
+            "text": "$1,929.8 million",
+            "position": 128795
+          },
+          {
+            "text": "$33.1 million",
+            "position": 129309
+          },
+          {
+            "text": "$5.2 million",
+            "position": 130911
+          },
+          {
+            "text": "$109.4 million",
+            "position": 130944
+          },
+          {
+            "text": "$93.3 million",
+            "position": 131010
+          }
+        ],
+        "percentages": [
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 87485
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 109159
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 119267
+          },
+          {
+            "text": "68%",
+            "value": 68.0,
+            "position": 119270
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 119298
+          },
+          {
+            "text": "67%",
+            "value": 67.0,
+            "position": 119301
+          },
+          {
+            "text": "27%",
+            "value": 27.0,
+            "position": 119321
+          },
+          {
+            "text": "73%",
+            "value": 73.0,
+            "position": 119324
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 119345
+          },
+          {
+            "text": "81%",
+            "value": 81.0,
+            "position": 119348
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 119377
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 119380
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 119650
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 119652
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 119655
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 119657
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 119660
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 119662
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 119687
+          },
+          {
+            "text": "11%",
+            "value": 11.0,
+            "position": 119689
+          },
+          {
+            "text": "69%",
+            "value": 69.0,
+            "position": 119694
+          },
+          {
+            "text": "74%",
+            "value": 74.0,
+            "position": 119722
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 119747
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 119783
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 119786
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 119789
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 119796
+          },
+          {
+            "text": "13.3 %",
+            "value": 13.3,
+            "position": 124711
+          },
+          {
+            "text": "17.8 %",
+            "value": 17.8,
+            "position": 124717
+          },
+          {
+            "text": "13.8 %",
+            "value": 13.8,
+            "position": 124723
+          },
+          {
+            "text": "18.4 %",
+            "value": 18.4,
+            "position": 124779
+          },
+          {
+            "text": "20.2 %",
+            "value": 20.2,
+            "position": 124785
+          },
+          {
+            "text": "24.2 %",
+            "value": 24.2,
+            "position": 124846
+          },
+          {
+            "text": "33.0 %",
+            "value": 33.0,
+            "position": 124852
+          },
+          {
+            "text": "28.8 %",
+            "value": 28.8,
+            "position": 124858
+          },
+          {
+            "text": "16.1 %",
+            "value": 16.1,
+            "position": 124913
+          },
+          {
+            "text": "7.2 %",
+            "value": 7.2,
+            "position": 124919
+          },
+          {
+            "text": "8.3 %",
+            "value": 8.3,
+            "position": 124924
+          },
+          {
+            "text": "19.3 %",
+            "value": 19.3,
+            "position": 124969
+          },
+          {
+            "text": "21.3 %",
+            "value": 21.3,
+            "position": 124975
+          },
+          {
+            "text": "19.9 %",
+            "value": 19.9,
+            "position": 124981
+          },
+          {
+            "text": "5 %",
+            "value": 5.0,
+            "position": 127510
+          },
+          {
+            "text": "4 %",
+            "value": 4.0,
+            "position": 127513
+          },
+          {
+            "text": "13.3%",
+            "value": 13.3,
+            "position": 131509
+          },
+          {
+            "text": "17.8%",
+            "value": 17.8,
+            "position": 131527
+          },
+          {
+            "text": "19.3%",
+            "value": 19.3,
+            "position": 132073
+          },
+          {
+            "text": "21.3%",
+            "value": 21.3,
+            "position": 132091
+          },
+          {
+            "text": "20.5 %",
+            "value": 20.5,
+            "position": 140067
+          },
+          {
+            "text": "14.4 %",
+            "value": 14.4,
+            "position": 140073
+          },
+          {
+            "text": "0.3 %",
+            "value": 0.3,
+            "position": 140161
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 120
+          },
+          {
+            "category": "operational_risk",
+            "count": 76
+          },
+          {
+            "category": "financial_risk",
+            "count": 352
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 53
+          },
+          {
+            "category": "technology_risk",
+            "count": 145
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 358961,
+        "filtered_length": 346433,
+        "removed_ratio": 3.49,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.55112844803566,
+      "confidence": 0.844322035794369,
+      "overall_score": 51.44887155196434,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 46.90721649484536,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.02897743103928674,
+        "risk_adjusted_signal": 0.19489881734542297,
+        "expected_return_annualized": 0.05509627766523842,
+        "signal_sharpe_ratio": 0.003673085177682562,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.19489881734542297,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.19489881734542297,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.061855670103092786,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.19489881734542297,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.02897743103928674
+      },
+      "risk_adjusted_signal": 0.19489881734542297,
+      "expected_return": 0.0005509627766523842,
+      "signal_sharpe": 0.003673085177682562,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.44887155196434,
+    "confidence": 0.844322035794369,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:31:48.545020",
+  "filing_date": "2024-11-12",
+  "filing_filename": "2024-11-12-10k-ROK.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

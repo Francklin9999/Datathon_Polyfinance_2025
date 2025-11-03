@@ -1,0 +1,936 @@
+{
+  "ticker": "TKO",
+  "analysis": {
+    "ticker": "TKO",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 48.26941066417213,
+        "financial_sentiment": -0.10204081632653061,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "d our objectives for future operations; and our competitive market position within our industry are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29603
+        },
+        {
+          "statement": "industry are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29690
+        },
+        {
+          "statement": "are based on our current expectations and projections about future events and financial trends that we believe may affect our business, financial condition, and results of operations.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 30232
+        },
+        {
+          "statement": "ition and liquidity and the development of the industry in which we operate are consistent with the forward-looking statements contained in this Annual Report, those results or developments may not be indicative of results or developments in subsequent periods.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 30813
+        },
+        {
+          "statement": "rt and the documents that we reference herein completely and with the understanding that our actual future results may be materially different from what we expect.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 31107
+        },
+        {
+          "statement": "ely and with the understanding that our actual future results may be materially different from what we expect.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 31160
+        },
+        {
+          "statement": "We qualify all of our forward-looking statements by these cautionary statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 31193
+        },
+        {
+          "statement": "Except as required by applicable law, we have no obligation to update or revise any forward-looking statements contained herein, whether as a result of any new information, future events, changed circumstances or otherwise.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 31336
+        },
+        {
+          "statement": "d manages valuable sports and entertainment intellectual property, positioning the business in what we believe is one of the most attractive parts of the fast-growing global sports and entertainment ecosystem.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 42225
+        },
+        {
+          "statement": "We believe TKO’s companies are well-positioned among sports, media and entertainment peers given their large, diverse and global fanbases and the year-round nature of their content.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 42585
+        },
+        {
+          "statement": "We believe our companies are well positioned for the future of media.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 45158
+        },
+        {
+          "statement": "We believe our leadership team’s proven track record of performance positions us to successfully execute organic and inorganic growth opportunities at TKO.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 46478
+        },
+        {
+          "statement": "We expect to close this acquisition in the first quarter of 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 46968
+        },
+        {
+          "statement": "With complete ownership and control over our properties' production, we believe our programming and format provide compelling sports and entertainment opportunities for advertisers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 53747
+        },
+        {
+          "statement": "Growth Vectors We believe TKO is well-positioned to benefit from secular tailwinds in both sports and entertainment.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 56541
+        },
+        {
+          "statement": "TKO drives economic benefits to the cities that host WWE and UFC events, which we believe will lead to growth in site fees as jurisdictions vie to bring premium events to their market.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 57607
+        },
+        {
+          "statement": "Live Events We believe we can grow Live Events revenue by increasing ticket sales and expanding premium VIP offerings to drive higher per event revenues to drive monetization across events.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 59120
+        },
+        {
+          "statement": "our partnership with Endeavor’s On Location business, which curates premium live event experiences, we plan to bring sports and lifestyle events even closer to consumers.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 59517
+        },
+        {
+          "statement": "Consequently, as the popularity of TKO live events grows, we expect to have a greater ability to secure site fees from local governments or tourism organizations in certain jurisdictions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 60638
+        },
+        {
+          "statement": "We believe the differentiated fanbases of our companies make TKO a valued partner for sponsors looking to access this attractive demographic.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 61402
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue from discretionary and corporate spending on events, such as corporate sponsorships and advertising, is subject to many factors, including many that are beyond our control, such as general mac",
+            "position": 37343
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue base provides our business with good visibility into revenue growth,",
+            "position": 45680
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue through the sale of tickets, site fees,",
+            "position": 52346
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from the sale of in-venue and in-broadcast advertising assets,",
+            "position": 53434
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from discretionary and corporate spending on events, such as corporate sponsorships and advertising, is subject to many factors, including many that are beyond our control,",
+            "position": 78453
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings of TKO OpCo,",
+            "position": 91050
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings; •adverse tax consequences; •less sophisticated legal systems in some foreign countries, which could impair our ability to enforce our contractual rights in those countries; •limitations on t",
+            "position": 158023
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, cash flow requirements,",
+            "position": 225929
+          },
+          {
+            "metric": "profit",
+            "context": "profit margins, terminal value growth rates,",
+            "position": 317378
+          },
+          {
+            "metric": "profit",
+            "context": "profit units — — (2,877 ) Payments for financing costs (8,260 ) (286 ) — Taxes paid related to net settlement upon vesting of equity awards (5,657 ) — — Distributions to members (67,256 ) (296,587 ) (",
+            "position": 371314
+          },
+          {
+            "metric": "profit",
+            "context": "profit business entities, the Company accounts for content production incentives by analogy to International Accounting Standard (\"IAS\") 20,",
+            "position": 399393
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA is indicative of operational performance and ongoing profitability, and Adjusted EBITDA is used to evaluate the operating performance of our segments and for planning and forecasting purposes,",
+            "position": 282805
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA for each of our segments for the years ended December 31, 2024 and 2023: Year Ended December 31, 2024 2023 Revenue: UFC $ 1,406.2",
+            "position": 283332
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA: UFC $ 801.0",
+            "position": 283574
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA $ 1,251.2",
+            "position": 283661
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA $ 801.0",
+            "position": 284126
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS”) is computed in accordance with ASC 260,",
+            "position": 407056
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS includes the determinants of basic EPS and, in addition, reflects the dilutive effect of additional shares of TKO Class A common stock issuable in exchange for redemption of certain non-controllin",
+            "position": 407482
+          },
+          {
+            "metric": "margin",
+            "context": "margin 57 % 58 % Operating Metrics Number of events Numbered events 14 14 Fight Nights 28 29 Total events 42 43 Location of events United States 31 33 International 11 10 Total events 42 43 WWE The fo",
+            "position": 284165
+          },
+          {
+            "metric": "margin",
+            "context": "margin 49 % 43 % Operating Metrics Number of events Premium live events 13 3 Televised events 98 27 Non-televised events 65 46 Total events 176 76 Location of events United States 132 66 International",
+            "position": 284884
+          },
+          {
+            "metric": "margin",
+            "context": "margin are useful to investors as the measures eliminate the significant level of non-cash depreciation and amortization expense that results from its capital investments and intangible assets, and im",
+            "position": 287013
+          },
+          {
+            "metric": "margin",
+            "context": "margin have limitations as analytical tools,",
+            "position": 287609
+          },
+          {
+            "metric": "margin",
+            "context": "margin along with other comparative tools, together with GAAP measurements,",
+            "position": 288595
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income or attendance at our events,",
+            "position": 160682
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income 282.9",
+            "position": 274543
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income would have decreased by approximately $0.2",
+            "position": 330965
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income 282,902 446,663 544,387 Other expenses: Interest expense, net (249,115 ) (239,042 ) (139,567 ) Other income (expense), net 563 (186 ) (1,271 ) Income before income taxes and equity lo",
+            "position": 363345
+          },
+          {
+            "metric": "net income",
+            "context": "Net income 6.4",
+            "position": 274874
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to TKO Operating Company, LLC prior to the Transactions — 243.4",
+            "position": 274973
+          },
+          {
+            "metric": "net income",
+            "context": "Net income (loss) attributable to TKO Group Holdings,",
+            "position": 275061
+          },
+          {
+            "metric": "net income",
+            "context": "net income for the year ended December 31, 2024 as compared to the reported net income for the year ended December 31, 2023",
+            "position": 282345
+          },
+          {
+            "metric": "net income",
+            "context": "net income, excluding income taxes, net interest expense, depreciation and amortization, equity-based compensation, merger and acquisition costs, certain legal costs, restructuring, severance and impa",
+            "position": 286589
+          },
+          {
+            "metric": "assets",
+            "context": "assets are the TKO OpCo Units we hold in TKO OpCo and, accordingly,",
+            "position": 40712
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 53497
+          },
+          {
+            "metric": "assets",
+            "context": "assets and inventory through our innovative approach to new technology, including UFC’s high-definition LED Fight Clock and Fight Deck displays and WWE’s innovative in-ring product activations, which ",
+            "position": 54732
+          },
+          {
+            "metric": "assets",
+            "context": "assets, such as UFC and WWE,",
+            "position": 56840
+          },
+          {
+            "metric": "assets",
+            "context": "assets through innovative new sponsorship offerings, and improve sell-through,",
+            "position": 61847
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including in connection with termination of the Services Agreement; •the market price of our Class A common stock may be volatile,",
+            "position": 41522
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 88912
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities attributable to their direct or indirect ownership of TKO OpCo,",
+            "position": 194038
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, and TKO OpCo may charge us interest on any such loans in an amount up to 50",
+            "position": 195151
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities attributable to taxable periods (or portions thereof) ending on or prior to the closing of the transactions contemplated by the Transaction Agreement,",
+            "position": 233551
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of Solely for the purposes of this disclosure, shares of common stock held by As of January 31, 2025, there were 81,553,818 shares of Table of Contents DOCUMENTS INCORPOR",
+            "position": 27211
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 47 Management’s Discussion and Analysis of Financial Condition and Results of Operations 49 Item 7",
+            "position": 27682
+          },
+          {
+            "metric": "equity",
+            "context": "equity awards and assuming the full issuance of the shares underlying such awards) to acquire voting interests of TKO Group Holdings (without regard to any vesting provisions and, with respect to any ",
+            "position": 33889
+          },
+          {
+            "metric": "equity",
+            "context": "equity interests of WWE LLC to TKO OpCo in exchange for 49% of the membership interests in TKO OpCo on a fully diluted basis, and (y) issued to Endeavor OpCo and certain of Endeavor’s other subsidiari",
+            "position": 36081
+          },
+          {
+            "metric": "equity",
+            "context": "equity and cash) to the EDR Parties, who beneficially hold approximately 53.9",
+            "position": 90686
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.00001 ",
+            "position": 26689
+          },
+          {
+            "text": "$200 million",
+            "position": 57763
+          },
+          {
+            "text": "$27 million",
+            "position": 57867
+          },
+          {
+            "text": "$30 million",
+            "position": 58003
+          },
+          {
+            "text": "$335.0 million",
+            "position": 103640
+          },
+          {
+            "text": "$375.0 million",
+            "position": 103954
+          },
+          {
+            "text": "$14.6 million",
+            "position": 107171
+          },
+          {
+            "text": "$5.0 million",
+            "position": 107335
+          },
+          {
+            "text": "$19.6 million",
+            "position": 107622
+          },
+          {
+            "text": "$11.1 million",
+            "position": 109882
+          },
+          {
+            "text": "$3.5 million",
+            "position": 110063
+          },
+          {
+            "text": "$6.4 million",
+            "position": 110764
+          },
+          {
+            "text": "$2.75 billion",
+            "position": 174178
+          },
+          {
+            "text": "$205 million",
+            "position": 174287
+          },
+          {
+            "text": "$28 million",
+            "position": 177637
+          },
+          {
+            "text": "$0.7 million",
+            "position": 187610
+          },
+          {
+            "text": "$2.0 billion",
+            "position": 224087
+          },
+          {
+            "text": "$75 million",
+            "position": 225547
+          },
+          {
+            "text": "$145.32 ",
+            "position": 267261
+          },
+          {
+            "text": "$125.5 million",
+            "position": 267289
+          },
+          {
+            "text": "$100 ",
+            "position": 267665
+          },
+          {
+            "text": "$1,129.3 million",
+            "position": 275165
+          },
+          {
+            "text": "$2,804.3 million",
+            "position": 275196
+          },
+          {
+            "text": "$114.0 million",
+            "position": 275322
+          },
+          {
+            "text": "$55.1 million",
+            "position": 275383
+          },
+          {
+            "text": "$52.5 million",
+            "position": 275485
+          },
+          {
+            "text": "$8.8 million",
+            "position": 275808
+          },
+          {
+            "text": "$2.4 million",
+            "position": 276058
+          },
+          {
+            "text": "$1,398.1 million",
+            "position": 276184
+          },
+          {
+            "text": "$382.8 million",
+            "position": 276253
+          },
+          {
+            "text": "$616.0 million",
+            "position": 276399
+          },
+          {
+            "text": "$250.8 million",
+            "position": 276641
+          },
+          {
+            "text": "$83.5 million",
+            "position": 276944
+          },
+          {
+            "text": "$65.0 million",
+            "position": 277037
+          },
+          {
+            "text": "$385.3 million",
+            "position": 277163
+          },
+          {
+            "text": "$899.9 million",
+            "position": 277192
+          },
+          {
+            "text": "$46.8 million",
+            "position": 277331
+          },
+          {
+            "text": "$30.5 million",
+            "position": 277405
+          },
+          {
+            "text": "$451.9 million",
+            "position": 277765
+          },
+          {
+            "text": "$127.8 million",
+            "position": 277832
+          },
+          {
+            "text": "$280.3 million",
+            "position": 277976
+          },
+          {
+            "text": "$14.4 million",
+            "position": 278299
+          },
+          {
+            "text": "$679.6 million",
+            "position": 278694
+          },
+          {
+            "text": "$1,228.7 million",
+            "position": 278724
+          },
+          {
+            "text": "$15.5 million",
+            "position": 278887
+          },
+          {
+            "text": "$351.6 million",
+            "position": 279246
+          },
+          {
+            "text": "$134.4 million",
+            "position": 279313
+          },
+          {
+            "text": "$102.6 million",
+            "position": 279457
+          },
+          {
+            "text": "$23.4 million",
+            "position": 279549
+          },
+          {
+            "text": "$57.7 million",
+            "position": 279665
+          }
+        ],
+        "percentages": [
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 33339
+          },
+          {
+            "text": "49%",
+            "value": 49.0,
+            "position": 36137
+          },
+          {
+            "text": "51%",
+            "value": 51.0,
+            "position": 36377
+          },
+          {
+            "text": "96%",
+            "value": 96.0,
+            "position": 51492
+          },
+          {
+            "text": "93%",
+            "value": 93.0,
+            "position": 58086
+          },
+          {
+            "text": "36%",
+            "value": 36.0,
+            "position": 61152
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 61160
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 65720
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 65740
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 67020
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 67302
+          },
+          {
+            "text": "53.9%",
+            "value": 53.9,
+            "position": 90759
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 91163
+          },
+          {
+            "text": "52.5%",
+            "value": 52.5,
+            "position": 195738
+          },
+          {
+            "text": "61%",
+            "value": 61.0,
+            "position": 195875
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 196287
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 200150
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 204161
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 235894
+          },
+          {
+            "text": "67.4%",
+            "value": 67.4,
+            "position": 275186
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 275341
+          },
+          {
+            "text": "74.9%",
+            "value": 74.9,
+            "position": 277182
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 277349
+          },
+          {
+            "text": "123.8%",
+            "value": 123.8,
+            "position": 278713
+          },
+          {
+            "text": "187%",
+            "value": 187.0,
+            "position": 280110
+          },
+          {
+            "text": "138.6%",
+            "value": 138.6,
+            "position": 281067
+          },
+          {
+            "text": "4.2%",
+            "value": 4.2,
+            "position": 281352
+          },
+          {
+            "text": "57 %",
+            "value": 57.0,
+            "position": 284172
+          },
+          {
+            "text": "58 %",
+            "value": 58.0,
+            "position": 284177
+          },
+          {
+            "text": "49 %",
+            "value": 49.0,
+            "position": 284891
+          },
+          {
+            "text": "43 %",
+            "value": 43.0,
+            "position": 284896
+          },
+          {
+            "text": "111%",
+            "value": 111.0,
+            "position": 285868
+          },
+          {
+            "text": "0 %",
+            "value": 0.0,
+            "position": 290503
+          },
+          {
+            "text": "10 %",
+            "value": 10.0,
+            "position": 290507
+          },
+          {
+            "text": "45 %",
+            "value": 45.0,
+            "position": 290535
+          },
+          {
+            "text": "48 %",
+            "value": 48.0,
+            "position": 290540
+          },
+          {
+            "text": "2.25%",
+            "value": 2.25,
+            "position": 295493
+          },
+          {
+            "text": "0.00%",
+            "value": 0.0,
+            "position": 295521
+          },
+          {
+            "text": "6.77%",
+            "value": 6.77,
+            "position": 295542
+          },
+          {
+            "text": "2.75%",
+            "value": 2.75,
+            "position": 295692
+          },
+          {
+            "text": "2.00%",
+            "value": 2.0,
+            "position": 296006
+          },
+          {
+            "text": "1.62%",
+            "value": 1.62,
+            "position": 299259
+          },
+          {
+            "text": "0.88%",
+            "value": 0.88,
+            "position": 299288
+          },
+          {
+            "text": "1.70%",
+            "value": 1.7,
+            "position": 299468
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 299501
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 330804
+          },
+          {
+            "text": "3.375%",
+            "value": 3.375,
+            "position": 341052
+          },
+          {
+            "text": "51.0%",
+            "value": 51.0,
+            "position": 373776
+          },
+          {
+            "text": "49.0%",
+            "value": 49.0,
+            "position": 374060
+          },
+          {
+            "text": "47.5%",
+            "value": 47.5,
+            "position": 377945
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 167
+          },
+          {
+            "category": "operational_risk",
+            "count": 68
+          },
+          {
+            "category": "financial_risk",
+            "count": 547
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 162
+          },
+          {
+            "category": "technology_risk",
+            "count": 238
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 8.928571428571429
+        }
+      ],
+      "deduplication": {
+        "original_length": 524461,
+        "filtered_length": 512952,
+        "removed_ratio": 2.19,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.36569222283508,
+      "confidence": 0.36941447477203176,
+      "overall_score": 50.63430777716492,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 44.89795918367347,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.012686155543298383,
+        "risk_adjusted_signal": 0.08532560076484255,
+        "expected_return_annualized": 0.024120838985703816,
+        "signal_sharpe_ratio": 0.0016080559323802543,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.08532560076484255,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.08532560076484255,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.10204081632653061,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.08532560076484255,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.012686155543298383
+      },
+      "risk_adjusted_signal": 0.08532560076484255,
+      "expected_return": 0.00024120838985703814,
+      "signal_sharpe": 0.0016080559323802543,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.63430777716492,
+    "confidence": 0.36941447477203176,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:33:15.096373",
+  "filing_date": "2025-02-26",
+  "filing_filename": "2025-02-26-10k-TKO.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

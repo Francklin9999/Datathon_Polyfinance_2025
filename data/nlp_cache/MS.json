@@ -1,0 +1,934 @@
+{
+  "ticker": "MS",
+  "analysis": {
+    "ticker": "MS",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 37.94025858225591,
+        "financial_sentiment": -0.09803921568627451,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "“Quantitative and Qualitative Disclosures about Risk” and “Legal Proceedings” that may constitute “forward-looking statements” within the meaning of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 210834
+        },
+        {
+          "statement": "In addition, our management may make forward-looking statements to analysts, investors, representatives of the media and others.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 211005
+        },
+        {
+          "statement": "e forward-looking statements to analysts, investors, representatives of the media and others.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 211103
+        },
+        {
+          "statement": "Accordingly, you are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date on which they are made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 215261
+        },
+        {
+          "statement": "”CompetitionAll aspects of our businesses are highly competitive, and we expect them to remain so.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 220554
+        },
+        {
+          "statement": "We expect clients to continue to request that we provide loans or lending commitments in connection with certain investment banking activities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 223502
+        },
+        {
+          "statement": "We expect to remain subject to extensive supervision and regulation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 226304
+        },
+        {
+          "statement": ", or are operating under certain exemptions from such registration pursuant to CFTC rules and other guidance, and have certain responsibilities with respect to each pool they advise.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 247159
+        },
+        {
+          "statement": "We believe supporting employee development and growth contributes to long-term retention.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 255738
+        },
+        {
+          "statement": "We believe a workforce that represents the societies in which we live and work, and our global client base, is integral to Morgan Stanley’s continued success.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 256003
+        },
+        {
+          "statement": "Furthermore, we believe that an inclusive workplace is in the best interests of our employees and clients.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 256175
+        },
+        {
+          "statement": "on of the risks and uncertainties that may affect our future results and strategic objectives, see “Forward-Looking Statements” preceding “Business” and “Return on Tangible Common Equity Goal” in “Management’s Discussion and Analysis of Financial Condition and Results of Operations.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 264333
+        },
+        {
+          "statement": "holders, proposed repurchases of our outstanding securities and other proposed capital actions that we intend to take.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 311078
+        },
+        {
+          "statement": "While we believe this information is the best available at the time, we may only be able to complete limited validation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 325470
+        },
+        {
+          "statement": "The financial services industry and all aspects of our businesses are intensely competitive, and we expect them to remain so.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 326277
+        },
+        {
+          "statement": "Management’s Discussion and Analysis includes certain metrics that we believe to be useful to us, investors, analysts and other stakeholders by providing further transparency about, or an additional means of assessing, our financial condition and operating results.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 340449
+        },
+        {
+          "statement": "Additionally, the discussion of our results of operations herein may contain forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 341135
+        },
+        {
+          "statement": "nd uncertainties that may cause For a discussion of the risks and uncertainties that may affect our future results, see “Forward-Looking Statements”, “Business—Competition”, “Business—Supervision and Regulation”, “Risk Factors” and “Liquidity and Capital Resources—Regulatory Requirements” herein.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 341356
+        },
+        {
+          "statement": "may cause For a discussion of the risks and uncertainties that may affect our future results, see “Forward-Looking Statements”, “Business—Competition”, “Business—Supervision and Regulation”, “Risk Factors” and “Liquidity and Capital Resources—Regulatory Requirements” herein.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 341377
+        },
+        {
+          "statement": "t conditions, and the potential effects of geopolitical events and acts of war or aggression on our future results, refer to “Risk Factors” and “Forward-Looking Statements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 352863
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue Information 14223",
+            "position": 209437
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, or increased credit, market, liquidity, regulatory, compliance,",
+            "position": 323412
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue-generating activities within our equity and fixed income businesses,",
+            "position": 368176
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue-producing employees in the Wealth Management and Investment Management business segments,",
+            "position": 372459
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue-producing employees in the Institutional Securities business segment and employees in corporate support functions, include base salary and benefits and may also include incentive compensation ",
+            "position": 372709
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, liquidity and funding, risk appetite and management, asset quality, strategic direction, business mix, regulatory or legislative changes, macroeconomic environment and perceived levels of su",
+            "position": 296107
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings per Diluted Common Share2024 Compared with 2023 •We reported net revenues of $61.8",
+            "position": 343287
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per common share was $7.95",
+            "position": 343590
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings applicable to Morgan Stanley common shareholders$12,800 $8,530 $10,540 Earnings per diluted common share$7.95",
+            "position": 349471
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings applicable to Morgan Stanley common shareholders as a percentage of average common equity and average tangible common equity,",
+            "position": 350837
+          },
+          {
+            "metric": "profit",
+            "context": "profit and loss,",
+            "position": 515488
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations94 166 Real estate91 167 Other840 583 Total$18,517 $19,173 1",
+            "position": 543779
+          },
+          {
+            "metric": "profit",
+            "context": "profit measures,",
+            "position": 886040
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA multiple20 times22 timesComparable pricing:Equity price24% to 100% (84%)24% to 100% (86%)Net derivative and other contracts:Interest rate$(53)$(73)Option model:IR volatility skew72% to 97% (81%",
+            "position": 690375
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA,",
+            "position": 695515
+          },
+          {
+            "metric": "EBITDA",
+            "context": "EBITDA multiple reflects the value of a company in terms of its full-year EBITDA,",
+            "position": 695625
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS)— 2 3 Dividends$ in millions, except per share data202420232022Per Share1TotalPerShare1TotalPerShare1TotalPreferred Stock SeriesA$1,548 $68 $1,522 $67 $1,061 $47 C100 52 100 52 100 52 E1,806 62 1,",
+            "position": 853783
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE of 14.0",
+            "position": 341880
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE and ROTCE represent earnings applicable to Morgan Stanley common shareholders as a percentage of average common equity and average tangible common equity,",
+            "position": 350813
+          },
+          {
+            "metric": "ROE",
+            "context": "ROE and ROTCE by segment uses net income applicable to Morgan Stanley by segment less preferred dividends allocated to each segment, annualized as a percentage of average common equity and average tan",
+            "position": 358538
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements, public and regulatory reporting, central clearing and mandatory trading on regulated exchanges or execution facilities for certain types of swaps and security-based swaps (collect",
+            "position": 244819
+          },
+          {
+            "metric": "margin",
+            "context": "margin requirements and minimum capital requirements established by the CFTC and SEC,",
+            "position": 245735
+          },
+          {
+            "metric": "margin",
+            "context": "margin and/or collateral and other commitments to clearinghouses, clearing agencies, exchanges, banks, securities firms and other financial counterparties; and investing and trading in securities and ",
+            "position": 273188
+          },
+          {
+            "metric": "margin",
+            "context": "margin- and securities-based loans collateralized by securities, residential mortgage loans, including home equity lines of credit (“HELOCs”), and structured loans to ultra-high net worth clients, tha",
+            "position": 273665
+          },
+          {
+            "metric": "margin",
+            "context": "margin by segment4Institutional Securities31 %19 %28 %Wealth Management27 %25 %27 %Investment Management19 %16 %15 %$ in millions, except per share data, worldwide employees and client assetsAtDecembe",
+            "position": 349789
+          },
+          {
+            "metric": "market share",
+            "context": "market share by reducing prices and fees, paying higher interest rates on deposits,",
+            "position": 327646
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income or the value of their assets as well as exposing us to reputational,",
+            "position": 576524
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and LTV ratios, among other factors,",
+            "position": 637403
+          },
+          {
+            "metric": "net income",
+            "context": "net income of $13.4",
+            "position": 341776
+          },
+          {
+            "metric": "net income",
+            "context": "Net Income Applicable to Morgan Stanley($ in millions)Earnings per Diluted Common Share2024 Compared with 2023 •We reported net revenues of $61.8",
+            "position": 343233
+          },
+          {
+            "metric": "net income",
+            "context": "Net income applicable to Morgan Stanley was $13.4",
+            "position": 343456
+          },
+          {
+            "metric": "net income",
+            "context": "net income applicable to Morgan Stanley by segment less preferred dividends allocated to each segment, annualized as a percentage of average common equity and average tangible common equity, respectiv",
+            "position": 358568
+          },
+          {
+            "metric": "net income",
+            "context": "Net income applicable to noncontrolling interests136 139 165 (2)%(16)%Net income applicable to Morgan Stanley$6,666 $3,453 $5,242 93 %(34)%Investment BankingInvestment Banking Volumes$ in billions2024",
+            "position": 374203
+          },
+          {
+            "metric": "assets",
+            "context": "Assets 11711",
+            "position": 209126
+          },
+          {
+            "metric": "assets",
+            "context": "assets;•the flow of investment capital into or from AUM;•the level and volatility of equity, fixed income and commodity prices, interest rates, inflation and currency values, other market indices or o",
+            "position": 212010
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 222496
+          },
+          {
+            "metric": "assets",
+            "context": "assets to meet projected net cash outflows for 30 days over the range of liquidity stress scenarios used in internal stress tests,",
+            "position": 232596
+          },
+          {
+            "metric": "assets",
+            "context": "assets of $100 billion or more,",
+            "position": 236468
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities to a third party or bridge financial company without the need for creditor consent or prior court review; the ability to differentiate among our creditors, including treating certain credi",
+            "position": 237627
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities for us,",
+            "position": 284804
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, including Trading assets and Trading liabilities, Investment securities, Securities borrowed or purchased under agreements to resell, Securities loaned or sold under agreements to repurch",
+            "position": 365757
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities at December 31, 20242, 3$5,658 Fully vested amounts to be distributed by the end of February 20254(772)Unrecognized portion of prior awards at December 31, 202431,590 2024 performance year",
+            "position": 402830
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities and accrued expenses in the balance sheet as of December 31, 2024.3",
+            "position": 403156
+          },
+          {
+            "metric": "equity",
+            "context": "Equity 80Consolidated Cash Flow Statement 81Notes to Consolidated Financial Statements 821",
+            "position": 208719
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity SecuritiesII5154Directors, Executive Officers and Corporate GovernanceIII10155Executive Compensation 11155Security Ownership of Certa",
+            "position": 209903
+          },
+          {
+            "metric": "equity",
+            "context": "equity, fixed income, currency, credit and commodities markets, including corporate, commercial and residential mortgage lending, real estate and energy markets;•the level of individual investor parti",
+            "position": 211739
+          },
+          {
+            "metric": "equity",
+            "context": "equity securities filed by our directors, officers, 10% or greater shareholders and others under Section 16",
+            "position": 216858
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Ownership Commitment;•Code of Ethics and Business Conduct;•Code of Conduct;•Integrity Hotline Information; •Environmental and Social Policies; and•2023",
+            "position": 217699
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 205071
+          },
+          {
+            "text": "$250 billion",
+            "position": 234051
+          },
+          {
+            "text": "$100 billion",
+            "position": 236478
+          },
+          {
+            "text": "$26,178 ",
+            "position": 259454
+          },
+          {
+            "text": "$61.8 billion",
+            "position": 341758
+          },
+          {
+            "text": "$13.4 billion",
+            "position": 341790
+          },
+          {
+            "text": "$353 million",
+            "position": 342181
+          },
+          {
+            "text": "$293 million",
+            "position": 342227
+          },
+          {
+            "text": "$286 million",
+            "position": 342271
+          },
+          {
+            "text": "$249 million",
+            "position": 342323
+          },
+          {
+            "text": "$5.6 billion",
+            "position": 342493
+          },
+          {
+            "text": "$28.1 billion",
+            "position": 342735
+          },
+          {
+            "text": "$28.4 billion",
+            "position": 342904
+          },
+          {
+            "text": "$123 billion",
+            "position": 343009
+          },
+          {
+            "text": "$252 billion",
+            "position": 343063
+          },
+          {
+            "text": "$5.9 billion",
+            "position": 343124
+          },
+          {
+            "text": "$54.1 billion",
+            "position": 343433
+          },
+          {
+            "text": "$9.1 billion",
+            "position": 343560
+          },
+          {
+            "text": "$7.95 ",
+            "position": 343620
+          },
+          {
+            "text": "$5.18 ",
+            "position": 343672
+          },
+          {
+            "text": "$26,178 million",
+            "position": 343831
+          },
+          {
+            "text": "$220 million",
+            "position": 344316
+          },
+          {
+            "text": "$105 million",
+            "position": 344379
+          },
+          {
+            "text": "$28 million",
+            "position": 344439
+          },
+          {
+            "text": "$133 million",
+            "position": 344579
+          },
+          {
+            "text": "$88 million",
+            "position": 344718
+          },
+          {
+            "text": "$30 million",
+            "position": 344780
+          },
+          {
+            "text": "$15 million",
+            "position": 344839
+          },
+          {
+            "text": "$17,723 million",
+            "position": 345513
+          },
+          {
+            "text": "$201 million",
+            "position": 345804
+          },
+          {
+            "text": "$92 million",
+            "position": 345905
+          },
+          {
+            "text": "$470 million",
+            "position": 346053
+          },
+          {
+            "text": "$357 million",
+            "position": 346076
+          },
+          {
+            "text": "$113 million",
+            "position": 346177
+          },
+          {
+            "text": "$264 million",
+            "position": 346793
+          },
+          {
+            "text": "$532 million",
+            "position": 347060
+          },
+          {
+            "text": "$28,080 million",
+            "position": 347927
+          },
+          {
+            "text": "$28,420 million",
+            "position": 348140
+          },
+          {
+            "text": "$5,861 million",
+            "position": 348365
+          },
+          {
+            "text": "$61,761 ",
+            "position": 349447
+          },
+          {
+            "text": "$54,143 ",
+            "position": 349455
+          },
+          {
+            "text": "$53,668 ",
+            "position": 349463
+          },
+          {
+            "text": "$12,800 ",
+            "position": 349528
+          },
+          {
+            "text": "$8,530 ",
+            "position": 349536
+          },
+          {
+            "text": "$10,540 ",
+            "position": 349543
+          },
+          {
+            "text": "$6.15 ",
+            "position": 349596
+          },
+          {
+            "text": "$345,440 ",
+            "position": 350067
+          },
+          {
+            "text": "$314,504 ",
+            "position": 350076
+          },
+          {
+            "text": "$246,814 ",
+            "position": 350091
+          },
+          {
+            "text": "$226,828 ",
+            "position": 350100
+          }
+        ],
+        "percentages": [
+          {
+            "text": "4.875%",
+            "value": 4.875,
+            "position": 206057
+          },
+          {
+            "text": "4.250%",
+            "value": 4.25,
+            "position": 206218
+          },
+          {
+            "text": "6.500%",
+            "value": 6.5,
+            "position": 206379
+          },
+          {
+            "text": "6.625%",
+            "value": 6.625,
+            "position": 206540
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 216910
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 233092
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 233368
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 258983
+          },
+          {
+            "text": "92 %",
+            "value": 92.0,
+            "position": 259017
+          },
+          {
+            "text": "40 %",
+            "value": 40.0,
+            "position": 259080
+          },
+          {
+            "text": "229 %",
+            "value": 229.0,
+            "position": 259099
+          },
+          {
+            "text": "335 %",
+            "value": 335.0,
+            "position": 259160
+          },
+          {
+            "text": "2,328 %",
+            "value": 2328.0,
+            "position": 259193
+          },
+          {
+            "text": "2024%",
+            "value": 2024.0,
+            "position": 259232
+          },
+          {
+            "text": "9 %",
+            "value": 9.0,
+            "position": 259244
+          },
+          {
+            "text": "89%",
+            "value": 89.0,
+            "position": 259584
+          },
+          {
+            "text": "14.0%",
+            "value": 14.0,
+            "position": 341887
+          },
+          {
+            "text": "18.8%",
+            "value": 18.8,
+            "position": 341906
+          },
+          {
+            "text": "71%",
+            "value": 71.0,
+            "position": 342007
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 342023
+          },
+          {
+            "text": "15.9%",
+            "value": 15.9,
+            "position": 342687
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 343415
+          },
+          {
+            "text": "47%",
+            "value": 47.0,
+            "position": 343542
+          },
+          {
+            "text": "53%",
+            "value": 53.0,
+            "position": 343654
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 343865
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 345038
+          },
+          {
+            "text": "3%",
+            "value": 3.0,
+            "position": 345547
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 347961
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 348174
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 348398
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 348740
+          },
+          {
+            "text": "19%",
+            "value": 19.0,
+            "position": 348992
+          },
+          {
+            "text": "171 %",
+            "value": 171.0,
+            "position": 349657
+          },
+          {
+            "text": "77 %",
+            "value": 77.0,
+            "position": 349662
+          },
+          {
+            "text": "73 %",
+            "value": 73.0,
+            "position": 349666
+          },
+          {
+            "text": "214.0 %",
+            "value": 214.0,
+            "position": 349673
+          },
+          {
+            "text": "9.4 %",
+            "value": 9.4,
+            "position": 349680
+          },
+          {
+            "text": "11.2 %",
+            "value": 11.2,
+            "position": 349685
+          },
+          {
+            "text": "2,318.8 %",
+            "value": 2318.8,
+            "position": 349696
+          },
+          {
+            "text": "12.8 %",
+            "value": 12.8,
+            "position": 349705
+          },
+          {
+            "text": "15.3 %",
+            "value": 15.3,
+            "position": 349711
+          },
+          {
+            "text": "428 %",
+            "value": 428.0,
+            "position": 349731
+          },
+          {
+            "text": "22 %",
+            "value": 22.0,
+            "position": 349736
+          },
+          {
+            "text": "26 %",
+            "value": 26.0,
+            "position": 349740
+          },
+          {
+            "text": "23.1 %",
+            "value": 23.1,
+            "position": 349763
+          },
+          {
+            "text": "21.9 %",
+            "value": 21.9,
+            "position": 349769
+          },
+          {
+            "text": "20.7 %",
+            "value": 20.7,
+            "position": 349775
+          },
+          {
+            "text": "31 %",
+            "value": 31.0,
+            "position": 349831
+          },
+          {
+            "text": "19 %",
+            "value": 19.0,
+            "position": 349835
+          },
+          {
+            "text": "28 %",
+            "value": 28.0,
+            "position": 349839
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 431
+          },
+          {
+            "category": "operational_risk",
+            "count": 85
+          },
+          {
+            "category": "financial_risk",
+            "count": 1393
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 354
+          },
+          {
+            "category": "technology_risk",
+            "count": 315
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 956386,
+        "filtered_length": 948144,
+        "removed_ratio": 0.86,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.2845786963434,
+      "confidence": 0.4166850009249319,
+      "overall_score": 50.7154213036566,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.09803921568627,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.014308426073131986,
+        "risk_adjusted_signal": 0.09623680290868465,
+        "expected_return_annualized": 0.02720534524986041,
+        "signal_sharpe_ratio": 0.0018136896833240274,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.09623680290868465,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.09623680290868465,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.09803921568627451,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.09623680290868465,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.014308426073131986
+      },
+      "risk_adjusted_signal": 0.09623680290868465,
+      "expected_return": 0.0002720534524986041,
+      "signal_sharpe": 0.0018136896833240274,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.7154213036566,
+    "confidence": 0.4166850009249319,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:29:12.836989",
+  "filing_date": "2025-02-21",
+  "filing_filename": "2025-02-21-10k-MS.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

@@ -1,0 +1,926 @@
+{
+  "ticker": "ACN",
+  "analysis": {
+    "ticker": "ACN",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 45.4416961130742,
+        "financial_sentiment": -0.041237113402061855,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "“believes,” “estimates,” “positioned,” “outlook” and similar expressions are used to identify these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 28928
+        },
+        {
+          "statement": "These statements are not guarantees of future performance and involve risks, uncertainties and assumptions that are difficult to predict.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 28995
+        },
+        {
+          "statement": "Forward-looking statements are based upon assumptions as to future events that may not prove to be accurate.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29094
+        },
+        {
+          "statement": "Actual outcomes and results may differ materially from what is expressed or forecast in these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29297
+        },
+        {
+          "statement": "” Our forward-looking statements speak only as of the date of this report or as of the date they are made, and we undertake no obligation to update them, notwithstanding any historical practice of doing so.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 29540
+        },
+        {
+          "statement": "And we believe it will be used in every part of the enterprise.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 37672
+        },
+        {
+          "statement": "As clients reinvent, we believe that trends such as sustainability will continue to be forces behind their need to reinvent and the outcomes of their reinventions.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 38326
+        },
+        {
+          "statement": "We believe our strategy to deliver 360° value makes us an attractive destination for top talent, a trusted partner to our clients and ecosystem, and a respected member of our communities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 38468
+        },
+        {
+          "statement": "Our Foundation—Our Leadership Essentials set the standard for what we expect from our people.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 39574
+        },
+        {
+          "statement": "We believe people are drawn to our strong purpose, values and reputation.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 58581
+        },
+        {
+          "statement": "ting with the highest ethical standard and making a positive difference in everything we do is what we believe differentiates Accenture.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 59868
+        },
+        {
+          "statement": "We believe in transparency, that transparency builds trust, and that we must earn the trust of our clients, our people, our partners and our communities each and every day.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 59905
+        },
+        {
+          "statement": "Going forward, we plan to maintain 100% renewable electricity in our facilities.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 63725
+        },
+        {
+          "statement": "Going forward, we plan to maintain 100% renewable electricity in our facilities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 63740
+        },
+        {
+          "statement": "We plan to begin applying carbon removal credits in fiscal 2025.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 65034
+        },
+        {
+          "statement": "We believe our combination of people, assets and capabilities, including our global network of more than 100 innovation hubs, makes Accenture one of the leading strategic innovation partners for our clients.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 68689
+        },
+        {
+          "statement": "th a variety of organizations that offer services and solutions competitive with those we offer—but we believe no other company offers the full range of services at scale that Accenture does, which uniquely positions us in a highly competitive market.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 70222
+        },
+        {
+          "statement": "class learning organization that helps us continuously invest in the development of our people, and we believe our strategy to deliver 360° value makes us an attractive destination for top talent, a trusted partner to our clients and ecosystem, and a respected member of our communities.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 74011
+        },
+        {
+          "statement": "shareholder approval needed to continue granting equity awards under our share plans in the amounts we believe are necessary, our ability to attract and retain people could be negatively affected.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 97573
+        },
+        {
+          "statement": "other third-party data, including customer and other personal data and proprietary information, and we expect these activities to increase, including through the use of AI, the Internet of Things and analytics.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 100013
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue growth—such as through using technology and creativity to create personalized connections, experiences and targeted sales at scale, leveraging data and AI,",
+            "position": 36827
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and tax agenciesTable of ContentsACCENTURE 2024",
+            "position": 49738
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from fiscal 2019",
+            "position": 63070
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue and resource plans,",
+            "position": 82802
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, orders to discontinue certain data processing operations, civil lawsuits,",
+            "position": 102922
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings in countries with differing statutory tax rates and changes in accounting principles,",
+            "position": 121100
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings related to the changes in value of certain balance sheet items,",
+            "position": 125846
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share on a non-GAAP or “adjusted” basis to exclude the impact of $438 million and $1,063 million, respectively, in business optimization costs recorded during fiscal 2024 and 2023 and, wi",
+            "position": 187283
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share of $11.44",
+            "position": 188268
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share increased 2% to $11.95",
+            "position": 188350
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations; cities; transportation agencies; and postal, customs, revenue and tax agenciesTable of ContentsACCENTURE 2024",
+            "position": 49662
+          },
+          {
+            "metric": "profit",
+            "context": "Profit Sharing Plans Defined Benefit Pension and Postretirement Plans In the United States and certain other countries, we maintain and administer defined benefit retirement plans and postretirement m",
+            "position": 332004
+          },
+          {
+            "metric": "margin",
+            "context": "margin, effective tax rate and diluted earnings per share on a non-GAAP or “adjusted” basis to exclude the impact of $438 million and $1,063 million, respectively, in business optimization costs recor",
+            "position": 187244
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 14.8",
+            "position": 188139
+          },
+          {
+            "metric": "margin",
+            "context": "margin was 15.5",
+            "position": 188209
+          },
+          {
+            "metric": "margin",
+            "context": "margin for fiscal 2024 increased to 32.6",
+            "position": 211658
+          },
+          {
+            "metric": "margin",
+            "context": "margin for fiscal 2024 was primarily due to lower labor costs, partially offset by higher non-payroll costs, primarily for travel compared to fiscal 2023",
+            "position": 211756
+          },
+          {
+            "metric": "market share",
+            "context": "market share and clients to competitors,",
+            "position": 106000
+          },
+          {
+            "metric": "market share",
+            "context": "market share,",
+            "position": 141603
+          },
+          {
+            "metric": "market share",
+            "context": "market share purchase program may vary depending on numerous factors, including, without limitation, share price and other market conditions, our ongoing capital allocation planning, the levels of cas",
+            "position": 224790
+          },
+          {
+            "metric": "market share",
+            "context": "market share purchases (1)11,753,807 $3,780,519 — $— Other share purchase programs— — 47,752 15,254 Other purchases (2)2,159,586 728,873 — — Total13,913,393 $4,509,392 47,752 $15,254 (1",
+            "position": 358045
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income and the value of balance-sheet items, including intercompany payables and receivables,",
+            "position": 125454
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, operating margin, effective tax rate and diluted earnings per share on a non-GAAP or “adjusted” basis to exclude the impact of $438 million and $1,063 million, respectively, in busin",
+            "position": 187216
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income, operating margin, effective tax rate and diluted earnings per share on a non-GAAP or “adjusted” basis excluding the business optimization costs recorded in fiscal 2024 and fiscal 202",
+            "position": 212850
+          },
+          {
+            "metric": "operating income",
+            "context": "Operating income for fiscal 2024 increased $786 million, or 9%, compared with fiscal 2023",
+            "position": 214261
+          },
+          {
+            "metric": "operating income",
+            "context": "operating income during fiscal 2024",
+            "position": 214543
+          },
+          {
+            "metric": "net income",
+            "context": "net income,",
+            "position": 205313
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to noncontrolling interests(0.03",
+            "position": 220324
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to noncontrolling interests – other(147,212)(124,769)(104,443)NET INCOME ATTRIBUTABLE TO ACCENTURE PLC$7,264,787 $6,871,557 $6,877,169 Weighted average Class A ordinary shares:",
+            "position": 268126
+          },
+          {
+            "metric": "net income",
+            "context": "Net income$7,419,197 $7,003,530 $6,988,960 Adjustments to reconcile Net income to Net cash provided by (used in) operating activities—Depreciation, amortization and other2,168,038 2,281,085 2,088,216 ",
+            "position": 274127
+          },
+          {
+            "metric": "net income",
+            "context": "Net income for diluted earnings per share calculation$7,271,985 $6,878,761 $6,884,517 Basic weighted average Class A ordinary shares627,852,613 630,608,186 632,762,710 Class A ordinary shares issuable",
+            "position": 301818
+          },
+          {
+            "metric": "assets",
+            "context": "assets across Strategy & Consulting, Technology, Operations, Industry X and Song, together with our culture of shared success and commitment to creating 360° value, enable us to help our clients reinv",
+            "position": 32816
+          },
+          {
+            "metric": "assets",
+            "context": "assets and platforms including myWizard, myNav,",
+            "position": 36278
+          },
+          {
+            "metric": "assets",
+            "context": "assets and capabilities, including our global network of more than 100 innovation hubs,",
+            "position": 68727
+          },
+          {
+            "metric": "assets",
+            "context": "assets, that can scale at speed, leveraging our deep experience, knowledge and insights across industries, functions and services, often with our ecosystem partners;•Our industry-leading innovation ap",
+            "position": 72780
+          },
+          {
+            "metric": "assets",
+            "context": "assets and liabilities, changes in tax laws or in their interpretation or enforcement, changes in the mix of earnings in countries with differing statutory tax rates and changes in accounting principl",
+            "position": 120991
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 119465
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, changes in tax laws or in their interpretation or enforcement, changes in the mix of earnings in countries with differing statutory tax rates and changes in accounting principles,",
+            "position": 121002
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities, and legal, accounting and financial advisory fees,",
+            "position": 138777
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities that we assume from a company we acquire or in which we invest, including from that company’s known and unknown obligations, intellectual property or other assets, terminated employees,",
+            "position": 139471
+          },
+          {
+            "metric": "equity",
+            "context": "equity of 0000225 per share, reported on the New York Stock Exchange on such date of $374.78",
+            "position": 26621
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Shareholder Matters and Issuer Purchases of Equity Securities35Item 6",
+            "position": 27536
+          },
+          {
+            "metric": "equity",
+            "context": "equity firms, market infrastructure providers, wealth and asset management firms, broker/dealers, depositories, exchanges, clearing and settlement organizations, retirement services providers and othe",
+            "position": 48899
+          },
+          {
+            "metric": "equity",
+            "context": "equity and have processes in place to compensate our people fairly—across gender,",
+            "position": 56027
+          },
+          {
+            "metric": "equity",
+            "context": "equity at Accenture means that our people receive pay that is fair and consistent when considering similarity of work,",
+            "position": 56133
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.0000225 ",
+            "position": 26143
+          },
+          {
+            "text": "$374.78 ",
+            "position": 26706
+          },
+          {
+            "text": "$64.9B",
+            "position": 34134
+          },
+          {
+            "text": "$6.6B",
+            "position": 34444
+          },
+          {
+            "text": "$1.2B",
+            "position": 34449
+          },
+          {
+            "text": "$1.1B",
+            "position": 34454
+          },
+          {
+            "text": "$6.6 billion",
+            "position": 34959
+          },
+          {
+            "text": "$1.2 billion",
+            "position": 35006
+          },
+          {
+            "text": "$1.1 billion",
+            "position": 35031
+          },
+          {
+            "text": "$10.8B",
+            "position": 47516
+          },
+          {
+            "text": "$11.6B",
+            "position": 48716
+          },
+          {
+            "text": "$13.8B",
+            "position": 49284
+          },
+          {
+            "text": "$19.6B",
+            "position": 50098
+          },
+          {
+            "text": "$9.1B",
+            "position": 50860
+          },
+          {
+            "text": "$1.3 billion",
+            "position": 67572
+          },
+          {
+            "text": "$1.48 ",
+            "position": 180511
+          },
+          {
+            "text": "$291.18 ",
+            "position": 182100
+          },
+          {
+            "text": "$2,937 ",
+            "position": 182118
+          },
+          {
+            "text": "$303.05 ",
+            "position": 182262
+          },
+          {
+            "text": "$605 million",
+            "position": 182871
+          },
+          {
+            "text": "$2,694 million",
+            "position": 183055
+          },
+          {
+            "text": "$50.1 billion",
+            "position": 183337
+          },
+          {
+            "text": "$4,000 million",
+            "position": 183511
+          },
+          {
+            "text": "$6,694 million",
+            "position": 183620
+          },
+          {
+            "text": "$438 million",
+            "position": 187361
+          },
+          {
+            "text": "$1,063 million",
+            "position": 187378
+          },
+          {
+            "text": "$253 million",
+            "position": 187564
+          },
+          {
+            "text": "$64.9 billion",
+            "position": 187961
+          },
+          {
+            "text": "$81.2 billion",
+            "position": 188052
+          },
+          {
+            "text": "$11.44",
+            "position": 188290
+          },
+          {
+            "text": "$10.77 ",
+            "position": 188317
+          },
+          {
+            "text": "$11.95 ",
+            "position": 188385
+          },
+          {
+            "text": "$11.67 ",
+            "position": 188404
+          },
+          {
+            "text": "$7.8 billion",
+            "position": 188465
+          },
+          {
+            "text": "$4.5 billion",
+            "position": 188508
+          },
+          {
+            "text": "$3.2 billion",
+            "position": 188538
+          },
+          {
+            "text": "$30.7 ",
+            "position": 188750
+          },
+          {
+            "text": "$30.3 ",
+            "position": 188756
+          },
+          {
+            "text": "$64.9 ",
+            "position": 188861
+          },
+          {
+            "text": "$64.1 ",
+            "position": 188867
+          },
+          {
+            "text": "$10.8 ",
+            "position": 188938
+          },
+          {
+            "text": "$11.5 ",
+            "position": 188944
+          },
+          {
+            "text": "$33.2 ",
+            "position": 189170
+          },
+          {
+            "text": "$33.6 ",
+            "position": 189176
+          },
+          {
+            "text": "$37.0 ",
+            "position": 196105
+          },
+          {
+            "text": "$36.2 ",
+            "position": 196111
+          },
+          {
+            "text": "$81.2 ",
+            "position": 196173
+          },
+          {
+            "text": "$72.2 ",
+            "position": 196179
+          },
+          {
+            "text": "$30,741 ",
+            "position": 207936
+          },
+          {
+            "text": "$30,296 ",
+            "position": 207944
+          }
+        ],
+        "percentages": [
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 47553
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 47556
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 47559
+          },
+          {
+            "text": "69%",
+            "value": 69.0,
+            "position": 48753
+          },
+          {
+            "text": "31%",
+            "value": 31.0,
+            "position": 48756
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 49958
+          },
+          {
+            "text": "17%",
+            "value": 17.0,
+            "position": 50023
+          },
+          {
+            "text": "46%",
+            "value": 46.0,
+            "position": 50135
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 50138
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 50141
+          },
+          {
+            "text": "29%",
+            "value": 29.0,
+            "position": 50896
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 50899
+          },
+          {
+            "text": "78%",
+            "value": 78.0,
+            "position": 53547
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 53738
+          },
+          {
+            "text": "30%",
+            "value": 30.0,
+            "position": 55314
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 55579
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 55688
+          },
+          {
+            "text": "13%",
+            "value": 13.0,
+            "position": 55734
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 55779
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 55823
+          },
+          {
+            "text": "47%",
+            "value": 47.0,
+            "position": 55879
+          },
+          {
+            "text": "68%",
+            "value": 68.0,
+            "position": 55924
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 56434
+          },
+          {
+            "text": "48%",
+            "value": 48.0,
+            "position": 56861
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 56894
+          },
+          {
+            "text": "14%",
+            "value": 14.0,
+            "position": 58858
+          },
+          {
+            "text": "80%",
+            "value": 80.0,
+            "position": 62939
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 63020
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 63134
+          },
+          {
+            "text": "89%",
+            "value": 89.0,
+            "position": 64635
+          },
+          {
+            "text": "96%",
+            "value": 96.0,
+            "position": 64685
+          },
+          {
+            "text": "1%",
+            "value": 1.0,
+            "position": 80119
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 102906
+          },
+          {
+            "text": "2%",
+            "value": 2.0,
+            "position": 188014
+          },
+          {
+            "text": "14.8%",
+            "value": 14.8,
+            "position": 188149
+          },
+          {
+            "text": "13.7%",
+            "value": 13.7,
+            "position": 188168
+          },
+          {
+            "text": "15.5%",
+            "value": 15.5,
+            "position": 188220
+          },
+          {
+            "text": "15.4%",
+            "value": 15.4,
+            "position": 188238
+          },
+          {
+            "text": "1 %",
+            "value": 1.0,
+            "position": 188762
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 188765
+          },
+          {
+            "text": "47 %",
+            "value": 47.0,
+            "position": 188768
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 188879
+          },
+          {
+            "text": "17 %",
+            "value": 17.0,
+            "position": 188958
+          },
+          {
+            "text": "18 %",
+            "value": 18.0,
+            "position": 188962
+          },
+          {
+            "text": "51 %",
+            "value": 51.0,
+            "position": 189190
+          },
+          {
+            "text": "52 %",
+            "value": 52.0,
+            "position": 189194
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 191937
+          },
+          {
+            "text": "1.5%",
+            "value": 1.5,
+            "position": 193723
+          },
+          {
+            "text": "92%",
+            "value": 92.0,
+            "position": 193841
+          },
+          {
+            "text": "91%",
+            "value": 91.0,
+            "position": 193863
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 177
+          },
+          {
+            "category": "operational_risk",
+            "count": 34
+          },
+          {
+            "category": "financial_risk",
+            "count": 330
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 99
+          },
+          {
+            "category": "technology_risk",
+            "count": 302
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [
+        {
+          "type": "uncertainty_spike",
+          "severity": "medium",
+          "position": 0,
+          "density": 7.510729613733906
+        }
+      ],
+      "deduplication": {
+        "original_length": 390643,
+        "filtered_length": 373305,
+        "removed_ratio": 4.44,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 48.133184731122874,
+      "confidence": 1.0880903138679152,
+      "overall_score": 51.866815268877126,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 47.93814432989691,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.03733630537754251,
+        "risk_adjusted_signal": 0.25111963004121796,
+        "expected_return_annualized": 0.07098943468405718,
+        "signal_sharpe_ratio": 0.004732628978937145,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.25111963004121796,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.25111963004121796,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.041237113402061855,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.25111963004121796,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.03733630537754251
+      },
+      "risk_adjusted_signal": 0.25111963004121796,
+      "expected_return": 0.0007098943468405718,
+      "signal_sharpe": 0.004732628978937145,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 51.866815268877126,
+    "confidence": 1.0880903138679152,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:12:33.826868",
+  "filing_date": "2024-10-10",
+  "filing_filename": "2024-10-10-10k-ACN.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

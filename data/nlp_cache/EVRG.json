@@ -1,0 +1,879 @@
+{
+  "ticker": "EVRG",
+  "analysis": {
+    "ticker": "EVRG",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 36.973894512519976,
+        "financial_sentiment": -0.2619047619047619,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "Table of Contents TABLE OF CONTENTSPageNumberCautionary Statements Regarding Certain Forward-Looking Information3Glossary of Terms5tem 1.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 224709
+        },
+        {
+          "statement": "ncial Statement Schedules168Signatures1902Table of Contents CAUTIONARY STATEMENTS REGARDING CERTAIN FORWARD-LOOKING INFORMATIONStatements made in this document that are not based on historical facts are forward-looking, may involve risks and uncertainties, and are intended to be as of the date when made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 225967
+        },
+        {
+          "statement": "WARD-LOOKING INFORMATIONStatements made in this document that are not based on historical facts are forward-looking, may involve risks and uncertainties, and are intended to be as of the date when made.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 226070
+        },
+        {
+          "statement": "number of risks, uncertainties and other factors that could cause actual results to differ from the forward-looking information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 227562
+        },
+        {
+          "statement": "ation of factors, may cause Given these uncertainties, undue reliance should not be placed on these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 233933
+        },
+        {
+          "statement": "The Evergy Companies undertake no obligation to publicly update or revise any forward-looking statement, whether as a result of new information, future events or otherwise, except as required by law.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 234039
+        },
+        {
+          "statement": "The Evergy Companies are unable to predict changes in regulations, regulatory guidance, legal interpretations, policy positions and implementation actions that may result from the change in presidential administrations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 250428
+        },
+        {
+          "statement": "See \"Cautionary Statements Regarding Certain Forward-Looking Information\" and , Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 252880
+        },
+        {
+          "statement": "ns and would collectively perform impact assessment and provide 30Table of Contents decision-making guidance as a component of the Crisis Management Plan within the Evergy Companies' business continuity and disaster recovery plans.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 343830
+        },
+        {
+          "statement": "See \"Transitioning Evergy's Generation Fleet\" in , See \"Cautionary Statements Regarding Certain Forward-Looking Information\" and , Item 1A.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 360982
+        },
+        {
+          "statement": "The IRS is expected to provide guidance regarding the type of revenue to be included in the gross receipts portion of the credit computation, which could have a significant impact on the value of the nuclear PTCs available to Evergy.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 421381
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 459806
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 460492
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 467605
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 468700
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 475887
+        },
+        {
+          "statement": "We believe that our audits provide a reasonable basis for our opinion.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 476982
+        },
+        {
+          "statement": "The majority of these agreements guarantee Evergy's own future performance, so a liability for the fair value of the obligation is not recorded.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 678897
+        },
+        {
+          "statement": "The IRS is expected to provide guidance regarding the type of revenue to be included in the computation of gross receipts in 2025 and any changes would be reflected subsequently in the estimate.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 698033
+        },
+        {
+          "statement": "Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects.",
+          "pattern": "we\\s+(?:expect|anticipate|believe|plan|intend|forecast|project)",
+          "sentiment": 0.0,
+          "position": 717752
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "Revenue RefundingEPAEnvironmental Protection AgencyEPSEarnings per common shareERISAEmployee Retirement Income Security Act of 1974, as amendedERSPEarnings Review and Sharing PlanESGEnvironmental, soc",
+            "position": 236166
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue-producing activities,",
+            "position": 372849
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue estimate is affected by factors including fluctuations in energy demand, weather,",
+            "position": 383127
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue-producing activities of $436.2",
+            "position": 397888
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue primarily due to updated transmission costs reflected in Evergy Kansas Central's FERC transmission formula rate (TFR) effective in January 2024;•a $21.6",
+            "position": 398976
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share, dividend, operating and maintenance expense and capital investment goals; the outcome of legislative efforts and regulatory and legal proceedings; future energy demand,",
+            "position": 226329
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share and targeting a 60%-70",
+            "position": 241337
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and cash flows, capital requirements and general financial position of its subsidiaries, as well as regulatory factors, financial covenants,",
+            "position": 284895
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings; the ability of the Evergy Companies to implement their strategic plan; the ability of Evergy to deploy capital; actions by regulators including authorized return on equity and equity capital",
+            "position": 300675
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings per share and targeting a 60% - 70",
+            "position": 358993
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS increased in 2024, compared to the same period in 2023, primarily due to the increase in net income attributable to Evergy,",
+            "position": 370476
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (non-GAAP)Management believes that adjusted earnings (non-GAAP) and adjusted EPS (non-GAAP) are representative measures of Evergy's recurring earnings,",
+            "position": 373138
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (non-GAAP) for 2024 were $877.9",
+            "position": 373443
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS (non-GAAP) were $815.6",
+            "position": 373568
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS,",
+            "position": 373690
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 15% for 2025",
+            "position": 248263
+          },
+          {
+            "metric": "margin",
+            "context": "margin of 16",
+            "position": 248414
+          },
+          {
+            "metric": "margin",
+            "context": "margin (non-GAAP), as used by the Evergy Companies,",
+            "position": 370928
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 371182
+          },
+          {
+            "metric": "margin",
+            "context": "margin (non-GAAP) provides a meaningful basis for evaluating the Evergy Companies' 40",
+            "position": 371962
+          },
+          {
+            "metric": "net income",
+            "context": "Net income attributable to Evergy,",
+            "position": 369754
+          },
+          {
+            "metric": "net income",
+            "context": "net income attributable to Evergy,",
+            "position": 370569
+          },
+          {
+            "metric": "net income",
+            "context": "net income,",
+            "position": 370676
+          },
+          {
+            "metric": "assets",
+            "context": "assets and costs; impairments of long-lived assets or goodwill; credit ratings; inflation rates; effectiveness of risk management policies and procedures and the ability of counterparties to satisfy t",
+            "position": 230832
+          },
+          {
+            "metric": "assets",
+            "context": "assets are managed, which in turn could result in retiring assets earlier than expected,",
+            "position": 280646
+          },
+          {
+            "metric": "assets",
+            "context": "assets, the level and nature of the provided benefits, discount rates, the interest rates used to measure required minimum funding levels, changes in benefit design,",
+            "position": 291916
+          },
+          {
+            "metric": "assets",
+            "context": "assets,",
+            "position": 296682
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities on its consolidated balance sheets resulting from the effects of the ratemaking process,",
+            "position": 383481
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are probable of future recovery or refund by considering factors such as decisions by the MPSC, KCC or FERC in Evergy's rate case filings; decisions in other regulatory proceedings,",
+            "position": 383874
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities is not approved by regulators or is no longer deemed probable,",
+            "position": 384256
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities are determined based on the temporary differences between the financial reporting and tax bases of assets and liabilities,",
+            "position": 389085
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities recorded on its consolidated balance sheet,",
+            "position": 426662
+          },
+          {
+            "metric": "equity",
+            "context": "equity held by non-affiliates of Evergy,",
+            "position": 223354
+          },
+          {
+            "metric": "equity",
+            "context": "equity of Evergy Kansas Central,",
+            "position": 223550
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities36Item 6",
+            "position": 224964
+          },
+          {
+            "metric": "equity",
+            "context": "equity will be required to fund the investments, which, in turn, may result in a decrease in the market value of Evergy's 18Table of Contents common stock,",
+            "position": 283279
+          },
+          {
+            "metric": "equity",
+            "context": "equity and equity capital structure levels that could impact the ability to attract capital; and statements in the press or investment community about the Evergy Companies' strategy, earnings per shar",
+            "position": 300850
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$0.01 ",
+            "position": 222195
+          },
+          {
+            "text": "$12,025,571,828",
+            "position": 223515
+          },
+          {
+            "text": "$61.64",
+            "position": 355404
+          },
+          {
+            "text": "$61.60",
+            "position": 355458
+          },
+          {
+            "text": "$17.5 billion",
+            "position": 359795
+          },
+          {
+            "text": "$6.2 billion",
+            "position": 359901
+          },
+          {
+            "text": "$196 million",
+            "position": 361253
+          },
+          {
+            "text": "$104 million",
+            "position": 361808
+          },
+          {
+            "text": "$55 million",
+            "position": 362512
+          },
+          {
+            "text": "$49 million",
+            "position": 362604
+          },
+          {
+            "text": "$60 million",
+            "position": 365407
+          },
+          {
+            "text": "$873.5 ",
+            "position": 369793
+          },
+          {
+            "text": "$142.2 ",
+            "position": 369800
+          },
+          {
+            "text": "$731.3 ",
+            "position": 369807
+          },
+          {
+            "text": "$96.5 million",
+            "position": 370064
+          },
+          {
+            "text": "$877.9 million",
+            "position": 373472
+          },
+          {
+            "text": "$3.81 ",
+            "position": 373490
+          },
+          {
+            "text": "$815.6 million",
+            "position": 373588
+          },
+          {
+            "text": "$3.54 ",
+            "position": 373606
+          },
+          {
+            "text": "$3.79 ",
+            "position": 375962
+          },
+          {
+            "text": "$3.17 ",
+            "position": 375975
+          },
+          {
+            "text": "$877.9 ",
+            "position": 376460
+          },
+          {
+            "text": "$815.6 ",
+            "position": 376473
+          },
+          {
+            "text": "$33.5 million",
+            "position": 381793
+          },
+          {
+            "text": "$57.6 million",
+            "position": 381822
+          },
+          {
+            "text": "$2,336.6 million",
+            "position": 386016
+          },
+          {
+            "text": "$1,297.0 million",
+            "position": 392238
+          },
+          {
+            "text": "$1,203.1 million",
+            "position": 392259
+          },
+          {
+            "text": "$5,847.3 ",
+            "position": 395601
+          },
+          {
+            "text": "$339.1 ",
+            "position": 395610
+          },
+          {
+            "text": "$5,508.2 ",
+            "position": 395617
+          },
+          {
+            "text": "$2,186.6 ",
+            "position": 396665
+          },
+          {
+            "text": "$149.9 ",
+            "position": 396674
+          },
+          {
+            "text": "$2,036.7 ",
+            "position": 396681
+          },
+          {
+            "text": "$3,996.5 ",
+            "position": 397429
+          },
+          {
+            "text": "$285.7 ",
+            "position": 397438
+          },
+          {
+            "text": "$3,710.8 ",
+            "position": 397445
+          },
+          {
+            "text": "$436.2 million",
+            "position": 397920
+          },
+          {
+            "text": "$443.5 million",
+            "position": 397939
+          },
+          {
+            "text": "$178.3 million",
+            "position": 398304
+          },
+          {
+            "text": "$285.7 million",
+            "position": 398401
+          },
+          {
+            "text": "$119.6 million",
+            "position": 398475
+          },
+          {
+            "text": "$141.8 million",
+            "position": 398576
+          },
+          {
+            "text": "$22.2 million",
+            "position": 398659
+          },
+          {
+            "text": "$79.4 million",
+            "position": 398937
+          },
+          {
+            "text": "$21.6 million",
+            "position": 399131
+          },
+          {
+            "text": "$6.1 million",
+            "position": 399375
+          },
+          {
+            "text": "$4.4 million",
+            "position": 399631
+          },
+          {
+            "text": "$30.8 million",
+            "position": 399902
+          },
+          {
+            "text": "$11.1 million",
+            "position": 400127
+          }
+        ],
+        "percentages": [
+          {
+            "text": "13.5%",
+            "value": 13.5,
+            "position": 237382
+          },
+          {
+            "text": "86.5%",
+            "value": 86.5,
+            "position": 239345
+          },
+          {
+            "text": "50%",
+            "value": 50.0,
+            "position": 239669
+          },
+          {
+            "text": "60%",
+            "value": 60.0,
+            "position": 241372
+          },
+          {
+            "text": "70%",
+            "value": 70.0,
+            "position": 241376
+          },
+          {
+            "text": "37%",
+            "value": 37.0,
+            "position": 242020
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 242039
+          },
+          {
+            "text": "33%",
+            "value": 33.0,
+            "position": 242042
+          },
+          {
+            "text": "32%",
+            "value": 32.0,
+            "position": 242045
+          },
+          {
+            "text": "12%",
+            "value": 12.0,
+            "position": 242058
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 242076
+          },
+          {
+            "text": "7%",
+            "value": 7.0,
+            "position": 242078
+          },
+          {
+            "text": "9%",
+            "value": 9.0,
+            "position": 242080
+          },
+          {
+            "text": "8%",
+            "value": 8.0,
+            "position": 242094
+          },
+          {
+            "text": "6%",
+            "value": 6.0,
+            "position": 242098
+          },
+          {
+            "text": "4%",
+            "value": 4.0,
+            "position": 242105
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 242116
+          },
+          {
+            "text": "38%",
+            "value": 38.0,
+            "position": 242254
+          },
+          {
+            "text": "43%",
+            "value": 43.0,
+            "position": 242267
+          },
+          {
+            "text": "42%",
+            "value": 42.0,
+            "position": 242273
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 242286
+          },
+          {
+            "text": "94%",
+            "value": 94.0,
+            "position": 243048
+          },
+          {
+            "text": "9.4%",
+            "value": 9.4,
+            "position": 243488
+          },
+          {
+            "text": "40%",
+            "value": 40.0,
+            "position": 244218
+          },
+          {
+            "text": "37 %",
+            "value": 37.0,
+            "position": 247083
+          },
+          {
+            "text": "100 %",
+            "value": 100.0,
+            "position": 247195
+          },
+          {
+            "text": "15%",
+            "value": 15.0,
+            "position": 248273
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 248424
+          },
+          {
+            "text": "65%",
+            "value": 65.0,
+            "position": 256375
+          },
+          {
+            "text": "45%",
+            "value": 45.0,
+            "position": 256380
+          },
+          {
+            "text": "35%",
+            "value": 35.0,
+            "position": 256388
+          },
+          {
+            "text": "47%",
+            "value": 47.0,
+            "position": 257174
+          },
+          {
+            "text": "75%",
+            "value": 75.0,
+            "position": 267099
+          },
+          {
+            "text": "86%",
+            "value": 86.0,
+            "position": 268010
+          },
+          {
+            "text": "55%",
+            "value": 55.0,
+            "position": 268432
+          },
+          {
+            "text": "90%",
+            "value": 90.0,
+            "position": 270821
+          },
+          {
+            "text": "1.5%",
+            "value": 1.5,
+            "position": 271231
+          },
+          {
+            "text": "2.5%",
+            "value": 2.5,
+            "position": 271370
+          },
+          {
+            "text": "10.5%",
+            "value": 10.5,
+            "position": 361331
+          },
+          {
+            "text": "52%",
+            "value": 52.0,
+            "position": 361375
+          },
+          {
+            "text": "22%",
+            "value": 22.0,
+            "position": 365248
+          },
+          {
+            "text": "0.5%",
+            "value": 0.5,
+            "position": 380834
+          },
+          {
+            "text": "0.5 %",
+            "value": 0.5,
+            "position": 381151
+          },
+          {
+            "text": "2.45%",
+            "value": 2.45,
+            "position": 407170
+          },
+          {
+            "text": "3.65%",
+            "value": 3.65,
+            "position": 407312
+          },
+          {
+            "text": "3.25%",
+            "value": 3.25,
+            "position": 407389
+          },
+          {
+            "text": "3.49%",
+            "value": 3.49,
+            "position": 407484
+          },
+          {
+            "text": "5.40%",
+            "value": 5.4,
+            "position": 407877
+          },
+          {
+            "text": "6.65%",
+            "value": 6.65,
+            "position": 408268
+          },
+          {
+            "text": "5.10%",
+            "value": 5.1,
+            "position": 408429
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 154
+          },
+          {
+            "category": "operational_risk",
+            "count": 62
+          },
+          {
+            "category": "financial_risk",
+            "count": 666
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 329
+          },
+          {
+            "category": "technology_risk",
+            "count": 133
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 795231,
+        "filtered_length": 782225,
+        "removed_ratio": 1.64,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 47.39382239382239,
+      "confidence": 1.509699343306927,
+      "overall_score": 47.39382239382239,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 36.904761904761905,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": -0.05212355212355213,
+        "risk_adjusted_signal": -0.3505769248816362,
+        "expected_return_annualized": -0.09910518626734842,
+        "signal_sharpe_ratio": -0.006607012417823229,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": -0.3505769248816362,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": -0.3505769248816362,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.2619047619047619,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": -0.3505769248816362,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": -0.05212355212355213
+      },
+      "risk_adjusted_signal": -0.3505769248816362,
+      "expected_return": -0.0009910518626734843,
+      "signal_sharpe": -0.006607012417823229,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 47.39382239382239,
+    "confidence": 1.509699343306927,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:18.783637",
+  "filing_date": "2025-02-27",
+  "filing_filename": "2025-02-27-10k-EVRG.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

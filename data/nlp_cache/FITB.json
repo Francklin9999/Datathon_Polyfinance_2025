@@ -1,0 +1,904 @@
+{
+  "ticker": "FITB",
+  "analysis": {
+    "ticker": "FITB",
+    "nlp_analysis": {
+      "sentiment_scores": {
+        "overall_sentiment": 0.0,
+        "positive_score": 0.0,
+        "negative_score": 0.0,
+        "uncertainty_score": 42.585133650677406,
+        "financial_sentiment": -0.09433962264150944,
+        "vader_scores": {}
+      },
+      "forward_looking_statements": [
+        {
+          "statement": "nder, and Section 21E of the Securities All statements other than statements of historical fact are forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 178403
+        },
+        {
+          "statement": "These statements relate to our financial condition, results of operations, plans, objectives, future performance, capital actions or business.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 178525
+        },
+        {
+          "statement": "There are a number of important factors that could cause future results to differ materially from historical performance and these forward-looking statements.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 179464
+        },
+        {
+          "statement": "factors that could cause future results to differ materially from historical performance and these forward-looking statements.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 179538
+        },
+        {
+          "statement": "ment is based, except as may be required by law, and we claim the protection of the safe harbor for forward-looking statements contained in the Private Securities Litigation Reform Act of 1995.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 183164
+        },
+        {
+          "statement": "The evaluation process is intended to help ensure that those BHCs have robust, forward-looking capital planning processes that account for each company’s unique risks and that permit continued operations during times of economic and financial stress.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 219310
+        },
+        {
+          "statement": "These supervisory stress tests are forward-looking quantitative evaluations of the impact of stressful economic and financial market conditions on the Bancorp’s capital.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 220144
+        },
+        {
+          "statement": "regulators, including the OCC, FRB and the SEC, have increased their focus on cybersecurity through guidance, examinations and regulations.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 223463
+        },
+        {
+          "statement": "of Contents Moreover, these laws, and proposed legislation, are still subject to revision or formal guidance and they may be interpreted or applied in a manner inconsistent with our understanding.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 224635
+        },
+        {
+          "statement": "he proposal would also establish a regular process for updating the maximum amount every other year going forward.",
+          "pattern": "going\\s+forward",
+          "sentiment": 0.0,
+          "position": 227902
+        },
+        {
+          "statement": "In 2021, the FDIC provided implementation guidance on certain aspects of its resolution plan rule and the Bank submitted a resolution plan to the FDIC by the December 1, 2022 deadline, as required under that guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 228740
+        },
+        {
+          "statement": "nk submitted a resolution plan to the FDIC by the December 1, 2022 deadline, as required under that guidance.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 228906
+        },
+        {
+          "statement": "See “Cautionary Note Regarding Forward-Looking Statements” elsewhere in this Annual Report on for more information.",
+          "pattern": "forward-looking",
+          "sentiment": 0.0,
+          "position": 235515
+        },
+        {
+          "statement": "he expected results or returns, which could adversely affect Fifth Third’s results of operations or future growth prospects and cause Fifth Third to fail to meet its stated goals and expectations.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 307970
+        },
+        {
+          "statement": "such businesses or investments, the loss of income could have an adverse effect on its earnings and future growth.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 313911
+        },
+        {
+          "statement": "Fifth Third uses models for business planning purposes that may not adequately predict future results.",
+          "pattern": "future\\s+(?:growth|performance|results|outlook)",
+          "sentiment": 0.0,
+          "position": 321960
+        },
+        {
+          "statement": "6 billion, or 58%, respectively, of the Bancorp’s domestic deposits were estimated to be insured.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 467585
+        },
+        {
+          "statement": "1 billion, respectively, of the Bancorp’s domestic deposits were estimated to be uninsured.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 467745
+        },
+        {
+          "statement": "9 billion, respectively, of time deposits were estimated to be uninsured.",
+          "pattern": "estimated\\s+(?:to|at)",
+          "sentiment": 0.0,
+          "position": 467884
+        },
+        {
+          "statement": "The first of these risk rating systems is based on regulatory guidance for credit risk rating systems.",
+          "pattern": "guidance",
+          "sentiment": 0.0,
+          "position": 481590
+        }
+      ],
+      "entities": {
+        "financial_metrics": [
+          {
+            "metric": "revenue",
+            "context": "revenue; (29) litigation, investigations, and enforcement proceedings; (30) breaches of contractual covenants, representations and warranties; (31) competition and changes in the financial services in",
+            "position": 181296
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue,",
+            "position": 258908
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue, capital, services,",
+            "position": 263433
+          },
+          {
+            "metric": "revenue",
+            "context": "revenue from a decrease in the fair value of residential MSRs is immediate,",
+            "position": 304013
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings retention is consistent with the organization’s capital needs,",
+            "position": 203380
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings upon adoption of CECL (“CECL transitional amount”) and the calculated change in the ACL relative to the day-one ACL upon adoption of CECL multiplied by a scaling factor of 25",
+            "position": 215114
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings and ability to repay a loan,",
+            "position": 299827
+          },
+          {
+            "metric": "earnings",
+            "context": "earnings, but also on the perception that customers,",
+            "position": 324033
+          },
+          {
+            "metric": "earnings",
+            "context": "Earnings Per Share, Diluted: Net income allocated to common shareholders divided by average common shares outstanding after the effect of dilutive stock-based awards•Nonperforming Portfolio Assets Rat",
+            "position": 361286
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations as of December 31, 2024 and 2023,",
+            "position": 410237
+          },
+          {
+            "metric": "profit",
+            "context": "profit organizations, including wealth planning, investment management, banking, insurance,",
+            "position": 439633
+          },
+          {
+            "metric": "profit",
+            "context": "profit sharing contributions during the years ended December 31, 2024, 2023 and 2022",
+            "position": 882154
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS”) apply to BHCs with $100 billion or more in total consolidated assets (the “EPS Tailoring Rule”) and the FRB, the Office of the Comptroller of the Currency (the “OCC”) and FDIC adopted a rule tha",
+            "position": 196149
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS Tailoring Rule, Category IV BHCs, including the Bancorp,",
+            "position": 219820
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS Tailoring Rule, the Bancorp, as a Category IV banking organization, is subject to the least restrictive enhanced prudential standards applicable to firms with $100",
+            "position": 221487
+          },
+          {
+            "metric": "EPS",
+            "context": "EPS Tailoring Rule, the Bancorp is no longer subject to company-run stress testing requirements and is subject to less frequent supervisory stress tests,",
+            "position": 221793
+          },
+          {
+            "metric": "margin",
+            "context": "margin, segregation trade reporting, position limits,",
+            "position": 230498
+          },
+          {
+            "metric": "margin",
+            "context": "margin,",
+            "position": 351897
+          },
+          {
+            "metric": "margin",
+            "context": "Margin (non-GAAP): Net interest income on an FTE basis divided by average interest-earning assets•Efficiency Ratio (non-GAAP): Noninterest expense divided by the sum of net interest income on an FTE b",
+            "position": 361058
+          },
+          {
+            "metric": "margin",
+            "context": "margin on an FTE basis (non-GAAP) was 2.90",
+            "position": 364516
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of 2.2",
+            "position": 526675
+          },
+          {
+            "metric": "growth rate",
+            "context": "growth rate of 0.4",
+            "position": 528210
+          },
+          {
+            "metric": "net income",
+            "context": "net income is sufficient to fund the dividends and the expected rate of earnings retention is consistent with the organization’s capital needs,",
+            "position": 203308
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common shareholders divided by average tangible common equity•Return on Average Common Equity, Excluding AOCI (non-GAAP): Net income available to common shareholders divided by",
+            "position": 360795
+          },
+          {
+            "metric": "net income",
+            "context": "Net income available to common shareholders2,155 2,212 2,330 Common Share DataEarnings per share - basic$3.16",
+            "position": 362727
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common shareholders for the year ended December 31, 2024 was $2.2",
+            "position": 363503
+          },
+          {
+            "metric": "net income",
+            "context": "net income available to common shareholders for the year ended December 31, 2023 was $2.2",
+            "position": 363704
+          },
+          {
+            "metric": "assets",
+            "context": "assets; (37) results of investments or acquired entities; (38) changes in accounting standards or interpretation or declines in the value of Fifth Third’s goodwill or other intangible assets; (39) ina",
+            "position": 181941
+          },
+          {
+            "metric": "assets",
+            "context": "assets and operates 1,089 full-service Banking Centers and 2,080 Fifth Third branded ATMs in Ohio, Kentucky, Indiana, Michigan, Illinois, Florida, Tennessee, West Virginia, Georgia,",
+            "position": 183834
+          },
+          {
+            "metric": "assets",
+            "context": "assets under care, of which it managed $69 billion for individuals,",
+            "position": 184297
+          },
+          {
+            "metric": "assets",
+            "context": "assets less than $100 billion, with the exception of risk committee requirements, which now apply to publicly traded BHCs with $50",
+            "position": 195392
+          },
+          {
+            "metric": "assets",
+            "context": "assets between $100 billion and $250 billion, including the Bancorp, were subject to the enhanced prudential standards that applied to them before enactment of EGRRCPA until December 31, 2019, when ru",
+            "position": 195586
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities,",
+            "position": 243004
+          },
+          {
+            "metric": "liabilities",
+            "context": "Liabilities and Guarantees167Restrictions on Dividends and Capital Actions126Legal and Regulatory Proceedings171Investment Securities127Related Party Transactions173Loans and Leases130Income Taxes174C",
+            "position": 346584
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities such as deposits,",
+            "position": 353380
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities based on their payment streams and interest rates,",
+            "position": 354125
+          },
+          {
+            "metric": "liabilities",
+            "context": "liabilities (7)146,188 137,592 119,624 Ratios:Net interest margin on an FTE basis (1) / (6)2.90",
+            "position": 369053
+          },
+          {
+            "metric": "equity",
+            "context": "Equity and Assets49Short-term Borrowings75, 162Item 1",
+            "position": 176811
+          },
+          {
+            "metric": "equity",
+            "context": "Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities43Item 7",
+            "position": 177094
+          },
+          {
+            "metric": "equity",
+            "context": "Equity Tier 1 (“CET1”) Capital Ratio, equal to the ratio of CET1",
+            "position": 212391
+          },
+          {
+            "metric": "equity",
+            "context": "equity subject to certain regulatory adjustments and deductions, including with respect to goodwill, intangible assets,",
+            "position": 212542
+          },
+          {
+            "metric": "equity",
+            "context": "equity, executive compensation, and increased capital and liquidity,",
+            "position": 281357
+          }
+        ],
+        "companies": [],
+        "dates": [],
+        "amounts": [
+          {
+            "text": "$21.7 billion",
+            "position": 175717
+          },
+          {
+            "text": "$213 billion",
+            "position": 183818
+          },
+          {
+            "text": "$634 billion",
+            "position": 184281
+          },
+          {
+            "text": "$69 billion",
+            "position": 184336
+          },
+          {
+            "text": "$100 billion",
+            "position": 195409
+          },
+          {
+            "text": "$50 billion",
+            "position": 195519
+          },
+          {
+            "text": "$250 billion",
+            "position": 195618
+          },
+          {
+            "text": "$250,000 ",
+            "position": 205238
+          },
+          {
+            "text": "$5 billion",
+            "position": 206568
+          },
+          {
+            "text": "$252 million",
+            "position": 206767
+          },
+          {
+            "text": "$28 million",
+            "position": 206912
+          },
+          {
+            "text": "$224 million",
+            "position": 206928
+          },
+          {
+            "text": "$45.42 ",
+            "position": 344007
+          },
+          {
+            "text": "$45.44 ",
+            "position": 344169
+          },
+          {
+            "text": "$625 million",
+            "position": 356508
+          },
+          {
+            "text": "$1.0 billion",
+            "position": 356716
+          },
+          {
+            "text": "$750 million",
+            "position": 357065
+          },
+          {
+            "text": "$12.6 billion",
+            "position": 357518
+          },
+          {
+            "text": "$15 million",
+            "position": 358518
+          },
+          {
+            "text": "$5 million",
+            "position": 359260
+          },
+          {
+            "text": "$5,630 ",
+            "position": 362476
+          },
+          {
+            "text": "$3.16 ",
+            "position": 362831
+          },
+          {
+            "text": "$24, ",
+            "position": 363275
+          },
+          {
+            "text": "$25 ",
+            "position": 363280
+          },
+          {
+            "text": "$16 ",
+            "position": 363288
+          },
+          {
+            "text": "$2.2 billion",
+            "position": 363588
+          },
+          {
+            "text": "$3.14 ",
+            "position": 363605
+          },
+          {
+            "text": "$159 million",
+            "position": 363647
+          },
+          {
+            "text": "$3.22 ",
+            "position": 363806
+          },
+          {
+            "text": "$137 million",
+            "position": 363848
+          },
+          {
+            "text": "$5.7 billion",
+            "position": 363941
+          },
+          {
+            "text": "$198 million",
+            "position": 364003
+          },
+          {
+            "text": "$530 million",
+            "position": 364689
+          },
+          {
+            "text": "$515 million",
+            "position": 364751
+          },
+          {
+            "text": "$32 million",
+            "position": 365831
+          },
+          {
+            "text": "$172 million",
+            "position": 366298
+          },
+          {
+            "text": "$5,654 ",
+            "position": 368702
+          },
+          {
+            "text": "$10,426 ",
+            "position": 368748
+          },
+          {
+            "text": "$10,450 ",
+            "position": 368831
+          },
+          {
+            "text": "$4,796 ",
+            "position": 368871
+          },
+          {
+            "text": "$2,155 ",
+            "position": 370058
+          },
+          {
+            "text": "$2,183 ",
+            "position": 370182
+          },
+          {
+            "text": "$19,398 ",
+            "position": 370249
+          },
+          {
+            "text": "$12,257 ",
+            "position": 370423
+          },
+          {
+            "text": "$19,645 ",
+            "position": 371500
+          },
+          {
+            "text": "$19,273 ",
+            "position": 371717
+          },
+          {
+            "text": "$212,927 ",
+            "position": 371756
+          },
+          {
+            "text": "$213,787 ",
+            "position": 371888
+          },
+          {
+            "text": "$1 million",
+            "position": 376613
+          },
+          {
+            "text": "$45,153 ",
+            "position": 394055
+          }
+        ],
+        "percentages": [
+          {
+            "text": "6.625%",
+            "value": 6.625,
+            "position": 174733
+          },
+          {
+            "text": "6.00%",
+            "value": 6.0,
+            "position": 174916
+          },
+          {
+            "text": "4.95%",
+            "value": 4.95,
+            "position": 175085
+          },
+          {
+            "text": "16.9%",
+            "value": 16.9,
+            "position": 191983
+          },
+          {
+            "text": "16.2%",
+            "value": 16.2,
+            "position": 192000
+          },
+          {
+            "text": "5%",
+            "value": 5.0,
+            "position": 199734
+          },
+          {
+            "text": "1.30%",
+            "value": 1.3,
+            "position": 205713
+          },
+          {
+            "text": "1.35%",
+            "value": 1.35,
+            "position": 205751
+          },
+          {
+            "text": "10%",
+            "value": 10.0,
+            "position": 208096
+          },
+          {
+            "text": "20%",
+            "value": 20.0,
+            "position": 208200
+          },
+          {
+            "text": "25%",
+            "value": 25.0,
+            "position": 215295
+          },
+          {
+            "text": "6.0%",
+            "value": 6.0,
+            "position": 216662
+          },
+          {
+            "text": "10.0%",
+            "value": 10.0,
+            "position": 216718
+          },
+          {
+            "text": "4.50 %",
+            "value": 4.5,
+            "position": 217628
+          },
+          {
+            "text": "3.2%",
+            "value": 3.2,
+            "position": 218120
+          },
+          {
+            "text": "2.5%",
+            "value": 2.5,
+            "position": 220703
+          },
+          {
+            "text": "0.05%",
+            "value": 0.05,
+            "position": 227377
+          },
+          {
+            "text": "77%",
+            "value": 77.0,
+            "position": 243436
+          },
+          {
+            "text": "5.25%",
+            "value": 5.25,
+            "position": 300337
+          },
+          {
+            "text": "5.5%",
+            "value": 5.5,
+            "position": 300347
+          },
+          {
+            "text": "100%",
+            "value": 100.0,
+            "position": 336983
+          },
+          {
+            "text": "66%",
+            "value": 66.0,
+            "position": 352702
+          },
+          {
+            "text": "34%",
+            "value": 34.0,
+            "position": 352710
+          },
+          {
+            "text": "5.631%",
+            "value": 5.631,
+            "position": 356858
+          },
+          {
+            "text": "1.840%",
+            "value": 1.84,
+            "position": 357007
+          },
+          {
+            "text": "4.895%",
+            "value": 4.895,
+            "position": 357208
+          },
+          {
+            "text": "1.486%",
+            "value": 1.486,
+            "position": 357359
+          },
+          {
+            "text": "1.09 %",
+            "value": 1.09,
+            "position": 363063
+          },
+          {
+            "text": "2.90%",
+            "value": 2.9,
+            "position": 364554
+          },
+          {
+            "text": "3.05%",
+            "value": 3.05,
+            "position": 364609
+          },
+          {
+            "text": "0.45%",
+            "value": 0.45,
+            "position": 365364
+          },
+          {
+            "text": "0.32%",
+            "value": 0.32,
+            "position": 365374
+          },
+          {
+            "text": "0.71%",
+            "value": 0.71,
+            "position": 365560
+          },
+          {
+            "text": "0.59%",
+            "value": 0.59,
+            "position": 365578
+          },
+          {
+            "text": "10.57%",
+            "value": 10.57,
+            "position": 367179
+          },
+          {
+            "text": "11.86%",
+            "value": 11.86,
+            "position": 367220
+          },
+          {
+            "text": "13.86%",
+            "value": 13.86,
+            "position": 367260
+          },
+          {
+            "text": "9.22%",
+            "value": 9.22,
+            "position": 367284
+          },
+          {
+            "text": "2.90 %",
+            "value": 2.9,
+            "position": 369144
+          },
+          {
+            "text": "17.8 %",
+            "value": 17.8,
+            "position": 370495
+          },
+          {
+            "text": "9.02 %",
+            "value": 9.02,
+            "position": 371972
+          },
+          {
+            "text": "21 %",
+            "value": 21.0,
+            "position": 394110
+          },
+          {
+            "text": "2 %",
+            "value": 2.0,
+            "position": 394208
+          },
+          {
+            "text": "2.08%",
+            "value": 2.08,
+            "position": 397150
+          },
+          {
+            "text": "2.24%",
+            "value": 2.24,
+            "position": 397205
+          },
+          {
+            "text": "16%",
+            "value": 16.0,
+            "position": 400293
+          },
+          {
+            "text": "18%",
+            "value": 18.0,
+            "position": 400349
+          },
+          {
+            "text": "7.00 %",
+            "value": 7.0,
+            "position": 401170
+          },
+          {
+            "text": "6.82 %",
+            "value": 6.82,
+            "position": 401190
+          },
+          {
+            "text": "4.32 %",
+            "value": 4.32,
+            "position": 401210
+          }
+        ]
+      },
+      "risk_analysis": {
+        "risk_count": 0,
+        "severity_score": 0.0,
+        "risk_categories": [
+          {
+            "category": "market_risk",
+            "count": 355
+          },
+          {
+            "category": "operational_risk",
+            "count": 53
+          },
+          {
+            "category": "financial_risk",
+            "count": 1414
+          },
+          {
+            "category": "regulatory_risk",
+            "count": 365
+          },
+          {
+            "category": "technology_risk",
+            "count": 317
+          }
+        ],
+        "key_risks": []
+      },
+      "tone_analysis": {
+        "formality_score": 0.0,
+        "certainty_score": 0.0,
+        "readability_score": 0.0,
+        "linguistic_features": {}
+      },
+      "embedding_features": {},
+      "anomalies": [],
+      "deduplication": {
+        "original_length": 1026480,
+        "filtered_length": 1004596,
+        "removed_ratio": 2.13,
+        "unique_content_focus": true
+      }
+    },
+    "trading_signals": {
+      "signal": "HOLD",
+      "strength": 49.209586945436,
+      "confidence": 0.4603929510118723,
+      "overall_score": 50.790413054564,
+      "recommendation": "HOLD",
+      "rationale": [
+        "Neutral signal - insufficient statistical significance"
+      ],
+      "components": {
+        "sentiment": 45.283018867924525,
+        "forward_looking": 50.0,
+        "risk": 100.0,
+        "certainty": 0.0,
+        "momentum": 50.0
+      },
+      "quant_metrics": {
+        "composite_signal": 0.015808261091279974,
+        "risk_adjusted_signal": 0.1063245180982741,
+        "expected_return_annualized": 0.03005705858842016,
+        "signal_sharpe_ratio": 0.0020038039058946776,
+        "information_coefficient": 0.12675675675675674,
+        "t_statistic": 0.1063245180982741,
+        "p_value": 0.5,
+        "factor_portfolio_volatility": 0.14867935800723445,
+        "signal_strength_zscore": 0.1063245180982741,
+        "statistically_significant": false
+      },
+      "factor_loadings": {
+        "sentiment": -0.09433962264150944,
+        "forward_looking": 0.0,
+        "risk": 1.0,
+        "certainty": -1.0,
+        "momentum": 0.0
+      },
+      "statistical_significance": {
+        "t_statistic": 0.1063245180982741,
+        "p_value": 0.5,
+        "significant": false,
+        "factor_count": 3,
+        "composite_signal": 0.015808261091279974
+      },
+      "risk_adjusted_signal": 0.1063245180982741,
+      "expected_return": 0.0003005705858842016,
+      "signal_sharpe": 0.0020038039058946776,
+      "information_coefficient": 0.12675675675675674
+    },
+    "strategy_score": 50.790413054564,
+    "confidence": 0.4603929510118723,
+    "recommendation": "HOLD"
+  },
+  "cached_at": "2025-11-02T16:24:52.454491",
+  "filing_date": "2025-02-24",
+  "filing_filename": "2025-02-24-10k-FITB.html",
+  "previous_filing_date": null,
+  "has_previous_filing": false
+}

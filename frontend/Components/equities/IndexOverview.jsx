@@ -12,9 +12,9 @@ export default function EquitiesIndexOverview({ snapshot, risk }) {
 
   const handleGenerateSummary = async () => {
     setIsGenerating(true);
-    const { base44 } = await import('@/api/base44Client');
+    const { api } = await import('@/api/apiClient');
     try {
-      const result = await base44.integrations.Core.InvokeLLM({
+      const result = await api.integrations.Core.InvokeLLM({
         prompt: `You are an equity desk analyst. Provide a brief (3-5 sentences) summary of equity market conditions based on this data: ${JSON.stringify({ snapshot, risk })}. Focus on: index performance, sector rotation signals, volatility regime, correlation breakdown. Use institutional tone, no advice.`,
       });
       setSummary({ text: result, timestamp: new Date() });

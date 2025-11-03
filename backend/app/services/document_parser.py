@@ -1,8 +1,3 @@
-"""
-Document Parser Service
-Handles parsing of various document formats (PDF, HTML, XML, TXT, DOCX)
-"""
-
 import os
 import re
 from typing import Tuple, Dict, List, Optional
@@ -12,14 +7,8 @@ from app.services.aws_config import is_aws_configured
 
 
 class DocumentParser:
-    """Service for parsing various document formats"""
-    
     @staticmethod
     def parse_file(file_path: str) -> Tuple[str, str]:
-        """
-        Parse a file and extract text content
-        Returns: (text_content, file_format)
-        """
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"File not found: {file_path}")
         
@@ -38,7 +27,6 @@ class DocumentParser:
         elif file_ext == '.docx':
             return DocumentParser._parse_docx(file_path), 'docx'
         else:
-            # Try text parsing as fallback
             try:
                 return DocumentParser._parse_txt(file_path), 'txt'
             except:
@@ -46,7 +34,6 @@ class DocumentParser:
     
     @staticmethod
     def _parse_txt(file_path: str) -> str:
-        """Parse plain text file"""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 return f.read()

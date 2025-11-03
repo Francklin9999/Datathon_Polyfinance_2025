@@ -1,0 +1,111 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: intellirisk-backend
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - FORCE_NEW_NLP=${FORCE_NEW_NLP:-false}
+      # AWS Configuration (optional)
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - S3_BUCKET_NAME=${S3_BUCKET_NAME:-intellirisk-temp}
+      - OPENSEARCH_ENDPOINT=${OPENSEARCH_ENDPOINT:-}
+      # External API Keys (optional)
+      - NEWSAPI_KEY=${NEWSAPI_KEY:-}
+      - COURTLISTENER_API_KEY=${COURTLISTENER_API_KEY:-}
+      # SearXNG Configuration
+      - SEARXNG_URL=${SEARXNG_URL:-http://searxng:8888}
+    volumes:
+      # Mount data directories for persistence
+      - ./data:/app/data
+      - ./fillings:/app/fillings
+      - ./nlp_cache.json:/app/nlp_cache.json
+      - ./backend/uploads:/app/uploads
+      # Mount .env file if it exists (optional)
+      - ./.env:/app/.env:ro
+    networks:
+      - intellirisk-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # For large NLP models, increase resources
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+        reservations:
+          cpus: '1.0'
+          memory: 2G
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: intellirisk-frontend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    environment:
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:8000/api}
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - intellirisk-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  searxng:
+    image: docker.io/searxng/searxng:latest
+    container_name: intellirisk-searxng
+    ports:
+      - "${SEARXNG_PORT:-8888}:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=http://${SEARXNG_HOSTNAME:-localhost}:8888/
+      - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
+      - UWSGI_THREADS=${SEARXNG_UWSGI_THREADS:-4}
+    networks:
+      - intellirisk-network
+    restart: unless-stopped
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "3"
+
+networks:
+  intellirisk-network:
+    driver: bridge
+
+volumes:
+  data:
+  fillings:
+  nlp_cache:

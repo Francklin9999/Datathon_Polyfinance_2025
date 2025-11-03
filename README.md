@@ -30,6 +30,9 @@ IntelliRisk is an end-to-end financial analytics platform that:
 - **Market Research** - AI-powered market research and analysis for tickers
 - **Stock Analysis** - Comprehensive stock data, filings analysis, and relationship graphs
 - **AI Voice Chat** - AWS-powered voice transcription and text-to-speech for natural conversations
+- **Image Generation** - AWS Bedrock Titan Image Generator and Stable Diffusion integration
+- **Video Generation** - AWS Bedrock Luma Ray2 model for short video generation
+- **Online Search Integration** - SearXNG integration for real-time web search and research
 
 ---
 
@@ -39,11 +42,13 @@ IntelliRisk is an end-to-end financial analytics platform that:
 
 **Backend (Python/FastAPI)**
 - RESTful API with FastAPI framework
-- Microservices architecture with 14 modular routers
+- Microservices architecture with 16 modular routers
 - AWS integration (Bedrock, Comprehend, Textract, S3, OpenSearch, Transcribe, Polly)
 - ML/NLP models (spaCy, Transformers, scikit-learn)
 - Document parsing (PDF, HTML, XML, DOCX)
 - NLP analysis caching system
+- Image and video generation (AWS Bedrock Titan/Stable Diffusion, Luma Ray2)
+- SearXNG integration for online search capabilities
 
 **Frontend (React/Vite)**
 - React 18 with React Router
@@ -65,7 +70,7 @@ IntelliRisk is an end-to-end financial analytics platform that:
 - opensearch-py - OpenSearch client
 - yfinance - Stock data
 - BeautifulSoup4, PyPDF2, pdfplumber, python-docx - Document parsing
-- httpx - HTTP client
+- httpx, requests - HTTP clients
 
 **Frontend Dependencies:**
 - React 18.2.0
@@ -85,7 +90,81 @@ IntelliRisk is an end-to-end financial analytics platform that:
 
 - Python 3.9+
 - Node.js 18+
+- Docker and Docker Compose (for containerized deployment)
 - AWS account (optional, for enhanced features)
+- Git and Make (for SearXNG setup)
+
+### Quick Start with Docker 🐳
+
+The easiest way to run IntelliRisk is using Docker:
+
+1. **Clone the repository**:
+```bash
+git clone <repository-url>
+cd polyfinance2025
+```
+
+2. **(Optional) Configure environment variables**:
+```bash
+cp .env.example .env
+# Edit .env and add your AWS credentials if needed
+```
+
+3. **Build and start the services**:
+```bash
+docker compose up -d
+```
+
+4. **Access the application**:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+- SearXNG (for AI-powered search): http://localhost:8888
+
+5. **View logs**:
+```bash
+docker compose logs -f
+```
+
+6. **Stop the services**:
+```bash
+docker compose down
+```
+
+For detailed Docker instructions, see [DOCKER.md](DOCKER.md)
+
+---
+
+### Manual Setup (Backend and Frontend Separately)
+
+### SearXNG Setup (Required for Online Search Features)
+
+SearXNG is required for online search capabilities used in market research and AI chat features.
+
+1. **Clone SearXNG repository** (if not already cloned):
+```bash
+cd ~  # Or your preferred directory
+git clone https://github.com/searxng/searxng.git
+cd searxng
+```
+
+2. **Run SearXNG using Docker Compose**:
+```bash
+make run
+```
+
+This will start SearXNG on `http://localhost:8888` by default.
+
+3. **Verify SearXNG is running**:
+Open `http://localhost:8888` in your browser to confirm it's accessible.
+
+4. **Configure the backend** (optional, if using custom URL):
+The backend defaults to `http://127.0.0.1:8888`. To use a different URL, set the environment variable:
+```bash
+export SEARXNG_URL=http://your-searxng-url:port
+```
+
+**Note:** Keep SearXNG running while using the IntelliRisk platform. The backend will use it for real-time web searches in market research and AI chat features.
 
 ### Backend Setup
 
@@ -122,6 +201,7 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_REGION=us-east-1
 S3_BUCKET_NAME=intellirisk-temp
 OPENSEARCH_ENDPOINT=your_opensearch_endpoint
+SEARXNG_URL=http://127.0.0.1:8888  # SearXNG URL (default)
 ```
 
 7. Start the backend server:
@@ -133,6 +213,8 @@ python main.py
 
 The API will be available at `http://localhost:8000`
 API documentation at `http://localhost:8000/docs`
+
+**Important:** Make sure SearXNG is running (via `make run` in the SearXNG directory) before starting the backend for full functionality.
 
 ### Frontend Setup
 
@@ -366,6 +448,7 @@ Risk Score = 0.35 × Supply Chain Risk +
 - AWS voice transcription
 - Text-to-speech synthesis
 - 10-K RAG analysis
+- Online search integration (SearXNG)
 
 **API Endpoints:**
 - `POST /api/ai/invoke-llm` - Invoke LLM with custom prompt
@@ -375,7 +458,41 @@ Risk Score = 0.35 × Supply Chain Risk +
 - `POST /api/ai/aws-voice/synthesize` - Convert text to speech
 - `POST /api/ai/tenk-rag-analysis` - 10-K RAG analysis
 
-### 13. Entity Management
+### 13. Image Generation Module
+
+**Purpose:** Generate images using AWS Bedrock
+
+**Features:**
+- AWS Bedrock Titan Image Generator
+- Stable Diffusion XL integration
+- Multiple size and quality options
+- S3 storage integration
+
+**API Endpoints:**
+- `POST /api/image/generate` - Generate image from text prompt
+- `GET /api/image/supported-options` - Get supported options
+
+### 14. Video Generation Module
+
+**Purpose:** Generate short videos using AWS Bedrock Luma Ray2
+
+**Features:**
+- AWS Bedrock Luma Ray2 model integration
+- Multiple duration options (5s, 10s)
+- Multiple resolutions (540p, 720p, 1080p)
+- Aspect ratio options (16:9, 9:16, 1:1)
+- Async job tracking
+- S3 storage integration
+
+**API Endpoints:**
+- `POST /api/video/generate` - Generate video from text prompt
+- `GET /api/video/status/{invocation_id}` - Get video generation status
+- `POST /api/video/cancel/{invocation_id}` - Cancel video job
+- `GET /api/video/list` - List generated videos
+- `GET /api/video/supported-options` - Get supported options
+- `GET /api/video/test-access` - Test Bedrock access
+
+### 15. Entity Management
 
 **Purpose:** CRUD operations for financial entities
 
@@ -390,7 +507,7 @@ Risk Score = 0.35 × Supply Chain Risk +
 **API Endpoints:**
 - Entity CRUD for MarketSnapshot, RiskMetrics, NewsItem, Position, Order, EventItem
 
-### 14. File Management
+### 16. File Management
 
 **Purpose:** File upload and retrieval
 
@@ -498,6 +615,24 @@ Risk Score = 0.35 × Supply Chain Risk +
 | `/aws-voice/synthesize` | POST | Convert text to speech |
 | `/tenk-rag-analysis` | POST | 10-K RAG analysis |
 
+### Image Endpoints (`/api/image`)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/generate` | POST | Generate image from text prompt |
+| `/supported-options` | GET | Get supported options |
+
+### Video Endpoints (`/api/video`)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/generate` | POST | Generate video from text prompt |
+| `/status/{invocation_id}` | GET | Get video generation status |
+| `/cancel/{invocation_id}` | POST | Cancel video job |
+| `/list` | GET | List generated videos |
+| `/supported-options` | GET | Get supported options |
+| `/test-access` | GET | Test Bedrock access |
+
 ### Company Endpoints (`/api/company`)
 
 | Endpoint | Method | Description |
@@ -597,8 +732,10 @@ Risk Score = 0.35 × Supply Chain Risk +
 - `OpenSearchService` - AWS OpenSearch RAG
 
 **Utility Services:**
-- `WebScraperService` - Web scraping
-- `SearXNGService` - Search engine integration
+- `WebScraperService` - Web scraping with BeautifulSoup
+- `SearXNGService` - SearXNG search engine integration for online search
+- `ImageGenerationService` - AWS Bedrock image generation (Titan, Stable Diffusion)
+- `VideoGenerationService` - AWS Bedrock video generation (Luma Ray2)
 
 ### Frontend Components
 
@@ -657,6 +794,13 @@ AWS services are configured via environment variables:
 - `AWS_BEARER_TOKEN_BEDROCK` - Optional Bedrock bearer token
 - `S3_BUCKET_NAME` - S3 bucket name
 - `OPENSEARCH_ENDPOINT` - OpenSearch endpoint URL
+
+### SearXNG Configuration
+
+SearXNG is configured via environment variable:
+- `SEARXNG_URL` - SearXNG instance URL (default: `http://127.0.0.1:8888`)
+
+The backend will automatically use SearXNG for online search when available. Make sure SearXNG is running before using features that require online search (market research, AI chat with real-time data).
 
 ---
 
@@ -734,19 +878,22 @@ where Risk_Free_Rate = 2% (default)
 
 ### ✅ Completed Backend
 
-- ✅ 14 API routers with comprehensive endpoints
-- ✅ 30+ services covering all core functionality
+- ✅ 16 API routers with comprehensive endpoints
+- ✅ 35+ services covering all core functionality
 - ✅ Data models (Portfolio, CompanyRisk, PortfolioImpact, Scenario, etc.)
 - ✅ Portfolio Service (equal-weight universe builder)
 - ✅ Calibration Service (Ridge regression)
 - ✅ Document Analyzer Service (consolidated analysis)
 - ✅ Recommendations Service (hedge menu generation)
 - ✅ NLP analysis cache system
-- ✅ Market research service
+- ✅ Market research service with SearXNG integration
 - ✅ Stock graphs and relationship analysis
 - ✅ AWS integration (all services)
 - ✅ Voice chat capabilities (Transcribe + Polly)
 - ✅ WebSocket support for real-time chat
+- ✅ Image generation (AWS Bedrock Titan/Stable Diffusion)
+- ✅ Video generation (AWS Bedrock Luma Ray2)
+- ✅ SearXNG integration for online search capabilities
 
 ### ✅ Completed Frontend
 
@@ -808,13 +955,14 @@ intellirisk/
 ├── backend/
 │   ├── app/
 │   │   ├── models/              # Data models (types.py, entities.py, requests.py)
-│   │   ├── routers/              # 14 API route handlers
+│   │   ├── routers/              # 16 API route handlers
 │   │   │   ├── ai.py
 │   │   │   ├── analytics.py
 │   │   │   ├── company.py
 │   │   │   ├── documents.py
 │   │   │   ├── entities.py
 │   │   │   ├── files.py
+│   │   │   ├── image.py
 │   │   │   ├── market_research.py
 │   │   │   ├── nlp_cache.py
 │   │   │   ├── portfolio.py
@@ -822,13 +970,17 @@ intellirisk/
 │   │   │   ├── regulatory.py
 │   │   │   ├── scenarios.py
 │   │   │   ├── stock_graphs.py
-│   │   │   └── stocks.py
-│   │   └── services/             # 30+ business logic services
+│   │   │   ├── stocks.py
+│   │   │   └── video.py
+│   │   └── services/             # 35+ business logic services
 │   │       ├── aws_*.py          # AWS service integrations
 │   │       ├── regulatory_analyzer.py
 │   │       ├── impact_modeler.py
 │   │       ├── portfolio_*.py
 │   │       ├── nlp_*.py
+│   │       ├── image_generation_service.py
+│   │       ├── video_generation_service.py
+│   │       ├── searxng_service.py
 │   │       └── ...
 │   ├── main.py                   # FastAPI application entry point
 │   ├── requirements.txt          # Python dependencies
@@ -836,7 +988,7 @@ intellirisk/
 │   └── env.template              # Environment variables template
 ├── frontend/
 │   ├── src/
-│   │   ├── api/                  # API clients (apiClient.js, base44Client.js)
+│   │   ├── api/                  # API clients (apiClient.js)
 │   │   ├── components/           # Reusable components
 │   │   │   ├── ui/               # UI component library
 │   │   │   ├── ChatAssistant.jsx
@@ -911,5 +1063,14 @@ intellirisk/
 
 ---
 
-**Document Version:** 2.0  
-**Last Updated:** 2024
+**Document Version:** 2.1  
+**Last Updated:** January 2025
+
+### Recent Updates
+
+- ✅ Added Image Generation Module (AWS Bedrock Titan/Stable Diffusion)
+- ✅ Added Video Generation Module (AWS Bedrock Luma Ray2)
+- ✅ Integrated SearXNG for online search capabilities
+- ✅ Updated to 16 API routers (added image and video routers)
+- ✅ Enhanced market research with real-time web search
+- ✅ Added `requests` package to requirements.txt

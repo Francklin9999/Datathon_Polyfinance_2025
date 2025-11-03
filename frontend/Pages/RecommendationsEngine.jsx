@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '@/api/apiClient';
 import { usePortfolio } from '@/contexts/PortfolioContext';
-import CacheService from '@/services/cacheService';
+import StorageService from '@/services/storageService';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -28,8 +28,8 @@ export default function RecommendationsEngine() {
   const [documentAdvice, setDocumentAdvice] = useState(null);
 
   useEffect(() => {
-    // Load document advice from cache if available
-    const advice = CacheService.getDocumentAdvice();
+    // Load document advice from storage if available
+    const advice = StorageService.getDocumentAdvice();
     if (advice) {
       setDocumentAdvice(advice);
     }

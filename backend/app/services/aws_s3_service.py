@@ -146,7 +146,12 @@ def _get_content_type(file_ext: str) -> str:
         '.xml': 'application/xml',
         '.txt': 'text/plain',
         '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-        '.json': 'application/json'
+        '.json': 'application/json',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.gif': 'image/gif',
+        '.webp': 'image/webp'
     }
     return content_types.get(file_ext.lower(), 'application/octet-stream')
 

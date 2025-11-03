@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -21,7 +21,7 @@ export default function PortfolioDashboard() {
   // Fetch SP500 portfolio data from backend
   const { data: portfolioData, error: portfolioError, isLoading: isLoadingPortfolio, refetch: refetchPortfolio } = useQuery({
     queryKey: ['sp500-portfolio'],
-    queryFn: () => base44.regulatory.getSP500Portfolio(),
+    queryFn: () => api.regulatory.getSP500Portfolio(),
     initialData: null,
   });
 

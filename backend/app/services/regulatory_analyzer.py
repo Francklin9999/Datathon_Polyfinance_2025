@@ -1,8 +1,3 @@
-"""
-Regulatory Analyzer Service
-Analyzes regulatory documents using NLP and AI
-"""
-
 import re
 import json
 import numpy as np
@@ -28,14 +23,10 @@ class RegulatoryAnalyzer:
     
     @staticmethod
     def analyze_document(document_text: str) -> Dict:
-        """
-        Analyze regulatory document and extract structured information
-        Uses AWS Comprehend and Bedrock when available, falls back to basic extraction
-        """
+        """Analyze regulatory document and extract structured information"""
         if not document_text or len(document_text.strip()) < 100:
             raise ValueError("Document text is too short or empty")
         
-        # Try AWS Bedrock analysis first if configured
         if is_aws_configured():
             import logging
             logger = logging.getLogger(__name__)
@@ -48,7 +39,6 @@ class RegulatoryAnalyzer:
                 logger.info("   AWS Bedrock analysis completed successfully")
                 
                 if bedrock_analysis.get("parsed", True):
-                    # Use Bedrock results as base
                     result = {
                         "regulation_name": bedrock_analysis.get("regulation_name", "Regulatory Document"),
                         "regulation_type": bedrock_analysis.get("regulation_type", "other"),
@@ -60,7 +50,6 @@ class RegulatoryAnalyzer:
                         **bedrock_analysis
                     }
                     
-                    # Enhance with AWS Comprehend entity extraction
                     try:
                         logger.info("   Attempting AWS Comprehend entity extraction...")
                         comprehend_entities = ComprehendService.extract_entities(document_text)
@@ -68,10 +57,9 @@ class RegulatoryAnalyzer:
                         result["key_phrases"] = comprehend_entities.get("key_phrases", [])
                         logger.info("   AWS Comprehend extraction completed successfully")
                     except Exception as e:
-                        logger.warning(f"   AWS Comprehend extraction failed: {str(e)}")
+                        logger.warning(f"AWS Comprehend extraction failed: {str(e)}")
                         pass
                     
-                    # Add basic extraction as fallback for missing fields
                     if not result.get("measures"):
                         result["measures"] = RegulatoryAnalyzer._extract_measures(document_text)
                     if not result.get("key_provisions"):
@@ -79,24 +67,18 @@ class RegulatoryAnalyzer:
                     
                     return result
             except Exception as e:
-                # Fallback to basic extraction on error
                 import logging
                 logger = logging.getLogger(__name__)
-                logger.warning(f"   AWS Bedrock analysis failed: {str(e)}, falling back to basic extraction")
+                logger.warning(f"AWS Bedrock analysis failed: {str(e)}, falling back to basic extraction")
                 pass
         
-        # Basic extraction (fallback)
-        # Extract basic information
         entities = RegulatoryAnalyzer._extract_entities(document_text)
         
-        # Try AWS Comprehend for better entity extraction if configured
         if is_aws_configured():
             import logging
             logger = logging.getLogger(__name__)
-            logger.info("   Attempting AWS Comprehend entity extraction (fallback path)...")
             try:
                 comprehend_entities = ComprehendService.extract_entities(document_text)
-                # Merge Comprehend entities with basic extraction
                 comprehend_orgs = comprehend_entities.get("entities", {}).get("organizations", [])
                 comprehend_locs = comprehend_entities.get("entities", {}).get("locations", [])
                 
@@ -106,32 +88,20 @@ class RegulatoryAnalyzer:
                     entities["countries"].extend([e.get("text", "") for e in comprehend_locs[:10]])
                 
                 entities["key_phrases"] = [p.get("text", "") for p in comprehend_entities.get("key_phrases", [])[:20]]
-                logger.info("   AWS Comprehend extraction completed successfully (fallback path)")
             except Exception as e:
-                logger.warning(f"   AWS Comprehend extraction failed: {str(e)}")
+                logger.warning(f"AWS Comprehend extraction failed: {str(e)}")
                 pass
         
         measures = RegulatoryAnalyzer._extract_measures(document_text)
         provisions = RegulatoryAnalyzer._extract_provisions(document_text)
         supply_chain_impact = RegulatoryAnalyzer._analyze_supply_chain_impact(document_text)
         
-        # Generate summary
         summary = RegulatoryAnalyzer._generate_summary(document_text, entities, measures)
-        
-        # Extract dates
         effective_date = RegulatoryAnalyzer._extract_dates(document_text)
-        
-        # Extract jurisdiction and issuing body
         jurisdiction = RegulatoryAnalyzer._extract_jurisdiction(document_text)
         issuing_body = RegulatoryAnalyzer._extract_issuing_body(document_text)
-        
-        # Determine regulation type
         regulation_type = RegulatoryAnalyzer._classify_regulation_type(document_text, measures)
-        
-        # Extract regulation name
         regulation_name = RegulatoryAnalyzer._extract_regulation_name(document_text)
-        
-        # Extract citations
         citations = RegulatoryAnalyzer._extract_citations(document_text)
         
         return {
@@ -153,14 +123,13 @@ class RegulatoryAnalyzer:
     
     @staticmethod
     def _extract_entities(document_text: str) -> Dict:
-        """Extract entities using spaCy NER and embeddings for better accuracy"""
+        """Extract entities using spaCy NER and embeddings"""
         entities = {
             "tickers": [],
             "sectors": [],
             "countries": []
         }
         
-        # Use spaCy NER for entity extraction
         if SPACY_AVAILABLE:
             try:
                 if not hasattr(RegulatoryAnalyzer, '_nlp_model'):
@@ -170,11 +139,9 @@ class RegulatoryAnalyzer:
                         RegulatoryAnalyzer._nlp_model = None
                 
                 if RegulatoryAnalyzer._nlp_model:
-                    doc = RegulatoryAnalyzer._nlp_model(document_text[:100000])  # Limit text length
+                    doc = RegulatoryAnalyzer._nlp_model(document_text[:100000])
                     
-                    # Extract organizations (often companies/tickers)
                     orgs = [ent.text for ent in doc.ents if ent.label_ == "ORG"]
-                    # Filter for potential tickers (3-5 uppercase letters)
                     potential_tickers = [
                         org for org in orgs 
                         if 3 <= len(org) <= 5 and org.isupper() and org.isalpha()
@@ -182,20 +149,16 @@ class RegulatoryAnalyzer:
                     common_words = {'THE', 'AND', 'FOR', 'ARE', 'BUT', 'NOT', 'YOU', 'ALL', 'CAN'}
                     entities["tickers"] = [t for t in set(potential_tickers) if t not in common_words][:20]
                     
-                    # Extract locations (countries)
                     locations = [ent.text for ent in doc.ents if ent.label_ == "GPE"]
-                    # Known country list for filtering
                     known_countries = [
                         "USA", "United States", "China", "Japan", "Germany", "France",
                         "United Kingdom", "Canada", "Mexico", "South Korea", "India",
                         "Brazil", "Australia", "Italy", "Spain", "Netherlands", "Russia"
                     ]
-                    # Use embeddings for semantic matching of country names
                     if TRANSFORMERS_AVAILABLE:
                         try:
                             if not hasattr(RegulatoryAnalyzer, '_embedding_model'):
                                 try:
-                                    # Use better prebuilt transformer for regulatory text analysis
                                     RegulatoryAnalyzer._embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
                                 except:
                                     try:
@@ -212,7 +175,6 @@ class RegulatoryAnalyzer:
                                 )
                                 
                                 similarities = cosine_similarity(location_embeddings, country_embeddings)
-                                # Extract countries with similarity > 0.7
                                 for i, loc in enumerate(locations[:50]):
                                     if np.max(similarities[i]) > 0.7:
                                         idx = np.argmax(similarities[i])
@@ -221,7 +183,6 @@ class RegulatoryAnalyzer:
                         except:
                             pass
                     
-                    # If embedding matching didn't work, fall back to keyword matching
                     if not entities["countries"]:
                         for country in known_countries:
                             if country.lower() in document_text.lower() or country in document_text:
@@ -230,14 +191,12 @@ class RegulatoryAnalyzer:
             except:
                 pass
         
-        # Fallback to regex pattern matching if spaCy not available
         if not entities["tickers"]:
             ticker_pattern = r'\b([A-Z]{2,5})\b'
             potential_tickers = re.findall(ticker_pattern, document_text)
             common_words = {'THE', 'AND', 'FOR', 'ARE', 'BUT', 'NOT', 'YOU', 'ALL', 'CAN', 'HER', 'WAS', 'ONE', 'OUR', 'OUT', 'DAY', 'GET', 'HAS', 'HIM', 'HIS', 'HOW', 'MAN', 'NEW', 'NOW', 'OLD', 'SEE', 'TWO', 'WAY', 'WHO', 'BOY', 'DID', 'ITS', 'LET', 'PUT', 'SAY', 'SHE', 'TOO', 'USE'}
             entities["tickers"] = [t for t in set(potential_tickers) if t not in common_words and len(t) >= 3][:20]
         
-        # Extract sectors using semantic embeddings
         sectors_list = [
             "Technology", "Healthcare", "Financials", "Consumer Discretionary",
             "Communication Services", "Industrials", "Consumer Staples",
@@ -247,9 +206,8 @@ class RegulatoryAnalyzer:
         
         if TRANSFORMERS_AVAILABLE and hasattr(RegulatoryAnalyzer, '_embedding_model') and RegulatoryAnalyzer._embedding_model:
             try:
-                # Split document into chunks for better matching
                 sentences = re.split(r'[.!?]\s+', document_text)
-                doc_chunks = [s for s in sentences if len(s) > 20][:20]  # Top 20 sentences
+                doc_chunks = [s for s in sentences if len(s) > 20][:20]
                 
                 if doc_chunks:
                     chunk_embeddings = RegulatoryAnalyzer._embedding_model.encode(
@@ -260,7 +218,6 @@ class RegulatoryAnalyzer:
                     )
                     
                     similarities = cosine_similarity(chunk_embeddings, sector_embeddings)
-                    # If any chunk has high similarity with a sector, include it
                     for i, sector in enumerate(sectors_list):
                         if np.max(similarities[:, i]) > 0.65:
                             if sector not in entities["sectors"]:
@@ -268,7 +225,6 @@ class RegulatoryAnalyzer:
             except:
                 pass
         
-        # Fallback to keyword matching if embeddings didn't find sectors
         if not entities["sectors"]:
             for sector in sectors_list:
                 if sector.lower() in document_text.lower():

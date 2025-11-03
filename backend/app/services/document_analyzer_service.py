@@ -1,8 +1,3 @@
-"""
-Document Analyzer Service - Consolidated service for document analysis
-Returns CompanyRisk[] and PortfolioImpact per spec
-"""
-
 from typing import Dict, List, Optional
 import numpy as np
 import os
@@ -26,8 +21,6 @@ from app.services.nlp_quant_strategy import NLPQuantStrategy
 
 
 class DocumentAnalyzerService:
-    """Consolidated service for document analysis with portfolio impact"""
-    
     @staticmethod
     def analyze_document(
         portfolio: Portfolio,
@@ -38,25 +31,6 @@ class DocumentAnalyzerService:
         strict_units: bool = False,
         max_companies: Optional[int] = None
     ) -> Dict:
-        """
-        Analyze document (upload, agent query, or raw text) and return CompanyRisk[] + PortfolioImpact
-        
-        Args:
-            portfolio: Current portfolio
-            document_text: Raw document text
-            file_url: URL/path to document file
-            agent_query: Query string for agent to fetch document
-            threshold: Cosine similarity threshold for matching
-            strict_units: Only match with unit guards
-            
-        Returns:
-            {
-                "company_risks": List[CompanyRisk],
-                "portfolio_impact": PortfolioImpact,
-                "document_provenance": Dict,
-                "calibration": CalibrationMetadata
-            }
-        """
         start_time = time.time()
         portfolio_size = len(portfolio.holdings) if portfolio.holdings else 0
         
@@ -64,7 +38,6 @@ class DocumentAnalyzerService:
         logger.info(f"   Input: file_url={file_url is not None}, document_text={'yes' if document_text else 'no'}, agent_query={agent_query is not None}")
         logger.info(f"   Settings: threshold={threshold}, strict_units={strict_units}")
         
-        # Step 1: Get document text (from upload, agent query, or provided)
         step_start = time.time()
         logger.info("Step 1: Extracting document text...")
         doc_text, doc_provenance = DocumentAnalyzerService._get_document_text(
@@ -83,7 +56,6 @@ class DocumentAnalyzerService:
         logger.info(f"   Document extracted: {doc_length:,} chars from {doc_source} (format: {doc_format})")
         logger.debug(f"   Step 1 time: {time.time() - step_start:.2f}s")
         
-        # Step 2: Analyze document using regulatory analyzer
         step_start = time.time()
         logger.info("Step 2: Analyzing document with regulatory analyzer...")
         logger.info(f"   Document length: {len(doc_text):,} characters")
@@ -97,46 +69,26 @@ class DocumentAnalyzerService:
             logger.error(f"   ERROR in Step 2 after {step_time:.2f}s: {str(e)}", exc_info=True)
             raise
         
-        # Step 3: Get calibration weights
         step_start = time.time()
-        logger.info("Step 3: Loading calibration weights...")
         calibration = CalibrationService.get_calibrated_weights()
-        logger.info(f"   Calibration loaded: n_samples={calibration.n_samples}, confidence={calibration.confidence}")
-        logger.debug(f"   Step 3 time: {time.time() - step_start:.2f}s")
+        logger.debug(f"Step 3 time: {time.time() - step_start:.2f}s")
         
-        # Step 4: Calculate document sentiment using NLP
         step_start = time.time()
-        logger.info("Step 4: Calculating document sentiment using NLP...")
         try:
             sentiment_score = DocumentAnalyzerService._calculate_document_sentiment(doc_text)
-            step_time = time.time() - step_start
-            logger.info(f"   Document sentiment calculated: {sentiment_score:.1f}/100 (took {step_time:.2f}s)")
-            logger.debug(f"   Step 4 time: {step_time:.2f}s")
         except Exception as e:
-            step_time = time.time() - step_start
-            logger.error(f"   ERROR in Step 4 after {step_time:.2f}s: {str(e)}", exc_info=True)
-            # Don't fail completely, use neutral sentiment
-            logger.warning("   Using fallback neutral sentiment (50.0)")
+            logger.error(f"Error calculating sentiment: {str(e)}", exc_info=True)
             sentiment_score = 50.0
         
-        # Step 5: For each ticker in portfolio, calculate CompanyRisk
-        # OPTIMIZATION: For large portfolios, analyze a sample for speed
-        # User can choose how many companies to analyze (default: 50)
         step_start = time.time()
         portfolio_holdings = portfolio.holdings
-        MAX_COMPANIES_TO_ANALYZE = max_companies if max_companies else 50  # User-configurable, default 50
+        MAX_COMPANIES_TO_ANALYZE = max_companies if max_companies else 50
         SAMPLE_SIZE = min(MAX_COMPANIES_TO_ANALYZE, portfolio_size)
         
-        logger.info(f"Step 5: Calculating company risks for {SAMPLE_SIZE} companies (sampled from {portfolio_size} total)...")
-        
-        # Select companies to analyze:
-        # 1. Top 20 by weight (if weighted portfolio)
-        # 2. Random sample of remaining companies
         import random
         tickers_list = list(portfolio_holdings.keys())
         selected_tickers = set()
         
-        # Get top 20 by weight
         if portfolio_holdings:
             sorted_by_weight = sorted(
                 tickers_list,
@@ -145,7 +97,6 @@ class DocumentAnalyzerService:
             )[:20]
             selected_tickers.update(sorted_by_weight)
         
-        # Fill remaining slots with random sample
         remaining_tickers = [t for t in tickers_list if t not in selected_tickers]
         if remaining_tickers:
             random_sample = random.sample(
@@ -155,7 +106,6 @@ class DocumentAnalyzerService:
             selected_tickers.update(random_sample)
         
         selected_tickers = list(selected_tickers)[:SAMPLE_SIZE]
-        logger.info(f"   Selected {len(selected_tickers)} companies for analysis (top weighted + random sample)")
         
         company_risks = []
         processed = 0
@@ -175,22 +125,14 @@ class DocumentAnalyzerService:
                 processed += 1
                 ticker_time = time.time() - ticker_start
                 
-                # Log progress more frequently for visibility
                 if processed % 10 == 0 or ticker_time > 1.0:
-                    logger.info(f"   Progress: {processed}/{SAMPLE_SIZE} companies processed (last: {ticker}, score: {company_risk.total_score:.1f}, time: {ticker_time:.2f}s)")
+                    logger.info(f"Progress: {processed}/{SAMPLE_SIZE} companies processed")
                 elif ticker_time > 3.0:
-                    # Warn if a single company takes more than 3 seconds (reduced from 5)
-                    logger.warning(f"   WARNING: {ticker} took {ticker_time:.2f}s to process (may be slow)")
-                
-                # Skip companies that take too long (>5 seconds) - too expensive
-                if ticker_time > 10.0:
-                    logger.warning(f"   Skipping remaining companies if they take >10s each. {ticker} took {ticker_time:.2f}s")
+                    logger.warning(f"{ticker} took {ticker_time:.2f}s to process")
             except Exception as e:
                 ticker_time = time.time() - ticker_start
-                logger.error(f"   ERROR processing {ticker} after {ticker_time:.2f}s: {str(e)}")
-                # Continue with next ticker instead of failing completely
+                logger.error(f"Error processing {ticker}: {str(e)}")
                 processed += 1
-                # Add a default risk for this ticker
                 from app.models.types import CompanyRisk, RiskComponent
                 company_risks.append(CompanyRisk(
                     ticker=ticker,
@@ -199,14 +141,13 @@ class DocumentAnalyzerService:
                     price_impact_bps=0.0
                 ))
         
-        # For companies not analyzed, add default low-risk entries
         analyzed_tickers = {risk.ticker for risk in company_risks}
         for ticker in portfolio_holdings.keys():
             if ticker not in analyzed_tickers:
                 from app.models.types import CompanyRisk, RiskComponent
                 company_risks.append(CompanyRisk(
                     ticker=ticker,
-                    total_score=25.0,  # Default low risk for unanalyzed companies
+                    total_score=25.0,
                     components=[RiskComponent(name="NotAnalyzed", score=25.0, evidence="Sampled analysis")],
                     price_impact_bps=0.0
                 ))
@@ -214,30 +155,21 @@ class DocumentAnalyzerService:
         logger.info(f"   Company risks calculated: {processed} companies analyzed in detail, {portfolio_size - processed} assigned default scores")
         logger.info(f"   Step 5 total time: {time.time() - step_start:.2f}s (avg: {(time.time() - step_start)/max(processed,1):.3f}s per analyzed company)")
         
-        # Step 6: Calculate global/macro impact analysis
         step_start = time.time()
-        logger.info("Step 6: Calculating global/macro impact analysis...")
         global_impact = DocumentAnalyzerService._calculate_global_impact(
             document_text=doc_text,
             regulation_data=regulation_data,
             company_risks=company_risks,
             portfolio=portfolio
         )
-        logger.info(f"   Global impact analysis complete")
-        logger.debug(f"   Step 6 time: {time.time() - step_start:.2f}s")
         
-        # Step 7: Calculate portfolio-level impact
         step_start = time.time()
-        logger.info("Step 7: Calculating portfolio-level impact...")
         portfolio_impact = DocumentAnalyzerService._calculate_portfolio_impact(
             portfolio=portfolio,
             company_risks=company_risks
         )
         delta_return = portfolio_impact.delta_return_bps
-        logger.info(f"   Portfolio impact calculated: DeltaReturn = {delta_return:.1f} bps")
-        logger.debug(f"   Step 7 time: {time.time() - step_start:.2f}s")
         
-        # Step 8: Update provenance with sentiment info
         total_time = time.time() - start_time
         doc_provenance.update({
             "analysis_timestamp": datetime.now().isoformat(),
@@ -266,12 +198,7 @@ class DocumentAnalyzerService:
         file_url: Optional[str] = None,
         agent_query: Optional[str] = None
     ) -> tuple[Optional[str], Dict]:
-        """
-        Get document text from various sources
-        
-        Returns:
-            (document_text, provenance_dict)
-        """
+        """Get document text from various sources"""
         provenance = {
             "source": None,
             "file_url": file_url,
@@ -279,42 +206,26 @@ class DocumentAnalyzerService:
             "extraction_method": None
         }
         
-        # Priority 1: Provided document text
         if document_text:
-            logger.debug("   Using provided document text (direct input)")
             provenance["source"] = "provided_text"
             provenance["extraction_method"] = "direct"
             return document_text, provenance
         
-        # Priority 2: File upload
         if file_url:
-            logger.debug(f"   Attempting to parse file from URL: {file_url}")
             try:
-                # Handle different URL formats
                 file_path = None
                 
-                # Handle relative paths from uploads directory
                 if file_url.startswith('/uploads/'):
                     file_path = file_url.replace('/uploads/', 'uploads/')
-                    logger.debug(f"   Detected uploads path: {file_path}")
-                # Handle S3 URLs (for AWS uploads)
                 elif file_url.startswith('http://') or file_url.startswith('https://'):
-                    logger.warning(f"   S3 URL detected but download not yet implemented: {file_url}")
-                    # For S3 URLs, we would need to download first
-                    # For now, check if it's a local path that was returned as URL
                     provenance["source"] = "file_upload"
                     provenance["extraction_method"] = "s3_url"
                     provenance["error"] = "S3 URL download not yet implemented"
                     return None, provenance
-                # Handle direct file paths
                 else:
                     file_path = file_url
-                    logger.debug(f"   Using direct file path: {file_path}")
                 
-                # Try to find file in various locations
                 if not file_path or not os.path.exists(file_path):
-                    logger.debug(f"   File not found at {file_path}, trying alternative paths...")
-                    # Try common paths
                     possible_paths = [
                         file_path,
                         os.path.join('uploads', os.path.basename(file_url)),
@@ -325,119 +236,63 @@ class DocumentAnalyzerService:
                     for path in possible_paths:
                         if path and os.path.exists(path):
                             file_path = path
-                            logger.debug(f"   Found file at: {file_path}")
                             break
                 
-                # Parse file if found
                 if file_path and os.path.exists(file_path):
-                    file_ext = os.path.splitext(file_path)[1].lower()
-                    file_size = os.path.getsize(file_path)
-                    logger.debug(f"   Parsing {file_ext} file ({file_size:,} bytes)...")
                     doc_text, file_format = DocumentParser.parse_file(file_path)
                     provenance["source"] = "file_upload"
                     provenance["file_format"] = file_format
                     provenance["extraction_method"] = f"DocumentParser.{file_format}"
                     provenance["file_path"] = file_path
-                    logger.debug(f"   File parsed successfully: {len(doc_text):,} chars extracted")
                     return doc_text, provenance
                 else:
                     error_msg = f"File not found: {file_url}"
-                    logger.error(f"   ERROR: {error_msg}")
+                    logger.error(error_msg)
                     provenance["error"] = error_msg
                     
             except Exception as e:
                 error_msg = str(e)
-                logger.error(f"   ERROR parsing file: {error_msg}")
+                logger.error(f"Error parsing file: {error_msg}")
                 provenance["error"] = error_msg
         
-        # Priority 3: Agent query
         if agent_query:
-            logger.debug(f"   Using agent query: {agent_query[:50]}...")
             try:
-                # Use SearXNG service to fetch document
-                logger.debug("   Searching with SearXNG...")
                 search_results = SearXNGService.search(agent_query, num_results=5)
                 if search_results and len(search_results) > 0:
-                    logger.debug(f"   Found {len(search_results)} search results")
-                    # Get first result (could be enhanced to select best result)
-                    result = search_results[0]
-                    url = result.get("url", "")
-                    
-                    # Try to fetch and parse
-                    # (This would need web scraping implementation)
-                    # For now, return the query as text
                     provenance["source"] = "agent_query"
                     provenance["search_results"] = len(search_results)
                     provenance["extraction_method"] = "SearXNG_search"
-                    logger.warning("   WARNING: Agent query: actual document fetching not yet implemented, using query as text")
-                    # TODO: Implement actual document fetching from URL
                     return agent_query, provenance
-                else:
-                    logger.warning("   WARNING: No search results found for agent query")
             except Exception as e:
                 error_msg = str(e)
-                logger.error(f"   ERROR with agent query: {error_msg}")
+                logger.error(f"Error with agent query: {error_msg}")
                 provenance["error"] = error_msg
         
-        logger.warning("   WARNING: No document text obtained from any source")
         return None, provenance
     
     @staticmethod
     def _calculate_document_sentiment(document_text: str) -> float:
-        """
-        Calculate sentiment score from document text using NLP (OPTIMIZED for speed)
-        
-        Returns a sentiment score in the range [0, 100] where:
-        - 0-30: Very negative sentiment (high risk)
-        - 30-50: Negative sentiment
-        - 50: Neutral sentiment
-        - 50-70: Positive sentiment
-        - 70-100: Very positive sentiment (low risk)
-        
-        For risk scoring, we invert: negative sentiment = high risk score
-        """
+        """Calculate sentiment score from document text using NLP"""
         try:
-            # OPTIMIZATION: Sample document text for faster analysis (first 50k chars)
             text_sample = document_text[:50000] if len(document_text) > 50000 else document_text
-            
-            logger.debug("   Extracting sentences for sentiment analysis (sampled for speed)...")
-            # Use NLPQuantStrategy to analyze sentiment
             sentences = NLPQuantStrategy._extract_sentences(text_sample)
-            logger.debug(f"   Extracted {len(sentences)} sentences")
             
-            # OPTIMIZATION: Limit to first 100 sentences for faster analysis
             if len(sentences) > 100:
                 sentences = sentences[:100]
-                logger.debug(f"   Limited to first 100 sentences for speed")
             
-            logger.debug("   Running NLP sentiment analysis (VADER/FinBERT - optimized)...")
             sentiment_results = NLPQuantStrategy._analyze_financial_sentiment(text_sample, sentences)
-            
-            # Extract overall sentiment score
-            # VADER compound score ranges from -1 (negative) to +1 (positive)
             overall_sentiment = sentiment_results.get("overall_sentiment", 0.0)
             uncertainty_score = sentiment_results.get("uncertainty_score", 0.0)
             
-            logger.debug(f"   Raw sentiment scores: overall={overall_sentiment:.3f}, uncertainty={uncertainty_score:.1f}")
-            
-            # Convert from [-1, 1] range to [0, 100] risk score
-            # Negative sentiment (toward -1) = higher risk score (toward 100)
-            # Positive sentiment (toward +1) = lower risk score (toward 0)
-            # Formula: risk_score = 50 - (sentiment * 50), then clip to [0, 100]
             risk_score = max(0.0, min(100.0, 50.0 - (overall_sentiment * 50.0)))
             
-            # Also consider uncertainty - higher uncertainty increases risk
-            if uncertainty_score > 30:  # High uncertainty
+            if uncertainty_score > 30:
                 adjustment = (uncertainty_score - 30) * 0.3
                 risk_score = min(100.0, risk_score + adjustment)
-                logger.debug(f"   Adjusted for high uncertainty (+{adjustment:.1f})")
             
-            logger.debug(f"   Final sentiment risk score: {risk_score:.1f}/100")
             return float(risk_score)
         except Exception as e:
-            # Fallback: return neutral risk score if sentiment analysis fails
-            logger.error(f"   ERROR calculating sentiment: {e}", exc_info=True)
-            logger.warning("   Using fallback neutral sentiment score: 50.0")
+            logger.error(f"Error calculating sentiment: {e}", exc_info=True)
             return 50.0
     
     @staticmethod
@@ -450,34 +305,14 @@ class DocumentAnalyzerService:
         threshold: float = 0.6,
         strict_units: bool = False
     ) -> CompanyRisk:
-        """
-        Calculate CompanyRisk for a single ticker
-        
-        Args:
-            ticker: Company ticker symbol
-            regulation_data: Regulatory analysis results
-            calibration: Calibration weights
-            sentiment_score: Overall document sentiment risk score [0, 100]
-            document_text: Full document text for company-specific analysis
-            threshold: Cosine similarity threshold
-            strict_units: Only match with unit guards
-        """
-        # Get company data (from 10-K parser or fallback)
+        """Calculate CompanyRisk for a single ticker"""
         company_data = DocumentAnalyzerService._get_company_data(ticker)
-        has_10k = "business_description_full" in company_data and company_data.get("business_description_full")
         
-        # Calculate impact using ImpactModeler
         impact_result = ImpactModeler.calculate_company_impact(
             regulation_data=regulation_data,
             company_data=company_data
         )
         
-        supply_chain = impact_result.get("supply_chain_risk", 50.0)
-        geo_exposure = impact_result.get("geographic_exposure", 50.0)
-        measure_match = impact_result.get("measure_impact", 50.0)
-        
-        # Calculate company-specific sentiment if possible
-        # This could be enhanced to find mentions of the specific company in the document
         company_sentiment_score = DocumentAnalyzerService._calculate_company_specific_sentiment(
             ticker=ticker,
             document_text=document_text,
@@ -485,45 +320,40 @@ class DocumentAnalyzerService:
             company_data=company_data
         )
         
-        # Build risk components
         components = [
             RiskComponent(
                 name="SupplyChain",
                 score=impact_result.get("supply_chain_risk", 50.0),
-                evidence=None  # TODO: Add evidence spans
+                evidence=None
             ),
             RiskComponent(
                 name="GeoExposure",
                 score=impact_result.get("geographic_exposure", 50.0),
-                evidence=None  # TODO: Add evidence spans
+                evidence=None
             ),
             RiskComponent(
                 name="MeasureMatch",
                 score=impact_result.get("measure_impact", 50.0),
-                evidence=None  # TODO: Add evidence spans
+                evidence=None
             ),
             RiskComponent(
                 name="SentimentRisk",
-                score=company_sentiment_score,  # Use calculated sentiment score
+                score=company_sentiment_score,
                 evidence=None
             )
         ]
         
-        # Calculate total score using calibration
         component_scores = [c.score for c in components]
         total_score, _ = CalibrationService.calculate_total_score(
             components=component_scores,
             calibration=calibration
         )
         
-        # Calculate price impact (with uncertainty-based k factor)
         price_impact_bps = DocumentAnalyzerService._calculate_price_impact(
             total_score=total_score,
             components=components,
             calibration=calibration
         )
-        
-        logger.debug(f"   {ticker}: score={total_score:.1f}, sentiment={company_sentiment_score:.1f}, impact={price_impact_bps:.1f}bps")
         
         return CompanyRisk(
             ticker=ticker,
@@ -539,21 +369,7 @@ class DocumentAnalyzerService:
         base_sentiment: float,
         company_data: Dict
     ) -> float:
-        """
-        Calculate company-specific sentiment score
-        
-        This looks for mentions of the company name or ticker in the document
-        and adjusts the sentiment score accordingly.
-        
-        Args:
-            ticker: Company ticker symbol
-            document_text: Full document text
-            base_sentiment: Base sentiment score from overall document
-            company_data: Company information including name
-            
-        Returns:
-            Company-specific sentiment risk score [0, 100]
-        """
+        """Calculate company-specific sentiment score"""
         try:
             company_name = company_data.get("company_name", ticker)
             text_lower = document_text.lower()
@@ -571,14 +387,9 @@ class DocumentAnalyzerService:
             total_mentions = ticker_mentions + name_mentions
             
             if total_mentions == 0:
-                logger.debug(f"   {ticker}: No mentions found, using base sentiment")
                 return base_sentiment
             
-            logger.debug(f"   {ticker}: Found {total_mentions} mentions (ticker: {ticker_mentions}, name: {name_mentions})")
-            
-            # If company is mentioned, analyze those specific sections
             if total_mentions > 0:
-                # Extract sentences mentioning the company
                 sentences = NLPQuantStrategy._extract_sentences(document_text)
                 company_sentences = []
                 
@@ -589,37 +400,25 @@ class DocumentAnalyzerService:
                     ):
                         company_sentences.append(sentence)
                 
-                # Analyze sentiment of company-specific sentences
                 if company_sentences:
-                    logger.debug(f"   {ticker}: Analyzing {min(20, len(company_sentences))} company-specific sentences")
-                    company_text = " ".join(company_sentences[:20])  # Limit to first 20 mentions
+                    company_text = " ".join(company_sentences[:20])
                     company_sentiment = NLPQuantStrategy._analyze_financial_sentiment(
                         company_text, company_sentences[:20]
                     )
                     company_overall = company_sentiment.get("overall_sentiment", 0.0)
-                    
-                    # Convert to risk score
                     company_risk = max(0.0, min(100.0, 50.0 - (company_overall * 50.0)))
-                    
-                    # Blend base sentiment (60%) with company-specific sentiment (40%)
                     blended_score = base_sentiment * 0.6 + company_risk * 0.4
-                    logger.debug(f"   {ticker}: Company-specific sentiment: {company_risk:.1f}, blended: {blended_score:.1f}")
                     return float(blended_score)
             
-            # If no specific mentions, use base sentiment
             return base_sentiment
             
         except Exception as e:
-            # Fallback to base sentiment if analysis fails
-            logger.warning(f"   {ticker}: Error calculating company-specific sentiment: {e}")
+            logger.warning(f"Error calculating company-specific sentiment for {ticker}: {e}")
             return base_sentiment
     
     @staticmethod
     def _get_company_data(ticker: str) -> Dict:
-        """
-        Get company data from 10-K parser or fallback
-        """
-        # Try to find and parse 10-K filing
+        """Get company data from 10-K parser or fallback"""
         from app.routers.stocks import find_filings_for_ticker, get_filing_content
         
         try:
@@ -628,10 +427,7 @@ class DocumentAnalyzerService:
                 if '10-k' in filing.get('filename', '').lower():
                     filing_content = get_filing_content(filing['path'], max_length=None)
                     if filing_content:
-                        # Parse 10-K
                         tenk_data = TenKParser.parse_tenk(filing_content, ticker)
-                        
-                        # Convert to company_data format
                         return {
                             "ticker": ticker,
                             "company_name": tenk_data.get("company_name", f"{ticker} Inc."),
@@ -643,7 +439,6 @@ class DocumentAnalyzerService:
         except Exception:
             pass
         
-        # Fallback: return minimal company data
         return {
             "ticker": ticker,
             "company_name": f"{ticker} Inc.",
@@ -659,19 +454,14 @@ class DocumentAnalyzerService:
         components: List[RiskComponent],
         calibration: CalibrationMetadata
     ) -> float:
-        """
-        Calculate price impact in basis points with uncertainty-based k factor
-        """
-        # Calculate uncertainty from components
+        """Calculate price impact in basis points"""
         uncertainties = [c.ucb95 - c.score if c.ucb95 else 0.0 for c in components]
         avg_uncertainty = np.mean(uncertainties) if uncertainties else 50.0
         
-        # Map uncertainty decile to k factor [0.5, 1.0]
         uncertainty_decile = min(10, max(1, int(avg_uncertainty / 10)))
         k_factor = 0.5 + (uncertainty_decile / 10) * 0.5
         
-        # Base impact: k * total_score
-        price_impact_bps = k_factor * total_score * 10  # Scale to basis points
+        price_impact_bps = k_factor * total_score * 10
         
         return float(price_impact_bps)
     
@@ -680,28 +470,19 @@ class DocumentAnalyzerService:
         portfolio: Portfolio,
         company_risks: List[CompanyRisk]
     ) -> PortfolioImpact:
-        """
-        Calculate portfolio-level impact
-        """
+        """Calculate portfolio-level impact"""
         holdings = portfolio.holdings
-        
-        # Calculate weighted portfolio impact
         total_delta_return_bps = 0.0
         worst_offenders = []
-        
-        # Build risk map
         risk_map = {risk.ticker: risk for risk in company_risks}
         
         for ticker, weight in holdings.items():
             if ticker in risk_map:
                 risk = risk_map[ticker]
                 price_impact = risk.price_impact_bps or 0.0
-                
-                # Weighted contribution
                 contribution = weight * price_impact
                 total_delta_return_bps += contribution
                 
-                # Track worst offenders
                 worst_offenders.append({
                     "ticker": ticker,
                     "score": risk.total_score,
@@ -709,24 +490,19 @@ class DocumentAnalyzerService:
                     "impact_bps": price_impact
                 })
         
-        # Sort by score descending
         worst_offenders.sort(key=lambda x: x["score"], reverse=True)
-        worst_offenders = worst_offenders[:5]  # Top 5
+        worst_offenders = worst_offenders[:5]
         
-        # Calculate percentiles (P5, P50, P95) from Monte Carlo or empirical
-        # For now, use simple estimates
         p50 = total_delta_return_bps
-        uncertainty = abs(total_delta_return_bps * 0.3)  # 30% uncertainty
-        p5 = p50 - uncertainty * 1.645  # Approximate 5th percentile
-        p95 = p50 + uncertainty * 1.645  # Approximate 95th percentile
+        uncertainty = abs(total_delta_return_bps * 0.3)
+        p5 = p50 - uncertainty * 1.645
+        p95 = p50 + uncertainty * 1.645
         
-        # Collect evidence for top offenders
         evidences = {}
-        for offender in worst_offenders[:3]:  # Top 3 only
+        for offender in worst_offenders[:3]:
             ticker = offender["ticker"]
             if ticker in risk_map:
                 risk = risk_map[ticker]
-                # Collect evidence from components
                 ticker_evidences = []
                 for component in risk.components:
                     if component.evidence:
@@ -736,7 +512,7 @@ class DocumentAnalyzerService:
         
         return PortfolioImpact(
             delta_return_bps=float(total_delta_return_bps),
-            delta_vol_bps=None,  # TODO: Calculate volatility change
+            delta_vol_bps=None,
             worst_offenders=worst_offenders,
             evidences=evidences if evidences else None,
             p5=float(p5),
@@ -751,26 +527,15 @@ class DocumentAnalyzerService:
         company_risks: List,
         portfolio: Portfolio
     ) -> Dict:
-        """
-        Calculate global/macro impact analysis:
-        - Sector-level impacts
-        - Regional/geographic impacts
-        - Industry impacts
-        - Socioeconomic impacts (jobs, people, economy)
-        """
+        """Calculate global/macro impact analysis"""
         logger = logging.getLogger(__name__)
-        logger.info("   Analyzing global/macro impacts...")
         
-        # Extract regulation entities
         affected_countries = regulation_data.get("entities", {}).get("countries", [])
         affected_sectors = regulation_data.get("entities", {}).get("sectors", [])
         measures = regulation_data.get("measures", [])
         
-        # Sector Analysis
         sector_impacts = {}
         holdings = portfolio.holdings or {}
-        
-        # Map companies to sectors (simplified - in production would use real sector data)
         sector_keywords = {
             "Technology": ["technology", "software", "tech", "semiconductor", "cloud", "internet"],
             "Healthcare": ["healthcare", "pharmaceutical", "biotech", "medical", "drug"],
@@ -781,12 +546,10 @@ class DocumentAnalyzerService:
             "Communication": ["communication", "telecom", "media", "telecommunications"]
         }
         
-        # Analyze document for sector mentions
         doc_lower = document_text.lower()
         for sector, keywords in sector_keywords.items():
             mention_count = sum(1 for kw in keywords if kw in doc_lower)
             if mention_count > 0:
-                # Calculate average risk for companies in this sector (if we have sector data)
                 sector_impacts[sector] = {
                     "mention_count": mention_count,
                     "severity": "high" if mention_count > 3 else "medium" if mention_count > 1 else "low",
@@ -794,7 +557,6 @@ class DocumentAnalyzerService:
                     "estimated_impact": "Significant regulatory exposure" if mention_count > 2 else "Moderate regulatory exposure"
                 }
         
-        # Regional/Geographic Analysis
         regions = {
             "North America": ["United States", "USA", "US", "Canada", "Mexico", "America"],
             "Europe": ["EU", "Europe", "European Union", "Germany", "France", "UK", "United Kingdom", "Italy", "Spain"],

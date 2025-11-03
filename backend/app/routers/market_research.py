@@ -34,6 +34,7 @@ class MarketResearchResponse(BaseModel):
     quantitative_analysis: Optional[dict] = None
     risk_score: float
     recommendation: str
+    image: Optional[dict] = None  # Image generation info (faster than video)
 
 
 class FollowupQuestionRequest(BaseModel):

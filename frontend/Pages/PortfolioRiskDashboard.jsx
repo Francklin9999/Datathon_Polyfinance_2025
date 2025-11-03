@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { base44 } from '@/api/base44Client';
+import { api } from '@/api/apiClient';
 
 import { useQuery } from '@tanstack/react-query';
 
@@ -41,7 +41,7 @@ import { BarChart, Bar, PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, Cart
 
 import ErrorDisplay from '@/components/ErrorDisplay';
 
-import CacheService from '@/services/cacheService';
+import StorageService from '@/services/storageService';
 
 import { usePortfolio } from '@/contexts/PortfolioContext';
 
@@ -54,9 +54,9 @@ export default function PortfolioRiskDashboard() {
   const [adjustmentsResult, setAdjustmentsResult] = useState(null);
   const [adjustmentError, setAdjustmentError] = useState(null);
 
-  // Load document advice from cache
+  // Load document advice from storage
   useEffect(() => {
-    const advice = CacheService.getDocumentAdvice();
+    const advice = StorageService.getDocumentAdvice();
     if (advice) {
       setDocumentAdvice(advice);
     }
@@ -65,7 +65,7 @@ export default function PortfolioRiskDashboard() {
   // Fetch portfolio risk dashboard data from backend
   const { data: riskData, error: riskError, isLoading: isLoadingRisk, refetch: refetchRisk } = useQuery({
     queryKey: ['portfolio-risk-dashboard'],
-    queryFn: () => base44.portfolio.getRiskDashboard(),
+    queryFn: () => api.portfolio.getRiskDashboard(),
     initialData: null,
     enabled: true,
   });
@@ -147,7 +147,7 @@ export default function PortfolioRiskDashboard() {
     setAdjustmentsResult(null);
 
     try {
-      const result = await base44.portfolio.getPortfolioAdjustments({
+      const result = await api.portfolio.getPortfolioAdjustments({
         portfolio: portfolio,
         documentAnalysisResult: {
           interpretation: documentAdvice.interpretation

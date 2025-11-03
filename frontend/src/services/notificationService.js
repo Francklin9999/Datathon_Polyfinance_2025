@@ -3,7 +3,7 @@
  * Handles browser notifications and in-app notifications
  */
 
-import CacheService from './cacheService';
+import StorageService from './storageService';
 
 class NotificationService {
   static permission = null;
@@ -35,7 +35,7 @@ class NotificationService {
    * Check if notifications are enabled
    */
   static isNotificationEnabled() {
-    const prefs = CacheService.getNotificationPreferences();
+    const prefs = StorageService.getNotificationPreferences();
     return prefs.browserNotifications && Notification.permission === 'granted';
   }
 
@@ -43,7 +43,7 @@ class NotificationService {
    * Send browser notification
    */
   static async notify(title, options = {}) {
-    const prefs = CacheService.getNotificationPreferences();
+    const prefs = StorageService.getNotificationPreferences();
     
     if (!prefs.browserNotifications) {
       return false;

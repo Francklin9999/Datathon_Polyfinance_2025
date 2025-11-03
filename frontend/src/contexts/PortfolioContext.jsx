@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { api } from '@/api/apiClient';
-import CacheService from '@/services/cacheService';
+import StorageService from '@/services/storageService';
 
 const PortfolioContext = createContext(null);
 
@@ -9,11 +9,11 @@ export function PortfolioProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Initialize portfolio on mount - try to load from cache first
+  // Initialize portfolio on mount - try to load from storage first
   useEffect(() => {
-    const cachedPortfolio = CacheService.getPortfolio();
-    if (cachedPortfolio) {
-      setPortfolio(cachedPortfolio);
+    const storedPortfolio = StorageService.getPortfolio();
+    if (storedPortfolio) {
+      setPortfolio(storedPortfolio);
       // Still refresh in background
       initializePortfolio(18, false);
     } else {
@@ -21,10 +21,10 @@ export function PortfolioProvider({ children }) {
     }
   }, []);
 
-  // Save portfolio to cache whenever it changes
+  // Save portfolio to storage whenever it changes
   useEffect(() => {
     if (portfolio) {
-      CacheService.savePortfolio(portfolio);
+      StorageService.savePortfolio(portfolio);
     }
   }, [portfolio]);
 
@@ -37,7 +37,7 @@ export function PortfolioProvider({ children }) {
       const result = await api.portfolio.initEqualWeight(universeCutoffMonths);
       if (result.portfolio) {
         setPortfolio(result.portfolio);
-        CacheService.savePortfolio(result.portfolio);
+        StorageService.savePortfolio(result.portfolio);
       }
     } catch (err) {
       console.error('Error initializing portfolio:', err);
@@ -51,7 +51,7 @@ export function PortfolioProvider({ children }) {
 
   const updatePortfolio = (updatedPortfolio) => {
     setPortfolio(updatedPortfolio);
-    CacheService.savePortfolio(updatedPortfolio);
+    StorageService.savePortfolio(updatedPortfolio);
   };
 
   const updateHoldings = (newHoldings) => {

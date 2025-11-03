@@ -167,6 +167,15 @@ const api = {
     getMetrics: async () => {
       return fetchAPI('/portfolio/metrics');
     },
+    getRiskDashboard: async () => {
+      return fetchAPI('/portfolio/risk-dashboard');
+    },
+    getPortfolioAdjustments: async (params) => {
+      return fetchAPI('/portfolio/get-adjustments', {
+        method: 'POST',
+        body: JSON.stringify(params),
+      });
+    },
     initEqualWeight: async (universeCutoffMonths = 18) => {
       return fetchAPI('/portfolio/init-equal-weight', {
         method: 'POST',
@@ -231,7 +240,7 @@ const api = {
       return fetchAPI(`/company/sentiment?${params.toString()}`);
     },
   },
-  nlpCache: {
+  nlp: {
     getAll: async () => {
       return fetchAPI('/nlp-cache/all');
     },
@@ -434,6 +443,37 @@ const api = {
         method: 'POST',
         body: JSON.stringify({ data, type }),
       });
+    },
+  },
+  video: {
+    generate: async (prompt, duration = '5s', resolution = '540p', aspectRatio = '16:9', s3OutputPrefix = null) => {
+      return fetchAPI('/video/generate', {
+        method: 'POST',
+        body: JSON.stringify({
+          prompt,
+          duration,
+          resolution,
+          aspect_ratio: aspectRatio,
+          s3_output_prefix: s3OutputPrefix
+        }),
+      });
+    },
+    getStatus: async (invocationId) => {
+      return fetchAPI(`/video/status/${invocationId}`);
+    },
+    cancel: async (invocationId) => {
+      return fetchAPI(`/video/cancel/${invocationId}`, {
+        method: 'POST',
+      });
+    },
+    list: async (prefix = null, maxResults = 50) => {
+      const params = new URLSearchParams();
+      if (prefix) params.append('prefix', prefix);
+      params.append('max_results', maxResults);
+      return fetchAPI(`/video/list?${params.toString()}`);
+    },
+    getSupportedOptions: async () => {
+      return fetchAPI('/video/supported-options');
     },
   },
 };

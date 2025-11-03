@@ -1,8 +1,3 @@
-"""
-Portfolio Optimizer Service
-Handles portfolio optimization using ML-based optimization algorithms
-"""
-
 from typing import Dict, List, Optional
 import numpy as np
 import random
@@ -26,21 +21,14 @@ class PortfolioOptimizer:
         current_allocation: Optional[Dict] = None,
         constraints: Optional[Dict] = None
     ) -> Dict:
-        """
-        Optimize portfolio allocation
-        Returns optimized allocation with metrics
-        """
+        """Optimize portfolio allocation"""
         current = current_allocation or {}
         
-        # Generate optimized allocation using ML-based optimization
         optimized = PortfolioOptimizer._optimize_with_ml(
             objective, risk_tolerance, current, time_horizon
         )
         
-        # Calculate metrics
         metrics = PortfolioOptimizer._calculate_metrics(current, optimized, time_horizon)
-        
-        # Generate efficient frontier
         efficient_frontier = PortfolioOptimizer._generate_efficient_frontier(optimized, metrics)
         
         return {
@@ -52,13 +40,9 @@ class PortfolioOptimizer:
     
     @staticmethod
     def _optimize_with_ml(objective: str, risk_tolerance: str, current: Dict, time_horizon: int) -> Dict:
-        """Optimize portfolio allocation using ML-based approach instead of hardcoded rules"""
-        # Convert risk tolerance to numerical score
+        """Optimize portfolio allocation using ML-based approach"""
         risk_scores = {"conservative": 0.3, "moderate": 0.5, "aggressive": 0.7}
         risk_score = risk_scores.get(risk_tolerance, 0.5)
-        
-        # Objective weights (learned from historical data)
-        # Higher weight on objective category, adjusted by risk tolerance
         base_weights = {
             "sharpe": {"Equities": 0.52, "Fixed Income": 0.25, "Alternatives": 0.18, "Cash": 0.05},
             "return": {"Equities": 0.60, "Fixed Income": 0.20, "Alternatives": 0.15, "Cash": 0.05},
@@ -66,11 +50,8 @@ class PortfolioOptimizer:
             "esg": {"Equities": 0.48, "Fixed Income": 0.30, "Alternatives": 0.17, "Cash": 0.05}
         }
         
-        # Get base allocation for objective
         base_allocation = base_weights.get(objective, base_weights["sharpe"])
         
-        # Use ML regression to adjust based on risk tolerance
-        # Feature vector: [risk_tolerance, time_horizon, current_equities, current_fixed, current_alt, current_cash]
         features = np.array([
             risk_score,
             time_horizon / 10,  # Normalize to 0-1 range
@@ -80,8 +61,6 @@ class PortfolioOptimizer:
             current.get("Cash", 0) / 100
         ])
         
-        # Learned adjustment coefficients (would be trained from historical data)
-        # These represent how much to adjust each asset class based on features
         adjustment_matrix = {
             "sharpe": {
                 "Equities": np.array([0.1, 0.05, -0.1, 0.02, -0.02, 0.01]),
@@ -133,7 +112,6 @@ class PortfolioOptimizer:
     @staticmethod
     def _calculate_metrics(current: Dict, optimized: Dict, time_horizon: int) -> Dict:
         """Calculate performance metrics"""
-        # Simplified metric calculation
         current_return = (
             current.get("Equities", 0) * 0.10 +
             current.get("Fixed Income", 0) * 0.04 +
@@ -185,7 +163,6 @@ class PortfolioOptimizer:
         
         for i in range(50):
             risk = 5 + i * 0.4
-            # Approximate return based on risk
             return_val = (risk / base_risk) * base_return + random.uniform(-0.5, 0.5)
             frontier.append({
                 "risk": round(risk, 1),
@@ -206,31 +183,23 @@ class PortfolioOptimizer:
         min_weight: float = 0.0,
         max_weight: float = 1.0
     ) -> Dict:
-        """
-        Optimize portfolio with regulatory risk constraints
-        Reduces allocation to companies with high regulatory risk scores
-        """
+        """Optimize portfolio with regulatory risk constraints"""
         try:
-            # Calculate average regulatory risk for portfolio
             current_regulatory_risk = sum(
                 current_weights.get(ticker, 0) * regulatory_risk_scores.get(ticker, 50.0)
                 for ticker in current_weights.keys()
             )
             
-            # Adjust weights based on regulatory risk
             optimized_weights = {}
             total_weight = 0.0
             
-            # Reduce weight for high-risk companies
             for ticker, weight in current_weights.items():
                 regulatory_risk = regulatory_risk_scores.get(ticker, 50.0)
                 
                 if regulatory_risk > max_regulatory_risk:
-                    # Reduce weight for high-risk companies
                     adjustment_factor = 1.0 - (regulatory_risk - max_regulatory_risk) / 100.0
                     new_weight = max(min_weight, weight * adjustment_factor)
                 elif regulatory_risk < 50:
-                    # Slightly increase weight for low-risk companies
                     adjustment_factor = 1.0 + (50.0 - regulatory_risk) / 200.0
                     new_weight = min(max_weight, weight * adjustment_factor)
                 else:
@@ -239,23 +208,18 @@ class PortfolioOptimizer:
                 optimized_weights[ticker] = new_weight
                 total_weight += new_weight
             
-            # Normalize weights to sum to 1
             if total_weight > 0:
                 optimized_weights = {
                     ticker: weight / total_weight
                     for ticker, weight in optimized_weights.items()
                 }
             else:
-                # Fallback if normalization fails
                 optimized_weights = current_weights
-            
-            # Calculate optimized portfolio metrics
             optimized_return = sum(
                 optimized_weights.get(ticker, 0) * expected_returns.get(ticker, 0.08)
                 for ticker in optimized_weights.keys()
             )
             
-            # Simplified risk calculation (portfolio variance)
             optimized_risk = 0.0
             for ticker1 in optimized_weights.keys():
                 for ticker2 in optimized_weights.keys():
@@ -264,15 +228,13 @@ class PortfolioOptimizer:
                     cov = covariance_matrix.get(ticker1, {}).get(ticker2, 0.0)
                     optimized_risk += w1 * w2 * cov
             
-            optimized_risk = (optimized_risk ** 0.5) * 100  # Convert to percentage
+            optimized_risk = (optimized_risk ** 0.5) * 100
             
-            # Calculate new regulatory risk
             new_regulatory_risk = sum(
                 optimized_weights.get(ticker, 0) * regulatory_risk_scores.get(ticker, 50.0)
                 for ticker in optimized_weights.keys()
             )
             
-            # Convert back to percentages for display
             optimized_allocation = {
                 ticker: round(weight * 100, 2)
                 for ticker, weight in optimized_weights.items()

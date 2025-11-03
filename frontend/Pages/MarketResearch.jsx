@@ -17,7 +17,10 @@ import {
   CheckCircle,
   XCircle,
   Activity,
-  Download
+  Download,
+  Video,
+  Play,
+  RefreshCw
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { usePortfolio } from '@/contexts/PortfolioContext';
@@ -34,6 +37,9 @@ export default function MarketResearch() {
   const [isAnswering, setIsAnswering] = useState(false);
   const [conversationHistory, setConversationHistory] = useState([]);
   const [secAnalysis, setSecAnalysis] = useState(null);
+  const [videoStatus, setVideoStatus] = useState(null);
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [isCheckingVideo, setIsCheckingVideo] = useState(false);
   const conversationEndRef = useRef(null);
 
   const stats = getPortfolioStats();
@@ -65,13 +71,38 @@ export default function MarketResearch() {
         content: `Research completed for ${result.company_name} (${result.ticker}). I've analyzed filings, web sources, and generated a quantitative research report. You can ask me questions about the company.`
       }]);
       
-      // Load SEC analysis from cache
+      // Load SEC analysis
       try {
-        const secData = await api.nlpCache.getTicker(ticker.toUpperCase());
+        const secData = await api.nlp.getTicker(ticker.toUpperCase());
         setSecAnalysis(secData);
       } catch (secErr) {
-        console.warn('Could not load SEC analysis from cache:', secErr);
+        console.warn('Could not load SEC analysis:', secErr);
         setSecAnalysis(null);
+      }
+      
+      // Check for image
+      if (result.image) {
+        console.log('Image object received:', result.image);
+        // Image generation is synchronous, so no polling needed
+        if (result.image.status === 'FAILED' || result.image.status === 'NOT_AVAILABLE') {
+          console.warn('Image generation failed or not available:', result.image.error);
+        }
+      } else {
+        console.log('No image object in research result');
+      }
+      
+      // Check for video (asynchronous - needs polling)
+      if (result.video) {
+        console.log('Video object received:', result.video);
+        setVideoStatus(result.video.status || 'IN_PROGRESS');
+        if (result.video.status === 'FAILED' || result.video.status === 'NOT_AVAILABLE') {
+          console.warn('Video generation failed or not available:', result.video.error);
+        } else if (result.video.invocation_id) {
+          // Start polling for video status
+          console.log('Starting video status polling for invocation_id:', result.video.invocation_id);
+        }
+      } else {
+        console.log('No video object in research result');
       }
     } catch (err) {
       console.error('Market research error:', err);
@@ -124,6 +155,57 @@ export default function MarketResearch() {
     // Auto-scroll to bottom when conversation updates
     conversationEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [conversationHistory]);
+
+  // Poll for video status
+  useEffect(() => {
+    if (!researchResult?.video?.invocation_id || isCheckingVideo) {
+      return;
+    }
+
+    const checkVideoStatus = async () => {
+      const invocationId = researchResult.video.invocation_id;
+      if (!invocationId || videoStatus === 'COMPLETED' || videoStatus === 'FAILED' || videoStatus === 'CANCELLED') {
+        return;
+      }
+
+      setIsCheckingVideo(true);
+      try {
+        const statusResult = await api.video.getStatus(invocationId);
+        console.log('Video status check result:', statusResult);
+
+        if (statusResult.success && statusResult.status === 'COMPLETED') {
+          setVideoStatus('COMPLETED');
+          if (statusResult.video_url) {
+            setVideoUrl(statusResult.video_url);
+          }
+        } else if (statusResult.status === 'FAILED' || statusResult.status === 'CANCELLED') {
+          setVideoStatus(statusResult.status);
+        } else {
+          setVideoStatus(statusResult.status || 'IN_PROGRESS');
+          // Continue polling
+          setTimeout(() => {
+            setIsCheckingVideo(false);
+          }, 5000); // Wait 5 seconds before next check
+        }
+      } catch (err) {
+        console.error('Error checking video status:', err);
+        setIsCheckingVideo(false);
+      }
+    };
+
+    // Initial check
+    checkVideoStatus();
+
+    // Set up polling interval
+    const interval = setInterval(() => {
+      if (!isCheckingVideo && videoStatus !== 'COMPLETED' && videoStatus !== 'FAILED' && videoStatus !== 'CANCELLED') {
+        checkVideoStatus();
+      }
+    }, 10000); // Check every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [researchResult?.video?.invocation_id, videoStatus, isCheckingVideo]);
+
 
   const getRecommendationColor = (recommendation) => {
     switch (recommendation) {
@@ -275,9 +357,6 @@ export default function MarketResearch() {
                       <div className="mt-1">
                         <Badge variant="outline" className="text-xs border-blue-500/50 text-blue-300">
                           NLP: {researchResult.nlp_recommendation}
-                          {researchResult.filing_analysis?.cached && (
-                            <span className="ml-1 text-green-400">(Cached)</span>
-                          )}
                         </Badge>
                       </div>
                     )}
@@ -327,6 +406,18 @@ export default function MarketResearch() {
                   <TabsTrigger value="nlp" className="text-gray-300 data-[state=active]:text-white">
                     <BarChart3 className="w-4 h-4 mr-2" />
                     NLP Analysis
+                  </TabsTrigger>
+                )}
+                {researchResult.image && (
+                  <TabsTrigger value="image" className="text-gray-300 data-[state=active]:text-white">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Image Analysis
+                  </TabsTrigger>
+                )}
+                {researchResult.video && (
+                  <TabsTrigger value="video" className="text-gray-300 data-[state=active]:text-white">
+                    <Video className="w-4 h-4 mr-2" />
+                    Video Analysis
                   </TabsTrigger>
                 )}
                 <TabsTrigger value="chat" className="text-gray-300 data-[state=active]:text-white">
@@ -434,6 +525,15 @@ export default function MarketResearch() {
                                   <Badge variant="outline" className="border-red-600 text-red-300">
                                     Risk Score: {risk.risk_score}
                                   </Badge>
+                                  {risk.sentiment_score !== undefined && (
+                                    <Badge variant="outline" className={`text-xs ${
+                                      risk.sentiment_score > 0.1 ? 'border-green-600/50 text-green-300/80' :
+                                      risk.sentiment_score < -0.1 ? 'border-red-600/50 text-red-300/80' :
+                                      'border-yellow-600/50 text-yellow-300/80'
+                                    }`}>
+                                      Sentiment: {risk.sentiment_score.toFixed(3)}
+                                    </Badge>
+                                  )}
                                 </div>
                                 <p className="text-gray-300 text-sm mb-2">{risk.snippet}</p>
                                 {risk.context && (
@@ -554,6 +654,15 @@ export default function MarketResearch() {
                                   <Badge variant="outline" className="border-green-600 text-green-300">
                                     Score: {opp.opportunity_score}
                                   </Badge>
+                                  {opp.sentiment_score !== undefined && (
+                                    <Badge variant="outline" className={`text-xs ${
+                                      opp.sentiment_score > 0.1 ? 'border-green-600/50 text-green-300/80' :
+                                      opp.sentiment_score < -0.1 ? 'border-red-600/50 text-red-300/80' :
+                                      'border-yellow-600/50 text-yellow-300/80'
+                                    }`}>
+                                      Sentiment: {opp.sentiment_score.toFixed(3)}
+                                    </Badge>
+                                  )}
                                 </div>
                                 <p className="text-gray-300 text-sm">{opp.snippet}</p>
                                 {opp.source === "SEC Filing" && (
@@ -962,12 +1071,7 @@ export default function MarketResearch() {
                     <CardHeader>
                       <CardTitle className="text-white flex items-center gap-2">
                         <BarChart3 className="w-5 h-5" />
-                        NLP Analysis from Cached Data
-                        {researchResult.filing_analysis?.cached && (
-                          <Badge className="ml-2 bg-green-500/20 text-green-400 border-green-500/50">
-                            Cached
-                          </Badge>
-                        )}
+                        NLP Analysis
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -1152,11 +1256,11 @@ export default function MarketResearch() {
                             </div>
                           )}
 
-                          {/* Cache Info */}
+                          {/* Analysis Info */}
                           {researchResult.nlp_analysis.cached_at && (
                             <div className="pt-4 border-t border-gray-700">
                               <div className="text-xs text-gray-500">
-                                Cached at: {new Date(researchResult.nlp_analysis.cached_at).toLocaleString()}
+                                Analyzed at: {new Date(researchResult.nlp_analysis.cached_at).toLocaleString()}
                               </div>
                             </div>
                           )}
@@ -1204,6 +1308,242 @@ export default function MarketResearch() {
                           </div>
                         )}
                       </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+
+              {/* Image Tab */}
+              {researchResult.image && (
+                <TabsContent value="image" className="space-y-4">
+                  <Card className="bg-gray-800 border-gray-700">
+                    <CardHeader>
+                      <CardTitle className="text-white flex items-center gap-2">
+                        <BarChart3 className="w-5 h-5" />
+                        AI-Generated Visual Analysis
+                        {researchResult.image.image_url && (
+                          <Badge className="ml-2 bg-green-500/20 text-green-400 border-green-500/50">
+                            <CheckCircle className="w-3 h-3 mr-1" />
+                            Ready
+                          </Badge>
+                        )}
+                        {researchResult.image.status === 'FAILED' && (
+                          <Badge className="ml-2 bg-red-500/20 text-red-400 border-red-500/50">
+                            <XCircle className="w-3 h-3 mr-1" />
+                            Failed
+                          </Badge>
+                        )}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {researchResult.image.image_url ? (
+                        <div className="space-y-4">
+                          <div className="bg-black rounded-lg overflow-hidden flex items-center justify-center" style={{ minHeight: '400px' }}>
+                            <img
+                              src={researchResult.image.image_url}
+                              alt="Financial analysis visualization"
+                              className="max-w-full max-h-[600px] object-contain rounded-lg"
+                              onError={(e) => {
+                                e.target.style.display = 'none';
+                                e.target.nextElementSibling.style.display = 'block';
+                              }}
+                            />
+                            <div className="hidden text-gray-400 p-8 text-center">
+                              <XCircle className="w-16 h-16 mx-auto mb-4" />
+                              <p>Failed to load image</p>
+                            </div>
+                          </div>
+                          <div className="flex gap-2">
+                            <a
+                              href={researchResult.image.image_url}
+                              download={`${researchResult.ticker}-analysis.png`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1"
+                            >
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                                <Download className="w-4 h-4 mr-2" />
+                                Download Image
+                              </Button>
+                            </a>
+                            <a
+                              href={researchResult.image.image_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1"
+                            >
+                              <Button variant="outline" className="w-full border-blue-600 text-blue-400 hover:bg-blue-900/20">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Open in New Tab
+                              </Button>
+                            </a>
+                          </div>
+                          {researchResult.image.model && (
+                            <div className="text-xs text-gray-500 text-center">
+                              Generated using {researchResult.image.model} • {researchResult.image.width}x{researchResult.image.height}px
+                            </div>
+                          )}
+                        </div>
+                      ) : researchResult.image.status === 'FAILED' ? (
+                        <div className="text-center py-8">
+                          <XCircle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Image Generation Failed</h3>
+                          <p className="text-gray-400 mb-4">
+                            {researchResult.image.error || 'An error occurred while generating the image.'}
+                          </p>
+                        </div>
+                      ) : researchResult.image.status === 'NOT_AVAILABLE' ? (
+                        <div className="text-center py-8">
+                          <BarChart3 className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Image Generation Not Available</h3>
+                          <p className="text-gray-400 mb-4">
+                            {researchResult.image.error || 'AWS credentials not configured. Image generation requires Amazon Bedrock access.'}
+                          </p>
+                          <div className="mt-4 p-4 bg-yellow-900/20 rounded-lg border border-yellow-700/50 text-left max-w-md mx-auto">
+                            <div className="text-sm text-gray-400 mb-2">To enable image generation:</div>
+                            <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                              <li>Configure AWS credentials in your .env file</li>
+                              <li>Enable Titan Image Generator or Stable Diffusion in Amazon Bedrock</li>
+                              <li>Ensure your AWS account has Bedrock access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-center py-8">
+                          <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Generating Image</h3>
+                          <p className="text-gray-400 mb-4">
+                            Creating an AI-generated visual analysis... This typically takes 5-15 seconds.
+                          </p>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+
+              {/* Video Tab */}
+              {researchResult.video && (
+                <TabsContent value="video" className="space-y-4">
+                  <Card className="bg-gray-800 border-gray-700">
+                    <CardHeader>
+                      <CardTitle className="text-white flex items-center gap-2">
+                        <Video className="w-5 h-5" />
+                        AI-Generated Video Analysis
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {(videoStatus === 'COMPLETED' || videoUrl) ? (
+                        <div className="space-y-4">
+                          <div className="bg-black rounded-lg overflow-hidden flex items-center justify-center" style={{ minHeight: '400px' }}>
+                            <video
+                              src={videoUrl}
+                              controls
+                              className="max-w-full max-h-[600px] rounded-lg"
+                              onError={(e) => {
+                                console.error('Video load error:', e);
+                              }}
+                            >
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <div className="flex gap-2">
+                            <a
+                              href={videoUrl}
+                              download={`${researchResult.ticker}-analysis.mp4`}
+                              className="flex-1"
+                            >
+                              <Button variant="outline" className="w-full border-blue-600 text-blue-400 hover:bg-blue-900/20">
+                                <Download className="w-4 h-4 mr-2" />
+                                Download Video
+                              </Button>
+                            </a>
+                            <a
+                              href={videoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1"
+                            >
+                              <Button variant="outline" className="w-full border-blue-600 text-blue-400 hover:bg-blue-900/20">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Open in New Tab
+                              </Button>
+                            </a>
+                          </div>
+                          {researchResult.video.model && (
+                            <div className="text-xs text-gray-500 text-center">
+                              Generated using {researchResult.video.model} • {researchResult.video.duration} • {researchResult.video.resolution}
+                            </div>
+                          )}
+                        </div>
+                      ) : videoStatus === 'FAILED' ? (
+                        <div className="text-center py-8">
+                          <XCircle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Video Generation Failed</h3>
+                          <p className="text-gray-400 mb-4">
+                            {researchResult.video.error || 'An error occurred while generating the video.'}
+                          </p>
+                        </div>
+                      ) : videoStatus === 'NOT_AVAILABLE' ? (
+                        <div className="text-center py-8">
+                          <Video className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Video Generation Not Available</h3>
+                          <p className="text-gray-400 mb-4">
+                            {researchResult.video.error || 'AWS credentials not configured. Video generation requires Amazon Bedrock access.'}
+                          </p>
+                          <div className="mt-4 p-4 bg-yellow-900/20 rounded-lg border border-yellow-700/50 text-left max-w-md mx-auto">
+                            <div className="text-sm text-gray-400 mb-2">To enable video generation:</div>
+                            <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                              <li>Configure AWS credentials in your .env file</li>
+                              <li>Enable Luma Ray2 in Amazon Bedrock</li>
+                              <li>Ensure your AWS account has Bedrock access</li>
+                            </ul>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-center py-8">
+                          <Loader2 className="w-16 h-16 text-blue-400 mx-auto mb-4 animate-spin" />
+                          <h3 className="text-xl font-semibold text-white mb-2">Generating Video</h3>
+                          <p className="text-gray-400 mb-4">
+                            {researchResult.video.note || 'Creating an AI-generated video analysis... This typically takes 2-5 minutes. Please be patient.'}
+                          </p>
+                          <div className="mt-4 flex items-center justify-center gap-2">
+                            <Button
+                              variant="outline"
+                              onClick={async () => {
+                                if (researchResult.video.invocation_id) {
+                                  try {
+                                    setIsCheckingVideo(true);
+                                    const statusResult = await api.video.getStatus(researchResult.video.invocation_id);
+                                    if (statusResult.success && statusResult.status === 'COMPLETED') {
+                                      setVideoStatus('COMPLETED');
+                                      if (statusResult.video_url) {
+                                        setVideoUrl(statusResult.video_url);
+                                      }
+                                    } else {
+                                      setVideoStatus(statusResult.status || 'IN_PROGRESS');
+                                    }
+                                  } catch (err) {
+                                    console.error('Error checking video status:', err);
+                                  } finally {
+                                    setIsCheckingVideo(false);
+                                  }
+                                }
+                              }}
+                              disabled={isCheckingVideo}
+                              className="border-blue-600 text-blue-400 hover:bg-blue-900/20"
+                            >
+                              <RefreshCw className={`w-4 h-4 mr-2 ${isCheckingVideo ? 'animate-spin' : ''}`} />
+                              Check Status
+                            </Button>
+                          </div>
+                          {researchResult.video.estimated_time && (
+                            <div className="text-xs text-gray-500 mt-2">
+                              Estimated time: {researchResult.video.estimated_time}
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </TabsContent>
@@ -1317,4 +1657,5 @@ export default function MarketResearch() {
     </div>
   );
 }
+
 

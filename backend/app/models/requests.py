@@ -37,3 +37,12 @@ class PortfolioAdjustmentsRequest(BaseModel):
     portfolio: dict  # Portfolio object with holdings
     documentAnalysisResult: dict  # Full document analysis result from /documents/analyze
 
+
+class VideoGenerationRequest(BaseModel):
+    """Request model for video generation"""
+    prompt: str  # Text description of the video to generate
+    duration: Optional[Literal["5s", "10s"]] = "5s"  # Video duration
+    resolution: Optional[Literal["540p", "720p", "1080p"]] = "540p"  # Video resolution
+    aspect_ratio: Optional[Literal["16:9", "9:16", "1:1"]] = "16:9"  # Aspect ratio
+    s3_output_prefix: Optional[str] = None  # Optional S3 prefix for output
+

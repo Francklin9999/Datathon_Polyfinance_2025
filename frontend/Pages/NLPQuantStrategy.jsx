@@ -38,7 +38,7 @@ export default function NLPQuantStrategy() {
   const [selectedTicker, setSelectedTicker] = useState('');
   const [nlpAnalysis, setNlpAnalysis] = useState(null);
   const [topSignals, setTopSignals] = useState([]);
-  const [cacheMetadata, setCacheMetadata] = useState(null);
+  const [metadata, setMetadata] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [descriptions, setDescriptions] = useState(null);
@@ -47,24 +47,24 @@ export default function NLPQuantStrategy() {
   const stats = getPortfolioStats();
   const tickers = stats?.tickers || [];
 
-  // Load cache metadata and top signals on mount
+  // Load metadata and top signals on mount
   useEffect(() => {
-    loadCacheMetadata();
+    loadMetadata();
     loadTopSignals();
   }, []);
 
-  const loadCacheMetadata = async () => {
+  const loadMetadata = async () => {
     try {
-      const metadata = await api.nlpCache.getMetadata();
-      setCacheMetadata(metadata);
+      const metadataResult = await api.nlp.getMetadata();
+      setMetadata(metadataResult);
     } catch (err) {
-      console.error('Error loading cache metadata:', err);
+      console.error('Error loading metadata:', err);
     }
   };
 
   const loadTopSignals = async () => {
     try {
-      const result = await api.nlpCache.getTopSignals(20);
+      const result = await api.nlp.getTopSignals(20);
       setTopSignals(result.signals || []);
     } catch (err) {
       console.error('Error loading top signals:', err);
@@ -80,7 +80,7 @@ export default function NLPQuantStrategy() {
     setDescriptions(null);
 
     try {
-      const result = await api.nlpCache.getTicker(ticker.toUpperCase());
+      const result = await api.nlp.getTicker(ticker.toUpperCase());
       setNlpAnalysis(result);
       
       // Generate descriptions in the background
@@ -98,7 +98,7 @@ export default function NLPQuantStrategy() {
     
     setLoadingDescriptions(true);
     try {
-      const result = await api.nlpCache.generateDescriptions(ticker);
+      const result = await api.nlp.generateDescriptions(ticker);
       setDescriptions(result.descriptions || {});
     } catch (err) {
       console.error('Error loading descriptions:', err);
@@ -114,7 +114,7 @@ export default function NLPQuantStrategy() {
   };
 
   const handleRefresh = () => {
-    loadCacheMetadata();
+    loadMetadata();
     loadTopSignals();
     if (selectedTicker) {
       loadTickerAnalysis(selectedTicker);
@@ -160,7 +160,7 @@ export default function NLPQuantStrategy() {
     text += `=============================================\n\n`;
     text += `Ticker: ${nlpAnalysis.ticker}\n`;
     text += `Filing Date: ${nlpAnalysis.filing_date || 'N/A'}\n`;
-    text += `Cached At: ${new Date(nlpAnalysis.cached_at).toLocaleString()}\n`;
+    text += `Analyzed At: ${new Date(nlpAnalysis.cached_at).toLocaleString()}\n`;
     text += `File: ${nlpAnalysis.filing_filename || 'N/A'}\n\n`;
 
     // Add overall description if available
@@ -398,25 +398,25 @@ export default function NLPQuantStrategy() {
             <p className="text-gray-400 mt-1">
               Pre-computed NLP analysis results from 10-K/10-Q filings
             </p>
-            {cacheMetadata && (
+            {metadata && (
               <div className="flex items-center gap-2 mt-2">
                 <Badge 
                   variant="outline" 
                   className={
-                    cacheMetadata.status === 'completed' ? 'border-green-600 text-green-300' :
-                    cacheMetadata.status === 'running' ? 'border-yellow-600 text-yellow-300' :
+                    metadata.status === 'completed' ? 'border-green-600 text-green-300' :
+                    metadata.status === 'running' ? 'border-yellow-600 text-yellow-300' :
                     'border-red-600 text-red-300'
                   }
                 >
-                  {cacheMetadata.status === 'completed' ? '✓' : cacheMetadata.status === 'running' ? '~' : '⚠'} 
+                  {metadata.status === 'completed' ? '✓' : metadata.status === 'running' ? '~' : '⚠'} 
                   {' '}
-                  {cacheMetadata.status === 'completed' ? 'Cache Ready' : 
-                   cacheMetadata.status === 'running' ? 'Analyzing...' : 
-                   'Cache Error'}
+                  {metadata.status === 'completed' ? 'Ready' : 
+                   metadata.status === 'running' ? 'Analyzing...' : 
+                   'Error'}
                 </Badge>
-                {cacheMetadata.cache_size !== undefined && (
+                {metadata.cache_size !== undefined && (
                   <Badge variant="outline" className="border-gray-600 text-gray-300">
-                    {cacheMetadata.cache_size} tickers analyzed
+                    {metadata.cache_size} tickers analyzed
                   </Badge>
                 )}
               </div>
@@ -440,33 +440,33 @@ export default function NLPQuantStrategy() {
           </div>
         </div>
 
-        {/* Cache Status */}
-        {cacheMetadata && (
+        {/* Status */}
+        {metadata && (
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader>
               <CardTitle className="text-white flex items-center gap-2">
                 <Info className="w-5 h-5" />
-                Cache Status
+                Status
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-4 gap-4 text-sm">
                 <div>
                   <div className="text-gray-400">Status</div>
-                  <div className="text-white font-semibold capitalize">{cacheMetadata.status}</div>
+                  <div className="text-white font-semibold capitalize">{metadata.status}</div>
                 </div>
                 <div>
                   <div className="text-gray-400">Total Analyzed</div>
-                  <div className="text-white font-semibold">{cacheMetadata.total_analyzed || 0}</div>
+                  <div className="text-white font-semibold">{metadata.total_analyzed || 0}</div>
                 </div>
                 <div>
-                  <div className="text-gray-400">Cache Size</div>
-                  <div className="text-white font-semibold">{cacheMetadata.cache_size || 0}</div>
+                  <div className="text-gray-400">Size</div>
+                  <div className="text-white font-semibold">{metadata.cache_size || 0}</div>
                 </div>
                 <div>
                   <div className="text-gray-400">Last Updated</div>
                   <div className="text-white font-semibold text-xs">
-                    {cacheMetadata.last_updated ? new Date(cacheMetadata.last_updated).toLocaleString() : 'N/A'}
+                    {metadata.last_updated ? new Date(metadata.last_updated).toLocaleString() : 'N/A'}
                   </div>
                 </div>
               </div>
@@ -1094,7 +1094,7 @@ export default function NLPQuantStrategy() {
               </Card>
             )}
 
-            {/* Cached Info */}
+            {/* Analysis Info */}
             <Card className="bg-gray-800 border-gray-700">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -1136,7 +1136,7 @@ export default function NLPQuantStrategy() {
               <CardContent>
                 <div className="text-sm text-gray-400 space-y-1">
                   <div>Ticker: <span className="text-white font-mono">{nlpAnalysis.ticker}</span></div>
-                  <div>Cached at: <span className="text-white">{new Date(nlpAnalysis.cached_at).toLocaleString()}</span></div>
+                  <div>Analyzed at: <span className="text-white">{new Date(nlpAnalysis.cached_at).toLocaleString()}</span></div>
                   {nlpAnalysis.filing_date && nlpAnalysis.filing_date !== 'unknown' && (
                     <div>Filing Date: <span className="text-white font-semibold">{nlpAnalysis.filing_date}</span></div>
                   )}

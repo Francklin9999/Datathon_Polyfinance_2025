@@ -1,0 +1,60 @@
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.md
+DOCKER.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Documentation
+*.md
+!README.md
+
+# Terraform
+terraform/
+*.tf
+*.tfstate
+*.tfstate.*
+
+# Data (will be mounted as volumes)
+data/
+fillings/
+nlp_cache.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+

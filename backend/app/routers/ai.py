@@ -10,7 +10,7 @@ import os
 
 from app.models.requests import LLMRequest
 from app.services.aws_bedrock_service import BedrockService
-from app.services.aws_config import is_aws_configured, AWSServices
+from app.services.aws_config import is_aws_configured, AWSServices, S3_BUCKET_NAME, AWS_REGION
 from app.services.searxng_service import SearXNGService
 from app.services.web_scraper_service import WebScraperService
 from fastapi import WebSocket, WebSocketDisconnect
@@ -18,6 +18,30 @@ import uuid
 import base64
 
 router = APIRouter()
+
+# Configuration - all values from environment variables or defaults
+BEDROCK_MODELS = os.getenv("BEDROCK_MODELS", "claude-3-haiku,claude-3-sonnet,claude-3-5-sonnet,claude-3-opus").split(",")
+DEFAULT_MODEL = os.getenv("DEFAULT_BEDROCK_MODEL", "claude-3-haiku")
+MAX_SEARCH_RESULTS = int(os.getenv("MAX_SEARCH_RESULTS", "5"))
+DEFAULT_MAX_TOKENS = int(os.getenv("DEFAULT_MAX_TOKENS", "4096"))
+DEFAULT_TEMPERATURE = float(os.getenv("DEFAULT_TEMPERATURE", "0.7"))
+VOICE_WEBSOCKET_PATH = os.getenv("VOICE_WEBSOCKET_PATH", "/api/ai/aws-voice/ws")
+DEFAULT_VOICE_ID = os.getenv("DEFAULT_POLLY_VOICE_ID", "Joanna")
+DEFAULT_LANGUAGE_CODE = os.getenv("DEFAULT_TRANSCRIBE_LANGUAGE", "en-US")
+TRANSCRIBE_TIMEOUT = int(os.getenv("TRANSCRIBE_TIMEOUT_SECONDS", "30"))
+SCRAPE_DELAY = float(os.getenv("SCRAPE_DELAY_SECONDS", "0.5"))
+MAX_SEARCH_QUERIES = int(os.getenv("MAX_SEARCH_QUERIES", "7"))
+MAX_URLS_PER_QUERY = int(os.getenv("MAX_URLS_PER_QUERY", "3"))
+MAX_TOTAL_URLS = int(os.getenv("MAX_TOTAL_URLS", "15"))
+S3_TRANSCRIBE_BUCKET = os.getenv("S3_TRANSCRIBE_BUCKET_NAME", os.getenv("S3_BUCKET_NAME", "intellirisk-temp"))
+S3_TRANSCRIBE_PREFIX = os.getenv("S3_TRANSCRIBE_PREFIX", "transcribe-input/")
+POLLY_OUTPUT_FORMAT = os.getenv("POLLY_OUTPUT_FORMAT", "mp3")
+DEFAULT_FISCAL_YEAR = os.getenv("DEFAULT_FISCAL_YEAR", os.getenv("CURRENT_YEAR", "2024"))
+SUMMARY_MAX_TOKENS = int(os.getenv("SUMMARY_MAX_TOKENS", "500"))
+VOICE_ASSISTANT_ERROR_MESSAGE = os.getenv("VOICE_ASSISTANT_ERROR_MESSAGE", "I'm sorry, I couldn't process that request.")
+VOICE_ASSISTANT_HISTORY_LIMIT = int(os.getenv("VOICE_ASSISTANT_HISTORY_LIMIT", "10"))
+MIN_RAG_CONTEXT_LENGTH = int(os.getenv("MIN_RAG_CONTEXT_LENGTH", "50"))
+ERROR_RESPONSE_SNIPPET_LENGTH = int(os.getenv("ERROR_RESPONSE_SNIPPET_LENGTH", "500"))
 
 
 @router.post("/invoke-llm")
@@ -38,7 +62,7 @@ async def invoke_llm(request: LLMRequest):
     search_context = ""
     if should_search:
         try:
-            search_context = SearXNGService.search_and_format_context(query=prompt, max_results=5)
+            search_context = SearXNGService.search_and_format_context(query=prompt, max_results=MAX_SEARCH_RESULTS)
             # Add search context to the prompt
             enhanced_prompt = f"""User Question: {prompt}
 
@@ -58,11 +82,10 @@ Please answer the user's question using the above search results as additional c
                 # Try requested model first
                 models_to_try.append(request.model)
                 # Then try others as fallback
-                all_models = ["claude-3-haiku", "claude-3-sonnet", "claude-3-5-sonnet", "claude-3-opus"]
-                models_to_try.extend([m for m in all_models if m != request.model])
+                models_to_try.extend([m for m in BEDROCK_MODELS if m != request.model])
             else:
                 # Try all available models in order (fastest/cheapest first)
-                models_to_try = ["claude-3-haiku", "claude-3-sonnet", "claude-3-5-sonnet", "claude-3-opus"]
+                models_to_try = BEDROCK_MODELS.copy()
             
             response = None
             last_error = None
@@ -72,8 +95,8 @@ Please answer the user's question using the above search results as additional c
                     response = BedrockService.invoke_model(
                         prompt=enhanced_prompt,
                         model_id=model,
-                        max_tokens=4096,
-                        temperature=0.7
+                        max_tokens=DEFAULT_MAX_TOKENS,
+                        temperature=DEFAULT_TEMPERATURE
                     )
                     # If successful (not an error response), break
                     if response and not response.get("text", "").startswith("[Error]"):
@@ -180,241 +203,18 @@ Please answer the user's question using the above search results as additional c
             # Fallback to mock on error
             pass
     
-    # Use NLP classification to determine response type instead of hardcoded if/else
+    # Use NLP classification to determine response type
     response_type = BedrockService._classify_prompt_type(prompt) if is_aws_configured() else None
     
     # If classification failed or AWS not configured, use fallback classification
     if not response_type:
         response_type = BedrockService._classify_prompt_type_fallback(prompt)
     
-    # Mock LLM response (fallback if AWS not configured)
-    if response_type == "regulatory":
-        # Regulatory document analysis
-        try:
-            # Parse document text if provided
-            if "Document Text:" in prompt:
-                doc_text = prompt.split("Document Text:")[1].strip()
-                
-            # Mock structured response for regulatory analysis
-            response = {
-                "docId": "MOCK-REG-001",
-                "regulation_name": "Sample Regulation",
-                "regulation_type": "tariff",
-                "issuing_body": "Government",
-                "jurisdiction": "USA",
-                "effective_date": "2024-01-01",
-                "summary": "Sample regulation summary extracted from document.",
-                "entities": {
-                    "tickers": ["AAPL", "TSLA", "MSFT"],
-                    "sectors": ["Technology", "Automotive"],
-                    "countries": ["USA", "China"]
-                },
-                "measures": [
-                    {
-                        "target": "Imports",
-                        "rate_pct": 25.0,
-                        "quota": None,
-                        "description": "25% tariff on specified imports",
-                        "citation_id": "para-1"
-                    }
-                ],
-                "key_provisions": ["Key provision 1", "Key provision 2"],
-                "penalties": "Standard penalties apply",
-                "exemptions": "Some exemptions may apply",
-                "citations": [
-                    {
-                        "id": "para-1",
-                        "text": "Citation text from document",
-                        "paragraph": "§1.1"
-                    }
-                ],
-                "supply_chain_impact": {
-                    "affected_components": ["Component 1", "Component 2"],
-                    "affected_suppliers": ["Supplier 1", "Supplier 2"],
-                    "geographic_choke_points": ["Location 1", "Location 2"]
-                }
-            }
-            
-            if request.response_json_schema:
-                return response
-            else:
-                return json.dumps(response)
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Error analyzing document: {str(e)}")
-    
-    elif response_type == "filing":
-        # 10-K filing analysis
-        response = {
-            "ticker": "AAPL",
-            "company_name": "Apple Inc.",
-            "fiscal_year": "2024",
-            "business_model": "Technology company designing and manufacturing consumer electronics.",
-            "key_suppliers": [
-                {
-                    "name": "Supplier 1",
-                    "country": "China",
-                    "products": "Components",
-                    "dependency": "High"
-                }
-            ],
-            "geographic_revenue": [
-                {
-                    "region": "Americas",
-                    "revenue_percent": 45.0,
-                    "revenue_amount": "$150B"
-                }
-            ],
-            "product_lines": [
-                {
-                    "name": "iPhone",
-                    "revenue_percent": 52.0,
-                    "description": "Smartphones"
-                }
-            ],
-            "risk_factors": ["Market competition", "Supply chain risks", "Regulatory changes"],
-            "regulatory_mentions": ["GDPR", "Trade regulations"],
-            "trade_dependencies": "High dependency on international supply chains"
-        }
-        
-        if request.response_json_schema:
-            return response
-        else:
-            return json.dumps(response)
-    
-    elif response_type == "portfolio":
-        # Portfolio recommendations
-        response = {
-            "sector_rotation": [
-                {
-                    "action": "REDUCE",
-                    "sector": "Technology",
-                    "current_weight": "28.5%",
-                    "target_weight": "23.5%",
-                    "change": "-5.0%",
-                    "reason": "High China exposure and tariff sensitivity"
-                },
-                {
-                    "action": "REDUCE",
-                    "sector": "Communication Services",
-                    "current_weight": "8.7%",
-                    "target_weight": "6.5%",
-                    "change": "-2.2%",
-                    "reason": "Regulatory headwinds (GDPR, antitrust)"
-                },
-                {
-                    "action": "INCREASE",
-                    "sector": "Utilities",
-                    "current_weight": "3.2%",
-                    "target_weight": "5.5%",
-                    "change": "+2.3%",
-                    "reason": "Defensive play with low regulatory risk"
-                },
-                {
-                    "action": "INCREASE",
-                    "sector": "Consumer Staples",
-                    "current_weight": "6.5%",
-                    "target_weight": "11.4%",
-                    "change": "+4.9%",
-                    "reason": "Resilient to trade tensions, domestic focus"
-                }
-            ],
-            "stock_replacements": [
-                {
-                    "sell": "TSLA",
-                    "sell_name": "Tesla Inc.",
-                    "sell_risk_score": 85,
-                    "buy": "F",
-                    "buy_name": "Ford Motor",
-                    "buy_risk_score": 48,
-                    "sector": "Automotive",
-                    "reason": "Lower China exposure, established US manufacturing"
-                },
-                {
-                    "sell": "META",
-                    "sell_name": "Meta Platforms",
-                    "sell_risk_score": 88,
-                    "buy": "CMCSA",
-                    "buy_name": "Comcast",
-                    "buy_risk_score": 42,
-                    "sector": "Communication",
-                    "reason": "Less regulatory scrutiny, domestic infrastructure focus"
-                },
-                {
-                    "sell": "JNJ",
-                    "sell_name": "Johnson & Johnson",
-                    "sell_risk_score": 92,
-                    "buy": "UNH",
-                    "buy_name": "UnitedHealth",
-                    "buy_risk_score": 38,
-                    "sector": "Healthcare",
-                    "reason": "Managed care less exposed to product liability"
-                },
-                {
-                    "sell": "NVDA",
-                    "sell_name": "NVIDIA",
-                    "sell_risk_score": 78,
-                    "buy": "INTC",
-                    "buy_name": "Intel",
-                    "buy_risk_score": 52,
-                    "sector": "Technology",
-                    "reason": "US-based manufacturing, lower China revenue"
-                },
-                {
-                    "sell": "GOOGL",
-                    "sell_name": "Alphabet",
-                    "sell_risk_score": 82,
-                    "buy": "ORCL",
-                    "buy_name": "Oracle",
-                    "buy_risk_score": 45,
-                    "sector": "Technology",
-                    "reason": "Enterprise focus, less antitrust exposure"
-                }
-            ],
-            "geographic_reallocation": [
-                {
-                    "region": "China",
-                    "current_exposure": "18%",
-                    "target_exposure": "12%",
-                    "change": "-6%",
-                    "reason": "Reduce exposure due to tariff risks and regulatory uncertainty"
-                },
-                {
-                    "region": "USA",
-                    "current_exposure": "55%",
-                    "target_exposure": "62%",
-                    "change": "+7%",
-                    "reason": "Increase domestic exposure for stability"
-                },
-                {
-                    "region": "Europe",
-                    "current_exposure": "15%",
-                    "target_exposure": "14%",
-                    "change": "-1%",
-                    "reason": "Slight reduction due to GDPR compliance costs"
-                }
-            ],
-            "expected_outcomes": {
-                "risk_score_reduction": "-8 points (from 62 to 54)",
-                "estimated_return_impact": "-0.3% to -0.5% short-term, +0.8% to +1.2% long-term",
-                "diversification_improvement": "Reduced geographic concentration risk, improved sector balance"
-            }
-        }
-        
-        if request.response_json_schema:
-            return response
-        else:
-            return json.dumps(response)
-    
-    else:
-        # General market summary
-        summaries = [
-            "Global markets advanced with broad-based moderate moves. Volatility remains contained across regions. Market participants monitoring macro developments.",
-            "USD strengthened with DXY showing defensive positioning. Cross-currency volatility contained, suggesting range-bound trading conditions.",
-            "Energy complex rallied with oil prices surging. Gold gained reflecting safe-haven demand. Broad commodity volatility moderate.",
-            f"Market conditions show {random.choice(['stable', 'volatile', 'uncertain'])} conditions with {random.choice(['moderate', 'elevated', 'low'])} volatility across regions."
-        ]
-        
-        return random.choice(summaries)
+    # Fallback: Return error if AWS not configured and no response generated
+    raise HTTPException(
+        status_code=503,
+        detail="AWS services not configured. Please configure AWS credentials to use LLM features."
+    )
 
 
 @router.post("/generate-summary")
@@ -422,30 +222,31 @@ async def generate_summary(request: dict):
     """
     Generate AI summary for market conditions
     """
+    from datetime import datetime
+    
     data = request.get("data", {})
     prompt_type = request.get("type", "market")
     
-    # Mock AI summary generation
-    if prompt_type == "market":
-        return {
-            "text": "Global markets show stable conditions with moderate volatility. Key drivers include economic data and central bank policy signals.",
-            "timestamp": "2024-01-01T12:00:00Z"
-        }
-    elif prompt_type == "fx":
-        return {
-            "text": "USD strengthened with DXY advancing. EUR and JPY showing defensive positioning.",
-            "timestamp": "2024-01-01T12:00:00Z"
-        }
-    elif prompt_type == "commodities":
-        return {
-            "text": "Energy complex rallied with WTI advancing. Gold gained reflecting safe-haven demand.",
-            "timestamp": "2024-01-01T12:00:00Z"
-        }
+    # Use AWS Bedrock if configured
+    if is_aws_configured():
+        try:
+            summary_prompt = f"Generate a brief {prompt_type} market summary based on the following data: {json.dumps(data)}"
+            response = BedrockService.invoke_model(
+                prompt=summary_prompt,
+                max_tokens=SUMMARY_MAX_TOKENS,
+                temperature=DEFAULT_TEMPERATURE
+            )
+            return {
+                "text": response.get("text", ""),
+                "timestamp": datetime.utcnow().isoformat() + "Z"
+            }
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Error generating summary: {str(e)}")
     else:
-        return {
-            "text": "Market summary generated successfully.",
-            "timestamp": "2024-01-01T12:00:00Z"
-        }
+        raise HTTPException(
+            status_code=503,
+            detail="AWS services not configured. Please configure AWS credentials to use summary generation."
+        )
 
 
 @router.get("/aws-voice/config")
@@ -456,13 +257,13 @@ async def get_aws_voice_config():
     """
     return {
         "configured": is_aws_configured(),
-        "region": os.getenv("AWS_REGION", "us-east-1"),
+        "region": AWS_REGION,
         "services": {
             "bedrock": is_aws_configured(),
             "transcribe": is_aws_configured(),
             "polly": is_aws_configured()
         },
-        "websocketUrl": "/api/ai/aws-voice/ws"  # WebSocket endpoint
+        "websocketUrl": VOICE_WEBSOCKET_PATH
     }
 
 
@@ -479,7 +280,9 @@ async def aws_voice_websocket(websocket: WebSocket):
     
     conversation_id = str(uuid.uuid4())
     conversation_history = []
-    system_prompt = """You are a financial AI coworker and assistant for IntelliRisk. 
+    system_prompt = os.getenv(
+        "VOICE_ASSISTANT_SYSTEM_PROMPT",
+        """You are a financial AI coworker and assistant. 
 You help users understand financial markets, analyze portfolios, interpret regulatory documents, 
 and provide insights on equities, fixed income, options, commodities, and FX markets.
 
@@ -491,13 +294,15 @@ Key capabilities:
 - Financial data interpretation
 
 Be concise, professional, and helpful. Always provide actionable insights when possible."""
+    )
 
     try:
         # Send initial greeting
+        greeting_message = os.getenv("VOICE_ASSISTANT_GREETING", "Hello! I'm your financial AI coworker. How can I help you today?")
         await websocket.send_json({
             "type": "message",
             "role": "assistant",
-            "text": "Hello! I'm your financial AI coworker. How can I help you today?",
+            "text": greeting_message,
             "conversationId": conversation_id
         })
 
@@ -536,21 +341,24 @@ Be concise, professional, and helpful. Always provide actionable insights when p
                     if is_aws_configured():
                         prompt = "\n\n".join([
                             system_prompt,
-                            *[f"{msg['role']}: {msg['content']}" for msg in conversation_history[-10:]],  # Last 10 messages
+                            *[f"{msg['role']}: {msg['content']}" for msg in conversation_history[-VOICE_ASSISTANT_HISTORY_LIMIT:]],  # Last N messages
                             "assistant:"
                         ])
                         
                         response = BedrockService.invoke_model(
                             prompt=prompt,
-                            max_tokens=1000,
-                            temperature=0.7,
+                            max_tokens=int(os.getenv("VOICE_ASSISTANT_MAX_TOKENS", "1000")),
+                            temperature=DEFAULT_TEMPERATURE,
                             system_prompt=system_prompt
                         )
                         
-                        assistant_text = response.get("text", "I'm sorry, I couldn't process that request.")
+                        assistant_text = response.get("text", VOICE_ASSISTANT_ERROR_MESSAGE)
                     else:
                         # Fallback response if AWS not configured
-                        assistant_text = "AWS services are not configured. Please configure AWS credentials to use voice chat."
+                        assistant_text = os.getenv(
+                            "VOICE_ASSISTANT_AWS_ERROR_MESSAGE",
+                            "AWS services are not configured. Please configure AWS credentials to use voice chat."
+                        )
                     
                     conversation_history.append({"role": "assistant", "content": assistant_text})
                     
@@ -568,8 +376,8 @@ Be concise, professional, and helpful. Always provide actionable insights when p
                             polly_client = AWSServices.get_polly_client()
                             polly_response = polly_client.synthesize_speech(
                                 Text=assistant_text,
-                                OutputFormat='mp3',
-                                VoiceId='Joanna'  # Professional female voice
+                                OutputFormat=POLLY_OUTPUT_FORMAT,
+                                VoiceId=DEFAULT_VOICE_ID
                             )
                             
                             # Convert audio stream to base64
@@ -580,7 +388,7 @@ Be concise, professional, and helpful. Always provide actionable insights when p
                             await websocket.send_json({
                                 "type": "audio",
                                 "audio": audio_base64,
-                                "format": "mp3",
+                                "format": POLLY_OUTPUT_FORMAT,
                                 "conversationId": conversation_id
                             })
                         except Exception as e:
@@ -642,23 +450,22 @@ async def transcribe_audio(request: dict):
             transcribe_client = AWSServices.get_transcribe_client()
             job_name = f"transcribe-{uuid.uuid4()}"
             s3_client = AWSServices.get_s3_client()
-            bucket_name = os.getenv("S3_BUCKET_NAME", "intellirisk-temp")
             
             # Upload to S3 (Transcribe requires S3 input)
-            s3_key = f"transcribe-input/{job_name}.wav"
-            s3_client.upload_file(temp_file_path, bucket_name, s3_key)
+            s3_key = f"{S3_TRANSCRIBE_PREFIX}{job_name}.wav"
+            s3_client.upload_file(temp_file_path, S3_TRANSCRIBE_BUCKET, s3_key)
             
             # Start transcription job
             transcribe_client.start_transcription_job(
                 TranscriptionJobName=job_name,
-                Media={'MediaFileUri': f"s3://{bucket_name}/{s3_key}"},
+                Media={'MediaFileUri': f"s3://{S3_TRANSCRIBE_BUCKET}/{s3_key}"},
                 MediaFormat='wav',
-                LanguageCode='en-US'
+                LanguageCode=DEFAULT_LANGUAGE_CODE
             )
             
             # Wait for job to complete
             import time
-            max_wait = 30
+            max_wait = TRANSCRIBE_TIMEOUT
             wait_time = 0
             while wait_time < max_wait:
                 job = transcribe_client.get_transcription_job(TranscriptionJobName=job_name)
@@ -703,7 +510,7 @@ async def synthesize_speech(request: dict):
     
     try:
         text = request.get("text", "")
-        voice_id = request.get("voiceId", "Joanna")  # Default professional voice
+        voice_id = request.get("voiceId", DEFAULT_VOICE_ID)
         
         if not text:
             raise HTTPException(status_code=400, detail="Text is required")
@@ -711,7 +518,7 @@ async def synthesize_speech(request: dict):
         polly_client = AWSServices.get_polly_client()
         response = polly_client.synthesize_speech(
             Text=text,
-            OutputFormat='mp3',
+            OutputFormat=POLLY_OUTPUT_FORMAT,
             VoiceId=voice_id
         )
         
@@ -721,7 +528,7 @@ async def synthesize_speech(request: dict):
         
         return {
             "audio": audio_base64,
-            "format": "mp3",
+            "format": POLLY_OUTPUT_FORMAT,
             "voiceId": voice_id
         }
         
@@ -772,8 +579,8 @@ No explanations, just the JSON array."""
             try:
                 query_result = BedrockService.invoke_model(
                     prompt=query_generation_prompt,
-                    max_tokens=1000,
-                    temperature=0.7
+                    max_tokens=int(os.getenv("QUERY_GENERATION_MAX_TOKENS", "1000")),
+                    temperature=DEFAULT_TEMPERATURE
                 )
                 # Try to parse JSON from response
                 response_text = query_result.get("text", "")
@@ -805,11 +612,20 @@ No explanations, just the JSON array."""
                         query_result = json.loads(json_match.group(0))
                     else:
                         # Fallback to default queries
-                        query_result = [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers", f"{ticker} revenue", f"{ticker} risk factors"]
+                        default_query_template = os.getenv("DEFAULT_SEARCH_QUERY_TEMPLATE", "{ticker} {topic}")
+                        topics = os.getenv("DEFAULT_SEARCH_TOPICS", "company overview,business model,suppliers,revenue,risk factors").split(",")
+                        query_result = [default_query_template.format(ticker=ticker, topic=topic) for topic in topics]
             else:
-                query_result = [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers", f"{ticker} revenue", f"{ticker} risk factors"]
+                default_query_template = os.getenv("DEFAULT_SEARCH_QUERY_TEMPLATE", "{ticker} {topic}")
+                topics = os.getenv("DEFAULT_SEARCH_TOPICS", "company overview,business model,suppliers,revenue,risk factors").split(",")
+                query_result = [default_query_template.format(ticker=ticker, topic=topic) for topic in topics]
         
-        search_queries = query_result if isinstance(query_result, list) and len(query_result) > 0 else [f"{ticker} company overview", f"{ticker} business model", f"{ticker} suppliers"]
+        # Generate fallback queries if needed
+        if not (isinstance(query_result, list) and len(query_result) > 0):
+            default_query_template = os.getenv("DEFAULT_SEARCH_QUERY_TEMPLATE", "{ticker} {topic}")
+            topics = os.getenv("DEFAULT_SEARCH_TOPICS", "company overview,business model,suppliers").split(",")
+            query_result = [default_query_template.format(ticker=ticker, topic=topic) for topic in topics]
+        search_queries = query_result if isinstance(query_result, list) and len(query_result) > 0 else []
         
         print(f"[DEBUG] Generated {len(search_queries)} search queries for {ticker}: {search_queries[:3]}...")
         
@@ -824,7 +640,7 @@ No explanations, just the JSON array."""
                 print(f"[DEBUG] Using crew4ai SerperDevTool for searches...")
                 
                 all_scraped_content = []
-                for query in search_queries[:7]:  # Limit to 7 queries
+                for query in search_queries[:MAX_SEARCH_QUERIES]:
                     try:
                         print(f"[DEBUG] Searching with crew4ai for query: '{query}'")
                         search_result = search_tool.run(query)
@@ -832,18 +648,18 @@ No explanations, just the JSON array."""
                             # SerperDevTool returns search results with URLs
                             # We need to scrape those URLs
                             if isinstance(search_result, dict) and "urls" in search_result:
-                                urls = search_result["urls"][:3]  # Get top 3 URLs per query
+                                urls = search_result["urls"][:MAX_URLS_PER_QUERY]
                             elif isinstance(search_result, list):
-                                urls = [r.get("url", "") for r in search_result if isinstance(r, dict)][:3]
+                                urls = [r.get("url", "") for r in search_result if isinstance(r, dict)][:MAX_URLS_PER_QUERY]
                             else:
                                 # Try to extract URLs from the result
                                 import re
-                                urls = re.findall(r'https?://[^\s<>"{}|\\^`\[\]]+', str(search_result))[:3]
+                                urls = re.findall(r'https?://[^\s<>"{}|\\^`\[\]]+', str(search_result))[:MAX_URLS_PER_QUERY]
                             
                             # Scrape URLs found from search
                             if urls:
                                 print(f"[DEBUG] Found {len(urls)} URLs from crew4ai search, scraping...")
-                                scrape_results = WebScraperService.scrape_urls(urls, max_urls=3, delay=0.5)
+                                scrape_results = WebScraperService.scrape_urls(urls, max_urls=MAX_URLS_PER_QUERY, delay=SCRAPE_DELAY)
                                 for result in scrape_results:
                                     if result.get("success") and result.get("content"):
                                         all_scraped_content.append(result)
@@ -861,10 +677,11 @@ No explanations, just the JSON array."""
                 print(f"[DEBUG] crew4ai not available, falling back to SearXNG + WebScraper...")
                 # Fallback to SearXNG + WebScraper approach
                 all_urls = []
+                search_categories = os.getenv("SEARXNG_CATEGORIES", "general,news,finance").split(",")
                 
-                for query in search_queries[:7]:  # Limit to 7 queries
+                for query in search_queries[:MAX_SEARCH_QUERIES]:
                     try:
-                        search_result = SearXNGService.search(query=query, max_results=5, categories=["general", "news", "finance"])
+                        search_result = SearXNGService.search(query=query, max_results=MAX_SEARCH_RESULTS, categories=search_categories)
                         if search_result.get("success") and search_result.get("results"):
                             urls_found = 0
                             for result in search_result["results"]:
@@ -882,18 +699,15 @@ No explanations, just the JSON array."""
                 # Generate fallback URLs if no URLs found
                 if len(all_urls) == 0:
                     print(f"[DEBUG] No URLs found, generating fallback URLs for {ticker}...")
-                    fallback_urls = [
-                        f"https://www.sec.gov/cgi-bin/browse-edgar?CIK={ticker}&action=getcompany&type=10-K",
-                        f"https://finance.yahoo.com/quote/{ticker}",
-                        f"https://www.marketwatch.com/investing/stock/{ticker}",
-                        f"https://seekingalpha.com/symbol/{ticker}",
-                    ]
+                    fallback_url_template = os.getenv("FALLBACK_URL_TEMPLATE", "{base_url}/{ticker}")
+                    base_urls = os.getenv("FALLBACK_BASE_URLS", "https://www.sec.gov/cgi-bin/browse-edgar?CIK={ticker}&action=getcompany&type=10-K,https://finance.yahoo.com/quote/{ticker},https://www.marketwatch.com/investing/stock/{ticker},https://seekingalpha.com/symbol/{ticker}").split(",")
+                    fallback_urls = [url.format(ticker=ticker) if "{ticker}" in url else url for url in base_urls]
                     all_urls.extend(fallback_urls)
                 
                 # Scrape URLs
                 if all_urls:
                     try:
-                        scrape_results = WebScraperService.scrape_urls(all_urls, max_urls=15, delay=0.5)
+                        scrape_results = WebScraperService.scrape_urls(all_urls, max_urls=MAX_TOTAL_URLS, delay=SCRAPE_DELAY)
                         scraped_content = WebScraperService.format_scraped_content_for_rag(scrape_results)
                         print(f"[DEBUG] Scraped {len(scrape_results)} URLs, content length: {len(scraped_content)} chars")
                     except Exception as e:
@@ -907,10 +721,12 @@ No explanations, just the JSON array."""
             scraped_content = f"[Error during search/scrape: {str(e)}]"
         
         # Step 4: Build final analysis prompt with RAG context
-        rag_context = scraped_content if scraped_content else "[No web content available]"
+        no_content_msg = os.getenv("NO_WEB_CONTENT_MESSAGE", "[No web content available]")
+        rag_context = scraped_content if scraped_content else no_content_msg
+        fiscal_year = DEFAULT_FISCAL_YEAR
         
         # Check if we actually have meaningful context
-        has_rag_context = scraped_content and len(scraped_content.strip()) > 50 and scraped_content != "[No web content available]"
+        has_rag_context = scraped_content and len(scraped_content.strip()) > MIN_RAG_CONTEXT_LENGTH and scraped_content != no_content_msg
         
         if has_rag_context:
             analysis_prompt = f"""You are analyzing the 10-K filing for {ticker}.
@@ -924,7 +740,7 @@ Based on the internet search results and scraped web content above, extract and 
 {{
   "ticker": "{ticker}",
   "company_name": "Full company name",
-  "fiscal_year": "2024",
+  "fiscal_year": "{fiscal_year}",
   "business_model": "2-3 sentence description",
   "key_suppliers": [
     {{
@@ -965,7 +781,7 @@ Please provide the following JSON structure based on your knowledge of {ticker} 
 {{
   "ticker": "{ticker}",
   "company_name": "Full company name (or estimated based on ticker)",
-  "fiscal_year": "2024",
+  "fiscal_year": "{fiscal_year}",
   "business_model": "Description based on what you know about the company or industry",
   "key_suppliers": [
     {{
@@ -1048,20 +864,21 @@ IMPORTANT: You MUST return valid JSON even if the information is limited or esti
         if is_aws_configured():
             try:
                 # Enhance prompt to emphasize JSON-only response and handle missing data
-                enhanced_prompt = analysis_prompt + """
+                no_content_reference = os.getenv("NO_WEB_CONTENT_MESSAGE", "[No web content available]")
+                enhanced_prompt = analysis_prompt + f"""
 
 CRITICAL INSTRUCTIONS:
 1. You MUST respond with ONLY valid JSON in the exact format specified above.
 2. Do not include any explanations, markdown formatting, or text outside the JSON object.
-3. Start your response with { and end with }.
+3. Start your response with {{ and end with }}.
 4. If you don't have specific information, use your general knowledge, reasonable estimates, or typical industry patterns to fill out the structure.
 5. Never refuse to provide the JSON structure - always return it, even if some fields use estimates or "Not available".
-6. If the RAG context above says "[No web content available]" or is very short, rely on your general knowledge about the company or industry."""
+6. If the RAG context above says "{no_content_reference}" or is very short, rely on your general knowledge about the company or industry."""
                 
                 llm_response = BedrockService.invoke_model(
                     prompt=enhanced_prompt,
-                    max_tokens=4096,
-                    temperature=0.7
+                    max_tokens=DEFAULT_MAX_TOKENS,
+                    temperature=DEFAULT_TEMPERATURE
                 )
                 
                 response_text = llm_response.get("text", "")
@@ -1120,13 +937,13 @@ CRITICAL INSTRUCTIONS:
                             if "no RAG context" in response_text.lower() or "don't see" in response_text.lower():
                                 final_result = {
                                     "error": "Insufficient RAG context",
-                                    "raw_response": response_text[:500],  # First 500 chars
+                                    "raw_response": response_text[:ERROR_RESPONSE_SNIPPET_LENGTH],
                                     "suggestion": "The internet search did not return sufficient information. Try a different ticker or check if the company information is publicly available."
                                 }
                             else:
                                 final_result = {
                                     "error": "Failed to parse JSON response",
-                                    "raw_response": response_text[:500],  # First 500 chars
+                                    "raw_response": response_text[:ERROR_RESPONSE_SNIPPET_LENGTH],
                                     "parse_error": "Could not extract valid JSON from LLM response"
                                 }
                 elif response_text.strip().startswith('{'):

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import CacheService from '@/services/cacheService';
+import StorageService from '@/services/storageService';
 import AnalysisJobService from '@/services/analysisJobService';
 import NotificationService from '@/services/notificationService';
 
@@ -10,11 +10,11 @@ export function AnalysisProvider({ children }) {
   const [analysisHistory, setAnalysisHistory] = useState([]);
   const [notifications, setNotifications] = useState([]);
 
-  const loadFromCache = React.useCallback(() => {
+  const loadFromStorage = React.useCallback(() => {
     const jobs = AnalysisJobService.getActiveJobs();
     setActiveJobs(jobs);
     
-    const history = CacheService.getAnalysisHistory();
+    const history = StorageService.getAnalysisHistory();
     setAnalysisHistory(history);
   }, []);
 
@@ -23,9 +23,9 @@ export function AnalysisProvider({ children }) {
     setActiveJobs(jobs);
   }, []);
 
-  // Load active jobs and history from cache on mount
+  // Load active jobs and history from storage on mount
   useEffect(() => {
-    loadFromCache();
+    loadFromStorage();
     
     // Set up notification listener
     const handleNotification = (event) => {
@@ -60,7 +60,7 @@ export function AnalysisProvider({ children }) {
         clearInterval(pollInterval);
       }
     };
-  }, [updateActiveJobs, loadFromCache]);
+  }, [updateActiveJobs, loadFromStorage]);
 
   const startAnalysisJob = async (jobData) => {
     const jobId = AnalysisJobService.generateJobId();

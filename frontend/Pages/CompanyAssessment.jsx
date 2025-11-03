@@ -105,7 +105,7 @@ export default function CompanyAssessment() {
       try {
         // Only include Reddit API calls for the first 5 companies to reduce API requests
         // Reddit makes 5 API calls per ticker (one per subreddit), so limiting to first 5 
-        // prevents excessive API usage. Reddit results are cached in backend.
+        // prevents excessive API usage. Reddit results are stored in backend.
         const includeReddit = index < 5;
         
         // Pass only selected tickers for peer comparison

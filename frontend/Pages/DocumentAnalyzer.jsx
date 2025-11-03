@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { usePortfolio } from '@/contexts/PortfolioContext';
 import { api } from '@/api/apiClient';
-import CacheService from '@/services/cacheService';
+import StorageService from '@/services/storageService';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -89,7 +89,7 @@ export default function DocumentAnalyzer() {
       setInterpretation(result);
       
       // Store interpretation for Risk Dashboard
-      CacheService.saveDocumentAdvice({
+      StorageService.saveDocumentAdvice({
         interpretation: result.interpretation,
         timestamp: result.timestamp
       });
